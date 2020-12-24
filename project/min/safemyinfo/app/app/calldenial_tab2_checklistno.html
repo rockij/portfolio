@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ko" class="app">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../resources/css/content.css" media="screen" rel="stylesheet">
+<link href="../resources/css/site_app.css" media="screen" rel="stylesheet">
+<title>내정보지키미</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header" class="fix top">
+        <button type="button" onclick="" class="btn_prev"><i class="bg_icon">뒤로가기</i></button>
+        <h1 class="blind">내정보지키미</h1>
+        <button class="gnb_handle" type="button"><span><s class="blind">메뉴컨트롤</s></span></button>
+        <aside id="gnb">
+            <h2 class="blind">Global navigation bar</h2>
+            <div class="panel">
+                <div class="content">
+                    <header>
+                        <h3>홍길동님</h3>
+                        <nav>
+                            <a href="#;" class="home"><i class="bg_icon">처음으로</i></a>
+                            <a href="#;" class="alarm"><i class="bg_icon">알람보기</i></a>
+                        </nav>
+                    </header>
+                    <div class="scroll">
+                        <ul class="smenu">
+                            <li>
+                                <a href="#;" class="depOn">모니터링</a>
+                                <ul class="dep2">
+                                    <li><a href="#;">모니터링 정보</a></li>
+                                    <li><a href="#;">모니터링 내역</a></li>
+                                    <li><a href="#;">개인정보 수정</a></li>
+                                    <li><a href="#;">개인정보 유출 대응</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#;" class="depOn">금융거래 차단</a>
+                                <ul class="dep2">
+                                    <li><a href="#;">내역 조회</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#;" class="depOn">영업전화 수신거부</a>
+                                <ul class="dep2">
+                                    <li>
+                                        <a href="#;">전화권유판매 수신거부</a>
+                                        <ul class="dep3">
+                                            <li><a href="#;">수신거부업체 수정</a></li>
+                                            <li><a href="#;">수신허용업체</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#;">금융권 영업전화 수신거부</a>
+                                        <ul class="dep3">
+                                            <li><a href="#;">수신거부업체 수정</a></li>
+                                            <li><a href="#;">수신거부철회 조회</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#;" class="depOn">안심번호</a>
+                                <ul class="dep2">
+                                    <li><a href="#;">안심번호 발급</a></li>
+                                    <li><a href="#;">착신 내역</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#;">Wifi 체크</a>
+                            </li>
+                            <li>
+                                <a href="#;" class="depOn">고객센터</a>
+                                <ul class="dep2">
+                                    <li><a href="#;">서비스 안내</a></li>
+                                    <li><a href="#;">공지사항</a></li>
+                                    <li><a href="#;">FAQ</a></li>
+                                    <li><a href="#;">이용약관</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#;" class="depOn">설정</a>
+                                <ul class="dep2">
+                                    <li><a href="#;">알림 설정</a></li>
+                                    <li><a href="#;">비밀번호 변경</a></li>
+                                    <li>
+                                        <a href="#;">서비스 해지</a>
+                                        <ul class="dep3">
+                                            <li><a href="#;">서비스 해지</a></li>
+                                            <li><a href="#;">서비스 문의</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <footer>앱 버전 (V1.0.0) 최신버전입니다.<br><a href="#;" class="appGo">최신 버전으로 업데이트</a></footer></footer>
+                </div>
+            </div>
+        </aside>
+        <!-- //gnb -->
+    </header>
+    <!-- //header -->
+    <div id="ct">
+        <div class="frmview_select tabs">
+            <section class="inner">
+                <div class="title_fix_cover">
+                    <div class="title_fix">
+                        <h2 class="title_type2">금융권 영업전화 수신거부 업체</h2>
+                        <p class="title_txt">조회하신 업체에 대하여 수신상태를<br>변경하실 수 있습니다.</p>            
+                        <ul class="tab_type2 tab2 pick">
+                            <li><button type="button" onclick="" class="active">수신거부 설정</button></li>
+                            <li><button type="button" onclick="">수신허용 설정 </button></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="inner">
+                    <ul class="list_bigbtn2 wide">
+                        <li class="nodata">
+                            <figure class="bg_icon fig_ball"></figure>
+                            <figcaption>조회 정보가 없습니다.</figcaption>
+                        </li>                        
+                    </ul>
+                </div>
+                <div class="btn_area_sigle fix btm">
+                    <button type="button" class="btn_xr btn_type2" onclick="" disabled>수신거부 등록</button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- //content -->
+
+    <!-- 수신거부설정 -->
+    <div id="mw-detail" class="ly_pop btm ly_checkdetail">
+        <div class="wrap">
+            <div class="content">
+                <h2>생명보험</h2>
+                <div class="list_checkbx2">
+                    <div class="inner ckarea">
+                        <div class="checkbox name all">
+                            <input type="checkbox" name="all" id="total" value="">
+                            <label for="total">전체선택</label>
+                        </div>
+                        <ul class="cat">
+                            <li>
+                                <span class="checkbox name">
+                                    <input type="checkbox" name="all" id="all1" value="">
+                                    <label for="all1" class="elip1"></label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="checkbox name">
+                                    <input type="checkbox" name="all" id="all2" value="">
+                                    <label for="all2" class="elip1"></label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="checkbox name">
+                                    <input type="checkbox" name="all" id="all3" value="">
+                                    <label for="all3" class="elip1"></label>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="inner listwrap">
+                        <div class="cover">
+                            <div class="scroll">
+                                <ul class="list">
+                                    <li class="ckarea">
+                                        <div class="checkbox name">
+                                            <input type="checkbox" name="bohum" id="bohum1" value="">
+                                            <label for="bohum1" class="elip1">BNP파리바카디프생명BNP파리바카디프생명</label>
+                                        </div>
+                                        <ul class="cat">
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="bohum1" id="bohum1-both" value="">
+                                                    <label for="bohum1-both">둘다</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox sms">
+                                                    <input type="checkbox" name="bohum1" id="bohum1-sms" value="">
+                                                    <label for="bohum1-sms"></label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox phone">
+                                                    <input type="checkbox" name="bohum1" id="bohum1-phone" value="">
+                                                    <label for="bohum1-phone"></label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="ckarea">
+                                        <div class="checkbox name">
+                                            <input type="checkbox" name="bohum" id="bohum2" value="">
+                                            <label for="bohum2" class="elip1">교보라이프플래닛</label>
+                                        </div>
+                                        <ul class="cat">
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="bohum2" id="bohum2-both" value="">
+                                                    <label for="bohum2-both">둘다</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox sms">
+                                                    <input type="checkbox" name="bohum2" id="bohum2-sms" value="">
+                                                    <label for="bohum2-sms"></label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox phone">
+                                                    <input type="checkbox" name="bohum2" id="bohum2-phone" value="">
+                                                    <label for="bohum2-phone"></label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="ckarea">
+                                        <div class="checkbox name">
+                                            <input type="checkbox" name="bohum" id="bohum3" value="">
+                                            <label for="bohum3" class="elip1">AIA생명</label>
+                                        </div>
+                                        <ul class="cat">
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="bohum3" id="bohum3-both" value="">
+                                                    <label for="bohum3-both">둘다</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox sms">
+                                                    <input type="checkbox" name="bohum3" id="bohum3-sms" value="">
+                                                    <label for="bohum3-sms"></label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox phone">
+                                                    <input type="checkbox" name="bohum3" id="bohum3-phone" value="">
+                                                    <label for="bohum3-phone"></label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="ckarea">
+                                        <div class="checkbox name">
+                                            <input type="checkbox" name="bohum" id="bohum4" value="">
+                                            <label for="bohum4" class="elip1">우체국보험</label>
+                                        </div>
+                                        <ul class="cat">
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="bohum4" id="bohum4-both" value="">
+                                                    <label for="bohum4-both">둘다</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox sms">
+                                                    <input type="checkbox" name="bohum4" id="bohum4-sms" value="">
+                                                    <label for="bohum4-sms"></label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox phone">
+                                                    <input type="checkbox" name="bohum4" id="bohum4-phone" value="">
+                                                    <label for="bohum4-phone"></label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="ckarea">
+                                        <div class="checkbox name">
+                                            <input type="checkbox" name="bohum" id="bohum5" value="">
+                                            <label for="bohum5" class="elip1">알리안츠글로벌코퍼레인알리안츠글로벌코퍼레인</label>
+                                        </div>
+                                        <ul class="cat">
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="bohum5" id="bohum5-both" value="">
+                                                    <label for="bohum5-both">둘다</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox sms">
+                                                    <input type="checkbox" name="bohum5" id="bohum5-sms" value="">
+                                                    <label for="bohum5-sms"></label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox phone">
+                                                    <input type="checkbox" name="bohum5" id="bohum5-phone" value="">
+                                                    <label for="bohum5-phone"></label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="ckarea">
+                                        <div class="checkbox name">
+                                            <input type="checkbox" name="bohum" id="bohum6" value="">
+                                            <label for="bohum6" class="elip1">미래에셋생명</label>
+                                        </div>
+                                        <ul class="cat">
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="bohum6" id="bohum6-both" value="">
+                                                    <label for="bohum6-both">둘다</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox sms">
+                                                    <input type="checkbox" name="bohum6" id="bohum6-sms" value="">
+                                                    <label for="bohum6-sms"></label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox phone">
+                                                    <input type="checkbox" name="bohum6" id="bohum6-phone" value="">
+                                                    <label for="bohum6-phone"></label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="ckarea">
+                                        <div class="checkbox name">
+                                            <input type="checkbox" name="bohum" id="bohum7" value="">
+                                            <label for="bohum7" class="elip1">미래에셋생명</label>
+                                        </div>
+                                        <ul class="cat">
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="bohum7" id="bohum7-both" value="">
+                                                    <label for="bohum7-both">둘다</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox sms">
+                                                    <input type="checkbox" name="bohum7" id="bohum7-sms" value="">
+                                                    <label for="bohum7-sms"></label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox phone">
+                                                    <input type="checkbox" name="bohum7" id="bohum7-phone" value="">
+                                                    <label for="bohum7-phone"></label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="ckarea">
+                                        <div class="checkbox name">
+                                            <input type="checkbox" name="bohum" id="bohum8" value="">
+                                            <label for="bohum8" class="elip1">미래에셋생명</label>
+                                        </div>
+                                        <ul class="cat">
+                                            <li>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="bohum8" id="bohum8-both" value="">
+                                                    <label for="bohum8-both">둘다</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox sms">
+                                                    <input type="checkbox" name="bohum8" id="bohum8-sms" value="">
+                                                    <label for="bohum8-sms"></label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox phone">
+                                                    <input type="checkbox" name="bohum8" id="bohum8-phone" value="">
+                                                    <label for="bohum8-phone"></label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="btn_area_half case1">
+                <li><button type="button" class="btn_xr btn_type4" onclick="layer_close('btm')">취소</button></li>
+                <li><button type="button" class="btn_xr btn_type2" onclick="layer_close('btm')">확인</button></li>
+            </ul>
+        </div>
+    </div>
+    <!-- //수신거부설정 -->
+    
+    <!-- 수신거부철회설정 -->
+    <div id="mw-detail2" class="ly_pop btm ly_checkdetail ndim">
+        <div class="wrap">
+            <div class="content">
+                <h2>생명보험</h2>
+                <div class="list_checkbx2">
+                    <div class="inner">
+                        <div class="checkbox name all">
+                            <input type="checkbox" name="bohum" id="total" value="">
+                            <label for="total">전체선택</label>
+                        </div>
+                    </div>
+                    <div class="inner listwrap">
+                        <div class="cover">
+                            <div class="scroll">
+                                <ul class="list">
+                                    <li class="ckarea">
+                                        <div class="checkbox name">
+                                            <input type="checkbox" name="bohum" id="bohum1" value="">
+                                            <label for="bohum1" class="elip1">BNP파리바카디프생명</label>
+                                        </div>
+                                        <ul class="cat2">
+                                            <li><i class="bg_icon phone"></i></li>
+                                        </ul>
+                                    </li>
+                                    <li class="ckarea">
+                                        <div class="checkbox name">
+                                            <input type="checkbox" name="bohum" id="bohum2" value="">
+                                            <label for="bohum2" class="elip1">교보라이프플래닛</label>
+                                        </div>
+                                        <ul class="cat2">
+                                            <li><i class="bg_icon sms"></i></li>
+                                        </ul>
+                                    </li>
+                                    <li class="ckarea">
+                                        <div class="checkbox name">
+                                            <input type="checkbox" name="bohum" id="bohum3" value="">
+                                            <label for="bohum3" class="elip1">AIA생명</label>
+                                        </div>
+                                        <ul class="cat2">
+                                            <li><i class="bg_icon both"></i></li>
+                                        </ul>
+                                    </li>
+                                    <li class="ckarea">
+                                        <div class="checkbox name">
+                                            <input type="checkbox" name="bohum" id="bohum4" value="">
+                                            <label for="bohum4" class="elip1">우체국보험</label>
+                                        </div>
+                                        <ul class="cat2">
+                                            <li><i class="bg_icon sms"></i></li>
+                                        </ul>
+                                    </li>
+                                    <li class="ckarea">
+                                        <div class="checkbox name">
+                                            <input type="checkbox" name="bohum" id="bohum5" value="">
+                                            <label for="bohum5" class="elip1">미래에셋생명</label>
+                                        </div>
+                                        <ul class="cat2">
+                                            <li><i class="bg_icon phone"></i></li>
+                                        </ul>
+                                    </li>
+                                    <li class="ckarea">
+                                        <div class="checkbox name">
+                                            <input type="checkbox" name="bohum" id="bohum6" value="">
+                                            <label for="bohum6" class="elip1">미래에셋생명미래에셋생명미래에셋생명미래에셋생명미래에셋생명미래에셋생명미래에셋생명미래에셋생명</label>
+                                        </div>
+                                        <ul class="cat2">
+                                            <li><i class="bg_icon both"></i></li>
+                                        </ul>
+                                    </li>
+                                    <li class="ckarea">
+                                        <div class="checkbox name">
+                                            <input type="checkbox" name="bohum" id="bohum7" value="">
+                                            <label for="bohum7" class="elip1">미래에셋생명</label>
+                                        </div>
+                                        <ul class="cat2">
+                                            <li><i class="bg_icon phone"></i></li>
+                                        </ul>
+                                    </li>
+                                    <li class="ckarea">
+                                        <div class="checkbox name">
+                                            <input type="checkbox" name="bohum" id="bohum8" value="">
+                                            <label for="bohum8" class="elip1">미래에셋생명</label>
+                                        </div>
+                                        <ul class="cat2">
+                                            <li><i class="bg_icon phone"></i></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="btn_area_half case1">
+                <li><button type="button" class="btn_xr btn_type4" onclick="layer_close('btm')">취소</button></li>
+                <li><button type="button" class="btn_xr btn_type2" onclick="layer_close('btm')">확인</button></li>
+            </ul>
+        </div>
+    </div>
+    <!-- //수신거부철회설정 -->
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../resources/js/jquery-3.3.1.min.js"></script>
+<script src="../resources/js/design.js"></script>
+<script>
+$(function() {
+    $('#gnb .smenu>li:eq(2)').addClass('active'); //메뉴활성화
+    // layer_open('detail2');
+});
+</script>
+
+</body>
+</html>

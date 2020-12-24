@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link rel="preload" href="../resources/css/font/NotoSansKR-Regular-Hestia.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link href="../resources/css/font.css" media="screen" rel="stylesheet">
+<link href="../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../resources/css/site_kt.css" media="screen" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../resources/js/jquery-1.11.1.min.js"></script>
+<script src="../resources/js/jquery.mobile.min.js"></script>
+<script src="../resources/js/design.js"></script>
+<title>세이프캐시</title>
+</head>
+<body class="kt">
+
+<div id="wrap">
+
+	<div class="head_type head_fix" data-type="배경단색">
+		<header id="header">
+			<button type="button" onclick="" class="btn_cls"><i class="ico_com ico_x">닫기</i></button>
+			<h1>간편출금 동의</h1>
+		</header>
+		<div class="subtitle">
+			<button type="button" class="btn_prev"><i class="ico_com">뒤로가기</i></button>
+			<h2>신한금융투자 CMA계좌 설정</h2>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<div id="ct" class="easyagree">
+		<section class="ui_cover ars_section">
+			<p class="txt">등록하실 연결계좌에 대해<br>간편등록 및 인증 절차가 필요합니다.</p>
+			<p class="txt2">고객님이 입력하신 <span class="fc_red">IBK기업 01011114785</span>에 대해<br>출금이체약관에 따라 <u>출금이체 동의를 제출</u> 합니다.<br>사용자는 위 내용에 동의하지 않을 수 있으며 이 경우<br>출금이체 신청이 거부 됩니다.</p>
+			<p class="txt3">위 내용에 동의하시면<br>ARS 요청 후 안내 멘트에 따라<br>아래 인증 번호를 입력 하세요.</p>
+			<ul class="callbx">
+				<li>인증번호<strong>35</strong></li>
+				<li><button type="button" onclick="">ARS 인증 요청<i class="ico_com ico_arr_next2"></i></button></li>
+			</ul>
+		</section>
+		<div class="btn_area2">
+			<span class="tooltip_ball fc_red"><i class="ico_com ico_cau4"></i>인증완료 후 아래 버튼을 눌러주세요.</span>
+			<button type="button" onclick="" class="btn_xr btn_type">완료</button>
+		</div>
+	</div>
+	<!-- //content -->
+
+	<!-- 본인인증 -->
+	<div id="citation" class="ly_pop full ly_citation">
+		<div class="cont">
+			<div class="elm">
+				<header>
+					<h2>본인인증</h2>
+					<button type="button" onclick="layer_close()" class="btn_cls"><i class="ico_com ico_x2">팝업 창닫기</i></button>
+				</header>
+				<!-- //header -->
+				<fieldset class="agreeChklist">
+					<legend>약관동의</legend>
+					<ul class="ui_cover chklst">
+						<li class="all"><div class="checkbox circle"><input type="checkbox" name="agreeAll" id="agreeAll"><label for="agreeAll">모두 동의 합니다.</label></div></li>
+						<li class="one"><span class="checkbox check"><input type="checkbox" name="agree" id="agree1"><label for="agree1">개인정보 수집/이용 동의</label><button type="button" onclick="$('#terms-private').show();" class="btn_view"><i class="ico_com ico_arr_next5"></i></button></span></li>
+						<li class="one"><span class="checkbox check"><input type="checkbox" name="agree" id="agree2"><label for="agree2">개인정보 제3자 제공 동의</label><button type="button" onclick="$('#terms-private3').show();" class="btn_view"><i class="ico_com ico_arr_next5"></i></button></span></li>
+					</ul>
+					<div class="btn_skip_area">
+						<span class="tooltip_ball out fc_red"><i class="ico_com ico_cau4"></i>PASS 간편본인인증을 진행해주세요.</span>
+						<p>본 동의는 서비스의 본진절 기능제공을 위한<br>개인정보수집이용에대한 동의로서,<br>동의하지않으실 경우 서비스 사용이 불가능합니다.</p>
+						<button type="button" onclick="" class="btn_xr btn_type4 btn_skip">확인</button>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+	</div>
+	<!-- //본인인증 -->
+
+	<!-- 개인정보 수입/이용 동의 -->
+	<div id="terms-private" class="ly_pop full ly_terms" style="display: ">
+		<div class="cont">
+			<div class="elm">
+				<header class="agree_head">
+					<button type="button" onclick="$('#terms-private').hide()" class="ico_com ico_x2 btn_cls">창닫기</button>
+					<h1>개인정보 수집/이용 동의</h1>
+				</header>
+				<!-- //header -->
+				<pre class="scroll agree_ct">
+					“세이프캐시(이하, ‘서비스’라 합니다.)”의 서비스 제공 및 이용과 관련하여 ㈜민앤지(이하, ‘회사’라 합니다)가 취득한 개인정보는 “통신비밀보호법”, “전기통신사업법” 및 “정보통신망 이용촉진 및 정보보호 등에 관한 법률” 등 정보통신서비스제공자가 준수하여야 할 관련 법령상의 개인정보 보호 규정을 준수합니다.
+
+					<h2>1. 개인정보수집 및 이용</h2><h3>1.1 수집항목</h3>
+					1) 연계정보(CI), 이름, 생년월일, 세이프캐시 신한금융투자 계좌 (CMA) 계좌번호, 계좌개설일자, 거래 및 잔고 내역, 이자지급 내역, 적용이율 내역, 보유중인 해외주식 원화환산금액, 수익률, 본인명의의 계좌번호/금융기관명 등
+
+					<h3>1.2 이용목적</h3><strong class="fsup u">1) 세이프캐시 서비스 제공
+					2) 이용자 식별, 가입의사 및 연령 확인 등 회원관리
+					3) 제휴 회사의 연계 서비스 등 다양한 서비스 제공
+					4) 신규 서비스 개발, 이벤트 행사 시 정보 전달, 마케팅 및 광고 등에 활용
+					5) 서비스 이용 기록과 접속 빈도 분석, 서비스 이용에 대한 통계, 프라이버시 보호 측면의 서비스 환경 구축, 맞춤형 서비스 제공, 서비스 개선에 활용</strong>
+
+					<h2>2. 개인정보 보유 및 이용기간</h2><strong class="fsup u">2.1 본 서비스 가입일로부터 해지 후 정산완료 시까지
+					2.2 가입자가 서비스 해지를 요청하거나 개인정보 수집 및 이용에 대한 동의를 철회하는 경우 개인정보를 파기합니다. 단, 이용요금의 정산, 소송이나 분쟁 등 기타의 사유로 일정 기간 보유하여야 할 필요가 있는 경우 가입자의 개인정보를 보유 및 이용할 수 있습니다.</strong>
+					2.3 상법, 국세기본법 및 소비자보호에 관한 법률 등 관계 법령에 따라 보존할 필요가 있는 경우, 회사는 관계 법령에서 정한 기간 동안 가입자 정보를 보관합니다. 이 경우 회사는 보관하는 정보를 그 보관의 목적으로만 이용하며 보존기간은 다음과 같습니다.
+					<strong class="fsup u">1) 거래에 관한 장부 및 증빙서류: 5년(국세기본법, 법인세법, 부가가치세법 등)
+					2) 대금결제 및 재화 등의 공급에 관한 기록: 5년(전자상거래 등에서의 소비자보호에 관한 법률)
+					3) 표시/광고에 관한 기록: 6개월(전자상거래에서의 소비자보호에 관한 법률)
+					4) 계약 또는 청약철회 등에 관한 기록: 5년(전자상거래에서의 소비자보호에 관한 법률)
+					5) 소비자 불만 또는 분쟁처리에 관한 기록: 3년(전자상거래에서의 소비자보호에 관한 법률)
+					6) 위 각 호외의 법령에 정해진 개인정보 보유기간이 있을 경우 그에 따름</strong>
+
+					<h2>3. 개인정보 수집 및 이용 동의 철회</h2>서비스 해지 시 개인정보 수집 및 이용동의는 철회됩니다.
+
+					<h2>4. 수집한 개인정보의 파기 절차</h2>회사는 서비스 가입자가 가입 시 제공한 개인정보의 이용목적이 달성된 후 보관기간 및 이용기간에 따라 해당 정보를 파기하되, 그 파기 절차 및 방법 등은 다음과 같습니다.
+
+					1) 파기절차
+					가입자가 서비스 가입 등을 위해 회사에 제공한 개인정보는 서비스 해지 등 이용목적이 달성된 후, 내부 방침 및 기타 관련 법령의 규정에 따른 보유기간 경과 시 삭제되거나 파기합니다.
+
+					2) 파기기한
+					가입자의 개인정보 보유기간이 경과 시 삭제합니다. 단, 고객 응대 및 불법적 사용자에 대한 관련 수사기관 협조, 상법 등 관련 법령의 규정에 의하여 보유하여야 할 필요가 있는 경우에는 일정 기간 가입자의 데이터를 보유합니다. 또한, 고객에게 미리 고지하고 개별동의를 받은 경우에는 동의한 내용에 따른 기간 동안 보유합니다.
+
+					3) 파기방법
+					종이에 출력된 개인정보는 분쇄기로 분쇄 또는 소각하거나 화학약품 처리를 하여 용해하여 파기하고, 전자적 파일 형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.
+
+					<h2>5. 개인정보관리 책임자 및 담당 연락처</h2>1) 성  명 : 박철광
+					2) 소  속 : 기술연구소
+					3) 직  위 : 실장
+					4) 전  화 : 1599-4794
+					5) 이메일 : privacy@minwise.co.kr
+
+					<strong class="fsup">6.</strong> 개인정보 수집 및 이용에 대한 동의를 하지 아니할 수 있습니다. 그러나 동의를 거부할 경우 서비스 이용이 제한될 수 있습니다.
+
+					적용일 : 2018년 10월 29일
+				</pre>
+			</div>
+		</div>
+	</div>
+	<!-- //개인정보 수입/이용 동의 -->
+
+	<!-- 개인정보 제3자 제공 동의 -->
+	<div id="terms-private3" class="ly_pop full ly_terms" style="display: ">
+		<div class="cont">
+			<div class="elm">
+				<header class="agree_head">
+					<button type="button" onclick="$('#terms-private3').hide()" class="ico_com ico_x2 btn_cls">창닫기</button>
+					<h1>개인정보 제3자 제공 동의</h1>
+				</header>
+				<!-- //header -->
+				<pre class="scroll agree_ct">
+					“세이프캐시(이하, ‘서비스’라 합니다.)”의 서비스 제공 및 이용과 관련하여 ㈜민앤지(이하, ‘회사’라 합니다)가 취득한 개인정보는 “통신비밀보호법”, “전기통신사업법” 및 “정보통신망 이용촉진 및 정보보호 등에 관한 법률” 등 정보통신서비스제공자가 준수하여야 할 관련 법령상의 개인정보 보호 규정을 준수합니다.
+
+					<h2>1. 개인정보 3자 제공 동의</h2>본 서비스와 관련하여, 본인은 동의내용을 숙지하였으며, 이에 따라 회사가 수집한 본인의 개인정보를 아래와 같이 제3자에게 제공하는 것에 대해 동의합니다<table>
+						<colgroup>
+							<col style="width:25%;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="col">제공받는 곳</th>
+								<td class="fsup u bold">신한금융투자</td>
+							</tr>
+							<tr>
+								<th scope="col">제공 목적	</th>
+								<td class="fsup u bold">세이프캐시 회원 본인 명의의 신한금융투자 CMA 계좌개설, 계좌 잔액 및 거래내역 조회, 본인확인, 해외주식투자 서비스 이용</td>
+							</tr>
+							<tr>
+								<th scope="col">제공 항목</th>
+								<td>1. 계좌개설 시 : 이름, 생년월일, 휴대전화번호, 연계정보(CI), 본인명의의 계좌번호/금융기관명
+								2. 서비스 이용 시 : 연계정보(CI), 세이프캐시 신한금융투자 CMA 계좌번호	</td>
+							</tr>
+							<tr>
+								<th scope="col">보유 및 이용기간	</th>
+								<td class="fsup u bold">1. 계좌개설 시 : 계좌개설 불가 고객은 즉시 삭제, 계좌개설 진행 중인 고객은 7일 (관련법령에 따라 보존할 필요가 있는 경우에는 해당 보존기간을 준수)
+
+								2. 서비스 이용 시 : 서비스 해지 후 5년 (관련법령에 따라 보존할 필요가 있는 경우에는 해당 보존기간)</td>
+							</tr>
+						</tbody>
+					</table><table>
+						<colgroup>
+							<col style="width:25%;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="col">제공받는 곳</th>
+								<td class="fsup u bold">세틀뱅크 주식회사</td>
+							</tr>
+							<tr>
+								<th scope="col">제공 목적	</th>
+								<td class="fsup u bold">CMS 출금이체를 통한 출금이체 서비스 제공, 출금동의 확인, 출금이체 신규등록 및 해지</td>
+							</tr>
+							<tr>
+								<th scope="col">제공 항목	</th>
+								<td>이름, 생년월일, 휴대전화번호, 본인명의의 계좌번호/금융기관명</td>
+							</tr>
+							<tr>
+								<th scope="col">보유 및 이용기간	</th>
+								<td class="fsup u bold">수집, 이용 동의일로부터 CMS 출금이체 종료일(해지일) 후 5년까지</td>
+							</tr>
+						</tbody>
+					</table><table>
+						<colgroup>
+							<col style="width:25%;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="col">제공받는 곳</th>
+								<td class="fsup u bold">금융결제원</td>
+							</tr>
+							<tr>
+								<th scope="col">제공 목적</th>
+								<td class="fsup u bold">출금이체 서비스 제공 및 출금동의 확인, 출금이체 신규등록 및 해지 사실 통지</td>
+							</tr>
+							<tr>
+								<th scope="col">제공 항목</th>
+								<td>이름, 생년월일, 휴대전화번호, 본인명의의 계좌번호/금융기관명</td>
+							</tr>
+							<tr>
+								<th scope="col">보유 및 이용기간</th>
+								<td class="fsup u bold">출금이체 서비스 제공 및 출금동의 확인 목적을 달성할 때까지 (관련법령에 따라 보존할 필요가 있는 경우에는 해당 보존기간)</td>
+							</tr>
+						</tbody>
+					</table>5) 고객은 개인정보 제공에 동의하지 않으실 수 있으시며, 동의하지 않으신 경우 본 서비스 이용이 불가능할 수 있습니다.
+
+					*회사는 상기 정보와 목적 외에는 가입자의 정보를 제공하지 않으며, 서비스 이용을 위한 목적 외에는 고객정보를 활용하지 않습니다.
+
+					※ 상기 내용이 변경되는 경우 서비스 홈페이지(www.bank1s.co.kr)를 통해 안내 드립니다.
+					적용일 : 2018년 10월 29일
+				</pre>
+			</div>
+		</div>
+	</div>
+	<!-- //개인정보 제3자 제공 동의 -->
+
+</div>
+
+</body>
+</html>

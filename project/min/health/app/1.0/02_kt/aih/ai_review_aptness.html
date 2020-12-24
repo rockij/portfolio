@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="../../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/ai_care.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/site_kt.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/device.css" media="screen" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../../resources/js/jquery-1.11.1.min.js"></script>
+<script src="../../resources/js/design.js"></script>
+<title>KT건강지키미</title>
+</head>
+<body class="kt">
+
+<div id="wrap">
+
+	<header id="head" class="fix">
+		<button type="button" onclick="" class="btn_cls"><i class="ico_com">닫기</i></button>
+		<button type="button" class="btn_prev ai_srchpop_close"><i class="ico_com">뒤로가기</i></button>
+        <h1><a href="/">건강지키미</a></h1>
+        <div id="swipetab" class="swiper-container">
+            <ul class="swiper-wrapper tabYear tab_type">
+                <li class="swiper-slide"><a href="#;">AI 분석</a></li>
+                <li class="swiper-slide"><a href="#;">AI 비교</a></li>
+                <li class="swiper-slide"><a href="#;">안전성확인</a></li>
+                <li class="swiper-slide"><a href="#;">궁합시간표</a></li>
+                <li class="swiper-slide"><a href="#;">건강매거진</a></li>
+            </ul>
+        </div>
+        <!-- //tab -->
+	</header>
+	<!-- //header -->
+	<div id="ct">
+        <div class="ai_srchfrm">
+            <div class="inner">
+                <hgroup class="ai_title">
+                    <h2><strong>건강기능식품</strong> 궁합&시간표</h2>
+                    <p>내가 먹는 건강기능식품의 인공지능 성분 궁합과<br>추천 시간표를 확인해 보세요.</p>
+                    <button type="button" onclick="layer_open('mw-help')" class="btn_help"><i class="ico_com"></i></button>
+                </hgroup>
+                <div class="ai_loading">
+                    <div class="cover">
+                        <div class="loading-bigger">
+                            <div class="circle"><div class="wrap"><div class="mid"></div></div></div>
+                            <figure></figure>
+                        </div>
+                        <div class="txtarea">
+                            <p class="mtxt"><strong>제품 궁합 및 섭취시간</strong> 분석중</p>
+                            잠시만 기다려주세요.<br>인공지능이 분석중입니다.
+                        </div>
+                    </div>
+                </div>
+                <!-- //loading -->
+            </div>
+            <div class="ai_srchpop">
+                <div class="inner">
+                    <div class="ai_ipbox input del">
+                        <i class="ico_com"></i>
+                        <input type="text" id="" placeholder="성분명을 입력해주세요. (예)비타민C">
+                        <button type="button" onclick="" class="del"><i class="ico_com">삭제</i></button>
+                    </div>
+                </div>
+                <section class="ai_compare open">
+                    <hgroup class="ai_title3">
+                        <h3>검색한 성분명</h3>
+                        <span class="col"><button type="button" onclick="wordAllDel('tag');" class="">전체삭제</button></span>
+                    </hgroup>
+                    <div class="ai_tagbox">
+                        <ul id="tag" class="tag" style="display:none">
+                            <li>
+                                <a href="#;">실리마린</a>
+                                <button type="button" onclick="" class="w_del"></button>
+                            </li>
+                            <li>
+                                <a href="#;">프로바이오틱스</a>
+                                <button type="button" onclick="" class="w_del"></button>
+                            </li>
+                            <li>
+                                <a href="#;">밀크씨슬</a>
+                                <button type="button" onclick="" class="w_del"></button>
+                            </li>
+                            <li>
+                                <a href="#;">알로에전잎</a>
+                                <button type="button" onclick="" class="w_del"></button>
+                            </li>
+                            <li>
+                                <a href="#;">루테인</a>
+                                <button type="button" onclick="" class="w_del"></button>
+                            </li>
+                            <li>
+                                <a href="#;">L-카르니틴</a>
+                                <button type="button" onclick="" class="w_del"></button>
+                            </li>
+                        </ul>
+                        <p class="ai_nodata"><i class="ico_com"></i><br>검색하신 성분명이 없습니다.</p>
+                    </div>
+                    <p class="inner dsc"><span>최대 10개 성분명 입력</span>이 가능합니다.</p>
+                </section>
+                <!-- //비교함 -->
+                <div class="ai_category">
+                    <div id="category_swir" class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <h3>기능별 카테고리 (32)</h3>
+                                <div class="iscroll">
+                                    <ul class="list_step1">
+                                        <li><span class="checkbox"><input type="radio" name="step1" id="step1-1"><label for="step1-1">장건강</label></span></li>
+                                        <li><span class="checkbox"><input type="radio" name="step1" id="step1-2"><label for="step1-2">혈당조절</label></span></li>
+                                        <li><span class="checkbox"><input type="radio" name="step1" id="step1-3"><label for="step1-3">관절<br>뼈건강</label></span></li>
+                                        <li><span class="checkbox"><input type="radio" name="step1" id="step1-4"><label for="step1-4">콜레스테롤<br>개선</label></span></li>
+                                        <li><span class="checkbox"><input type="radio" name="step1" id="step1-5"><label for="step1-5">면역</label></span></li>
+                                        <li><span class="checkbox"><input type="radio" name="step1" id="step1-6"><label for="step1-6">항산화</label></span></li>
+                                        <li><span class="checkbox"><input type="radio" name="step1" id="step1-7"><label for="step1-7">피부건강</label></span></li>
+                                        <li><span class="checkbox"><input type="radio" name="step1" id="step1-8"><label for="step1-8">장건강</label></span></li>
+                                        <li><span class="checkbox"><input type="radio" name="step1" id="step1-9"><label for="step1-9">혈당조절</label></span></li>
+                                        <li><span class="checkbox"><input type="radio" name="step1" id="step1-10"><label for="step1-10">관절<br>뼈건강</label></span></li>
+                                        <li><span class="checkbox"><input type="radio" name="step1" id="step1-11"><label for="step1-11">콜레스테롤<br>개선</label></span></li>
+                                        <li><span class="checkbox"><input type="radio" name="step1" id="step1-12"><label for="step1-12">면역</label></span></li>
+                                        <li><span class="checkbox"><input type="radio" name="step1" id="step1-13"><label for="step1-13">항산화</label></span></li>
+                                        <li><span class="checkbox"><input type="radio" name="step1" id="step1-14"><label for="step1-14">피부건강</label></span></li>
+                                        <li><span class="checkbox"><input type="radio" name="step1" id="step1-15"><label for="step1-15">장건강</label></span></li>
+                                        <li><span class="checkbox"><input type="radio" name="step1" id="step1-16"><label for="step1-16">혈당조절</label></span></li>
+                                        <li><span class="checkbox"><input type="radio" name="step1" id="step1-17"><label for="step1-17">관절<br>뼈건강</label></span></li>
+                                        <li><span class="checkbox"><input type="radio" name="step1" id="step1-18"><label for="step1-18">콜레스테롤<br>개선</label></span></li>
+                                        <li><span class="checkbox"><input type="radio" name="step1" id="step1-19"><label for="step1-19">면역</label></span></li>
+                                        <li><span class="checkbox"><input type="radio" name="step1" id="step1-20"><label for="step1-20">항산화</label></span></li>
+                                        <li><span class="checkbox"><input type="radio" name="step1" id="step1-21"><label for="step1-21">피부건강</label></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <h3>기능별<i></i>장건강 성분·원료 (37)</h3>
+                                <div class="iscroll">
+                                    <div class="ai_tagbox">
+                                        <h4>고시형/ 개별인정형 원료</h4>
+                                        <button type="button" class="btn_checkReset">선택 초기화</button>
+                                        <ul class="check">
+                                            <li><span class="checkbox"><input type="checkbox" name="crude" id="crude1-1"><label for="crude1-1">알로에전잎</label></span></li>
+                                            <li><span class="checkbox"><input type="checkbox" name="crude" id="crude1-2"><label for="crude1-2">구아검/구아검가수분해물</label></span></li>
+                                            <li><span class="checkbox"><input type="checkbox" name="crude" id="crude1-3"><label for="crude1-3">글루코만난</label></span></li>
+                                            <li><span class="checkbox"><input type="checkbox" name="crude" id="crude1-4"><label for="crude1-4">난소화성말토덱스트린</label></span></li>
+                                            <li><span class="checkbox"><input type="checkbox" name="crude" id="crude1-5"><label for="crude1-5">대두식이섬유</label></span></li>
+                                            <li><span class="checkbox"><input type="checkbox" name="crude" id="crude1-6"><label for="crude1-6">목이버섯식이섬유</label></span></li>
+                                            <li><span class="checkbox"><input type="checkbox" name="crude" id="crude1-7"><label for="crude1-7">밀식이섬유</label></span></li>
+                                            <li><span class="checkbox"><input type="checkbox" name="crude" id="crude1-8"><label for="crude1-8">보리식이섬유</label></span></li>
+                                            <li><span class="checkbox"><input type="checkbox" name="crude" id="crude1-9"><label for="crude1-9">아라비아검</label></span></li>
+                                            <li><span class="checkbox"><input type="checkbox" name="crude" id="crude1-10"><label for="crude1-10">이눌린/치커리추출물</label></span></li>
+                                            <li><span class="checkbox"><input type="checkbox" name="crude" id="crude2-1"><label for="crude2-1">알로에전잎</label></span></li>
+                                            <li><span class="checkbox"><input type="checkbox" name="crude" id="crude2-2"><label for="crude2-2">구아검/구아검가수분해물</label></span></li>
+                                            <li><span class="checkbox"><input type="checkbox" name="crude" id="crude2-3"><label for="crude2-3">글루코만난</label></span></li>
+                                            <li><span class="checkbox"><input type="checkbox" name="crude" id="crude2-4"><label for="crude2-4">난소화성말토덱스트린</label></span></li>
+                                            <li><span class="checkbox"><input type="checkbox" name="crude" id="crude2-5"><label for="crude2-5">대두식이섬유</label></span></li>
+                                            <li><span class="checkbox"><input type="checkbox" name="crude" id="crude2-6"><label for="crude2-6">목이버섯식이섬유</label></span></li>
+                                            <li><span class="checkbox"><input type="checkbox" name="crude" id="crude2-7"><label for="crude2-7">밀식이섬유</label></span></li>
+                                            <li><span class="checkbox"><input type="checkbox" name="crude" id="crude2-8"><label for="crude2-8">보리식이섬유</label></span></li>
+                                            <li><span class="checkbox"><input type="checkbox" name="crude" id="crude2-9"><label for="crude2-9">아라비아검</label></span></li>
+                                            <li><span class="checkbox"><input type="checkbox" name="crude" id="crude2-10"><label for="crude2-10">이눌린/치커리추출물</label></span></li>
+                                            <li><span class="checkbox"><input type="checkbox" name="crude" id="crude2-11"><label for="crude2-11">이눌린/치커리추출물</label></span></li>
+                                            <li><span class="checkbox"><input type="checkbox" name="crude" id="crude2-12"><label for="crude2-12">이눌린/치커리추출물</label></span></li>
+                                            <li><span class="checkbox"><input type="checkbox" name="crude" id="crude2-13"><label for="crude2-13">이눌린/치커리추출물</label></span></li>
+                                            <li><span class="checkbox"><input type="checkbox" name="crude" id="crude2-14"><label for="crude2-14">이눌린/치커리추출물</label></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn_btm_more"><button type="button" onclick="aiSearchBack()">선택한 원료 담기</button></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <!-- //기능별카테고리 -->
+                <div class="ai_myword">
+                    <ul class="list">
+                        <li>
+                            <a href="#;"><span class="elip1"><span class="live">드</span>시모네</span></a>
+                            <a href="#;"><span class="elip1"><span class="live">드시</span>모네데일리</span></a>
+                            <a href="#;"><span class="elip1"><span class="live">드시모네</span>키즈</span></a>
+                            <a href="#;"><span class="elip1"><span class="live">드시모네블루베리</span></span></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //검색어입력 -->
+            </div>
+            <div class="inner"><button type="button" onclick="aiLoading()" class="btn_btm_more">건강기능식품 궁합 및 섭취 시간 확인</button></div>
+        </div>
+	</div>
+	<!-- //content -->
+	<footer class="footer_cm">
+        <article>
+            <div class="infobx">
+                <button type="button" onclick="layer_open('cpInfo')" class="btn_info">(주) 민앤지 사업자 정보</button>
+                <p class="cau2">본 서비스는 청약철회가 불가능한 상품입니다.</p>
+                <ul class="list">
+                    <li class="t"><span>서비스 이용문의</span> (주)민앤지 1599-4760</li>
+                    <li>가입해지문의 U+(114)</li>
+                    <li>보험 및 건강정보는 내보험찾아줌, 건강보험관리공단, 보험사에서 조회 된 정보입니다.</li>
+                    <li>본 서비스는 모바일에서 보험, 건강정보를 간편하고 안전하게 확인 할 수 있는 서비스 입니다.</li>
+                    <li>진료 및 투약정보는 조회 일 기준으로 14개월 전 진료분부터 1년간의 내역을 확인 하실 수 있습니다.</li>
+                </ul>
+            </div>
+        </article>
+	</footer>
+    <!-- //footer -->
+
+</div>
+
+<!-- 사용자정보 -->
+<div class="ly_pop full ly_cpinfo">
+    <div class="bg"></div>
+    <div class="cont">
+        <div id="cpInfo" class="elm iscroll">
+            <button type="button" onclick="layer_close()" class="close"><i class="bgf">창닫기</i></button>
+            <h2>사업자 정보</h2>
+            <ul class="list">
+                <li>
+                    <strong>상호</strong>
+                    <span>㈜민앤지</span>
+                </li>
+                <li>
+                    <strong>대표이사</strong>
+                    <span>이현철</span>
+                </li>
+                <li>
+                    <strong>주소</strong>
+                    <span>서울시 강남구 테헤란로 34길 6<br>태광타워 12F, 13F</span>
+                </li>
+                <li>
+                    <strong>통신판매업신고번호</strong>
+                    <span>제2015-서울강남-00012호</span>
+                </li>
+                <li>
+                    <strong>사업자등록번호</strong>
+                    <span>214-88-39117</span>
+                </li>
+                <li>
+                    <strong>고객센터</strong>
+                    <span>1599-4760 (평일 09:00-18:00)</span>
+                </li>
+                <li>
+                    <strong>호스팅서비스사업자</strong>
+                    <span>㈜민앤지</span>
+                </li>
+                <li>
+                    <strong>이메일</strong>
+                    <span>minwise.help@minwise.co.kr</span>
+                </li>
+            </ul>
+            <ul class="list_terms">
+                <li><button type="button" onclick="">사업자 정보 확인</button></li>
+                <li><button type="button" onclick="">건강지키미 무료서비스이용약관</button></li>
+                <li><button type="button" onclick="">건강지키미 유료서비스이용약관</button></li>
+                <li><button type="button" onclick="">건강지키미 개인정보 수집 및 이용약관</button></li>
+                <li><button type="button" onclick="">건강지키미 개인정보 제3자 제공 동의약관</button></li>
+                <li><button type="button" onclick="">건강지키미 알림 및 광고수신동의 약관</button></li>
+                <li><a href="https://www.minwise.co.kr/sterm/mprivacy" target="_blank">개인정보처리방침</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- //사용자정보 -->
+
+<!-- 도움말 (팝업) -->
+<div class="ly_pop ly_help">
+    <div class="bg"></div>
+    <div class="cont">
+        <article id="mw-help" class="elm">
+            <button type="button" class="popcls"><i class="ico_com ico_cls">창닫기</i></button>
+            <div class="wrap">
+                <h3><figure><i class="grim_com icon4"></i></figure>건강기능식품 성분궁합 시간표란?</h3>
+                <p class="txt">건강기능식품에도 궁합이 있다는 것, 알고 계시나요?<br>건강기능식품 성분 간 상호작용에 따라 궁합이<br>좋지 않은 제품을 함께 섭취할 경우 효과는 커녕<br>오히려 흡수를 방해하거나 화학 반응을 일으켜<br>예상치 못한 결과를 초래할 수 있습니다.<br><br>그러나 좋은 궁합의 건강기능식품을 함께 섭취하면<br>시너지를 볼 수도 있죠.<br>또한 성분에 따라 권장 섭취 시간도 다를 수 있습니다.</p>
+                <p class="txt fc_blk"><span class="emp">특히 여러 종류의 건강기능식품을 섭취 중</span>이시라면,<br><span class="emp">건강기능식품 성분궁합시간표를 필수로 참고해보세요.</span><br>건강을 위해 먹는 건강기능식품!<br>더 똑똑하고 안전하게 드세요.</p>
+                <p class="txt2">* 건강기능식품 성분별 권장 섭취 시간 및 궁합에 대해서는<br>의사 감수 및 각종 연구 결과를 활용하나, 의견 차이가 있을 수<br>있으므로 참고 용도로만 활용하시기 바랍니다.</p>
+            </div>
+            <button type="button" onclick="layer_close();" class="btn_xxr btn_type btn_skip">확인</button>
+        </article>
+    </div>
+</div>
+<!-- //도움말 -->
+
+<!-- 전체삭제::최근검색어 (팝업) -->
+<div class="ly_pop ly_alert" style="">
+    <div class="bg"></div>
+    <div class="cont">
+        <article id="mw-laytely" class="elm">
+            최근검색어를 모두<br>삭제하시겠습니까?
+            <ul class="btn_area2">
+                <li><button type="button" onclick="layer_close()" class="btn_xxr btn_type4">취소</button></li>
+                <li><button type="button" onclick="layer_close(); wordAllDel('ai-laytely');" class="btn_xxr btn_type">확인</button></li>
+            </ul>
+        </article>
+    </div>
+</div>
+<!-- // -->
+
+<!-- 전체삭제::최근조회한제품 (팝업) -->
+<div class="ly_pop ly_alert" style="">
+    <div class="bg"></div>
+    <div class="cont">
+        <article id="mw-product" class="elm">
+            최근조회한제품을 모두<br>삭제하시겠습니까?
+            <ul class="btn_area2">
+                <li><button type="button" onclick="layer_close()" class="btn_xxr btn_type4">취소</button></li>
+                <li><button type="button" onclick="layer_close(); wordAllDel('ai-product');" class="btn_xxr btn_type">확인</button></li>
+            </ul>
+        </article>
+    </div>
+</div>
+<!-- // -->
+
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../resources/js/design_ai.js"></script>
+<script>
+    $(function() {
+        tabSwir(3);
+    });
+</script>
+<!-- //js -->
+
+</body>
+</html>

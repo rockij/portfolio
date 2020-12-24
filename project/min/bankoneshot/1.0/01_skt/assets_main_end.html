@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link rel="preload" href="../resources/css/font/NotoSansKR-Regular-Hestia.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link href="../resources/css/font.css" media="screen" rel="stylesheet">
+<link href="../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../resources/css/site_skt.css" media="screen" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../resources/js/jquery-1.11.1.min.js"></script>
+<script src="../resources/js/jquery.mobile.min.js"></script>
+<script src="../resources/js/design.js"></script>
+<title>뱅크원샷</title>
+<script>
+	$(function(){
+    $(".progress").attr("data-text1", 0);
+    $(".progress").attr("data-text2", 100);
+    $(".progress").progValue();
+    $(".progress").attr("data-text1", 60);
+    $(".progress").attr("data-text2", 40);
+    $(".progress").progValue();
+    $(".progress").attr("data-text1", 20);
+    $(".progress").attr("data-text2", 80);
+    $(".progress").progValue();
+	});
+</script>
+</head>
+<body>
+
+<div id="wrap">
+
+	<div class="head_type head_fix">
+		<header id="header">
+			<button type="button" class="btn_prev"><i class="ico_com ico_arr_prev">뒤로가기</i></button>
+			<h1>뱅크원샷</h1>
+		</header>
+		<!-- //header -->
+		<ul class="tab_type2">
+			<li class="selected"><button type="button" onclick="">자산</button></li>
+			<li><button type="button" onclick="">간편투자</button></li>
+		</ul>
+		<div class="total_price2">총자산<code class="won">945,000,000</code>원</div>
+		<div class="graph_wrap">
+			<dl class="graph_bank">
+				<dt>
+					<div class="progress" data-area="2" data-text1="0" data-text2="0">
+						<div class="circle">
+							<div class="mask full"><div class="fill"></div></div>
+							<div class="mask"><div class="fill fix"></div></div>
+						</div>
+					  <div class="inset"></div><div class="outset"></div>
+					</div>
+				</dt>
+				<dd>
+					<ul>
+						<li><span class="stit">계좌</span><code>8,945,000,000</code></li>
+						<li><span class="stit">투자</span><code>624,190,500</code><span class="crv up">+ 1116.48%</span></li>
+						<!-- <li>
+							<span class="stit">투자</span>
+							<a href="#;" data-ajax="false" class="btn_txlink">3분만에<span>투자자산 늘리는 방법<i class="ico_com ico_arr_next"></i></span></a>
+						</li> -->
+					</ul>
+					<p class="update"><button type="button" class="btn_refresh"><i class="ico_com ico_refresh2">새로고침</i>최근업데이트 : 2019.10.16  16:23:43</button></p>
+				</dd>
+			</dl>
+		</div>
+		<!-- //총자산 표시 -->
+		<button type="button" class="btn_expand"><i></i></button>
+	</div>
+	<!-- //top(fix) -->
+
+	<div id="ct" class="assets_main">
+		<div class="ui_cover">
+			<h2 class="blind">금융자산</h2>
+			<section class="bankset_area">
+				<a href="#;" data-ajax="false" class="btn_set"><i class="ico_com ico_gear"></i></a>
+				<hgroup>
+					<h3>My계좌</h3>
+					<ul class="list">
+						<li>등록은행 <code>2</code>개</li>
+						<li>보유계좌 <code>6</code>개</li>
+					</ul>
+				</hgroup>
+				<a href="#;" data-ajax="false" class="btn_follow">
+					<p><i class="ico_com ico_cau3"></i>진행중인 CMA 계좌개설 건이 있습니다.</p>
+					<u>이어하기 ></u>
+				</a>
+			</section>
+			<!-- //My계좌 -->
+			<div class="list_type">
+				<figure class="bnklg"><img src="../resources/images/bank/fullname_22.png" alt="KB국민은행"></figure>
+				<ul>
+					<li>
+						<button type="button" onclick="">
+							<ul class="ui_table">
+								<li class="mcell">
+									<strong class="elip1 sbj">위비SUPER 주거래통장위비SUPER 주거래통장위비SUPER 주거래통장</strong>
+									<span class="num">13112521478</span>
+								</li>
+								<li class="tcell userw">360,700</li>
+							</ul>
+						</button>
+					</li>
+					<li>
+						<button type="button" onclick="">
+							<ul class="ui_table">
+								<li class="mcell">
+									<strong class="elip1 sbj">SUPER 거래통장</strong>
+									<span class="num">13112521478</span>
+								</li>
+								<li class="tcell userw">4,000</li>
+							</ul>
+						</button>
+					</li>
+				</ul>
+				<!-- //copy -->
+				<div class="total"><figure class="ui_align_mid"><span class="ele"><img src="../resources/images/bank/fullname_01.png" alt="NH농협은행"></span></figure>634,700</div>
+				<ul>
+					<li>
+						<button type="button" onclick="">
+							<ul class="ui_table">
+								<li class="mcell">
+									<strong class="elip1 sbj">위비SUPER 주거래통장위비SUPER 주거래통장위비SUPER 주거래통장</strong>
+									<span class="num">13112521478</span>
+								</li>
+								<li class="tcell userw">1,360,700</li>
+							</ul>
+						</button>
+					</li>
+					<li>
+						<button type="button" onclick="">
+							<ul class="ui_table">
+								<li class="mcell">
+									<strong class="elip1 sbj">SUPER 거래통장</strong>
+									<span class="num">13112521478</span>
+								</li>
+								<li class="tcell userw">40,000</li>
+							</ul>
+						</button>
+					</li>
+				</ul>
+				<!-- //copy -->
+				<div class="btn_bankplus"><a href="#;" data-ajax="false">+ 계좌추가</a></div>
+			</div>
+		</div>
+	</div>
+	<!-- //content -->
+	<footer id="footer">
+		<ul class="nav">
+			<li><button type="button" onclick="">서비스이용약관</button></li>
+			<li><button type="button" onclick="">개인정보취급방침</button></li>
+		</ul>
+		<address>
+			<p class="cs">서비스 가입/해지/이용문의<br>1599-4794 (평일 9시-18시),  minwise.help@minwise.co.kr</p>
+			㈜민앤지  서울특별시 강남구 테헤란로 34길 6, 태광타워 13층<br>사업자등록번호 : 214-88-39117<p>- 계좌개설 관련문의 : 1599 - 4905<br>- 해외주식 관련문의 : 3772 - 2525</p>
+		</address>
+	</footer>
+    <!-- //footer -->
+    
+    <!-- 서비스종료 안내 -->
+    <section id="ly_end" class="ly_pop ly_end">
+        <div class="cont">
+            <div class="elm">
+                <button type="button" class="btn_cls" onclick="layer_close();">창닫기</button>
+                <div class="scroll">
+                    <h2 class="endTit">2019년 7월 00일<br><strong class="txtBold">뱅크원샷 서비스가</strong><br><strong class="txtBold">종료</strong>가 됩니다.</h2>
+                    <p class="desc">관심과 사랑을 보내주신 고객분들께 감사의<br>인사를 드립니다.<br><br>뱅크원샷 서비스가 <strong class="txtBold">2019년  07월 00일자로 종료</strong>하게<br>되었음을 알려 드립니다.<br>서비스 종료 이후에는 서비스 이용이 제한되므로<br>하단 상세내용을 확인해주시기 바랍니다.</p>
+                    <div class="detail_wrap">
+                        <button type="button" onclick="" class="btn_r btn_type10 btn_detailview">상세내용보기</button>
+                        <div class="detail">
+                            <ol class="noticeList">
+                                <li>
+                                    <h6 class="txtBold">1. 간편투자 해외주식 서비스</h6>
+                                    <p>뱅크원샷에서 개설하신 CMA 및 투자중인 해외주식은<br><strong>신한금융투자의 APP i알파 / 신한금융투자 웹페이지</strong>를<br>통해 확인이 가능하며, <strong>SKT PASS 개편</strong> 후 개설했던<br>CMA 및 투자중인 해외주식을 다시 확인 &<br>사용 하실 수 있습니다.</p>
+                                    <p class="cs">신한금융투자 CMA 및 해외주식 관련한 문의사항은<br>신한금융투자 고객센터로 문의 부탁드립니다.<code>1588 - 0365</code></p>
+                                </li>
+                                <li>
+                                    <h6 class="txtBold">2. PASS APP 업데이트 예정</h6>
+                                    <p>뱅크원샷 CMA를 지속적으로 사용을 원하실 경우에는,<br>2019년 5월 말, 새롭게 출시되는 SKT PASS APP에서<br>사용이 가능 하며, 기존 거래 내역을 확인<br>하실 수 있습니다.</p>
+                                </li>
+                                <li>
+                                    <h6 class="txtBold">3. CMA 명칭 변경</h6>
+                                    <p>기존에 개설하신 뱅크원샷 신한금융투자 CMA 명칭은<br><strong>PASS 주계좌 CMA</strong>로 변경 될 예정 입니다.<br>그러나, <strong>PR형 CMA 계좌의 확정형 금리의 변동은<br>없습니다.</strong></p>
+                                </li>
+                            </ol>
+                            <p class="desc2">고객님의 개인정보는 개인정보보허법에 의거하여<br>뱅크원샷 서비스 종료 후  파기될 예정입니다.<br>단,  관계법령의 규정에 의하여 보존할 의무가 있는<br>개인정보는 법령에서 규정한 일정한 기간 동안<br>안전하게 보관된 후 파기됨을 알려드립니다.</p>
+                        </div>
+                        <p class="desc">다시 한 번,  고객 여러분의 성원과 관심에 진심으로<br>감사의 인사를 드리며,  서비스 중단에 따른 불편을<br>최소화하기 위해 최선의 노력을 다하겠습니다.<br><br>서비스 종료와 관련한 문의사항은<br>뱅크원샷 고객센터로 문의 부탁드립니다.<br><strong>1599 - 4794</strong><br><br>감사합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //서비스종료 안내 -->
+    <script src="../resources/js/swiper.min.js"></script>
+    <script>
+        window.onload = function() {
+            layer_open('ly_end'); // 서비스종료 안내
+            $(".btn_detailview").click(function() {
+                $(this).parent().toggleClass('open');
+                $(".ly_end .scroll").scrollTop( $(this).position().top - $(this).height() );
+            });
+        }
+    </script>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link href="../resources/css/font.local.css" media="screen" rel="stylesheet"> <!-- 폐쇄망 -->
+<link href="../resources/css/font.cdn.css" media="screen" rel="stylesheet"> <!-- 인터넷망 -->
+<link href="../resources/css/common.min.css" media="screen" rel="stylesheet">
+<link href="../resources/css/content.min.css" media="screen" rel="stylesheet">
+<title>010휘슬</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header" class="fix top">
+        <button type="button" onclick="" class="btn_prev" title="뒤로가기"><i></i></button>
+    </header>
+    <!-- //header -->
+
+    <div id="content" class="setting">
+        <h1 class="section">내 정보</h1>
+        <section class="list_bside">
+            <ul>
+                <li>
+                    <span class="th">이름</span>
+                    <span class="td">홍길동</span>
+                </li>
+                <li>
+                    <span class="th">생년월일</span>
+                    <code class="td">1984.05.07</code>
+                </li>
+                <li>
+                    <span class="th">휴대폰번호</span>
+                    <code class="td">010-1234-5678</code>
+                </li>
+            </ul>
+        </section>
+        <section class="list_bside">
+            <ul>
+                <li>
+                    <span class="th">이메일</span>
+                    <div class="ip_box ip_chg ip_del">
+                        <label for="email" class="lbl">변경할 이메일을 넣어주세요</label>
+                        <input type="email" id="email" class="ip" name="email"  value="" autocomplete="off">
+                        <button type="button" onclick="" class="del" title="삭제"><i></i></button>
+                        <button type="button" onclick="" class="pen" title="수정"><i></i></button>
+                    </div>
+                </li>
+                <li class="addr">
+                    <span class="th">주소</span>
+                    <span class="td">
+                        <button type="button" onclick="alert('주소창')">서울시 강남구 테헤란로 34길<br>태광타워 12층</button>
+                    </span>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <!-- //content -->
+
+    <div class="btn_area_wide fix btm"><button type="button" class="skip" onclick="" disabled>완료</button></div>
+    <!-- //btn -->
+
+</div>
+
+<!-- auto_email -->
+<div id="mw-autoEmail" class="ly_pop popBtm ly_auto_email">
+    <div class="wrap">
+        <div class="content">
+            <button type="button" onclick="popupClose('autoEmail','mwf');" class="close" title="닫기"><i></i></button>
+            <h2>이메일주소</h2>
+            <button type="button" class="domain_direct">직접입력</button>
+            <div class="domain_list_wrap"></div>
+        </div>
+    </div>
+</div>
+<!-- //auto_email -->
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script> -->
+<script src="../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../resources/js/jquery-ui.js"></script>
+<script src="../resources/js/gsap.min.js"></script>
+<script src="../../../global/resources/js/global.js"></script>
+<script src="../resources/js/design.js" defer></script>
+<script>
+$(function() {
+    emailAuto(); // email autocomplete
+});
+</script>
+
+</body>
+</html>

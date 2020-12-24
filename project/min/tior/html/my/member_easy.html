@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="TIOR, 모든 시승은 티오르에서">
+    <meta name="keywords" content="티오르, tior, 시승예약, 시승, 시승플랫폼">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="언택트! 시승예약은 간편하게! 실시간 시승예약 서비스">
+    <meta property="og:description" content="차량 구매 전 시승은 필수, 모든시승은 티오르에서">
+    <meta property="og:image" content="https://m.tior.co.kr/resources/images/tior_favicon.png">
+    <meta property="og:url" content="https://m.tior.co.kr/">
+    <link href="../../resources/css/common.min.css" media="screen" rel="stylesheet">
+    <link href="../../resources/css/my.min.css" media="screen" rel="stylesheet">
+    <title>TIOR, 모든 시승은 티오르에서</title>
+</head>
+<body>
+
+<div id="wrap" class="type">
+    <header id="header" class="fix top">
+        <div class="headWrap">
+            <a href="#n" class="ico ico_back"><span class="hide">뒤로가기</span></a>
+            <h1 class="white">회원가입</h1>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <div id="content">
+        <div class="joinView member">
+            <h3 class="joinTit hurdle">회원가입</h3>
+            <section class="ipWrap">
+                <div class="ipJoin">
+                    <label for="name" class="ipTit default">이름</label>
+                    <span class="ipLine ip_del">
+                        <input type="text" id="name" class="ip" placeholder="홍길동">
+                        <button type="button" class="del"><i>입력삭제</i></button>
+                    </span>
+                </div>
+                <div class="ipJoin">
+                    <label for="tel" class="ipTit default">연락처</label>
+                    <span class="ipLine ip_del">
+                        <input type="tel" id="tel" class="ip" placeholder="01012345678" maxlength="11">
+                        <button type="button" class="del"><i>입력삭제</i></button>
+                    </span>
+                </div>
+                <div class="ipJoin">
+                    <label for="birth" class="ipTit default">생년월일</label>
+                    <span class="ipLine ip_del">
+                        <input type="tel" id="birth" class="ip" maxlength="8" placeholder="19700101">
+                        <button type="button" class="del"><i>입력삭제</i></button>
+                    </span>
+                </div>
+                <div class="ipJoin">
+                    <label for="email" class="ipTit default">이메일 주소</label>
+                    <span class="ipLine ip_del">
+                        <input type="email" id="email" class="ip" placeholder="abc@martion.com">
+                        <button type="button" class="del"><i>입력삭제</i></button>
+                    </span>
+                </div>
+                <div class="ipJoin">
+                    <label for="password" class="ipTit default">비밀번호</label>
+                    <span class="ipLine ip_pw ip_del">
+                        <input type="password" id="password" class="ip" placeholder="비밀번호를 입력해주세요.">
+                        <button type="button" class="del"><i>입력삭제</i></button>
+                        <button type="button" class="eyes"><i>비밀번호 보여주기</i></button>
+                    </span>
+                    <i class="error" style="display:block">영문+숫자_특수조합으로 8~20자리</i>
+                </div>
+            </section>           
+            <section id="termsCheck" class="termsList">
+                <ul>
+                    <li class="all">
+                        <span onclick="scrollMov('btm');" class="checkbox chkAll">
+                            <input type="checkbox" name="agreeChk" id="all" value="">
+                            <label for="all">전체동의<small>ㅣ 선택 동의 포함</small></label>
+                        </span>
+                        <button type="button" onclick="scrollMov('btm');" class="chkview"></button>
+                    </li>
+                </ul>
+                <ul class="clst txt_area">
+                    <li>
+                        <span class="checkbox i_chk">
+                            <input type="checkbox" name="agreeChk" id="private" value="">
+                            <label for="private">[필수] 서비스 이용약관</label>
+                        </span>
+                        <button type="button" class="docBtn"><i class="hide">[필수] 서비스 이용약관</i></button>
+                    </li>
+                    <li>
+                        <span class="checkbox i_chk">
+                            <input type="checkbox" name="agreeChk" id="private2" value="">
+                            <label for="private2">[필수] 개인정보 수집 이용 동의</label>
+                        </span>
+                        <button type="button" class="docBtn"><i class="hide">[필수]개인정보 제3자 제공 동의</i></button>
+                    </li>
+                    <li>
+                        <span class="checkbox i_chk">
+                            <input type="checkbox" name="agreeChk" id="private3" value="">
+                            <label for="private3">[필수] 위치정보 이용 동의</label>
+                        </span>
+                        <button type="button" class="docBtn"><i class="hide">[필수] 위치정보 이용 동의</i></button>
+                    </li>
+                    <li>
+                        <span class="checkbox i_chk">
+                            <input type="checkbox" name="agreeChk" id="maketing" value="">
+                            <label for="maketing">[선택] 마케팅 활용 동의</label>
+                        </span>
+                        <button type="button" class="docBtn"><i class="hide">[선택] 마케팅 활용 동의</i></button>
+                    </li>
+                    <li>
+                        <span class="checkbox i_chk">
+                            <input type="checkbox" name="agreeChk" id="maketing" value="">
+                            <label for="maketing">[선택] 마케팅 정보 수신 동의</label>
+                        </span>
+                    </li>
+                </ul>     
+            </section>
+        </div>
+    </div>
+    <!-- //content -->
+    <div class="btn_area_float fix btm">
+        <button type="button" class="btn_xr skip btn_end" disabled>다음</button>
+    </div>
+</div>
+
+<script src="../../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../../resources/js/design.js"></script>
+<script>
+    $(function () {
+        hurdleSc();
+        fixValueOver();
+        focusipLine();
+        chkinglst('termsCheck');
+    });
+</script>
+
+</body>
+</html>

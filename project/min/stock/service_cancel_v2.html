@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<title>주식투자노트</title>
+<link rel="stylesheet" href="resource/css/common.css">
+<link rel="stylesheet" href="resource/css/site.css">
+<script src="resource/js/jquery-1.8.3.min.js"></script>
+<script src="resource/js/design.js"></script>
+<!--[if lt IE 9]>
+<script src="resource/js/html5shiv.js"></script>
+<script src="resource/js/respond.js"></script>
+<![endif]-->
+</head>
+<body>
+
+<a href="#ct" class="skip">본문 바로가기</a>
+
+<header id="header">
+	<div class="inner">
+		<h1><a href="main.html"><i class="ico_com ico_note"></i>주식투자노트</a></h1>
+		<button type="button" class="btn_menu"><i><span class="spin"><div class="spinner diagonal part-1"></div><div class="spinner horizontal"></div><div class="spinner diagonal part-2"></div></span></i></button>
+		<nav id="gnb">
+			<div class="cont">
+				<div class="list">
+					<div class="noscroll">
+						<ul>
+							<li>
+								<h2><a href="service_about.html">서비스안내<span class="line motion"></span></a></h2>
+								<ul>
+									<li><a href="service_about.html">서비스소개</a></li>
+									<li><a href="service_about2.html">서비스 이용방법</a></li>
+								</ul>
+							</li>
+							<li>
+								<h2><a href="service_join.html">서비스이용<span class="line motion"></span></a></h2>
+								<ul>
+									<li><a href="service_join.html">서비스가입</a></li>
+									<li><a href="service_cancel.html">서비스해지</a></li>
+								</ul>
+							</li>
+							<li>
+								<h2><a href="stock_info.html">주식정보<span class="line motion"></span></a></h2>
+								<ul>
+									<li><a href="stock_info.html">주식정보보기</a></li>
+								</ul>
+							</li>
+							<li>
+								<h2><a href="notice.html">고객센터<span class="line motion"></span></a></h2>
+								<ul>
+									<li><a href="notice.html">공지사항</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>					
+			</div>			
+			<div class="bgb"><div class="bg"></div></div>	
+		</nav>
+	</div>
+	<div class="bgw"></div>
+</header>
+<!-- //header -->
+
+<aside class="bn service">
+	<div class="mw"><h2>서비스해지</h2>국내유일, 이동통신3사 제휴 주식서비스</div>
+	<div class="web"><h2>국내유일, 이동통신3사 제휴 주식서비스</h2></div>
+</aside>
+<!-- //bn -->
+
+<div id="ct">	
+	<hgroup class="tit_type">
+		<span>
+			<i class="ico_com arr2"></i><em class="ico_com servicetermination">SERVICE TERMINATION</em><b>서비스해지</b>
+		</span>		
+	</hgroup>
+	<div id="step1" class="daily_report v1" style="display:none;">
+		<p class="caution2">해지를 위한 정보를 입력해주세요.</p>
+		<section class="form_wrap">			
+			<ul class="form">
+				<li class="tab">
+				<span class="stit">이동통신사</span>
+				<ul>
+					<li><a href="#;">SKT</a></li>
+					<li class="active"><a href="#;">KT</a></li>
+					<li class="last"><a href="#;">LGU+</a></li>
+				</ul>
+				</li>
+				<li class="num">
+					<span class="stit">휴대폰번호</span>
+					<div class="select">
+						<select id="">
+						<option value="010">010</option>
+						<option value="011">011</option>
+						<option value="016">016</option>
+						<option value="017">017</option>
+						<option value="018">018</option>
+						<option value="019">019</option>
+						</select>
+					</div>
+					<input type="text" name="" id="" maxlength="6">
+					<button type="button" class="btn_num" onclick="">인증번호</button>
+				</li>
+			</ul>
+			<div class="btn_area">
+				<p class="caution3">주식투자노트는 월 11,000원(부가세포함)의 유료 서비스로,<span class="br">사용일 수 만큼 일할 계산되어 과금 됩니다.</span></p>
+				<button class="btn_r btn_type btn_join" onclick="$('#step1').hide(); $('#step2').show();">확인</button>				
+			</div>
+		</section>
+	</div>
+	<div id="step2" class="daily_report v1" >
+		<section class="form_wrap">
+			<div class="warning">
+				<p class="sbj">주식투자노트 이용을 중단하시겠습니까?</p>
+				<p class="txt">서비스 해지 즉시, <span class="br">실시간 알짜 종목을 추천 받지 못하게 됩니다.</span></p>
+				<p class="txt2">서비스 해지를 원하시면 인증번호를 입력 하신 뒤<span class="br">[해지]를 선택하세요.</span></p>
+			</div>
+			<div class="cancel_info">
+				<div class="txt">
+					<h3><strong>잠깐!</strong> 이번 달 얼마나 썼을까?</h3>
+					<p>서비스 이용 예상 금액(VAT포함)<br><strong>7,845</strong><span> 원</span></p>
+				</div>
+				<div class="txt2">
+					1. SKT, KT, LGU+ 이동통신요금에 포함되어 부과됩니다.<br>
+					2. 실청구금액과 일부 차이 발생할 수 있습니다.<br>
+					3. 이번 달 이용료는 다음달 휴대폰 명세서에 청구됩니다. <br>
+					(참고: 1월 서비스이용료 2월 휴대폰명세서 청구, 문의 : 1599-7416)
+				</div>
+			</div>
+			<!-- //해지 예상 금액 추가 -->
+			<ul class="form">
+				<li class="re">
+					<span class="stit">인증번호</span>
+					<input type="text" name="" id="">
+					<span class="time">유효시간 03:00</span>
+					<button type="button" onclick="">재전송</button>
+				</li>
+			</ul>
+			<ul class="btn_area2">
+				<li style="width:100%;"><button type="button" class="btn_r btn_type" onclick="">해지하기</button></li>
+			</ul>
+		</section>
+	</div>
+</div>
+<!-- //content -->
+
+<!-- 팝업 -->
+<div id="cancel" class="ly_pop">
+	<div class="bg"><!-- shadow --></div>
+	<div class="cont">      
+		<div class="ele">
+			<div class="cancel_end">
+				<p>주식투자노트 해지를 위한 문자가 발송되었습니다.<br>문자 확인 후 해지 진행해주세요.</p>
+				<button class="btn_m btn_type btn_skip" onclick="$('.ly_pop').fadeOut();">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //팝업 -->
+
+<footer id="footer">
+	<div class="inner">
+		<a href="#;" class="btn_top"><i class="ico_com">맨위로</i></a>
+		<ul class="menu">
+			<li><a href="#;">회사소개</a></li>
+			<li><a href="#;">이용약관</a></li>
+			<li><a href="#;" class="fsc">개인정보취급방침</a></li>
+		</ul>
+		<address>
+			<span class="num">㈜ 민앤지 대표 : 이경민 사업자등록번호 : 214-88-39117 통신판매업신고 : 제2015 –서울강남 – 00012호</span><span class="add">서울시 강남구 언주로 726 두산빌딩 11층</span><span class="tel">TEL : 1599-7416 FAX : 02)929-4424</span><span class="copy">Copuright© Minwise Co.,Ltf. All right reserved</span>
+		</address>
+		<span class="logos">SK telecom, alleh, LGU+, 한국결제TV</span>
+		<div class="cs">
+			고객센터 <strong>1599-7416</strong>
+			<p>평일 09:00~18:00(주말, 공휴일 휴무)</p>
+			<div class="familybox">
+				<button type="button" class="btn_ctl">FAMILY SITE<i class="ico_com"></i></button>
+				<ul>
+					<li><a href="http://www.minwise.co.kr/" target="_blank">(주)민앤지</a></li>
+					<li><a href="http://safelogin.kr/sauth/" target="_blank">로그인플러스</a></li>
+					<li><a href="http://ipns.kr/pns/" target="_blank">휴대폰번호도용방지 서비스</a></li>
+					<li><a href="https://sepay.org/" target="_blank">간편결제매니저/로그인플러스 USIM</a></li>
+					<li><a href="https://dsagun.kr/sh/join?regSiteCode=AB&ctgCode=3&subCode=1" target="_blank">등기사건알리미</a></li>
+					<li><a href="http://www.smemo.co.kr/" target="_blank">SMEMO</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- //footer -->
+
+</body>
+</html>

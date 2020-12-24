@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link href="../resources/css/style.css" media="screen" rel="stylesheet">
+    <link href="../resources/css/site_skt.css" media="screen" rel="stylesheet">
+    <script src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script src="../resources/js/renew_design.js"></script>
+    <title>PASS 연결계좌 등록</title>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header" class="">
+            <div class="headWrap">
+                <h1 class="">연결계좌 등록</h1>
+                <button class="btnClose icon"><i></i></button>
+            </div>
+        </header>
+        <div id="container" class="submit">
+            <section class="ctWrap">
+                <div class="ctDesc">
+                    <section class="submitSec sec1">
+                        <h3>고객님<i>! </i>개설하신 신한금융투자 CMA계좌와<br><span class="colorH">은행 계좌를 연결하세요.</span></h3>
+                    </section>
+                    <section class="submitSec sec2">
+                        <ul class="submitList">
+                            <li>
+                                <div class="ipBox">
+                                    <p class="ipBox_label">은행선택</p>
+                                    <button type="button" class="ipBox_ip" onclick="bankOn('lyBank')"><span class="bankWrap">은행선택</span></button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="ipBox">
+                                    <label for="account" class="ipBox_label">계좌입력</label>
+                                    <input type="text" id="account" class="ipBox_ip" required="required" placeholder="계좌번호 입력">
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="submitSec sec3">
+                        <span class="subTit">모든 은행에서 연결 계좌를 이용 할 수 있도록<br>노력하고 있습니다. 조금만 기다려 주세요<i>!</i></span>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <footer id="footer">
+            <div class="footWrap">
+                <ul class="submitList">
+                    <li><button class="submitBtn sbType2" type="submit" onclick="popupOn('lySubmit')">확인</button></li>
+                    <li><button class="submitBtn nextBtn" type="submit">다음에 하기</button></li>
+                </ul>
+            </div>
+        </footer>
+        <div id="lyBank" class="lyPop">
+            <section class="lySec">
+                <div class="lyDesc">
+                    <div class="lyTop">
+                        <h3>은행을 선택해주세요.</h3>
+                        <button class="icon btnClose" onclick="bankOff('lyBank')"><i></i></button>
+                    </div>
+                    <ul class="bankList col3">
+                        <li><button class="bankBtn" type="button" name="신한은행" onclick="bankSelect(name)"><span>신한은행</span></button></li>
+                        <li><button class="bankBtn" type="button" name="기업은행" onclick="bankSelect(name)"><span>기업은행</span></button></li>
+                        <li><button class="bankBtn" type="button" name="우체국" onclick="bankSelect(name)"><span>우체국</span></button></li>
+                        <li><button class="bankBtn" type="button" name="전북은행" onclick="bankSelect(name)"><span>전북은행</span></button></li>
+                        <li><button class="bankBtn" type="button" name="새마을금고" onclick="bankSelect(name)"><span>새마을금고</span></button></li>
+                        <li><button class="bankBtn" type="button" name="수협" onclick="bankSelect(name)"><span>수협</span></button></li>
+                        <li><button class="bankBtn" type="button" name="신협" onclick="bankSelect(name)"><span>신협</span></button></li>
+                        <li><button class="bankBtn" type="button" name="부산은행" onclick="bankSelect(name)"><span>부산은행</span></button></li>
+                        <li><button class="bankBtn" type="button" name="제주은행" onclick="bankSelect(name)"><span>제주은행</span></button></li>
+                        <li><button class="bankBtn" type="button" name="카카오뱅크" onclick="bankSelect(name)"><span>카카오뱅크</span></button></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <div class="lyPop" id="lySubmit">
+            <span class="bg">
+                <section class="popSec btnCount2">
+                    <h4>연결계좌를 다음에 등록<br>하시겠습니까?</h4>
+                    <span class="subTit">투자금을 직접 이체하시려면<br><span class="colorH">CMA 계좌번호를 복사하신 후 사용</span>하세요.</span>
+                    <div class="account">
+                        <span class="accountNum">123-456-78910</span>
+                        <button type="submit" class="copy"><span class="colorH">복사</span></button>
+                    </div>
+                    <ul class="popList">
+                        <li><button class="submitBtn sbType2 popBtn" type="submit">확인</button></li>
+                        <li><button class="submitBtn sbType1 popBtn" type="submit" onclick="popupOff('lySubmit')">취소</button></li>
+                    </ul>
+                </section>
+            </span>
+        </div>
+    </div>
+</body>
+</html>

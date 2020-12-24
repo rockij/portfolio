@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link rel="preload" href="../resources/css/font/NotoSansKR-Regular-Hestia.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link href="../resources/css/font.css" media="screen" rel="stylesheet">
+<link href="../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../resources/css/site_kt.css" media="screen" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../resources/js/jquery-1.11.1.min.js"></script>
+<script src="../resources/js/jquery.mobile.min.js"></script>
+<script src="../resources/js/jquery.ui.datepicker.js"></script>
+<script src="../resources/js/jquery.mobile.datepicker.js"></script>
+<script src="../resources/js/design.js"></script>
+<title>세이프캐시</title>
+</head>
+<body class="kt">
+
+<div id="wrap">
+
+	<div class="head_type head_fix">
+		<header id="header">
+			<button type="button" onclick="" class="btn_prev"><i class="ico_com">뒤로가기</i></button>
+			<h1>세이프캐시</h1>
+		</header>
+		<!-- //header -->
+		<div class="total_price type">
+			<h2>국민은행</h2>
+			<p class="stit2">조회계좌<span>위비SUPER주거래 외 2개</span></p>
+		</div>
+	</div>
+	<!-- //top(fix) -->
+	<div id="ct" class="assets_list">
+		<div class="ui_cover">
+			<h2 class="blind">자동이제 내역</h2>
+			<div class="srch_type">
+				<p class="cau">자동이체로 등록 할 <u>출금내역을 선택</u>하세요.</p>
+				<ul class="tab">
+					<li><button type="button" onclick="" class="selected">전체</button></li>
+					<li><button type="button" onclick="">입금</button></li>
+					<li><button type="button" onclick="">출금</button></li>
+					<li><button type="button" onclick="" class="date">기간설정</button></li>
+				</ul>
+				<div class="calendar">
+					<ul>
+						<li>
+							 <div class="input input_cal"><input type="tel" name="" id="" value="" placeholder="달력선택" maxlength="10" data-role="date" disabled><button type="button" onclick="" class="btn_cal"><i class="ico_com ico_cal"></i></button></div>
+						</li>
+						<li>
+							 <div class="input input_cal"><input type="tel" name="" id="" value="" placeholder="달력선택" maxlength="10" data-role="date" disabled><button type="button" onclick="" class="btn_cal"><i class="ico_com ico_cal"></i></button></div>
+						</li>
+					</ul>
+					<button type="button" onclick="$('.calendar').hide();" class="btn_r btn_type btn_srch">조회</button>
+				</div>
+			</div>
+			<!-- //기간설정 -->
+			<section class="list_type">
+				<div class="title_area">
+					<h3>거래내역<span class="date">(2018.01.01~2018.04.01)</span></h3>
+					<span class="switch">
+						<select name="range" id="range" data-role="slider">
+							<option value="past" >과거순</option>
+							<option value="new">최신순</option>
+						</select>
+					</span>
+				</div>
+				<ul>
+					<li>
+						<button type="button" onclick="">
+							<ul class="ui_table">
+								<li class="mcell">
+									<strong class="elip1 sbj">인터넷</strong>
+									<span class="num">18.03.12 15:23</span>
+								</li>
+								<li class="tcell userw fc_red">700,000<a href="#;" class="btn_plus"><i class="ico_com ico_plus3">이체 등록</i></a>
+								</li>
+							</ul>
+						</button>
+					</li>
+					<li>
+						<button type="button" onclick="">
+							<ul class="ui_table">
+								<li class="mcell">
+									<strong class="elip1 sbj">티움카페</strong>
+									<span class="num">18.03.12 15:23</span>
+								</li>
+								<li class="tcell userw fc_blu">-&nbsp;30,000<a href="#;" class="btn_plus"><i class="ico_com ico_plus3">이체 등록</i></a>
+								</li>
+							</ul>
+						</button>
+					</li>
+					<li>
+						<button type="button" onclick="">
+							<ul class="ui_table">
+								<li class="mcell">
+									<strong class="elip1 sbj">파리바게트 역삼점</strong>
+									<span class="num">18.03.12 15:23</span>
+								</li>
+								<li class="tcell userw fc_blu">-&nbsp;300,000<a href="#;" class="btn_plus"><i class="ico_com ico_plus3">이체 등록</i></a></li>
+							</ul>
+						</button>
+					</li>
+					<li>
+						<button type="button" onclick="">
+							<ul class="ui_table">
+								<li class="mcell">
+									<strong class="elip1 sbj">서브웨이 역삼점</strong>
+									<span class="num">18.03.12 15:23</span>
+								</li>
+								<li class="tcell userw fc_red">3,000,000<a href="#;" class="btn_plus"><i class="ico_com ico_plus3">이체 등록</i></a></li>
+							</ul>
+						</button>
+					</li>
+					<li>
+						<button type="button" onclick="">
+							<ul class="ui_table">
+								<li class="mcell">
+									<strong class="elip1 sbj">카도군 보닝팩</strong>
+									<span class="num">18.03.12 15:23</span>
+								</li>
+								<li class="tcell userw fc_red">3,000<a href="#;" class="btn_plus"><i class="ico_com ico_plus3">이체 등록</i></a></li>
+							</ul>
+						</button>
+					</li>
+					<li>
+						<button type="button" onclick="">
+							<ul class="ui_table">
+								<li class="mcell">
+									<strong class="elip1 sbj">파리바게트 역삼점</strong>
+									<span class="num">18.03.12 15:23</span>
+								</li>
+								<li class="tcell userw fc_blu">-&nbsp;300,000<a href="#;" class="btn_plus"><i class="ico_com ico_plus3">이체 등록</i></a></li>
+							</ul>
+						</button>
+					</li>
+					<li>
+						<button type="button" onclick="">
+							<ul class="ui_table">
+								<li class="mcell">
+									<strong class="elip1 sbj">서브웨이 역삼점</strong>
+									<span class="num">18.03.12 15:23</span>
+								</li>
+								<li class="tcell userw fc_red">3,000,000<a href="#;" class="btn_plus"><i class="ico_com ico_plus3">이체 등록</i></a></li>
+							</ul>
+						</button>
+					</li>
+					<li>
+						<button type="button" onclick="">
+							<ul class="ui_table">
+								<li class="mcell">
+									<strong class="elip1 sbj">카도군 보닝팩</strong>
+									<span class="num">18.03.12 15:23</span>
+								</li>
+								<li class="tcell userw fc_red">3,000<a href="#;" class="btn_plus"><i class="ico_com ico_plus3">이체 등록</i></a></li>
+							</ul>
+						</button>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+	<!-- //content -->	
+	<footer id="footer">
+		<ul class="nav">
+			<li><button type="button" onclick="">서비스 이용약관</button></li>
+			<li><button type="button" onclick="">개인정보 취급방침</button></li>
+			<li><a href="authority_set.html" class="pot" data-ajax="false">권한설정</a></li>
+		</ul>
+		<address>
+			<p class="cs">서비스 가입/해지/이용문의<br>1599-4794 (평일 9시-18시)</p>
+			(주)민앤지 <br>사업자등록번호 : 214-88-39117<p>- 계좌개설 관련문의 : 1599 - 4905<br>- 해외주식 관련문의 : 3772 - 2525</p>사업자등록번호 214-88-39117
+		</address>
+	</footer>
+	<!-- //footer -->
+	<div class="footFix">
+		<aside id="gnb">
+			<h2 class="blind">네비게이션</h2>
+			<ul>
+				<li class="m1"><a href="#;"><h3>내 자산</h3></a></li>
+				<li class="m2 active"><a href="#;"><h3>자동이체<s class="ico_com"></s></h3></a></li>
+				<li class="m3"><a href="#;"><h3>사기계좌조회</h3></a></li>
+			</ul>
+		</aside>
+	</div>
+	<!-- //bottom fix -->
+
+</div>
+
+</body>
+</html>

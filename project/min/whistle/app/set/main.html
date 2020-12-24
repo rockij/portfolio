@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link href="../resources/css/font.local.css" media="screen" rel="stylesheet"> <!-- 폐쇄망 -->
+<link href="../resources/css/font.cdn.css" media="screen" rel="stylesheet"> <!-- 인터넷망 -->
+<link href="../resources/css/common.min.css" media="screen" rel="stylesheet">
+<link href="../resources/css/content.min.css" media="screen" rel="stylesheet">
+<title>010휘슬</title>
+</head>    
+<body class="bgb">
+
+<div id="wrap">
+    
+    <div id="content" class="setting">
+        <h1 class="section main">설정</h1>
+        <section class="list_blink">
+            <a href="#;">내 정보</a>
+            <a href="#;">알림 설정</a>
+            <a href="#;">인증 및 보안</a>
+            <button type="button" class="cell bside" onclick="popupOpen('terms','mwf',0);chkinglst('terms','slide')">
+                <span>결제수단</span>
+                <u>010Pay</u>
+            </button>
+        </section>
+        <section class="list_blink">
+            <a href="#;">고객센터</a>
+            <a href="#;">오픈소스 라이선스</a>
+            <div class="cell bside">
+                <span>앱 정보 <em>V1.0.1</em></span>
+                <span class="update">최신버전입니다.</span>
+            </div>
+            <button type="button" class="cell bside">
+                <span>앱 정보 <em>V1.0.1</em></span>
+                <u class="update">업데이트</u>
+            </button>
+        </section>
+        <div class="btn_area_simp main"><button type="button" class="text">로그아웃</button></div>
+    <!-- //content -->
+
+    <nav id="gnb" class="fix btm">
+        <ul>
+            <li><a href="#;" data-name="홈" class="on"></a></li>
+            <li><a href="#;" data-name="굿 드라이빙"></a></li>
+            <li><a href="#;" data-name="이벤트"></a></li>
+            <li><a href="#;" data-name="설정"></a></li>
+        </ul>
+    </nav>
+    <!-- //gnb -->
+
+</div>
+
+<div id="mw-terms" class="ly_pop popBtm ly_terms">
+    <div class="wrap">
+        <h2>약관동의</h2>
+        <button type="button" onclick="popupClose('terms','mwf')" class="close"><i>닫기</i></button>
+        <div class="content">
+            <p class="txt">010Pay 이용을 위한 약관에 동의해주세요.</p>
+            <div id="terms" class="terms_list">
+                <ul>
+                    <li class="all">
+                        <span class="checkbox i_all">
+                            <input type="checkbox" name="allCheck" id="agreeAll">
+                            <label for="agreeAll">전체동의</label>
+                        </span>
+                    </li>
+                </ul>
+                <span class="checkbox i_sub">
+                    <input type="checkbox" name="agreeChk" id="agreeChk">
+                    <label for="agreeChk">010Pay 약관</label>
+                </span>
+                <ul class="clst">
+                    <li>
+                        <span class="checkbox i_chk">
+                            <input type="checkbox" name="agree" id="agree1" checked>
+                            <label for="agree1">개인정보 수집·이용(필수)</label>
+                        </span>
+                        <button type="button" class="doc"><s>개인정보 수집·이용 보기</s></button>
+                    </li>
+                    <li>
+                        <span class="checkbox i_chk">
+                            <input type="checkbox" name="agree" id="agree2">
+                            <label for="agree2">개인정보 제3자 제공 및 위탁(필수)</label>
+                        </span>
+                        <button type="button" class="doc"><s>개인정보 제3자 제공 및 위탁 보기</s></button>
+                    </li>
+                    <li>
+                        <span class="checkbox i_chk">
+                            <input type="checkbox" name="agree" id="agree3">
+                            <label for="agree3">마케팅 정보 수신(선택)</label>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="terms-btn" class="btn_area_wide more"><button type="button" onclick="" class="skip" disabled>확인</button></div>
+    </div>
+</div>
+<!-- //약관 -->
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script> -->
+<script src="../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../resources/js/gsap.min.js"></script>
+<script src="../../../global/resources/js/global.js"></script>
+<script src="../resources/js/design.js" defer></script>
+<script>
+$(function() {
+    virtualBg(); //white bg
+});
+</script>
+
+</body>
+</html>

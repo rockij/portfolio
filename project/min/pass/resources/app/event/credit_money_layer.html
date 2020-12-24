@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>SKT PASS</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/contents.css">
+    <link href="resources/app/css/event.css" media="screen" rel="stylesheet">
+</head>
+<body>
+
+<img src="resources/app/image/sample_back.png" alt="">
+
+<div id="opinion-layer" class="ly_pop ly_btm ly_evt">
+    <button type="button" class="outclose" onclick="layer_close()"><i>창닫기</i></button>
+    <div class="content">
+        <a href="#n" class="img"><img src="resources/app/image/credit_pop_201016.png" alt="2020신용연말정산"></a>
+        <ul class="btmbtn flexable">
+            <li><button type="button" onclick="layer_close()">다시보지 않기</button></li>
+            <li><button type="button" onclick="layer_close()">닫기</button></li>
+        </ul>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="../js/ui.js"></script>
+<script>
+    $(function() {
+        layer_open('opinion-layer');
+        $('#opinion-layer .btmbtn').addClass('show');
+    })
+</script>
+</body>
+</html>

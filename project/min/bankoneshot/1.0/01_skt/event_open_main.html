@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link rel="preload" href="../resources/css/font/NotoSansKR-Regular-Hestia.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link href="../resources/css/font.css" media="screen" rel="stylesheet">
+<link href="../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../resources/css/site_skt.css" media="screen" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../resources/js/jquery-1.11.1.min.js"></script>
+<script src="../resources/js/jquery.mobile.min.js"></script>
+<script src="../resources/js/design.js"></script>
+<title>뱅크원샷</title>
+</head>
+<body class="openEvt">
+
+<div id="wrap">
+
+	<header id="header" class="head_fix head_type5">
+		<button type="button" class="btn_prev"><i class="ico_com ico_arr_prev">뒤로가기</i></button>
+			<h1>뱅크원샷 이벤트</h1>
+	</header>
+	<!-- //header -->
+
+	<div id="ct" class="openEvt">
+		<section class="openEvt_main">
+			<figure class="print"><span></span></figure>
+			<figure class="dollar"><span></span></figure>
+			<h2 class="blind">해외주식 쿠폰이 발급되었습니다.</h2>
+			<div class="list">
+				<ul class="blind">
+					<li><strong>기간</strong>2019월 3월 11일 ~  4월 30일</li>
+					<li><strong>대상</strong>뱅크원샷 CMA계좌보유 고객 대상 선착순 10,000명 !!</li>
+					<li><strong>방법</strong>하단 쿠폰 사용하기를 클릭하고, 해외주식종목을 선택 하면 끝 !!</li>
+				</ul>
+			</div>
+			<ul class="footFix link_area">
+				<li><button type="button" onclick="layer_open('couponDsc');" class="btn_next"><span class="blind">다음에 하기</span></button></li>
+				<li>
+					<span class="tooltip2 cloud">지금 바로 등록하세요&nbsp;<em>!</em><i class="ico_com ico_smile"></i></span>
+					<button type="button" onclick="layer_open('couponTimer');" class="btn_coupon"><span class="blind">쿠폰 사용하기</span></button>
+				</li>
+			</ul>
+		</section>
+	</div>
+	<!-- //content -->
+
+	<!-- 쿠폰 사용자 안내 -->
+	<div id="couponUser" class="ly_pop ly_com" style="display: block">
+		<div class="cont">
+			<div class="elm">
+				죄송합니다.<br>고객님은 해외주식 쿠폰을<br>이미 사용하셨습니다.
+				<br><br>
+				<strong>※ 다음 이벤트를 기대해 주세요!</strong>
+				<button type="button" onclick="layer_close(); $('.openEvt_main').addClass('on');" class="btn_xr btn_skip">확인</button>
+			</div>
+		</div>
+	</div>
+	<!-- //쿠폰 사용자 안내 -->
+
+	<!-- 쿠폰 유효기간 안내 -->
+	<div id="couponDsc" class="ly_pop ly_openEvtDate">
+		<div class="cont">
+			<div class="elm">
+				<section>
+					<h2>쿠폰 사용 안내</h2>
+					<p>쿠폰 유효기간은<span><strong class="emp">2019년 4월 30일까지</strong> 입니다.</span></p>
+					<p class="dsc2">본 이벤트는 사전 고지 없이 조기 종료 될 수 있습니다.</p>
+					<p class="dsc">쿠폰사용은 유효기간 내 간편투자 메인화면<br><b>선물박스</b>을 통해 언제든 사용이 가능합니다.</p>
+				</section>
+				<ul class="btn_area bt2">
+					<li><button type="button" onclick="layer_close()" class="btn_xr btn_cancel">취소</button></li>
+					<li><a href="#;" class="btn_xr btn_skip">확인</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //쿠폰 유효기간 안내 -->
+
+	<!-- 쿠폰 사용시간 안내 -->
+	<div id="couponTimer" class="ly_pop ly_com">
+		<div class="cont">
+			<div class="elm">
+				죄송합니다<br>쿠폰을 등록할 수 있는 시간이 아닙니다.
+				<br><br>
+				<strong>사용 가능 시간 : 오전 8시 ~ 오후 9시</strong>
+				<button type="button" onclick="layer_close()" class="btn_xr btn_skip">확인</button>
+			</div>
+		</div>
+	</div>
+	<!-- //쿠폰 사용시간 안내 -->
+
+</div>
+
+</body>
+</html>

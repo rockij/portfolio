@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko" class="app">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../resources/css/content.css" media="screen" rel="stylesheet">
+<link href="../resources/css/site_app.css" media="screen" rel="stylesheet">
+<title>내정보지키미</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header" class="header_cont">
+        <button type="button" onclick="" class="btn_close"><i class="bg_icon">닫기</i></button>
+        <h1 class="inner title_type6">비밀번호 재설정</h1>
+    </header>
+    <!-- //header -->
+    <div id="ct">
+        <section class="inner frmview_normal">
+            <fieldset>
+                <legend>휴대폰번호 및 인증번호 입력</legend>
+                <ul class="list_frm">
+                    <li>
+                        <div class="ipbx ip_line ip_hp">
+                            <select id="hpSelect" class="pos_a">
+                                <option value="SKT">SKT</option>
+                                <option value="KT">KT</option>
+                                <option value="LGU">LGU</option>
+                            </select>
+                            <input type="tel" id="hp" value="" class="ip" maxlength="11" class="wfos" placeholder="‘-’제외하고 입력">
+                            <label for="hp">휴대폰번호</label>
+                            <button type="button" class="btn_s_o btn_type btn_re pos_a" onclick="alert('요청')">인증요청</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ipbx ip_line ip_num">
+                            <input type="tel" id="cnum" value="" class="ip" maxlength="6" class="wfos">
+                            <label for="cnum">인증번호</label>
+                            <span class="time_set pos_a"><code class="timer">03:00</code><button type="button" class="btn_re" onclick="alert('전송')">재전송</button></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ipbx ip_line ip_chapcha">
+                            <span class="chapcha">
+                                <img src="../resources/image/sample/captcha.png" alt="">
+                                <button type="button" class="spkr" onclick="alert('소리듣기')"><i class="bg_icon"></i></button>
+                                <button type="button" class="ref" onclick="alert('새로고침')"><i class="bg_icon"></i></button>
+                            </span>
+                            <input type="tel" id="cnum" value="" class="ip" maxlength="6" class="wfos" placeholder="숫자 6자리입력">
+                            <label for="cnum">보안숫자</label>
+                            <span class="time_set pos_a"><button type="button" class="btn_re" onclick="alert('전송')">확인</button></span>
+                        </div>
+                    </li>
+                </ul>
+            </fieldset>
+        </section>
+        <div class="btn_area_sigle fix btm">
+            <button type="button" class="btn_xr btn_type3" disabled>다음</button>
+            <!-- 정보입력 후
+            <button type="button" class="btn_xr btn_type3">다음</button>
+            -->
+        </div>
+    </div>
+    <!-- //content -->
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../resources/js/jquery-3.3.1.min.js"></script>
+<script src="../resources/js/design.js"></script>
+<script>
+$(function() {
+    $('#gnb .smenu>li:eq(0)').addClass('active'); //메뉴활성화
+    fixValueOver();
+});
+</script>
+
+</body>
+</html>

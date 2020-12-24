@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title>SGI서울보증</title>
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/common-ui.css">
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/style-cust.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../../inc/css/style-mark.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/jquery.mobile-1.4.5.css">
+    <script type="text/javascript" src="../../../inc/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../../inc/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
+</head>
+
+<body>
+    <!-- 페이지 유형 제작시 wrapper에 고유 클레스 추가 -->
+    <div class="wrapper ps-sub-page srchp2100">
+        <header class="header">
+            <button type="button" class="prev-page" title="이전페이지 이동"></button>
+            <h1 class="header-tit">보험증권 조회</h1>
+            <button type="button" class="sidenav-btn" title="전체메뉴"></button>
+        </header>
+        <!-- 페이지 하단에 플로팅 버튼이 있을시 class = btm-fixed 추가 -->
+        <section class="container btm-fixed">
+            <!-- 사이드 여백설정 공통 class = inner -->
+            <!-- 페이지 하단에 플로팅 버튼이 있을시 class = acco-fixed 추가 -->
+            <div class="content">
+                <div class="cont-wrap">
+                    <ul class="ps-accordion-wrap type-list">
+                        <li class="accordion-item">
+                            <p class="deta-tit inner">보험증권 발급내용<span class="fc-03">(변경)</span></p>
+                            <div class="deta-docu inner">
+                                <ul class="list-wrap">
+                                    <li class="list-item">
+                                        <strong class="list-tit">상품명</strong>
+                                        <span class="list-txt">이행(계약)보증보험</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">증권번호</strong>
+                                        <span class="list-txt">100-00-201920434564</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">계약자명</strong>
+                                        <div class="list-txt-wrap">
+                                            <span class="list-txt">(주)미디어포스앤컴퍼니</span>
+                                            <span class="list-txt">
+                                                <button type="button" class="btn-txt open-bottomlist" data-page="bottom-pop-list"
+                                                    title="공동계약자 정보 팝업 열기">공동계약자</button>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">피보험자명</strong>
+                                        <div class="list-txt-wrap">
+                                            <span class="list-txt">서울보증보험 주식회*</span>
+                                            <span class="list-txt">
+                                                <button type="button" class="btn-txt open-bottomlist" data-page="bottom-pop-list-02"
+                                                    title="공동피보험자 정보 팝업 열기">공동피보험자</button>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">보험기간</strong>
+                                        <span class="list-txt">2019-10-01~2020-09-30(365일)</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">보험가입금액</strong>
+                                        <span class="list-txt">2,000,000원</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">증권발급일자</strong>
+                                        <span class="list-txt">2019-10-02</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">증권발급부서</strong>
+                                        <span class="list-txt">광화문지점</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <p class="deta-tit inner">보험계약자(보증서 신청자)</p>
+                            <div class="deta-docu inner">
+                                <ul class="list-wrap">
+                                    <li class="list-item">
+                                        <strong class="list-tit">계약자구분</strong>
+                                        <span class="list-txt">개인</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">성명(대표자명)</strong>
+                                        <span class="list-txt">홍길동</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">주민(법인)번호</strong>
+                                        <span class="list-txt">000000-00*****</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">사업자등록번호</strong>
+                                        <span class="list-txt">000-00-00000</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">상호</strong>
+                                        <div class="list-txt-wrap">
+                                            <span class="list-txt">(주)미디어포스앤컴퍼니</span>
+                                            <span class="list-txt">
+                                                <button type="button" class="btn-txt open-bottomlist" data-page="bottom-pop-list"
+                                                    title="공동계약자 정보 팝업 열기">공동계약자</button>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">부가상호</strong>
+                                        <span class="list-txt">M4NC</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <p class="deta-tit inner">피보험자 정보(보증서 제출처)</p>
+                            <div class="deta-docu inner">
+                                <ul class="list-wrap">
+                                    <li class="list-item">
+                                        <strong class="list-tit">피보험자구분</strong>
+                                        <span class="list-txt">법인</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">성명(대표자명)</strong>
+                                        <span class="list-txt">홍길동</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">주민(법인)번호</strong>
+                                        <span class="list-txt">000000-0000000</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">상호</strong>
+                                        <div class="list-txt-wrap">
+                                            <span class="list-txt">서울보증보험 주식회*</span>
+                                            <span class="list-txt">
+                                                <button type="button" class="btn-txt open-bottomlist" data-page="bottom-pop-list-02"
+                                                    title="공동피보험자 정보 팝업 열기">공동피보험자</button>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">부가상호</strong>
+                                        <span class="list-txt">SGI</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <button class="accordion-tit inner" type="button" title="접힘">보험계약 변경내용</button>
+                            <div class="accordion-docu inner">
+                                <ul class="list-wrap">
+                                    <li class="list-item">
+                                        <strong class="list-tit">상품명</strong>
+                                        <span class="list-txt">신용보증보험</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">증권번호</strong>
+                                        <span class="list-txt">100-000-000000000000</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">변경번호</strong>
+                                        <span class="list-txt">00003</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">변경구분</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                </ul>
+                                <ul class="list-wrap">
+                                    <li class="list-item">
+                                        <strong class="list-tit">원화보험가입<br>금액감액</strong>
+                                        <div class="list-txt-wrap">
+                                            <span class="list-txt"><strong class="imf-txt fc-01">변경 전 </strong>50,000,000</span>
+                                            <span class="list-txt"><strong class="imf-txt fc-03">변경 후 </strong>40,000,000</span>
+                                        </div>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">최종보험가입<br>금액감액</strong>
+                                        <div class="list-txt-wrap">
+                                            <span class="list-txt"><strong class="imf-txt fc-01">변경 전 </strong>50,000,000</span>
+                                            <span class="list-txt"><strong class="imf-txt fc-03">변경 후 </strong>40,000,000</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="list-wrap">
+                                    <li class="list-item">
+                                        <strong class="list-tit">총보험료</strong>
+                                        <span class="list-txt">2,000,000원</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">변경기준일</strong>
+                                        <span class="list-txt">변경기준일</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">변경사유</strong>
+                                        <div class="list-txt-wrap">
+                                            <span class="list-txt">1. 보험가입금액: 40,000,000로 변경</span>
+                                            <span class="list-txt">2. 변경기준일자: 2019-08-09 끝</span>
+                                        </div>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">변경내용</strong>
+                                        <div class="list-txt-wrap">
+                                            <span class="list-txt">1. 보험가입금액: 40,000,000로 변경</span>
+                                            <span class="list-txt">2. 변경기준일자: 2019-08-09 끝</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <button class="accordion-tit inner" type="button" title="접힘">기타 보험계약 관련내용</button>
+                            <div class="accordion-docu inner">
+                                <ul class="list-wrap">
+                                    <li class="list-item">
+                                        <strong class="list-tit">결제방법</strong>
+                                        <span class="list-txt">영업지점납부</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">보험증권 인쇄방법</strong>
+                                        <span class="list-txt">사서함출력</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">사서함번호</strong>
+                                        <span class="list-txt">2019009833371</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="inner">
+                        <p class="ps-bu-txt circle gray">주 계약내용이 변경되어 보험계약변경이 필요한 경우<br>영등포지점(02-2679-0021)으로 연락하시기 바랍니다.</p>
+                    </div>
+                </div>
+                <!-- cont-wrap -->
+            </div>
+            <!-- content -->
+            <div class="fix-btn-wrap">
+                <button type="button" class="btn blue">증권 다운로드</button>
+            </div>
+        </section>
+        <footer class="footer"></footer>
+        <!-- 레이어팝업 -->
+        <article class="pop-botlist-js-wrap bottom-listpop" data-page="bottom-pop-list">
+            <div class="botlist-wrap">
+                <h2 class="botlist-tit">공동계약자 정보</h2>
+                <div class="botlist-cont">
+                    <ul class="list-wrap">
+                        <li class="list-item inner">
+                            <strong class="list-tit">홍길동</strong>
+                            <span class="list-txt">000000-0******</span>
+                        </li>
+                        <li class="list-item inner">
+                            <strong class="list-tit">홍길동</strong>
+                            <span class="list-txt">000000-0******</span>
+                        </li>
+                        <li class="list-item inner">
+                            <strong class="list-tit">홍길동</strong>
+                            <span class="list-txt">000000-0******</span>
+                        </li>
+                        <li class="list-item inner">
+                            <strong class="list-tit">홍길동</strong>
+                            <span class="list-txt">000000-0******</span>
+                        </li>
+                        <li class="list-item inner">
+                            <strong class="list-tit">홍길동</strong>
+                            <span class="list-txt">000000-0******</span>
+                        </li>
+                        <li class="list-item inner">
+                            <strong class="list-tit">홍길동</strong>
+                            <span class="list-txt">000000-0******</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="close-bottomlist" title="닫기"></button>
+        </article>
+        <!-- //레이어팝업 -->
+        <!-- 레이어팝업 -->
+        <article class="pop-botlist-js-wrap bottom-listpop" data-page="bottom-pop-list-02">
+            <div class="botlist-wrap">
+                <h2 class="botlist-tit">공동피보험자 정보</h2>
+                <div class="botlist-cont">
+                    <ul class="list-wrap">
+                        <li class="list-item inner">
+                            <strong class="list-tit">서울보증보험 주식회*</strong>
+                            <span class="list-txt">120-81-13002</span>
+                        </li>
+                        <li class="list-item inner">
+                            <strong class="list-tit">현대건설(주)</strong>
+                            <span class="list-txt">101-81-16293</span>
+                        </li>
+                        <li class="list-item inner">
+                            <strong class="list-tit">서울보증보험 주식회*</strong>
+                            <span class="list-txt">120-81-13002</span>
+                        </li>
+                        <li class="list-item inner">
+                            <strong class="list-tit">현대건설(주)</strong>
+                            <span class="list-txt">101-81-16293</span>
+                        </li>
+                        <li class="list-item inner">
+                            <strong class="list-tit">서울보증보험 주식회*</strong>
+                            <span class="list-txt">120-81-13002</span>
+                        </li>
+                        <li class="list-item inner">
+                            <strong class="list-tit">현대건설(주)</strong>
+                            <span class="list-txt">101-81-16293</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="close-bottomlist" title="닫기"></button>
+        </article>
+        <!-- //레이어팝업 -->
+    </div>
+</body>
+</html>

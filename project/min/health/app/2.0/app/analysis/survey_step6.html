@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko" class="app">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="../../../../global/resources/css/global.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/common.min.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/content.min.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/app.min.css" media="screen" rel="stylesheet">
+<title>건강지키미</title>
+</head>
+<body>
+
+<div id="wrap">
+
+	<header id="header" class="fix top">
+		<button type="button" onclick="" class="btn_prev"><i>뒤로가기</i></button>
+        <h1>건강분석</h1>
+    </header>
+    <!-- //header -->
+    
+	<div id="content">
+        <div class="analysis_step">
+            <section class="title">
+                <h2 data-cat="흡연"><figure><i></i></figure>흡연</h2>
+                지금까지 평생 총 5갑(100개피) 이상의<br>담배를 피운 적이 있으신가요?
+                <ul class="chklst checking smkcheck">
+                    <li>
+                        <span class="checkbox">
+                            <input type="radio" name="smoke-check" id="smoke1">
+                            <label for="smoke1" data-url="survey_step8.html">아니요.</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="checkbox">
+                            <input type="radio" name="smoke-check" id="smoke2">
+                            <label for="smoke2" data-url="survey_step7-1.html">네, 지금은 끊었어요.</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="checkbox">
+                            <input type="radio" name="smoke-check" id="smoke3">
+                            <label for="smoke3" data-url="survey_step7-2.html">네, 지금도 흡연 중 이에요.</label>
+                        </span>
+                    </li>
+                </ul>
+            </section>
+            <div class="fix btm btn_area_one skip"><a href="#" class="disabled">다음 (5/9)</a></div>
+        </div>
+	</div>
+    <!-- //content -->
+    
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../../resources/js/gsap.min.js"></script>
+<script src="../../../../global/resources/js/global.js"></script>
+<script src="../../resources/js/design.js" defer></script>
+<script>
+$(window).on("load", function(){
+    analysisSurvey();
+});
+</script>
+
+</body>
+</html>

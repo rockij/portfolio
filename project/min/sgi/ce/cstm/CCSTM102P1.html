@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title>SGI서울보증</title>
+    <link rel="stylesheet" type="text/css" href="../../inc/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../inc/css/common-ui.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../inc/css/style-cust.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../inc/css/style-mark.css">
+    <link rel="stylesheet" type="text/css" href="../../inc/css/jquery.mobile-1.4.5.css">
+    <script type="text/javascript" src="../../inc/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="../../inc/js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../inc/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
+</head>
+
+<body>
+    <!-- 페이지 유형 제작시 pop-wrapper에 고유 클레스 추가 (클레스명은 페이지명과 id참고)-->
+    
+    <section class="pop-wrapper pop-js-wrap cstmp1021" data-page="pop-page-01" style="display:block;">
+        <header class="pop-head">
+            <h1 class="pop-tit">고객정보변경이력</h1>
+        </header>
+        <section class="pop-container ">
+            <!-- 사이드 여백설정 공통 class = inner -->
+            <!-- 페이지 하단에 고정 버튼이 있을시 class = btm-fixed 추가 -->
+            <div class="pop-content">
+                <!-- 페이지 하단에 고정 아코디언 있을시 class = acco-fixed 추가 -->
+                <div class="cont-wrap">
+                    <div class="inner">
+                        <div class="ps-rdo-wrap date">
+                            <div class="ps-rdo">
+                                <input type="radio" id="date1" name="rdo01" checked>
+                                <label for="date1">6개월</label>
+                            </div>
+                            <div class="ps-rdo">
+                                <input type="radio" id="date2" name="rdo01">
+                                <label for="date2">1년</label>
+                            </div>
+                            <div class="ps-rdo">
+                                <input type="radio" id="date3" name="rdo01">
+                                <label for="date3">3년</label>
+                            </div>
+                            <div class="inqu-btn-wrap date-deta-btn">
+                                <button type="button" class="inqu-btn02" title="상세조회"></button>
+                            </div>
+                        </div>
+                        <div class="date-deta-wrap">
+                            <div class="ps-date-wrap">
+                                <div class="ps-datepicker" id="uiDatePicker1">
+                                    <div class="ps-date-fild">
+                                        <input class="inp-base" type="text" title="날짜선택" id="lnd0060Cal1">
+                                        <!-- 최소/최대 선택값 필요시 data-min="2013-10-05" data-max="2020-12-01" -->
+                                        <button type="button" class="btn-base ps-drop ps-datepicker-btn" data-inp="lnd0060Cal1" id="uiDatePck1" aria-expanded="false"><span>시작일 설정</span></button>
+                                    </div>
+                                </div>
+                                <span class="txt"> ~ </span>
+                                <div class="ps-datepicker" id="uiDatePicker2">
+                                    <div class="ps-date-fild">
+                                        <input class="inp-base" type="text" title="날짜선택" id="lnd0060Cal2">
+                                        <!-- 최소/최대 선택값 필요시 data-min="2013-10-05" data-max="2020-12-01" -->
+                                        <button type="button" class="btn-base ps-drop ps-datepicker-btn" data-inp="lnd0060Cal2" id="uiDatePck2" aria-expanded="false"><span>종료일 설정</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-wrap">
+                                <button type="button" class="inline-btn blue">조회</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-list">
+                        <!-- 조회 내역이 없을때 -->
+                        <div class="date-none-wrap">
+                            <div class="ico-stat-wrap">
+                                <p class="tit ico02">해당 내역이 없습니다.</p>
+                            </div>
+                        </div>
+                        <!-- //조회 내역이 없을때 -->
+                        <!-- list -->
+                        <ul>
+                            <li class="item">
+                                <p class="icon-wrap phone">휴대전화</p>
+                                <div class="txt-wrap">
+                                    <p class="info-txt">종로지점 이보험</p>
+                                    <p class="tit-txt">이전 : 010-1111-2222</p>
+                                    <p class="date-txt">2019-11-20 11:00</p>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <p class="icon-wrap map">주소</p>
+                                <div class="txt-wrap">
+                                    <p class="info-txt">광화문지점 비제이에이치(주) 김서울</p>
+                                    <p class="tit-txt">이전 : 서울시 종로구 삼청로 95</p>
+                                    <p class="date-txt">2019-11-20 11:00</p>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <p class="icon-wrap mail">이메일</p>
+                                <div class="txt-wrap">
+                                    <p class="info-txt">광화문지점 비제이에이치(주) 김서울</p>
+                                    <p class="tit-txt">이전 : seoulkim@sgic.com</p>
+                                    <p class="date-txt">2019-08-03 10:26</p>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <p class="icon-wrap company">소속</p>
+                                <div class="txt-wrap">
+                                    <p class="info-txt">종로지점 이보험</p>
+                                    <p class="tit-txt">이전 : 기획전략팀</p>
+                                    <p class="date-txt">2019-11-20 11:00</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- //list -->
+                    </diV>
+                </div>
+            </div>
+            <!-- pop-content -->
+        </section>
+        <button type="button" class="close-pop" title="팝업창 닫기"></button>
+        <!-- pop-container -->
+    </section>
+</body>
+</html>

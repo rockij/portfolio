@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link href="../resources/css/style.css" media="screen" rel="stylesheet">
+    <link href="../resources/css/site_skt.css" media="screen" rel="stylesheet">
+    <script src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script src="../resources/js/renew_design.js"></script>
+    <title>PASS 투자금 옮기기</title>
+</head>
+<body>
+    <div id="wrap" class="chgPos">
+        <header id="header" class="">
+            <div class="headWrap">
+                <h1 class="">투자금 옮기기</h1>
+                <button class="btnClose icon"><i></i></button>
+            </div>
+        </header>
+        <div id="container" class="submit">
+            <section class="ctWrap">
+                <div class="ctDesc">
+                    <section class="submitSec sec1">
+                        <h3>신한금융투자 CMA계좌에서<br><span class="colorH">가입자 본인 계좌로 투자금을 옮기기 </span>합니다.<br><small>(채우기 일 한도 : 200만원)</small></h3>
+                    </section>
+                    <section class="submitSec sec2">
+                        <ul class="submitList">
+                            <li>
+                                <div class="ipBox">
+                                    <p class="ipBox_label">은행선택</p>
+                                    <button type="button" class="ipBox_ip" onclick="bankOn('lyBank')"><span class="bankWrap">은행선택</span></button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="ipBox">
+                                    <label for="account" class="ipBox_label">계좌입력</label>
+                                    <input type="tel" id="account" class="ipBox_ip chkFoot" required="required" placeholder="계좌번호 입력">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="ipBox">
+                                    <!-- <label for="account" class="ipBox_label">계좌입력</label> -->
+                                    <input type="text" id="cash" class="ipBox_ip chkFoot" required="required" pattern="\d*" maxlength="8" placeholder="옮기실 금액을 입력하세요." onkeyup="btnAct()"><span class="won">원</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <span class="fillInfo">옮기기 수수료 : 무료<br>(월 3회 무료 중 0회 남음)</span>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <footer id="footer">
+            <div class="footWrap">
+                <p class="explain">해외주식에서는 고객님의 CMA계좌에서 출금하여<br>모바일머니 (포인트)를 충전하고 다시 고객님의 연결계좌로<br>환급하는 방식으로 옮기기 기능을 제공 합니다.</p>
+                <ul class="submitList">
+                    <li><button class="submitBtn sbType3" type="submit">옮기기</button></li>
+                </ul>
+            </div>
+        </footer>
+        <div id="lyBank" class="lyPop">
+            <section class="lySec">
+                <div class="lyDesc">
+                    <div class="lyTop">
+                        <h3>은행을 선택해주세요.</h3>
+                        <button class="icon btnClose" onclick="bankOff('lyBank')"><i></i></button>
+                    </div>
+                    <ul class="bankList col3">
+                        <li><button class="bankBtn" type="button" name="신한은행" onclick="bankSelect(name)"><span>신한은행</span></button></li>
+                        <li><button class="bankBtn" type="button" name="기업은행" onclick="bankSelect(name)"><span>기업은행</span></button></li>
+                        <li><button class="bankBtn" type="button" name="우체국" onclick="bankSelect(name)"><span>우체국</span></button></li>
+                        <li><button class="bankBtn" type="button" name="전북은행" onclick="bankSelect(name)"><span>전북은행</span></button></li>
+                        <li><button class="bankBtn" type="button" name="새마을금고" onclick="bankSelect(name)"><span>새마을금고</span></button></li>
+                        <li><button class="bankBtn" type="button" name="수협" onclick="bankSelect(name)"><span>수협</span></button></li>
+                        <li><button class="bankBtn" type="button" name="신협" onclick="bankSelect(name)"><span>신협</span></button></li>
+                        <li><button class="bankBtn" type="button" name="부산은행" onclick="bankSelect(name)"><span>부산은행</span></button></li>
+                        <li><button class="bankBtn" type="button" name="제주은행" onclick="bankSelect(name)"><span>제주은행</span></button></li>
+                        <li><button class="bankBtn" type="button" name="카카오뱅크" onclick="bankSelect(name)"><span>카카오뱅크</span></button></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- 한도초과 팝업 -->
+    <div id="limit" class="lyPop">
+        <span class="bg">
+            <section class="popSec">
+                <h4>옮기기 일한도 초과 안내</h4>
+                <p class="">일한도 200만원을 초과하여 입력하셨습니다.</p>
+                <p class="">200만원을 초과한 투자금을 한번에 옮기기 하시려면<br><strong>[신한금융투자 알파]</strong> 앱을 이용해 주세요.</p>
+                <ul class="popList">
+                    <li><button class="submitBtn sbType2 popBtn" type="submit" onclick="popupOff('limit');">확인</button></li>
+                </ul>
+            </section>
+        </span>
+    </div>
+    <!-- //한도초과 팝업 -->
+    <!-- 이용가능시간 팝업 연결계좌-->
+    <div id="use_time1" class="lyPop timePop">
+        <span class="bg">
+            <section class="popSec">
+                <h4>투자금 옮기기<br>이용가능시간 안내</h4>
+                <p class="">이용가능시간은 각 은행 별 시스템점검 및<br>운용시간에 따라 변경될 수 있습니다.</p>
+                <div class="guideTime">
+                    <table>
+                        <colgroup>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>신한은행</th>
+                                <td>
+                                    <strong class="time">00:30 ~ 23:30</strong>
+                                    <small>주말 및 공휴일 포함</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>우리은행 외 20곳</th>
+                                <td>
+                                    <strong class="time">08:00 ~ 23:00</strong>
+                                    <small>주말 및 공휴일 포함</small>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul class="popList">
+                    <li><button class="submitBtn sbType2 popBtn" type="submit" onclick="popupOff('use_time1');popupOn('use_time2')">닫기</button></li>
+                </ul>
+            </section>
+        </span>
+    </div>
+    <!-- //이용가능시간 팝업 연결계좌-->
+    <!-- 이용가능시간 팝업 계좌번호-->
+    <div id="use_time2" class="lyPop timePop">
+        <span class="bg">
+            <section class="popSec btnCount2">
+                <h4>투자금 옮기기<br>이용가능시간 안내</h4>
+                <p class="">이용가능시간은 각 은행 별 시스템점검 및<br>운용시간에 따라 변경될 수 있습니다.</p>
+                <div class="guideTime">
+                    <table>
+                        <colgroup>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>신한은행</th>
+                                <td>
+                                    <strong class="time">00:30 ~ 23:30</strong>
+                                    <small>주말 및 공휴일 포함</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>우리은행 외 20곳</th>
+                                <td>
+                                    <strong class="time">08:00 ~ 23:00</strong>
+                                    <small>주말 및 공휴일 포함</small>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul class="popList">
+                    <li><button class="submitBtn sbType2 popBtn" type="submit" onclick="popupOff('use_time2')">연결계좌 설정하기</button></li>
+                    <li><button class="submitBtn sbType1 popBtn" type="submit" onclick="popupOff('use_time2')">닫기</button></li>
+                </ul>
+            </section>
+        </span>
+    </div>
+    <!-- //이용가능시간 팝업 계좌번호-->
+    <script>
+        $(document).ready(function () {
+            popupOn('use_time1');
+        });
+    </script>
+</body>
+</html>

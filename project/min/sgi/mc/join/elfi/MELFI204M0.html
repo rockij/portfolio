@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title>SGI서울보증</title>
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/common-ui.css">
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/style-cust.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../../inc/css/style-mark.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/jquery.mobile-1.4.5.css">
+    <script type="text/javascript" src="../../../inc/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../../inc/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
+</head>
+<body>
+    <!-- 페이지 유형 제작시 wrapper에 고유 클레스 추가 -->
+    <div class="wrapper ps-sub-page elfip2040">
+        <header class="header">
+            <button type="button" class="prev-page" title="이전페이지 이동"></button>
+            <h1 class="header-tit">개인정보동의</h1>
+            <button type="button" class="sidenav-btn" title="전체메뉴"></button>
+        </header>
+        <!-- 페이지 하단에 플로팅 버튼이 있을시 class = btm-fixed 추가 -->
+        <section class="container btm-fixed">
+            <!-- 사이드 여백설정 공통 class = inner -->
+            <!-- 페이지 하단에 플로팅 버튼이 있을시 class = acco-fixed 추가 -->
+            <div class="content acco-fixed">
+                <div class="title-wrap inner">
+                    <h2 class="ps-tit02">정보입력</h2>
+                    <!-- 현진행단계 표시 aria-label = "진행단계, 총 X단계 중 X단계" 진행단계 별로 수정 -->
+                    <div class="ps-step" role="img" aria-label="진행단계, 총 3단계 중 2단계">
+                        <em class="pres-step">2</em><span class="symb"> / </span><em>3</em>
+                    </div>
+                </div>
+                <div class="cont-wrap">
+                    <div class="cont-01">
+                        <div class="ps-from-item">
+                            <p class="write-title">주민등록번호</p>
+                            <div class="security-wrap">
+                                <!-- 입력후에 button에 on class 추가 button 태그 html 텍스트 겟수만큼 ● 추가 title -> aria-label로 변경 -->
+                                <button type="button" class="security-btn" title="보안키패드 열림">숫자 13자리 입력</button>
+                            </div>
+                        </div>
+                        <div class="ps-from-item">
+                            <p class="write-title">성명</p>
+                            <div class="ps-input">
+                                <input type="text" title="성명 직접입력" placeholder="직접 입력">
+                            </div>
+                        </div>
+                        <div class="ps-from-item">
+                            <p class="write-title">휴대전화</p>
+                            <div class="ps-input">
+                                <input type="text" title="휴대전화 숫자만 입력" placeholder="숫자만 입력">
+                            </div>
+                        </div>
+                        <div class="ps-from-item">
+                            <p class="write-title">협약코드</p>
+                            <div class="ps-select">
+                                <select title="협약코드">
+                                    <option>선택</option>
+                                    <option>옵션명1</option>
+                                    <option>옵션명2</option>
+                                    <option>옵션명3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="ps-from-item">
+                            <p class="write-title">대출기관명</p>
+                            <div class="ps-input">
+                                <input type="text" title="대출기관명" value="대출기관명" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cont-01 -->
+                </div>
+                <!-- cont-wrap -->
+            </div>
+            <!-- content -->
+            <div class="ps-accordion-wrap type-message-01">
+                <div class="accordion-item">
+                    <button class="accordion-tit on" type="button" title="펼쳐짐">공인인증서 인증안내</button>
+                    <div class="accordion-docu">
+                        <ul class="ps-bu-list gray circle">
+                            <li>당사는 「개인정보보호법」에 따라, 공인인증서를 통한 전자서명을 위하여 귀하의 주민등록번호(외국인등록번호)를 수집·이용합니다.</li>
+                            <li>고객님의 주민등록번호를 입력하신 후 완료를 선택하시면 공인인증서 전자서명 절차가 진행됩니다.</li>
+                            <li>개인명의의 공인인증서만 사용 가능합니다. (사업자명의 공인인증서 사용 불가)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="fix-btn-wrap">
+                <button type="button" class="btn blue">다음</button>
+            </div>
+        </section>
+        <footer class="footer"></footer>
+    </div>
+</body>
+</html>

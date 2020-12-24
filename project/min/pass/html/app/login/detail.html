@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="../../../resources/app/css/reset.css" type="text/css" rel="stylesheet">
+<link href="../../../resources/app/css/common.css" type="text/css" rel="stylesheet">
+<link href="../../../resources/app/css/contents.css" type="text/css" rel="stylesheet">
+<link href="../../../resources/app/css/login.css" type="text/css" rel="stylesheet">
+<title>휴대폰번호 로그인</title>
+</head>
+<body>
+
+    <!-- header -->
+	<header class="header">
+		<div class="header_inner">
+			<a href="#" class="ico-back header_btn"><span class="blind">이전 페이지</span></a>
+			<h1 class="header_tit">휴대폰번호 로그인</h1>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- wrap -->
+	<div class="wrap hwv wrap-fixed">
+        <h2 class="blind">로그인관리 상세</h2>
+        <div class="inner inner-low">
+            <div class="detail_view form-fixed form-fixed-btn form-fixed-low">
+                <dl>
+                    <dt>
+                        <figure><img src="../../../resources/app/image/login/sample_logo4.png" alt=""></figure>
+                        <h3>티몬</h3>
+                        <p>2019.12.25 연결</p>
+                    </dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                <h4>이 서비스에서 접근할 수 있는 정보</h4>
+                                [필수] 이용자 고유 식별자(기본정보), 이름, 휴대폰번호<br>[선택] PASS 가입 부가서비스
+                            </li>
+                            <li>
+                                <h4>연결 해제</h4>
+                                해당 서비스와 PASS 연결이 해제되고 로그아웃 됩니다. 서비스에 이미 전달된 개인정보와 이용 기록의 삭제를 원하시는 경우, 해당 서비스에서 직접 탈퇴해 주세요.
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+                <div class="btn-area-fixed">
+                    <button type="button" class="btn btn-wide btn-low btn-focused" onclick="layer_open('alert');">연결 해제</button>
+                </div>
+            </div>
+        </div>
+	</div>
+    <!-- //wrap-->
+
+    <!-- 해제여부 -->
+    <div id="alert" class="ly_pop ly_alert">
+        <div class="content">
+            <h2>이 서비스와<br>휴대폰번호 로그인을<br>연결 해제하시겠습니까?</h2>
+            <p class="txt">연결해제 시 기존 정보로 해당 서비스를 더 이상 이용하실 수 없습니다.</p>
+            <ul class="btn_area">
+                <li><button type="button" onclick="layer_close(); layer_open('alert2');" class="btn btn-wide btn-focused">확인</button></li>
+                <li><button type="button" class="btn btn-wide" onclick="layer_close()">닫기</button></li>
+            </ul>
+        </div>
+    </div>
+    <!-- //해제여부 -->
+
+    <!-- 해제실패 -->
+    <div id="alert2" class="ly_pop ly_alert">
+        <div class="content">
+            <h2>연결 해제에 실패하였습니다.</h2>
+            <p class="txt">잠시 후에 다시 시도해 주세요.</p>
+            <ul class="btn_area btn_one">
+                <li><button type="button" onclick="layer_close();" class="btn btn-wide btn-low btn-focused">확인</button></li>
+            </ul>
+        </div>
+    </div>
+    <!-- //해제실패 -->
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="../../../resources/app/js/ui.js"></script>
+    <!-- //script -->
+
+</body>
+</html>

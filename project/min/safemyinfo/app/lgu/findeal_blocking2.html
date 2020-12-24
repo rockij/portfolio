@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko" class="lgu">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="../../global/resources/css/global.css" media="screen" rel="stylesheet">
+<link href="../resources/css/swiper.min.css" media="screen" rel="stylesheet">
+<link href="../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../resources/css/content.css" media="screen" rel="stylesheet">
+<link href="../resources/css/site_lgu.css" media="screen" rel="stylesheet">
+<title>내정보지키미</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header" class="fix top">
+        <button type="button" onclick="" class="btn_prev"><i class="bg_icon">뒤로가기</i></button>
+        <h1>내정보지키미</h1>
+        <button type="button" onclick="switchHov();" class="btn_switch">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </button>
+        <div class="gnb_menu">
+            <ul>
+                <li><a href="#n">알림설정</a></li>
+                <li><a href="#n">이용약관 및 정책</a></li>
+                <li><a href="#n">부가서비스 설정/해지</a></li>
+                <li><a href="#n">문의하기</a></li>
+                <li><a href="#n">나가기</a></li>
+            </ul>
+        </div>
+        <div id="tabswir" class="swiper-container tab_type">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide"><a href="#;">모니터링</a></li>
+                <li class="swiper-slide"><a href="#;">금융거래 차단</a></li>
+                <li class="swiper-slide"><a href="#;">영업전화 수신거부</a></li>
+                <li class="swiper-slide"><a href="#;">안심번호</a></li>
+                <li class="swiper-slide"><a href="#;">wifi 체크</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- //header -->
+    <div id="ct">
+        <h2 class="blind">금융거래 차단</h2>
+        <section class="profile_states">
+            <div class="serv_noti">
+                <button type="button" class="noti_btn base" onclick="layer_open('service')">서비스안내</button>
+            </div>
+            <div class="topbx">
+                <h3>금융거래 차단 상태<strong>미등록</strong></h3>
+                <div class="btn_area_sigle"><button type="button" class="btn_xr btn_type2" onclick="layer_close('btm')">등록신청</button></div>
+            </div>
+            <div class="livetab"><button type="button" onclick="layer_open('realAlert');">실시간 차단 금융기관 목록</button></div>
+            <div class="profile_callcount">
+                <ul class="info">
+                    <li>내정보지키미의 금융거래 차단 서비스는 금융감독원의 <br>‘개인정보노출자 사고예방시스템’을 제공합니다.</li>
+                    <li class="pot">사이트에서 직접 금융거래 차단을 등록/해제한 <br>이력이 있을 경우 해당 페이지에서 재인증 하기 전까지는 <br>상태가 다르게 노출 될 수 있습니다.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <!-- //content -->
+    <footer class="global_footer">
+        <article>
+            <div class="infobx">
+                <button type="button" onclick="popupOpen('cpinfo','mw')" class="btn_info">(주) 민앤지 사업자 정보</button>
+                <div class="cau">
+                    <p class="po">본 서비스는 청약철회가 불가능한 상품입니다.</p>
+                    서비스 가입/해지/이용문의<br>1500-0000 (평일 9시-18시), <a href="mailto:help@hank1s.co.kr">help@hank1s.co.kr</a>
+                    <address>㈜민앤지  서울특별시 강남구 테헤란로 34길 6, 태광타워 13층<br>사업자등록번호 : 214-88-39117</address>
+                </div>
+            </div>
+        </article>
+    </footer>
+    <!-- //footer -->
+
+    <!-- 서비스안내 -->
+    <div id="mw-service" class="ly_pop btm ly_service">
+        <div class="wrap">
+            <div class="content serv_cont">
+                <div class="scroll inner" data-name="금융거래차단">
+                    <h2>금융거래 차단이란?</h2>
+                    <span class="img"><img src="../resources/image/lgu/serv_cont_img02.png" alt=""></span>
+                    <article class="">
+                        노출된 내 개인정보를 타인이 명의도용해<br>금융거래를 시도하는 것을 방지해주는<br>시스템입니다.
+                        <ul class="list">
+                            <li><i></i><h3>개인정보 등록</h3></li>
+                            <li><i></i><h3>금융회사에 공유</h3></li>
+                            <li><i></i><h3>개인정보 유출 시, 공유된<br>금융회사에서  자동으로<br>금융 거래 제한</h3></li>
+                        </ul>
+                        <p>등록된 개인정보는 금융회사에 공유되어<br>노출자 명의의 거래가 시도될 경우 일부 금융거래가 제한될 수 있습니다.<br>(신규계좌 개설, 신용카드 발급, 휴대전화 단말기 할부구입시 보증보험 가입 등)</p><br>
+                        노출사실 해제사유가 발생하거나 제한된<br>금융거래를 재개하고자 하는 경우 등록 해제를<br>신청해주시기 바랍니다.<br><br>
+                        노출사실 등록 및 해제 정보가 실시간으로<br>전파 가능한 기관 및 불가능한 기관의 목록을 확인<br>해주시기 바라며,  ‘실시간 전파가 불가능 기관’<br>목록에 있는 경우 노출사실 등록 및 해제 정보가<br>실시간으로 업데이트 되지 않을 수 있습니다.<br>또 한 두 목록에 나열되지 않은 금융회사의 경우<br>노출사실 등록 및 해제 정보가 전파 되지 않습니다.
+                        <p class="cau">내정보지키미의 금융거래 차단 서비스는 금융감독원의 ‘개인정보노출자 사고예방시스템’을 제공합니다.</p>
+                    </article>
+                </div>
+            </div>
+            <div class="btn_area_sigle"><button type="button" class="btn_xr btn_type2" onclick="layer_close('btm')">확인</button></div>
+        </div>
+    </div>
+    <!-- //서비스안내 -->
+
+    <!-- 주의사항 -->
+    <div id="mw-realAlert" class="ly_pop btm ly_alert2 show" style="bottom: -366.031px; visibility: visible; z-index: 30;">
+        <div class="wrap">
+            <div class="content">
+                <h2 class="title">실시간 차단 기관 관련 주의사항</h2>
+                ‘실시간 차단 불가능 기관’&nbsp;목록에 있는 경우<br>노출사실 등록 및 해제 정보가 실시간으로 업데이트 되지 않을 수 있습니다.<br><br>(최소 30초～최대 1시간에 한 번씩 데이터가 전달 되나 일부 기관의 경우 통신회선상태 등으로 인하여 지연이 발생 할 수 있습니다.)<br>두 목록에 나열되지 않은 금융회사의 경우 노출사실 등록 및 해제 정보가 전달 되지 않습니다.
+            </div>
+            <div class="btn_area_sigle"><button type="button" class="btn_xr btn_type2" onclick="layer_close('btm');layer_open('realAgency',350)">확인</button></div>
+        </div>
+    </div>
+    <!-- //주의사항 -->
+
+    <!-- 실시간전파기관목록 -->
+    <div id="mw-realAgency" class="ly_pop btm ly_real_agency">
+        <div class="wrap">
+            <div class="content">
+                <div class="inner">
+                    <h2>실시간 전파 기관 목록 </h2>
+                    <ul class="tab_type2 radius">
+                        <li><button type="button" class="active" onclick="$('.ly_real_agency .tab_type2 button').removeClass('active'); $(this).addClass('active');">가능 기관</button></li>
+                        <li><button type="button" onclick="$('.ly_real_agency .tab_type2 button').removeClass('active'); $(this).addClass('active');">불가능 기관</button></li>
+                    </ul>
+                    <p class="date">2019.01.30기준</p>
+                </div>
+                <div class="inner">
+                    <div class="list_table2 clst">
+                        <ul class="head">
+                            <li class="th">권역</li>
+                            <li class="td">회사명</li>
+                        </ul>
+                        <div class="scroll">
+                        <ul class="body">
+                            <li>
+                                <span class="th">저축은행<br>자체전산망<br><span class="fc">18개</span></span>
+                                <span class="td">경남은행<br>하이델베르그프린트파이낸스코리아(주)<br>국민은행<br>산림조합중앙회 및 단위조합<br>유니온상호저축은행<br>참저축은행</span>
+                            </li>
+                            <li>
+                                <span class="th">저축은행<br>자체전산망<br><span class="fc">18개</span></span>
+                                <span class="td">경남은행<br>하이델베르그프린트파이낸스코리아(주)<br>국민은행<br>산림조합중앙회 및 단위조합<br>유니온상호저축은행<br>참저축은행</span>
+                            </li>
+                            <li>
+                                <span class="th">신협중앙회<br><span class="fc">1개</span></span>
+                                <span class="td">비엔피파리바카디프생명보험주식회사</span>
+                            </li>
+                            <li>
+                                <span class="th">산림조합중앙회<br><span class="fc">1개</span></span>
+                                <span class="td">신협중앙회 및 단위조합</span>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn_area_sigle"><button type="button" class="btn_xr btn_type2" onclick="layer_close('btm')">확인</button></div>
+        </div>
+    </div>
+    <!-- //실시간전파기관목록 -->
+
+</div>
+
+<!-- 사용자정보 -->
+<div id="mw-cpinfo" class="ly_cpinfo_mw">
+    <div class="wrap">
+        <button type="button" onclick="popupClose('cpinfo','mw')" class="close right"><i>닫기</i></button>
+        <div class="content">
+            <h2>사업자 정보</h2>
+            <ul class="list">
+                <li>
+                    <strong>상호</strong>
+                    <span>㈜민앤지</span>
+                </li>
+                <li>
+                    <strong>대표이사</strong>
+                    <span>이현철</span>
+                </li>
+                <li>
+                    <strong>주소</strong>
+                    <span>서울시 강남구 테헤란로 34길 6<br>태광타워 12F, 13F</span>
+                </li>
+                <li>
+                    <strong>통신판매업신고번호</strong>
+                    <span>제2015-서울강남-00012호</span>
+                </li>
+                <li>
+                    <strong>사업자등록번호</strong>
+                    <span>214-88-39117</span>
+                </li>
+                <li>
+                    <strong>고객센터</strong>
+                    <span>1599-7052 (평일 09:00-18:00)</span>
+                </li>
+                <li>
+                    <strong>호스팅서비스사업자</strong>
+                    <span>㈜민앤지</span>
+                </li>
+                <li>
+                    <strong>이메일</strong>
+                    <span>minwise.help@minwise.co.kr</span>
+                </li>
+            </ul>
+            <ul class="list_terms">
+                <li><button type="button" onclick="">사업자 정보 확인</button></li>
+                <li><button type="button" onclick="">내정보지키미 서비스약관</button></li>
+                <li><button type="button" onclick="">피싱해킹금융사기보상보험</button></li>
+                <li><button type="button" onclick="">내정보지키미 개인정보 수집/이용</button></li>
+                <li><button type="button" onclick="">내정보지키미 개인정보 제3자 제공</button></li>
+                <li><button type="button" onclick="">내정보지키미 마케팅활용동의</button></li>
+                <li><a href="https://www.minwise.co.kr/sterm/mprivacy" target="_blank">개인정보처리방침</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- //사용자정보 -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../resources/js/jquery-3.3.1.min.js"></script>
+<script src="../../global/resources/js/global.js"></script>
+<script src="../resources/js/swiper.min.js"></script>
+<script src="../resources/js/design.js"></script>
+<script>
+$(function() {
+    swirSet();
+    tab.on('init', function() {
+        tab.slideTo(0);
+        $('#tabswir li:eq(1) a').addClass('active');
+    });
+    tab.init();
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko" class="skt">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../resources/css/safe_cash.min.css" media="screen" rel="stylesheet">
+<title></title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header class="fix top">
+        <button type="button" onclick="" class="btn_prev"><i>뒤로가기</i></button>
+        <h1>자동이체 상세</h1>
+        <button type="button" onclick="" class="btn_del">삭제</button>
+    </header>
+    <!-- //header -->
+
+    <div id="ct">
+        <section class="frmview_rowlst">
+            <fieldset>
+                <legend>자동이체 상세입력</legend>
+                <ul class="list_frm2">
+                    <li>
+                        <label for="price" class="th">이체금액</label>
+                        <div class="ipbx-row">
+                            <input type="text" id="price" maxlength="" value="236,700,000원"><i></i>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="th">출금계좌</span>
+                        <label for="bank1" class="select-line2">
+                            <!-- <select id="bank1">
+                                <option value="" data-name="위비SUP.ER주거래통장" data-num="1002-123-456789">위비SUP.ER주거래통장1002-123-456789</option>
+                                <option value="" data-name="국민은행" data-num="054111-02-133456">국민은행054111-02-133456</option>
+                            </select> -->
+                            <!-- <button type="button" class="bank_btn" onclick="layer_open('chgaccount');"></button> -->
+                            <em class="chg_btn" onclick="layer_open('chgaccount');">변경하기</em>
+                            <span class="label"><span class="name">위비SUP.ER주거래통장</span><span class="num">1002-123-456789</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="name" class="th">이체명</label>
+                        <div class="ipbx-row">
+                            <input type="text" id="name" maxlength="" value="KT통신요금"><i></i>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="price-cycle" class="th">이체주기</label>
+                        <span class="select">
+                            <select id="price-cycle">
+                                <option value="m5">매달 5일</option>
+                                <option value="m10">매달 10일</option>
+                                <option value="m15">매달 15일</option>
+                                <option value="m20">매달 20일</option>
+                                <option value="m25" selected>매달 25일</option>
+                                <option value="m30">매달 30일</option>
+                            </select><i></i>
+                        </span>
+                    </li>
+                    <li>
+                        <label for="price-notice" class="th">미리알림</label>
+                        <span class="select">
+                            <select id="price-notice">
+                                <option value="d1" selected>1일 전</option>
+                                <option value="d5">5일 전</option>
+                                <option value="d10">10일 전</option>
+                                <option value="d15">15일 전</option>
+                                <option value="d20">20일 전</option>
+                                <option value="d25">25일 전</option>
+                                <option value="d30">30일 전</option>
+                            </select><i></i>
+                            <span class="checkbox-notice">
+                                <input type="checkbox" id="notice" value="">
+                                <label for="notice"></label>
+                            </span>
+                        </span>
+                    </li>
+                </ul>
+            </fieldset>            
+        </section>
+    </div>
+    <!-- //content -->
+
+    <div class="btn_area_wide fix btm">
+        <button type="button" onclick="layer_open('alert')" disabled>확인</button>
+    </div>
+    <!-- //skip -->
+
+    <footer class="footer_cm">
+        <article>
+            <div class="infobx">
+                <button type="button" onclick="layer_open('cpinfo')" class="btn_info">(주) 민앤지 사업자 정보</button>
+                <div class="cau">
+                    <p class="po">본 서비스는 청약철회가 불가능한 상품입니다.<br>(전자상거래 등에서의 소비자보호에 관한 법률 제17조 2항 5호에 따라 디지털 콘텐츠의 제공이 개시된 경우 청약철회를 제공하지 않습니다.)</p>
+                    서비스 가입/해지/이용문의 1599-1054 (평일 9시-18시)</p>
+                    <address>㈜민앤지  서울특별시 강남구 테헤란로 34길 6, 태광타워 13층<br>사업자등록번호 : 214-88-39117</address>
+                </div>
+            </div>
+        </article>
+	</footer>
+    <!-- //footer -->
+    
+</div>
+
+<!-- 계좌변경 팝업 -->
+<div id="mw-chgaccount" class="ly_pop">
+    <div class="wrap">
+        <div class="content">
+            <h2>변경할 계좌를 선택하세요.</h2>
+            <section class="acc_info">
+                <div class="scroll">
+                    <section class="info">
+                        <ul>
+                            <li>
+                                <button type="button" class="acc_btn selected">
+                                    <strong class="name">우리SUPER주거래통장</strong>
+                                    <i class="num">1234-5678-1234</i>
+                                    <span class="ico"></span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="acc_btn">
+                                    <strong class="name">우리꿈통장</strong>
+                                    <i class="num">1234-5678-1234</i>
+                                    <span class="ico"></span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="acc_btn">
+                                    <strong class="name">우리함께통장</strong>
+                                    <i class="num">1234-5678-1234</i>
+                                    <span class="ico"></span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="acc_btn">
+                                    <strong class="name">위비SUP.ER주거래통장</strong>
+                                    <i class="num">1002-123-456789</i>
+                                    <span class="ico"></span>
+                                </button>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="notice">
+                        <strong>기존 계좌에 등록된 다른 자동이체도 함께 변경됩니다.</strong>
+                        <ul>
+                            <li>중소기업진흥공단</li>
+                            <li>현대카드</li>
+                            <li>SKT통신요금</li>
+                        </ul>
+                    </section>
+                </div>     
+            </section>
+            <div class="btn_area_wide">
+                <button type="button" onclick="layer_close()">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //계좌변경 팝업 -->
+
+<!-- 사용자정보 -->
+<div id="mw-cpinfo" class="ly_pop full ly_cpinfo">
+    <div class="wrap">
+        <button type="button" onclick="layer_close()" class="close"><i>닫기</i></button>
+        <div class="content">
+            <h2>사업자 정보</h2>
+            <ul class="list">
+                <li>
+                    <strong>상호</strong>
+                    <span>㈜민앤지</span>
+                </li>
+                <li>
+                    <strong>대표이사</strong>
+                    <span>이현철</span>
+                </li>
+                <li>
+                    <strong>주소</strong>
+                    <span>서울시 강남구 테헤란로 34길 6<br>태광타워 12F, 13F</span>
+                </li>
+                <li>
+                    <strong>통신판매업신고번호</strong>
+                    <span>제2015-서울강남-00012호</span>
+                </li>
+                <li>
+                    <strong>사업자등록번호</strong>
+                    <span>214-88-39117</span>
+                </li>
+                <li>
+                    <strong>고객센터</strong>
+                    <span>1599-1054 (평일 09:00-18:00)</span>
+                </li>
+                <li>
+                    <strong>호스팅서비스사업자</strong>
+                    <span>㈜민앤지</span>
+                </li>
+                <li>
+                    <strong>이메일</strong>
+                    <span>minwise.help@minwise.co.kr</span>
+                </li>
+            </ul>
+            <ul class="list_terms">
+                <li><button type="button" onclick="">사업자 정보 확인</button></li>
+                <li><button type="button" onclick="">세이프캐시 무료서비스이용약관</button></li>
+                <li><button type="button" onclick="">세이프캐시 유료서비스이용약관</button></li>
+                <li><button type="button" onclick="">세이프캐시 개인정보 수집 및 이용약관</button></li>
+                <li><button type="button" onclick="">세이프캐시 개인정보 제3자 제공 약관</button></li>
+                <li><button type="button" onclick="">세이프캐시 SKT 제3자 제공 약관</button></li>
+                <li><button type="button" onclick="">세이프캐시 세틀뱅크 제3자 제공 약관</button></li>
+                <li><button type="button" onclick="">세이프캐시 FDS 이용약관</button></li>
+                <li><button type="button" onclick="">세이프캐시 마케팅 활용 동의</button></li>
+                <li><a href="https://www.minwise.co.kr/sterm/mprivacy" target="_blank">개인정보처리방침</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- //사용자정보 -->
+
+<!-- 계좌출금정지 -->
+<div id="mw-alert" class="ly_pop nside btm ly_alert2">
+    <div class="wrap">
+        <div class="content">
+            <p class="txt">
+                최근 변경사항이 있습니다.
+                <br><br>
+                확인 버튼을 눌러 최신내역<br>으로 업데이트 해주세요.
+            </p>
+            <div class="btn_area_wide">
+                <button type="button" onclick="">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //계좌출금정지 -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="../resources/js/design.js"></script>
+<script>
+$(function() {
+    $("input, select").on("focus", function () {
+        $(".btn_area_wide button").removeAttr("disabled");
+    });    
+});
+</script>
+
+</body>
+</html>

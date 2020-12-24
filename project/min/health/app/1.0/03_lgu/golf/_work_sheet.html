@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<base target="_blank">
+<meta name="viewport" content="width=device-width, initialscale=1.0, maximum-scale=1.0, minimum-scale=1.0, userscalable=no">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<title>LGU+ 골프보험 워크시트</title>
+</head>
+<body>
+
+<h1>LGU+ 골프보험 Mobile Publishing</h1>
+<div id="note">
+	<ul>
+		<li>모든 문서는 html5, UTF-8을 기준으로 만들었습니다.</li>
+		<li>기본 폰트는 Noto Sans 웹폰트 입니다.</li>
+		<li>ios: 9.0 이상, 안드로이드: 4.4 이상 확인</li>
+	</ul>
+</div>
+<div id="mwork">
+	<fieldset>
+	<legend>Start Date : 2020-03-03</legend>
+	<table class="mwork" summary="WebPublisher Procedure Sheet" border="1">
+		<colgroup>
+            <col width="20%">
+            <col width="20%">
+            <col width="20%">
+            <col>
+		</colgroup>
+		<thead>
+		<tr>
+			<th scope="col">1 Dep</th>
+            <th scope="col">2 Dep</th>
+            <th scope="col">3 Dep</th>
+            <th scope="col">URL</th>
+		</tr>
+        </thead>
+        
+        <tbody>
+			<tr>
+				<td>메인</td>
+				<td></td>
+				<td></td>
+				<td class="url"><a href="main.html"></a></td>
+			</tr>
+            <tr>
+				<td rowspan="4">이용내역</td>
+				<td rowspan="2">리스트</td>
+				<td></td>
+				<td class="url"><a href="use_list.html"></a></td>
+			</tr>
+			<tr>
+				<td>리스트없음</td>
+				<td class="url"><a href="use_list_none.html"></a></td>
+			</tr>
+            <tr>
+            	<td rowspan="2">상세</td>
+            	<td></td>
+            	<td class="url"><a href="use_detail.html"></a></td>
+			</tr>
+			<tr>
+				<td>활성화전</td>
+				<td class="url"><a href="use_detail_deact.html"></a></td>
+			</tr>
+			<tr>
+				<td rowspan="4">가입</td>
+				<td>고객정보 입력</td>
+				<td></td>
+				<td class="url"><a href="submit.html"></a></td>
+			</tr>
+			<tr>
+				<td>가입정보</td>
+				<td></td>
+				<td class="url"><a href="submit_info.html"></a></td>
+			</tr>
+			<tr>
+				<td rowspan="2">상품결과</td>
+				<td>가입자</td>
+				<td class="url"><a href="product_cont_user.html"></a></td>
+			</tr>
+			<tr>
+				<td>미가입자</td>
+				<td class="url"><a href="product_cont_customer.html"></a></td>
+			</tr>
+        </tbody>
+        
+	</table>
+	</fieldset>
+
+</div>
+<!-- //sheet -->
+<!-- //html body -->
+</body>
+<!-- style -->
+<style type="text/css">
+	* {	margin:0;padding:0;}
+	body {padding:20px;	font-family:Tahoma, Sans-Serif; color:#333; font-size:11px; background-color:#fff;}
+	/* title */
+	h1 {color:#000; letter-spacing:-2px;}
+	.currentsite {display:block; position:absolute; right:40px; top:20px;}
+	a{display:block;color:#009; text-decoration:none;}
+	#mwork fieldset {border:none;}
+	#mwork legend {display:none;}
+	/* table */
+	#mwork table {width:100%; border-collapse:collapse; border:1px solid #666;}
+	#mwork caption {text-align:left; font-size:200%; color:#999;}
+	#mwork th{padding:6px 0; border:1px solid #666; color:#ccc; font-size:110%; background-color:#000;}
+	#mwork td{padding:10px 0;border:1px solid #666; background-color:#eee;text-align:center;font-size:12px}
+	#mwork td.stit{background-color:#bbb;}
+	/*#mwork td.chg{background-color:red;color:#fff;}*/
+	/*#mwork td.chg2{background-color:#0072ff;color:#fff;}*/
+	/* note */
+	#note {margin:10px 0 10px 0; padding:10px; border:2px dotted #000; background:#eee; letter-spacing:0;}
+	#note p {padding-left:10px;}
+	#note pre {margin-top:10px; margin-bottom:10px; font-family:Tahoma, Sans-Serif; color:#333; font-size:small;}
+	#note h2 {margin:0px 0 10px 0;}
+	#note .notice{color:red;}
+	#note .comment {display:block; margin:5px 0 10px 0; color:#666;}
+	#note .issue {color:#900;}
+	#note .add {color:#900; font-weight:bold;}
+	#note ul li {margin-left:20px;}
+	.date{text-align:left !important;padding-left:10px !important;font-size:12px !important;font-weight:normal !important}
+	.space{height:10px;padding:0 !important;background-color:#ccc !important}
+    ol{padding-left:20px}
+    .fc_red{color:red;}
+</style>
+<!-- //style -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    $.each($("td.url > a"), function(i,v){
+		$(v).text($(v).attr("href"));
+	});
+});
+</script>
+</html>

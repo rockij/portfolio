@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link rel="preload" href="resources/css/font/NotoSansKR-Regular-Hestia.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link href="resources/css/font.css" media="screen" rel="stylesheet">
+<link href="resources/css/common.css" media="screen" rel="stylesheet">
+<link href="resources/css/site.css" media="screen" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="resources/js/jquery-1.12.4.min.js"></script>
+<script src="resources/js/design.js"></script>
+<title>신한금융투자 해외주식</title>
+</head>
+<body>
+
+<div id="wrap" class="tndncy">
+
+	<header id="header" class="fix_top">
+		<button type="button" class="btn_prev"><i class="bg_com ico_arr_prev">이전으로</i></button>
+		<h1><i class="lg"></i>신한금융투자 해외주식</h1>
+		<button type="button" class="btn_cls"><i class="bg_com ico_x">닫기</i></button>
+	</header>
+	<!-- //header -->
+
+	<div id="ct">
+		<div class="progress_bar">
+			<ul class="bar"><li>질문1</li><li>질문2</li></ul>
+			<div class="ui_inner3"><span class="page"><b>2</b>/9</span></div>
+		</div>
+		<!-- //progress -->
+		<div class="ui_inner3 que_frmprcs">
+			<h2>질문 2. 투자자금 비중</h2>
+			<p>현재 금융 자산에 투자 중인<br>내 자산의 비율은<span class="line"></span>?<small>(예/적금)</small></p>
+			<fieldset>
+				<legend>투자자금 비중 선택</legend>
+				<ul class="chklist">
+					<li><div class="checkbox box"><input type="radio" name="invest" id="invest1"><label for="invest1">5% 미만</label></div></li>
+					<li><div class="checkbox box"><input type="radio" name="invest" id="invest2"><label for="invest2">5 ~ 10%</label></div></li>
+					<li><div class="checkbox box"><input type="radio" name="invest" id="invest3"><label for="invest3">10 ~ 20%</label></div></li>
+					<li><div class="checkbox box"><input type="radio" name="invest" id="invest4"><label for="invest4">20 ~ 30%</label></div></li>
+					<li><div class="checkbox box"><input type="radio" name="invest" id="invest5"><label for="invest5">30% 이상</label></div></li>
+				</ul>
+			</fieldset>
+			<div class="fix_btm btn_area bt2">
+				<button type="button" onclick="window.history.back();" class="btn_xr btn_type4">이전</button>
+				<button type="button" onclick="" class="btn_xr btn_type6 btn_skip">다음</button>
+			</div>
+			<!-- //btn -->
+		</div>
+		<!-- //question -->
+	</div>
+	<!-- //content -->
+
+	<script>
+		$(function(){
+			$(".checkbox").on("change", function() {
+				if($(this).find("input").prop("checked")){
+					$(".btn_skip").addClass("on");
+					$(".btn_skip").on("click", function() {
+						location.href = "tendency_analysis_step3.html";
+					});
+				}else{
+					$(".btn_skip").removeClass("on");
+				}
+			});
+		});
+	</script>
+
+</div>
+
+</body>
+</html>

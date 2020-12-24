@@ -1,0 +1,353 @@
+$standard-size: 10;
+$urlImg: '../images/';
+$fc_p:#1D4CD8;
+
+@function ptr($px, $context: $standard-size) {
+    @return ($px/2) / $context * 1rem;
+}
+
+@mixin wfn {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+@mixin clearfix {
+    &:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin pos($p: null,$l: null,$r: null,$t: null,$b: null) {
+    position: $p;
+    left: $l;
+    right: $r;
+    top: $t;
+    bottom: $b;
+}
+
+@mixin bgf {
+    position:static;
+    display:inline-block;
+    vertical-align:middle;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    color:transparent;
+    white-space:nowrap;
+    text-indent:-1000rem;
+    font-size:1px;
+}
+
+@mixin icoSet {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+}
+@mixin bgSet {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+@mixin elip($type){
+    @if $type == "line1" {
+        display:inline-block;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        word-wrap:normal;
+        overflow:hidden;
+        max-width:100%;
+    }@else if $type == "line2" {
+        overflow:hidden;
+        text-overflow:ellipsis;
+        display:-webkit-box;
+        -webkit-line-clamp:2; /* 라인수 */
+        -webkit-box-orient: vertical;
+        word-wrap:break-word;
+    }@else if $type == "line3" {
+        overflow:hidden;
+        text-overflow:ellipsis;
+        display:-webkit-box;
+        -webkit-line-clamp:3; /* 라인수 */
+        -webkit-box-orient: vertical;
+        word-wrap:break-word;
+    }
+}
+
+@mixin arr($ty:null, $w:null, $h:null, $c:null, $ro:null){
+    display:inline-block;
+    vertical-align:middle;
+    @if $ty == "semo" {
+        width:0;height:0;
+        border-top:$h solid transparent;
+        border-bottom:$h solid transparent;
+        border-left:$w solid $c;
+    } @else if $ty=="semo_down" {
+        width:0;height:0;
+        border-left:$h solid transparent;
+        border-right:$h solid transparent;
+        border-bottom:$h solid transparent;
+        border-top:$w solid $c;
+    }@else if $ty == "arrow" {
+        border-width:1px 1px 0 0;
+        border-style:solid;
+        border-color:$c;
+        width:$w;height:$h;
+        transform: rotate($ro + deg);
+    }@else if $ty == "o" {
+        width:$w;height:$h;
+        background-color:$c;
+        border-radius:50%;
+    }
+}
+
+@mixin bshw{
+    box-shadow:ptr(10) ptr(10) ptr(20) rgba(0,0,0,.08);
+}
+
+@mixin transition($code:all, $spd:.25s, $dur:ease, $tm:null){
+    transition:$code $spd $dur $tm;
+}
+
+@mixin chkImg($ty:null){
+    display:inline-block;
+    & + .docBtn {
+        height: ptr(33);
+        padding: ptr(2) ptr(15);
+        border-radius: ptr(15);
+        background-color: #F6F6F6;
+        &:before {
+            content: '보기';
+            display: block;
+            font-size: ptr(20);
+            text-align: center;
+            color: #A4A4A4;
+        }
+    }
+    input{
+        width:1px;height:1px;overflow:hidden;
+        border:0;margin:-1px;padding:0;
+        position:absolute;clip:rect(0,0,0,0)
+    }
+    input + label{
+        display:inline-block;
+        position:relative;
+        cursor:pointer;
+        user-select:none;
+    }
+    input + label:before{
+        content:'';display:inline-block;
+        background-repeat:no-repeat;
+        background-size:100% 100%;
+        position:absolute;
+    }
+    @if $ty == "c1" {
+        input + label{
+            padding:ptr(4) 0 ptr(4) ptr(60);
+            font-size:ptr(28);
+            font-weight:500;
+            &:before{
+                @include transition;
+                background-image:url($urlImg + "checkbox_circle.png");
+                width:ptr(42);height:ptr(42);
+                top:50%;left:0;
+                transform: translateY(-50%);
+            }
+        }
+        input:checked + label{
+            &:before{
+                background-image:url($urlImg + "checkbox_circle_on.png");
+            }
+        }
+    }@else if $ty == "c2" {
+        input + label{
+            padding:ptr(4) 0 ptr(4) ptr(60);
+            font-size:ptr(24);
+            color:#6E6E6E;
+            &:before{
+                @include transition;
+                background-image:url($urlImg + "checkbox_check.png");
+                width:ptr(31.5);height:ptr(23);
+                top:ptr(10);left:ptr(6);
+            }          
+        }
+        input:checked + label{
+            &:before{
+                background-image:url($urlImg + "checkbox_check_on.png");
+            }
+        }
+        .text{
+            display:block;
+            padding:ptr(4) 0 ptr(4) ptr(60);
+            margin-top:ptr(10);
+            font-size:ptr(24);
+            color:#6E6E6E;
+        }
+        &.twin{
+            width:100%;
+            input + label{
+                padding:0;
+                width:100%;
+                &:before{
+                    display:none;
+                }
+                .ck{
+                    display:flex;
+                    justify-content:space-between;
+                    margin-top:ptr(10);
+                    > span{
+                        display:inline-block;
+                        position:relative;
+                        color:#6E6E6E;
+                        padding:ptr(4) 0 ptr(4) ptr(60);
+                        &:before{                        
+                            @include transition;
+                            content:'';display:inline-block;
+                            background-repeat:no-repeat;
+                            background-size:100% 100%;
+                            position:absolute;
+                            background-image:url($urlImg + "checkbox_check.png");
+                            width:ptr(31.5);height:ptr(23);
+                            top:ptr(10);left:ptr(6);
+                        }
+                    }
+                    &:first-child{
+                        margin-top:0
+                    }
+                }
+            }
+            input:checked + label{
+                .ck{
+                    >span{
+                        &:before{
+                            background-image:url($urlImg + "checkbox_check_on.png");
+                        }
+                    }
+                }
+            }
+        }       
+    }
+}
+
+@mixin chkSvg($ty:null,$size:null) {
+    display:inline-block;
+    & + .docBtn {
+        height: ptr(33);
+        padding: ptr(2) ptr(15);
+        border-radius: ptr(15);
+        background-color: #F6F6F6;
+        &:before {
+            content: '보기';
+            display: block;
+            font-size: ptr(20);
+            text-align: center;
+            color: #A4A4A4;
+        }
+    }
+    input{
+        width:1px;height:1px;overflow:hidden;
+        border:0;margin:-1px;padding:0;
+        position:absolute;clip:rect(0,0,0,0)
+    }
+    input + label{
+        display:block;
+        position:relative;
+        cursor:pointer;
+        user-select:none;
+        @include transition;
+    }
+    input + label:before{
+        content:'';
+        display:inline-block;
+        vertical-align: middle;
+        @include icoSet;
+        @include transition;
+        margin-top: ptr(-6);
+    }
+    @if $ty == "each" {
+        input + label {
+            font-size: ptr(24);
+            color: #6E6E6E;
+            &:before {
+                width: ptr(38);
+                height: ptr(38);
+                margin-right: ptr(5);
+                background-image: url($urlImg + "svg_ckbox.svg");
+            }
+        }
+        input:checked + label {
+            &:before {
+                background-image: url($urlImg + "svg_ckbox_on.svg");
+            }
+        }
+    }
+    @if $ty=="all" {
+        input + label {
+            font-weight: 700;
+            font-size: ptr(30);
+            &:before {
+                width: ptr(52);
+                height: ptr(52);
+                margin-right: ptr(8);
+                background-image: url($urlImg + "svg_ckbox_all.svg");
+            }
+        }
+        input:checked+label {
+            color: $fc_p;
+            &:before {
+                background-image: url($urlImg + "svg_ckbox_all_on.svg");
+            }
+        }
+    }
+    @if $size=="box" {
+        display: block;
+        width: 100%;
+        input + label {
+            padding: ptr(29) ptr(38);
+            border-radius: ptr(12);
+            border: 1px solid transparent;
+            @include boxShadow(0, 8, 28, rgba(0, 0, 0, 0.28));
+        }
+        input:checked+label {
+            box-shadow: none;
+            border-color: $fc_p;
+        }
+    }
+}
+
+@mixin boxShadow($x:null, $y:null, $blur:null, $color:null) {
+    box-shadow: ptr($x) ptr($y) ptr($blur) $color;
+}
+
+@mixin iscroll($ty:null, $w:null, $h:null){
+    -webkit-overflow-scrolling:touch;
+    width:$w; height:$h;
+    overflow-x:hidden;
+    overflow-y:scroll;
+}
+
+@mixin inr($ty:nul){
+    @if $ty == "r"{
+        padding-right:ptr(42);
+    }@else if $ty == "l"{
+        padding-left:ptr(42);
+    }@else if $ty == "c"{
+        padding-right:ptr(42);
+        padding-left:ptr(42);
+    }
+}
+
+@mixin mq($screen-width){
+    @if $screen-width == "small" {
+        @media all and (max-width:320px) {
+            @content;
+        }
+    }@else if $screen-width == "fold" {
+        @media all and (min-width:640px) {
+            @content;
+        }
+    }@else if $screen-width == "pc" {
+        @media all and (min-width:768px) {
+            @content;
+        }
+    }
+}

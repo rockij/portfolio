@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initialscale=1.0, maximum-scale=1.0, minimum-scale=1.0, userscalable=no">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<title>신한 금융투자 해외주식 워크시트</title>
+</head>
+<body>
+<!-- sheet -->
+<!-- note -->
+<h1>Shinhan Stock Mobile Project Publishing Package</h1>
+<div id="note">
+	<ul>
+		<li>모든 문서는 html5, UTF-8을 기준으로 만들었습니다.</li>
+		<li>기본 폰트는 Noto Sans 웹폰트이며, 숫자는 Prompt 입니다.</li>
+		<li>레이어팝업을 띄울때는 반드시 layer_open('id값')을 사용하여 주세요.</li>
+		<li>ios: 9.0 이상, 안드로이드: 4.4 이상 확인</li>
+		<li>안드로이드: 4.3 이하 지원불가</li>
+	</ul>
+</div>
+<div id="mwork">
+	<fieldset>
+	<legend>Start Date : 2018-10-06</legend>
+	<table class="mwork" summary="WebPublisher Procedure Sheet" border="1">
+		<colgroup>
+		<col width="35%">
+		<col width="*">
+		<col width="40%">
+		</colgroup>
+		<thead>
+		<tr>
+			<th>name</th>
+			<th>href</th>
+			<th>비고</th>
+		</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>오픈이벤트</td>
+				<td class="depth1"><a href="event_open_select.html">종목선택</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>공통</td>
+				<td class="depth1"><a href="loading.html">로딩</a></td>
+				<td class="date">기본 로딩바</td>
+			</tr>
+			<tr>
+				<td>공통</td>
+				<td class="depth1"><a href="popup.html">팝업</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>메인</td>
+				<td class="depth1"><a href="main.html">메인</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>주식종목</td>
+				<td class="depth1"><a href="stock_event_up.html">상승</a></td>
+				<td class="date">
+					그래프 아무곳이나 클릭하면 그 위치에 맞게 달러 박스가 이동되야함<br>
+					상단 탭 슬라이드 관련 페이지 제일 하단에 추가
+				</td>
+			</tr>
+			<tr>
+				<td>주식종목</td>
+				<td class="depth1"><a href="stock_event_down.html">하락</a></td>
+				<td class="date"></td>
+			</tr>
+				<tr>
+				<td>계좌비밀번호</td>
+				<td class="depth1"><a href="password.html">계좌비밀번호</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>주식종목투자</td>
+				<td class="depth1"><a href="invest_buy_up.html">매수(상승)</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>주식종목투자</td>
+				<td class="depth1"><a href="invest_buy_up_before.html">매수(상승)</a></td>
+				<td class="date">입력전</td>
+			</tr>
+			<tr>
+				<td>주식종목투자</td>
+				<td class="depth1"><a href="invest_buy_down.html">매수(하락)</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>주식종목투자</td>
+				<td class="depth1"><a href="invest_buy_down_before.html">매수(하락)</a></td>
+				<td class="date">입력전</td>
+			</tr>
+			<tr>
+				<td>주식종목투자</td>
+				<td class="depth1"><a href="invest_sell_up.html">매도(상승)</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>주식종목투자</td>
+				<td class="depth1"><a href="invest_sell_up_before.html">매도(상승)</a></td>
+				<td class="date">입력전</td>
+			</tr>
+			<tr>
+				<td>주식종목투자</td>
+				<td class="depth1"><a href="invest_sell_down.html">매도(하락)</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>주식종목투자</td>
+				<td class="depth1"><a href="invest_sell_down.html">매도(하락)</a></td>
+				<td class="date">입력전</td>
+			</tr>
+			<tr>
+				<td>주식종목투자</td>
+				<td class="depth1"><a href="invest_pop_lack.html">예치금부족(pop)</a></td>
+				<td class="date">하단 버튼 클릭하면 팝업 뜸</td>
+			</tr>
+			<tr>
+				<td>주식종목투자</td>
+				<td class="depth1"><a href="invest_pop_dealno.html">거래가능시간아님(pop)</a></td>
+				<td class="date">하단 버튼 클릭하면 팝업 뜸</td>
+			</tr>
+			<tr>
+				<td>주문현황</td>
+				<td class="depth1"><a href="orderstatus_buy.html">매수요청</a></td>
+				<td class="date">
+					매수취소 버튼 누르면 팝업 뜸
+				</td>
+			</tr>
+			<tr>
+				<td>주문현황</td>
+				<td class="depth1"><a href="orderstatus_buyend.html">매수완료</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>주문현황</td>
+				<td class="depth1"><a href="orderstatus_sell.html">매도요청</a></td>
+				<td class="date">
+					매도취소 버튼 누르면 팝업 뜸
+				</td>
+			</tr>
+			<tr>
+				<td>주문현황</td>
+				<td class="depth1"><a href="orderstatus_sellend.html">매도완료</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>투자성향</td>
+				<td class="depth1"><a href="tendency_agree.html">동의</a></td>
+				<td class="date">
+					- id값과 label의 for값은 동일하게<br>
+					- YES or NO 어떤걸 선택하느냐에 따라 확인버튼 시 다른 페이지 연결
+				</td>
+			</tr>
+			<tr>
+				<td>투자성향</td>
+				<td class="depth1"><a href="tendency_analysis.html">성향분석</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>투자성향</td>
+				<td class="depth1"><a href="tendency_analysis_step1.html">분석 - 질문1</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>투자성향</td>
+				<td class="depth1"><a href="tendency_analysis_step2.html">분석 - 질문2</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>투자성향</td>
+				<td class="depth1"><a href="tendency_analysis_step3.html">분석 - 질문3</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>투자성향</td>
+				<td class="depth1"><a href="tendency_analysis_step4.html">분석 - 질문4</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>투자성향</td>
+				<td class="depth1"><a href="tendency_analysis_step5.html">분석 - 질문5</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>투자성향</td>
+				<td class="depth1"><a href="tendency_analysis_step6.html">분석 - 질문6</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>투자성향</td>
+				<td class="depth1"><a href="tendency_analysis_step7.html">분석 - 질문7</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>투자성향</td>
+				<td class="depth1"><a href="tendency_analysis_step8.html">분석 - 질문8</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>투자성향</td>
+				<td class="depth1"><a href="tendency_analysis_step9.html">분석 - 질문9</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>투자성향</td>
+				<td class="depth1"><a href="tendency_analysis_result1.html">분석 - 결과 1등급</a></td>
+				<td class="date">
+					일반상품 - 1등급<br>
+					파생상품 - 1등급
+				</td>
+			</tr>
+			<tr>
+				<td>투자성향</td>
+				<td class="depth1"><a href="tendency_analysis_result2.html">분석 - 결과 2등급</a></td>
+				<td class="date">
+					일반상품 - 2등급<br>
+					파생상품 - 2등급
+				</td>
+			</tr>
+			<tr>
+				<td>투자성향</td>
+				<td class="depth1"><a href="tendency_analysis_result3.html">분석 - 결과 3등급</a></td>
+				<td class="date">
+					일반상품 - 3등급<br>
+					파생상품 - 3등급
+				</td>
+			</tr>
+			<tr>
+				<td>투자성향</td>
+				<td class="depth1"><a href="tendency_analysis_result4.html">분석 - 결과 4등급</a></td>
+				<td class="date">
+					일반상품 - 4등급<br>
+					파생상품 - 3등급
+				</td>
+			</tr>
+			<tr>
+				<td>투자성향</td>
+				<td class="depth1"><a href="tendency_analysis_result5.html">분석 - 결과 5등급</a></td>
+				<td class="date">
+					일반상품 - 5등급<br>
+					파생상품 - 3등급
+				</td>
+			</tr>
+			<tr>
+				<td>투자성향</td>
+				<td class="depth1"><a href="tendency_analysis_no.html">부적합 거래내용 확인서</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>투자성향</td>
+				<td class="depth1"><a href="tendency_nwrite.html">투자정보 미작성</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>투자전</td>
+				<td class="depth1"><a href="invest_before_desk.html">안내(팝업)</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>투자전</td>
+				<td class="depth1"><a href="invest_before_engnm.html">영문이름</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>투자전</td>
+				<td class="depth1"><a href="invest_before_agree.html">약관확인</a></td>
+				<td class="date">
+					약관 확인 후에 버튼에 on 클래스 추가
+				</td>
+			</tr>
+			<tr>
+				<td>환전</td>
+				<td class="depth1"><a href="exchange.html">환전</a></td>
+				<td class="date">
+					-확인 누르면 환전할까요? 팝업 뜸<br>
+					-환전하기 버튼 누르면 현금부족 팝업 뜸
+				</td>
+			</tr>
+			<tr>
+				<td>게시판</td>
+				<td class="depth1"><a href="board_list.html">리스트</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>게시판</td>
+				<td class="depth1"><a href="detailview_company.html">상세보기 - 기업뉴스</a></td>
+				<td class="date">
+					게시판 내용 슬라이드
+				</td>
+			</tr>
+			<tr>
+				<td>게시판</td>
+				<td class="depth1"><a href="detailview_global.html">상세보기 - 해외주요뉴스</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>게시판</td>
+				<td class="depth1"><a href="faq.html">자주 하는 질문</a></td>
+				<td class="date"></td>
+			</tr>
+		</tbody>
+
+	</table>
+	</fieldset>
+
+</div>
+<!-- //sheet -->
+<!-- //html body -->
+</body>
+<!-- style -->
+<style type="text/css">
+	* {	margin:0;padding:0;}
+	body {padding:20px;	font-family:Tahoma, Sans-Serif; color:#333; font-size:11px; background-color:#fff;}
+	/* title */
+	h1 {color:#000; letter-spacing:-2px;}
+	.currentsite {display:block; position:absolute; right:40px; top:20px;}
+	a{display:block;color:#009; text-decoration:none;}
+	#mwork fieldset {border:none;}
+	#mwork legend {display:none;}
+	/* table */
+	#mwork table {width:100%; border-collapse:collapse; border:1px solid #666;}
+	#mwork caption {text-align:left; font-size:200%; color:#999;}
+	#mwork th{padding:6px 0; border:1px solid #666; color:#ccc; font-size:110%; background-color:#000;}
+	#mwork td{padding:10px 0;border:1px solid #666; background-color:#eee;text-align:center;font-weight:bold;font-size:14px}
+	#mwork td.stit{background-color:#bbb;}
+	/*#mwork td.chg{background-color:red;color:#fff;}*/
+	/*#mwork td.chg2{background-color:#0072ff;color:#fff;}*/
+	/* note */
+	#note {margin:10px 0 10px 0; padding:10px; border:2px dotted #000; background:#eee; letter-spacing:0;}
+	#note p {padding-left:10px;}
+	#note pre {margin-top:10px; margin-bottom:10px; font-family:Tahoma, Sans-Serif; color:#333; font-size:small;}
+	#note h2 {margin:0px 0 10px 0;}
+	#note .notice{color:red;}
+	#note .comment {display:block; margin:5px 0 10px 0; color:#666;}
+	#note .issue {color:#900;}
+	#note .add {color:#900; font-weight:bold;}
+	#note ul li {margin-left:20px;}
+	.date{text-align:left !important;padding-left:10px !important;font-size:12px !important;font-weight:normal !important}
+	.space{height:10px;padding:0 !important;background-color:#ccc !important}
+	ol{padding-left:20px}
+</style>
+<!-- //style -->
+</html>

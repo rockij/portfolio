@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link href="../resources/css/font.local.css" media="screen" rel="stylesheet"> <!-- 폐쇄망 -->
+<link href="../resources/css/font.cdn.css" media="screen" rel="stylesheet"> <!-- 인터넷망 -->
+<link href="../resources/css/common.min.css" media="screen" rel="stylesheet">
+<link href="../resources/css/driving.min.css" media="screen" rel="stylesheet">
+<title>010휘슬</title>
+</head>
+<body class="bgf">
+
+<div id="wrap">
+
+    <section class="fix top">
+        <header id="header">
+            <button type="button" onclick="" class="btn_prev" title="뒤로가기"><i></i></button>
+            <h1>신고 현황</h1>
+        </header>
+        <div class="tab_type">
+            <ul>
+                <li><a href="#">내 신고</a></li>
+                <li><a href="#" class="on">받은 신고</a></li>
+            </ul>
+        </div>
+    </section>   
+     <!--//header -->
+
+    <div id="content" class="driving_report_state">
+        <p class="top_message">
+            받은 신고는 다른 회원 또는 운전자들이 회원님의 운전에 대해 <span class="fc">불편함을 등록한 신고</span>입니다.
+        </p>              
+        <div class="list_thum">
+            <ul>
+                <li>
+                    <div class="col">
+                        <a href="#">
+                            <dl>
+                                <dt><img src="../resources/image/sample/thum_70x70.jpg" alt=""></dt>
+                                <dd class="carinfo">
+                                    <ul>
+                                        <li>
+                                            <strong class="name">58가8282</strong>
+                                            <ul class="data">
+                                                <li>10월 23일</li>
+                                                <li>서울 강남구</li>
+                                            </ul>
+                                        </li>
+                                        
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </a>
+                        <div class="cat">
+                            <span class="tx">비매너 주차</span>
+                            <button type="button" class="skip" onclick="popupOpen('tagSelect','mwf',0);chkingDefault('tagSelect',1);">답변하기</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="col">
+                        <a href="#">
+                            <dl>
+                                <dt><img src="../resources/image/sample/thum_70x70.jpg" alt=""></dt>
+                                <dd class="carinfo">
+                                    <ul>
+                                        <li>
+                                            <strong class="name">58가8282</strong>
+                                            <ul class="data">
+                                                <li>10월 23일</li>
+                                                <li>서울 강남구</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </a>
+                        <div class="cat">
+                            <span class="tx">비매너 운전</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="btn_area_simp text">마지막 내역입니다.</div>
+        </div>
+    </div>
+    <!-- //content -->
+
+</div>
+
+<!-- popup -->
+<div id="mw-tagSelect" class="ly_pop popBtm ly_tag_select">
+    <div class="wrap">
+        <div class="content">
+            <button type="button" onclick="popupClose('tagSelect','mwf')" class="close" title="닫기"><i></i></button>
+            <section id="tagSelect">
+                <h2>등록 된 신고에<br>답변을 달아주세요!</h2>
+                <ul class="list">
+                    <li>
+                        <span class="box i_chk">
+                            <input type="radio" id="tag1" name="tag" value="">
+                            <label for="tag1" feel-emoticon="DTOO"">너무해요</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="box i_chk">
+                            <input type="radio" id="tag2" name="tag" value="">
+                            <label for="tag2" feel-emoticon="DTH1">감사합니다!</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="box i_chk">
+                            <input type="radio" id="tag3" name="tag" value="">
+                            <label for="tag3" feel-emoticon="DSOR">미안해요...</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="box i_chk">
+                            <input type="radio" id="tag4" name="tag" value="">
+                            <label for="tag4" feel-emoticon="DKNO">몰랐습니다...</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="box i_chk">
+                            <input type="radio" id="tag5" name="tag" value="">
+                            <label for="tag5" feel-emoticon="DTH2">알려줘서 고마워요~</label>
+                        </span>
+                    </li>
+                </ul>
+            </section>
+            <div id="tagSelect-btn" class="btn_area_wide">
+                <button type="button" class="skip" onclick="popupClose('tagSelect','mwf')" disabled>답변 등록</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //popup -->
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script> -->
+<script src="../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../resources/js/gsap.min.js"></script>
+<script src="../../../global/resources/js/global.js"></script>
+<script src="../resources/js/design.js" defer></script>
+<script>
+$(function() {
+    virtualBg(); //white bg
+});
+</script>
+
+</body>
+</html>

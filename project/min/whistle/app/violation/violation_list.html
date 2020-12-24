@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link href="../resources/css/font.local.css" media="screen" rel="stylesheet"> <!-- 폐쇄망 -->
+<link href="../resources/css/font.cdn.css" media="screen" rel="stylesheet"> <!-- 인터넷망 -->
+<link href="../resources/css/common.min.css" media="screen" rel="stylesheet">
+<link href="../resources/css/content.min.css" media="screen" rel="stylesheet">
+<title>010휘슬</title>
+</head>
+<body class="bgf">
+
+<div id="wrap">
+
+    <section class="fix top">
+        <header id="header">
+            <button type="button" onclick="" class="btn_prev" title="뒤로가기"><i></i></button>
+            <div class="select_wrap">
+                <select>
+                    <option selected>1머1785</option>
+                    <option >22머1785</option>
+                    <option>3333머1785</option>
+                </select>
+            </div>
+        </header>
+        <div class="tab_type">
+            <ul>
+                <li><a href="#" class="on">위반·미납 내역</a></li>
+                <li><a href="#">하이패스 통행료</a></li>
+            </ul>
+        </div>
+    </section>   
+     <!--//header -->
+
+    <div id="content" class="parking_info_wrap">
+        <div class="top_message">
+            <div class="list_toggle">
+                <ul>
+                    <li class="q">유의사항</li>
+                    <li class="a">
+                        <ul class="bu">
+                            <li>차량소유자 본인 외 타인의 정보로 조회가 불가합니다.</li>
+                            <li>과태료내역 조회, 위반여부 확인 등 단속부과업무로 인해 위반일자로부터 일정기간(1~2일) 소요되며, 이미 납부(수납)처리된 자료를 제외한 현재 미납 또는 체납중인 자료만 조회됩니다.</li>
+                            <li>과태료 내역이 많을 경우 조회되는데 시간이 오래 걸릴 수 있습니다.</li>
+                            <li>미납 내역의 조회를 위해서는 공동인증서 등록이 필요합니다. <a href="#" class="btn_txt">공동인증서 등록하기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>              
+        <div class="list_thum type02">
+            <div class="round_wrap">
+                <div class="tit_wrap">
+                    <span class="tit">위반 내역</span>
+                    <span class="day_txt">마지막 조회일 <em>2020. 11. 10</em></span>
+                </div>
+                <ul class="list_bbs2">
+                    <li>
+                        <a href="#" class="link">
+                            <span class="tit">주정차 위반</span>
+                            <div class="data">
+                                <span class="count"><code>3</code>건</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="link">
+                            <span class="tit">전용차로 위반</span>
+                            <div class="data">
+                                <span class="count"><code>3</code>건</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="btn_area_wide"><button type="button" class="skip" onclick="popupOpen('terms1','mwf',0);chkinglst('terms1','slide')">다시 조회 하기</button></div>
+            </div>   
+            <div class="round_wrap">
+                <div class="tit_wrap">
+                    <span class="tit">미납 내역</span>
+                    <span class="day_txt">마지막 조회일 <em>2020. 11. 10</em></span>
+                </div>
+                <ul class="list_bbs2">
+                    <li>
+                        <a href="#" class="link">
+                            <span class="tit">미납 과태료</span>
+                            <div class="data">
+                                <span class="count"><code>3</code>건</span>
+                                <span class="num">총 <code>41,000</code>원</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="link">
+                            <span class="tit">미납 범칙금</span>
+                            <div class="data">
+                                <span class="count"><code>3</code>건</span>
+                                <span class="num">총 <code>41,000</code>원</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="btn_area_wide"><button type="button" class="skip" onclick="popupOpen('terms2','mwf',0);chkinglst('terms2','slide')">다시 조회 하기</button></div>
+            </div>   
+        </div>
+    </div>
+    <!-- //content -->
+
+</div>
+
+<!-- 위반내역약관 -->
+<div id="mw-terms1" class="ly_pop popBtm ly_terms">
+    <div class="wrap">
+        <h2>약관동의</h2>
+        <button type="button" onclick="popupClose('terms1','mwf')" class="close"><i>닫기</i></button>
+        <div class="content">
+            <p class="txt">010휘슬의 위반 내역 조회 서비스는 '서울시 교통위반 단속조회'와 '위택스'의 시스템을 조회하여 제공합니다.</p>
+            <div id="terms" class="terms_list">
+                <ul>
+                    <li class="all">
+                        <span class="checkbox i_all">
+                            <input type="checkbox" name="allCheck" id="agreeAll">
+                            <label for="agreeAll">전체동의</label>
+                        </span>
+                    </li>
+                </ul>
+                <div class="checkbox i_sub">
+                    <input type="checkbox" name="agreeChk" id="agree1" checked>
+                    <label for="agree1">개인정보 수집 및 이용 동의(필수)</label>
+                    <button type="button" class="doc"><s>개인정보 수집 및 이용 동의 보기</s></button>
+                </div>
+                <div class="checkbox i_sub">
+                    <input type="checkbox" name="agreeChk" id="agree2" checked>
+                    <label for="agree2">개인정보 제3자 제공 동의(필수)</label>
+                    <button type="button" class="doc"><s>개인정보 제3자 제공 동의 보기</s></button>
+                </div>
+                <span class="checkbox i_sub">
+                    <input type="checkbox" name="agreeChk" id="agree3">
+                    <label for="agree3">서울시 교통위반 단속조회 동의</label>
+                </span>
+                <ul class="clst">
+                    <li>
+                        <span class="checkbox i_chk">
+                            <input type="checkbox" name="agreeChk" id="agree3-1">
+                            <label for="agree3-1">개인정보 수집 및 이용 동의(필수)</label>
+                        </span>
+                        <button type="button" class="doc"><s>개인정보 수집 및 이용 동의 보기</s></button>
+                    </li>
+                </ul>
+                <span class="checkbox i_sub">
+                    <input type="checkbox" name="agreeChk" id="agree4">
+                    <label for="agree4">휴대폰본인인증 약관 동의</label>
+                </span>
+                <ul class="clst">
+                    <li>
+                        <span class="checkbox i_chk">
+                            <input type="checkbox" name="agreeChk" id="agree4-1">
+                            <label for="agree4-1">개인정보이용동의(필수)</label>
+                        </span>
+                        <button type="button" class="doc"><s>개인정보이용동의 보기</s></button>
+                    </li>
+                    <li>
+                        <span class="checkbox i_chk">
+                            <input type="checkbox" name="agreeChk" id="agree4-2">
+                            <label for="agree4-2">고유식별정보처리동의(필수)</label>
+                        </span>
+                        <button type="button" class="doc"><s>고유식별정보처리동의 보기</s></button>
+                    </li>
+                    <li>
+                        <span class="checkbox i_chk">
+                            <input type="checkbox" name="agreeChk" id="agree4-3">
+                            <label for="agree4-3">서비스이용약관동의(필수)</label>
+                        </span>
+                        <button type="button" class="doc"><s>서비스이용약관동의 보기</s></button>
+                    </li>
+                    <li>
+                        <span class="checkbox i_chk">
+                            <input type="checkbox" name="agreeChk" id="agree4-4">
+                            <label for="agree4-4">통신사이용약관동의(필수)</label>
+                        </span>
+                        <button type="button" class="doc"><s>통신사이용약관동의 보기</s></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="terms-btn" class="btn_area_wide more"><button type="button" onclick="" class="skip" disabled>확인</button></div>
+    </div>
+</div>
+<!-- //위반내역약관 -->
+
+<!-- 미납내역약관 -->
+<div id="mw-terms2" class="ly_pop popBtm ly_terms">
+    <div class="wrap">
+        <h2>약관동의</h2>
+        <button type="button" onclick="popupClose('terms2','mwf')" class="close"><i>닫기</i></button>
+        <div class="content">
+            <p class="txt">010휘슬의 미납 내역 조회 서비스는 '경찰청교통민원24'의 시스템을 조회하여 제공합니다.</p>
+            <div id="terms" class="terms_list">
+                <ul>
+                    <li class="all">
+                        <span class="checkbox i_all">
+                            <input type="checkbox" name="allCheck" id="agreeAll">
+                            <label for="agreeAll">전체동의</label>
+                        </span>
+                    </li>
+                </ul>
+                <div class="checkbox i_sub">
+                    <input type="checkbox" name="agreeChk" id="agree1" checked>
+                    <label for="agree1">개인정보 수집 및 이용 동의(필수)</label>
+                    <button type="button" class="doc"><s>개인정보 수집 및 이용 동의 보기</s></button>
+                </div>
+                <div class="checkbox i_sub">
+                    <input type="checkbox" name="agreeChk" id="agree2">
+                    <label for="agree2">개인정보 제3자 제공 동의(필수)</label>
+                    <button type="button" class="doc"><s>개인정보 제3자 제공 동의 보기</s></button>
+                </div>
+            </div>
+        </div>
+        <div id="terms-btn" class="btn_area_wide more"><button type="button" onclick="" class="skip" disabled>확인</button></div>
+    </div>
+</div>
+<!-- //미납내역약관 -->
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script> -->
+<script src="../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../resources/js/gsap.min.js"></script>
+<script src="../../../global/resources/js/global.js"></script>
+<script src="../resources/js/design.js" defer></script>
+<script>
+$(function() {    
+});
+</script>
+
+</body>
+</html>

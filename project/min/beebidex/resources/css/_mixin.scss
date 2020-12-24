@@ -1,0 +1,46 @@
+@mixin clearfix {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+@mixin pos($p: null,$l: null,$r: null,$t: null,$b: null) {
+    position: $p;
+    left: $l;
+    right: $r;
+    top: $t;
+    bottom: $b;
+}
+@function ptr($px, $context: $standard-size) {
+    @return ($px/2) / $context * 1rem;
+}
+@mixin cssImg($s:null) {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+    @if $s == cover {
+        background-size: cover;
+    }
+}
+$standard-size: 10;
+$urlImg: '../images/';
+
+.hide {
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    clip: clip(-1px, -1px, -1px, -1px);
+    @include pos($p:absolute, $l:-9999px);
+}
+
+/* animation */
+@-webkit-keyframes cloud{
+  0%, 100%{-webkit-transform:translateY(0)}
+  50%{-webkit-transform:translateY(-15%)}
+}
+@keyframes cloud{
+  0%, 100%{transform:translateY(0)}
+  50%{transform:translateY(-15%)}
+}

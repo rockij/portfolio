@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link href="../resources/css/font.local.css" media="screen" rel="stylesheet"> <!-- 폐쇄망 -->
+<link href="../resources/css/font.cdn.css" media="screen" rel="stylesheet"> <!-- 인터넷망 -->
+<link href="../resources/css/common.min.css" media="screen" rel="stylesheet">
+<link href="../resources/css/content.min.css" media="screen" rel="stylesheet">
+<link href="../resources/css/driving.min.css" media="screen" rel="stylesheet">
+<title>010휘슬</title>
+</head>
+<body>
+<div id="wrap">
+    <header id="header" class="fix top">
+        <button type="button" onclick="" class="btn_prev" title="뒤로가기"><i></i></button>
+    </header>
+    <div id="content" class="driving_mileage">
+        <section class="info_wrap">
+            <div class="tit_wrap">
+                <h1>1월에 적립 가능한 <br>캠페인 마일리지</h1>
+                <code>7,000 M</code>
+            </div>
+            <div class="round_wrap blk">
+                <div class="page_tit_wrap">
+                    <span class="tit">보유 마일리지<button type="button" class="btn_r_link btn_tip">정보 보기</button></span>
+                    <div class="tip_wrap">
+                        <p class="txt">캠페인을 통해 적립한 마일리지입니다.<br>회원님의 휘슬 마일리지 보유 내역은 휘슬 마일리지 또는 내역보기를 통해 확인할 수 있습니다.</p>
+                    </div>
+                </div>
+                <a href="#" class="btn_txt"><code>13,000 M</code></a>
+            </div>
+        </section>
+        <section class="mileage_wrap">
+            <div class="section">
+                <div class="page_tit_wrap type02">
+                    <p class="page_sub_tit">데일리 미션 마일리지<button type="button" class="btn_r_link btn_tip">정보 보기</button></p>
+                    <div class="tip_wrap">
+                        <p class="txt">데일리 미션 마일리지는 회원님이 하루 동안 <span>사용자 불편 신고</span> 및 <span>비매너 주차 알림</span>을 받지 않으면 다음날 적립 받을 수 있는 데일리 마일리지입니다.</p>
+                    </div>
+                </div>
+                <div class="round_wrap">
+                    <div class="tit_wrap">
+                        <span class="page_sub_tit02">데일리 미션</span>
+                        <span class="time"><code>16:42:35</code>남음</span>
+                    </div>
+                    <!-- 미션 시작 및 진행중 -->
+                    <ul class="mission_list">
+                        <li>
+                            <span class="bu_txt">진행중</span>
+                            <span class="tit">주·정차 위반 알림 받지 않기</span>
+                        </li>
+                        <li class="failed">
+                            <span class="bu_txt">Failed</span>
+                            <span class="tit">불편 신고 받지 않기</span>
+                        </li>
+                    </ul>
+                    <!-- //미션 시작 및 진행중 -->
+                    <!-- 성공시 -->
+                    <button type="button" class="btn_mileage" style="display:none">
+                        <span class="save_txt"><code>+1,00 M</code> 적립</span>
+                    </button>
+                    <!-- //성공시 -->
+                </div>
+                <p class="sub_info_txt">데일리 마일리지는 <span>24시간</span>이 지나면 적립할 수 없어요!</p>
+                <div class="round_wrap">
+                    <div class="tit_wrap">
+                        <span class="page_sub_tit02">데일리 마일리지 연속 적립 도전</span>
+                    </div>
+                    <!-- 데일리 마일리지 전 -->
+                    <button type="button" class="btn_mileage" disabled  style="display:none">
+                        <span class="day">오늘부터 <strong>시작!</strong></span>
+                    </button>
+                    <!-- //데일리 마일리지 전 -->
+                    <!-- 연속 17회 적립 -->
+                    <button type="button" class="btn_mileage" disabled>
+                        <span class="day"><code>17</code>일 째!</span>
+                    </button>
+                    <!-- //연속 17회 적립 -->
+                    <!-- 연속 20회 적립 -->
+                    <button type="button" class="btn_mileage"  style="display:none">
+                        <span class="col_wrap">
+                            <span class="day"><code>20</code>일 째!</span>
+                            <span class="save_txt"><code>+1,00 M</code> 적립</span>
+                        </span>
+                    </button>
+                    <!-- //연속 20회 적립 -->
+                </div>
+                <div class="mileage_graph">
+                    <ul>
+                        <li class="item01"><span class="tit">10회</span><span class="bu"><code>+500</code></span></li>
+                        <li class="item02"><span class="tit">20회</span><span class="bu"><code>+1,000</code></span></li>
+                        <li class="item03"><span class="tit">30회</span><span class="bu"><code>+2,000</code></span></li>
+                        <li class="item04"><span class="tit">60회</span><span class="bu"><code>+5,000</code></span></li>
+                    </ul>
+                </div>
+                <p class="sub_info_txt">데일리 마일리지를 <span>적립하지 않으면 달성 횟수가 초기화</span> 되며,<br>한 번만 지급됩니다.</p>
+
+                <!-- 비매너 신고 마일리지 -->
+                <div class="page_tit_wrap type03">
+                    <p class="page_sub_tit">비매너 신고 마일리지<button type="button" class="btn_r_link btn_tip">정보 보기</button></p>
+                    <div class="tip_wrap">
+                        <p class="txt">비매너 신고 마일리지는 교통법규 위반 및 위험한 행위로 안전을 위협하는 등 <span>다른 운전자에게 불편을 끼치는 운전자를 휘슬에 신고</span>하고 적립 받는 마일리지입니다.</p>
+                    </div>
+                </div>
+                <div class="round_wrap">
+                    <ul class="txt_list">
+                        <li>
+                            <span class="tit">이번 달 적립 가능</span>
+                            <span class="sub_txt point"><code>7</code>회</span>
+                        </li>
+                        <li>
+                            <span class="tit">잔여 횟수</span>
+                            <span class="sub_txt">(매 월 1일 갱신)</span>
+                        </li>
+                    </ul>
+                </div>
+                <p class="sub_info_txt">신고등록이 어려우신가요?<button type="button" class="link" onclick="popupOpen('alert','mwf');">가이드 보기</button></p>
+
+                <!-- 기대해주세요 -->
+                <div class="page_tit_wrap">
+                    <p class="page_sub_tit">기대해 주세요!</p>
+                    <p class="sub_txt" feel-emoticon="알고">굿 드라이빙 캠페인은 대한민국의 교통안전을 위해 더 많은 서비스를 준비하고 있습니다.<br>이제 <span>휘슬과 안전운행</span> 하세요!</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- //content -->
+</div>
+<!-- 가이드보기 popup -->
+<div id="mw-alert" class="ly_pop full">
+    <div class="wrap bgt">
+        <div class="content driving_guide y_scroll">
+            <header class="header">
+                <button type="button" onclick="popupClose('alert','mwf')" class="btn_close" title="닫기"><i></i></button>
+            </header>
+            <section class="section">
+                <h1 class="page_tit">촬영 가이드</h1>
+                <div class="tit_info_txt">
+                    <p class="txt">아래와 같이 <span>차량과 번호판</span>,<br>그리고 <span>전체적인 상황</span>이 모두 포함되도록 촬영해 주세요</p>
+                    <div class="img_wrap">
+                        <img src="../resources/image/img_car02.png" alt=""/>
+                    </div>
+                    <p class="img_info_txt">개인정보 보호 및 부정 신고 방지를 위해<br>신고 내용은 심사 후 등록되며,<br>적합하지 않은 신고는 등록이 거절될 수 있습니다.</p>
+                </div>
+            </section>
+        </div>
+        <!-- //content -->
+    </div>
+</div>
+<!-- //가이드보기 -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script> -->
+<script src="../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../resources/js/gsap.min.js"></script>
+<script src="../../../global/resources/js/global.js"></script>
+<script src="../resources/js/design.js" defer></script>
+<script>
+$(function() {
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko" class="app">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../resources/css/content.css" media="screen" rel="stylesheet">
+<link href="../resources/css/site_app.css" media="screen" rel="stylesheet">
+<title>내정보지키미</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header" class="header_cont">
+        <button type="button" onclick="" class="btn_close"><i class="bg_icon">닫기</i></button>
+        <h1 class="inner title_type6">사용자등록</h1>
+    </header>
+    <!-- //header -->
+    <div id="ct">
+        <section class="inner frmview_normal">
+            <fieldset>
+                <legend>본인인증 정보입력</legend>
+                <ul class="list_frm">
+                    <li>
+                        <div class="ipbx ip_line ip_hp ip_del">
+                            <select id="hpSelect" class="pos_a">
+                                <option value="KT">KT</option>
+                                <option value="SKT">SKT</option>
+                                <option value="LGU">LGU</option>
+                            </select>
+                            <input type="tel" id="hp" value="" class="ip" maxlength="11" class="wfos" placeholder="‘-’제외하고 입력">
+                            <label for="hp">휴대폰번호</label>
+                            <button type="button" class="btn_s_o btn_type btn_re pos_a" onclick="$('#nextdep').show()">인증요청</button>
+                            <button type="button" class="del"><i class="bg_icon">삭제</i></button>
+                        </div>
+                    </li>
+                    <!-- <li>
+                        <div class="ipbx ip_line">
+                            <input type="text" id="name" value="홍길동" class="ip"  maxlength="">
+                            <label for="name">이름</label>
+                        </div>
+                        <p class="error">이름을 입력해주세요.</p>
+                    </li>
+                    <li>
+                        <div class="ipbx ip_line">
+                            <input type="text" id="birth" value="" class="ip"  maxlength="" placeholder="생년월일">
+                            <label for="birth">생년월일</label>
+                        </div>
+                    </li> -->
+                </ul>
+                <ul class="list_frm hid" id="nextdep">
+                    <li>
+                        <div class="ipbx ip_line ip_num">
+                            <input type="tel" id="cnum" value="" class="ip" maxlength="6" class="wfos">
+                            <label for="cnum">인증번호</label>
+                            <span class="time_set pos_a"><code class="timer">03:00</code><button type="button" class="btn_re" onclick="alert('전송')">재전송</button></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ipbx ip_line ip_chapcha">
+                            <span class="chapcha">
+                                <img src="../resources/image/sample/captcha.png" alt="">
+                                <button type="button" class="spkr" onclick="alert('소리듣기')"><i class="bg_icon"></i></button>
+                                <button type="button" class="ref" onclick="alert('새로고침')"><i class="bg_icon"></i></button>
+                            </span>
+                            <input type="tel" id="cnum" value="" class="ip" maxlength="6" class="wfos" placeholder="숫자 6자리입력">
+                            <label for="cnum">보안숫자</label>
+                            <span class="time_set pos_a"><button type="button" class="btn_re" onclick="alert('전송')">확인</button></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="email_wrap">
+                            <div class="ipbx ip_line ip_email ip_del">
+                                <input type="email" id="email" class="ip" name="email" autocomplete="off">
+                                <label for="email">이메일</label>
+                            </div>
+                            <div class="domain_inner_wrap"></div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="list_chkagre case_circle">
+                    <li>
+                        <span class="checkbox button">
+                            <input type="checkbox" name="agree" id="agree1" value=""><label for="agree1"></label>
+                            <button type="button" onclick="">개인정보수집 및 이용</button>
+                        </span>
+                    </li>
+                </ul>
+            </fieldset>
+        </section>
+        <div class="btn_area_sigle fix btm">
+            <button type="button" class="btn_xr btn_type2" disabled>다음</button>
+            <!-- 정보입력 후
+            <button type="button" class="btn_xr btn_type2">다음</button>
+            -->
+        </div>
+    </div>
+    <!-- //content -->
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../resources/js/jquery-3.3.1.min.js"></script>
+<script src="../resources/js/jquery-ui.js"></script>
+<script src="../resources/js/design.js"></script>
+<script>
+$(function() {
+    fixValueOver();
+    
+    // email autocomplete
+    var domain = [
+        "daum.net",
+        "gmail.com",
+        "hanmail.net",
+        "hotmail.com",
+        "nate.com",
+        "naver.com"
+    ];
+    $("#email").autocomplete({
+        source: function( request, response ) {
+            var reqItem = request.term.includes("@") ?
+            request.term.substr(request.term.lastIndexOf("@")+1) :
+            request.term;
+
+            var matcher = new RegExp ($ .ui.autocomplete.escapeRegex (reqItem), "i");
+
+            response(domain.map( element => {
+
+            return request.term.includes("@") ?
+            matcher.test(element) && request.term.substr(0, request.term.lastIndexOf("@")+1) + element :
+            request.term.endsWith("@") ? 
+            request.term + element :
+            request.term + "@" + element;
+
+            }));
+        },
+        appendTo: ".domain_inner_wrap",
+        classes: {
+            "ui-autocomplete": "domain_list"
+        }
+    });
+
+});
+</script>
+
+</body>
+</html>

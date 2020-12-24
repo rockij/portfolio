@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title>SGI서울보증</title>
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/common-ui.css">
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/style-cust.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../../inc/css/style-mark.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/jquery.mobile-1.4.5.css">
+    <script type="text/javascript" src="../../../inc/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../../inc/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
+</head>
+<body>
+    <!-- 페이지 유형 제작시 wrapper에 고유 클레스 추가 -->
+    <div class="wrapper ps-sub-page elfip1012">
+        <header class="header">
+            <button type="button" class="prev-page" title="이전페이지 이동"></button>
+            <h1 class="header-tit">개인정보동의</h1>
+            <button type="button" class="sidenav-btn" title="전체메뉴"></button>
+        </header>
+        <!-- 페이지 하단에 플로팅 버튼이 있을시 class = btm-fixed 추가 -->
+        <section class="container">
+            <!-- 사이드 여백설정 공통 class = inner -->
+            <!-- 페이지 하단에 플로팅 버튼이 있을시 class = acco-fixed 추가 -->
+            <div class="content acco-fixed">
+                <div class="title-wrap inner">
+                    <h2 class="ps-tit02">정보동의</h2>
+                    <!-- 현진행단계 표시 aria-label = "진행단계, 총 X단계 중 X단계" 진행단계 별로 수정 -->
+                    <div class="ps-step" role="img" aria-label="진행단계, 총 3단계 중 1단계">
+                        <em class="pres-step">1</em><span class="symb"> / </span><em>3</em>
+                    </div>
+                </div>
+                <div class="cont-wrap">
+                    <div class="cont-01">
+                        <div class="rollup-fix-wrap">
+                            <div class="rollup-fix-data">
+                                <ul class="tab-01">
+                                    <li><button type="button">자주쓰는동의</button></li>
+                                    <li><button type="button">고객별맞춤</button></li>
+                                    <li><button type="button" class="on" title="선택됨">기타업무별</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-conts-01">
+                            <!-- 자주쓰는동의 -->
+                            <div class="tab-cont"></div>
+                            <!-- //자주쓰는동의 -->
+                            <!-- 고객별맞춤 -->
+                            <div class="tab-cont"></div>
+                            <!-- //고객별맞춤 -->
+                            <!-- 기타업무별 -->
+                            <div class="tab-cont on">
+                                <ul class="type-number inner">
+                                    <li class="number-btn-wrap">
+                                        <button type="button" class="number-btn" title="페이지 이동">
+                                            <em class="num">1</em>
+                                            <span class="tit">가입설계 필수동의</span>
+                                        </button>
+                                    </li>
+                                    <li class="number-btn-wrap">
+                                        <button type="button" class="number-btn" title="페이지 이동">
+                                            <em class="num">2</em>
+                                            <span class="tit">개인정보 수집·이용 필수 동의</span>
+                                            <span class="info">대표자 및 대리인용</span>
+                                        </button>
+                                    </li>
+                                    <li class="number-btn-wrap">
+                                        <button type="button" class="number-btn" title="페이지 이동">
+                                            <em class="num">3</em>
+                                            <span class="tit">개인정보 수집·이용 필수 동의</span>
+                                            <span class="info">지급청구용</span>
+                                        </button>
+                                    </li>
+                                    <li class="number-btn-wrap">
+                                        <button type="button" class="number-btn" title="페이지 이동">
+                                            <em class="num">4</em>
+                                            <span class="tit">행정정보 공동이용 사전 동의</span>
+                                        </button>
+                                    </li>
+                                    <li class="number-btn-wrap">
+                                        <button type="button" class="number-btn" title="페이지 이동">
+                                            <em class="num">5</em>
+                                            <span class="tit">담보업무용 필수동의</span>
+                                        </button>
+                                    </li>
+                                    <li class="number-btn-wrap">
+                                        <button type="button" class="number-btn" title="페이지 이동">
+                                            <em class="num">6</em>
+                                            <span class="tit">분리보관 정보의 재이용동의</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 기타업무별 -->
+                        </div>
+                    </div>
+                    <!-- cont-01 -->
+                </div>
+                <!-- cont-wrap -->
+            </div>
+            <!-- content -->
+            <div class="ps-accordion-wrap type-message-01">
+                <div class="accordion-item">
+                    <button class="accordion-tit on" type="button" title="펼쳐짐">개인정보동의 안내</button>
+                    <div class="accordion-docu">
+                        <ul class="ps-bu-list gray circle">
+                            <li>개인명의의 공인인증서를 사용하여 인증절차를 진행합니다. (사업자명의 공인인증서 사용 불가)</li>
+                            <li>휴대폰에 공인인증서가 없는 경우 인증서 가져오기 후 이용하시기 바랍니다.<br><a href="#" class="btn-txt">인증센터 바로가기</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer"></footer>
+    </div>
+</body>
+</html>

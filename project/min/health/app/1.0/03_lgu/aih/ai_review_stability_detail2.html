@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="../../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/ai_care.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/site_lgu.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/device.css" media="screen" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../../resources/js/jquery-1.11.1.min.js"></script>
+<script src="../../resources/js/design.js"></script>
+<title>LGU건강지키미</title>
+</head>
+<body class="lgu">
+
+<div id="wrap">
+
+	<header id="head" class="fix">
+		<button type="button" onclick="" class="btn_prev"><i class="ico_com">뒤로가기</i></button>
+        <h1><a href="/">건강지키미</a></h1>
+        <span class="btn_switch" onclick="switchHov();"><button type="button"><i class="dot"></i><i class="dot"></i><i class="dot"></i></button></span>
+        <div class="gnb_menu">
+			<ul>
+				<li><a href="#n">알림설정</a></li>
+				<li><a href="#n">이용약관 및 정책</a></li>
+				<li><a href="#n">부가서비스 설정/해지</a></li>
+				<li><a href="#n">문의하기</a></li>
+				<li><a href="#n">나가기</a></li>
+			</ul>
+		</div>
+	</header>
+	<!-- //header -->
+	<div id="ct">
+        <div class="ai_detail_wrap">
+            <section class="ai_profile">
+                <hgroup class="ai_title2 full">
+                    <ul class="path">
+                        <li class="cat">국내</li>
+                        <li>카테고리</li>
+                        <li>밀크씨슬</li>
+                    </ul>
+                    <h2>now melatonin</h2>
+                </hgroup>
+                <div class="goodsImg">
+                    <img src="../../resources/images/sample/temp_goods_200x170.jpg" alt="">
+                </div>
+                <div class="cartbox">
+                    <button type="button" onclick=""><i></i>비교함담기</button>
+                </div>
+                <ul class="table">
+                    <li>
+                        <span class="th">제조사</span>
+                        <span class="td">Now foods</span>
+                    </li>
+                    <li>
+                        <span class="th">원산지</span>
+                        <span class="td">미국</span>
+                    </li>
+                </ul>
+            </section>
+            <!-- //top -->
+            <section class="ai_compare" style="display:none">
+                <!-- <hgroup class="ai_title3">
+                    <h3>비교함</h3>
+                    <span class="col"><button type="button" onclick="" class="btn_basket" data-val="0">0개의 제품이 있습니다.<i class="arr"></i></button></span>
+                </hgroup> -->
+                <hgroup class="ai_title3">
+                    <h3>비교함</h3>
+                    <span class="col"><button type="button" onclick="" class="btn_basket" data-val="2">2개의 제품이 있습니다.<i class="arr"></i></button></span>
+                </hgroup>
+                <div id="goodsbsket_swir" class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="checkbox">
+                                <input type="checkbox" id="goods1">
+                                <label for="goods1"><img src="../../resources/images/sample/temp_thum_166x166.png" alt=""></label>
+                                <p class="sbj"><span class="elip1">건강한 간 밀크</span><button type="button" onclick="" class="del"></button></p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="checkbox">
+                                <input type="checkbox" id="goods2">
+                                <label for="goods2"><img src="../../resources/images/sample/temp_thum_166x166.png" alt=""></label>
+                                <p class="sbj"><span class="elip1">닥터 슈퍼칸</span><button type="button" onclick="" class="del"></button></p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="checkbox">
+                                <input type="checkbox" id="goods5">
+                                <label for="goods5"><img src="../../resources/images/sample/temp_thum_166x166.png" alt=""></label>
+                                <p class="sbj"><span class="elip1">닥터 슈퍼칸</span><button type="button" onclick="" class="del"></button></p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="checkbox">
+                                <input type="checkbox" id="goods3">
+                                <label for="goods3"><img src="../../resources/images/sample/temp_thum_166x166.png" alt=""></label>
+                                <p class="sbj"><span class="elip1">닥터 슈퍼칸</span><button type="button" onclick="" class="del"></button></p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="checkbox">
+                                <input type="checkbox" id="goods4">
+                                <label for="goods4"><img src="../../resources/images/sample/temp_thum_166x166.png" alt=""></label>
+                                <p class="sbj"><span class="elip1">글자가길어요길어요길어요</span><button type="button" onclick="" class="del"></button></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" onclick="" class="btn_btm_more">선택한 제품 비교하기</button>
+                </div>
+            </section>
+            <!-- //비교함 -->
+            <section class="ai_databox">
+                <hgroup class="ai_title3">
+                    <h3>인증현황</h3>
+                </hgroup>
+                <ul class="ai_list_type full">
+                    <li><span class="th">GMP certified</span></li>
+                    <li><span class="th">NSF certified</span></li>
+                </ul>
+            </section>
+            <!-- //원료및성분 -->
+            <section class="ai_databox">
+                <hgroup class="ai_title3">
+                    <h3>미승인 원료</h3>
+                    <span class="col data"><span class="pot">없음</span></span>
+                </hgroup>
+                <ul class="ai_list_type full">
+                    <li><span class="th">미승인 원료가 없습니다.</span></li>
+                </ul>
+            </section>
+            <!-- //미승인원료 -->
+            <section class="ai_databox">
+                <hgroup class="ai_title3">
+                    <h3>식품 부적합 해당사항</h3>
+                    <span class="col data"><span class="pot"><b class="fc_red">1</b>건</span></span>
+                </hgroup>
+                <ul class="ai_list_type normal">
+                    <li><span class="th">품목명</span><span class="td">가르시니아캄보지아추출물</span></li>
+                    <li><span class="th nbar">위반내역</span><span class="td">총 (-)-Hydroxycitricacid 함량미달</span></li>
+                </ul>
+            </section>
+            <!-- //식품부적합해당사항 -->
+            <section class="ai_databox">
+                <hgroup class="ai_title3">
+                    <h3>위해식품 정보</h3>
+                    <span class="col data"><span class="pot"><b class="fc_red">2</b>건</span></span>
+                </hgroup>
+                <ul class="ai_list_type normal">
+                    <li><span class="th2">위해 식품 검출물질</span><span class="td">환각제, 이소부틸 아질산염<br>(알킬 아질산염) 함유 표시</span></li>
+                    <li><span class="th2">위해 식품 차단 검출 성분</span><span class="td">알레르기 유발 성분<br>'아황산염(Sulfites)' 미표기</span></li>
+                </ul>
+            </section>
+            <!-- //식품부적합해당사항 -->
+            <section class="ai_locallink">
+                <ul>
+                    <li><a href="#;" data-name="분석"><figure class="grim_com"></figure>AI 분석</a></li>
+                    <li><a href="#;" data-name="비교"><figure class="grim_com"></figure>AI 비교</a></li>
+                    <li><a href="#;" data-name="안전성"><figure class="grim_com"></figure>안전성 확인</a></li>
+                    <li><a href="#;" data-name="궁합"><figure class="grim_com"></figure>궁합 시간표</a></li>
+                    <li><a href="#;" data-name="매거진"><figure class="grim_com"></figure>건강매거진</a></li>
+                </ul>
+            </section> 
+        </div>
+	</div>
+	<!-- //content -->
+	<footer class="footer_cm">
+        <button type="button" class="topGo"><i class="ico_com">맨위로</i></button>
+		<article>
+            <p class="cau"><i class="bgf i"></i>허위 버전 OS 사용자에 대한 서비스 제공이 종료됩니다.<button type="button" onclick="">자세히 보기</button></p>
+            <div class="infobx">
+                <button type="button" onclick="layer_open('cpInfo')" class="btn_info">(주) 민앤지 사업자 정보</button>
+                <p class="cau2">본 서비스는 청약철회가 불가능한 상품입니다.</p>
+                <ul class="list">
+                    <li class="t"><span>서비스 이용문의</span> (주)민앤지 1599-4760</li>
+                    <li>가입해지문의 U+(114)</li>
+                    <li>보험 및 건강정보는 내보험찾아줌, 건강보험관리공단, 보험사에서 조회 된 정보입니다.</li>
+                    <li>본 서비스는 모바일에서 보험, 건강정보를 간편하고 안전하게 확인 할 수 있는 서비스 입니다.</li>
+                    <li>진료 및 투약정보는 조회 일 기준으로 14개월 전 진료분부터 1년간의 내역을 확인 하실 수 있습니다.</li>
+                </ul>
+            </div>
+        </article>
+	</footer>
+	<!-- //footer -->
+
+</div>
+
+<!-- 사용자정보 -->
+<div class="ly_pop full ly_cpinfo">
+    <div class="bg"></div>
+    <div class="cont">
+        <div id="cpInfo" class="elm iscroll">
+            <button type="button" onclick="layer_close()" class="close"><i class="bgf">창닫기</i></button>
+            <h2>사업자 정보</h2>
+            <ul class="list">
+                <li>
+                    <strong>상호</strong>
+                    <span>㈜민앤지</span>
+                </li>
+                <li>
+                    <strong>대표이사</strong>
+                    <span>이현철</span>
+                </li>
+                <li>
+                    <strong>주소</strong>
+                    <span>서울시 강남구 테헤란로 34길 6<br>태광타워 12F, 13F</span>
+                </li>
+                <li>
+                    <strong>통신판매업신고번호</strong>
+                    <span>제2015-서울강남-00012호</span>
+                </li>
+                <li>
+                    <strong>사업자등록번호</strong>
+                    <span>214-88-39117</span>
+                </li>
+                <li>
+                    <strong>고객센터</strong>
+                    <span>1599-4760 (평일 09:00-18:00)</span>
+                </li>
+                <li>
+                    <strong>호스팅서비스사업자</strong>
+                    <span>㈜민앤지</span>
+                </li>
+                <li>
+                    <strong>이메일</strong>
+                    <span>minwise.help@minwise.co.kr</span>
+                </li>
+            </ul>
+            <ul class="list_terms">
+                <li><button type="button" onclick="">사업자 정보 확인</button></li>
+                <li><button type="button" onclick="">건강지키미 무료서비스이용약관</button></li>
+                <li><button type="button" onclick="">건강지키미 유료서비스이용약관</button></li>
+                <li><button type="button" onclick="">건강지키미 개인정보 수집 및 이용약관</button></li>
+                <li><button type="button" onclick="">건강지키미 개인정보 제3자 제공 동의약관</button></li>
+                <li><button type="button" onclick="">건강지키미 알림 및 광고수신동의 약관</button></li>
+                <li><a href="https://www.minwise.co.kr/sterm/mprivacy" target="_blank">개인정보처리방침</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- //사용자정보 -->
+
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../resources/js/design_ai.js"></script>
+<!-- //js -->
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title>SGI서울보증</title>
+    <link rel="stylesheet" type="text/css" href="../../inc/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../inc/css/common-ui.css">
+    <link rel="stylesheet" type="text/css" href="../../inc/css/style-cust.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../inc/css/style-mark.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../inc/css/jquery.mobile-1.4.5.css">
+    <script type="text/javascript" src="../../inc/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="../../inc/js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../inc/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
+</head>
+
+<body>
+    <!-- 페이지 유형 제작시 wrapper에 고유 클레스 추가 -->
+    <div class="wrapper ps-sub-page certp1034">
+        <header class="header">
+            <button type="button" class="prev-page" title="이전페이지 이동"></button>
+            <h1 class="header-tit">인증서 등록 해지</h1>
+            <button type="button" class="sidenav-btn" title="전체메뉴"></button>
+        </header>
+        <!-- 페이지 하단에 플로팅 버튼이 있을시 class = btm-fixed 추가 -->
+        <section class="container btm-fixed">
+            <!-- 사이드 여백설정 공통 class = inner -->
+            <!-- 페이지 하단에 플로팅 버튼이 있을시 class = acco-fixed 추가 -->
+            <div class="content">
+                <div class="deta-tit02">정보동의</div>
+                <div class="cont-wrap">
+                    <div class="inner">
+                        <div class="ps-chk-wrap big">
+                            <div class="ps-chk">
+                                <input type="checkbox" id="tit-chk-01" name="tit-chk" checked="">
+                                <label for="tit-chk-01">전체동의</label>
+                            </div>
+                        </div>
+                        <div class="agree-box-wrap">
+                            <dl class="agree-box">
+                                <dt class="agree-tit">공인인증서 해지를 위한 필수동의서 <span>(필수)</span></dt>
+                                <dd class="agree-item">
+                                    <div class="ps-chk">
+                                        <input type="checkbox" id="chk-agree-01" checked>
+                                        <label for="chk-agree-01">개인(신용)정보 수집·이용에 관한 필수사항</label>
+                                    </div>
+                                    <!-- 전문 보기 완료 후 class="on" 추가, 버튼 문구 [확인]으로 변경, title="확인 완료" 추가 -->
+                                    <button type="button" title="확인 완료" class="inline-btn on">확인</button>
+                                </dd>
+                                <dd class="agree-item">
+                                    <div class="ps-chk">
+                                        <input type="checkbox" id="chk-agree-02">
+                                        <label for="chk-agree-02">고유식별정보의 처리에 관한 사항</label>
+                                    </div>
+                                    <!-- 전문 보기 완료 후 class="on" 추가, 버튼 문구 [확인]으로 변경, title="확인 완료" 추가 -->
+                                    <button type="button" class="inline-btn">보기</button>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="ps-accordion-wrap type-message-02">
+                        <div class="accordion-item">
+                            <button class="accordion-tit" type="button" title="접힘">소비자 권익보호에 관한 사항</button>
+                            <div class="accordion-docu">
+                                <ul class="ps-bu-list gray circle">
+                                    <li>서울보증보험 홈페이지에서는 개인정보보호법개정 (2014.8.7 시행)으로 먼저 공인인증서를 등록한 후 등록된 인증서를 사용하여 로그인하실 수 있으며, 이에 따라 공인인증서를 사용하여 로그인하시는 고객님을 위한 컨텐츠 제공 등을 위해 필요한 최소한의 개인정보를 수집하고 있습니다. </li>
+                                    <li>본 동의를 거부하실 수 있으나, 거부하시는 경우에는 서울보증보험의 홈페이지를 통한 금융거래 회원가입 및 금융거래 관련 서비스를 이용할 수 없음을 알려드립니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ps-from-item">
+                        <p class="write-title">주민등록번호</p>
+                        <div class="security-wrap">
+                            <!-- 입력후에 button에 on class 추가 button 태그 html 텍스트 겟수만큼 ● 추가 title -> aria-label로 변경 -->
+                            <button type="button" class="security-btn" title="보안키패드 열림">숫자 13자리 입력</button>
+                            <!-- <button type="button" class="security-btn on" data-page="pop-page-01" aria-label="보안키패드 열림">●●●●●●●●●●●●●</button> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- cont-wrap -->
+            </div>
+            <!-- content -->
+            <div class="fix-btn-wrap">
+                <button type="button" class="btn blue">다음</button>
+            </div>
+        </section>
+        <footer class="footer"></footer>
+    </div>
+</body>
+</html>

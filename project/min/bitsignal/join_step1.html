@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="ko" class="homep">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="독자적으로 구축한 알고리즘과 인공지능 머신러닝으로 비트코인 예상가를 빠르고 정확하게!">
+<meta name="keywords" content="비트코인가격예측, 비트시그널">
+<link href="../_root/base.css" media="screen" rel="stylesheet">
+<link href="resources/css/common.css" media="screen" rel="stylesheet">
+<link href="resources/css/ui.css" media="screen" rel="stylesheet">
+<link href="resources/css/site.css" media="screen" rel="stylesheet">
+<link href="resources/css/main.css" media="screen" rel="stylesheet">
+<script src="resources/js/jquery-1.12.4.min.js"></script>
+<script src="resources/js/jquery-ui-1.12.1.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="resources/js/design.js" defer="defer"></script>
+<script src="resources/js/main.js" defer="defer"></script>
+<!--[if lt IE 9]>
+<script src="resources/js/html5shiv.js"></script>
+<![endif]-->
+<title>비트시그널</title>
+</head>
+<body>
+
+<!--[if lte ie 8]>
+<div class="ie_down_ver">이 브라우저는 지원하지 않습니다.<br>브라우저 업데이트 하시기 바랍니다.<br><a href="//support.microsoft.com/ko-kr/help/17621/internet-explorer-downloads" target="_blank">업데이트 바로가기</a></div>
+<![endif]-->
+
+<div id="wrap">
+
+	<header id="header">
+		<section class="ui_align_center">
+			<h1><a href="main.html">비트시그널</a></h1>
+			<!-- coin_up / coin_down -->
+			<ul class="coin_val head_fix coin_down">
+				<li class="name">비트코인 BTC/KRW</li>
+				<li class="won">
+					<span class="won_in">
+						6,879,500<em>원</em>
+					</span>
+					<em class="won_in2">
+						8.35%
+					</em>
+				</li>
+				<li class="date"><button class="btn_refresh"><i class="ico_com"></i></button>2018.09.14 14:25:36</li>
+			</ul>
+			<a href="use_timeset.html" class="btn_direct"><i class="ico_com">서비스 이용</i></a>
+			<a href="login.html" class="btn_log"><i class="ico_com"></i><span>로그인</span></a>
+			<!-- <a href="login.html" class="btn_log out"><i class="ico_com"></i><span>로그아웃</span></a> -->
+			<button type="button" class="btn_menu"><input type="checkbox" id="menu"><label for="menu" class="menu"><span></span><span></span><span></span></label></button>
+			<aside id="gnb">
+				<div class="cont">
+					<div class="list">
+						<div class="iscroll">
+							<ul>
+
+								<li>
+									<a href="join_step1.html" class="active">서비스 이용</a>
+									<ul>
+										<li><a href="join_step1.html" class="active">이용권 구매</a></li>
+										<li><a href="use_timeset.html">서비스 이용</a></li>
+										<li><a href="main.html">서비스 안내</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="user_notice.html">마이페이지</a>
+									<ul>
+										<li><a href="user_notice.html">이용 내역</a></li>
+										<li><a href="user_paynee.html">결제 내역</a></li>
+										<li><a href="user_infochg.html">개인정보 수정</a></li>
+										<li><a href="withdraw.html">서비스 탈퇴</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="cs_notice.html">고객센터</a>
+									<ul>
+										<li><a href="cs_notice.html">공지사항</a></li>
+										<li><a href="cs_faq.html">FAQ</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</aside>
+			<!-- //gnb -->
+		</section>
+		<div class="bgb"><div class="bg"></div></div>
+	</header>
+	<!-- //header -->
+	<div id="ct" class="ticket">
+		<h2 class="topimg"><span>이용권 구매 및 해지</span></h2>
+		<div class="pathWrap">
+			<div class="path">
+				<ul class="ui_align_center">
+					<li class="home"><a href="#;"><i class="ico_com">처음으로</i></a></li>
+					<li>
+						<div class="select_ui">
+							<ul>
+								<li><span class="d1">이용권 구매/해지</span></li>
+								<li><a href="#;" class="active">이용권 구매</a></li>
+								<li><a href="#;">이용권 해지</a></li>
+							</ul>
+							<button type="button" class="btn_ctl">이용권 구매/해지</button>
+						</div>
+					</li>
+					<li>
+						<div class="select_ui">
+							<ul>
+								<li><span class="d1">서비스 이용</span></li>
+								<li><a href="#;">이용 내역</a></li>
+								<li><a href="#;">결제 내역</a></li>
+								<li><a href="#;">개인정보 수정</a></li>
+								<li><a href="#;">아이디 찾기</a></li>
+								<li><a href="#;">비밀번호 찾기</a></li>
+							</ul>
+							<button type="button" class="btn_ctl">서비스 이용</button>
+						</div>
+					</li>
+					<li class="now">알림이용권 선택</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //path -->
+		<div class="ui_align_center ui_align_center_n">
+			<div class="m_couponbx">
+				<button type="button" onclick="location.href='join_step2.html'" class="couponbx_btn"></button>
+			</div>
+			<section class="alarm_ticket alarm_ticket_mt">
+				<h3 class="title_type">코인 예상 가격<span>알림이용권 선택</span></h3>
+				<div class="couponbx">
+					<button type="button" class="couponbx_btn">
+						<span>비트시그널 무료 가입<i></i></span>
+					</button>
+				</div>
+				<!-- //coupon -->
+				<!-- 이용권 박스 1 -->
+				<div class="ty1_box">
+					<div class="ty1_boxtit">
+						<figure></figure>
+						<p>
+							<span>한 번만 결제하면</span><br/>
+							언제 어디서나 간편하게 !
+						</p>
+					</div>
+					<ul class="ty_list_type">
+						<li class="ty1">
+							<a href="join_step2.html">
+								<!--	<figure></figure> -->
+								<h4>비트시그널</h4>
+								<p><span>코인 5</span> 자유이용권</p>
+								<ul class="ty1_btntype">
+									<li>하루 5회</li>
+									<li>코인 5개</li>
+									<li>월정액</li>
+								</ul>
+								<ul class="ty1_btntype2">
+									<li class="graph">&nbsp;</li>
+									<li class="won_dc">
+											<i></i>
+											<span>50,000</span>원
+									</li>
+									<li class="">
+										<span class="tico i1">
+											<i class="ico_com ico_down"></i>80%
+										</span>
+									</li>
+									<li class="won">매월 <strong>10,000</strong>원</li>
+									<li class="btn"><span>바로 이용</span></li>
+								</ul>
+							</a>
+						</li>
+						<li class="ty1">
+							<a href="join_step2.html">
+								<h4>비트시그널</h4>
+								<p><span>무제한</span> 자유이용권</p>
+								<ul class="ty1_btntype">
+									<li>무제한</li>
+									<li>전체코인</li>
+									<li>월정액</li>
+								</ul>
+								<ul class="ty1_btntype2">
+									<li class="graph">&nbsp;</li>
+									<li class="won_dc">
+											<i class="i_left"></i>
+											<span>200,000</span>원
+									</li>
+									<li class="">
+										<span class="tico i1">
+											<i class="ico_com ico_down"></i>75%
+										</span>
+									</li>
+									<li class="won">매월 <strong>50,000</strong>원</li>
+									<li class="btn"><span>바로 이용</span></li>
+								</ul>
+							</a>
+						</li>
+						<li class="ty_line"></li>
+						<div class="ty1_boxtit ty4_boxtit">
+							<figure></figure>
+							<p>
+								<span>한 달간</span><br/>
+								자유롭게 무제한으로!
+							</p>
+						</div>
+						<li class="ty1 ty4 ty_list_r">
+							<a href="join_step2.html">
+								<h4>비트시그널</h4>
+								<p><span>1개월 무제한</span> 이용권</p>
+								<ul class="ty1_btntype">
+									<li>무제한</li>
+									<li>전체코인</li>
+								</ul>
+								<ul class="ty1_btntype2">
+									<li class="graph">&nbsp;</li>
+									<li class="won_dc">
+											<i class="i_left3"></i>
+											<span>200,000</span>원
+									</li>
+									<li class="">
+										<span class="tico i1">
+											<i class="ico_com ico_down"></i>50%
+										</span>
+									</li>
+									<li class="won"><strong>100,000</strong>원</li>
+									<li class="btn"><span>바로 이용</span></li>
+								</ul>
+							</a>
+						</li>
+						<!--
+						<li class="ty3">
+							<a href="join_step2.html">
+								<figure></figure>
+								<h4>5회 이용권</h4>
+								<p>&nbsp;</p>
+								<ul>
+									<li class="won"><strong>10,000</strong>원</li>
+									<li class="graph">
+										<span class="tico i1">
+											<i class="ico_com ico_down"></i>33%
+										</span>
+									</li>
+									<li class="btn"><span>지금 바로 수익내기</span></li>
+								</ul>
+							</a>
+						</li>
+						<li class="ty4">
+							<a href="join_step2.html">
+								<figure></figure>
+								<h4>월정액 이용권</h4>
+								<p>1일 1회 제한</p>
+								<ul>
+									<li class="won"><strong>50,000</strong>원</li>
+									<li class="graph"><span class="tico i2"><i class="ico_com ico_star"></i>인기<i class="ico_com bar"></i><i class="ico_com ico_down2"></i>45%</span></li>
+									<li class="btn"><span>지금 바로 수익내기</span></li>
+								</ul>
+							</a>
+						</li>
+						<li class="ty5">
+							<a href="join_step2.html">
+								<figure></figure>
+								<h4>무제한 이용권</h4>
+								<p>1개월 무제한</p>
+								<ul>
+									<li class="won"><strong>100,000</strong>원</li>
+									<li class="graph">&nbsp;</li>
+									<li class="btn"><span>지금 바로 수익내기</span></li>
+								</ul>
+							</a>
+						</li>
+					-->
+					</ul>
+				</div>
+
+				<div class="ty1_box ty_box_type">
+					<div class="ty1_boxtit ty2_boxtit">
+						<figure></figure>
+						<p>
+							<span>정말 필요 할때</span><br/>
+							언제 어디서나 간편하게 !
+						</p>
+					</div>
+					<ul class="ty_list_type2">
+						<li class="ty1 ty2">
+							<a href="join_step2.html">
+								<!--	<figure></figure> -->
+								<h4>비트시그널</h4>
+								<p><span>코인 1회</span> 이용권</p>
+								<ul class="ty1_btntype">
+									<li>1회</li>
+									<li>코인 1개</li>
+								</ul>
+								<ul class="ty1_btntype2">
+									<li class="graph">&nbsp;</li>
+									<li class="won_dc">
+											<i class="i_left2"></i>
+											<span>3,000</span>원
+									</li>
+									<li class="">
+										<span class="tico i1">
+											<i class="ico_com ico_down"></i>83%
+										</span>
+									</li>
+									<li class="won"><strong>500</strong>원</li>
+									<li class="btn"><span>바로 이용</span></li>
+								</ul>
+							</a>
+						</li>
+						<li class="ty1 ty5">
+							<a href="join_step2.html">
+								<h4>비트시그널</h4>
+								<p><span>코인 3회</span> 이용권</p>
+								<ul class="ty1_btntype">
+									<li>3회</li>
+									<li>코인 3개</li>
+								</ul>
+
+								<ul class="ty1_btntype2">
+									<li class="graph">&nbsp;</li>
+									<li class="won_dc">
+											<i class="i_left2"></i>
+											<span>9,000</span>원
+									</li>
+									<li class="">
+										<span class="tico i1">
+											<i class="ico_com ico_down"></i>66%
+										</span>
+									</li>
+									<li class="won"><strong>3,000</strong>원</li>
+									<li class="btn"><span>바로 이용</span></li>
+								</ul>
+
+							</a>
+						</li>
+						<li class="ty1 ty3">
+							<a href="join_step2.html">
+								<h4>비트시그널</h4>
+								<p><span>코인 5회</span> 이용권</p>
+								<ul class="ty1_btntype">
+									<li>5회</li>
+									<li>코인 5개</li>
+								</ul>
+								<ul class="ty1_btntype2">
+									<li class="graph">&nbsp;</li>
+									<li class="won_dc">
+											<i></i>
+											<span>15,000</span>원
+									</li>
+									<li class="">
+										<span class="tico i1">
+											<i class="ico_com ico_down"></i>33%
+										</span>
+									</li>
+									<li class="won"><strong>10,000</strong>원</li>
+									<li class="btn"><span>바로 이용</span></li>
+								</ul>
+							</a>
+						</li>
+					</ul>
+					<!-- ty_list_type2 end -->
+				</div>
+				<!-- ty1_box  end -->
+				<div class="ty2_box">
+					<p class="ty2_boxtxt_in">
+						<span>급등락을 반복하며</span><br/>
+						한치 앞을 알 수 없는 <strong>코인 시세!</strong>
+					</p>
+					<strong class="ty2_boxtxt_in2">
+							하루종일 차트 앞에 있을 수도 없고 !<br/>
+							분석할 시간마저 부족 !<br/>
+							<span class="ty2_boxtxt_in3">그.럴.때 !</span>
+					</strong>
+					<strong class="m_ty2_boxtxt_in2">
+							하루종일 차트 앞에 있을 수도 없고 !<br/>
+							분석할 시간마저 부족 ! <span>그.럴.때 !</span>
+					</strong>
+					<p class="ty2_boxtxt_in4">
+						<span>비트시그널로</span><br/>
+						<em>코인시세</em>
+						<strong>간편하게 확인하시고</strong><br/>
+						<strong>투자에 성공하세요!</strong>
+					</p>
+				</div>
+				<!-- ty2_box end -->
+				<div class="ticket_txtlist">
+					<dl class="ticket_txtlist_in">
+						<dd class="ticket_list">
+							<figure></figure>
+							<h4>
+								비트시그널은<br/>
+								<strong><span>정확</span>합니다<em>!</em></strong>
+							</h4>
+							<p>
+								비트시그널은 독자적으로 구축한<br/>
+								알고리즘과 인공지능 머신러닝을 통해<br/>
+								<em>코인시세를 예측</em>해드립니다.
+							</p>
+						</dd>
+						<dd class="ticket_list2">
+							<figure></figure>
+							<h4>
+								비트시그널은<br/>
+								<strong><span>간편</span>합니다<em>!</em></strong>
+							</h4>
+							<p>
+								가입 후 예상가 확인까지 걸리는 시간<br/>
+								<em>단 1분!</em> 차트와 이슈 분석에 소모<br/>
+								시간을 줄여드립니다!
+							</p>
+						</dd>
+						<dd class="ticket_list3">
+							<figure></figure>
+							<h4>
+								비트시그널은<br/>
+								<strong><span>편리</span>합니다<em>!</em></strong>
+							</h4>
+							<p>
+								<em>프로그램 설치, 앱 설치 NO NO!</em><br/>
+								PC 홈페이지와 MOBILE 홈페이지에서<br/>
+								언제든지 편리하게 이용하세요 !
+							</p>
+						</dd>
+					</dl>
+					<dl class="ticket_txtlist_in_m">
+						<dd>
+
+						</dd>
+					</dl>
+				</div>
+				<!-- ticket_txtlist end -->
+				<div class="ticket_btwrap">
+					<p class="ticket_bt_w">
+						지금 바로 비트시그널 이용하시고<br/>
+ 						<strong>투자 기회 놓치지 마세요!</strong>
+					</p>
+					<p class="ticket_bt_m">
+						지금 바로 비트시그널<br/>
+						이용하시고<br/>
+ 						<strong>투자 기회 놓치지 마세요!</strong>
+					</p>
+
+					<button type="button">
+						비트시그널 바로 이용 하기
+					</button>
+				</div>
+			</section>
+			<button type="button" onclick="$(location).attr('href','join_step2.html');" class="btn_x btn_type3 alarm_ticket_skip">이용권 선택 완료</button>
+		</div>
+	</div>
+	<!-- //content -->
+	<footer id="footer">
+		<button type="button" class="btn_top"><i class="ico_com">맨위로</i></button>
+		<div class="ui_align_center">
+			<nav><button type="button" onclick="layer_open('terms-service');">서비스 이용약관</button><i>ㅣ</i><button type="button" onclick="layer_open('privacy-statement');">개인정보처리방침</button></nav>
+			회사명 : (주)터치캐시 <i>ㅣ</i> 대표자명 : 남성준 <i>ㅣ</i> 사업자등록번호 : 219-88-00179 <i class="wb">ㅣ</i> <span class="mw"></span>통신판매업신고번호 : 2016-서울강서-0773<br>회사 주소 : 서울특별시 강서구 양천로 583 B동 우림블루나인 1102호<br>고객센터 : 1670-5278 <i>ㅣ</i> 이메일 : center@tcash.co.kr <i>ㅣ</i> 팩스번호 : 070-4705-6555
+		</div>
+	</footer>
+	<!-- //footer -->
+
+	<!-- 서비스 이용약관(팝업) -->
+	<div id="terms-service" class="ly_pop ly_agree">
+	  <span class="bg"></span>
+	  <span class="content">
+	  	<h2 class="title">서비스 이용약관</h2>
+	  	<button type="button" onclick="layer_close()" class="btn_cls"><i class="ico_com"></i></button>
+	  	<pre class="scroll">
+	  		<h2>1.	목적</h2>
+				본 약관은 “비트시그널서비스”를 제공하는 “㈜터치캐시(이하 ‘회사’라 합니다.)”와 위 서비스를 “이용하는 자(이하 ‘가입자’라 합니다.)”와의 이용 조건, 절차, 권리, 의무 및 책임사항에 관한 사항을 규정하는 것을 목적으로 합니다.
+
+				<h2>2.	용어의 정의</h2>
+				본 약관에서 사용되는 용어의 정의는 다음과 같습니다.
+
+				1)	“비트시그널서비스(이하 ‘서비스’라 합니다.)”는 가입 시 설정한 시간에 맞춰 비트코인 예상 가격을 안내해드리는 서비스입니다.
+				2)	“가입자”란 본 약관에 동의하여 서비스를 이용하고 요금을 지불하는 개인을 말합니다.
+				3)	“제휴사”란 본 서비스를 가입 또는 이용할 수 있도록 서비스를 도입한 기업 또는 사이트를 말합니다.
+				4)	“월정액”이란 서비스의 이용요금을 서비스 해지 시까지 매월 자동으로 청구, 결제하는 방식을 말합니다.
+				5)	“휴대폰 정보”란 가입자의 휴대폰 번호를 말합니다.
+				6)	본 조 및 본 약관의 다른 조항에서 정의한 것을 제외하고는 관계 법령 및 서비스 안내에서 정한 바에 따릅니다.
+
+				<h2>3.	서비스 이용 계약의 체결</h2>
+				1)	이용계약은 가입자가 약관의 내용에 대해 동의한 후 서비스 가입 신청을 하고 회사가 이러한 신청에 대해 승낙함으로써 체결됩니다.
+				2)	회사와 회원간 서비스 이용계약은 회사의 승낙이 회원에게 도달한 시점(유료서비스의 “구매/결제완료 등”의 표시가 회원에게 절차상 표시된 시점)에 성립합니다.
+				3)	결제방식: 휴대폰소액결제
+				4)	환불 및 결제: 회사는 관계 법령이 정한 바에 따라 환불 및 결제를 진행합니다.
+
+				<h2>4.	서비스 해지 및 재가입</h2>
+				본 서비스는 해지 시 별도의 개인정보 확인 없이 해지가 가능합니다. 또한, 서비스를 다시 이용하기 위해서는 신규로 서비스에 가입하셔야 합니다.
+
+				1)	전화를 이용한 해지 : 고객센터(1599-)에서 해지 하실 수 있습니다.
+				2)	홈페이지(//bitsignal.co.kr)에서 해지 하실 수 있습니다.
+				3)	1회, 5회 상품의 경우 환불을 원하시는 경우 금액/잔여횟수로 환불이 진행됩니다.
+				4)	한 달 무제한 상품 및 월정액 상품의 경우 서비스 해지 시 상품은 환불되지 않으며, 해당월 말일까지 서비스가 유지가 됩니다.
+
+				<h2>5.	약관의 효력과 변경</h2>
+				1)	본 약관은 서비스 화면에 게시하거나 기타의 방법으로 가입자에게 공시함으로써 효력이 발생합니다.
+				2)	온라인으로 서비스에 가입하는 경우, 가입자가 본 약관에 대하여 '동의함'을 선택하고 ‘확인’ 버튼을 클릭하면 고객은 본 약관의 내용을 이해하였고 그 적용에 동의한 것으로 간주합니다.
+				3)	회사는 관계 법령을 위배하지 않는 범위에서 본 약관을 개정할 수 있으며, 이 경우 회사는 새로운 약관의 적용 일자 및 개정사유를 명시하고 개정약관 적용일 7일 전에 고지 또는 통지합니다.
+				4)	회사가 6조의 규정에 따라 변경 약관을 고지 또는 통지하면서, 가입자가 약관 변경 적용 일까지 거부 의사를 표시하지 아니할 경우, 약관의 변경에 동의한 것으로 간주한다는 내용을 고지 또는 통지하였음에도 가입자가 명시적으로 거부 의사를 표시하지 아니한 경우, 가입자가 변경 약관에 동의한 것으로 간주합니다.
+				5)	가입자가 변경된 약관에 동의하지 않는 경우 서비스 이용을 중단하고 이용 계약을 해지할 수 있습니다.
+
+				<h2>6.	약관 동의 철회</h2>
+				서비스 해지 시 약관 동의가 철회됩니다.
+
+				<h2>7.	서비스 이용의 제한</h2>
+				회사는 다음 각 호에 해당하는 가입자에 대하여 서비스 신청 및 이용을 제한할 수 있습니다.
+				1)	가입된 휴대폰 번호에 해당하는 단말기를 소유하고 있지 않았거나, 휴대폰 번호 등 가입자 정보가 잘못되어 정보 조회가 불가능 할 경우
+				2)	회사 및 이동통신사가 보유한 시스템 설비 및 장비 등의 여유가 없거나, 기술적, 법률적 장애가 있을 경우 그 사유가 해소될 때까지
+				3)	기타 회사의 보안정책에 따라 서비스 제한이 필요하다고 판단되는 경우
+				4)	단말기 특성 또는 OS 버전의 문제로 인해 정상적인 서비스 제공이 불가능한 경우
+
+				<h2>8.	의무</h2>
+
+				1)	회사는 본 약관에서 정한 바에 따라 지속적, 안정적으로 본 서비스를 제공할 의무가 있습니다. 단, 전쟁, 지진, 재난 등 천재지변이나 불가피한 시스템의 고장, 통신서비스 회사의 통신 두절 등 불가항력의 사유가 발생한 경우에는 본 서비스를 중단할 수 있습니다.
+				2)	가입자는 본인이 설정한 본 서비스의 아이디/비밀번호 및 휴대폰 번호 관리에 책임을 지며, 가입자의 부주의로 발생하는 모든 결과에 대한 책임은 가입자에게 있습니다.
+
+				<h2>9.	변경사항 통지</h2>
+				1)	가입자는 서비스를 이용할 단말기 번호를 정확하게 회사에 통지해야 합니다.
+				2)	가입자는 가입된 단말기를 분실한 경우, 회사 고객센터를 통해 서비스를 해지하여야 합니다.
+
+				<h2>10.	책임과 손해배상</h2>
+				1)	회사와 가입자는 일방 당사자의 귀책사유에 인하여 상대방에게 발생한 손해에 대하여 배상하여야 합니다.
+				2)	회사는 본 서비스 가입자의 고의 또는 중과실로 발생한 손해에 대해서 어떠한 책임도 지지 않습니다.
+				3)	비트시그널이 제공하는 정보는 투자 참고사항 일뿐, 투자권유를 목적으로 하지 않습니다. 투자판단의 최종책임은 이용자에게 있습니다.
+				4)	10조에서 명시한 변경사항 통지 내용의 오류, 통지의 지연 등에 인하여 가입자 또는 제삼자에게 손해가 발생하였을 경우 회사는 이를 보상 또는 배상할 책임이 없습니다.
+
+				<h2>11.	면책</h2>
+				1)	 회사는 다음 각 호의 사유로 인한 손해에 대하여 보상 또는 배상할 책임이 없습니다.
+
+				①	천재지변, 파업, 관련 법규의 변경, 관계기관의 명령 및 지침, 또는 외부로부터 발생한 사건 등 회사가 통제할 수 없는 사유에 인하여 본 서비스를 제공할 수 없는 경우
+				②	가입자가 아이디/패스워드, 휴대폰 번호, 단말기 관리를 소홀히 한 경우
+				③	가입자가 본 서비스에 제공한 정보, 자료, 사실 등이 부정확하여 본 서비스를 원활히 제공할 수 없었던 경우
+				④	회사의 관리영역이 아닌 장애로 본 서비스의 이용이 불가능한 경우
+				⑤	기타 회사의 귀책사유가 없는 제휴사 및 통신서비스 등의 장애 또는 가입자의 귀책사유에 의한 통지 내역 미확인 등에 인한 경우
+
+				2)	회사는 본 서비스와 관련된 가입자 상호 간 또는 가입자와 제삼자 상호 간의 분쟁에 개입할 의무가 없으며, 회사의 귀책사유가 없는 한 이로 인한 손해를 보상 또는 배상할 책임이 없습니다.
+
+				3)	회사는 가입자가 제공한 가입자 본인의 정보에 대한 정확성, 진위, 유효성 확인의 책임이 없으며, 가입자가 제공한 정보의 오류로 인해 발생한 손해에 대하여 보상 또는 배상할 책임이 없습니다.
+
+				<h2>12.	분쟁의 해결</h2>
+				1)	회사와 가입자 간 분쟁 발생 시, 회사와 가입자는 분쟁해결을 위해 성실히 협의합니다.
+				2)	본 약관과 관련한 제반 분쟁 및 소송의 관할은 민사소송법상 관할 조항에 따릅니다.
+				3)	서비스에 관한 분쟁이 발생한 경우 양 당사자 간의 합의로 해결함을 원칙으로 합니다. 다만 당사자 간에 합의할 수 없거나 합의가 이루어지지 않는 경우, 분쟁의 해결은 회사의 소재지를 관할하는 법원으로 합니다.
+
+				본 약관은 2018년 09월 17일부터 적용됩니다.
+
+				주)터치캐시 | 대표이사: 남성준 | 사업자등록번호 219-88-00179
+				통신판매업신고 2016-서울강서-0373
+				서울특별시 강서구 양천로 583, 비-1102호 (염창동, 우림블루나인)
+				고객센터 1670-5278 | TEL 070-7893-8877
+				Email: center@tcash.co.kr
+				평일 : 09:00~18:00(주말, 공휴일 휴무)
+				Copyright (c) NSCBC Co.,Ltd. All rights reserved.
+	  	</pre>
+	  </span>
+	  <span class="blank"></span>
+	</div>
+	<!-- //서비스 이용약관(팝업) -->
+
+	<!-- 개인정보취급방침(팝업) -->
+	<div id="privacy-statement" class="ly_pop ly_agree">
+	  <span class="bg"></span>
+	  <span class="content">
+	  	<h2 class="title">개인정보 취급방침</h2>
+	  	<button type="button" onclick="layer_close()" class="btn_cls"><i class="ico_com"></i></button>
+	  	<pre class="scroll">
+				“비트시그널서비스(이하, ‘서비스’라 합니다.)”의 서비스 제공 및 이용과 관련하여 ㈜터치캐시(이하, ‘회사’라 합니다)가 취득한 개인정보는 “통신비밀보호법”, “전기통신사업법” 및 “정보통신망 이용촉진 및 정보보호 등에 관한 법률” 등 정보통신서비스제공자가 준수하여야 할 관련 법령상의 개인정보 보호 규정을 준수합니다.
+
+				<h2>1. 개인정보수집 및 이용</h2>
+				<h3>1.1 수집항목</h3>
+				1) 휴대폰번호
+				2) 서비스 가입/해지 일자, 서비스 이용 이력
+
+				<h2>1.2 이용목적</h2>
+				1) 서비스 제공에 관한 계약 및 서비스 제공에 따른 요금정산(월 이용료 청구)
+				2) 서비스 가입자가 제휴사에서 본 서비스를 이용할 수 있도록 하기 위함
+				3) 가입자 관리
+				개인식별, 불량 가입자의 부정이용 방지와 비인가 사용의 방지, 가입의사 확인, 분쟁 조정을 위한 기록 보존, 불만처리 등 민원처리, 고지사항 전달 등
+				4) 마케팅 및 광고에 활용
+				신규 서비스(제품) 개발 및 특화, 접속빈도 파악 또는 가입자의 서비스 이용에 대한 통계, 이벤트 등 광고성 정보를 휴대폰 번호로 전송
+
+				<h2>2. 개인정보 보유 및 이용기간</h2>
+
+				<strong>2.1</strong> 본 서비스 가입일로부터 해지 후 정산완료 시까지
+				<strong>2.2</strong> 가입자가 서비스 해지를 요청하거나 개인정보 수집 및 이용에 대한 동의를 철회하는 경우 개인정보를 파기합니다. 단, 이용요금의 정산, 소송이나 분쟁 등 기타의 사유로 일정 기간 보유하여야 할 필요가 있는 경우 가입자의 개인정보를 보유 및 이용할 수 있습니다.
+				<strong>2.3</strong> 상법, 국세기본법 및 소비자보호에 관한 법률 등 관계 법령에 따라 보존할 필요가 있는 경우, 회사는 관계 법령에서 정한 기간 동안 가입자 정보를 보관합니다. 이 경우 회사는 보관하는 정보를 그 보관의 목적으로만 이용하며 보존기간은 다음과 같습니다.
+				1) 거래에 관한 장부 및 증빙서류: 5년(국세기본법, 법인세법, 부가가치세법 등)
+				2) 대금결제 및 재화 등의 공급에 관한 기록: 5년(전자상거래 등에서의 소비자보호에 관한 법률)
+				3) 표시/광고에 관한 기록: 6개월(전자상거래에서의 소비자보호에 관한 법률)
+				4) 계약 또는 청약철회 등에 관한 기록: 5년(전자상거래에서의 소비자보호에 관한 법률)
+				5) 소비자 불만 또는 분쟁처리에 관한 기록: 3년(전자상거래에서의 소비자보호에 관한 법률)
+				6) 위 각 호외의 법령에 정해진 개인정보 보유기간이 있을 경우 그에 따름
+
+				<h2>3. 개인정보 수집 및 이용 동의 철회</h2>
+				서비스 해지 시 개인정보 수집 및 이용동의는 철회됩니다.
+
+				<h2>4. 수집한 개인정보의 파기 절차</h2>
+				회사는 서비스 가입자가 가입 시 제공한 개인정보의 이용목적이 달성된 후 보관기간 및 이용기간에 따라 해당 정보를 파기하되, 그 파기 절차 및 방법 등은 다음과 같습니다.
+
+				1) 파기절차
+				가입자가 서비스 가입 등을 위해 회사에 제공한 개인정보는 서비스 해지 등 이용목적이 달성된 후, 내부 방침 및 기타 관련 법령의 규정에 따른 보유기간 경과 시 삭제되거나 파기합니다.
+
+				2) 파기기한
+				가입자의 개인정보 보유기간이 경과 시 삭제합니다. 단, 고객 응대 및 불법적 사용자에 대한 관련 수사기관 협조, 상법 등 관련 법령의 규정에 의하여 보유하여야 할 필요가 있는 경우에는 일정 기간 가입자의 데이터를 보유합니다. 또한, 고객에게 미리 고지하고 개별동의를 받은 경우에는 동의한 내용에 따른 기간 동안 보유합니다.
+
+				3) 파기방법
+				종이에 출력된 개인정보는 분쇄기로 분쇄 또는 소각하거나 화학약품 처리를 하여 용해하여 파기하고, 전자적 파일 형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.
+
+				<h2>5.	개인정보 제3자 제공 동의</h2>
+
+				<strong>5.1</strong> 본 서비스와 관련하여, 본인은 동의내용을 숙지하였으며, 이에 따라 회사가 수집한 본인의 개인정보를 아래 각 호의 사유를 제외하 고지한 범위를 초과하여 이용하거나 제3자에게 제공(공유를 포함) 하지 않습니다.
+
+				1)	이용자의 동의를 받은 경우
+				2)	관련법령에 의하여 수사상의 목적으로 관계기관으로부터 요청이 있는 경우
+				3)	통계작성 및 학술연구 등의 목적을 위하여 필요한 경우로서 특정 개인을 알아볼 수 없는 형태로 개인정보를 제공하는 경우
+				4)	기타 관련법령에서 정한 절차에 따른 요청이 있는 경우
+				5)	서비스 운영관리를 위한 개인정보제3자제공
+
+				① 민앤지
+				- 개인정보를 제공 받는 자 : 서비스 운영사(㈜민앤지)
+				- 제공받는 자의 개인정보 이용 목적 : 서비스 운영/관리
+				- 제공하는 자의 개인정보 항목 : 휴대폰번호
+				- 제공받는 자의 개인정보 보유 기간 : 서비스 해지 시 또는 위탁계약 종료시까지
+
+				② 드림베이
+				- 개인정보를 제공 받는 자 : CS(㈜드림베이)
+				- 제공받는 자의 개인정보 이용 목적 : 서비스 운영, 이용자 관리, 회원제 서비스 이용에 따른 본인확인, 고객상담, 불만 처리 등 고객 지원 업무
+				- 제공하는 자의 개인정보 항목 : 휴대폰번호
+				- 제공받는 자의 개인정보 보유 기간 : 서비스 해지 시 또는 위탁계약 종료시까지
+
+				<strong>5.2</strong> 제공받는 자의 개인정보 보유기간:  본 서비스 가입 일부터 해지 후 정산완료 시까지
+				* 단 법령에 정해진 개인정보 보유기간이 있을 경우 그에 따름
+
+				<strong>5.3</strong> 고객은 개인정보 제공에 동의하지 않으실 수 있으시며, 동의하지 않으신 경우 본 서비스 이용이 불가능합니다.
+
+				<strong>5.4</strong> 회사는 상기 정보와 목적 외에는 가입자의 정보를 제공하지 않으며, 서비스 이용에 관련 된 목적 외에는 고객정보를 활용하지 않습니다.
+
+				<h2>6.	개인정보의 취급 위탁</h2>
+				회사는 서비스 향상을 위해서 아래와 같이 개인정보를 위탁하고 있으며, 관계 법령에 따라 개인정보가 안전하게 관리될 수 있도록 필요한 사항을 규정하고 있습니다. 회사의 개인정보 위탁업체 및 위탁업무 내용은 아래와 같습니다.
+
+				<h3>6.1. ㈜드림베이</h3>
+				1) 수탁 업체 : ㈜드림베이
+				2) 위탁 업무 내용 : 서비스 운영, 이용자 관리, 회원제 서비스 이용에 따른 본인확인, 고객상담, 불만 처리 등 고객 지원 업무
+				3) 개인정보 보유 및 이용 기간 : 서비스 해지 또는 위탁 계약 종료 시 까지
+
+				<h3>6.2 ㈜민앤지</h3>
+				1) 수탁 업체 : ㈜민앤지
+				2) 위탁 업무 내용 : 비트시그널 운영/관리
+				3) 개인정보 보유 및 이용 기간 : 서비스 해지 또는 위탁 계약 종료 시 까지
+
+				<h2>7. 가입자의 권리</h2>
+				가입자는 언제든지 서비스 홈페이지 또는 고객센터를 통하여 회원님의 개인정보를 열람, 정정 처리하실 수 있으며, 당사의 개인정보관리책임자에게 전자우편 또는 서면으로 요청하신 경우 열람, 정정, 삭제처리를 진행 할 수 있습니다. 가입자의 개인정보가 제3자에게 제공되거나 취급 위탁된 경우 이용자는 회사 또는 ‘제3자’/’수탁자’에게 파기를 요청할 수 있습니다. 단, 기타 법률에 따라 정정 또는 삭제가 금지되거나 제한되어 있는 경우에는 해당 처리가 제한될 수 있습니다. 또한 개인정보 오류에 대한 정정 요청한 경우에는 다른 법률에 따라 개인정보의 제공을 요청 받는 경우가 아닌 한 정정을 완료하기 전까지 당해 개인정보를 이용 또는 제공하지 않습니다, 만약 잘못된 개인정보를 이미 제공한 경우에는 정정 처리 결과를 제 3자에게 통지하여 정정이 이루어지도록 하겠습니다.
+
+				가입자는 언제든지 회사의 개인정보에 대하여 처리의 정지를 요구 할 수 있습니다. 다만 아래의 경우에 해당하는 경우 처리정지 요구를 거절할 수 있습니다.
+				- 법률에 특별한 규정이 있거나 법령상 의무를 준수하기 위하여 불가피한 경우
+				- 다른 사람의 생명·신체를 해할 우려가 있거나 다른 사람의 재산과 그 밖의 이익을 부당하게 침해할 우려가 있는 경우
+				- 개인정보를 처리하지 아니하면 정보주체와 약정한 서비스를 제공하지 못하는 등 계약의 이행이 곤란한 경우로서 정보주체가 그 계약의 해지 의사를 명확하게 밝히지 아니한 경우
+
+				<h2>8. 제공 동의 철회: 서비스 해지 시 약관 동의가 철회됩니다.</h2>
+
+				주)터치캐시 | 대표이사: 남성준 | 사업자등록번호 219-88-00179
+				통신판매업신고 2016-서울강서-0373 | 서울특별시 강서구 양천로 583, 비-1102호 (염창동, 우림블루나인)
+				TEL 070-7893-8877 | Email: center@tcash.co.kr
+				고객센터 1670-5278 | 	평일 : 09:00~18:00(주말, 공휴일 휴무)
+				Copyright (c) NSCBC Co.,Ltd. All rights reserved.
+	  	</pre>
+	  </span>
+	  <span class="blank"></span>
+	</div>
+	<!-- //개인정보취급방침(팝업) -->
+
+</div>
+
+
+</body>
+</html>

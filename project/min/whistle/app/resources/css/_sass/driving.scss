@@ -1,0 +1,1128 @@
+@charset "utf-8";
+@import './module';
+@import './animation';
+
+// 입력 폼
+.form {
+    .item ~ .item {
+        margin-top:px(16);
+    }
+    .th {
+        font-size:px(14);
+        font-weight:500;
+        color:#222;
+    }
+    .ip_box {
+        height:px(48);
+        margin-top:px(8);
+        @include bdr(6);
+        border:px(1.6) solid #ddd;
+        padding:0 px(16);
+        font-size:px(16);
+        .lbl {
+            margin-top:0;
+            background-color:#fff;
+        }
+        &.focus {
+            box-shadow:inherit !important;
+            border-color:#222;
+            input, select, textarea {
+                color:#222 !important;
+                font-weight:400 !important;
+            }
+        }
+        input {
+            padding-top:px(10);
+            padding-bottom:px(10);
+            line-height:1;
+        }
+        input , select, textarea {
+            padding-left:0;
+            color:#555;
+            font-size:px(16);
+        }
+        &.textarea_box {
+            height:px(144) !important;
+            .lbl {
+                top:px(10);
+                transform:translateY(0);
+            }
+            textarea {
+                height:100%;
+                width:100%;
+                padding-top:px(13);
+                padding-bottom:px(13);
+            }
+        }
+        &.select_box {
+            position:relative;
+            &.in {
+                border-color:#ddd !important;
+                select {
+                    color:#555 !important
+                }
+            }
+            &.focus {
+                &:after {
+                    content: '';
+                    @include iconArr(7, 7, #222);
+                    @include pos(absolute, $r:px(19.5), $t:50%);
+                    transform: translateY(0%) rotate(315deg);
+                }
+            }
+            select {
+                width:100%;
+                padding-top:px(13);
+                padding-bottom:px(13);
+                color: #A7A7A7;
+                font-weight:400;
+            }
+            &:after,&.in:after {
+                content: '';
+                @include iconArr(7, 7, #D3D3D3);
+                @include pos(absolute, $r:px(19.5), $t:50%);
+                transform: translateY(-50%) rotate(135deg);
+                transition: .2s ease .0s;
+            }
+        }
+    }
+}
+[class*="btn"] {vertical-align:middle;box-sizing:border-box;}
+[class*="btn_r"] {
+    font-size:0;
+    width:px(18);
+    height:px(18);
+    @include bdr(9);
+    @include bgf;
+    margin-left:px(4);
+    margin-top:px(-4);
+}
+[class*="bu_txt"] {
+    display:inline-block;
+    @include bdr(13);
+    color:#fff;
+    line-height:1;
+    &.full {
+        width:px(78);
+        height:px(38);
+        text-align:center;
+        font-size:px(14);
+        font-weight:700;
+        @include bdr(19);
+        background-color:$fcr;
+        color:#fff;
+        box-shadow: 0 px(6)  px(6) rgba(255,55,1,.2);
+        &.type02 {
+            font-weight:400;
+            background-color:#222;
+            box-shadow: 0 px(6)  px(6) rgba(0,0,0,.16);
+        }
+        &.line {
+            border:px(1) solid $fcr;
+            color:$fcr;
+            background-color:#fff;
+            box-shadow:none;
+        }
+    }
+}
+.btn_tip {
+    background-image:url($urlImg + 'ico_info.png') !important;
+}
+.chk_txt_list {
+    li {
+        position:relative;
+        padding-left:px(25);
+        line-height:px(18);
+        font-size:px(16);
+        color:#555;
+        &:before {
+            content:'';
+            @include pos(absolute,$t:0,$l:0);
+            @include bgf;
+            width:px(18);
+            height:px(18);
+            background-image:url($urlImg + 'ico_chk.png');
+        }
+        & ~ li {
+            margin-top:px(13);
+        }
+    }
+}
+
+.tit_info_txt {
+    margin-top:px(16);
+    .txt {
+        font-size:px(16);
+        line-height:px(24);
+        color:#555;
+        span {
+            color:$fcr;
+        }
+        & ~ .txt {
+            margin-top:px(10);
+        }
+    }
+}
+.tit_info_box {
+    position:relative;
+    margin-top:px(40);
+    padding:px(28) px(24);
+    border-radius:px(12);
+    background-color:#fff;
+    &:before {
+        content:'';
+        @include pos(absolute, $t:px(-88), $r:px(-5));
+        @include bgf;
+        width:px(124.5);
+        height:px(114);
+        background-image:url($urlImg + 'img_car.png');
+    }
+    .tit {
+        font-size:px(14);
+        font-weight:500;
+        color:#7A7A7A;
+    }
+    .sub_txt {
+        margin-top:px(9);
+        font-size:px(16);
+        color:#222;
+        &.under_line {
+            color:$fcr;
+            font-weight:500;
+            text-decoration:underline;
+        }
+        & + .tit {
+            margin-top:px(24);
+        }
+        .info_txt {
+            position:relative;
+            display:block;
+            padding-left:px(7);
+            margin-top:px(7);
+            font-size:px(12);
+            color:#A7A7A7;
+            &:before {
+                content:'*';
+                @include pos(absolute, $t:px(2), $l:0);
+            }
+        }
+    }
+    .chk_txt_list {
+        margin-top:px(10);
+        li {
+            color:#222;
+        }
+    }
+}
+.sub_info_txt {
+    position:relative;
+    display:block;
+    padding-left:px(7);
+    margin-top:px(7);
+    font-size:px(12);
+    color:#A7A7A7;
+    &:before {
+        content:'*';
+        @include pos(absolute, $t:px(2), $l:0);
+    }
+    span {
+        color:#7A7A7A;
+    }
+    .link {
+        margin-left:px(6);
+        font-weight:500;
+        color:#555;
+        text-decoration:underline;
+    }
+    @include mq('small'){
+        br {
+            display:none;
+        }
+    }
+}
+.page_tit_wrap {
+    position:relative;
+    .tip_wrap {
+        display:none;
+        animation: slide-bottom .3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        @include pos(absolute, $l:0, $r:0);
+        box-shadow:0 0 px(20) rgba(0,0,0,.2);
+        border:px(1.2) solid #DADADA;
+        border-radius:px(5);
+        z-index:2;
+        background-color:#fff;
+        padding:px(10) px(20);
+        text-align:left;
+        &:before {
+            content:'';
+            @include pos(absolute, $t:px(-14));
+            @include bgf;
+            width:px(10);
+            height:px(15);
+            background-image:url($urlImg + 'bg_tip.png');
+        }
+        .txt {
+            font-size:px(12);
+            line-height:px(18);
+            color:#555;
+            span {
+                text-decoration:underline;
+            }
+        }
+        &.on {
+            display:block;
+        }
+    }
+}
+// 굿드라이빙 START
+.driving_wrap {
+    padding-top:0 !important;
+    .global_footer {
+        background-color: #F8F8F8 !important;
+    }
+}
+// 인트로
+.driving_intro {
+    @include inr('wrap',20);
+    .tit_wrap {
+        position:relative;
+        width:100%;
+        height:px(420);
+        overflow:hidden;
+        .bg {
+            @include pos(absolute, $t:0, $r:0, $b:0, $l:0);
+            width:120%;
+            height:100%;;
+            background:url($urlImg + 'bg_driving.png') center no-repeat;
+            background-size:cover;
+            animation: scale 1s ease-out both, bannermotion 35s infinite 1s;
+        }
+        @include inr('wrap',30);
+        .inner_wrap {
+            @include pos(absolute, $l:0, $r:0, $b:px(24));
+            background-color:transparent;
+            .bu_txt {
+                padding:px(7) px(12);
+                font-size:px(12);
+                background-color:#FF4716;
+            }
+            .tit {
+                margin-top:px(10);
+                @include wfr;
+                font-size:px(32);
+                line-height:px(40);
+                font-weight:700;
+                color:#fff;
+            }
+        }
+    } 
+    .con {
+        background-color:transparent;
+        padding-top:px(32);
+        .sub_tit {
+            font-size:px(24);
+            font-weight:700;
+            color:#222;
+        }
+    }
+    & + .btn_area_wide {
+        background-color:#F8F8F8;
+    }
+}
+// 메인
+.page_tit {
+    position:relative;
+    padding-top:px(54);
+    @include title('top');
+    font-weight:700;
+    .clone {
+        font-weight:700;
+        & + .btn_r_link {
+            margin-left:0;
+        }
+    }
+}
+.page_sub_tit {
+    position:relative;
+    @include title('top2');
+    font-weight:700;
+    & + .sub_txt {
+        margin-top:px(6);
+        font-size:px(14);
+        line-height:px(20);
+        color:#7A7A7A;
+        span {
+            color:$fcr;
+        }
+        .icon {
+            width:px(18);
+            height:px(18);
+        }
+    }
+}
+.page_sub_tit02 {
+    position:relative;
+    @include title('sub');
+    font-weight:500;
+}
+.driving_main {
+    &#content {
+        padding-bottom:0;
+    }
+    & ~ .btn_area_wide {
+        background-color:#fff;
+    }
+    @include inr('wrap',20);
+    .section ~ .section {
+        margin-top:px(12);
+        .page_tit {
+            padding-top:px(40);
+            padding-bottom:px(4);
+            .btn_r_link {
+                background-image:url($urlImg + 'ico_info.png');
+            }
+        }
+        .link_arr {
+            @include pos(absolute, $t:px(3), $r:px(2));
+        }
+        .tip_wrap {
+            &:before {
+                left:px(192) !important;
+            }
+        }
+    }
+    .inner_wrap ~ .inner_wrap {
+        margin-top:px(30);
+        .page_sub_tit {
+            line-height:px(26);
+        }
+    }
+    .page_tit {
+        .btn_r_link {
+            background-image:url($urlImg + 'ico_help.png');
+        }
+    }
+    .page_tit_wrap + .txt {
+        margin-top:px(4);
+        margin-bottom:px(20);
+        font-size:px(14);
+        line-height:px(20);
+        color:#7A7A7A;
+    }
+    .chk_txt_list {
+        margin-top:px(12);
+        padding:px(23) px(24);
+        background-color:#F8F8F8;
+        @include bdr(12);
+    }
+    .link_arr {
+        font-size:px(20);
+        color:#222;
+        font-weight:700;
+        @include pos(absolute, $t:px(24), $r:px(5));
+        padding-right:px(19);
+        &:after{
+            content:'';
+            @include iconArr(7, 7, #d3d3d3);
+            @include pos(absolute, $r:px(6), $t:50%);
+            transform: translateY(-50%) rotate(45deg);
+        }
+        &.txt {
+            padding-right:px(14);
+            font-size:px(14);
+            color:#A7A7A7;
+            font-weight:400;
+            top:0;
+            &:after{
+                right:0;
+            }
+        }
+    }
+    .mileage_list {
+        margin-top:px(12);
+        padding-bottom:px(30);
+        li {
+            & ~ li {
+                margin-top:px(3);
+            }
+            position:relative;
+            padding:px(11) 0 px(11) px(55);
+            .tit {
+                font-size:px(16);
+                font-weight:500;
+                color:#222;
+                .sub {
+                    display:block;
+                    margin-bottom:px(5);
+                    font-style:normal;
+                    font-size:px(14);
+                    font-weight:400;
+                    color:#A7A7A7;
+                }
+            }
+            .bu_txt {
+                @include pos(absolute,$t:50%, $r:0);
+                transform:translateY(-50%);
+            }
+            &:before {
+                content:'';
+                @include pos(absolute, $t:px(11), $l:0);
+                @include bdr(16);
+                width:px(46);
+                height:px(46);
+                background-color:#f8f8f8;
+                background-repeat:no-repeat;
+                background-position:center;
+                background-size:px(28);
+            }
+            &.list01 {
+                &:before {
+                    background-image:url($urlImg + 'ico_badge01.png');
+                }
+            }
+            &.list02 {
+                &:before {
+                    background-image:url($urlImg + 'ico_badge02.png');
+                }
+            }
+        }
+    }
+    .round_wrap {
+        margin-top:px(12);
+        text-align:center;
+        padding-left:0;
+        padding-right:0;
+        .col_wrap {
+            display:flex;
+            .link {
+                flex:1;
+                .tit {
+                    display:block;
+                    font-size:px(14);
+                    font-weight:500;
+                    color:#7A7A7A;
+                }
+                .sub_txt {
+                    display:block;
+                    margin-top:px(4);
+                    font-size:px(14);
+                    font-weight:500;
+                    color:#222;
+                    code {
+                        font-size:px(20);
+                        font-weight:700;
+                        @include wfr;
+                    }
+                }
+                @include bar(47, #E0E0E0);
+                &:before{
+                    left:0;
+                    top:50%;
+                    transform: translateY(-50%);
+                }
+                &:first-child:before{
+                    display:none
+                }
+            }
+        }
+    }
+}
+
+.driving_info {
+    @include inr('wrap',20);
+    .page_tit {
+        padding-top:0;
+        padding-bottom:0;
+    }
+}
+
+.driving_guide {
+    @include inr('wrap',20);
+    * {
+        text-align:center;
+    }
+    .page_tit {
+        padding-top:0;
+        padding-bottom:0;
+        text-align:center;
+    }
+    .tit_info_txt {
+        margin-top:px(12);
+        .txt {
+            font-size:px(14);
+            line-height:px(20);
+        }
+    }
+    .img_wrap {
+        margin-top:px(30);
+        padding:0 px(8);
+    }
+    .img_info_txt {
+        margin-top:px(30);
+        font-size:px(12);
+        line-height:px(18);
+        color:#A7A7A7;
+    }
+    & + .btn_area_wide {
+        padding-bottom:0;
+    }
+}
+.driving_report {
+    padding-top:0 !important;
+    #header {
+        background-color:transparent;
+        .btn_prev {
+            i {
+                @include svgfill(#fff,'ico_prev.svg')
+            }
+        }
+    }
+    .car_info_wrap {
+        position:relative;
+        .info_txt {
+            @include pos(absolute,$r:0,$b:0,$l:0);
+            z-index:1;
+            background-color:rgba(0,0,0,.55);
+            padding:px(13) px(20);
+            li {
+                position:relative;
+                padding-left:px(30);
+                font-size:px(14);
+                line-height:px(28);
+                color:#fff;
+                & ~ li {
+                    margin-top:px(13);
+                }
+                &:before {
+                    content:'';
+                    @include pos(absolute, $t:0, $l:0);
+                    width:px(28);
+                    height:px(28);
+                    background-repeat:no-repeat;
+                    background-position:center;
+                    background-size:px(28);
+                }
+                &.icon01 {
+                    &:before {
+                        background-image:url($urlImg + 'ico_date.png');
+                    }
+                }
+                &.icon02 {
+                    &:before {
+                        background-image:url($urlImg + 'ico_location.png');
+                    }
+                }
+            }
+        }
+    }
+    .form_wrap {
+        @include inr('wrap',20);
+        .inner_wrap {
+            padding-top:px(30);
+        }
+    }
+}
+.driving_mileage {
+    .info_wrap {
+        background-color:#fff;
+        padding:0 px(20) px(30);
+        .tit_wrap {
+            position:relative;
+            h1 {
+                @include title('top');
+                font-weight:700;
+            }
+            code {
+                @include pos(absolute,$b:px(18),$r:px(20));
+                @include wfr;
+                font-size:px(22);
+                font-weight:700;
+                color:$fcr;
+            }
+        }
+        .tip_wrap {
+            &:before {
+                left:px(102) !important;
+            }
+        }
+        .btn_txt {
+            code {
+                @include wfr;
+                font-weight:700;
+            }
+        }
+    }
+    .mileage_wrap {
+        @include inr('wrap',20);
+        .section {
+            padding-top:px(30);
+            padding-bottom:px(40);
+            background-color:$bg;
+        }
+        .sub_info_txt + .round_wrap {
+            margin-top:px(16) !important;
+        }
+        .round_wrap {
+            margin-top:px(12);
+            background-color:#fff;
+            .tit_wrap {
+                position:relative;
+                margin-bottom:px(16);
+                .time {
+                    @include pos(absolute,$t:0, $r:0);
+                    padding-left:px(18);
+                    font-size:px(12);
+                    color:#A7A7A7;
+                    code {
+                        margin-right:px(2);
+                        font-size:px(13);
+                        font-weight:400;
+                        color:$fcr;
+                        font-family: 'Noto Sans KR','Nunito Sans', sans-serif;
+                    }
+                    &:before {
+                        content:'';
+                        @include pos(absolute,$t:px(3), $l:0);
+                        @include bgf;
+                        width:px(14);
+                        height:px(14);
+                        background-image:url($urlImg + 'ico_watch.svg');
+                    }
+                }
+            }
+            & ~ .sub_info_txt {
+                margin-top:px(8);
+            }
+            & ~ .round_wrap {
+                margin-top:px(12);
+            }
+            .txt_list {
+                li {
+                    display:flex;
+                    align-items:center;
+                    .tit {
+                        flex:1;
+                        font-size:px(16);
+                        font-weight:500;
+                        color:#222;
+                    }
+                    .sub_txt {
+                        flex:0 auto;
+                        font-size:px(12);
+                        color:#A7A7A7;
+                        &.point {
+                            color:$fcr;
+                            font-weight:500;
+                            code {
+                                font-weight:700;
+                                font-size:px(20);
+                                @include wfr;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .mission_list {
+            li {
+                padding:px(6) 0;
+                display:flex;
+                align-items:center;
+                .bu_txt {
+                    flex:0 px(50);
+                    line-height:1;
+                    padding:px(5) 0;
+                    @include bdr(13);
+                    border:px(1.2) solid #FFC6B7;
+                    background-color:#FFEAE5;
+                    font-size:px(12);
+                    font-weight:500;
+                    color:#FF6D45;
+                    text-align:center;
+                }
+                .tit {
+                    flex:0 auto;
+                    margin-left:6px;
+                    font-size:px(14);
+                    color:$fcr;
+                    line-height:px(26);
+                }
+                &.failed {
+                    .bu_txt {
+                        border:px(1.2) solid #E1E1E1;
+                        background-color:#EEEEEE;
+                        color:#A7A7A7;
+                        font-family: 'Nunito Sans','Noto Sans KR', sans-serif;
+                    }
+                    .tit {
+                        color:#A7A7A7;
+                        text-decoration:line-through;
+                    }
+                }
+            }
+        }
+        .btn_mileage {
+            @include bdr(12);
+            width:100%;
+            height:px(58);
+            background: #ff7e00;
+            background: -moz-linear-gradient(-45deg,  #ff7e00 0%, #ff3701 100%);
+            background: -webkit-linear-gradient(-45deg,  #ff7e00 0%,#ff3701 100%);
+            background: linear-gradient(135deg,  #ff7e00 0%,#ff3701 100%);
+            color:#fff;
+            box-shadow: 0 px(6)  px(6) rgba(255,55,2,.24);
+            .col_wrap {
+                display:flex;
+                align-items:center;
+                padding:0 px(20);
+                .day {
+                    flex:1;
+                    text-align:left;
+                    color:#fff !important;
+                    *{
+                        color:#fff !important;
+                    }
+                }
+                .save_txt {
+                    flex:0 auto;
+                }
+            }
+            .save_txt {
+                position: relative;
+                padding-right:px(23);
+                font-size:px(16);
+                code {
+                    font-size:px(18);
+                    font-weight:700;
+                    @include wfr;
+                }
+                &:after {
+                    content:'';
+                    @include pos(absolute,$t:px(-12),$r:px(-23));
+                    @include bgf;
+                    width:px(66);
+                    height:px(66);
+                    background-image:url($urlImg + 'ico_save.png');
+                }
+            }
+            .day {
+                font-size:px(16);
+                color:#555;
+                line-height:px(26);
+                code {
+                    font-size:px(26);
+                    font-weight:700;
+                    color:$fcr;
+                    @include wfr;
+                }
+                strong {
+                    color:$fcr;
+                }
+            }
+            &:disabled, &.disabled {
+                background:#F8F8F8 !important;
+            }
+        }
+        .img_wrap {
+            margin:px(24) 0 px(8);
+            text-align:center;
+            img {
+                max-width:px(660);
+                width:100%;
+                margin:0 auto
+            }
+        }
+        .sub_info_txt ~ .page_tit_wrap {
+            margin-top:px(30);
+        }
+        .page_tit_wrap {
+            &.type02 {
+                .tip_wrap {
+                    &:before {
+                        left:px(157) !important
+                    }
+                }
+            }
+            &.type03 {
+                .tip_wrap {
+                    &:before {
+                        left:px(157) !important
+                    }
+                }
+            }
+        }
+    }
+}
+.mileage_graph {
+    position:relative;
+    margin-top:px(24);
+    height:px(72);
+    &:before {
+        content:'';
+        @include pos(absolute,$l:0,$t:px(38),$r:px(18));
+        @include bdr(50);
+        height:px(6);
+        background-color:#ddd;
+    }
+    >ul {
+        position:relative;
+        width:100%;
+        height:100%;
+        >li {
+            @include pos(absolute,$l:0,$b:0);
+            .tit {
+                position:relative;
+                font-size:px(14);
+                font-weight:500;
+                color:#222;
+                text-align:center;
+                &:before {
+                    content:'';
+                    box-sizing:border-box;
+                    @include pos(absolute,$l:50%,$t:px(-17));
+                    transform:translateX(-50%);
+                    @include bdr(50);
+                    width:px(12);
+                    height:px(12);
+                    background-color:#fff;
+                    border:px(3) solid #FF7E00;
+                }
+            }
+            .bu {
+                @include pos(absolute,$l:50%,$t:px(-50));
+                transform:translateX(-50%);
+                @include bdr(50);
+                padding:0 px(7);
+                background-color:#FF7E00;
+                box-shadow: 0 px(3)  px(6) rgba(0,0,0,.16);
+                overflow:visible;
+                code {
+                    font-size:px(12);
+                    color:#fff;
+                    font-weight:700;
+                    line-height:px(24);
+                    @include wfr;
+                }
+                &:after {
+                    content:'';
+                    @include pos(absolute,$b:px(-5),$l:50%);
+                    width: 0px;
+                    height: 0px;
+                    border-top: 4px solid none;
+                    border-bottom:7px solid #FF7E00;
+                    border-left: 3px solid transparent;
+                    border-right: 3px solid transparent; 
+                    transform: translateX(-50%) rotate(180deg);
+                }
+            }
+            &.item01 {
+                left:13%;
+                .tit {
+                    &:before {
+                        border:px(3) solid #FF7E00;
+                    }
+                }
+                .bu {
+                    background-color:#FF7E00;
+                    &:after {
+                        border-bottom:7px solid #FF7E00;
+                    }
+                }
+            }
+            &.item02 {
+                left:28%;
+                .tit {
+                    &:before {
+                        border:px(3) solid #FF6201;
+                    }
+                }
+                .bu {
+                    background-color:#FF6201;
+                    &:after {
+                        border-bottom:7px solid #FF6201;
+                    }
+                }
+            }
+            &.item03 {
+                left:44%;
+                .tit {
+                    &:before {
+                        border:px(3) solid #FF5300;
+                    }
+                }
+                .bu {
+                    background-color:#FF5300;
+                    &:after {
+                        border-bottom:7px solid #FF5300;
+                    }
+                }
+            }
+            &.item04 {
+                left:auto;
+                right:11px;
+                .tit {
+                    &:before {
+                        border:px(3) solid #FF3801;
+                    }
+                }
+                .bu {
+                    background-color:#FF3801;
+                    &:after {
+                        border-bottom:7px solid #FF3801;
+                    }
+                }
+            }
+        }
+    }
+}
+.img_preview {
+    background-color:#000 !important;
+    .back {
+        background-color:#000;
+    }
+    .img_wrap {
+        @include pos(absolute, $t:50%);
+        transform:translateY(-50%);
+    }
+    #header {
+        background-color:#000;
+        .btn_close {
+            i {
+                @include svgfill(#fff,'ico_x.svg')
+            }
+        }
+    }
+}
+
+/*========= ijkim working =========*/
+.driving_report_end{
+    overflow:hidden;
+    h1{
+        text-align:center;
+        @include title('top')
+    }
+    .mbox{
+        position:relative;
+        z-index:1;
+        margin-top:px(64);
+        padding-top:px(60);
+        padding-bottom:px(30);
+        text-align:center;
+        .mtx{
+            font-size:px(18);
+            color:#fff;
+            strong{
+                display:inline-block;
+                @include wfr;
+                font-weight:700;
+                font-size:px(22);
+                border-bottom:.15rem solid #fff;
+                line-height:.8;
+                margin-right:px(4);
+                code, span{
+                    letter-spacing:px(-1);
+                    font-size:px(44)
+                }
+                code {
+                    @include wfr;
+                }
+            }
+        }
+        .stx{
+            margin-top:px(18);
+            font-size:px(12);
+            color:rgba(255,255,255,.65)
+        }
+        &:before{
+            content:'';
+            display:block;
+            @include bdr(12);
+            background:linear-gradient(135deg, #FF7E00 30%, #FF3701 100%);
+            @include pos(absolute, $l:px($inr), $r:px($inr), $b:0, $t:0);
+            z-index:-1
+        }
+        i{
+            @include bgf;
+            position:absolute;
+            &:first-child{
+                animation: mbox-icon01 .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                width:px(196/2);height:px(178/2);
+                background-image:url($urlImg + 'bg_money_left.png');
+                top:px(-90);left:0;
+            }
+            &:nth-child(2){
+                opacity:0;
+                animation: mbox-icon02 .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                width:px(316/2);height:px(273/2);
+                background-image:url($urlImg + 'bg_money.png');
+                top:px(-65);left:50%;
+                transform: translateX(-50%);
+            }
+            &:nth-child(3){
+                animation: mbox-icon03 .9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                width:px(114/2);height:px(161/2);
+                background-size:px(184/2) auto;
+                background-image:url($urlImg + 'bg_money_right.png');
+                top:px(10);right:0;
+            }
+        }
+    }
+    .list_base{
+        @include inr;
+        margin-top:px(15);
+    }
+}
+
+.driving_report_state{
+    .list_thum{
+        padding-top:px(20);
+        .round_wrap{
+            margin-bottom:px(8)
+        }
+    }
+}
+
+.ly_tag_select{
+    h2{
+        @include title('top2');
+        line-height:1.5;
+    }
+    section{
+        @include inr;
+        padding-top:px(30);
+    }
+    .list{
+        @include clear;
+        margin-top:px(20);
+        li{
+            float:left;
+            margin-top:px(8);
+            margin-right:px(8);
+            font-size:0;
+        }
+        .box{
+            @include checkbox;
+            vertical-align:top;
+            input + label{
+                padding:px(11) px(28) px(14);
+                border:.15rem solid #E2E2E2;
+                @include bdr(12);
+                font-size:px(16);
+                color:#555;
+                transition-duration:.25s;
+                transition-property: background, border
+            }
+            input:checked + label{
+                box-shadow:0 px(6) px(6) rgba(255,55,1,.2);
+                background-color:$fcr;
+                border-color:$fcr;
+                font-weight:700;
+                color:#fff;
+                will-change: contents;
+            }
+        }
+    }
+    .btn_area_wide{
+        margin-top:px(15)
+    }
+}

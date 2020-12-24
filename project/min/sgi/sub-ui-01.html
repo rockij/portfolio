@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title>SGI서울보증</title>
+    <link rel="stylesheet" type="text/css" href="inc/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="inc/css/common-ui.css">
+    <!-- <link rel="stylesheet" type="text/css" href="inc/css/style-cust.css">
+    <link rel="stylesheet" type="text/css" href="inc/css/style-mark.css"> -->
+    <link rel="stylesheet" type="text/css" href="inc/css/jquery.mobile-1.4.5.css">
+    <script type="text/javascript" src="inc/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="inc/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="inc/js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="inc/js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="inc/js/datepicker.js"></script>
+    <script type="text/javascript" src="inc/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="inc/js/com-ui.js"></script>
+</head>
+
+<body>
+    <!-- 페이지 유형 제작시 wrapper에 고유 클레스 추가 -->
+    <div class="wrapper ps-sub-page">
+        <header class="header">
+            <button type="button" class="prev-page" title="이전페이지 이동"></button>
+            <h1 class="header-tit">서울보증 layout01</h1>
+            <button type="button" class="sidenav-btn" title="전체메뉴"></button>
+        </header>
+        <!-- 페이지 하단에 플로팅 버튼이 있을시 class = btm-fixed 추가 -->
+        <section class="container btm-fixed">
+            <!-- 페이지 고정영역 -->
+            <!-- <div class="rollup-fix-area"></div> -->
+            <!-- 페이지 하단에 플로팅 버튼이 있을시 class = acco-fixed 추가 -->
+            <div class="content acco-fixed">
+                <div class="title-wrap inner">
+                    <h2 class="ps-tit02">타이틀</h2>
+                    <!-- 현진행단계 표시 aria-label = "진행단계, 총 X단계 중 X단계" 진행단계 별로 수정 -->
+                    <div class="ps-step" role="img" aria-label="진행단계, 총 8단계 중 1단계">
+                        <em class="pres-step">1</em><span class="symb"> / </span><em>8</em>
+                    </div>
+                </div>
+                <div class="cont-wrap">
+                    <div class="group-info-wrap">
+                        <div class="rollup-fix-wrap">
+                            <div class="rollup-fix-data fix-01">
+                                <h2 class="group-tit inner nonlost-wrap">서울보증보험</h2>
+                            </div>
+                        </div>
+                        <div class="group-cont inner">
+                            <ul class="ps-bu-list blue circle">
+                                <li>대표자 : 김상택</li>
+                                <li>대표번호 : 1670-7000</li>
+                                <li>서울종로구 김상옥로29,(연지동, 서울보증보험) <button type="button" class="inline-btn gray">확인</button></li>
+                                <li>대표자 : 김상택</li>
+                            </ul>
+                            <div class="btn-wrap">
+                                <button type="button" class="inline-btn blue">상세조회</button>
+                                <button type="button" class="inline-btn blue">인증요청</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rollup-fix-wrap">
+                        <div class="rollup-fix-data fix-02">
+                            <ul class="tab-01 nonlost-wrap">
+                                <li><button type="button" class="on" title="선택됨">버튼1</button></li>
+                                <li><button type="button">버튼2</button></li>
+                                <li><button type="button">버튼3</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="ps-accordion-wrap type-form">
+                        <li class="accordion-item">
+                            <button class="accordion-tit inner" type="button" title="펼쳐짐">123123보험계약자(보증서 신청자)</button>
+                            <div class="accordion-docu ">
+                                <div class="ps-from-item">
+                                    <p class="write-title">계약자 구분</p>
+                                    <div class="ps-rdo-wrap basic">
+                                        <div class="ps-rdo">
+                                            <input type="radio" id="from01-rdo01" name="from01-rdo" checked>
+                                            <label for="from01-rdo01">개인</label>
+                                        </div>
+                                        <div class="ps-rdo">
+                                            <input type="radio" id="from01-rdo02" name="from01-rdo">
+                                            <label for="from01-rdo02">법인</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">상호</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="상호" placeholder="텍스트 입력">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <button class="accordion-tit inner" type="button" title="펼쳐짐">피보험자(보증서 제출처)</button>
+                            <div class="accordion-docu">
+                                <div class="ps-from-item">
+                                    <p class="write-title">계약자 구분</p>
+                                    <div class="ps-rdo-wrap basic">
+                                        <div class="ps-rdo">
+                                            <input type="radio" id="from02-rdo01" name="from02-rdo" checked>
+                                            <label for="from02-rdo01">개인</label>
+                                        </div>
+                                        <div class="ps-rdo">
+                                            <input type="radio" id="from02-rdo02" name="from02-rdo">
+                                            <label for="from02-rdo02">법인</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">상호</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="상호" placeholder="텍스트 입력">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <button class="accordion-tit inner" type="button" title="펼쳐짐">피보험자(보증서 제출처)</button>
+                            <div class="accordion-docu">
+                                <div class="ps-from-item">
+                                    <p class="write-title">계약자 구분</p>
+                                    <div class="ps-rdo-wrap basic">
+                                        <div class="ps-rdo">
+                                            <input type="radio" id="from03-rdo01" name="from03-rdo" checked>
+                                            <label for="from03-rdo01">개인</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">상호</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="상호" placeholder="텍스트 입력">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="ps-from-item">
+                        <p class="write-title">계약자 구분</p>
+                        <div class="ps-rdo-wrap basic">
+                            <div class="ps-rdo">
+                                <input type="radio" id="from04-rdo01" name="from04-rdo" checked>
+                                <label for="from04-rdo01">개인</label>
+                            </div>
+                            <div class="ps-rdo">
+                                <input type="radio" id="from04-rdo02" name="from04-rdo">
+                                <label for="from04-rdo02">법인</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ps-from-item">
+                        <p class="write-title">상호</p>
+                        <div class="ps-input">
+                            <input type="text" title="상호" placeholder="텍스트 입력">
+                        </div>
+                    </div>
+                    <div class="ps-from-item">
+                        <p class="write-title">계약자 구분</p>
+                        <div class="ps-rdo-wrap basic">
+                            <div class="ps-rdo">
+                                <input type="radio" id="from05-rdo01" name="from05-rdo" checked>
+                                <label for="from05-rdo01">개인</label>
+                            </div>
+                            <div class="ps-rdo">
+                                <input type="radio" id="from05-rdo02" name="from05-rdo">
+                                <label for="from05-rdo02">법인</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ps-from-item">
+                        <p class="write-title">상호</p>
+                        <div class="ps-input">
+                            <input type="text" title="상호" placeholder="텍스트 입력">
+                        </div>
+                    </div>
+                    <div class="ps-from-item">
+                        <p class="write-title">계약자 구분</p>
+                        <div class="ps-rdo-wrap basic">
+                            <div class="ps-rdo">
+                                <input type="radio" id="from06-rdo01" name="from06-rdo" checked>
+                                <label for="from06-rdo01">개인</label>
+                            </div>
+                            <div class="ps-rdo">
+                                <input type="radio" id="from06-rdo02" name="from06-rdo">
+                                <label for="from06-rdo02">법인</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ps-from-item">
+                        <p class="write-title">상호</p>
+                        <div class="ps-input">
+                            <input type="text" title="상호" placeholder="텍스트 입력">
+                        </div>
+                    </div>
+                    <div class="cont-02" style="display:none;">
+                        <div class="swiper-container swiper-tab-wrap">
+                            <ul class="tab-02 swiper-wrapper">
+                                <li class="swiper-slide"><button type="button" class="on" title="선택됨">버튼</button></li>
+                                <li class="swiper-slide"><button type="button">길이가달라요</button></li>
+                                <li class="swiper-slide"><button type="button">스크롤이있어요</button></li>
+                                <li class="swiper-slide"><button type="button">그라데이션도</button></li>
+                                <li class="swiper-slide"><button type="button">있네요</button></li>
+                                <li class="swiper-slide"><button type="button">이건테스트에요</button></li>
+                                <li class="swiper-slide"><button type="button">잘되네요</button></li>
+                            </ul>
+                        </div>
+                        <div class="tab-conts-02">
+                            <div class="tab-cont on">
+                                <!-- <div class="swiper-container swiper-submain swiper-animation" style="background:#2d9ec3">
+                                    <ul class="swiper-wrapper">
+                                        <li class="swiper-slide" data-color="#2d9ec3">
+                                            <h3 class="tit">신원보증보험</h3>
+                                            <p class="txt">취직을 하여 신원보증을 필요로 하거나, 신원 보증기간이 만료되어 재정보증서류를 갱신하여야 할 직장인을 위하여 신원보증책임을 드리는 보험상품</p>
+                                            <ul class="ps-con-list icon">
+                                                <li><span class="n"></span><span class="t">직장에 취직하려고 하나 회사 입사시에 필요한 재정보증인이 없는 경우</span></li>
+                                                <li><span class="n"></span><span class="t">회사가 직원의 불법행위에 대한 손실을 보장받기 원하는 경우</span></li>
+                                            </ul>
+                                            <div class="link-flid">
+                                                <a href="#" class="link-item">자세히보기</a>
+                                                <a href="#" class="link-item">바로 가입하기</a>
+                                            </div>
+                                        </li>
+                                        <li class="swiper-slide" data-color="#4c5cd3">2</li>
+                                        <li class="swiper-slide" data-color="#686d8c">3</li>
+                                    </ul>
+                                    <div class="icon-wrap">
+                                        <i class="circle ico01"></i>
+                                        <i class="circle ico02"></i>
+                                        <i class="plus ico03"></i>
+                                        <i class="plus ico04"></i>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div> -->
+                            </div>
+                            <div class="tab-cont">
+                                
+                            </div>
+                            <div class="tab-cont">내용3</div>
+                            <div class="tab-cont">내용4</div>
+                            <div class="tab-cont">내용5</div>
+                            <div class="tab-cont">내용6</div>
+                            <div class="tab-cont">내용7</div>
+                        </div>
+                    </div>
+                    <!-- cont-02 -->
+                </div>
+                <!-- cont-wrap -->
+                
+            </div>
+            <!-- content -->
+            <div class="ps-accordion-wrap type-message-01">
+                <div class="accordion-item">
+                    <button class="accordion-tit on" type="button" title="펼쳐짐">보험증권 사서함이란</button>
+                    <div class="accordion-docu">
+                        <ul class="ps-bu-list gray circle">
+                            <li>보험증권 사서함이란 증권번호와 사서함번호를 이용하여 보험증권 인쇄가 가능한 서비스입니다.</li>
+                            <li>변제금액은 각 채권별 계좌번호를 송금하시기 바랍니다.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="fix-btn-wrap">
+                <button type="button" class="btn gray small">다시작성</button>
+                <button type="button" class="btn blue">다음</button>
+            </div>
+        </section>
+        <footer class="footer"></footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1169 @@
+@keyframes ball-clip-rotate{
+    0%{transform: rotate(0deg)}
+    50%{transform: rotate(180deg)}
+    100%{transform: rotate(360deg)}
+}
+
+@keyframes ball-bounce{
+    0%{ transform: translate(0, -50%) scale(1, .8) }
+    30%{ transform: translate(0, -150%) scale(.8, 1) }
+    60%{ transform: translate(0, -200%) scale(1, .8) }
+    85%{ transform: translate(0, -50%) scale(1, .8) }
+    88%{ transform: translate(0, -50%) scale(1, .8) }
+    95%{ transform: translate(0, -50%) scale(1, .8) }
+    100%{ transform: translate(0, -50%) scale(1, .8) }
+}
+
+@keyframes ball-bounce-shadow{
+    0%{ transform: scale(1, .25) }
+    30%{ transform: scale(1.5, .25) }
+    60%{ transform: scale(2, .25) }
+    85%{ transform: scale(1, .25) }
+    90%{ transform: scale(1, .25) }
+    100%{ transform: scale(1, .25) }
+}
+// animation: ball-bounce .75s infinite linear;
+
+@mixin aniball($ty:null){
+    @if $ty == "ball-bounce" {
+        position:relative;
+        .tar{
+            position:absolute;
+            animation: ball-bounce .75s infinite linear;
+        }
+        &:after{
+            content:'';
+            position:absolute;
+            width:100%;height:100%;
+            border-radius:50%;
+            background:rgba(0,0,0,.1);
+            transform: scale(1,.25);
+            animation: ball-bounce-shadow .75s infinite linear;
+        }
+    }
+}
+
+// pin bounce
+@keyframes pinbounce{
+    0%{ opacity:0;transform:translateY(-6rem) }
+    60% { opacity:1;transform:translateY(.5rem) }
+    80% { opacity:1;transform:translateY(-.25rem) }
+    100% { opacity:1;transform:translateY(0) }
+}
+
+@keyframes left-right-loop{
+    0%{ left:0 }
+    50%{ left:calc(100vw - 100px) }
+    100%{ left:0 }
+}
+
+@keyframes scrap-bottom-hide{
+    0%{ bottom:px(-114) }
+    25%{ bottom:0 }
+    75%{ bottom:0 }
+    100%{ bottom:px(-114) }
+}
+
+/* 세모그래프 */
+.gtangle{
+    position:relative;
+    overflow:hidden;
+    display:inline-block;
+    .gage{
+        display:block;
+        width:150%;height:150%;
+        @include pos(absolute, $b:0);
+        background-color:#fff;
+        transform-origin:bottom left;
+        transform: rotate(0deg);
+        transition-duration:1s;
+    }
+}
+.on{
+    .gtangle{
+        [data-angle*="1"],
+        [data-angle*="2"],
+        [data-angle*="3"],
+        [data-angle*="4"],
+        [data-angle*="5"],
+        [data-angle*="6"],
+        [data-angle*="7"],
+        [data-angle*="8"],
+        [data-angle*="9"],
+        [data-angle*="10"]{-webkit-transform: rotate(-4.8deg);transform: rotate(-4.8deg)}
+        [data-angle*="11"]{-webkit-transform: rotate(-5.1deg);transform: rotate(-5.1deg)}
+        [data-angle*="12"]{-webkit-transform: rotate(-5.4deg);transform: rotate(-5.4deg)}
+        [data-angle*="13"]{-webkit-transform: rotate(-5.7deg);transform: rotate(-5.7deg)}
+        [data-angle*="14"]{-webkit-transform: rotate(-6deg);transform: rotate(-6deg)}
+        [data-angle*="15"]{-webkit-transform: rotate(-6.3deg);transform: rotate(-6.3deg)}
+        [data-angle*="16"]{-webkit-transform: rotate(-6.6deg);transform: rotate(-6.6deg)}
+        [data-angle*="17"]{-webkit-transform: rotate(-6.9deg);transform: rotate(-6.9deg)}
+        [data-angle*="18"]{-webkit-transform: rotate(-7.2deg);transform: rotate(-7.2deg)}
+        [data-angle*="19"]{-webkit-transform: rotate(-7.5deg);transform: rotate(-7.5deg)}
+        [data-angle*="20"]{-webkit-transform: rotate(-7.8deg);transform: rotate(-7.8deg)}
+        [data-angle*="21"]{-webkit-transform: rotate(-8.1deg);transform: rotate(-8.1deg)}
+        [data-angle*="22"]{-webkit-transform: rotate(-8.4deg);transform: rotate(-8.4deg)}
+        [data-angle*="23"]{-webkit-transform: rotate(-8.7deg);transform: rotate(-8.7deg)}
+        [data-angle*="24"]{-webkit-transform: rotate(-9deg);transform: rotate(-9deg)}
+        [data-angle*="25"]{-webkit-transform: rotate(-9.3deg);transform: rotate(-9.3deg)}
+        [data-angle*="26"]{-webkit-transform: rotate(-9.6deg);transform: rotate(-9.6deg)}
+        [data-angle*="27"]{-webkit-transform: rotate(-9.9deg);transform: rotate(-9.9deg)}
+        [data-angle*="28"]{-webkit-transform: rotate(-10.2deg);transform: rotate(-10.2deg)}
+        [data-angle*="29"]{-webkit-transform: rotate(-10.5deg);transform: rotate(-10.5deg)}
+        [data-angle*="30"]{-webkit-transform: rotate(-10.8deg);transform: rotate(-10.8deg)}
+        [data-angle*="31"]{-webkit-transform: rotate(-11.1deg);transform: rotate(-11.1deg)}
+        [data-angle*="32"]{-webkit-transform: rotate(-11.4deg);transform: rotate(-11.4deg)}
+        [data-angle*="33"]{-webkit-transform: rotate(-11.7deg);transform: rotate(-11.7deg)}
+        [data-angle*="34"]{-webkit-transform: rotate(-12deg);transform: rotate(-12deg)}
+        [data-angle*="35"]{-webkit-transform: rotate(-12.3deg);transform: rotate(-12.3deg)}
+        [data-angle*="36"]{-webkit-transform: rotate(-12.6deg);transform: rotate(-12.6deg)}
+        [data-angle*="37"]{-webkit-transform: rotate(-12.9deg);transform: rotate(-12.9deg)}
+        [data-angle*="38"]{-webkit-transform: rotate(-13.2deg);transform: rotate(-13.2deg)}
+        [data-angle*="39"]{-webkit-transform: rotate(-13.5deg);transform: rotate(-13.5deg)}
+        [data-angle*="40"]{-webkit-transform: rotate(-13.8deg);transform: rotate(-13.8deg)}
+        [data-angle*="41"]{-webkit-transform: rotate(-14.1deg);transform: rotate(-14.1deg)}
+        [data-angle*="42"]{-webkit-transform: rotate(-14.4deg);transform: rotate(-14.4deg)}
+        [data-angle*="43"]{-webkit-transform: rotate(-14.7deg);transform: rotate(-14.7deg)}
+        [data-angle*="44"]{-webkit-transform: rotate(-15deg);transform: rotate(-15deg)}
+        [data-angle*="45"]{-webkit-transform: rotate(-15.3deg);transform: rotate(-15.3deg)}
+        [data-angle*="46"]{-webkit-transform: rotate(-15.6deg);transform: rotate(-15.6deg)}
+        [data-angle*="47"]{-webkit-transform: rotate(-15.9deg);transform: rotate(-15.9deg)}
+        [data-angle*="48"]{-webkit-transform: rotate(-16.2deg);transform: rotate(-16.2deg)}
+        [data-angle*="49"]{-webkit-transform: rotate(-16.5deg);transform: rotate(-16.5deg)}
+        [data-angle*="50"]{-webkit-transform: rotate(-16.8deg);transform: rotate(-16.8deg)}
+        [data-angle*="51"]{-webkit-transform: rotate(-17.1deg);transform: rotate(-17.1deg)}
+        [data-angle*="52"]{-webkit-transform: rotate(-17.4deg);transform: rotate(-17.4deg)}
+        [data-angle*="53"]{-webkit-transform: rotate(-17.7deg);transform: rotate(-17.7deg)}
+        [data-angle*="54"]{-webkit-transform: rotate(-18deg);transform: rotate(-18deg)}
+        [data-angle*="55"]{-webkit-transform: rotate(-18.3deg);transform: rotate(-18.3deg)}
+        [data-angle*="56"]{-webkit-transform: rotate(-18.6deg);transform: rotate(-18.6deg)}
+        [data-angle*="57"]{-webkit-transform: rotate(-18.9deg);transform: rotate(-18.9deg)}
+        [data-angle*="58"]{-webkit-transform: rotate(-19.2deg);transform: rotate(-19.2deg)}
+        [data-angle*="59"]{-webkit-transform: rotate(-19.5deg);transform: rotate(-19.5deg)}
+        [data-angle*="60"]{-webkit-transform: rotate(-19.8deg);transform: rotate(-19.8deg)}
+        [data-angle*="61"]{-webkit-transform: rotate(-20.1deg);transform: rotate(-20.1deg)}
+        [data-angle*="62"]{-webkit-transform: rotate(-20.4deg);transform: rotate(-20.4deg)}
+        [data-angle*="63"]{-webkit-transform: rotate(-20.7deg);transform: rotate(-20.7deg)}
+        [data-angle*="64"]{-webkit-transform: rotate(-21deg);transform: rotate(-21deg)}
+        [data-angle*="65"]{-webkit-transform: rotate(-21.3deg);transform: rotate(-21.3deg)}
+        [data-angle*="66"]{-webkit-transform: rotate(-21.6deg);transform: rotate(-21.6deg)}
+        [data-angle*="67"]{-webkit-transform: rotate(-21.9deg);transform: rotate(-21.9deg)}
+        [data-angle*="68"]{-webkit-transform: rotate(-22.2deg);transform: rotate(-22.2deg)}
+        [data-angle*="69"]{-webkit-transform: rotate(-22.5deg);transform: rotate(-22.5deg)}
+        [data-angle*="70"]{-webkit-transform: rotate(-22.8deg);transform: rotate(-22.8deg)}
+        [data-angle*="71"]{-webkit-transform: rotate(-23.1deg);transform: rotate(-23.1deg)}
+        [data-angle*="72"]{-webkit-transform: rotate(-23.4deg);transform: rotate(-23.4deg)}
+        [data-angle*="73"]{-webkit-transform: rotate(-23.7deg);transform: rotate(-23.7deg)}
+        [data-angle*="74"]{-webkit-transform: rotate(-24deg);transform: rotate(-24deg)}
+        [data-angle*="75"]{-webkit-transform: rotate(-24.3deg);transform: rotate(-24.3deg)}
+        [data-angle*="76"]{-webkit-transform: rotate(-24.6deg);transform: rotate(-24.6deg)}
+        [data-angle*="77"]{-webkit-transform: rotate(-24.9deg);transform: rotate(-24.9deg)}
+        [data-angle*="78"]{-webkit-transform: rotate(-25.2deg);transform: rotate(-25.2deg)}
+        [data-angle*="79"]{-webkit-transform: rotate(-25.5deg);transform: rotate(-25.5deg)}
+        [data-angle*="80"]{-webkit-transform: rotate(-25.8deg);transform: rotate(-25.8deg)}
+        [data-angle*="81"]{-webkit-transform: rotate(-26.1deg);transform: rotate(-26.1deg)}
+        [data-angle*="82"]{-webkit-transform: rotate(-26.4deg);transform: rotate(-26.4deg)}
+        [data-angle*="83"]{-webkit-transform: rotate(-26.7deg);transform: rotate(-26.7deg)}
+        [data-angle*="84"]{-webkit-transform: rotate(-27deg);transform: rotate(-27deg)}
+        [data-angle*="85"]{-webkit-transform: rotate(-27.3deg);transform: rotate(-27.3deg)}
+        [data-angle*="86"]{-webkit-transform: rotate(-27.6deg);transform: rotate(-27.6deg)}
+        [data-angle*="87"]{-webkit-transform: rotate(-27.9deg);transform: rotate(-27.9deg)}
+        [data-angle*="88"]{-webkit-transform: rotate(-28.2deg);transform: rotate(-28.2deg)}
+        [data-angle*="89"]{-webkit-transform: rotate(-28.5deg);transform: rotate(-28.5deg)}
+        [data-angle*="90"]{-webkit-transform: rotate(-28.8deg);transform: rotate(-28.8deg)}
+        [data-angle*="91"]{-webkit-transform: rotate(-29.1deg);transform: rotate(-29.1deg)}
+        [data-angle*="92"]{-webkit-transform: rotate(-29.4deg);transform: rotate(-29.4deg)}
+        [data-angle*="93"]{-webkit-transform: rotate(-29.7deg);transform: rotate(-29.7deg)}
+        [data-angle*="94"]{-webkit-transform: rotate(-30deg);transform: rotate(-30deg)}
+        [data-angle*="95"]{-webkit-transform: rotate(-30.3deg);transform: rotate(-30.3deg)}
+        [data-angle*="96"]{-webkit-transform: rotate(-30.6deg);transform: rotate(-30.6deg)}
+        [data-angle*="97"]{-webkit-transform: rotate(-30.9deg);transform: rotate(-30.9deg)}
+        [data-angle*="98"]{-webkit-transform: rotate(-31.2deg);transform: rotate(-31.2deg)}
+        [data-angle*="99"]{-webkit-transform: rotate(-31.5deg);transform: rotate(-31.5deg)}
+        [data-angle*="100"]{-webkit-transform: rotate(-31.8deg);transform: rotate(-31.8deg)}
+    }
+}
+
+/*content:attr(data-text1)"%";*/
+
+.progress{
+    position:relative;
+    width:10rem;height:10rem;
+    background-color:#f7f7f7;
+    @include bdr($o:true);
+    .circle{
+        position:relative;
+        .mask, .fill{
+            width:10.1rem;height:10rem;
+            position:absolute;
+            backface-visibility:hidden;
+            animation-duration:.6s;
+            animation-delay:.4s;
+            animation-timing-function:ease;
+            animation-fill-mode: forwards;
+        }
+        .mask{
+            clip:rect(0, 10.1rem, 10rem, 5rem);
+            .fill{
+                clip:rect(0, 5rem, 10rem, 0);
+                transform:rotate(0deg);
+                animation-duration:.5s;
+                animation-delay:.3s;
+                animation-timing-function:ease;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+    .circle1{
+        z-index:3
+    }
+    .circle2{
+        z-index:2
+    }
+    .inset, .outset{
+        z-index:9;
+        @include bdr($o:true);
+        @include pos(absolute, $t:50%, $l:50%);
+    }
+    .inset{
+        width:3.5rem;height:3.5rem;
+        margin:-1.75rem 0 0 -1.75rem;
+        background-color:#fff
+    }
+    .outset{
+        width:10rem;height:10rem;
+        margin:-5rem 0 0 -5rem;
+        box-shadow:0 0 0 2.5rem #fff
+    }
+    .shw{
+        position:absolute;bottom:-.3rem;left:50%;
+        z-index:10;
+        margin:-5rem 0 0 -4.75rem;
+        width:9.5rem;height:7.1rem;
+        background:url($urlImg + "chart_o_bg.png") no-repeat;
+        background-size:100% 100%
+    }
+    code{
+        letter-spacing:-.025rem
+    }
+    .per{
+        display:none;
+        font-weight:500;
+        font-style:italic;
+        font-size:1.2rem;
+        position:absolute;
+        z-index:10
+    }
+    &.zero{
+        &:before{
+            content:'0%';z-index:1;
+            @include pos(absolute, $t:50%, $l:50%);
+            transform:translate(-50%, -50%);
+            @include wfr;
+            font-weight:500;
+            font-size:1.8rem;
+            color:#fff
+        }
+
+    }
+    .circle{
+        &[data-val='1'] .fill.fix{
+            animation-name:half1
+        }
+        &[data-val='2'] .fill.fix{
+            animation-name:half2
+        }
+        &[data-val='3'] .fill.fix{
+            animation-name:half3
+        }
+        &[data-val='4'] .fill.fix{
+            animation-name:half4
+        }
+        &[data-val='5'] .fill.fix{
+            animation-name:half5
+        }
+        &[data-val='6'] .fill.fix{
+            animation-name:half6
+        }
+        &[data-val='7'] .fill.fix{
+            animation-name:half7
+        }
+        &[data-val='8'] .fill.fix{
+            animation-name:half8
+        }
+        &[data-val='9'] .fill.fix{
+            animation-name:half2
+        }
+        &[data-val='10'] .fill.fix{
+            animation-name:half10
+        }
+        &[data-val='11'] .fill.fix{
+            animation-name:half11
+        }
+        &[data-val='12'] .fill.fix{
+            animation-name:half12
+        }
+        &[data-val='13'] .fill.fix{
+            animation-name:half13
+        }
+        &[data-val='14'] .fill.fix{
+            animation-name:half14
+        }
+        &[data-val='15'] .fill.fix{
+            animation-name:half15
+        }
+        &[data-val='16'] .fill.fix{
+            animation-name:half16
+        }
+        &[data-val='17'] .fill.fix{
+            animation-name:half17
+        }
+        &[data-val='18'] .fill.fix{
+            animation-name:half18
+        }
+        &[data-val='19'] .fill.fix{
+            animation-name:half19
+        }
+        &[data-val='20'] .fill.fix{
+            animation-name:half20
+        }
+        &[data-val='21'] .fill.fix{
+            animation-name:half21
+        }
+        &[data-val='22'] .fill.fix{
+            animation-name:half22
+        }
+        &[data-val='23'] .fill.fix{
+            animation-name:half23
+        }
+        &[data-val='24'] .fill.fix{
+            animation-name:half24
+        }
+        &[data-val='25'] .fill.fix{
+            animation-name:half25
+        }
+        &[data-val='26'] .fill.fix{
+            animation-name:half26
+        }
+        &[data-val='27'] .fill.fix{
+            animation-name:half27
+        }
+        &[data-val='28'] .fill.fix{
+            animation-name:half28
+        }
+        &[data-val='29'] .fill.fix{
+            animation-name:half29
+        }
+        &[data-val='30'] .fill.fix{
+            animation-name:half30
+        }
+        &[data-val='31'] .fill.fix{
+            animation-name:half31
+        }
+        &[data-val='32'] .fill.fix{
+            animation-name:half32
+        }
+        &[data-val='33'] .fill.fix{
+            animation-name:half33
+        }
+        &[data-val='34'] .fill.fix{
+            animation-name:half34
+        }
+        &[data-val='35'] .fill.fix{
+            animation-name:half35
+        }
+        &[data-val='36'] .fill.fix{
+            animation-name:half36
+        }
+        &[data-val='37'] .fill.fix{
+            animation-name:half37
+        }
+        &[data-val='38'] .fill.fix{
+            animation-name:half38
+        }
+        &[data-val='39'] .fill.fix{
+            animation-name:half39
+        }
+        &[data-val='40'] .fill.fix{
+            animation-name:half40
+        }
+        &[data-val='41'] .fill.fix{
+            animation-name:half41
+        }
+        &[data-val='42'] .fill.fix{
+            animation-name:half42
+        }
+        &[data-val='43'] .fill.fix{
+            animation-name:half43
+        }
+        &[data-val='44'] .fill.fix{
+            animation-name:half44
+        }
+        &[data-val='45'] .fill.fix{
+            animation-name:half45
+        }
+        &[data-val='46'] .fill.fix{
+            animation-name:half46
+        }
+        &[data-val='47'] .fill.fix{
+            animation-name:half47
+        }
+        &[data-val='48'] .fill.fix{
+            animation-name:half48
+        }
+        &[data-val='49'] .fill.fix{
+            animation-name:half49
+        }
+        &[data-val='50'] .fill.fix{
+            animation-name:half50
+        }
+        &[data-val='51'] .fill.fix,
+        &[data-val='52'] .fill.fix,
+        &[data-val='53'] .fill.fix,
+        &[data-val='54'] .fill.fix,
+        &[data-val='55'] .fill.fix,
+        &[data-val='56'] .fill.fix,
+        &[data-val='57'] .fill.fix,
+        &[data-val='58'] .fill.fix,
+        &[data-val='59'] .fill.fix,
+        &[data-val='60'] .fill.fix,
+        &[data-val='61'] .fill.fix,
+        &[data-val='62'] .fill.fix,
+        &[data-val='63'] .fill.fix,
+        &[data-val='64'] .fill.fix,
+        &[data-val='65'] .fill.fix,
+        &[data-val='66'] .fill.fix,
+        &[data-val='67'] .fill.fix,
+        &[data-val='68'] .fill.fix,
+        &[data-val='69'] .fill.fix,
+        &[data-val='70'] .fill.fix,
+        &[data-val='71'] .fill.fix,
+        &[data-val='72'] .fill.fix,
+        &[data-val='73'] .fill.fix,
+        &[data-val='74'] .fill.fix,
+        &[data-val='75'] .fill.fix,
+        &[data-val='76'] .fill.fix,
+        &[data-val='77'] .fill.fix,
+        &[data-val='78'] .fill.fix,
+        &[data-val='79'] .fill.fix,
+        &[data-val='80'] .fill.fix,
+        &[data-val='81'] .fill.fix,
+        &[data-val='82'] .fill.fix,
+        &[data-val='83'] .fill.fix,
+        &[data-val='84'] .fill.fix,
+        &[data-val='85'] .fill.fix,
+        &[data-val='86'] .fill.fix,
+        &[data-val='87'] .fill.fix,
+        &[data-val='88'] .fill.fix,
+        &[data-val='90'] .fill.fix,
+        &[data-val='91'] .fill.fix,
+        &[data-val='92'] .fill.fix,
+        &[data-val='93'] .fill.fix,
+        &[data-val='94'] .fill.fix,
+        &[data-val='95'] .fill.fix,
+        &[data-val='96'] .fill.fix,
+        &[data-val='97'] .fill.fix,
+        &[data-val='98'] .fill.fix,
+        &[data-val='99'] .fill.fix,
+        &[data-val='100'] .fill.fix{
+            animation-name:half50
+        }
+        &[data-val='51'] .mask.full,
+        &[data-val='51'] .fill{
+            animation-name:half51
+        }
+        &[data-val='52'] .mask.full,
+        &[data-val='52'] .fill{
+            animation-name:half52
+        }
+        &[data-val='53'] .mask.full,
+        &[data-val='53'] .fill{
+            animation-name:half53
+        }
+        &[data-val='54'] .mask.full,
+        &[data-val='54'] .fill{
+            animation-name:half54
+        }
+        &[data-val='55'] .mask.full,
+        &[data-val='55'] .fill{
+            animation-name:half55
+        }
+        &[data-val='56'] .mask.full,
+        &[data-val='56'] .fill{
+            animation-name:half56
+        }
+        &[data-val='57'] .mask.full,
+        &[data-val='57'] .fill{
+            animation-name:half57
+        }
+        &[data-val='58'] .mask.full,
+        &[data-val='58'] .fill{
+            animation-name:half58
+        }
+        &[data-val='59'] .mask.full,
+        &[data-val='59'] .fill{
+            animation-name:half59
+        }
+        &[data-val='60'] .mask.full,
+        &[data-val='60'] .fill{
+            animation-name:half60
+        }
+        &[data-val='61'] .mask.full,
+        &[data-val='61'] .fill{
+            animation-name:half61
+        }
+        &[data-val='62'] .mask.full,
+        &[data-val='62'] .fill{
+            animation-name:half62
+        }
+        &[data-val='63'] .mask.full,
+        &[data-val='63'] .fill{
+            animation-name:half63
+        }
+        &[data-val='64'] .mask.full,
+        &[data-val='64'] .fill{
+            animation-name:half64
+        }
+        &[data-val='65'] .mask.full,
+        &[data-val='65'] .fill{
+            animation-name:half65
+        }
+        &[data-val='66'] .mask.full,
+        &[data-val='66'] .fill{
+            animation-name:half66
+        }
+        &[data-val='67'] .mask.full,
+        &[data-val='67'] .fill{
+            animation-name:half67
+        }
+        &[data-val='68'] .mask.full,
+        &[data-val='68'] .fill{
+            animation-name:half68
+        }
+        &[data-val='69'] .mask.full,
+        &[data-val='69'] .fill{
+            animation-name:half69
+        }
+        &[data-val='70'] .mask.full,
+        &[data-val='70'] .fill{
+            animation-name:half70
+        }
+        &[data-val='71'] .mask.full,
+        &[data-val='71'] .fill{
+            animation-name:half71
+        }
+        &[data-val='72'] .mask.full,
+        &[data-val='72'] .fill{
+            animation-name:half72
+        }
+        &[data-val='73'] .mask.full,
+        &[data-val='73'] .fill{
+            animation-name:half73
+        }
+        &[data-val='74'] .mask.full,
+        &[data-val='74'] .fill{
+            animation-name:half74
+        }
+        &[data-val='75'] .mask.full,
+        &[data-val='75'] .fill{
+            animation-name:half75
+        }
+        &[data-val='76'] .mask.full,
+        &[data-val='76'] .fill{
+            animation-name:half76
+        }
+        &[data-val='77'] .mask.full,
+        &[data-val='77'] .fill{
+            animation-name:half77
+        }
+        &[data-val='78'] .mask.full,
+        &[data-val='78'] .fill{
+            animation-name:half78
+        }
+        &[data-val='79'] .mask.full,
+        &[data-val='79'] .fill{
+            animation-name:half79
+        }
+        &[data-val='80'] .mask.full,
+        &[data-val='80'] .fill{
+            animation-name:half80
+        }
+        &[data-val='81'] .mask.full,
+        &[data-val='81'] .fill{
+            animation-name:half81
+        }
+        &[data-val='82'] .mask.full,
+        &[data-val='82'] .fill{
+            animation-name:half82
+        }
+        &[data-val='83'] .mask.full,
+        &[data-val='83'] .fill{
+            animation-name:half83
+        }
+        &[data-val='84'] .mask.full,
+        &[data-val='84'] .fill{
+            animation-name:half84
+        }
+        &[data-val='85'] .mask.full,
+        &[data-val='85'] .fill{
+            animation-name:half85
+        }
+        &[data-val='86'] .mask.full,
+        &[data-val='86'] .fill{
+            animation-name:half86
+        }
+        &[data-val='87'] .mask.full,
+        &[data-val='87'] .fill{
+            animation-name:half87
+        }
+        &[data-val='88'] .mask.full,
+        &[data-val='88'] .fill{
+            animation-name:half88
+        }
+        &[data-val='89'] .mask.full,
+        &[data-val='89'] .fill{
+            animation-name:half89
+        }
+        &[data-val='90'] .mask.full,
+        &[data-val='90'] .fill{
+            animation-name:half90
+        }
+        &[data-val='91'] .mask.full,
+        &[data-val='91'] .fill{
+            animation-name:half91
+        }
+        &[data-val='92'] .mask.full,
+        &[data-val='92'] .fill{
+            animation-name:half92
+        }
+        &[data-val='93'] .mask.full,
+        &[data-val='93'] .fill{
+            animation-name:half93
+        }
+        &[data-val='94'] .mask.full,
+        &[data-val='94'] .fill{
+            animation-name:half94
+        }
+        &[data-val='95'] .mask.full,
+        &[data-val='95'] .fill{
+            animation-name:half95
+        }
+        &[data-val='96'] .mask.full,
+        &[data-val='96'] .fill{
+            animation-name:half96
+        }
+        &[data-val='97'] .mask.full,
+        &[data-val='97'] .fill{
+            animation-name:half97
+        }
+        &[data-val='98'] .mask.full,
+        &[data-val='98'] .fill{
+            animation-name:half98
+        }
+        &[data-val='99'] .mask.full,
+        &[data-val='99'] .fill{
+            animation-name:half99
+        }
+        &[data-val='100'] .mask.full,
+        &[data-val='100'] .fill{
+            animation-name:half100
+        }
+    }
+}
+/* aos5 이하 */
+.aos5{
+    .progress{
+        .circle{
+            .mask, .fill{
+                animation-duration:0s;
+                animation-delay:0s
+            }
+            .mask .fill{
+                animation-duration:0s;
+                animation-delay:0s
+            }
+            &[data-val='1'] .fill.fix{
+                transform:rotate(3.6deg)
+            }
+            &[data-val='2'] .fill.fix{
+                transform:rotate(7.2deg)
+            }
+            &[data-val='3'] .fill.fix{
+                transform:rotate(10.8deg)
+            }
+            &[data-val='4'] .fill.fix{
+                transform:rotate(14.4deg)
+            }
+            &[data-val='5'] .fill.fix{
+                transform:rotate(18deg)
+            }
+            &[data-val='6'] .fill.fix{
+                transform:rotate(21.6deg)
+            }
+            &[data-val='7'] .fill.fix{
+                transform:rotate(25.2deg)
+            }
+            &[data-val='8'] .fill.fix{
+                transform:rotate(28.8deg)
+            }
+            &[data-val='9'] .fill.fix{
+                transform:rotate(32.4deg)
+            }
+            &[data-val='10'] .fill.fix{
+                transform:rotate(36deg)
+            }
+            &[data-val='11'] .fill.fix{
+                transform:rotate(39.6deg)
+            }
+            &[data-val='11'] .fill.fix{
+                transform:rotate(39.6deg)
+            }
+            &[data-val='12'] .fill.fix{
+                transform:rotate(43.2deg)
+            }
+            &[data-val='13'] .fill.fix{
+                transform:rotate(46.8deg)
+            }
+            &[data-val='14'] .fill.fix{
+                transform:rotate(50.4deg)
+            }
+            &[data-val='15'] .fill.fix{
+                transform:rotate(54deg)
+            }
+            &[data-val='16'] .fill.fix{
+                transform:rotate(57.6deg)
+            }
+            &[data-val='17'] .fill.fix{
+                transform:rotate(61.2deg)
+            }
+            &[data-val='18'] .fill.fix{
+                transform:rotate(64.8deg)
+            }
+            &[data-val='19'] .fill.fix{
+                transform:rotate(68.4deg)
+            }
+            &[data-val='20'] .fill.fix{
+                transform:rotate(72deg)
+            }
+            &[data-val='30'] .fill.fix{
+                transform:rotate(108deg)
+            }
+            &[data-val='31'] .fill.fix{
+                transform:rotate(111.6deg)
+            }
+            &[data-val='32'] .fill.fix{
+                transform:rotate(115.2deg)
+            }
+            &[data-val='33'] .fill.fix{
+                transform:rotate(118.8deg)
+            }
+            &[data-val='34'] .fill.fix{
+                transform:rotate(122.4deg)
+            }
+            &[data-val='35'] .fill.fix{
+                transform:rotate(126deg)
+            }
+            &[data-val='36'] .fill.fix{
+                transform:rotate(129.6deg)
+            }
+            &[data-val='37'] .fill.fix{
+                transform:rotate(133.2deg)
+            }
+            &[data-val='38'] .fill.fix{
+                transform:rotate(136.8deg)
+            }
+            &[data-val='39'] .fill.fix{
+                transform:rotate(140.4deg)
+            }
+            &[data-val='40'] .fill.fix{
+                transform:rotate(144deg)
+            }
+            &[data-val='41'] .fill.fix{
+                transform:rotate(147.6deg)
+            }
+            &[data-val='42'] .fill.fix{
+                transform:rotate(151.2deg)
+            }
+            &[data-val='43'] .fill.fix{
+                transform:rotate(154.8deg)
+            }
+            &[data-val='44'] .fill.fix{
+                transform:rotate(158.4deg)
+            }
+            &[data-val='45'] .fill.fix{
+                transform:rotate(162deg)
+            }
+            &[data-val='46'] .fill.fix{
+                transform:rotate(165.6deg)
+            }
+            &[data-val='47'] .fill.fix{
+                transform:rotate(169.2deg)
+            }
+            &[data-val='48'] .fill.fix{
+                transform:rotate(172.8deg)
+            }
+            &[data-val='49'] .fill.fix{
+                transform:rotate(176.4deg)
+            }
+            &[data-val='50'] .fill.fix{
+                transform:rotate(180deg);
+                clip:rect(0, 5.1rem,  0rem, 0)
+            }
+            &[data-val='51'] .fill.fix,
+            &[data-val='52'] .fill.fix,
+            &[data-val='53'] .fill.fix,
+            &[data-val='54'] .fill.fix,
+            &[data-val='55'] .fill.fix,
+            &[data-val='56'] .fill.fix,
+            &[data-val='57'] .fill.fix,
+            &[data-val='58'] .fill.fix,
+            &[data-val='59'] .fill.fix,
+            &[data-val='60'] .fill.fix,
+            &[data-val='61'] .fill.fix,
+            &[data-val='62'] .fill.fix,
+            &[data-val='63'] .fill.fix,
+            &[data-val='64'] .fill.fix,
+            &[data-val='65'] .fill.fix,
+            &[data-val='66'] .fill.fix,
+            &[data-val='67'] .fill.fix,
+            &[data-val='68'] .fill.fix,
+            &[data-val='69'] .fill.fix,
+            &[data-val='70'] .fill.fix,
+            &[data-val='71'] .fill.fix,
+            &[data-val='72'] .fill.fix,
+            &[data-val='73'] .fill.fix,
+            &[data-val='74'] .fill.fix,
+            &[data-val='75'] .fill.fix,
+            &[data-val='76'] .fill.fix,
+            &[data-val='77'] .fill.fix,
+            &[data-val='78'] .fill.fix,
+            &[data-val='79'] .fill.fix,
+            &[data-val='80'] .fill.fix,
+            &[data-val='81'] .fill.fix,
+            &[data-val='82'] .fill.fix,
+            &[data-val='83'] .fill.fix,
+            &[data-val='84'] .fill.fix,
+            &[data-val='85'] .fill.fix,
+            &[data-val='86'] .fill.fix,
+            &[data-val='87'] .fill.fix,
+            &[data-val='88'] .fill.fix,
+            &[data-val='90'] .fill.fix,
+            &[data-val='91'] .fill.fix,
+            &[data-val='92'] .fill.fix,
+            &[data-val='93'] .fill.fix,
+            &[data-val='94'] .fill.fix,
+            &[data-val='95'] .fill.fix,
+            &[data-val='96'] .fill.fix,
+            &[data-val='97'] .fill.fix,
+            &[data-val='98'] .fill.fix,
+            &[data-val='99'] .fill.fix,
+            &[data-val='100'] .fill.fix{
+                transform:rotate(180deg);
+                clip:rect(0, 5.1rem,  0rem, 0)
+            }
+            &[data-val='51'] .mask.full,
+            &[data-val='51'] .fill{
+                transform:rotate(91.8deg)
+            }
+            &[data-val='52'] .mask.full,
+            &[data-val='52'] .fill{
+                transform:rotate(93.6deg)
+            }
+            &[data-val='53'] .mask.full,
+            &[data-val='53'] .fill{
+                transform:rotate(95.4deg)
+            }
+            &[data-val='54'] .mask.full,
+            &[data-val='54'] .fill{
+                transform:rotate(97.2deg)
+            }
+            &[data-val='55'] .mask.full,
+            &[data-val='55'] .fill{
+                transform:rotate(99deg)
+            }
+            &[data-val='56'] .mask.full,
+            &[data-val='56'] .fill{
+                transform:rotate(100.8deg)
+            }
+            &[data-val='57'] .mask.full,
+            &[data-val='57'] .fill{
+                transform:rotate(102.6deg)
+            }
+            &[data-val='58'] .mask.full,
+            &[data-val='58'] .fill{
+                transform:rotate(104.4deg)
+            }
+            &[data-val='59'] .mask.full,
+            &[data-val='59'] .fill{
+                transform:rotate(106.2deg)
+            }
+            &[data-val='60'] .mask.full,
+            &[data-val='60'] .fill{
+                transform:rotate(108deg)
+            }
+            &[data-val='61'] .mask.full,
+            &[data-val='61'] .fill{
+                transform:rotate(109.8deg)
+            }
+            &[data-val='62'] .mask.full,
+            &[data-val='62'] .fill{
+                transform:rotate(111.6deg)
+            }
+            &[data-val='63'] .mask.full,
+            &[data-val='63'] .fill{
+                transform:rotate(113.4deg)
+            }
+            &[data-val='64'] .mask.full,
+            &[data-val='64'] .fill{
+                transform:rotate(115.2deg)
+            }
+            &[data-val='65'] .mask.full,
+            &[data-val='65'] .fill{
+                transform:rotate(117deg)
+            }
+            &[data-val='66'] .mask.full,
+            &[data-val='66'] .fill{
+                transform:rotate(118.8deg)
+            }
+            &[data-val='67'] .mask.full,
+            &[data-val='67'] .fill{
+                transform:rotate(120.6deg)
+            }
+            &[data-val='68'] .mask.full,
+            &[data-val='68'] .fill{
+                transform:rotate(122.4deg)
+            }
+            &[data-val='69'] .mask.full,
+            &[data-val='69'] .fill{
+                transform:rotate(124.2deg)
+            }
+            &[data-val='70'] .mask.full,
+            &[data-val='70'] .fill{
+                transform:rotate(126deg)
+            }
+            &[data-val='71'] .mask.full,
+            &[data-val='71'] .fill{
+                transform:rotate(127.8deg)
+            }
+            &[data-val='72'] .mask.full,
+            &[data-val='72'] .fill{
+                transform:rotate(129.6deg)
+            }
+            &[data-val='73'] .mask.full,
+            &[data-val='73'] .fill{
+                transform:rotate(131.4deg)
+            }
+            &[data-val='74'] .mask.full,
+            &[data-val='74'] .fill{
+                transform:rotate(133.2deg)
+            }
+            &[data-val='75'] .mask.full,
+            &[data-val='75'] .fill{
+                transform:rotate(135deg)
+            }
+            &[data-val='76'] .mask.full,
+            &[data-val='76'] .fill{
+                transform:rotate(136.8deg)
+            }
+            &[data-val='77'] .mask.full,
+            &[data-val='77'] .fill{
+                transform:rotate(138.6deg)
+            }
+            &[data-val='78'] .mask.full,
+            &[data-val='78'] .fill{
+                transform:rotate(140.4deg)
+            }
+            &[data-val='79'] .mask.full,
+            &[data-val='79'] .fill{
+                transform:rotate(142.2deg)
+            }
+            &[data-val='80'] .mask.full,
+            &[data-val='80'] .fill{
+                transform:rotate(144deg)
+            }
+            &[data-val='81'] .mask.full,
+            &[data-val='81'] .fill{
+                transform:rotate(145.8deg)
+            }
+            &[data-val='82'] .mask.full,
+            &[data-val='82'] .fill{
+                transform:rotate(147.6deg)
+            }
+            &[data-val='83'] .mask.full,
+            &[data-val='83'] .fill{
+                transform:rotate(149.4deg)
+            }
+            &[data-val='84'] .mask.full,
+            &[data-val='84'] .fill{
+                transform:rotate(151.2deg)
+            }
+            &[data-val='85'] .mask.full,
+            &[data-val='85'] .fill{
+                transform:rotate(153deg)
+            }
+            &[data-val='86'] .mask.full,
+            &[data-val='86'] .fill{
+                transform:rotate(154.8deg)
+            }
+            &[data-val='87'] .mask.full,
+            &[data-val='87'] .fill{
+                transform:rotate(156.6deg)
+            }
+            &[data-val='88'] .mask.full,
+            &[data-val='88'] .fill{
+                transform:rotate(158.4deg)
+            }
+            &[data-val='89'] .mask.full,
+            &[data-val='89'] .fill{
+                transform:rotate(160.2deg)
+            }
+            &[data-val='90'] .mask.full,
+            &[data-val='90'] .fill{
+                transform:rotate(162deg)
+            }
+            &[data-val='91'] .mask.full,
+            &[data-val='91'] .fill{
+                transform:rotate(163.8deg)
+            }
+            &[data-val='92'] .mask.full,
+            &[data-val='92'] .fill{
+                transform:rotate(165.6deg)
+            }
+            &[data-val='93'] .mask.full,
+            &[data-val='93'] .fill{
+                transform:rotate(167.4deg)
+            }
+            &[data-val='94'] .mask.full,
+            &[data-val='94'] .fill{
+                transform:rotate(169.2deg)
+            }
+            &[data-val='95'] .mask.full,
+            &[data-val='95'] .fill{
+                transform:rotate(171deg)
+            }
+            &[data-val='96'] .mask.full,
+            &[data-val='96'] .fill{
+                transform:rotate(172.8deg)
+            }
+            &[data-val='97'] .mask.full,
+            &[data-val='97'] .fill{
+                transform:rotate(174.6deg)
+            }
+            &[data-val='98'] .mask.full,
+            &[data-val='98'] .fill{
+                transform:rotate(176.4deg)
+            }
+            &[data-val='99'] .mask.full,
+            &[data-val='99'] .fill{
+                transform:rotate(178.2deg)
+            }
+            &[data-val='100'] .mask.full,
+            &[data-val='100'] .fill{
+                transform:rotate(180deg)
+            }
+        }
+    }
+
+}
+
+/* keyfreams */
+@keyframes half1{ 0%{transform:rotate(0deg)} 100%{transform:rotate(3.6deg)} }
+@keyframes half2{ 0%{transform:rotate(0deg)} 100%{transform:rotate(7.2deg)} }
+@keyframes half3{ 0%{transform:rotate(0deg)} 100%{transform:rotate(10.8deg)} }
+@keyframes half4{ 0%{transform:rotate(0deg)} 100%{transform:rotate(14.4deg)} }
+@keyframes half5{ 0%{transform:rotate(0deg)} 100%{transform:rotate(18deg)} }
+@keyframes half6{ 0%{transform:rotate(0deg)} 100%{transform:rotate(21.6deg)} }
+@keyframes half7{ 0%{transform:rotate(0deg)} 100%{transform:rotate(25.2deg)} }
+@keyframes half8{ 0%{transform:rotate(0deg)} 100%{transform:rotate(28.8deg)} }
+@keyframes half9{ 0%{transform:rotate(0deg)} 100%{transform:rotate(32.4deg)} }
+@keyframes half10{ 0%{transform:rotate(0deg)} 100%{transform:rotate(36deg)} }
+@keyframes half11{ 0%{transform:rotate(0deg)} 100%{transform:rotate(39.6deg)} }
+@keyframes half12{ 0%{transform:rotate(0deg)} 100%{transform:rotate(43.2deg)} }
+@keyframes half13{ 0%{transform:rotate(0deg)} 100%{transform:rotate(46.8deg)} }
+@keyframes half14{ 0%{transform:rotate(0deg)} 100%{transform:rotate(50.4deg)} }
+@keyframes half15{ 0%{transform:rotate(0deg)} 100%{transform:rotate(54deg)} }
+@keyframes half16{ 0%{transform:rotate(0deg)} 100%{transform:rotate(57.6deg)} }
+@keyframes half17{ 0%{transform:rotate(0deg)} 100%{transform:rotate(61.2deg)} }
+@keyframes half18{ 0%{transform:rotate(0deg)} 100%{transform:rotate(64.8deg)} }
+@keyframes half19{ 0%{transform:rotate(0deg)} 100%{transform:rotate(68.4deg)} }
+@keyframes half20{ 0%{transform:rotate(0deg)} 100%{transform:rotate(72deg)} }
+@keyframes half21{ 0%{transform:rotate(0deg)} 100%{transform:rotate(75.6deg)} }
+@keyframes half22{ 0%{transform:rotate(0deg)} 100%{transform:rotate(79.2deg)} }
+@keyframes half23{ 0%{transform:rotate(0deg)} 100%{transform:rotate(82.8deg)} }
+@keyframes half24{ 0%{transform:rotate(0deg)} 100%{transform:rotate(86.4deg)} }
+@keyframes half25{ 0%{transform:rotate(0deg)} 100%{transform:rotate(90deg)} }
+@keyframes half26{ 0%{transform:rotate(0deg)} 100%{transform:rotate(93.6deg)} }
+@keyframes half27{ 0%{transform:rotate(0deg)} 100%{transform:rotate(97.2deg)} }
+@keyframes half28{ 0%{transform:rotate(0deg)} 100%{transform:rotate(100.8deg)} }
+@keyframes half29{ 0%{transform:rotate(0deg)} 100%{transform:rotate(104.4deg)} }
+@keyframes half30{ 0%{transform:rotate(0deg)} 100%{transform:rotate(108deg)} }
+@keyframes half31{ 0%{transform:rotate(0deg)} 100%{transform:rotate(111.6deg)} }
+@keyframes half32{ 0%{transform:rotate(0deg)} 100%{transform:rotate(115.2deg)} }
+@keyframes half33{ 0%{transform:rotate(0deg)} 100%{transform:rotate(118.8deg)} }
+@keyframes half34{ 0%{transform:rotate(0deg)} 100%{transform:rotate(122.4deg)} }
+@keyframes half35{ 0%{transform:rotate(0deg)} 100%{transform:rotate(126deg)} }
+@keyframes half36{ 0%{transform:rotate(0deg)} 100%{transform:rotate(129.6deg)} }
+@keyframes half37{ 0%{transform:rotate(0deg)} 100%{transform:rotate(133.2deg)} }
+@keyframes half38{ 0%{transform:rotate(0deg)} 100%{transform:rotate(136.8deg)} }
+@keyframes half39{ 0%{transform:rotate(0deg)} 100%{transform:rotate(140.4deg)} }
+@keyframes half40{ 0%{transform:rotate(0deg)} 100%{transform:rotate(144deg)} }
+@keyframes half41{ 0%{transform:rotate(0deg)} 100%{transform:rotate(147.6deg)} }
+@keyframes half42{ 0%{transform:rotate(0deg)} 100%{transform:rotate(151.2deg)} }
+@keyframes half43{ 0%{transform:rotate(0deg)} 100%{transform:rotate(154.8deg)} }
+@keyframes half44{ 0%{transform:rotate(0deg)} 100%{transform:rotate(158.4deg)} }
+@keyframes half45{ 0%{transform:rotate(0deg)} 100%{transform:rotate(162deg)} }
+@keyframes half46{ 0%{transform:rotate(0deg)} 100%{transform:rotate(165.6deg)} }
+@keyframes half47{ 0%{transform:rotate(0deg)} 100%{transform:rotate(169.2deg)} }
+@keyframes half48{ 0%{transform:rotate(0deg)} 100%{transform:rotate(172.8deg)} }
+@keyframes half49{ 0%{transform:rotate(0deg)} 100%{transform:rotate(176.4deg)} }
+@keyframes half50{ 0%{transform:rotate(0deg)} 100%{transform:rotate(180deg);clip:rect(0, 5.1rem, 10rem, 0)}}
+@keyframes half51{ 0%{transform:rotate(0deg)} 100%{transform:rotate(91.8deg)} }
+@keyframes half52{ 0%{transform:rotate(0deg)} 100%{transform:rotate(93.6deg)} }
+@keyframes half53{ 0%{transform:rotate(0deg)} 100%{transform:rotate(95.4deg)} }
+@keyframes half54{ 0%{transform:rotate(0deg)} 100%{transform:rotate(97.2deg)} }
+@keyframes half55{ 0%{transform:rotate(0deg)} 100%{transform:rotate(99deg)} }
+@keyframes half56{ 0%{transform:rotate(0deg)} 100%{transform:rotate(100.8deg)} }
+@keyframes half57{ 0%{transform:rotate(0deg)} 100%{transform:rotate(102.6deg)} }
+@keyframes half58{ 0%{transform:rotate(0deg)} 100%{transform:rotate(104.4deg)} }
+@keyframes half59{ 0%{transform:rotate(0deg)} 100%{transform:rotate(106.2deg)} }
+@keyframes half60{ 0%{transform:rotate(0deg)} 100%{transform:rotate(108deg)} }
+@keyframes half61{ 0%{transform:rotate(0deg)} 100%{transform:rotate(109.8deg)} }
+@keyframes half62{ 0%{transform:rotate(0deg)} 100%{transform:rotate(111.6deg)} }
+@keyframes half63{ 0%{transform:rotate(0deg)} 100%{transform:rotate(113.4deg)} }
+@keyframes half64{ 0%{transform:rotate(0deg)} 100%{transform:rotate(115.2deg)} }
+@keyframes half65{ 0%{transform:rotate(0deg)} 100%{transform:rotate(117deg)} }
+@keyframes half66{ 0%{transform:rotate(0deg)} 100%{transform:rotate(118.8deg)} }
+@keyframes half67{ 0%{transform:rotate(0deg)} 100%{transform:rotate(120.6deg)} }
+@keyframes half68{ 0%{transform:rotate(0deg)} 100%{transform:rotate(122.4deg)} }
+@keyframes half69{ 0%{transform:rotate(0deg)} 100%{transform:rotate(124.2deg)} }
+@keyframes half70{ 0%{transform:rotate(0deg)} 100%{transform:rotate(126deg)} }
+@keyframes half71{ 0%{transform:rotate(0deg)} 100%{transform:rotate(127.8deg)} }
+@keyframes half72{ 0%{transform:rotate(0deg)} 100%{transform:rotate(129.6deg)} }
+@keyframes half73{ 0%{transform:rotate(0deg)} 100%{transform:rotate(131.4deg)} }
+@keyframes half74{ 0%{transform:rotate(0deg)} 100%{transform:rotate(133.2deg)} }
+@keyframes half75{ 0%{transform:rotate(0deg)} 100%{transform:rotate(135deg)} }
+@keyframes half76{ 0%{transform:rotate(0deg)} 100%{transform:rotate(136.8deg)} }
+@keyframes half77{ 0%{transform:rotate(0deg)} 100%{transform:rotate(138.6deg)} }
+@keyframes half78{ 0%{transform:rotate(0deg)} 100%{transform:rotate(140.4deg)} }
+@keyframes half79{ 0%{transform:rotate(0deg)} 100%{transform:rotate(142.2deg)} }
+@keyframes half80{ 0%{transform:rotate(0deg)} 100%{transform:rotate(144deg)} }
+@keyframes half81{ 0%{transform:rotate(0deg)} 100%{transform:rotate(145.8deg)} }
+@keyframes half82{ 0%{transform:rotate(0deg)} 100%{transform:rotate(147.6deg)} }
+@keyframes half83{ 0%{transform:rotate(0deg)} 100%{transform:rotate(149.4deg)} }
+@keyframes half84{ 0%{transform:rotate(0deg)} 100%{transform:rotate(151.2deg)} }
+@keyframes half85{ 0%{transform:rotate(0deg)} 100%{transform:rotate(153deg)} }
+@keyframes half86{ 0%{transform:rotate(0deg)} 100%{transform:rotate(154.8deg)} }
+@keyframes half87{ 0%{transform:rotate(0deg)} 100%{transform:rotate(156.6deg)} }
+@keyframes half88{ 0%{transform:rotate(0deg)} 100%{transform:rotate(158.4deg)} }
+@keyframes half89{ 0%{transform:rotate(0deg)} 100%{transform:rotate(160.2deg)} }
+@keyframes half90{ 0%{transform:rotate(0deg)} 100%{transform:rotate(162deg)} }
+@keyframes half91{ 0%{transform:rotate(0deg)} 100%{transform:rotate(163.8deg)} }
+@keyframes half92{ 0%{transform:rotate(0deg)} 100%{transform:rotate(165.6deg)} }
+@keyframes half93{ 0%{transform:rotate(0deg)} 100%{transform:rotate(167.4deg)} }
+@keyframes half94{ 0%{transform:rotate(0deg)} 100%{transform:rotate(169.2deg)} }
+@keyframes half95{ 0%{transform:rotate(0deg)} 100%{transform:rotate(171deg)} }
+@keyframes half96{ 0%{transform:rotate(0deg)} 100%{transform:rotate(172.8deg)} }
+@keyframes half97{ 0%{transform:rotate(0deg)} 100%{transform:rotate(174.6deg)} }
+@keyframes half98{ 0%{transform:rotate(0deg)} 100%{transform:rotate(176.4deg)} }
+@keyframes half99{ 0%{transform:rotate(0deg)} 100%{transform:rotate(178.2deg)} }
+@keyframes half100{ 0%{transform:rotate(0deg)} 100%{transform:rotate(180deg)} }

@@ -1,0 +1,1627 @@
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, select {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+img {
+    vertical-align: top;
+    max-width: 100%;
+}
+html {font-size: 62.5%;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body,
+body * {
+    font-family:'Noto Sans KR','Titillium Web','Roboto','Montserrat', Dotum,Gulim,Sans-serif;
+    line-height: 1.3;
+    letter-spacing: -1px;
+    -webkit-tap-highlight-color: transparent;
+    // -webkit-user-select: none;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    cursor: pointer;
+    &:focus {
+        outline: none
+    }
+}
+input,
+textarea,
+input[type="text"],
+input[type="checkbox"],
+input[type="tel"] {
+    font-family:'Noto Sans KR','Titillium Web','Roboto','Montserrat', Dotum,Gulim,Sans-serif;
+    background: transparent;
+    box-shadow: none;
+    width: auto;
+    height: auto;
+    border: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    -webkit-user-select: auto;
+    &:focus {
+        outline: none;
+    }
+}
+select {
+    text-transform: none;
+    -webkit-appearance: none;
+    margin:0;
+    padding:0;
+    background: transparent;
+    border-radius: 0;
+    border: 0;
+}
+legend {
+    @include pos($p:absolute,$l:-9999px);
+    text-indent: -1000rem;
+}
+pre {
+    word-wrap: break-word;
+    white-space: pre-line;
+}
+.hide {
+    display: block;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    clip: clip(-1px, -1px, -1px, -1px);
+    @include pos($p:absolute, $l:-9999px);
+}
+/* 전체주식 보기 */
+.stockAll {
+    a {
+        font-size: ptr(34);
+        font-weight: 500;
+        line-height: ptr(128);
+    }
+}
+/* inputbox */
+.ipBox_ip::placeholder {
+    color: #a7a7a7;
+}
+.ipBox_ip::-webkit-input-placeholder {
+    color: #a7a7a7;
+}
+button.ipBox_ip {
+    color: #a7a7a7;
+    &.btnFocus {
+        color: #000;
+        border-color: #000;
+    }
+}
+.ipBox {
+    @include pos($p:relative);
+    >p,
+    >label {font-size: ptr(27);}
+    label {display: block;}
+    button {text-align: left;}
+    .ipBox_ip {
+        width: 100%;
+        padding: ptr(25) 0 ptr(21);
+        font-size: ptr(33);
+        border-bottom: 1px solid #d8d8d8;
+    }
+    &.inputed {
+        .ipBox_ip {border-color: #000;}
+        .won {display: block;}
+    }
+    .won {
+        display: none;
+        @include pos($p:absolute,$r:0,$t:50%);
+        margin-top: ptr(-22);
+        font-size: ptr(34);
+        color: #000;
+    }
+    input {
+        &:focus {
+            border-color: #000;
+            &+.won {display: block;}
+        }
+        &:valid {
+            border-color: #000;
+            &+.won {display: block;}
+        }
+    }
+    .bankWrap {
+        display: block;
+        width: 100%;
+        @include pos($p:relative);
+        font-family:'Noto Sans KR','Titillium Web','Roboto','Montserrat', Dotum,Gulim,Sans-serif;
+        &:after {
+            content: '';
+            display: block;
+            width: ptr(48);
+            height: ptr(48);
+            margin-top: ptr(-24);
+            @include pos($p:absolute,$r:0,$t:50%);
+            background: url($urlImg + 'bank_arrow_down.png') no-repeat 50% 50%;
+            background-size: 100% 100%;
+        }
+    }
+}
+/* 리서치 테이블 */
+.dollarTb {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #333;
+    border-right: 1px solid #333;
+    color: #000;
+    &.marginTb {
+        margin: ptr(30) 0;
+    }
+    th,
+    td {
+        padding: ptr(6);
+        border-left: 1px solid #333;
+        border-bottom: 1px solid #333;
+        letter-spacing: -1px;
+    }
+    th {
+        font-weight: 500;
+        background-color: #e8e8e9;
+        &.blank {
+            background-color: #fff;
+        }
+    }
+    td {
+        font-weight: 300;
+        word-break: break-all;
+        vertical-align: middle;
+        &.tc {
+            text-align: center;
+        }
+    }
+    .colHead {
+        th {
+            background-color: rgba(237,150,159,0.3);
+        }
+    }
+    .rowHead {
+        background-color: rgba(119,137,190,0.3);
+    }
+}
+.theme_table {
+    width: 100%;
+    margin: ptr(30) 0;
+    text-align: center;
+    border-top: 1px solid #333;
+    border-right: 1px solid #333;
+    color: #000;
+    th,
+    td {
+        padding: ptr(6);
+        border-left: 1px solid #333;
+        border-bottom: 1px solid #333;
+        letter-spacing: -1px;
+    }
+    .colHead {
+        th {
+            background-color: rgba(237,150,159,0.3);
+        }
+    }
+    .rowHead {
+        background-color: rgba(119,137,190,0.3);
+    }
+    th {
+        font-weight: 500;
+        background-color: #e8e8e9;
+        &.blank {
+            background-color: #fff;
+        }
+    }
+    td {
+        font-weight: 300;
+        word-break: break-all;
+        vertical-align: middle;
+        &.tc {
+            text-align: center;
+        }
+    }
+}
+
+
+/* icon */
+.upDown {
+    .icon {
+        display: inline-block;
+        width: ptr(18);
+        height: ptr(16);
+        @include pos($p:static);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 100% auto;
+    }
+    &.up {
+        i {background-image: url($urlImg + 'stock_up.png');}
+    }
+    &.down {
+        i {background-image: url($urlImg + 'stock_down.png');}
+    }
+}
+.icon {
+    @include pos($p: absolute,$t:ptr(5));
+    i {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &.btnClose {
+        width: ptr(29);
+        height: ptr(29);
+        @include pos($r:0);
+        i {
+            background-image: url($urlImg + 'bank_btn_close.png')
+        }
+        .outer {
+            background-image: url($urlImg + 'bank_btn_close_outer.png')
+        }
+    }
+    &.btnBefore {
+        width: ptr(17);
+        height: ptr(31);
+        @include pos($l:0);
+        i {
+            background-image: url($urlImg + 'bank_btn_before.png')
+        }
+    }
+    &.btnMore {
+        width: ptr(9);
+        height: ptr(40);
+        @include pos($r:0,$t:0);
+        // margin-top: ptr(-7);
+        i {
+            background-image: url($urlImg + 'btn_more.png');
+            background-size: 100% auto;
+            background-position-y: center;
+        }
+    }
+}
+/* etc */
+h1, h2, h3 {
+    i {font-style: italic;}
+}
+.colorR {color: #ff4747;}
+.fc_blu2 {color: #006cff}
+.fc_red {color:#dd0a6d}
+.fc_red4{color:#fe2534 !important;}
+.fc_pur {color:#3228ce}
+.fcBlue3{color:#215af2}
+ul[class *= 'col'] {
+    @include clearfix;
+    li {
+        float: left;
+        box-sizing: border-box;
+    }
+    &.col2 {
+        li {width: 50%;}
+    }
+    &.col3 {
+        li {width: 33.3%;}
+    }
+    &.col4 {
+        li {width: 25%;}
+    }
+    &.col5 {
+        li {width: 20%;}
+    }
+}
+.elip1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; 
+    -webkit-box-orient: vertical;
+}
+.elip2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+}
+
+
+/* header */
+#header {
+    &.leftTit {
+        h1 {
+            font-size: ptr(42);
+            // font-weight: 500;
+            .subTit {
+                font-size: ptr(26);
+                font-weight: 400;
+            }
+        }
+    }
+    h1 {
+        font-size: ptr(32);
+    }
+}
+
+/* container */
+
+
+/* 투자 */
+.invest {
+    letter-spacing: ptr(-2);
+    .accountMe,
+    .investWrap {
+        .tit {
+            font-size: ptr(30);
+            letter-spacing: -2px;
+            strong {
+                font-weight: 700;
+            }
+        }
+        .right {
+            font-size: 0;
+            letter-spacing: -2px;
+            &.smaller {
+                font-size: ptr(30);
+            }
+            .lightly {
+                font-size: ptr(30);
+            }
+            .upDown {
+                font-weight: 400;
+                font-size: ptr(30);
+                code {
+                    font-family: 'Open Sans', sans-serif;
+                }
+            }
+            .txt,
+            .num {
+                font-size: ptr(34);
+                font-weight: 500;
+            }
+        }
+    }
+    .accountMe {
+        .subTit {
+            font-size: ptr(26);
+            font-weight: 400;
+        }
+    }
+    .invSec {
+        &.sec1 {
+            .submitBtn {
+                font-size: ptr(34);
+                font-weight: 700;
+                letter-spacing: -2px;
+            }
+            .toptxt {
+                line-height: 1.3;
+                letter-spacing: -3px;
+                font-weight: 100;
+                font-size: ptr(54);
+                strong {
+                    letter-spacing: ptr(-3);
+                    font-weight: 700;
+                }
+                small {
+                    font-weight: 400;
+                    font-size: ptr(26);
+                }
+            }
+            .upDown {
+                font-size: ptr(28);
+                code {
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: 400;
+                    font-size: ptr(34);
+                }
+            }
+            .rank {
+                font-size: ptr(36);
+                font-weight: 700;
+                font-family: 'Open Sans', sans-serif;
+            }
+            .name {
+                font-size: ptr(32);
+                letter-spacing: -2px;
+            }
+            .buy {
+                font-size: ptr(24);
+                text-align: center;
+            }
+            .topRank {
+                .name {
+                    font-weight: 700;
+                }
+            }
+        }
+        &.sec2 {
+            .desc {
+                i {
+                    font-style: italic;
+                }
+                p {
+                    font-size: ptr(34);
+                    font-weight: 300;
+                }
+                .colorTxt {
+                    font-weight: 300;
+                    font-size: ptr(28);
+                }
+            }
+        }
+        &.sec3,
+        &.sec4 {
+            .mainTit {
+                font-size: ptr(34);
+                font-weight: 700;
+                letter-spacing: -2px;
+            }
+        }
+        &.sec3 {
+            .mainTit {
+                span {
+                    font-size: ptr(24);
+                    font-weight: 400;
+                }
+            }
+            .swiper-slide {
+                .themeDesc {
+                    strong {
+                        font-size: ptr(30);
+                        font-weight: 500;
+                        letter-spacing: -2px;
+                    }
+                    .upDown {
+                        font-size: ptr(36);
+                    }
+                }   
+            }
+        }
+        &.effect4 {
+            h4 {
+                font-size: ptr(36);
+                font-weight: 700;
+            }
+            .insiteList {
+                .swiper-slide {
+                    i {
+                        font-style: italic;
+                    }
+                }
+                .iiDesc {
+                    .tit {
+                        font-size: ptr(28);
+                        font-weight: 500;
+                    }
+                    .elip2 {
+                        font-size: ptr(22);
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+        &.sec4 {
+            .swiper-slide {
+                a {
+                    font-size: ptr(30);
+                }
+                &.swiper-slide-active {
+                    a {
+                        // font-size: ptr(28);
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+        &.sec5 {
+            i {
+                font-style: italic;
+            }
+            h3 {
+                font-size: ptr(34);
+            }
+            span {
+                font-size: ptr(24);
+            }
+        }
+    }
+}
+
+.themeTopic,
+.insite {
+    .sec1 {
+        .tit {
+            font-size: ptr(40);
+            font-weight: 700;
+            letter-spacing: ptr(-2);
+        }
+    }
+    &.detail {
+        .detailTop {
+            font-family:'Roboto','Noto Sans KR','Titillium Web','Montserrat', Dotum,Gulim,Sans-serif;
+            h2 {
+                font-size: ptr(42);
+                font-weight: 400;
+            }
+            .date {
+                font-size: ptr(23);
+                font-weight: 300;
+                letter-spacing: 0;
+            }
+        }
+    }
+    .relateSec {
+        .tit {
+            font-weight: 700;
+            font-size: ptr(28);
+        }
+        .swiper-slide {
+            strong {
+                font-size: ptr(26);
+                font-weight: 500;
+                letter-spacing: ptr(-2);
+            }
+            .upDown {
+                font-size: ptr(36);
+            }
+        }
+    }
+}
+/* 테마토픽 리스트 */
+.themeTopic {
+    .sec2 {
+        span {
+            font-size: ptr(31);
+            &:before {
+                content: attr(data-cat);
+                font-size: ptr(26.4);
+                font-weight: 300;
+            }
+        }
+    }
+    &.detail {
+        .detailTop {
+            h2 {
+                &:before {
+                    content: attr(data-cat);
+                    font-size: ptr(22);
+                }
+            }
+            
+        }
+    }
+    .ti_top {
+        .field {
+            font-size: ptr(22);
+        }
+        h2 {
+            font-size: ptr(46);
+            font-weight: 700;
+        }
+        .date {
+            font-size: ptr(18);
+            font-weight: 300;
+            font-family: 'Roboto', sans-serif;
+        }
+    }
+    .stockDesc {
+        h3 {
+            font-size: ptr(33);
+            font-weight: 700;
+            .stxt {
+                font-size: ptr(24);
+                font-weight: 300;
+            }
+        }
+        .rank {
+            code {
+                font-size: ptr(36);
+                font-weight: 100;
+                font-style: italic;
+            }
+        }
+        .name {
+            font-size: ptr(28);
+            font-weight: 700;
+        }
+        .upDown {
+            font-family:'Roboto','Noto Sans KR','Titillium Web','Montserrat', Dotum,Gulim,Sans-serif;
+            font-size: ptr(27);
+            font-weight: 500;
+        }
+    }
+    .detailSec {
+        font-family:'Roboto','Noto Sans KR','Titillium Web','Montserrat', Dotum,Gulim,Sans-serif;
+        article {
+            font-size: ptr(27);
+            font-weight: 300;
+            strong {
+                font-weight: 500;
+            }
+        }
+        h4 {
+            font-weight: 700;
+            font-size: ptr(42);
+        }
+        .date {
+            font-weight: 300;
+            font-size: ptr(21);
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .income {
+            font-size: ptr(26);
+            .upDown {
+                font-weight: 500;
+                letter-spacing: 0;
+            }
+        }
+    }
+}
+/* 인사이트 리스트 */
+.insite {
+    .sec2 {
+        span {
+            font-size: ptr(34);
+            i {
+                font-style: italic;
+            }
+        }
+    }
+    .detail_type {
+        font-family:'Roboto','Noto Sans KR','Titillium Web','Montserrat', Dotum,Gulim,Sans-serif;
+        article {
+            font-size: ptr(27);
+            font-weight: 300;
+            h3 {
+                font-size: ptr(31);
+                font-weight: 500;
+            }
+            strong {
+                font-weight: 500;
+                &.fsup {
+                    font-size: ptr(29);
+                }
+            }
+            .cau {
+                font-size: ptr(20);
+            }
+        }
+        &.news4 {
+            .list {
+                font-size: ptr(30);
+            }
+            h3,
+            h4 {
+                font-weight: bold;
+                color:#111;
+            }
+            h3 {
+                font-size: ptr(52);
+                .underLine {
+                    font-size: ptr(52);
+                }
+            }
+            h4 {
+                font-size: ptr(40);
+            }
+            .tcRed {
+                font-weight: 500;
+                color:#fe2534;
+            }
+            .tcBlue1 {
+                color: #2541ec;
+            }
+            .tcBlue2 {
+                color: #2674e8;
+            }
+            .tcBlue3 {
+                color: #319afc;
+            }
+            .ffOpen {
+                font-family: 'Open Sans', sans-serif;font-weight:700
+            }
+            .underLine {
+                font-size: ptr(34);
+            }
+            .fc555 {
+                color: rgba(85,85,85,0.5);
+            }
+            .company {
+                span {
+                    font-size: ptr(25);
+                    font-weight: 400;
+                    color: #595959;
+                }
+                p {
+                    font-size: ptr(42);
+                    font-weight: 600;
+                    color: #0f45f5;
+                }
+                button {
+                    font-size: ptr(26);
+                    font-weight: 600;
+                    color: #111;
+                }
+            }
+            .lighter {
+                font-weight: 300;
+            }
+        }
+    }
+    .relateSec {
+        .swiper-slide {
+            a {
+                span {
+                    font-size: ptr(22);
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+/* submit */
+.submit {
+    .accountInfo {
+        font-size: ptr(28);
+        .subTit {
+            font-size: ptr(26);
+        }
+        .desc {
+            font-size: ptr(25);
+        }
+    }
+    .cmaSec {
+        .cmaBox {
+            .tit,
+            .info {
+                font-size: ptr(30)
+            }
+        }
+    }
+}
+.ctDesc {
+    font-size: ptr(24);
+    .agreeList {
+        li {
+            font-size: ptr(28);
+            &.agreeAll {
+                font-size: ptr(32);
+                font-weight: 700;
+            }
+        }
+    }
+    .addSec {
+        &.sec2 {
+            .secTop {
+                h2 {
+                    font-size: ptr(56);
+                    font-weight: 500;
+                }
+                .productName {
+                    font-size: ptr(30);
+                }
+                h4 {
+                    font-size: ptr(39);
+                    font-weight: 500;
+                    .smaller {
+                        font-size: ptr(20);
+                        font-weight: 300;
+                    }
+                }
+            }
+            .secBtm {
+                h3 {
+                    font-size: ptr(37);
+                    font-weight: 500;
+                }
+                h5 {
+                    font-size: ptr(27);
+                }
+                .subTit {font-size: ptr(20);}
+            }
+        }
+        &.sec3 {
+            h5 {font-size: ptr(24);}
+            .subTit {font-size: ptr(22);}
+            .alertList {
+                font-size: ptr(20);
+            }
+        }
+    }
+    .myAccount {
+        .info {font-size: ptr(24);}
+        .account {
+            font-size: ptr(32);
+            .accNum {font-size: ptr(52);}
+        }
+        .name {font-size: ptr(28)}    
+    }
+    .accountList {
+        li {
+            span {
+                font-size: ptr(22);
+            }
+        }
+    }
+    .submitSec {
+        &.sec1 {
+            h3 {
+                font-size: ptr(28);
+                small {
+                    font-size: ptr(24);
+                }
+            }
+        }
+        &.sec3 {
+            .subTit {font-size: ptr(28)}
+            &.cma {
+                h4 {
+                    font-size: ptr(34);
+                }
+                .smaller {
+                    font-size: ptr(24);
+                }
+            }
+        }
+        .certific {
+            * {font-size: ptr(28);}
+            .certificNum {
+                font-size: ptr(90);
+                font-weight: 700;
+                font-family: 'Montserrat';
+            }
+        }
+    }
+}
+.accountInfo,
+.fillInfo {font-size: ptr(28);}
+.accountInfo {
+    .chgBtn {font-weight: 700;}
+}
+
+
+/* footer */
+.footWrap {
+    .explain {font-size: ptr(24);}
+}
+.submitBtn {
+    line-height: 1;
+    font-size: ptr(28);
+}
+
+/* 팝업 */
+.lyPop {
+    .popSec {
+        h4 {
+            font-size: ptr(40);
+            font-weight: 700;
+        }
+        .subTit {
+            font-size: ptr(28);
+            > strong {
+                font-weight: 500;
+            }
+        }
+        .popBtn {
+            font-size: ptr(32);
+        }
+        p {
+            font-size: ptr(26);
+            > strong {
+                font-weight: 600;
+            }
+        }
+    }
+    &.full {
+        .agree_ct {
+            font-size: ptr(25);
+            h2 {
+                font-size: ptr(30);
+                color:#111;
+            }
+            h2,
+            h3,
+            strong {
+                font-weight: 500;
+            }
+            
+            .fsup {
+                font-size: ptr(28);
+            }
+            th {
+                font-weight: 500;
+            }
+            .bold {
+                font-weight: 500;
+            }
+        }
+        pre{
+            font-weight: 300;
+        }
+        .inspection {
+            .tit {
+                font-size: ptr(42);
+                font-weight: 500;
+            }
+            p {
+                font-size: ptr(28);
+            }
+            .time {
+                font-size: ptr(34);
+                font-weight: 500;
+            }
+        }
+    }
+}
+.popBtnList {
+    button {
+        font-size: ptr(28);
+    }
+}
+.chkPop {
+    .popSec {
+        h4 {
+            font-size: ptr(32);
+        }
+    }
+    
+}
+.btn_xr {
+    font-size: ptr(32);
+    font-weight: 500;
+}
+/* 본인인증 팝업 */
+.ly_citation {
+    .private {
+        li {
+            &.agreeAll {
+                .chk {
+                    font-size: ptr(25);
+                }
+                
+            }
+            .chk {
+                font-size: ptr(22);
+            }
+        }
+    }
+    .btn_skip_area {
+        p {
+            font-weight: 500;
+            font-size: ptr(22);
+        }
+    }
+}
+/* 팝업 점검시간 */
+#lyInspect {
+    .popSec {
+        h4 {
+            font-weight: 700;
+        }
+        .time {
+            font-size: ptr(32);
+        }
+        small {
+            font-size: ptr(23)
+        }
+    }
+}
+/* 출금동의 팝업 */
+.ly_withdraw {
+    .popSec {
+        h4 {
+            font-size: ptr(48);
+            font-weight: 100;
+            letter-spacing: -2px;
+            strong {
+                font-weight: 700;
+            }
+        }
+        p {
+            font-size: ptr(25);
+            .stress {
+                font-weight: 700;
+            }
+        }
+    }
+}
+/* 중복가입 팝업 */
+.lyHasinfo {
+    .popSec {
+        h4 {
+            font-size: ptr(43);
+            font-weight: 100;
+            letter-spacing: -2px;
+            strong {
+                font-weight: 700;
+            }
+        }
+        p {
+            font-size: ptr(25);
+        }
+        em {
+            font-size: ptr(26);
+        }
+    }
+}
+
+/* pass 퀴즈 이벤트 팝업 */
+.ly_quiz {
+    &.win {
+        .popSec {
+            font-size: 0;
+            .cont {
+                font-size: ptr(20);
+            }
+            h4 {
+                font-family: 'Black Han Sans', sans-serif;
+                font-size: ptr(74);
+                @media all and (max-width: 320px) {
+                    font-size: ptr(50);
+                }
+                * {
+                    font-family: 'Black Han Sans', sans-serif;
+                }
+                em {
+                    font-size: ptr(65);
+                    @media all and (max-width: 320px) {
+                        font-size: ptr(36);
+                    }
+                }
+            }
+            p {
+                font-size: ptr(28);
+                font-weight: 500;
+                @media all and (max-width: 320px) {
+                    font-size: ptr(23);
+                }
+                &.tit2 {
+                    font-size: ptr(33);
+                    font-weight: 400;
+                    @media all and (max-width: 320px) {
+                        font-size: ptr(23);
+                    }
+                }
+                strong {
+                    font-weight: 600;
+                }
+                em {
+                    font-weight: 400;
+                }
+            }
+            .popBtn {
+                font-size: ptr(30);
+                font-weight: 600;
+            }
+        }
+    }
+    .popSec {
+        h4 {
+            font-weight: 500;
+            font-size: ptr(45);
+        }
+    }
+}
+/* 191016 투자금 옮기기 팝업 */
+.carryPop {
+    .mvCase {
+        .mvDesc {
+            code,
+            .add {
+                font-size: ptr(26);
+            }
+            h5 {
+                font-size: ptr(34);
+                font-weight: 600;
+            }
+        }
+    }
+}
+/* 191016 투자금 옮기기 가능은행 팝업 */
+#bank_list {
+    .popSec {
+        h4 {
+            font-size: ptr(34);
+            font-weight: 600;
+        }
+        p {
+            font-size: ptr(26);
+        }
+        b {
+            font-size: ptr(26);
+        }
+    }
+    .bankCase {
+        h5 {
+            font-weight: 600;
+            font-size: ptr(30);
+        }
+    }
+}
+
+/* 해외주식 추천종목 */
+.recommand {
+    .recSec {
+        h2 {
+            select {
+                font-size: ptr(28);
+                font-weight: 700;
+            }
+        }
+        .swiper-slide {
+            &.swiper-slide-active {
+                .slideWrap {
+                    h4 {
+                        font-size: ptr(48);
+                        font-weight: 700;
+                    }
+                    p {
+                        font-size: ptr(26);
+                    }
+                    // div {
+                    //     h4 {
+                    //         font-size: ptr(48);
+                    //         font-weight: 700;
+                    //     }
+                    //     p {
+                    //         font-size: ptr(26);
+                    //     }
+                    // }
+                }
+            }
+            .slideWrap {
+                font-size: ptr(22);
+                h4 {
+                    font-size: ptr(38);
+                    font-weight: 500;
+                }
+                p {
+                    font-size: ptr(24);
+                }
+                .profit {
+                    font-size: ptr(26);
+                }
+                // div {
+                //     .date,
+                //     .more {
+                //         font-size: ptr(22);
+                //     }
+                //     h4 {
+                //         font-size: ptr(38);
+                //         font-weight: 500;
+                //     }
+                //     p {
+                //         font-size: ptr(24);
+                //     }
+                // }
+            }
+        }
+    }
+    .resSec {
+        h3 {
+            font-size: ptr(44);
+            font-weight: 100;
+            strong {
+                font-weight: 700;
+            }
+        }
+        .resDesc {
+            h5 {
+                font-size: ptr(32);
+                font-weight: 700;
+            }
+            .descBtm {
+                font-size: ptr(26);
+            }
+        }
+    }
+}
+/* 해외주식 추천종목 상세 */
+.company {
+    > div {
+        font-weight: 700;
+        font-size: ptr(36);
+    }
+    h2 {
+        font-weight: 700;
+        font-size: ptr(36)
+    }
+    .subTit,
+    .comDesc {
+        font-weight: 400;
+    }
+    .subTit {
+        font-size: ptr(24);
+    }
+    .date {
+        font-size: ptr(22);
+        font-weight: 400;
+    }
+    
+}
+.srDetail {
+    .company {
+        .comDesc {
+            font-size: ptr(22);
+            .tit {
+                font-size: ptr(22);
+            }
+            .upDown {
+                font-size: ptr(28);
+            }
+        }
+    }
+    .srdWrap {
+        font-size: ptr(32);
+        font-weight: 700;
+        .tit {
+            font-size: ptr(32);
+            font-weight: 700;
+        }
+        .srdList {
+            font-weight: 400;
+            font-size: ptr(26);
+            .txt {
+                font-size: ptr(26);
+            }
+        }
+    }
+}
+/*해외주식 리서치 기업보고서 */
+.srReport {
+    .buyBtn{
+        font-size: ptr(34);
+        font-weight: 500;
+    }
+    .detail_type {
+        font-size: ptr(26);
+        .fs32 {
+            font-weight: 700;
+            font-size: ptr(32);
+        }
+        .fs30 {
+            font-size: ptr(30);
+        }
+        .fs28 {
+            font-size: ptr(28);
+            font-weight: 500;
+        }
+        .fw700 {
+            font-weight: 700;
+        }
+        .fw400 {
+            font-weight: 400;
+        }
+        .more {
+            font-size: ptr(20);
+        }
+        .opinion {
+            span {
+                font-size: ptr(34);
+                font-weight: 500;
+            }
+            strong {
+                font-weight: 700;
+                font-size: ptr(43);
+            }
+        }
+    }
+}
+
+/* 오류화면 */
+.errorSec {
+    h2 {
+        font-size: ptr(38);
+        font-weight: 300;
+    }
+    .subTit {
+        font-size: ptr(26);
+    }
+    p {
+        font-size: ptr(24);
+    }
+}
+
+.ttDesc {
+    .tit {
+        font-size: ptr(30);
+        i {
+            font-style: italic;
+        }
+    }
+    small {
+        font-size: ptr(20)
+    }
+}
+
+/* 191111 매수활성화 팝업 */
+.ly_invest {
+    .popSec {
+        width: ptr(770);
+        margin: 0 auto;
+        @media all and (max-width: 585px) {
+            width: 93.5%;
+        }
+        .cautionbx {
+            font-size: ptr(23);
+            font-weight: 300;
+            footer {
+                h4 {
+                    font-size: ptr(23);
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+}
+.ly_buy {
+    .evtBtn {
+        button {
+            font-size: ptr(26);
+        }
+    }
+    .evtDesc {
+        h5 {
+            font-size: ptr(55);
+            font-weight: 700;
+            span {
+                font-family: 'Open Sans', sans-serif;
+            }
+            i {
+                font-style: italic;
+            }
+        }
+        .target {
+            font-size: ptr(26);
+            font-weight: 600;
+        }
+        p {
+            font-weight: 300;
+            font-size: ptr(24);
+        }
+    }
+    .stepSec {
+        h5 {
+            font-size: ptr(32);
+            font-weight: 600;
+        }
+    }
+}
+/* 서비스 이용안내 가능시간 팝업 */
+.timePop {
+    .popSec {
+        h4 {
+            font-weight: 700;
+        }
+        .guideTime {
+            th {
+                font-size: ptr(28);
+            }
+            td {
+                .time {
+                    font-family: 'Open Sans',sans-serif;
+                    font-size: ptr(30);
+                    font-weight: 700;
+                }
+                small {
+                    font-size: ptr(23);
+                }
+            }
+        }
+        .inspectDesc {
+            font-size: ptr(26);
+        }
+    }
+}
+#service_inspect {
+    .elm {
+        h4 {
+            font-weight: 700;
+            font-size: ptr(40);
+        }
+        p {
+            font-size: ptr(26);
+        }
+        span {
+            font-weight: 500;
+        }
+        .inspectDesc {
+            font-size: ptr(26);
+        }
+        .popBtn {
+            font-size: ptr(32);
+        }
+    }
+}
+
+/* 수익률 노출 영역 191218 */
+.earnSec {
+    i {
+        font-style: italic;
+    }
+    .earnTit {
+        font-size: ptr(26);
+        font-weight: 600;
+    }
+    .earnSlide {
+        h3 {
+            font-weight: 100;
+            font-size: ptr(48);
+        }
+        .date {
+            font-size: ptr(20);
+        }
+        .average {
+            small {
+                font-size: ptr(20);
+            }
+        }
+    }
+    .earnDesc {
+        .th {
+            font-size: ptr(28);
+            i {
+                font-size: ptr(16);
+                font-weight: 300;
+            }
+        }
+        .td {
+            code {
+                font-family: 'Roboto', sans-serif;
+            }
+            .earn {
+                font-size: ptr(24);
+                code {
+                    font-size: ptr(28);
+                }
+            }
+            .upDown {
+                code {
+                    font-size: ptr(28);
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+.blind {
+    display: inline-block;
+    position: absolute;
+    width: 0.1rem;
+    height: 0.1rem;
+    text-indent: -9999rem !important;
+}
+/* 상단 공통 추가 */
+.fix.top {
+    & * {
+        line-height:1;
+        letter-spacing: -0.35px;
+    }
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    background-color: #fff;
+    header {
+        position: relative;
+        box-sizing:border-box;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        height: 44px;
+        padding: 4px 16px 11px;
+        background-color: #fff;
+        z-index: 100;
+        .header_inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 0 0 2px;
+            .header_btn {
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                width: 28px;
+                height: 28px;
+                background-size: 28px;
+                &.ico-back {
+                    left: 0;
+                    top: 1px;
+                    background: url($urlImg + "back_new.svg") center no-repeat;
+                }
+            }
+            .header_tit {
+                font-size: 18px;
+                font-weight: normal;
+                line-height:27px;
+                text-align: center;
+            }
+        }
+    }
+    .tabs {
+        padding:10px 20px 0;
+        margin-bottom: 0;
+    }
+}
+.tabs {
+    overflow:hidden;
+    background:#ffffff;
+    line-height:1;
+    li {
+        position:relative;
+        float:left;
+        margin-top:0 !important;
+        font-size: 16px;
+        color: #222222; 
+        font-weight: 400;
+        padding-bottom: 7px;
+        .btn{
+            &:after {
+                content:'';
+                position:absolute;
+                left:0;
+                bottom:0;
+                width:100%;
+                height:2px;
+                background:#ffffff;
+            }
+            &.active {
+                font-weight:500;
+                &:after {
+                    background:#222222
+                }
+            }  
+        }
+        & ~ li {
+            margin-left:30px
+        } 
+    }
+}

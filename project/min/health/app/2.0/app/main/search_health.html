@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko" class="app">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="../../../../global/resources/css/global.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/common.min.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/content.min.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/app.min.css" media="screen" rel="stylesheet">
+<title>건강지키미</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header" class="fix top">
+		<button type="button" onclick="" class="btn_prev"><i>뒤로가기</i></button>
+		<h1>건강정보</h1>
+    </header>
+    <!-- //header -->
+
+    <div id="content">
+        <div class="before_check2" data-name="건강">
+            <p class="txb">지금의 건강상태와<br>과거의 건강상태를 비교하고,</p>
+            과거 건강검진내역부터 올해 건강검진대상자인지,<br>내가 병원비로 얼마나 쓰고 있는지<br>조회 한 번으로 확인 하실 수 있어요.
+            <p class="txs">*서비스 가입자 정보와 공동인증서 명의자 정보가 상이한 경우 서비스 이용에 제한이 있을 수 있습니다.</p>
+        </div>
+    </div>
+    <!-- //content -->
+
+    <div class="fix btm btn_area_one"><button type="button" onclick="popupOpen('terms','mw',0)" class="skip">건강정보 간편조회하기</button></div>
+
+</div>
+
+<!-- 전체동의 -->
+<div id="mw-terms" class="ly_pop popBtm ly_terms">
+    <div class="wrap">
+        <div class="content">
+            <div id="termsCheck" class="terms_list type02">
+                <ul>
+                    <li class="all">
+                        <span class="checkbox chkAll">
+                            <input type="checkbox" name="healthChk" id="agreeAll" value="">
+                            <label for="agreeAll">건강정보 조회 약관 전체동의</label>
+                        </span>
+                    </li>
+                </ul>
+                <ul class="clst">
+                    <li>
+                        <span class="checkbox i_chk">
+                            <input type="checkbox" name="healthChk" id="agree1" value="" checked="">
+                            <label for="agree1">[필수]  민감정보(건강정보조회동의)</label>
+                        </span>
+                        <button type="button" class="doc tx">보기</button>
+                    </li>
+                </ul>
+                <p class="chkInfoWrap">고유식별정보(주민등록번호)는 이용자의 건강정보 조회를 위하여 건강보험공단 인증에만 사용되며, 건강지키미 서비스에서 별도로 처리(수집·저장)하지 않습니다.</p>
+            </div>
+        </div>
+        <div class="btn_area_one"><button type="button" onclick="popupClose('terms','mw');" class="skip">확인</button></div>
+    </div>
+</div>
+<!-- //전체동의 -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../../resources/js/gsap.min.js"></script>
+<script src="../../../../global/resources/js/global.js"></script>
+<script src="../../resources/js/design.js" defer></script>
+<script>
+$(function() {
+    // popupOpen('terms','mw',0)
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>로그인플러스</title>
+<link rel="stylesheet" href="resource/css/common.css">
+<link rel="stylesheet" href="resource/css/site.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="resource/js/design.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+	
+	<header id="header">
+		<button type="button" onclick="" class="btn_prev"><span class="ico_com ico_arr"></span></button>
+		<h1>우리집</h1>
+		<a href="#;" class="btn_qmark"><span class="ico_com ico_qmark"></span></a>
+	</header>
+	<!-- //header -->
+	<div id="ct">
+		<div class="addressWrap">
+			<article id="num" class="addrbox on">
+				<a href="#;" class="addrtab"><h3>지번주소</h3></a>
+				<div class="form">
+					<div class="caution">동(읍/면)과 지번을 입력 후 검색하세요.<address>예) 논현동 105</address></div>
+					<ul class="frm_type">
+						<li>
+							<select id="">
+								<option value="1">시/도</option>
+								<option value="1">서울특별시</option>
+								<option value="0">인천광역시</option>
+							</select>
+						</li>
+						<li>
+							<select id="">
+								<option value="1">시/군/구</option>
+								<option value="0">강남구</option>
+							</select>
+						</li>
+						<li><div class="inp_row"><input type="text" id="" placeholder="동/읍/면"></div></li>
+						<li>
+							<div class="inp_row pr55">
+								<input type="text" id="" placeholder="지번(번지)">
+								<button type="button" onclick="layer_open('addrRsult');" class="btn_m btn_type4 btn_srch">찾기</button>
+							</div>
+						</li>
+					</ul>
+				</div>				
+			</article>
+			<article id="road" class="addrbox">
+				<a href="#;" class="addrtab"><h3>도로명주소</h3></a>
+				<div class="form">
+					<div class="caution">도로명 주소와 건물 번호를 입력 후 검색하세요.<address>예)언주로 726</address></div>
+					<ul class="frm_type">
+						<li>
+							<select id="">
+								<option value="1">시/도</option>
+								<option value="1">서울특별시</option>
+								<option value="0">인천광역시</option>
+							</select>
+						</li>
+						<li>
+							<select id="">
+								<option value="1">시/군/구</option>
+								<option value="0">강남구</option>
+							</select>
+						</li>
+						<li><div class="inp_row"><input type="text" id="" placeholder="도로명"></div></li>
+						<li>
+							<div class="inp_row pr55">
+								<input type="text" id="" placeholder="건물번호">
+								<button type="button" onclick="layer_open('addrRsult');" class="btn_m btn_type4 btn_srch">찾기</button>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</article>
+		</div>
+		<!-- //form -->
+		<div class="btn_area">
+			<button type="button" onclick="" class="btn_r btn_type1" style="width:100%">확인</button>
+			<button type="button" onclick="" class="btn_r btn_type3" style="width:100%">취소</button>
+			<div class="btn_choice"><a href=""><span class="ico_com ico_arr2"></span>주소 다시 찾기</a></div>
+		</div>
+		<!-- //btn -->
+		<footer id="footer" class="nofix">고객센터 : 1599-3901 (이용 및 해지)<br>운영시간 : 09:00 ~ 18:00(평일)</footer>
+	</div>
+	<!-- //content -->	
+	<!-- 주소결과 -->
+	<div class="ly_pop" style="display: ">
+		<div class="bg"><!-- shadow --></div>
+		<div class="cont">
+			<section id="addrRsult" class="ele">
+				<button type="button" class="popcls"><span class="ico_com ico_cls">close</span></button>
+				<div class="addrRsult">
+					<div class="caution">아래의 주소 중 해당되는 주소를 선택하세요.</div>
+					<div class="scroll">
+						<ul>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr1" checked><label for="addr1">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr2"><label for="addr2">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr3"><label for="addr3">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr4"><label for="addr4">123-445 신사동123-445 신사동123-445 신사동123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr5"><label for="addr5">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr6"><label for="addr6">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr9"><label for="addr9">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr10"><label for="addr10">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr11"><label for="addr11">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr12"><label for="addr12">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr13"><label for="addr13">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr14"><label for="addr14">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr15"><label for="addr15">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr16"><label for="addr16">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr17"><label for="addr17">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr18"><label for="addr18">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr19"><label for="addr19">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr20"><label for="addr20">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr21"><label for="addr21">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr22"><label for="addr22">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr23"><label for="addr23">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr24"><label for="addr24">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr25"><label for="addr25">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr26"><label for="addr26">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr27"><label for="addr27">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr28"><label for="addr28">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr29"><label for="addr29">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr30"><label for="addr30">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr31"><label for="addr31">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr32"><label for="addr32">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr33"><label for="addr33">123-445 신사동</label></span></li>
+							<li><span class="checkbox"><input type="radio" name="address" id="addr34"><label for="addr34">123-445 신사동</label></span></li>
+						</ul>
+					</div>
+				</div>
+				<a href="address_search2.html" class="btn_r2 btn_type1" style="width:100%">확인</a>
+			</section>
+		</div>
+	</div>
+	<!-- //주소결과 -->
+
+</div>
+
+</body>
+</html>

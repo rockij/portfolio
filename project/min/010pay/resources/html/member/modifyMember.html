@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>010페이</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" href="../../css/owl.carousel.min.css">
+<link rel="stylesheet" href="../../css/common.css?ezauthver=5.0">
+<link rel="stylesheet" href="../../css/style.css?ezauthver=5.0">
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../../js/html5shiv.js"></script>
+<script type="text/javascript" src="../../js/respond.min.js"></script>
+<![endif]-->
+<script src="../../js/jquery-1.8.3.min.js"></script>
+<script src="../../js/jquery.placeholder.min.js"></script>
+<script src="../../js/owl.carousel.min.js"></script>
+<script src="../../js/design.js?ezauthver=5.0" defer="defer"></script>
+<script src="../../js/ui.js?ezauthver=5.0" defer="defer"></script>
+<script src="../../js/commonmsg.js?ezauthver=5.0"></script>
+<script src="../../js/commonutil.js?ezauthver=5.0"></script>
+</head>
+
+<body>
+<!-- form -->
+<form class="main_form" action="javascript: void(0);" autocomplete="off">
+	<!-- wrap -->
+	<div id="wrap">
+		<div class="fix-layer top">
+			<!-- header -->
+			<div id="header">
+				<div class="container">
+					<h1 class="brand-name"><a href="#"><span><img src="../../images/logo.svg" class="brand-logo" alt="010pay"></span></a></h1>
+					<!-- <h2 class="page-title">페이지 제목</h2> -->
+					<button type="button" id="closeWindow" class="btn-close"><i class="icon-times">창닫기</i></button>
+				</div>
+			</div>
+			<!-- //header -->
+			<!-- nav tab -->
+			<div class="nav-tab">
+				<div class="container">
+					<ul>
+						<li><a href="#">HOME</a></li>
+						<li><a href="#">이용내역</a></li>
+						<li><a href="#">계좌관리</a></li>
+						<li><a href="#" class="now">내정보</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //nav tab -->
+		</div>
+
+		<!-- content -->
+		<div id="content" class="menu-dep2">
+			<div class="container-fluid">
+				<!-- 내정보 -->
+				<div class="info-wrap container">
+					<!-- 기본정보 -->
+					<div class="info-sec basic">
+						<h3>기본정보</h3>
+						<div class="info-desc">
+							<dl>
+								<dt>이름</dt>
+								<dd><span class="kor">정재훈</span></dd>
+							</dl>
+							<dl>
+								<dt>휴대폰번호</dt>
+								<dd><span>KT 010-****-1234</span></dd>
+							</dl>
+							<dl class="longer address">
+								<dt>주소</dt>
+								<dd><span class="kor">제주특별자치도 제주시 탑동로 66 라마다 프라자 제주호텔</span><button type="button" id="address"
+										class="btn btn-secondary btn-sm info-chg">수정</button></dd>
+							</dl>
+						</div>
+					</div>
+					<!-- 기본정보 -->
+					<!-- 추가정보 -->
+					<div class="info-sec add">
+						<h3>추가정보</h3>
+						<div class="info-desc">
+							<dl class="longer email">
+								<dt>이메일</dt>
+								<dd><span>jhjong12345678901234@settlebank.co.kr</span><button type="button" id="email" class="btn btn-secondary btn-sm info-chg">수정</button></dd>
+							</dl>
+							<span class="checkbox square">
+								<input type="checkbox" name="checkbox_07" id="checkbox_07_02" checked="">
+								<label for="checkbox_07_02">이메일 주소로 결제정보 발송에 동의합니다. </label>
+							</span>
+							<dl>
+								<dt>비밀번호</dt>
+								<dd><i>최종변경일</i><span>2019.09.06</span><button type="button"
+										class="btn btn-secondary btn-sm">수정</button></dd>
+							</dl>
+							<dl>
+								<dt>현금영수증</dt>
+								<dd><span>010-4567-1234</span><button type="button" id="receipt" class="btn btn-secondary btn-sm info-chg">수정</button>
+								</dd>
+							</dl>
+							<dl>
+								<dt>마케팅 수신동의</dt>
+								<dd>
+									<div class="switch">
+										<input type="checkbox" name="remember" id="remember" class="switch-checkbox" checked="">
+										<label for="remember" class="switch-label">
+											<span class="switch-inner"></span>
+											<span class="switch-switch"></span>
+										</label>
+									</div>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<!-- 추가정보 -->
+				</div>
+				<!-- 내정보 -->
+				<!-- bottom area -->
+				<div class="bottom-area">
+					<div class="container-fluid footer-info">
+						<div class="container">회원탈퇴를 하시려면 <a href="#" class="text-link">여기</a>를 눌러주세요.</div>
+					</div>
+				</div>
+				<!-- //bottom area -->
+			</div>
+
+			
+		</div>
+		<!-- //content -->
+	</div>
+<!-- //wrap -->
+</form>
+<!-- //form -->
+
+<!-- loading -->
+<div class="modal modal-loading">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="loading">
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+				</div>
+				<span class="text">로딩 중</span>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //loading -->
+
+<!-- common alert -->
+<div id="commonAlert" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<h3 id="alertTitle"></h3>
+				<p id="alertContents"></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" onclick="modalClose();" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //common alert -->
+
+<!-- common prompt -->
+<div id="commonPrompt" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<h3 id="promptTitle"></h3>
+				<p id="promptContents"></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" onclick="modalClose();" class="btn">취소</button>
+				<button type="button" id="promptOk" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //common prompt -->
+
+<!-- 주소입력 -->
+<div id="modal-address" class="modal modal-slide modal-info">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body my-info">
+				<button class="btn btn-close">취소</button>
+				<div class="chg-info">
+					<h4>주소를 입력해주세요.</h4>
+					<ul class="form-type">
+						<li class="address">
+							<label class="label">주소</label>
+							<input type="hidden" name="addrType" id="addrType">
+							<input type="hidden" name="zipCd" id="zipCd">
+							<span class="input">
+								<input type="text" name="addr1" id="addr1" placeholder="도로명/지번/우편번호" readonly>
+								<button type="button" class="btn btn-secondary btn-sm" onclick="popPostcode();">주소 검색</button>
+							</span>
+							<input type="text" name="addr2" id="addr2" placeholder="상세주소 입력">
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //주소입력 -->
+
+<!-- 이메일 입력 -->
+<div id="modal-email" class="modal modal-slide modal-info">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body my-info">
+				<button class="btn btn-close">취소</button>
+				<div class="chg-info">
+					<h4>이메일주소를 입력해주세요.</h4>
+					<ul class="form-type">
+						<li class="">
+							<div class="position-relative">
+								<input type="text" placeholder="이메일 주소입력" class="">
+								<span class="form-control-clear hidden"><i class="icon-times-circle sr-only">삭제</i></span>
+							</div>
+						</li>
+					</ul>
+					<ul class="info-list">
+						<li>입력한 이메일 주소로 결제정보 발송에 동의합니다. </li>
+					</ul>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //이메일 입력 -->
+
+<!-- 현금영수증 발급정보 -->
+<div id="modal-receipt" class="modal modal-slide modal-info">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body my-info">
+				<button class="btn btn-close">취소</button>
+				<div class="chg-info">
+					<h4>현금영수증 발급정보를 입력하세요.</h4>
+					<ul class="checkbox-group checked-one">
+						<li>
+							<span class="checkbox">
+								<input type="checkbox" name="checkbox_01" id="checkbox_01_01">
+								<label for="checkbox_01_01">개인소득공제(휴대폰)</label>
+							</span>
+						</li>
+						<li>
+							<span class="checkbox">
+								<input type="checkbox" name="checkbox_01" id="checkbox_01_02">
+								<label for="checkbox_01_02">개인소득공제(현금영수증카드)</label>
+							</span>
+						</li>
+						<li>
+							<span class="checkbox">
+								<input type="checkbox" name="checkbox_01" id="checkbox_01_03">
+								<label for="checkbox_01_03">지출증빙(사업자용)</label>
+							</span>
+						</li>
+						<li>
+							<span class="checkbox">
+								<input type="checkbox" name="checkbox_01" id="checkbox_01_04">
+								<label for="checkbox_01_04">지출증빙(현금영수증카드)</label>
+							</span>
+						</li>
+					</ul>
+					<ul class="form-type">
+						<li class="">
+							<div class="position-relative">
+								<input type="tel" placeholder="010 1234 5678" class="input-text-lg">
+								<span class="form-control-clear hidden"><i class="icon-times-circle sr-only">삭제</i></span>
+							</div>
+						</li>
+					</ul>
+					<ul class="info-list">
+						<li>현금영수증은 등록한 정보 기준으로 자동 발행됩니다.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //현금영수증 발급정보 -->
+
+<script>
+$(document).ready(function(){
+	$('#modifyEmail').click(function(){
+		$.alertMessage("", "이메일이 변경되었습니다.", $('#commonAlert'));
+	});
+	$('#modifyAddress').click(function(){
+		$.alertMessage("", "주소가 변경되었습니다.", $('#commonAlert'));
+	});
+});
+</script>
+</body>
+</html>

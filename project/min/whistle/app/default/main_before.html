@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link href="../resources/css/font.local.css" media="screen" rel="stylesheet"> <!-- 폐쇄망 -->
+<link href="../resources/css/font.cdn.css" media="screen" rel="stylesheet"> <!-- 인터넷망 -->
+<link href="../resources/css/common.min.css" media="screen" rel="stylesheet">
+<link href="../resources/css/content.min.css" media="screen" rel="stylesheet">
+<title>010휘슬</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header" class="fix top">
+        <h1 class="blind">010휘슬</h1>
+        <button type="button" onclick="" class="btn_allim new"><i>알림</i></button>
+    </header>
+    <!-- //header -->
+
+    <div id="content" class="main gsap_box">
+        <div class="gsap_under1">
+            <div class="main_carinfo nodata">
+                <a href="#;" class="title">
+                    <h2>환영합니다.</h2>
+                    <p>차량 미등록 회원입니다.</p>
+                </a>
+                <figure class="upload">
+                    <a href="#;">내 차량 등록하기</a>
+                </figure>
+                <div class="list_card">
+                    <ul>
+                        <li>
+                            <a href="#;" class="go">
+                                <strong class="th" data-icon="cctv">주정차 단속알림</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#;" class="go">
+                                <strong class="th" data-icon="tax">위반·과태료 내역</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- //slide -->
+        <div class="content">
+            <aside class="main_baner_time gsap_under2">
+                <a href="#;">
+                    <p>타임딜 종료까지 <span>19:52:48</span> 남았어요!</p>
+                    <img src="../resources/image/sample/baner_656x220.png" alt="">
+                </a>
+            </aside>
+            <!-- //baner -->
+            <div class="list_card gsap_box2">
+                <ul>
+                    <li class="mileage rbox gsap_top1">
+                        <a href="#;" class="title">
+                            <h3 data-icon="mileage">보유 마일리지</h3>
+                            <span class="m"><code>40,500</code>M</span>
+                        </a>
+                        <!-- <ul>
+                            <li>
+                                <a href="#;">
+                                    <h4>굿 드라이빙</h4>
+                                    <strong><code>25,300</code>M</strong>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#;">
+                                    <h4>이벤트</h4>
+                                    <strong><code>18,700</code>M</strong>
+                                </a>
+                            </li>
+                        </ul> -->
+                        <p class="cau">지금 바로 <code>+1,500,000 M</code> 추가 적립하자!</p>
+                    </li>
+                    <li class="gsap_top2">
+                        <a href="#;" class="go">
+                            <strong class="th" data-icon="call">보험사 연결</strong>
+                        </a>
+                    </li>
+                </ul>                
+            </div>
+            <!-- //보유마일리지,보험사연결 -->
+            <aside class="main_baner_event gsap_top3">
+                <a href="#;"><img src="../resources/image/sample/event_640x420.png" alt=""></a>
+            </aside>
+            <!-- //event -->
+        </div>
+    </div>
+    <!-- //content -->
+
+    <footer class="global_footer mo">
+        <article>
+            <div class="infobx">
+                <address class="cau">
+                    ㈜민앤지｜사업자등록번호 : 214-88-39117<br>
+                    서울특별시 강남구 테헤란로 34길 6 12, 13층<br>
+                    고객센터 1599-7062 (평일 09 ~ 18시, 주말/공휴일 휴무)
+                </address>
+            </div>
+        </article>
+    </footer>
+    <!-- //footer -->
+
+    <nav id="gnb" class="fix btm">
+        <ul>
+            <li><a href="#;" data-name="홈" class="on"></a></li>
+            <li><a href="#;" data-name="굿 드라이빙"></a></li>
+            <li><a href="#;" data-name="이벤트"></a></li>
+            <li><a href="#;" data-name="설정"></a></li>
+        </ul>
+    </nav>
+    <!-- //gnb -->
+
+</div>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script> -->
+<script src="../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../../global/resources/js/global.js"></script>
+<script src="../resources/js/gsap.min.js"></script>
+<script src="../resources/js/ScrollTrigger.min.js"></script>
+<script src="../resources/js/swiper.min.js"></script>
+<script src="../resources/js/design.js" defer></script>
+<script>
+$(function() {
+    headHiding('shrink'); //header
+    gsapPlay('mainCard'); //gsap play
+});
+</script>
+
+</body>
+</html>

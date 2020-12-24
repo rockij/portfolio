@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../resources/css/site_kt.css" media="screen" rel="stylesheet">
+<link href="../resources/css/device.css" media="screen" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../resources/js/jquery-1.11.1.min.js"></script>
+<script src="../resources/js/design.js"></script>
+<title>KT건강지키미</title>
+</head>
+<body class="kt">
+
+<div id="wrap">
+
+	<header id="head" class="fix">
+		<button type="button" onclick="" class="btn_cls"><i class="ico_com">닫기</i></button>
+        <h1><a href="/">건강지키미</a></h1>
+        <div class="data_on_off"><!--데이터시작점--></div>
+	</header>
+	<!-- //header -->
+	<div id="ct" class="free_contents free_kt data_wrap">
+		<!-- 미조회 -->
+		<div id="freeTopbn" class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide free_topbn" data-result="미조회-건강검진">
+					고객님의 건강검진결과 기억하시나요?!
+					<p class="mtxt"><strong>정상?! 주의?!<br>의심?!</strong></p>
+					<span class="mt_tooltip"><span class="tooltip">최근 건강검진결과는!?</span></span>
+					<a href="javascript:alert('확인하러 가기');" class="btn_skip ani">나의 건강검진결과 확인하기<span class="gage"></span></a>
+				</div>
+				<div class="swiper-slide free_topbn" data-result="미조회-적정보험료">
+					매 월 납입하고 있는
+					<p class="mtxt"><strong>보험료가 적정한지<br>비교해보세요<em>!</em></strong></p>
+					<span class="mt_tooltip"><span class="tooltip">내 적정보험료는 얼마?</span></span>
+					<a href="javascript:alert('확인하러 가기');" class="btn_skip ani">나의 적정보험료 확인하기<span class="gage"></span></a>
+				</div>
+				<div class="swiper-slide free_topbn" data-result="미조회-대출가능">
+					고객님의
+					<p class="mtxt"><strong>보험계약대출<br>가능 금액은 얼마?</strong></p>
+					<span class="mt_tooltip"><span class="tooltip">고객님의 대출가능금액은?</span></span>
+					<a href="javascript:alert('확인하러 가기');" class="btn_skip ani">나의 대출가능금액 확인하기<span class="gage"></span></a>
+				</div>
+				<div class="swiper-slide free_topbn" data-result="미조회-납입보험">
+					국내 가구당 보험료 평균 월 103만원
+					<p class="mtxt"><strong>내 납입 보험료는<br>얼마?</strong></p>
+					<span class="mt_tooltip"><span class="tooltip">월 납입보험료는 얼마?</span></span>
+					<a href="javascript:alert('확인하러 가기');" class="btn_skip ani">나의 월납입보험료 확인하기<span class="gage"></span></a>
+                </div>
+                <div class="swiper-slide free_topbn" data-result="스타벅스">
+                    내 보험료 확인하고
+					<p class="mtxt"><strong class="emp">스타벅스 쿠폰</strong><br>무료로 받기</p>
+					<span class="mt_tooltip"><span class="tooltip">내 보험료는 얼마?
+                    </span></span>
+					<a href="javascript:alert('확인하러 가기');" class="btn_skip ani">무료 쿠폰 받기<span class="gage"></span></a>
+                </div>
+                <div class="swiper-slide free_topbn" data-result="ai헬스">
+                    고객님 지금 드시는 비타민이 최선일까요?
+                    <p class="mtxt"><strong>내가 섭취 중인<br>비타민 효과는?!</strong></p>
+                    <span class="mt_tooltip"><span class="tooltip">섭취 중 비타민 효과 59% 의문!?</span></span>
+                    <a href="javascript:alert('확인하러 가기');" class="btn_skip ani">건강기능식품 인공지능 분석하기<span class="gage"></span></a>
+                </div>
+			</div>
+			<div class="swiper-pagination"></div>
+			<script>
+				$(function() {
+					var swiper = new Swiper('#freeTopbn', {
+						autoplay: {
+							delay: 3000,
+                            disableOnInteraction: false
+						},
+						pagination: {
+							el: '.swiper-pagination',
+						},
+					});
+				});
+			</script>
+		</div>
+		<!-- //미조회 -->
+		<script src="../resources/js/swiper.min.js"></script>
+		<!-- //baner (swiper) -->
+		<section class="health_check">
+			<div class="cover">
+				<h2>건강검진 대상 조회</h2>
+				<p>무료로 제공되는 무료건강검진 꼭 챙기세요!</p>
+				<figure class="ndata"><img src="../resources/images/kt_free_sample1.gif" alt=""></figure>
+			</div>
+			<div class="ui_align_mid nodata_box">
+				<div class="ele">고객님의 건강검진내역을 조회해주세요.<br><a href="#;" class="btn_x btn_srch">조회하기</a></div>
+			</div>
+		</section>
+        <!-- //건강검진 대상 조회 -->
+        <aside id="bn-aihealth" class="bnr_belt_outlink" data-type="ai헬스"><a href="#;"><span>불면의 밤..</span><span>수면 위한 <u class="emp">멜라토닌 보충제</u> 안전할까</span></a></aside>
+        <!-- //인공지능배너 -->
+		<section class="health_outlay">
+			<div class="cover">
+				<h2>의료비지출내역 조회</h2>
+				<p>병원비 및 약국 지출내역을 확인하세요!</p>
+				<figure class="ndata"><img src="../resources/images/kt_free_sample2.gif" alt=""></figure>
+			</div>
+			<div class="ui_align_mid nodata_box">
+				<div class="ele">고객님의 의료비 지출내역을 조회해주세요.<br><a href="#;" class="btn_x btn_srch">조회하기</a></div>
+			</div>
+		</section>
+		<!-- //나의 의료비 지출액 -->
+		<section class="insurance_info">
+			<div class="cover">
+				<h2>나의 숨은보험금 조회</h2>
+				<p>휴면 보험금 총 7조4천억 中<br>찾아간 휴면 보험금은 2조1천억!(약 28%)</p>
+				<ul class="insur_info_delbox">
+					<li>
+						<p><img src="../resources/images/kt_inser_info2.png" alt=""></p>
+						<span>휴면보험금 총액</span>
+						<strong>7조4천억</strong>
+					</li>
+					<li>
+						<p class="delbox2"><img src="../resources/images/kt_inser_info3.png" alt=""></p>
+						<span>찾은 휴면보험금</span>
+						<strong>2조1천억</strong>
+					</li>
+				</ul>
+			</div>
+			<a href="#;" class="btn_skip">나의 숨은보험금 상세확인<i class="ico_com"></i></a>
+		</section>
+		<!-- //나의 숨은보험금 조회 -->
+		<section class="my_premium2">
+			<div class="cover">
+				<h2>내 보험료 조회</h2>
+				<p>가입하신 보험 내역을 한번에 무료로 조회하세요!</p>
+				<figure class="ndata"><img src="../resources/images/kt_free_sample3.gif" alt=""></figure>
+			</div>
+			<div class="ui_align_mid nodata_box">
+				<div class="ele">고객님의 보험 상세 내역을 조회해주세요.<br><a href="#;" class="btn_x btn_srch">조회하기</a></div>
+			</div>
+		</section>
+		<!-- //내 보험료 조회 -->
+		<section class="my_premium">
+			<div class="cover">
+				<h2>내 보험료 조회</h2>
+				<p>가입하신 보험 내역을 한번에 무료로 조회하세요!</p>
+				<div class="chart_type">
+					<dl>
+						<dt>
+							<div class="progress" data-area="3" data-text1="40" data-text2="30" data-text3="30" data-name1="한화손해" data-name2="삼성생명" data-name3="삼성화재"><div class="inset"></div><div class="outset"></div><div class="shw"></div></div>
+						</dt>
+						<dd>
+							<h3><i class="ico_com"></i>고객님의 납입보험료 TOP5</h3>
+							<ul>
+								<li data-name="현대해상"><span class="name elip1">현대해상현대해상</span><span class="col"><code>3,000,000</code>원</span></li>
+								<li data-name="삼성생명"><span class="name elip1">삼성생명</span><span class="col"><code>150,000</code>원</span></li>
+								<li data-name="DB손보"><span class="name elip1">DB손보</span><span class="col"><code>10,000</code>원</span></li>
+								<li class="nodata"><span class="name"></span><span class="col"></span></li>
+								<li class="nodata"><span class="name"></span><span class="col"></span></li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+				<div class="list_type2">
+					<ul class="list">
+						<li>
+							<span class="th">가입 보험</span>
+							<span class="td"><a href="#;">총<code class="won">3</code>건</a></span>
+						</li>
+						<li>
+							<span class="th">월 납입보험료 </span>
+							<span class="td"><a href="#;"><code class="won">500,000</code>원</a></span>
+						</li>
+						<li>
+							<span class="th">대출가능금액</span>
+							<span class="td"><a href="#;"><code class="won">3,000,000</code>원</a></span>
+						</li>
+						<li>
+							<span class="th">기대출금액</span>
+							<span class="td"><a href="#;"><code class="won">0</code>원</a></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<a href="#;" class="btn_skip">내 보험 상세 내역 확인하기<i class="ico_com"></i></a>
+		</section>
+		<!-- //내 보험료 조회 -->
+		<div class="btn_total"><button type="button" onclick="">건강지키미(유료)가입</button></div>
+	</div>
+	<!-- //content -->
+	<footer class="footer_cm">
+        <article>
+            <div class="infobx">
+                <button type="button" onclick="layer_open('cpInfo')" class="btn_info">(주) 민앤지 사업자 정보</button>
+                <p class="cau2">본 서비스는 청약철회가 불가능한 상품입니다.</p>
+                <ul class="list">
+                    <li class="t"><span>서비스 이용문의</span> (주)민앤지 1599-4760</li>
+                    <li>가입해지문의 U+(114)</li>
+                    <li>보험 및 건강정보는 내보험찾아줌, 건강보험관리공단, 보험사에서 조회 된 정보입니다.</li>
+                    <li>본 서비스는 모바일에서 보험, 건강정보를 간편하고 안전하게 확인 할 수 있는 서비스 입니다.</li>
+                    <li>진료 및 투약정보는 조회 일 기준으로 14개월 전 진료분부터 1년간의 내역을 확인 하실 수 있습니다.</li>
+                </ul>
+            </div>
+        </article>
+	</footer>
+	<!-- //footer -->
+
+</div>
+
+<!-- 사용자정보 -->
+<div class="ly_pop full ly_cpinfo">
+    <div class="bg"></div>
+    <div class="cont">
+        <div id="cpInfo" class="elm iscroll">
+            <button type="button" onclick="layer_close()" class="close"><i class="bgf">창닫기</i></button>
+            <h2>사업자 정보</h2>
+            <ul class="list">
+                <li>
+                    <strong>상호</strong>
+                    <span>㈜민앤지</span>
+                </li>
+                <li>
+                    <strong>대표이사</strong>
+                    <span>이현철</span>
+                </li>
+                <li>
+                    <strong>주소</strong>
+                    <span>서울시 강남구 테헤란로 34길 6<br>태광타워 12F, 13F</span>
+                </li>
+                <li>
+                    <strong>통신판매업신고번호</strong>
+                    <span>제2015-서울강남-00012호</span>
+                </li>
+                <li>
+                    <strong>사업자등록번호</strong>
+                    <span>214-88-39117</span>
+                </li>
+                <li>
+                    <strong>고객센터</strong>
+                    <span>1599-4760 (평일 09:00-18:00)</span>
+                </li>
+                <li>
+                    <strong>호스팅서비스사업자</strong>
+                    <span>㈜민앤지</span>
+                </li>
+                <li>
+                    <strong>이메일</strong>
+                    <span>minwise.help@minwise.co.kr</span>
+                </li>
+            </ul>
+            <ul class="list_terms">
+                <li><button type="button" onclick="">사업자 정보 확인</button></li>
+                <li><button type="button" onclick="">건강지키미 무료서비스이용약관</button></li>
+                <li><button type="button" onclick="">건강지키미 유료서비스이용약관</button></li>
+                <li><button type="button" onclick="">건강지키미 개인정보 수집 및 이용약관</button></li>
+                <li><button type="button" onclick="">건강지키미 개인정보 제3자 제공 동의약관</button></li>
+                <li><button type="button" onclick="">건강지키미 알림 및 광고수신동의 약관</button></li>
+                <li><a href="https://www.minwise.co.kr/sterm/mprivacy" target="_blank">개인정보처리방침</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- //사용자정보 -->
+
+</body>
+</html>

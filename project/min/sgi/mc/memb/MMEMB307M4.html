@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title>SGI서울보증</title>
+    <link rel="stylesheet" type="text/css" href="../../inc/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../inc/css/common-ui.css">
+    <link rel="stylesheet" type="text/css" href="../../inc/css/style-cust.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../inc/css/style-mark.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../inc/css/jquery.mobile-1.4.5.css">
+    <script type="text/javascript" src="../../inc/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="../../inc/js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../inc/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
+</head>
+
+<body>
+    <!-- 페이지 유형 제작시 wrapper에 고유 클레스 추가 -->
+    <div class="wrapper ps-sub-page membp3074">
+        <header class="header">
+            <button type="button" class="prev-page" title="이전페이지 이동"></button>
+            <h1 class="header-tit">회원정보 변경</h1>
+            <button type="button" class="sidenav-btn" title="전체메뉴"></button>
+        </header>
+        <!-- 페이지 하단에 플로팅 버튼이 있을시 class = btm-fixed 추가 -->
+        <section class="container btm-fixed">
+            <!-- 사이드 여백설정 공통 class = inner -->
+            <!-- 페이지 하단에 플로팅 버튼이 있을시 class = acco-fixed 추가 -->
+            <div class="content">
+                <div class="cont-wrap">
+                    <ul class="ps-accordion-wrap type-list">
+                        <li class="accordion-item">
+                            <p class="deta-tit inner">법인정보</p>
+                            <div class="deta-docu inner">
+                                <div class="ps-from-item">
+                                    <p class="write-title">사업자등록번호</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="사업자등록번호 입력" value="213-81-00595" readonly>
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">법인등록번호</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="법인등록번호 입력" value="110111-0099774" readonly>
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">상호</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="상호 입력" value="상호보증보험주식회사 종로지점" readonly>
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">대표자명</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="대표자명 입력" value="홍길*" readonly>
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">사업장주소</p>
+                                    <div class="ps-input in-btn-wrap">
+                                        <input type="text" title="우편번호" placeholder="우편번호" value="03126" readonly>
+                                        <button type="button" class="inline-btn gray">주소찾기</button>
+                                    </div>
+                                    <div class="ps-input">
+                                        <input type="text" title="도로명 주소" placeholder="도로명 주소" value="서울 종로구 연지동" readonly>
+                                    </div>
+                                    <div class="ps-input">
+                                        <input type="text" title="상세 주소 입력" placeholder="상세 주소" value="136-00" readonly>
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">사업장전화번호</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="사업장전화번호 입력" placeholder="숫자만 입력">
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">수신동의</p>
+                                    <div class="ps-form-switch">
+                                        <div class="switch-title">SMS 수신동의</div>
+                                        <div class="ps-switch-wrap">
+                                            <input type="checkbox" id="switch-01" checked>
+                                            <label for="switch-01" aria-label="동의"></label>
+                                        </div>
+                                    </div>
+                                    <div class="ps-form-switch">
+                                        <div class="switch-title">이메일 수신동의</div>
+                                        <div class="ps-switch-wrap">
+                                            <input type="checkbox" id="switch-02">
+                                            <label for="switch-02" aria-label="비동의"></label>
+                                        </div>
+                                    </div>
+                                    <div class="ps-form-switch">
+                                        <div class="switch-title">DM 수신동의</div>
+                                        <div class="ps-switch-wrap">
+                                            <input type="checkbox" id="switch-03">
+                                            <label for="switch-03" aria-label="비동의"></label>
+                                        </div>
+                                    </div>
+                                    <div class="ps-form-switch">
+                                        <div class="switch-title">PUSH 수신동의</div>
+                                        <div class="ps-switch-wrap">
+                                            <input type="checkbox" id="switch-04">
+                                            <label for="switch-04" aria-label="비동의"></label>
+                                        </div>
+                                    </div>
+                                    <p class="ps-bu-txt circle gray">수신동의 시 전자서명 진행상황 등 보험가입 단계별로 자세한 안내서비스를 받으실 수 있습니다.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <p class="deta-tit inner">담당자 정보</p>
+                            <div class="deta-docu inner">
+                                <div class="agree-box-wrap">
+                                    <dl class="agree-box">
+                                        <dt class="agree-tit">법인 담당자 등록을 위한 필수 동의 <span>(필수)</span></dt>
+                                        <dd class="agree-item">
+                                            <div class="ps-chk">
+                                                <input type="checkbox" id="chk-agree-01">
+                                                <label for="chk-agree-01">개인(신용)정보의 수집·이용에 관한 필수사항</label>
+                                            </div>
+                                            <!-- 전문 보기 완료 후 class="on" 추가, 버튼 문구 [확인]으로 변경, title="확인 완료" 추가 -->
+                                            <button type="button" class="inline-btn">보기</button>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">담당자 성명</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="담당자 성명 입력" placeholder="담당자 성명 입력" value="홍길동">
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">담당자 부서명</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="담당자 부서명 입력" placeholder="담당자 부서명 입력" value="전략기획">
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">휴대전화</p>
+                                    <!-- 인증 완료 후 class = vaild-on 추가 -->
+                                    <div class="ps-input in-btn-wrap">
+                                        <input type="text" title="휴대전화번호 입력" placeholder="숫자만 입력">
+                                        <!-- 인증완료 후 비활성화 처리 -->
+                                        <button type="button" class="inline-btn gray">인증요청</button>
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">이메일</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="이메일 입력" value="alonnas@hanmail.net">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- cont-wrap -->
+            </div>
+            <!-- content -->
+            <div class="fix-btn-wrap">
+                <button type="button" class="btn gray small">재작성</button>
+                <button type="button" class="btn blue">확인</button>
+            </div>
+        </section>
+        <footer class="footer"></footer>
+    </div>
+</body>
+</html>

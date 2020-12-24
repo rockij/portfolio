@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+@import "base/basic";
+@import "base/module";
+
+// 오픈이벤트
+.event_ly_open{
+    .wrap{
+        transform: translateY(-50%);
+        left:0;
+        width:100%;        
+    }
+    .content{
+        position:relative;
+        padding:0 !important;
+        text-align:center;
+        > img{
+            width:90%;
+            max-width:px(562*2);
+        }
+        @include mq("fold"){
+            width:px(640*2);
+            margin:0 auto;
+        }
+    }
+    .close{
+        @include pos($aot, $r:0, $t:px(30));
+        padding:px(20);z-index:10;
+        i{
+            @include bg("icon", "lgu/event/open_pop_x.png", $w:px(52), $h:px(52));
+        }
+    }
+    .list, .count, .skip{
+        @include pos($aot);
+    }
+    .list{
+        text-align:left;
+        font-weight:300;
+        font-size:3.408vw;
+        color:rgba(0,0,0,.65);
+        left:20vw;top:87vw;
+        @include mq("fold"){
+            left:px(260);
+            top:px(1090);
+            font-size:px(40);
+        }
+    }
+    .count{
+        display:inline-block;
+        text-align:center;
+        top:108vw;left:79.9vw;
+        font-weight:700;
+        font-size:3.55vw;
+        color:#fff;
+        @include mq("fold"){
+            top:px(1353);
+            left:px(1015);
+            font-size:px(42);
+        }
+    }
+    .skip{
+        display:block;
+        text-align:left;
+        top:147vw;left:12vw;
+        img{
+            width:61.6vw
+        }
+        &:after{
+            content:'';
+            @include bg('icon', "lgu/event/open_pop_arr.png", $w:5.65vw, $h:2.35vw);
+            margin-top:-2vw;
+            margin-left:8vw;
+            @include arrMov;
+        }
+        @include mq("fold"){
+            top:auto;
+            bottom:px(86);
+            left:px(150);
+            img{
+                width:px(394*2)
+            }
+            &:after{
+                width:px(37*2);
+                height:px(15*2);
+                margin-left:px(90);
+            }
+        }
+    }
+}

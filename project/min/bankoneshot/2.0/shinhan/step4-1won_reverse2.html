@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link rel="preload" href="resources/css/font/NotoSansKR-Regular-Hestia.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link href="resources/css/font.css" media="screen" rel="stylesheet">
+<link href="resources/css/common.css" media="screen" rel="stylesheet">
+<link href="resources/css/site.css" media="screen" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="resources/js/jquery-1.12.4.min.js"></script>
+<script src="resources/js/design.js"></script>
+<title>신한금융투자 계좌개설</title>
+</head>
+<body>
+
+<div id="wrap">
+
+	<header id="header" class="fix_top">
+		<h1>계좌번호 직접 입력</h1>
+		<button type="button" onclick="" class="btn_cls"><i class="ico_com ico_x">닫기</i></button>
+	</header>
+	<!-- //header -->
+
+	<div id="ct" class="bankSlct">
+		<fieldset class="mybank_select">
+			<legend>은행선택</legend>
+			<p class="cau">은행을 선택하세요.</p>
+			<ul>
+				<li><div class="checkbox"><input type="radio" name="bank" id="kb" checked><label for="kb" class="ui_align_mid2"><span class="elm"><img src="resources/images/bank/logo_02.png" alt="kb국민은행"><img src="resources/images/bank/logo_02_on.png" alt="kb국민은행" class="on"><tt>국민</tt></span></label></div></li>
+				<li><div class="checkbox ui_align_mid"><input type="radio" name="bank" id="nh"><label for="nh" class="ui_align_mid2"><span class="elm"><img src="resources/images/bank/logo_01.png" alt="농협은행"><img src="resources/images/bank/logo_01_on.png" alt="농협은행" class="on"><tt>농협</tt></span></label></div></li>
+				<li><div class="checkbox ui_align_mid"><input type="radio" name="bank" id="sh"><label for="sh" class="ui_align_mid2"><span class="elm"><img src="resources/images/bank/logo_03.png" alt="신한은행"><img src="resources/images/bank/logo_03_on.png" alt="신한은행" class="on"><tt>신한</tt></span></label></div></li>
+				<li><div class="checkbox"><input type="radio" name="bank" id="keb"><label for="keb" class="ui_align_mid2"><span class="elm"><img src="resources/images/bank/logo_04.png" alt="KEB하나은행"><img src="resources/images/bank/logo_04_on.png" alt="KEB하나은행" class="on"><tt>하나</tt></span></label></div></li>
+				<li><div class="checkbox ui_align_mid"><input type="radio" name="bank" id="sc"><label for="sc" class="ui_align_mid2"><span class="elm"><img src="resources/images/bank/logo_05.png" alt="SC제일은행"><img src="resources/images/bank/logo_05_on.png" alt="SC제일은행" class="on"><tt>SC</tt></span></label></div></li>
+				<li><div class="checkbox ui_align_mid"><input type="radio" name="bank" id="db"><label for="db" class="ui_align_mid2"><span class="elm"><img src="resources/images/bank/logo_06.png" alt="대구은행"><img src="resources/images/bank/logo_06_on.png" alt="대구은행" class="on"><tt>대구</tt></span></label></div></li>
+				<li><div class="checkbox"><input type="radio" name="bank" id="busan"><label for="busan" class="ui_align_mid2"><span class="elm"><img src="resources/images/bank/logo_07.png" alt="부산은행"><img src="resources/images/bank/logo_07_on.png" alt="부산은행" class="on"><tt>부산</tt></span></label></div></li>
+				<li><div class="checkbox ui_align_mid"><input type="radio" name="bank" id="kn"><label for="kn" class="ui_align_mid2"><span class="elm"><img src="resources/images/bank/logo_08.png" alt="경남은행"><img src="resources/images/bank/logo_08_on.png" alt="경남은행" class="on"><tt>경남</tt></span></label></div></li>
+				<li><div class="checkbox ui_align_mid"><input type="radio" name="bank" id="kj"><label for="kj" class="ui_align_mid2"><span class="elm"><img src="resources/images/bank/logo_09.png" alt="광주은행"><img src="resources/images/bank/logo_09_on.png" alt="광주은행" class="on"><tt>광주</tt></span></label></div></li>
+				<li><div class="checkbox"><input type="radio" name="bank" id="jb"><label for="jb" class="ui_align_mid2"><span class="elm"><img src="resources/images/bank/logo_10.png" alt="전북은행"><img src="resources/images/bank/logo_10_on.png" alt="전북은행" class="on"><tt>전북</tt></span></label></div></li>
+				<li><div class="checkbox ui_align_mid"><input type="radio" name="bank" id="jeju"><label for="jeju" class="ui_align_mid2"><span class="elm"><img src="resources/images/bank/logo_11.png" alt="제주은행"><img src="resources/images/bank/logo_11_on.png" alt="제주은행" class="on"><tt>제주</tt></span></label></div></li>
+				<li><div class="checkbox ui_align_mid"><input type="radio" name="bank" id="kdb"><label for="kdb" class="ui_align_mid2"><span class="elm"><img src="resources/images/bank/logo_12.png" alt="KDB산업은행"><img src="resources/images/bank/logo_12_on.png" alt="KDB산업은행" class="on"><tt>KDB</tt></span></label></div></li>
+				<li><div class="checkbox"><input type="radio" name="bank" id="epost"><label for="epost" class="ui_align_mid2"><span class="elm"><img src="resources/images/bank/logo_13.png" alt="우체국"><img src="resources/images/bank/logo_13_on.png" alt="우체국" class="on"><tt>우체국</tt></span></label></div></li>
+				<li><div class="checkbox ui_align_mid"><input type="radio" name="bank" id="cu"><label for="cu" class="ui_align_mid2"><span class="elm"><img src="resources/images/bank/logo_14.png" alt="신협"><img src="resources/images/bank/logo_14_on.png" alt="신협" class="on"><tt>신협</tt></span></label></div></li>
+				<li><div class="checkbox ui_align_mid"><input type="radio" name="bank" id="suh"><label for="suh" class="ui_align_mid2"><span class="elm"><img src="resources/images/bank/logo_15.png" alt="수협"><img src="resources/images/bank/logo_15_on.png" alt="수협" class="on"><tt>수협</tt></span></label></div></li>
+				<li><div class="checkbox"><input type="radio" name="bank" id="ibk"><label for="ibk" class="ui_align_mid2"><span class="elm"><img src="resources/images/bank/logo_16.png" alt="IBK"><img src="resources/images/bank/logo_16_on.png" alt="IBK" class="on"><tt>IBK기업은행</tt></span></label></div></li>
+				<li><div class="checkbox ui_align_mid"><input type="radio" name="bank" id="wr"><label for="wr" class="ui_align_mid2"><span class="elm"><img src="resources/images/bank/logo_17.png" alt="우리은행"><img src="resources/images/bank/logo_17_on.png" alt="우리은행" class="on"><tt>우리</tt></span></label></div></li>
+				<li><div class="checkbox ui_align_mid"><input type="radio" name="bank" id="cty"><label for="cty" class="ui_align_mid2"><span class="elm"><img src="resources/images/bank/logo_18.png" alt="citibank"><img src="resources/images/bank/logo_18_on.png" alt="citibank" class="on"><tt>씨티</tt></span></label></div></li>
+				<li><div class="checkbox"><input type="radio" name="bank" id="nht"><label for="nht" class="ui_align_mid2"><span class="elm"><img src="resources/images/bank/logo_19.png" alt="NH투자증권"><img src="resources/images/bank/logo_19_on.png" alt="NH투자증권" class="on"><tt>NH투자</tt></span></label></div></li>
+				<li><div class="checkbox ui_align_mid"><input type="radio" name="bank" id="mg"><label for="mg" class="ui_align_mid2"><span class="elm"><img src="resources/images/bank/logo_20.png" alt="MG새마을금고"><img src="resources/images/bank/logo_20_on.png" alt="MG새마을금고" class="on"><tt>MG</tt></span></label></div></li>
+				<li><div class="checkbox ui_align_mid"><input type="radio" name="bank" id="kbk"><label for="kbk" class="ui_align_mid2"><span class="elm"><img src="resources/images/bank/logo_21.png" alt="K뱅크"><img src="resources/images/bank/logo_21_on.png" alt="K뱅크" class="on"><tt>K뱅크</tt></span></label></div></li>
+				<li><div class="checkbox ui_align_mid"><input type="radio" name="bank" id="kakao"><label for="kakao" class="ui_align_mid2"><span class="elm"><img src="resources/images/bank/logo_22.png" alt="카카오뱅크"><img src="resources/images/bank/logo_22_on.png" alt="카카오뱅크" class="on"><tt>카뱅</tt></span></label></div></li>
+			</ul>
+		</fieldset>
+		<!-- <button type="button" onclick="" class="btn_xr btn_type on fix_btm">다음</button> -->
+	</div>
+	<!-- //content -->
+
+</div>
+
+</body>
+</html>

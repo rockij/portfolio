@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>010페이</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" href="../../css/owl.carousel.min.css">
+<link rel="stylesheet" href="../../css/common.css?ezauthver=5.0">
+<link rel="stylesheet" href="../../css/style.css?ezauthver=5.0">
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../../js/html5shiv.js"></script>
+<script type="text/javascript" src="../../js/respond.min.js"></script>
+<![endif]-->
+<script src="../../js/jquery-1.8.3.min.js"></script>
+<script src="../../js/jquery.placeholder.min.js"></script>
+<script src="../../js/owl.carousel.min.js"></script>
+<script src="../../js/design.js?ezauthver=5.0" defer="defer"></script>
+<script src="../../js/ui.js?ezauthver=5.0" defer="defer"></script>
+<script src="../../js/commonmsg.js?ezauthver=5.0"></script>
+<script src="../../js/commonutil.js?ezauthver=5.0"></script>
+</head>
+
+<body>
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<div class="fix-layer top">
+		<div id="header">
+			<div class="container">
+				<button type="button" id="btnBack" class="btn-back"><i class="icon-angle-left">뒤로가기</i></button>
+				<!-- <h1 class="brand-name"><a href="#"><span><img src="../../images/logo.svg" class="brand-logo" alt="010pay"></span></a></h1> -->
+				<h2 class="page-title">충전 머니 관리</h2>
+				<!-- <button type="button" id="closeWindow" class="btn-close"><i class="icon-times">창닫기</i></button> -->
+			</div>
+		</div>
+		<!-- //header -->
+	</div>
+	
+
+	<!-- content -->
+	<div id="content" class="">
+		<!-- container -->
+		<div class="container charge-wrap">
+			<!-- 충전머니 -->
+			<section class="charge-sec current bg-gray">
+				<dl>
+					<dt>충전 머니</dt>
+					<dd><span class="price"><strong>1,890,000</strong>원</span></dd>
+				</dl>
+			</section>
+			<section class="charge-sec else">
+				<dl>
+					<dt>일반 충전</dt>
+					<dd><span class="price"><strong>1,890,000</strong>원</span></dd>
+				</dl>
+				<div class="note">
+					<strong>머니 유의사항</strong>
+					<ul>
+						<li class="info text-light">충전 머니는 환급 시 계좌로 입금 됩니다.</li>
+						<li class="info text-light">단, 보유한 할부 머니가 잔여 할부금 보다 적은 경우 잔여 할부금의 상환을 통한 환급만 가능 합니다.</li>
+						<li class="info text-light">할부금의 상환을 통한 환급시 환급금은 KB캐피탈의 할부금 상환용 가상계좌로 입금 됩니다.</li>
+						<li class="info text-light">머니 환급 및 상환은 월 5회 무료로 제공되며, 이후 건 당 500원의 수수료가 부과 됩니다.</li>
+						<li class="info text-light">보유한 포인트가 수수료보다 많은 경우에만 환급이 가능 합니다. 머니 환급은 본인명의 계좌로만 가능 합니다.</li>
+					</ul>
+				</div>
+			</section>
+			<!-- //충전머니 -->
+
+			<!-- 하단 고정영역 -->
+			<div class="bottom-area fixed">
+				<div class="container">
+					<button type="button" id="refund" class="btn btn-outline info-chg"><i class="icon icon-refund"></i><span>환급하기</span></button>
+				</div>
+			</div>
+			<!-- //하단 고정영역 -->
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //content -->
+</div>
+<!-- //wrap -->
+
+<!-- loading -->
+<div class="modal modal-loading">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="loading">
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+				</div>
+				<span class="text">로딩 중</span>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //loading -->
+
+<!-- common alert -->
+<div id="commonAlert" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<h3 id="alertTitle"></h3>
+				<p id="alertContents"></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" onclick="modalClose();" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //common alert -->
+
+<!-- common prompt -->
+<div id="commonPrompt" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<h3 id="promptTitle"></h3>
+				<p id="promptContents"></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" onclick="modalClose();" class="btn">취소</button>
+				<button type="button" id="promptOk" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //common prompt -->
+
+<!-- 충전머니 환급 -->
+<div id="modal-refund" class="modal modal-slide modal-info">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body my-info">
+				<button class="btn btn-close">취소</button>
+				<div class="refund-info">
+					<p>보유하신 충전 머니를<br>주계좌로 환급 받으실 수 있습니다.</p>
+					<section class="pay-sec">
+						<dl>
+							<dt>보유 머니</dt>
+							<dd><span>1,890,000</span>원</dd>
+						</dl>
+						<div class="bg-gray">
+							<ul class="form-type">
+								<li>
+									<label for="" class="label">환급 신청</label>
+									<div class="form-desc">
+										<div class="position-relative">
+											<input type="tel" placeholder="" class="input-text-lg input-box">
+											<span class="form-control-clear hidden"><i class="icon-times-circle sr-only">삭제</i></span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<dl>
+										<dt>수수료 <small>(월 5회 무료)</small></dt>
+										<dd>무료</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>환급 계좌</dt>
+										<dd><span class="logo"><img src="../../images/bank/logo_020.png" alt="우리">1202</span></dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+					</section>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn" onclick="modalOpen('alert-refund');">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //충전머니 환급 -->
+
+<!-- 환급완료 -->
+<div id="alert-refund" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<h3 id="alertTitle">환급 완료</h3>
+				<p id="alertContents">주계좌로 입금 완료 되었습니다.</p>
+				<div class="refund-result">
+					<ul>
+						<li>
+							<dl>
+								<dt>환급 금액</dt>
+								<dd><i>1,000,000</i> 원</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>수수료</dt>
+								<dd>무료</dd>
+							</dl>
+						</li>
+					</ul>
+					<dl>
+						<dt>머니 잔액</dt>
+						<dd><i>890,000</i> 원</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" onclick="modalClose();" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //환급완료 -->
+</body>
+</html>

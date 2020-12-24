@@ -1,0 +1,529 @@
+// 하단 네비탭
+.topBtn {
+    @include pos($p:fixed,$b:ptr(30));
+    margin: 0 auto;
+    text-align: right;
+    max-width: 768px;
+    z-index: 11;
+    button {
+        padding: ptr(18) ptr(17);
+        background-color: #fff;
+        color: #6E6E6E;
+        text-align: center;
+        @include wfn;
+        letter-spacing: 0;
+        font-weight: 700;
+        font-size: ptr(16);
+        border-radius: ptr(6);
+        box-shadow: 0 ptr(3) ptr(10) rgba(0,0,0,0.1);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
+        &.visible {
+            visibility: visible;
+            opacity: 1;
+        }
+        &:before{
+            content: '';
+            @include arr($ty:'arrow',$w:ptr(8),$h:ptr(8),$c:#6E6E6E,$ro:-45);
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+.navTab {
+    display: flex;
+    position:relative;
+    z-index:1;
+    padding: 0 ptr(20);
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+    box-shadow: 0px ptr(-5) ptr(16) 0px rgba(0, 0, 0, 0.1);
+    li {
+        flex: 1;
+        text-align: center;
+        font-size: ptr(16);
+    }
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: ptr(15) 0;
+        color: #222;
+        font-size: ptr(22);
+        &.active {
+            font-weight: 600;
+            color: $fc_p;
+            .ico_tab {
+                @for $i from 1 to 7 {
+                    &.tab#{$i} {
+                        background-image: url($urlImg + 'ico_navtab0' + $i + '_act.svg');
+                    }
+                }
+            }
+        }
+    }
+    .ico_tab {
+        display: block;
+        width: ptr(58);
+        height: ptr(58);
+        margin: 0 auto;
+        @include icoSet;
+        @for $i from 1 to 7 {
+            &.tab#{$i} {
+                background-image: url($urlImg + 'ico_navtab0' + $i + '.svg');
+            }
+        }
+    }
+}
+/* layout */
+#wrap{
+    max-width:768px;
+    margin:0 auto;
+    padding-top:ptr(100);
+    &.ct-over{
+        .fix.btm{
+            position:static
+        }
+        > .btn_area_float {
+            margin-top: ptr(52);
+        }
+    }
+    .top {
+        &.scroll_shw {
+            @include bshw;
+        }
+    }
+}
+@include mq("pc"){
+    #wrap{
+        background-color:#efefef;
+        height:100%;
+    }
+}
+.headWrap {
+    @include pos($p:relative);
+    .ico {
+        z-index: 1;
+    }
+    .ico_back {
+        & + h1 {
+            padding-left: ptr(76);
+            .clo {
+                margin-left: 0;
+            }
+        }
+    }
+    h1 {
+        @include elip('line1');
+        padding: 0 ptr(40) 0 0;
+        vertical-align: middle;
+        opacity: 1;
+        transition: 0.5s ease;
+        &:first-child {
+            padding-left: ptr(26);
+        }
+        &, button{
+            font-weight: 500;
+            font-size: ptr(36);
+        }
+        &.white {
+            opacity: 0;
+        }
+        &.promo {
+            @include wfn;
+            font-weight: 800;
+            font-size: ptr(52);
+            letter-spacing: ptr(-2);
+        }
+        .clo{
+            display: inline-block;
+            width: ptr(84);
+            height: ptr(70);
+            margin:ptr(-8) 0 0 ptr(26);
+            vertical-align: middle;
+        }
+        .handle_brandlist{
+            position:relative;
+            padding-right:ptr(60);
+            line-height:1.3;
+            @include elip('line1');
+            i{
+                @include pos(absolute, $t:50%, $r:0);
+                transform:translateY(-50%);
+                width:ptr(40);
+                height:ptr(40);
+                @include icoSet;
+                background-image: url($urlImg + 'ico_handle_brandlist.svg');
+            }
+        }
+        code {
+            @include wfn;
+            font-weight: 700;
+            font-size: ptr(36);
+            &.blu {
+                color: $fc_p;
+            }
+        }
+    }
+    .stx{
+        padding:ptr(6) 0 0 ptr(63);
+        font-size:ptr(26);
+        color:$fc_p;
+    }
+    .csment{
+        @include pos(absolute, $r:ptr(10), $b:ptr(-120));
+        padding:ptr(20) ptr(30) ptr(22);
+        display:inline-block;
+        background-color:$fc_p;
+        font-size:ptr(24);
+        color:#fff;
+        &:before{
+            content:'';
+            width:2px;
+            height:ptr(34);
+            background:url($urlImg + "ico_o2.png") repeat-y;
+            background-size:100% auto;
+            @include pos(absolute, $r:ptr(24), $t:ptr(-64+24));
+        }
+    }
+    &.sales {
+        text-align: center;
+        h1 {
+            padding: 0;
+            margin-top: ptr(4);
+            font-size: ptr(30);
+            &:before {
+                content: '';
+                display: inline-block;
+                width: ptr(65);
+                height: ptr(65);
+                margin-top: ptr(-8);
+                vertical-align: middle;
+                @include icoSet;
+                background-image: url($urlImg + 'logo_sales.png');
+            }
+        }
+    }
+}
+.header, #header {
+    padding: ptr(21) ptr(12) ptr(21) ptr(6);
+    background-color: #fff;
+    &.searchForm {
+        padding-top: ptr(13);
+        padding-bottom: 0;
+        &.main {
+            padding-top: ptr(21);
+            padding-bottom: ptr(21);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+    }
+    .bar{
+        display:none;
+        @include pos(absolute, $l:0, $b:ptr(-86));
+        width:100%;z-index:1;
+        text-align:center;
+        padding:ptr(32) 0;
+        background-color:#fff;
+        &:before{
+            content:'';
+            display:inline-block;
+            vertical-align:top;
+            width:ptr(56);
+            height:ptr(6);
+            border-radius:ptr(21);
+            background-color:#DBDBDB;
+        }
+    }
+    .telGo{
+        @include pos(absolute, $t:ptr(-8), $r:0);
+        width:ptr(212);
+        height:ptr(62);
+        text-align:right;
+        line-height:ptr(58);
+        padding:0 ptr(20);
+        background-color:#fff;
+        border:1px solid #222;
+        font-size:ptr(24);
+        animation: telSamll .5s ease .5s forwards;
+        span{
+            @include pos(absolute,$l:ptr(20),$t:ptr(12));
+            animation: telTxt .25s ease .5s forwards;
+        }
+        &:after{
+            content:'';@include bgf;
+            @include pos(absolute,$r:ptr(20),$t:ptr(18));
+            width:ptr(26);height:ptr(26);
+            margin:ptr(-2) 0 0 ptr(16);
+            background-image:url($urlImg + 'inquiry_phone2.png');
+            background-color:#fff;
+        }
+        @keyframes telSamll{
+            to{
+                width:36px;
+            }
+        }
+        @keyframes telTxt{
+            to{
+                opacity:0;
+            }
+        }
+    }
+    .ico_home {
+        & + .text {
+            @include pos($r:ptr(76));
+        }
+    }
+    .text{
+        @include pos(absolute, $r:ptr(30), $t:ptr(6));
+        font-size:ptr(26);
+        text-decoration: underline;
+        color:#222;
+    }
+    &.barOn{
+        .bar{
+            display:block
+        }
+    }
+    &.case1{
+        padding:0;
+        h1{
+            padding:ptr(67) ptr(42) ptr(30);
+            font-size:ptr(56);
+            letter-spacing: ptr(-4);
+            &.promo {
+                letter-spacing: 0;
+            }
+        }
+        .askTab{
+            border-bottom:0
+        }
+    }
+    &.noTit {
+        @include clearfix;
+        min-height: ptr(92);
+    }
+    &.nobg{
+        background-color:transparent;
+        h1 {
+            color: #fff;
+        }
+    }
+    &.line {
+        border-bottom: 1px solid #C7C7C7;
+    }
+}
+.headerTabs{
+    #header{
+        position:relative
+    }
+    .tabType{
+        button, a{
+            // padding-top:ptr(20)
+        }
+    }
+}
+.headerTel{
+    h1{
+        @include elip('line1')
+    }
+    &.fix{
+        #header{
+            position:relative
+        }
+    }
+}
+#headerFix{
+    @include transition;
+    &.on{
+        background-color:#fff;
+        .gocount{
+            line-height:ptr(90);
+            margin-top:0;
+            margin-bottom:0
+        }
+    }
+}
+.searchForm {
+    &.main {
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.6s ease-in-out;
+        &.visible {
+            visibility: visible;
+            opacity: 1;
+        }
+        .ico_search {
+            @include pos($r:ptr(10));
+        }
+    }
+    .ico_back {
+        z-index: 2;
+    }
+    .ipJoin {
+        padding: 0 ptr(30) 0 ptr(36);
+        .ipLine {
+            &:after {
+                height: 2px;
+            }
+            .ip {
+                padding-left: ptr(50);
+                border-width: 2px;
+            }
+            label {
+                @include pos($l:ptr(50));
+            }
+        }
+    }
+}
+
+#footer {
+    padding: 0 ptr(42);
+    @include mq("pc") {
+        padding-bottom: ptr(222);
+    }
+}
+.footWrap {
+    * {
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+    &.moreInfo {
+        address {
+            display: block;
+        }
+        .footDoc {
+            .copy {
+                button {
+                    &:after {
+                        transform: rotate(180deg);
+                        margin-top: ptr(-9);
+                    }
+                }
+            }
+        }
+    }
+    address {
+        display: none;
+        dl {
+            font-size: 0;
+        }
+        dt,
+        dd {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: ptr(20);
+            color: #6E6E6E;
+            line-height: 1.7;
+        }
+        dt {
+            width: ptr(164);
+        }
+        dd {
+            width: calc(100% - 8.2rem);
+            font-weight: 300;
+        }
+    }
+}
+.footDoc {
+    margin-bottom: ptr(40);
+    text-align: left;
+    .copy {
+        margin-top: ptr(7);
+        @include wfn;
+        font-weight: 600;
+        font-size: ptr(22);
+        color: #B7B7B7;
+        letter-spacing: ptr(-1);
+        button {
+            margin-left: ptr(17);
+            font-size: ptr(22);
+            &:after{
+                content: '';
+                margin: 0 0 0 ptr(9);
+                @include arr($ty:'semo_down',$w:ptr(8),$h:ptr(6),$c:#222)
+            }
+        }
+    }
+    .doc {
+        font-size: 0;
+        li {
+            display: inline-block;
+            margin-left: ptr(26);
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                a {
+                    color: #F2373C;
+                }
+            }
+            a {
+                display: inline-block;
+                vertical-align: middle;
+                font-size: ptr(22);
+                color: #6E6E6E;
+            }
+        }
+    }
+}
+#footBn {
+    padding: ptr(44) 0 ptr(34);
+    a {
+        overflow: hidden;
+        display: block;
+        width: 100%;
+        padding-bottom: 22.55%;
+        border-radius: ptr(12);
+        @include pos($p:relative);
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            @include pos($p:absolute,$l:0,$r:0,$t:0,$b:0);
+        }
+    }
+}
+.fix{
+    position:fixed;
+    &.top, &.btm{
+        width: 100%;
+        max-width:768px;
+        margin:0 auto;
+    }
+    &.top{
+        left:0;right:0;
+        top:0;
+        z-index:10;
+    }
+    &.btm{
+        left:0;right:0;
+        bottom:0;
+        z-index:10;
+        .btn_xr{
+            border-radius:0;
+        }
+        > a{
+            display:block;
+            position:relative;
+            z-index:1;
+        }
+        &.goOut{
+            &.on{
+                bottom:0 !important;
+                @include transition($tm:.25s, $spd:.5s);
+            }
+        }
+    }
+}
+
+.innerWrap{
+    background-color:#F8F8F8;
+    > section{
+        margin-top:ptr(14);
+        background-color:#fff;
+        &:first-child{
+            margin-top:0
+        }
+    }
+}

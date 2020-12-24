@@ -1,0 +1,200 @@
+@mixin clearfix {
+    &:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+@mixin pos($p: null,$l: null,$r: null,$t: null,$b: null) {
+    position: $p;
+    left: $l;
+    right: $r;
+    top: $t;
+    bottom: $b;
+}
+@function ptr($px, $context: $standard-size) {
+    @return ($px/2) / $context * 1rem;
+}
+$standard-size: 16;
+$urlImg: '../images/';
+
+@mixin bgSet {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+@mixin mouse {
+    @keyframes updown {
+        0% {transform: translateY(-25%);-webkit-transform: translateY(-25%)}
+        50% {transform: translateY(0);-webkit-transform: translateY(0)}
+        100% {transform: translateY(-25%);-webkit-transform: translateY(-25%)}
+    }
+    @-webkit-keyframes updown {
+        0% {transform: translateY(-25%);-webkit-transform: translateY(-25%)}
+        50% {transform: translateY(0);-webkit-transform: translateY(0)}
+        100% {transform: translateY(-25%);-webkit-transform: translateY(-25%)}
+    }
+    animation-name: updown;
+    animation-duration: 1s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+    -webkit-animation-name: updown;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-iteration-count:infinite;
+}
+@mixin earth {
+    @keyframes planet {
+        from {transform: rotate(360deg);-webkit-transform: rotate(360deg);}
+        to {transform: rotate(0);-webkit-transform: rotate(0);}
+    }
+    @-webkit-keyframes planet {
+        from {transform: rotate(360deg);-webkit-transform: rotate(360deg);}
+        to {transform: rotate(0);-webkit-transform: rotate(0);}
+    }
+    animation-name: planet;
+    animation-duration: 120s;
+    animation-timing-function:ease;
+    animation-iteration-count:infinite;
+    -webkit-animation-name: planet;
+    -webkit-animation-duration: 120s;
+    -webkit-animation-timing-function:ease;
+    -webkit-animation-iteration-count:infinite;
+}
+
+@mixin line {
+    animation-name: down;
+    animation-duration: 0.5s;
+    animation-timing-function:linear;
+    animation-fill-mode: both;
+    -webkit-animation-name: down;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode: both;
+}
+@keyframes down {
+    from {height:0;}
+    to {height:100%}
+}
+@-webkit-keyframes down {
+    from {height:0;}
+    to {height:100%}
+}
+
+@mixin linew {
+    animation-name: wright;
+    animation-duration: 0.5s;
+    animation-timing-function:linear;
+    animation-fill-mode: both;
+    -webkit-animation-name: wright;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode: both;
+}
+@keyframes wright {
+    from {width:0;}
+    to {width:100%}
+}
+@-webkit-keyframes wright {
+    from {width:0;}
+    to {width:100%}
+}
+
+@mixin dot($d: null) {
+    @keyframes opa {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+    @-webkit-keyframes opa {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+    animation-name: opa;
+    animation-duration: 0.5s;
+    animation-timing-function:ease;
+    animation-delay: $d;
+    animation-fill-mode: both;
+    -webkit-animation-name: opa;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function:ease;
+    -webkit-animation-delay: $d;
+    -webkit-animation-fill-mode: both;
+}
+@mixin exmv {
+    @keyframes ex {
+        from {opacity: 0;left:5%}
+        to {opacity: 1;left:0}
+    }
+    @-webkit-keyframes ex {
+        from {opacity: 0;left:5%}
+        to {opacity: 1;left:0}
+    }
+    animation-name: ex;
+    animation-duration: 1s;
+    animation-timing-function:ease;
+    animation-fill-mode: both;
+    -webkit-animation-name: ex;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function:ease;
+    -webkit-animation-fill-mode: both;
+}
+@mixin arrowmv {
+    @keyframes mv {
+        from {opacity: 0;right:35%}
+        to {opacity: 1;right:0}
+    }
+    @-webkit-keyframes mv {
+        from {opacity: 0;right:35%}
+        to {opacity: 1;right:0}
+    }
+    animation-name: mv;
+    animation-duration: 0.5s;
+    animation-timing-function:linear;
+    animation-fill-mode: both;
+    -webkit-animation-name: mv;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-fill-mode: both;
+}
+@mixin arrowbounce {
+    @keyframes bounce {
+        0% {transform: translateX(0);-webkit-transform: translateX(0)}
+        50% {transform: translateX(-25%);-webkit-transform: translateX(-25%)}
+        100% {transform: translateX(0);-webkit-transform: translateX(0)}
+    }
+    @-webkit-keyframes bounce {
+        0% {transform: translateX(0);-webkit-transform: translateX(0)}
+        50% {transform: translateX(-25%);-webkit-transform: translateX(-25%)}
+        100% {transform: translateX(0);-webkit-transform: translateX(0)}
+    }
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+    -webkit-animation-name: bounce;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-iteration-count:infinite;
+}
+
+@mixin logomv {
+    @keyframes logo {
+        from {opacity: 0;transform: translateY(-50%);-webkit-transform: translateY(-50%);}
+        to {opacity: 1;transform: translateY(0);-webkit-transform: translateY(0);}
+    }
+    @-webkit-keyframes logo {
+        from {opacity: 0;transform: translateY(-50%);-webkit-transform: translateY(-50%);}
+        to {opacity: 1;transform: translateY(0);-webkit-transform: translateY(0);}
+    }
+    animation-name: logo;
+    animation-duration: 1s;
+    animation-timing-function:ease;
+    animation-fill-mode: both;
+    -webkit-animation-name: logo;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function:ease;
+    -webkit-animation-fill-mode: both;
+}
+
+

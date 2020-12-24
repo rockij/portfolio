@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="TIOR, 모든 시승은 티오르에서">
+    <meta name="keywords" content="티오르, tior, 시승예약, 시승, 시승플랫폼">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="언택트! 시승예약은 간편하게! 실시간 시승예약 서비스">
+    <meta property="og:description" content="차량 구매 전 시승은 필수, 모든시승은 티오르에서">
+    <meta property="og:image" content="https://m.tior.co.kr/resources/images/tior_favicon.png">
+    <meta property="og:url" content="https://m.tior.co.kr/">
+    <link href="../../resources/css/common.min.css" media="screen" rel="stylesheet">
+    <link href="../../resources/css/drive.min.css" media="screen" rel="stylesheet">
+    <title>TIOR, 모든 시승은 티오르에서</title>
+</head>
+<body>
+
+<div id="wrap" class="type">
+
+    <header id="header" class="fix top">
+        <div class="headWrap">
+            <a href="#n" class="ico ico_back"><span class="hide">뒤로가기</span></a>
+            <h1>시승예약 확인</h1>
+            <a href="#n" class="ico ico_home"><span class="hide">처음으로</span></a>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <div id="content">
+        <div class="innerWrap detailView2">
+            <section class="joinView">
+                <div class="ipJoin">
+                    <label for="name" class="ipTit default">이름</label>
+                    <span class="ipLine ip_del">
+                        <input type="text" id="name" class="ip" placeholder="홍길동">
+                        <button type="button" class="del"><i>입력삭제</i></button>
+                    </span>
+                </div>
+                <div class="ipJoin">
+                    <label for="tel" class="ipTit default">연락처</label>
+                    <span class="ipLine ip_del">
+                        <input type="tel" id="tel" class="ip" placeholder="01012345678" maxlength="11">
+                        <button type="button" class="del"><i>입력삭제</i></button>
+                    </span>
+                    <span class="safe_num">
+                        <input type="checkbox" name="safeNumber" id="safe_num">
+                        <label for="safe_num">안심번호사용</label>
+                        <button type="button" onclick="layer_open('safenum');">자세히</button>
+                    </span>
+                </div>
+                <div class="ipJoin">
+                    <label for="name" class="ipTit">시승 시 요청사항 <small>(선택사항)</small></label>
+                    <span class="ipLine ip_del">
+                        <input type="text" id="name" class="ip" placeholder="요청사항 입력">
+                        <button type="button" class="del"><i>입력삭제</i></button>
+                    </span>
+                    <i class="error" style="display:block">에러 메세지 표시 영역</i>
+                </div>
+            </section>
+        </div>
+        <section id="termsCheck" class="termsList">
+            <ul>
+                <li class="all">
+                    <span onclick="scrollMov('btm');" class="checkbox chkAll">
+                        <input type="checkbox" name="agreeChk" id="all" value="">
+                        <label for="all">전체동의<small>ㅣ 선택 동의 포함</small></label>
+                    </span>
+                    <button type="button" onclick="scrollMov('btm');" class="chkview"></button>
+                </li>
+            </ul>
+            <ul class="clst txt_area">
+                <li>
+                    <span class="checkbox i_chk">
+                        <input type="checkbox" name="agreeChk" id="agree1" value="">
+                        <label for="agree1">[필수]서비스 이용약관</label>
+                    </span>
+                    <button type="button" class="docBtn"><i class="hide">[필수] 서비스 이용약관</i></button>                    
+                </li>
+                <li>
+                    <span class="checkbox i_chk">
+                        <input type="checkbox" name="agreeChk" id="agree2" value="">
+                        <label for="agree2">[선택]개인정보 수집 이용 동의</label>
+                    </span>
+                    <button type="button" class="docBtn"><i class="hide">[선택]개인정보 수집 이용 동의</i></button>
+                </li>
+                <li>
+                    <span class="checkbox i_chk">
+                        <input type="checkbox" name="agreeChk" id="agree3" value="">
+                        <label for="agree3">[필수]위치정보 제공동의</label>
+                    </span>
+                    <button type="button" class="docBtn"><i class="hide">[필수]위치정보 제공동의</i></button>
+                </li>
+                <li>
+                    <span class="checkbox i_chk">
+                        <input type="checkbox" name="agreeChk" id="agree4" value="">
+                        <label for="agree4">[선택]마케팅 활용 동의</label>
+                        <span class="text">[선택]마케팅 수신 동의</span>
+                    </span>
+                    <button type="button" class="docBtn"><i class="hide">[선택]마케팅 활용 동의</i></button>
+                </li>
+                <li>
+                    <span class="checkbox i_chk">
+                        <input type="checkbox" name="agreeChk" id="agree5" value="">
+                        <label for="agree5">[선택]개인정보 제3자 제공 동의</label>
+                    </span>
+                    <button type="button" class="docBtn"><i class="hide">[선택]개인정보 제3자 제공 동의</i></button>
+                </li>
+                <li>
+                    <span class="checkbox twin i_chk">
+                        <input type="checkbox" name="agreeChk" id="agree6" value="">
+                        <label for="agree6">
+                            <span class="ck">
+                                <span>[선택]제3자 마케팅 활용 동의</span>
+                                <button type="button" class="docBtn"><i class="hide">[선택]제3자 마케팅 활용 동의</i></button>
+                            </span>
+                            <span class="ck">
+                                <span>[선택]제3자 마케팅 수신 동의</span>
+                                <button type="button" class="docBtn"><i class="hide">[선택]제3자 마케팅 활용 동의</i></button>
+                            </span>
+                        </label>
+                    </span>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <!-- //content -->
+
+    <div class="btn_area_float fix btm">
+        <button type="button" class="btn_xr skip" disabled>시승신청</button>
+    </div>
+    <!-- //시승신청 -->
+
+</div>
+
+<!-- 안심번호 자세히 -->
+<div id="mw-safenum" class="ly_pop ly_alert">
+    <div class="wrap">
+        <div class="content">
+            <p class="p">안심번호는 고객님의 개인정보를 보호하기 위해 실제 전화번호 대신 가상의 번호로 전화 및 연락을 받을 수 있는 선택 기능입니다.<br><br>안심번호는 시승 신청 일로 부터 시승 완료 후 1개월 간 해당 전시장에 제공되며 이후 번호가 만료됩니다.</p>
+        </div>
+        <ul class="btn_area_sigle">
+            <li><button type="button" onclick="layer_close()" class="btn_x skip">확인</button></li>
+        </ul>
+    </div>
+</div>
+<!-- //안심번호 자세히 -->
+
+<script src="../../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../../resources/js/design.js"></script>
+<script>
+$(function() {
+    fixValueOver();
+    chkinglst('termsCheck');
+});
+</script>
+
+</body>
+</html>

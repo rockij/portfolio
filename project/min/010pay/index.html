@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>010페이 퍼블리싱 안내</title>
+<!--<link rel="shortcut icon" href="resources/images/favicon.ico">-->
+<link rel="stylesheet" href="resources/fonts/notosanskr/notosanskr.css">
+<link rel="stylesheet" href="resources/fonts/kanit/kanit.css">
+<link rel="stylesheet" href="resources/fonts/roboto/roboto.css">
+
+<style>
+	html, body { width: 100%; height: 100%; }
+	body { margin: 0; padding: 0; background-color: #fff; font-family: 'Kanit', 'Noto Sans KR', 'Malgun Gothic', Dotum, 'Apple SD Gothic Neo', sans-serif; font-size: 12px; line-height: 1.4; letter-spacing: -0.03em; color: #222; }
+	.text-brand { font-family: 'Roboto', 'Noto Sans KR', 'Malgun Gothic', Dotum, 'Apple SD Gothic Neo', sans-serif; }
+	header { margin: 0; padding: 20px 20px; border-bottom: 1px solid #777; }
+	header h1 { margin: 0 0 10px; font-size: 24px; font-weight: 500; color: #ff7e00; }
+	header p { margin: 0; line-height: 1.4; }
+	.main { position: relative; padding: 0 20px 20px; }
+	h2 { margin: 30px 0 10px; font-size: 18px; font-weight: 500; }
+	small { font-size: 90% !important; color: #777; }
+	ul { margin: 0; padding-left: 1.667em; list-style: disc; }
+	ul ul { margin-top: .333em; list-style: circle; }
+	li { margin-top: .333em; }
+	ul li:first-child { margin-top: 0; }
+	a { color: #5e8cc0; }
+	a, a:hover, a:active, a:focus { text-decoration: underline; }
+	.table-responsive { width: 100%; overflow-x: auto; border: 1px solid #ddd; }
+	.table { margin: 0; min-width: 550px;  border-collapse: collapse; width: 100%; font-size: 12px; border: 0; }
+	.table th, .table td {  padding: 5px 10px; height: auto; border: 1px solid #ddd; }
+	.table th { background: #f1f2f4; color: #222; font-weight: 500; text-align: center; }
+	.table .date, .table .status { text-align: center; }
+	.well { padding: 20px; border: 2px solid #ddd; }
+	.bg-info { background: #dbf5ff; }
+	.bg-warning { background: #e7fbe2; }
+	.bg-warning { background: #ff9; }
+	.del { text-decoration: line-through; }
+	.bg-wait { background: #eee; color: #888; }
+	code { padding: 2px 4px; background-color: #f9f2f4; font-size: 96%; font-family: Menlo, Monaco, Consolas, "Courier New", monospace; color: #c7254e; }
+	.text-primary { color: #ff7e00; }
+	.text-info { color: #ff7e00; }
+	.text-danger { color: #dc3545; }
+	.text-success { color: #28a745; }
+	.text-minwise { color: #b920f5; }
+</style>
+</head>
+
+<body>
+<header>
+	<h1><span class="text-brand">010페이</span> 퍼블리싱 안내</h1>
+	<p>최종 수정일 : 2020-05-25</p>
+</header>
+
+<div class="main">
+	<h2>GUIDE</h2>
+	<div class="table-responsive">
+		<table class="table">
+			<colgroup>
+				<col style="width: 10%">
+				<col style="width: 15%">
+				<col style="width: 15%">
+				<col style="width: 15%">
+				<col style="width: 100px">
+				<col style="width: 100px">
+				<col>
+			</colgroup>
+			<thead>
+				<tr>
+					<th>구분</th>
+					<th>화면명</th>
+					<th>파일</th>
+					<th>화면코드</th>
+					<th>날짜</th>
+					<th>상태</th>
+					<th>비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>-</td>
+					<td>UI 템플릿</td>
+					<td><a href="resources/html/ui/template.html" target="_blank">template</a></td>
+					<td>-</td>
+					<td class="date">2020-05-25</td>
+					<td class="status">작업 중</td>
+					<td>
+						<ul>
+							<li>서체 : Kanit(영문, 숫자, 특수문자) &gt; Noto Sans KR(한글) &gt; Roboto(<span class="text-brand">010페이</span> 숫자)</li>
+							<li class="text-danger">2020-05-25
+								<ul>
+									<li>이미지 아이콘 변경</li>
+									<li>흰색 사각형 체크박스 추가</li>
+									<li>입력 팝업 상단 취소 버튼 추가</li>
+								</ul>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr class="bg-warning">
+					<td>-</td>
+					<td>기본 레이아웃</td>
+					<td><a href="resources/html/ui/defaultLayout.html" target="_blank">defaultLayout</a></td>
+					<td>-</td>
+					<td class="date">2020-05-25</td>
+					<td class="status">검토 요청</td>
+					<td><ul>
+						<li>브랜드 로고 포함 기본 레이아웃</li>
+						<li>header에 뒤로가기 버튼 없는 경우 로고 좌측 배치</li>
+					</ul></td>
+				</tr>
+				<tr class="bg-warning">
+					<td>-</td>
+					<td>서브 레이아웃</td>
+					<td><a href="resources/html/ui/subLayout.html" target="_blank">subLayout</a></td>
+					<td>-</td>
+					<td class="date">2020-05-25</td>
+					<td class="status">검토 요청</td>
+					<td><ul>
+						<li>페이지 제목 포함 서브 레이아웃</li>
+					</ul></td>
+				</tr>
+				<tr>
+					<td>-</td>
+					<td>로딩 레이어</td>
+					<td><a href="resources/html/ui/loading.html" target="_blank">loading</a></td>
+					<td>-</td>
+					<td class="date">&nbsp;</td>
+					<td class="status">-</td>
+					<td><ul>
+						<li class="text-danger">디자인 추가 예정</li>
+					</ul></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<h2>PAGE</h2>
+	<div class="table-responsive">
+		<table class="table" id="pageTable">
+			<colgroup>
+				<col style="width: 10%">
+				<col style="width: 15%">
+				<col style="width: 15%">
+				<col style="width: 15%">
+				<col style="width: 100px">
+				<col style="width: 100px">
+				<col>
+			</colgroup>
+			<thead>
+				<tr>
+					<th>구분</th>
+					<th>화면명</th>
+					<th>파일</th>
+					<th>화면코드</th>
+					<th>날짜</th>
+					<th>상태</th>
+					<th>비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="bg-warning">
+					<td rowspan="10">회원<br>
+						(member)</td>
+					<td>회원확인</td>
+					<td><a href="resources/html/member/verifyMember.html" target="_blank">verifyMember</a></td>
+					<td>1-1</td>
+					<td class="date">2020-05-19</td>
+					<td class="status">검토 요청</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>회원가입(점유) - Step 1</td>
+					<td><a href="resources/html/member/registerMember1.html" target="_blank">registerMember1</a></td>
+					<td>7-3,<br>
+						9-1(약관 상세 레이어)</td>
+					<td class="date">&nbsp;</td>
+					<td class="status">작업 중</td>
+					<td><ul>
+						<li class="text-danger">2020-05-19 : 캡챠 영역 디자인 검토 요청</li>
+						<li class="text-danger">약관 상세 팝업 수정 예정</li>
+					</ul></td>
+				</tr>
+				<tr class="bg-warning">
+					<td>회원가입(점유) - Step 2<br>
+						<small>휴대폰 인증번호 입력</small></td>
+					<td><a href="resources/html/member/registerMember2.html" target="_blank">registerMember2</a></td>
+					<td>7-3</td>
+					<td class="date">2020-05-19</td>
+					<td class="status">검토 요청</td>
+					<td><ul>
+						<li>테스트용 스크립트 추가 : 인증번호 6자리 입력 시 버튼 활성</li>
+					</ul></td>
+				</tr>
+				<tr class="bg-warning">
+					<td>회원가입(점유) - Step 3<br>
+						<small>계좌, 주소 등록</small></td>
+					<td><a href="resources/html/member/registerMember3.html" target="_blank">registerMember3</a></td>
+					<td>7-3,<br>
+						8-1(은행 선택 레이어)</td>
+					<td class="date">2020-05-19</td>
+					<td class="status">검토 요청</td>
+					<td>-</td>
+				</tr>
+				<tr class="bg-warning">
+					<td>회원가입(비점유/점유)<br>
+						<small>휴대폰번호 변경, 회원가입 등을 위해 휴대폰 인증 후 화면</small></td>
+					<td><a href="resources/html/member/registerMemberNoAuth.html" target="_blank">registerMemberNoAuth</a></td>
+					<td>7-2, 8-1</td>
+					<td class="date">2020-05-20</td>
+					<td class="status">검토 요청</td>
+					<td><ul>
+						<li class="text-danger">2020-05-20 : '회원가입(점유) - Step 3' 화면과 동일</li>
+					</ul></td>
+				</tr>
+				<tr>
+					<td>비밀번호 입력</td>
+					<td><a href="resources/html/member/pwVerify.html" target="_blank">pwVerify</a></td>
+					<td>2-1</td>
+					<td class="date">&nbsp;</td>
+					<td class="status">작업 중</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>비밀번호 설정</td>
+					<td><a href="resources/html/member/registerPw.html" target="_blank">registerPw</a></td>
+					<td>11-1</td>
+					<td class="date">&nbsp;</td>
+					<td class="status">작업 중</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>비밀번호 설정 확인</td>
+					<td><a href="resources/html/member/registerPwVerify.html" target="_blank">registerPwVerify</a></td>
+					<td>11-2</td>
+					<td class="date">&nbsp;</td>
+					<td class="status">작업 중</td>
+					<td>-</td>
+				</tr>
+				<tr class="bg-info">
+					<td>내정보</td>
+					<td><a href="resources/html/member/modifyMember.html" target="_blank">modifyMember</a></td>
+					<td>12-6</td>
+					<td class="date">2020-05-22</td>
+					<td class="status">완료</td>
+					<td><ul>
+						<li class="text-minwise">2020-05-22 : 민앤지 작업</li>
+						<li class="text-danger">2020-05-25 : 입력 팝업 상단 취소 버튼 추가</li>
+					</ul></td>
+				</tr>
+				<tr class="bg-warning">
+					<td>회원탈퇴</td>
+					<td><a href="resources/html/member/withdraw.html" target="_blank">withdraw</a></td>
+					<td>12-5</td>
+					<td class="date">2020-05-19</td>
+					<td class="status">검토 요청</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td rowspan="7">인증<br>
+						(auth)</td>
+					<td>휴대폰 인증 - Step 1</td>
+					<td><a href="resources/html/auth/selfAuth1.html" target="_blank">selfAuth1</a></td>
+					<td rowspan="2">1-2, 13-1</td>
+					<td class="date">&nbsp;</td>
+					<td class="status">작업 중</td>
+					<td>
+						<ul>
+							<li class="text-danger">약관 상세 팝업 수정 예정</li>
+						</ul>
+					</td>
+				</tr>
+				<tr class="bg-warning">
+					<td>휴대폰 인증 - Step 2<br>
+						<small>휴대폰 인증번호 입력</small></td>
+					<td><a href="resources/html/auth/selfAuth2.html" target="_blank">selfAuth2</a></td>
+					<td class="date">2020-05-20</td>
+					<td class="status">검토 요청</td>
+					<td>-</td>
+				</tr>
+				<tr class="bg-warning">
+					<td>ARS 인증 - Step 1</td>
+					<td><a href="resources/html/auth/arsAuth1.html" target="_blank">arsAuth1</a></td>
+					<td rowspan="3">10-1</td>
+					<td class="date">2020-05-25</td>
+					<td class="status">검토 요청</td>
+					<td>-</td>
+				</tr>
+				<tr class="bg-wait del">
+					<td>ARS 인증 - Step 2</td>
+					<td><a href="resources/html/auth/arsAuth2.html" target="_blank">arsAuth2</a></td>
+					<td class="date">2020-05-25</td>
+					<td class="status">검토 요청</td>
+					<td><ul>
+						<li>2020-05-19 : 화면 삭제</li>
+					</ul></td>
+				</tr>
+				<tr class="bg-warning">
+					<td>ARS 인증 - Step 3</td>
+					<td><a href="resources/html/auth/arsAuth3.html" target="_blank">arsAuth3</a></td>
+					<td class="date">2020-05-25</td>
+					<td class="status">검토 요청</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>계좌 인증 요청(주계좌)</td>
+					<td><a href="resources/html/auth/accAuth.html" target="_blank">accAuth</a></td>
+					<td>13-2</td>
+					<td class="date">&nbsp;</td>
+					<td class="status">작업 중</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>계좌 인증 확인</td>
+					<td><a href="resources/html/auth/accAuthVerify.html" target="_blank">accAuthVerify</a></td>
+					<td>13-3</td>
+					<td class="date">&nbsp;</td>
+					<td class="status">&nbsp;</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td rowspan="5">계좌<br>
+						(account)</td>
+					<td>계좌 등록(결제)</td>
+					<td><a href="resources/html/account/registerAccount.html" target="_blank">registerAccount</a></td>
+					<td>3-1</td>
+					<td class="date">&nbsp;</td>
+					<td class="status">&nbsp;</td>
+					<td>-</td>
+				</tr>
+				<tr class="bg-warning">
+					<td>계좌 관리</td>
+					<td><a href="resources/html/account/manageAccount.html" target="_blank">manageAccount</a></td>
+					<td>12-3</td>
+					<td class="date">2020-05-25</td>
+					<td class="status">검토 요청</td>
+					<td><ul>
+						<li class="text-minwise">2020-05-22 : 민앤지 작업</li>
+						<li class="text-danger">2020-05-25 : 계좌 목록 상단 수정</li>
+					</ul></td>
+				</tr>
+				<tr class="bg-info">
+					<td>계좌 관리 - 내역없음</td>
+					<td><a href="resources/html/account/manageAccountNone.html" target="_blank">manageAccountNone</a></td>
+					<td>12-3</td>
+					<td class="date">2020-06-01</td>
+					<td class="status">검토 요청</td>
+					<td>
+						<ul>
+							<li class="text-minwise">2020-05-22 : 민앤지 작업</li>
+							<li class="text-danger">2020-05-25 : 계좌 목록 상단 수정</li>
+						</ul>
+					</td>
+				</tr>
+				<tr class="bg-warning">
+					<td>계좌 관리 - 계좌 설정</td>
+					<td><a href="resources/html/account/modifyAccount.html" target="_blank">modifyAccount</a></td>
+					<td>-</td>
+					<td class="date">2020-05-25</td>
+					<td class="status">검토 요청</td>
+					<td><ul>
+						<li class="text-minwise">2020-05-22 : 민앤지 작업</li>
+						<li class="text-danger">2020-05-25 : 계좌 목록 상단, 계좌 목록 정렬 수정</li>
+					</ul></td>
+				</tr>
+				<tr>
+					<td>계좌 등록 완료(브랜드 사이트용)</td>
+					<td><a href="resources/html/account/accountComplete.html" target="_blank">accountComplete</a></td>
+					<td>H6-3</td>
+					<td class="date">&nbsp;</td>
+					<td class="status">작업 중</td>
+					<td>-</td>
+				</tr>
+				<tr class="bg-info text-danger">
+					<td rowspan="5">결제<br>
+						(payment)</td>
+					<td>결제</td>
+					<td><a href="resources/html/payment/pay.html" target="_blank">pay</a></td>
+					<td>-</td>
+					<td class="date">&nbsp;</td>
+					<td class="status">&nbsp;</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>결제 실패</td>
+					<td><a href="resources/html/payment/payFail.html" target="_blank">payFail</a></td>
+					<td>6-1</td>
+					<td class="date">&nbsp;</td>
+					<td class="status">&nbsp;</td>
+					<td>-</td>
+				</tr>
+				<tr class="bg-info">
+					<td>이용내역 - 목록</td>
+					<td><a href="resources/html/payment/payHistList.html" target="_blank">payHistList</a></td>
+					<td>18-1</td>
+					<td class="date">2020-05-22</td>
+					<td class="status">완료</td>
+					<td><ul>
+						<li class="text-minwise">2020-05-22 : 민앤지 작업</li>
+					</ul></td>
+				</tr>
+				<tr class="bg-info">
+					<td>이용내역 - 목록없음</td>
+					<td><a href="resources/html/payment/payHistListNone.html" target="_blank">payHistListNone</a></td>
+					<td>18-1</td>
+					<td class="date">2020-05-22</td>
+					<td class="status">완료</td>
+					<td>
+						<ul>
+							<li class="text-minwise">2020-05-22 : 민앤지 작업</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>결제 내역 상세</td>
+					<td><a href="resources/html/payment/payHist.html" target="_blank">payHist</a></td>
+					<td>18-3</td>
+					<td class="date">&nbsp;</td>
+					<td class="status">&nbsp;</td>
+					<td>-</td>
+				</tr>
+				<tr class="bg-info text-danger">
+					<td rowspan="4">머니<br>
+						(money)</td>
+					<td>충전하기</td>
+					<td><a href="resources/html/money/moneyCharge.html" target="_blank">moneyCharge</a></td>
+					<td>-</td>
+					<td class="date">&nbsp;</td>
+					<td class="status">&nbsp;</td>
+					<td>-</td>
+				</tr>
+				<tr class="bg-info text-danger">
+					<td>충전 머니 관리</td>
+					<td><a href="resources/html/money/moneyDetail.html" target="_blank">manageMoney</a></td>
+					<td>-</td>
+					<td class="date">&nbsp;</td>
+					<td class="status">&nbsp;</td>
+					<td>-</td>
+				</tr>
+				<tr class="text-danger">
+					<td>머니 이용내역 - 목록</td>
+					<td><a href="resources/html/money/moneyDetail.html" target="_blank">moneyHistList</a></td>
+					<td>-</td>
+					<td class="date">&nbsp;</td>
+					<td class="status">&nbsp;</td>
+					<td><ul>
+						<li>기획 필요!</li>
+					</ul></td>
+				</tr>
+				<tr class="text-danger">
+					<td>머니 이용내역 - 상세</td>
+					<td><a href="resources/html/money/moneyDetail.html" target="_blank">moneyHist</a></td>
+					<td>-</td>
+					<td class="date">&nbsp;</td>
+					<td class="status">&nbsp;</td>
+					<td><ul>
+						<li>기획 필요!</li>
+					</ul></td>
+				</tr>
+				<tr class="text-danger">
+					<td rowspan="2">포인트<br>
+						(point)</td>
+					<td>포인트 이용내역 - 목록</td>
+					<td><a href="resources/html/nav/pointDetail.html" target="_blank">pointHistList</a></td>
+					<td>-</td>
+					<td class="date">&nbsp;</td>
+					<td class="status">&nbsp;</td>
+					<td><ul>
+						<li>기획 필요!</li>
+					</ul></td>
+				</tr>
+				<tr class="text-danger">
+					<td>포인트 이용내역 - 상세</td>
+					<td><a href="resources/html/nav/pointDetail.html" target="_blank">pointHist</a></td>
+					<td>-</td>
+					<td class="date">&nbsp;</td>
+					<td class="status">&nbsp;</td>
+					<td><ul>
+						<li>기획 필요!</li>
+					</ul></td>
+				</tr>
+				<tr class="bg-info text-danger">
+					<td>네비게이션<br>
+						(nav)</td>
+					<td>HOME (구. 내통장관리)</td>
+					<td><a href="resources/html/nav/serviceMenu.html" target="_blank">serviceMenu</a></td>
+					<td>12-1</td>
+					<td class="date">2020-05-22</td>
+					<td class="status">완료</td>
+					<td><ul>
+						<li class="text-minwise">2020-05-22 : 민앤지 작업</li>
+						<li class="text-danger">2020-05-25 : 충전하기 버튼 변경</li>
+					</ul></td>
+				</tr>
+				<tr class="bg-warning text-danger">
+					<td rowspan="4">게시판<br>
+						(board)</td>
+					<td>공지사항 - 목록</td>
+					<td><a href="resources/html/board/boardList.html" target="_blank">boardList</a></td>
+					<td>-</td>
+					<td class="date">2020-05-25</td>
+					<td class="status">검토 요청</td>
+					<td><ul>
+						<li class="text-minwise">2020-05-22 : 민앤지 작업</li>
+						<li>2020-05-25 : 게시판 공통 html, css 수정, 하단 페이지 번호 추가</li>
+					</ul></td>
+				</tr>
+				<tr class="bg-warning text-danger">
+					<td>공지사항 - 상세</td>
+					<td><a href="resources/html/board/board.html" target="_blank">board</a></td>
+					<td>-</td>
+					<td class="date">2020-05-25</td>
+					<td class="status">검토 요청</td>
+					<td><ul>
+						<li class="text-minwise">2020-05-22 : 민앤지 작업</li>
+						<li>2020-05-25 : 게시판 공통 html, css 수정</li>
+					</ul></td>
+				</tr>
+				<tr class="bg-wait">
+					<td>이벤트 - 목록</td>
+					<td><a href="resources/html/board/boardList.html" target="_blank">boardList</a></td>
+					<td>-</td>
+					<td class="date">2020-05-25</td>
+					<td class="status">검토 요청</td>
+					<td><ul>
+						<li>공지사항 목록과 동일 소스</li>
+					</ul></td>
+				</tr>
+				<tr class="bg-wait">
+					<td>이벤트 - 상세</td>
+					<td><a href="resources/html/board/board.html" target="_blank">board</a></td>
+					<td>-</td>
+					<td class="date">2020-05-25</td>
+					<td class="status">검토 요청</td>
+					<td><ul>
+						<li>공지사항 상세와 동일 소스</li>
+					</ul></td>
+				</tr>
+				<tr>
+					<td rowspan="3">오류<br>
+						(error)</td>
+					<td>미승인 가맹점 안내(닫기 버튼 O)</td>
+					<td><a href="resources/html/error/ready.html" target="_blank">ready</a></td>
+					<td>-</td>
+					<td class="date">&nbsp;</td>
+					<td class="status">&nbsp;</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>시스템 오류(닫기 버튼 O)</td>
+					<td><a href="resources/html/error/sysError.html" target="_blank">sysError</a></td>
+					<td>-</td>
+					<td class="date">&nbsp;</td>
+					<td class="status">&nbsp;</td>
+					<td><ul>
+						<li>2020-03-09 : 뒤로이동/닫기/확인 버튼 추가 (불필요 버튼은 개발 시 제거)</li>
+					</ul></td>
+				</tr>
+				<tr>
+					<td>시스템 점검 중(닫기 버튼 X)</td>
+					<td><a href="resources/html/error/error.html" target="_blank">error</a></td>
+					<td>-</td>
+					<td class="date">&nbsp;</td>
+					<td class="status">&nbsp;</td>
+					<td><ul>
+						<li><strong>리소스 연결 X, 단독 html</strong></li>
+					</ul></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<h2>MEMO</h2>
+	<div class="well">
+		<ul>
+			<li class="bg-info">하늘색 셀 : 민앤지 퍼블리싱 요청 페이지</li>
+			<li>반응형(모바일/태블릿/PC 단일 소스)</li>
+			<li>PC 새창 팝업 : 420px × 610px</li>
+			<li><code>.container</code> 가로 사이즈 : 320px(iPhone 5) ~ 420px(PC 새창 팝업)</li>
+			<li>PC 브라우저 지원 : 크롬, 웨일, 파이어폭스, Internet Explorer 9 이상,...</li>
+			<li>모바일 브러우저 지원 : 안드로이드 인터넷, 사파리, 크롬, 네이버, 다음,...</li>
+			<li>안드로이드 4.4 킷캣 이상 지원</li>
+			<!-- <li class="text-info">2020-03-09
+				<ul>
+					<li>차세대 백오피스에서 010페이 결제창 브랜드명 영역과 대표 컬러 변경을 위한 결제창 소스 고도화 작업</li>
+					<li>내통장관리 화면의 하단 고정 배너 퍼블리싱 완료 후 개발 보류 상태<br>
+						실제 배너 기획 시 개발 반영 예정 ☞ 개발 시 <span class="text-danger">design.js</span> 수정 필요</li>
+				</ul>
+			</li> -->
+		</ul>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../resources/css/ai_care.css" media="screen" rel="stylesheet">
+<link href="../resources/css/site_app.css" media="screen" rel="stylesheet">
+<link href="../resources/css/device.css" media="screen" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../resources/js/jquery-1.11.1.min.js"></script>
+<script src="../resources/js/design.js"></script>
+<title>AI건강리뷰</title>
+</head>
+<body>
+
+<div id="wrap">
+    
+	<div id="ct">
+        <div class="ai_detail_wrap">
+            <section class="ai_profile">
+                <hgroup class="ai_title2 full">
+                    <ul class="path">
+                        <li class="cat">국내</li>
+                        <li>카테고리</li>
+                        <li>밀크씨슬</li>
+                    </ul>
+                    <h2>now melatonin</h2>
+                </hgroup>
+                <div class="goodsImg">
+                    <img src="../resources/images/sample/temp_goods_200x170.jpg" alt="">
+                </div>
+                <div class="cartbox">
+                    <button type="button" onclick=""><i></i>비교함담기</button>
+                </div>
+                <ul class="table">
+                    <li>
+                        <span class="th">제조사</span>
+                        <span class="td">Now foods</span>
+                    </li>
+                    <li>
+                        <span class="th">원산지</span>
+                        <span class="td">미국</span>
+                    </li>
+                </ul>
+            </section>
+            <!-- //top -->
+            <section class="ai_compare" style="display:none">
+                <!-- <hgroup class="ai_title3">
+                    <h3>비교함</h3>
+                    <span class="col"><button type="button" onclick="" class="btn_basket" data-val="0">0개의 제품이 있습니다.<i class="arr"></i></button></span>
+                </hgroup> -->
+                <hgroup class="ai_title3">
+                    <h3>비교함</h3>
+                    <span class="col"><button type="button" onclick="" class="btn_basket" data-val="2">2개의 제품이 있습니다.<i class="arr"></i></button></span>
+                </hgroup>
+                <div id="goodsbsket_swir" class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="checkbox">
+                                <input type="checkbox" id="goods1">
+                                <label for="goods1"><img src="../resources/images/sample/temp_thum_166x166.png" alt=""></label>
+                                <p class="sbj"><span class="elip1">건강한 간 밀크</span><button type="button" onclick="" class="del"></button></p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="checkbox">
+                                <input type="checkbox" id="goods2">
+                                <label for="goods2"><img src="../resources/images/sample/temp_thum_166x166.png" alt=""></label>
+                                <p class="sbj"><span class="elip1">닥터 슈퍼칸</span><button type="button" onclick="" class="del"></button></p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="checkbox">
+                                <input type="checkbox" id="goods5">
+                                <label for="goods5"><img src="../resources/images/sample/temp_thum_166x166.png" alt=""></label>
+                                <p class="sbj"><span class="elip1">닥터 슈퍼칸</span><button type="button" onclick="" class="del"></button></p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="checkbox">
+                                <input type="checkbox" id="goods3">
+                                <label for="goods3"><img src="../resources/images/sample/temp_thum_166x166.png" alt=""></label>
+                                <p class="sbj"><span class="elip1">닥터 슈퍼칸</span><button type="button" onclick="" class="del"></button></p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="checkbox">
+                                <input type="checkbox" id="goods4">
+                                <label for="goods4"><img src="../resources/images/sample/temp_thum_166x166.png" alt=""></label>
+                                <p class="sbj"><span class="elip1">글자가길어요길어요길어요</span><button type="button" onclick="" class="del"></button></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" onclick="" class="btn_btm_more">선택한 제품 비교하기</button>
+                </div>
+            </section>
+            <!-- //비교함 -->
+            <section class="ai_databox">
+                <hgroup class="ai_title3">
+                    <h3>인증현황</h3>
+                </hgroup>
+                <ul class="ai_list_type full">
+                    <li><span class="th">GMP certified</span></li>
+                    <li><span class="th">NSF certified</span></li>
+                </ul>
+            </section>
+            <!-- //원료및성분 -->
+            <section class="ai_databox">
+                <hgroup class="ai_title3">
+                    <h3>미승인 원료</h3>
+                    <span class="col data"><span class="pot">없음</span></span>
+                </hgroup>
+                <ul class="ai_list_type full">
+                    <li><span class="th">미승인 원료가 없습니다.</span></li>
+                </ul>
+            </section>
+            <!-- //미승인원료 -->
+            <section class="ai_databox">
+                <hgroup class="ai_title3">
+                    <h3>식품 부적합 해당사항</h3>
+                    <span class="col data"><span class="pot"><b class="fc_red">1</b>건</span></span>
+                </hgroup>
+                <ul class="ai_list_type normal">
+                    <li><span class="th">품목명</span><span class="td">가르시니아캄보지아추출물</span></li>
+                    <li><span class="th nbar">위반내역</span><span class="td">총 (-)-Hydroxycitricacid 함량미달</span></li>
+                </ul>
+            </section>
+            <!-- //식품부적합해당사항 -->
+            <section class="ai_databox">
+                <hgroup class="ai_title3">
+                    <h3>위해식품 정보</h3>
+                    <span class="col data"><span class="pot"><b class="fc_red">2</b>건</span></span>
+                </hgroup>
+                <ul class="ai_list_type normal">
+                    <li><span class="th2">위해 식품 검출물질</span><span class="td">환각제, 이소부틸 아질산염<br>(알킬 아질산염) 함유 표시</span></li>
+                    <li><span class="th2">위해 식품 차단 검출 성분</span><span class="td">알레르기 유발 성분<br>'아황산염(Sulfites)' 미표기</span></li>
+                </ul>
+            </section>
+            <!-- //식품부적합해당사항 -->
+        </div>
+	</div>
+	<!-- //content -->
+	<footer id="footer">
+        <button type="button" class="topGo"><i class="ico_com">맨위로</i></button>
+	</footer>
+	<!-- //footer -->
+
+</div>
+
+<script src="../resources/js/swiper.min.js"></script>
+<script src="../resources/js/design_ai.js"></script>
+<!-- //js -->
+
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>SKT PASS</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/contents.css">
+    <link href="resources/app/css/event.css" media="screen" rel="stylesheet">
+</head>
+<body class="viewer_body">
+<div class="promoWrap thanksgive wrap hwv">
+    <section class="prHeader fix top">
+        <h1 class="logo"><i class="blind">pass</i></h1>
+        <a href="#" class="ico-close"><span class="blind">닫기</span></a>
+    </section>
+    <a href="#;" class="topBn"><img src="resources/app/image/thankgive/bn_sub_top.png" alt="추천하고 백만원 받자!"></a>
+    <!-- //baner -->
+    <ul class="tab">
+        <li><a href="#;">추천코드</a></li>
+        <li><a href="#;" class="on new">추천현황</a></li>
+    </ul>
+    <section class="content">
+        <div class="maincode2">고객님의 추천코드로 가입한 분은<br>총 <u>13</u> 명입니다.</div>
+        <p class="subtxt">고객님의 추천코드를 홍보해보세요!<br>1명만 추천해도 100% 당첨<br>PASS머니를 드립니다.</p>
+        <figure class="randombox end"></figure>
+        <p class="subtxt2">PASS 머니 당첨기회 <code>13</code>회 남음</p>
+        <div class="btn_area">
+            <button type="button" onclick="layer_open('mw-moneyskip');countGo()" class="btn_skip" disabled>PASS머니 랜덤박스 열기</button>
+            <button type="button" onclick="layer_open('mw-push')" class="btn_skip2">실시간 추천순위 확인</button>
+        </div>
+        <h3 class="cautit">유의사항</h3>
+        <ul class="cau bar" style="padding-bottom:0;">
+            <li>PASS머니 수령은 PASS머니 가입자만 가능합니다.<br>PASS머니 가입은 무료입니다.</li>
+            <li>적립된 PASS머니는 일반 계좌로 이체하실 수 있습니다. (PASS명의와 같은 계좌로 가능)</li>
+            <li>이 이벤트는 운전면허증을 등록하신 고객님에 한해 참여가 가능합니다. 운전면허증 등록을 미완료하신 고객님은 추첨 대상에서 제외됩니다.</li>
+            <li>추천왕 경품은 PASS머니로 지급되며, 지급된 PASS머니는 즉시 고객님의 일반 계좌로 이체하실 수 있습니다.</li>
+            <li>PASS머니 지급을 위하여, 당첨인은 기한 내 PASS머니에 가입(무료)하셔야 합니다. PASS머니 미가입자의 경우, PASS머니 지급이 불가능하여 당첨이 취소될 수 있습니다. </li>
+            <li>5만원 초과 금액 당첨자의 경우, 제세공과금을 제한 금액을 지급하니 참고바랍니다.</li>
+            <li>스타벅스 상품권은 추천코드를 입력하여 신규로 가입자에 한해 추첨하며, 탈퇴 후 재가입해 이벤트에 참가한 경우 지급에서 제외됩니다.</li>
+            <li>이벤트에 참여한 후 휴대폰 번호 변경, 명의 변경, 번호 해지, 서비스 해지를 한 경우 경품 당첨이 취소될 수 있습니다.</li>
+            <li>이 이벤트는 참여사들의 사정에 따라 별도의 안내 없이 중단 또는 변경될 수 있습니다.</li>
+            <li>문의: pass@sk.com</li>
+        </ul>
+        <h3 class="cautit">이벤트 기간</h3>
+        <ul class="cau bar" style="padding-bottom:0;">
+            <li>2020년 10월 5일(월) ~ 2020년 11월 6일(금)</li>
+        </ul>
+        <h3 class="cautit">이벤트 경품</h3>
+        <ul class="cau bar" style="padding-bottom:0;">
+            <li>추천왕 1등(1명): 1백만 원 *제세공과금 별도</li>
+            <li>추천왕 2~5등(4명) : 50만 원 *제세공과금 별도</li>
+            <li>추천왕 6~15등(10명): 5만 원</li>
+            <li>참가상: 1명만 추천해도 100% 당첨 PASS 머니 랜덤 박스 지급! (참가상 경품은 일찍 소진될 수 있으며, 소진 시 경품이 지급되지 않습니다.)</li>
+            <li>추천 코드 입력하고 신규가입하신 고객님(100명): 스타벅스 카페 아메리카노(Tall) 1잔 모바일 상품권</li>
+        </ul>
+        <h3 class="cautit">당첨자 발표</h3>
+        <ul class="cau bar">
+            <li>PASS 머니 랜덤 박스(참여 즉시 지급) 외 경품 당첨자는 11월 중 개별 안내</li>
+        </ul>
+    </section>
+</div>
+
+<!-- 머니확인 -->
+<div id="mw-moneyskip" class="ly_pop ly_thanksgive">
+    <div class="wrap">
+        <button type="button" onclick="layer_close()" class="close"><i class="blind">닫기</i></button>
+        <div class="content">
+            <h2>축하합니다</h2>
+            <div class="result">
+                <p>PASS머니가 지급되었습니다!</p>
+                내 PASS머니는 홈화면에서<br>확인하실 수 있습니다. 
+            </div>
+            <div class="moneybox">
+                <span class="won"><code class="count_money" data-count="300">0</code>원</span>
+                <figure></figure>
+            </div>
+            <div class="btn_area">
+                <button type="button" onclick="layer_close()" class="btn_skip">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //머니확인 -->
+
+<!-- 추천현황 -->
+<div id="mw-push" class="ly_pop ly_thanksgive">
+    <div class="wrap">
+        <button type="button" onclick="layer_close()" class="close"><i class="blind">닫기</i></button>
+        <div class="content">
+            <h2 class="fig">실시간 추천순위</h2>
+            <p class="date">(9월16일 15:00기준)</p>
+            <div class="ranking">
+                <h3><code>1</code>위<strong><code>125</code>명</strong></h3>
+                <ul class="list">
+                    <li>
+                        <ul>
+                            <li>
+                                <span class="th"><code>2</code>위</span>
+                                <span class="td"><code>123</code>명</span>
+                            </li>
+                            <li>
+                                <span class="th"><code>3</code>위</span>
+                                <span class="td"><code>81</code>명</span>
+                            </li>
+                            <li>
+                                <span class="th"><code>4</code>위</span>
+                                <span class="td"><code>1</code>명</span>
+                            </li>
+                            <li>
+                                <span class="th"><code>5</code>위</span>
+                                <span class="td"><code>10</code>명</span>
+                            </li>
+                            <li>
+                                <span class="th"><code>6</code>위</span>
+                                <span class="td"><code>44</code>명</span>
+                            </li>
+                            <li>
+                                <span class="th"><code>7</code>위</span>
+                                <span class="td"><code>31</code>명</span>
+                            </li>
+                            <li>
+                                <span class="th"><code>8</code>위</span>
+                                <span class="td"><code>31</code>명</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <span class="th"><code>9</code>위</span>
+                                <span class="td"><code>123</code>명</span>
+                            </li>
+                            <li>
+                                <span class="th"><code>10</code>위</span>
+                                <span class="td"><code>123</code>명</span>
+                            </li>
+                            <li>
+                                <span class="th"><code>11</code>위</span>
+                                <span class="td"><code>2</code>명</span>
+                            </li>
+                            <li>
+                                <span class="th"><code>12</code>위</span>
+                                <span class="td"><code>1</code>명</span>
+                            </li>
+                            <li>
+                                <span class="th"><code>13</code>위</span>
+                                <span class="td"><code>1</code>명</span>
+                            </li>
+                            <li>
+                                <span class="th"><code>14</code>위</span>
+                                <span class="td"><code>1</code>명</span>
+                            </li>
+                            <li>
+                                <span class="th"><code>15</code>위</span>
+                                <span class="td"><code>1</code>명</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //추천현황 -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="../js/ui.js"></script>
+<script>
+function countGo(){
+    setTimeout(function() {
+        counting('money',1000);
+    }, 200);
+}
+</script>
+
+</body>
+</html>

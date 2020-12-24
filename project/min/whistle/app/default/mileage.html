@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link href="../resources/css/font.local.css" media="screen" rel="stylesheet"> <!-- 폐쇄망 -->
+<link href="../resources/css/font.cdn.css" media="screen" rel="stylesheet"> <!-- 인터넷망 -->
+<link href="../resources/css/common.min.css" media="screen" rel="stylesheet">
+<link href="../resources/css/content.min.css" media="screen" rel="stylesheet">
+<title>010휘슬</title>
+</head>
+<body class="bgf">
+
+<div id="wrap">
+
+    <header id="header" class="fix top">
+        <button type="button" onclick="" class="btn_prev" title="뒤로가기"><i></i></button>
+        <h1>마일리지</h1>
+    </header>
+    <!-- //header -->
+
+    <div id="content" class="mileage_wrap">
+        <section class="top_info">
+            <span class="tit">총 마일리지<code><em>40,500</em>M</code></span>
+            <div class="filter_wrap">
+                <span class="txt">전체</span>
+                <button type="button" class="btn_filter" onclick="popupOpen('select','mwf',0);">목록 정렬 필터 선택</button>
+            </div>
+        </section>
+        <section class="info_list_wrap">
+            <div class="day_select">
+                <button type="button" class="btn_prev">이전달 바로가기</button>
+                <span class="tit">2020년 10월</span>
+                <button type="button" class="btn_next">다음달 바로가기</button>
+            </div>
+            <ul class="line_list_wrap">
+                <li>
+                    <div class="tit_wrap">
+                        <span class="tit">이벤트 응모</span>
+                        <span class="sub_txt">10.06</span>
+                    </div> 
+                    <div class="info_wrap">
+                        <code class="tit">+300<em>M</em></code>
+                        <span class="sub_txt">적립</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="tit_wrap">
+                        <span class="tit">출석체크</span>
+                        <span class="sub_txt">10.06</span>
+                    </div> 
+                    <div class="info_wrap">
+                        <code class="tit">+300<em>M</em></code>
+                        <span class="sub_txt">적립</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="tit_wrap">
+                        <span class="tit">이벤트 응모</span>
+                        <span class="sub_txt">10.06</span>
+                    </div> 
+                    <div class="info_wrap">
+                        <code class="tit type02">-20,000<em>M</em></code>
+                        <span class="sub_txt">사용</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="tit_wrap">
+                        <span class="tit">데일리 미션</span>
+                        <span class="sub_txt">10.06</span>
+                    </div> 
+                    <div class="info_wrap">
+                        <code class="tit">+300<em>M</em></code>
+                        <span class="sub_txt">적립</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="tit_wrap">
+                        <span class="tit">타임딜 응모</span>
+                        <span class="sub_txt">10.06</span>
+                    </div> 
+                    <div class="info_wrap">
+                        <code class="tit type02">-300<em>M</em></code>
+                        <span class="sub_txt">사용</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="tit_wrap">
+                        <span class="tit">타임딜 응모</span>
+                        <span class="sub_txt">10.06</span>
+                    </div> 
+                    <div class="info_wrap">
+                        <code class="tit type02">-20,000<em>M</em></code>
+                        <span class="sub_txt">사용</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <!-- //content -->
+</div>
+<!-- bottom sheet select -->
+<div id="mw-select" class="ly_pop popBtm ly_select">
+    <div class="wrap">
+        <div class="content">
+            <button type="button" onclick="popupClose('select','mwf')" class="close" title="닫기"><i></i></button>
+            <h2>정렬 옵션</h2>
+            <div class="select_list_wrap">
+                <ul class="select_list">
+                    <li>
+                        <span class="item">
+                            <input type="radio" id="tag1" name="tag" value="전체">
+                            <label for="tag1">전체</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="item">
+                            <input type="radio" id="tag2" name="tag" value="적립">
+                            <label for="tag2">적립</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="item">
+                            <input type="radio" id="tag3" name="tag" value="사용">
+                            <label for="tag3">사용</label>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //bottom sheet select -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script> -->
+<script src="../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../resources/js/jquery-ui.js"></script>
+<script src="../resources/js/gsap.min.js"></script>
+<script src="../../../global/resources/js/global.js"></script>
+<script src="../resources/js/design.js" defer></script>
+<script>
+$(function() {
+    $(".ly_select").find(".item input").change(function() { //정렬
+        var radioValue = $(this).val();
+        popupClose('select','mwf',0);
+        $('.filter_wrap .txt').text(radioValue);
+    });
+    virtualBg(); //white bg    
+});
+</script>
+
+</body>
+</html>

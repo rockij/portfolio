@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>T 주식정보 (유료부가서비스)</title>
+<link href="../../../../resources/web/join/css/stock.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="../../../../resources/web/join/js/design.js"></script>
+<!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<!--[if lte ie 8]>
+<div class="ie8_down_ver">이 브라우저는 지원하지 않습니다.<br>브라우저 업데이트 하시기 바랍니다.<br><a href="https://support.microsoft.com/ko-kr/help/17621/internet-explorer-downloads" target="_blank">업데이트 바로가기</a></div>
+<![endif]-->
+<div class="title"><span>T주식정보 (유료부가서비스)</span></div>
+<div class="con">	
+	<img src="../../../../resources/web/join/image/stock/vis_181122.png" alt="SKT 주식 부가서비스" class="img_t"/>
+	<div class="form">
+		<fieldset id="step1" style="display:block">
+			<legend>휴대폰 번호입력 및 동의</legend>
+			<ul>
+				<li class="hp"> 
+					<span class="select v2">
+						<label for="hp">010</label>
+						<select id="hp">
+							<option value="010">010</option>
+							<option value="011">011</option>
+						</select>
+					</span>
+					<span class="placeholder v2"><input type="text" name="hp-num" id="hp-num" maxlength="8" class="i_text" placeholder="휴대폰번호를 입력하세요."></span>
+					<!--span class="btn_st"><button class="btn_gray2">인증요청</button></span-->
+				</li>						
+				<li class="agree">
+					<span class="checkbox agr"><input type="checkbox" name="agree" id="all" checked=""><label for="all" class="on">전체동의</label></span>
+					<div class="agr2_box">
+						<span class="checkbox agr2"><input type="checkbox" name="agree" id="agree1" checked=""><label for="agree1" class="on"></label><a href="#;">T주식정보이용약관(필수)</a></span>
+						<span class="checkbox agr2"><input type="checkbox" name="agree" id="agree2"><label for="agree2"></label><a href="#;">패스이용약관(필수)</a></span>
+						<span class="checkbox agr2"><input type="checkbox" name="agree" id="agree3"><label for="agree3"></label><a href="#;">개인정보처리방침(필수)</a></span>			
+						<span class="checkbox agr2"><input type="checkbox" name="agree" id="agree4"><label for="agree4"></label><a href="#;">개인정보수집/이용동의(필수)</a></span>
+						<span class="checkbox agr2"><input type="checkbox" name="agree" id="agree5"><label for="agree5"></label><a href="#;">광고성 정보수신동의(선택)</a></span>
+					</div>
+				</li>
+				<li class="btns">
+					<button class="btn_red2">가입</button>
+					<button class="btn_gray">취소</button>
+				</li>
+				<li>					
+					<p class="tcs"><span>매월 부가세포함 11,000원</span><br>T주식정보 이용을 위해 PASS서비스에 같이 가입됩니다.</p>
+				</li>
+			</ul>
+		</fieldset>
+		<!-- //step1 -->
+
+		<fieldset id="step2" style="display:block;">
+			<legend>인증번호 입력</legend>
+			<h3>휴대폰으로 전송된 인증번호를 입력하세요.</h3>
+			<ul>
+				<li class="num v2">
+					<span class="placeholder"><label for="num" class="lbl v2">인증번호입력</label><input type="text" name="num" id="num" maxlength="6" class="i_text"><em class="time">(유효시간 03:00)</em></span>
+					<button type="button" onclick="" class="btn_resend">재전송</button>
+				</li>
+				<li class="btns">
+					<button class="btn_red2">가입</button>
+					<button class="btn_gray">취소</button>
+				</li>
+				<li>					
+					<p class="tcs"><span>매월 부가세포함 11,000원</span><br>T주식정보 이용을 위해 PASS서비스에 같이 가입됩니다.</p>
+				</li>
+			</ul>
+		</fieldset>
+		<!-- //step2 -->
+
+		<!-- step3 -->
+		<fieldset id="step3" style="display:block;">
+			<legend>가입완료</legend>
+	        <ul>
+	           <li class="result">
+	              <p class="txt_cau1"><strong>PASS 앱설치 후</strong> 로봇어드바이저와<br>주식전문가가 추천하는 주식정보를 확인하세요.</p>
+	              <p class="txt_cau2">PASS 앱 설치 / 실행하기</p>
+	              <ul class="link">
+			    	<li><button type="button" onclick="" class=""><img src="../../../../resources/web/join/image/btn_google.png" alt="구글플레이"></button></li>
+			    	<li><button type="button" onclick="" class=""><img src="../../../../resources/web/join/image/btn_apple.png" alt="애플스토어"></button></li>
+	              </ul>
+	              <p class="txt_cau2">보다 빠르고 간편한 인증 서비스! PASS<br>PASS 앱 이용은 무료입니다.</p>
+	           </li>
+	        </ul>
+	        <img src="../../../../resources/web/join/image/img_result.png" alt="설치설명">
+		</fieldset>
+		<!-- //step3 -->
+	</div>
+</div>
+
+
+<footer class="footer">
+	<div class="wrap">
+		<div>
+			- 본 서비스는 SKT 고객만 이용 가능합니다.<br>
+			- T주식정보는 PASS 부가서비스로 T주식정보 가입 시 PASS 서비스에 같이 가입됩니다.<br>
+			- 가입/해지 : PASS앱 또는 SKT 고객센터 (114)<br>
+			- 주식정보문의 : (주)에이티애널리틱스(02-318-0802), cs@analyticsfn.com<br>
+			- 본 서비스의 정보는 (주)에이티애널리틱스가 제공하며 투자를 위한 참고자료입니다. 투자판단의 책임은 투자자 본인에게 있으며 SK텔레콤(주)와 (주)에이티애널리틱스는 법적 책임을 지지 않습니다.
+		</div>
+	</div>
+</footer>
+
+<!-- loading -->
+<div class="ly_loading">
+	<div class="bg"></div>
+	<div class="cont">
+		<div class="ele">
+			<div class="spinner">
+			  <div class="rect1"></div><!----><div class="rect2"></div><!----><div class="rect3"></div><!----><div class="rect4"></div><!----><div class="rect5"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //loading -->
+
+
+<!-- 캡차 -->
+<div class="ly_pop" style="display:none" id="pop_step">
+	<div class="bg"><!-- shadow --></div>
+	<div class="cont" style="display:block">
+		<section class="element">
+			<div class="pop_con">			
+				<div class="pop_top">
+					<h2>T주식정보</h2>
+					<p>매일 주식정보를 문자로 받아보세요.</p>
+				</div>		
+				<div class="num2">
+					<h3>* 아래 보안문자를 입력해주세요</h3>	
+					
+					<div class="sect_captcha">
+						<div class="pinArea">
+							<p class="pin_img"><img src="" width="115" id="img_captcha"/></p>
+							<p class="pin_btn"><span><img src="../../../../resources/web/join/image/num_btn_re.png" width="52" alt="새로고침" /></span></p>
+						</div>
+						<div class="userNum">
+							<p><label class="label_txt" for=""><strong>보안문자(숫자)입력</strong></label></p>
+							<input name="" type="text" maxlength="" class="input_txt2" title="보안문자(숫자)입력"/>
+						</div>
+					</div>
+				</div>	
+			</div>	
+			
+			<div class="pop_btn">
+				<button type="button" class="btn_pop01" onclick="$('.ly_pop').hide();">닫기</button>
+				<button type="button" class="btn_pop02" >확인</button>
+			</div>
+		</section>
+	</div>
+</div>
+<!-- //캡차 -->
+
+</body>
+</html>

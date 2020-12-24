@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="TIOR, 모든 시승은 티오르에서">
+    <meta name="keywords" content="티오르, tior, 시승예약, 시승, 시승플랫폼">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="언택트! 시승예약은 간편하게! 실시간 시승예약 서비스">
+    <meta property="og:description" content="차량 구매 전 시승은 필수, 모든시승은 티오르에서">
+    <meta property="og:image" content="https://m.tior.co.kr/resources/images/tior_favicon.png">
+    <meta property="og:url" content="https://m.tior.co.kr/">
+    <link href="../../resources/css/common.min.css" media="screen" rel="stylesheet">
+    <link href="../../resources/css/my.min.css" media="screen" rel="stylesheet">
+    <title>TIOR, 모든 시승은 티오르에서</title>
+</head>
+<body>
+
+<div id="wrap" class="type">
+
+    <div id="content">
+        <div class="myPage">
+            <section class="loginBefore">
+                <h3>티오르와 함께<br>멋진 시승 시작하세요 !</h3>
+                <a href="#n" class="login" onclick="layer_open('login')">LOGIN</a>
+                <div class="inquiry">
+                    <a href="tel:1544-0914" class="tel">1544-0914</a>
+                    <p class="day"><span class="time">am 09:00 - pm 18:00 (Lunch time 12:00~13:00)</span><br>Day Off (토/일/공휴일)</p>
+                    <ul class="list">
+                        <li><a href="#n">설정</a></li>
+                        <li><a href="#n">공지사항</a></li>
+                        <li><a href="#n">이용약관 안내</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- //content -->
+    <div class="fix btm">
+        <ul class="navTab">
+            <li><a href="#n" class="active"><i class="ico_tab tab1"></i>홈</a></li>
+            <li><a href="#n"><i class="ico_tab tab2"></i>예약내역</a></li>
+            <li><a href="#n"><i class="ico_tab tab3"></i>FOR U</a></li>
+            <li><a href="#n"><i class="ico_tab tab4"></i>더보기</a></li>
+        </ul>
+    </div>
+    <!-- //navTab -->
+</div>
+
+<div id="mw-login" class="ly_pop full ndim">
+    <div class="wrap fover">
+        <header class="header fix top">
+            <div class="headWrap">
+                <a href="#n" onclick="layer_close()" class="ico ico_close"><span class="hide">닫기</span></a>
+                <h1 class="white">TIOR 로그인</h1>
+            </div>
+        </header>
+        <div class="container">
+            <div class="content">
+                <div class="joinView loginCenter">
+                    <h3 class="joinTit ip1"><span>TIOR</span>로그인</h3>
+                    <section class="ipWrap">
+                        <div class="ipJoin">
+                            <strong class="ipTit">이메일 아이디</strong>
+                            <span class="ipLine ip_del">
+                                <input type="email" id="email" name="email" class="ip" value=""
+                                    placeholder="example@email.com" required>
+                                <button type="button" class="del" style="display: none;"><i>입력삭제</i></button>
+                            </span>
+                        </div>
+                        <div class="ipJoin">
+                            <strong class="ipTit">비밀번호</strong>
+                            <span class="ipLine ip_del ip_pw">
+                                <input type="password" id="password" class="ip" placeholder="비밀번호 입력" required>
+                                <button type="button" class="del"><i>입력삭제</i></button>
+                                <button type="button" class="eyes"><i>비밀번호 보여주기</i></button>
+                            </span>
+                            <i class="error">영문+숫자_특수조합으로 8~20자리</i>
+                        </div>
+                    </section>
+                    <section class="loginHelp">
+                        <span class="auto">
+                            <input type="checkbox" name="agreeChk" id="autoLogin" value="" checked>
+                            <label for="autoLogin">자동로그인</label>
+                        </span>
+                    </section>
+                    <ul class="btn_area_float">
+                        <li><button type="button" class="btn_xr skip">로그인</button></li>
+                    </ul>
+                    <section class="joinSub">
+                        <ul>
+                            <li><a href="#n" onclick="layer_open('join'); return false">회원가입</a></li>
+                            <li><i class="ico_lineSM"></i></li>
+                            <li><a href="#n" onclick="layer_open('findID'); return false">아이디 찾기</a></li>
+                            <li><i class="ico_lineSM"></i></li>
+                            <li><a href="#n" onclick="layer_open('resetPw'); return false">비밀번호 찾기</a></li>
+                        </ul>
+                    </section>
+                    <section class="snsArea">
+                        <div class="snsInfo">
+                            <i class="ico_lineUnder"></i>
+                            <p>or Sign in with SNS</p>
+                            <i class="ico_lineUnder"></i>
+                        </div>
+                        <div class="snsSign">
+                            <div class="snsBtn kakaoArea">
+                                <button type="button" onclick="layer_open('agreeSNS');">
+                                    <i class="ico_kakao"></i>
+                                </button>
+                                <p>카카오 계정으로 로그인</p>
+                            </div>
+                            <div class="snsBtn naverArea">
+                                <button type="button" onclick="layer_open('agreeSNS');">
+                                    <i class="ico_naver"></i>
+                                </button>
+                                <p>네이버 계정으로 로그인</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //login -->
+
+<!-- 회원가입 -->
+<div id="mw-join" class="ly_pop full ndim">
+    <div class="wrap">
+        <div class="content">
+            <a href="#n" onclick="layer_close_tar('join')" class="close"><span class="hide">닫기</span></a>
+            <div class="joinUsList join">
+                <div class="title">
+                    <h3><span>TIOR</span>회원가입</h3>
+                </div>
+                <ul class="btn_area_sigle">
+                    <li>
+                        <button type="button" class="btn_xr skip">
+                            <div class="logo_wrap"><i class="ico_bi ico_kakao"></i>카카오 계정으로 회원가입</div>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn_xr skip">
+                            <div class="logo_wrap"><i class="ico_bi ico_naver"></i>네이버 계정으로 회원가입</div>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn_xr skip" onclick="layer_open('emailJoin');">
+                            <div class="logo_wrap wrap_Left"><i class="ico_bi ico_email"></i>이메일 주소로 회원가입</div>
+                        </button>
+                    </li>
+                </ul>
+                <div class="service_area">
+                    <a href="#n">서비스이용약관</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //회원가입 -->
+
+<!-- 비밀번호재설정 -->
+<div id="mw-resetPw" class="ly_pop full ndim">
+    <div class="wrap">
+        <header class="header fix top">
+            <div class="headWrap">
+                <h1>비밀번호 재설정</h1>
+                <a href="#n" onclick="layer_close_tar('resetPw')" class="ico ico_close"><span class="hide">닫기</span></a>
+            </div>
+        </header>
+        <!-- //header -->
+        <div class="container">
+            <div class="content">
+                <div class="joinView password">
+                    <section class="ipWrap">
+                        <div class="ipJoin">
+                            <strong class="ipTit">아이디 입력</strong>
+                            <span class="ipLine ip_del">
+                                <input type="email" id="email" class="ip" required>
+                                <label for="email">이메일 주소 입력</label>
+                                <button type="button" class="del"><i>입력삭제</i></button>
+                            </span>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="btn_area_float fix btm">
+            <button type="button" class="btn_xr skip" disabled>다음</button>
+        </div>
+    </div>
+</div>
+<!-- //비밀번호재설정 -->
+
+<!-- 이메일회원가입 -->
+<div id="mw-emailJoin" class="ly_pop full ndim">
+    <div class="wrap">
+        <header class="header fix top">
+            <button type="button" onclick="layer_close_tar('emailJoin')" class="close"></button>
+        </header>
+        <!-- //header -->
+        <div class="container">
+            <div class="content">
+                <div class="joinView emailMember">
+                    <h3 class="joinTit hurdle">이메일 회원가입</h3>
+                    <section class="ipWrap">
+                        <div class="ipJoin">
+                            <strong class="ipTit default">이메일 주소</strong>
+                            <span class="ipLine ip_del">
+                                <input type="email" id="email" class="ip" required>
+                                <label for="email">example@email.com</label>
+                                <button type="button" class="del"><i>입력삭제</i></button>
+                            </span>
+                        </div>
+                        <div class="ipJoin">
+                            <strong class="ipTit default">비밀번호</strong>
+                            <span class="ipLine ip_pw ip_del">
+                                <input type="password" id="password" class="ip" placeholder="비밀번호를 입력해주세요." value="">
+                                <button type="button" class="del"><i>입력삭제</i></button>
+                                <button type="button" class="eyes"><i>비밀번호 보여주기</i></button>
+                            </span>
+                            <i class="error">영문+숫자_특수조합으로 8~20자리</i>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="btn_area_float fix btm">
+                <button type="button" class="btn_xr skip" disabled>아이디 찾기</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //이메일회원가입 -->
+
+<!-- 아이디 찾기 -->
+<div id="mw-findID" class="ly_pop full ndim">
+    <div class="wrap">
+        <header class="header fix top">
+            <div class="headWrap">
+                <h1>아이디 찾기</h1>
+                <a href="#n" onclick="layer_close_tar('findID')" class="ico ico_close"><span class="hide">닫기</span></a>
+            </div>
+        </header>
+        <!-- //header -->
+        <!-- 아이디찾기 -->
+        <div id="findIdDiv" class="container" style="display: block;">
+            <div class="content">
+                <div class="joinView find">
+                    <section class="ipWrap">
+                        <div class="ipJoin">
+                            <strong class="ipTit">이름</strong>
+                            <span class="ipLine ip_del">
+                                <input type="text" id="name" class="ip" required>
+                                <label for="name">이름</label>
+                                <button type="button" class="del"><i>입력삭제</i></button>
+                            </span>
+                        </div>
+                        <div class="ipJoin">
+                            <strong class="ipTit">휴대폰번호</strong>
+                            <span class="ipLine ip_del">
+                                <input type="tel" id="tel" class="ip" maxlength="11" required>
+                                <label for="tel">'-'없이 숫자만 입력</label>
+                                <button type="button" class="del"><i>입력삭제</i></button>
+                            </span>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="btn_area_float fix btm">
+                <button type="button" class="btn_xr skip" disabled>아이디 찾기</button>
+            </div>
+        </div>
+        <!-- //아이디찾기 -->
+        <!-- 아이디찾기결과 -->
+        <div id="mw-findIdEndDiv" class="container" style="display: none;">
+            <div class="content">
+                <div class="joinView emailHasInfo">
+                    <h3 class="joinTit">회원님의<br>아이디를 찾았습니다.</h3>
+                    <section class="idWrap">
+                        <div class="findId">
+                            <ul>
+                                <li><p class="id">hanm1111****@tior.co.kr</p></li>
+                                <li><p class="id">mini123****@gmail.com</p></li>
+                                <li><p class="id">citron****@naver.com</p></li>
+                            </ul>
+                        </div>
+                        <div class="findSns">
+                            <div class="snsId">
+                                <p>카카오 소셜 가입 아이디</p>
+                            </div>
+                            <div class="snsId">
+                                <p>네이버 소셜 가입 아이디</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="idInfo">
+                        <p>
+                            보안을 위해 @ 앞은 3자리만 표시됩니다.<br />
+                            소셜 가입 이용자는 각 소셜 사이트에서 아이디 및 비밀번호 
+                            찾기가 가능합니다.
+                        </p>
+                    </section>
+                </div>
+            </div>
+            <div class="btn_area_float fix btm">
+                <button type="button" class="btn_xr reset"><u>비밀번호 재설정</u></button>
+                <button type="button" class="btn_xr skip">로그인</button>
+            </div>
+        </div>
+        <!-- //아이디찾기결과 -->
+    </div>
+</div>
+<!-- //아이디 찾기 -->
+
+<!-- SNS약관동의 -->
+<div id="mw-agreeSNS" class="ly_pop full ndim">
+    <div class="wrap">
+        <div class="content">
+            <a href="#n" onclick="layer_close_tar('agreeSNS')" class="close"><span class="hide">닫기</span></a>
+            <div id="sns_agree" class="agreeUser">
+                <h4>회원님<br>약관 동의가 필요합니다.</h4>
+                <span class="agree_all checkbox chkAll">
+                    <input type="checkbox" name="agreeChk" id="check_all" value="">
+                    <label for="check_all">전체동의</label>
+                </span>
+                <ul class="agree_each">
+                    <li>
+                        <span class="checkbox i_chk">
+                            <input type="checkbox" name="agreeChk" id="agree1" value="">
+                            <label for="agree1">[필수]  서비스 이용약관</label>
+                        </span>
+                        <button type="button" class="docBtn"></button>
+                    </li>
+                    <li>
+                        <span class="checkbox i_chk">
+                            <input type="checkbox" name="agreeChk" id="agree2" value="">
+                            <label for="agree2">[필수] 개인정보 수집 이용 동의</label>
+                        </span>
+                        <button type="button" class="docBtn"></button>
+                    </li>
+                    <li>
+                        <span class="checkbox i_chk">
+                            <input type="checkbox" name="agreeChk" id="agree3" value="">
+                            <label for="agree3">[선택] 마케팅 정보 수신 동의</label>
+                        </span>
+                        <button type="button" class="docBtn"></button>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn_area_float fix btm">
+                <button type="button" class="btn_xr skip" disabled>동의합니다.</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //SNS약관동의 -->
+
+<!-- 21세이상안내1 -->
+<div id="mw-oldlimit1" class="ly_pop ly_alert">
+    <div class="wrap">
+        <div class="content">
+            <pre>
+                티오르는 만 21세 이상 고객만 회원가입
+                및 서비스 이용이 가능합니다.
+                <b>고객님의 연령</b>을 선택해주세요.
+            </pre>
+        </div>
+        <ul class="btn_area_half">
+            <li><a href="javascript:;" onclick="layer_close()" class="btn_x under">만 21세 미만</a></li>
+            <li><a href="#;" class="btn_x skip">만 21세 이상</a></li>
+        </ul>
+    </div>
+</div>
+<!-- //21세이상안내1 -->
+
+<!-- 21세이상안내2 -->
+<div id="mw-oldlimit2" class="ly_pop ly_alert">
+    <div class="wrap">
+        <div class="content">
+            <pre>
+                죄송합니다. 티오르 정책상 만 21세 미만은
+                회원가입이 불가합니다.
+                만 21세가 되면 가입해주세요.
+            </pre>
+        </div>
+        <div class="btn_area_sigle">
+            <button type="button" class="btn_x skip">확인</button>
+        </div>
+    </div>
+</div>
+<!-- //21세이상안내2 -->
+
+<script src="../../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../../resources/js/design.js"></script>
+<script>
+$(function () {
+    chkinglst('sns_agree');
+});
+</script>
+
+</body>
+</html>

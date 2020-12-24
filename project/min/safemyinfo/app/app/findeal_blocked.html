@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko" class="app">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../resources/css/content.css" media="screen" rel="stylesheet">
+<link href="../resources/css/site_app.css" media="screen" rel="stylesheet">
+<title>내정보지키미</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header" class="fix top">
+        <h1 class="blind">내정보지키미</h1>
+        <button type="button" onclick="" class="btn_close"><i class="bg_icon">닫기</i></button>
+    </header>
+    <!-- //header -->
+    <div id="ct">
+    </div>
+    <!-- //content -->
+
+    <!-- 기등록안내 -->
+    <div id="mw-registerOn" class="ly_pop btm ly_alert2">
+        <div class="wrap">
+            <div class="content">
+                <h2 class="title">고객님은 현재 금융거래 차단 상태 입니다.</h2>
+                내정보지키미 앱에서 요청하기 전,<br>본 사이트에서 직접 요청한 이력이 있을 경우 현재 진행하였던 결과와 일치하지 않을 수 있습니다.
+            </div>
+            <div class="btn_area_sigle"><button type="button" class="btn_xr btn_type2" onclick="layer_close('btm')">확인</button></div>
+        </div>
+    </div>
+    <!-- //기등록안내 -->
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../resources/js/jquery-3.3.1.min.js"></script>
+<script src="../resources/js/design.js"></script>
+<script>
+$(function() {
+    $('#gnb .smenu>li:eq(0)').addClass('active'); //메뉴활성화
+    layer_open('registerOn');
+});
+</script>
+
+</body>
+</html>

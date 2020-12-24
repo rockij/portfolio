@@ -1,0 +1,66 @@
+@charset "utf-8";
+@import './mixin';
+
+.ico_arr {
+    width: ptr(23);
+    height: ptr(23);
+    background-image: url($urlImg + 'ico_arr.svg');
+}
+
+// 상품리스트
+.sortDetail {
+    .apply_car {
+        &.soldout {
+            * {
+                color: #a5a5a5;
+            }
+            .thum {
+                opacity: 0.2;
+            }
+            & + .btns {
+                .btn_date {
+                    width: ptr(292);
+                    padding-left: ptr(70);
+                    padding-right: ptr(70);
+                    @include wfn;
+                    font-weight: 800;
+                    font-size: ptr(26);
+                    text-decoration: line-through;
+                    letter-spacing: 0;
+                    text-transform: uppercase;
+                    background-color: #D1D1D1;
+                    color: #000;
+                    &:disabled {
+                        background-color: #D1D1D1 !important;
+                        color: #000 !important;
+                    }
+                }
+                
+            }
+        }
+        .thum {
+            width: 63.6%;
+            @include pos($p:absolute, $t:50%, $r:-21%);
+            transform: translateY(-50%);
+            img {
+                opacity: 0;
+                transform: translateX(50%);
+                animation: car-mov2 .75s ease-out 0s forwards;
+            }
+        }
+        h3 {
+            text-align: left;
+            font-weight: 500;
+            font-size: ptr(34);
+        }
+        > strong {
+            @include elip('line2');
+            max-width: 58%;
+            font-weight: 800;
+            font-size: ptr(42);
+        }
+        li {
+            margin-top: 0;
+        }
+    }
+}

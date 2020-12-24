@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko" class="app">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../resources/css/content.css" media="screen" rel="stylesheet">
+<link href="../resources/css/site_app.css" media="screen" rel="stylesheet">
+<title>내정보지키미</title>
+</head>
+<body>
+    
+<div id="wrap">
+
+    <header id="header" class="fix top">
+        <button type="button" onclick="bodyShot()" class="btn_prev"><i class="bg_icon">뒤로가기</i></button>
+        <button class="gnb_handle" type="button"><span><s class="blind">메뉴컨트롤</s></span></button>
+        <h1 class="blind">내정보지키미</h1>
+        <aside id="gnb">
+            <h2 class="blind">Global navigation bar</h2>
+            <div class="panel">
+                <div class="content">
+                    <header>
+                        <h3>홍길동님</h3>
+                        <nav>
+                            <a href="#;" class="home"><i class="bg_icon">처음으로</i></a>
+                            <a href="#;" class="alarm"><i class="bg_icon">알람보기</i></a>
+                        </nav>
+                    </header>
+                    <div class="scroll">
+                        <ul class="smenu">
+                            <li>
+                                <a href="#;" class="depOn">모니터링</a>
+                                <ul class="dep2">
+                                    <li><a href="#;">모니터링 정보</a></li>
+                                    <li><a href="#;">모니터링 내역</a></li>
+                                    <li><a href="#;">개인정보 수정</a></li>
+                                    <li><a href="#;">개인정보 유출 대응</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#;" class="depOn">금융거래 차단</a>
+                                <ul class="dep2">
+                                    <li><a href="#;">내역 조회</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#;" class="depOn">영업전화 수신거부</a>
+                                <ul class="dep2">
+                                    <li>
+                                        <a href="#;">전화권유판매 수신거부</a>
+                                        <ul class="dep3">
+                                            <li><a href="#;">수신거부업체 수정</a></li>
+                                            <li><a href="#;">수신허용업체</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#;">금융권 영업전화 수신거부</a>
+                                        <ul class="dep3">
+                                            <li><a href="#;">수신거부업체 수정</a></li>
+                                            <li><a href="#;">수신거부철회 조회</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#;" class="depOn">안심번호</a>
+                                <ul class="dep2">
+                                    <li><a href="#;">안심번호 발급</a></li>
+                                    <li><a href="#;">착신 내역</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#;">Wifi 체크</a>
+                            </li>
+                            <li>
+                                <a href="#;" class="depOn">고객센터</a>
+                                <ul class="dep2">
+                                    <li><a href="#;">서비스 안내</a></li>
+                                    <li><a href="#;">공지사항</a></li>
+                                    <li><a href="#;">FAQ</a></li>
+                                    <li><a href="#;">이용약관</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#;" class="depOn">설정</a>
+                                <ul class="dep2">
+                                    <li><a href="#;">알림 설정</a></li>
+                                    <li><a href="#;">비밀번호 변경</a></li>
+                                    <li>
+                                        <a href="#;">서비스 해지</a>
+                                        <ul class="dep3">
+                                            <li><a href="#;">서비스 해지</a></li>
+                                            <li><a href="#;">서비스 문의</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <footer>앱 버전 (V1.0.0) 최신버전입니다.<br><a href="#;" class="appGo">최신 버전으로 업데이트</a></footer></footer>
+                </div>
+            </div>
+        </aside>
+        <!-- //gnb -->
+    </header>
+    <!-- //header -->
+    <div id="ct">
+        <div class="inner frmview_select2">
+            <section class="title_fix_cover">
+                <div class="title_fix">
+                    <h2>
+                        <label for="bank1" class="select_type">
+                            <select class="select">
+                                <option value="" data-name="이름 + 휴대폰번호 이름" selected>이름 + 휴대폰번호 이름</option>
+                                <option value="" data-name="이름 + 생년월일">이름 + 생년월일</option>
+                                <option value="" data-name="아이디 + 이메일">아이디 + 이메일</option>
+                                <option value="" data-name="이메일 + 휴대폰번호">이메일 + 휴대폰번호</option>
+                                <option value="" data-name="생년월일 + 휴대폰번호">생년월일 + 휴대폰번호</option>
+                            </select>
+                            <span class="label"><span class="name">이름 + 휴대폰번호 이름</span>
+                        </label>
+                    </h2>
+                    <p class="title_txt">URL 바로가기를 선택하여 노출 내역을 확인해주세요.</p>
+                    <div class="list_table2 nlst">
+                        <ul class="head">
+                            <li class="th">건수</li>
+                            <li class="td">URL</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <div class="list_table2 nlst">
+                <ul class="body">
+                    <li>
+                        <button type="button" onclick="layer_open('alert')">
+                            <code class="th">6</code>
+                            <span class="td">URL 바로가기<i class="inew"></i></span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" onclick="layer_open('alert')">
+                            <code class="th">5</code>
+                            <span class="td">URL 바로가기<i class="inew"></i></span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" onclick="layer_open('alert')">
+                            <code class="th">4</code>
+                            <span class="td">URL 바로가기</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" onclick="layer_open('alert')">
+                            <code class="th">3</code>
+                            <span class="td">URL 바로가기</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" onclick="layer_open('alert')">
+                            <code class="th">2</code>
+                            <span class="td">URL 바로가기</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" onclick="layer_open('alert')">
+                            <code class="th">1</code>
+                            <span class="td">URL 바로가기</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" onclick="layer_open('alert')">
+                            <code class="th">1</code>
+                            <span class="td">URL 바로가기</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" onclick="layer_open('alert')">
+                            <code class="th">1</code>
+                            <span class="td">URL 바로가기</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <aside class="inner bn_belt case1 fix btm"><a href="#;"><img src="../resources/image/sample/baner_568x135.png" alt=""></a></aside>
+    </div>
+    <!-- //content -->
+    
+</div>
+
+<!-- alert -->
+<div id="mw-alert" class="ly_pop btm ly_alert">
+    <div class="wrap">
+        <div class="content">
+            <h3 class="title">URL이 복사되었습니다.</h3>
+            <p class="txt2">모바일 브라우저로 이동하여<br>붙여넣기 후 확인해주세요.</p>
+        </div>
+        <div class="btn_area_sigle">
+            <button type="button" class="btn_xr btn_type2" onclick="layer_close('btm')">확인</button>
+        </div>
+    </div>
+</div>
+<!-- //alert -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../resources/js/jquery-3.3.1.min.js"></script>
+<script src="../resources/js/design.js"></script>
+<script>
+$(function() {
+    $('#gnb .smenu>li:eq(0)').addClass('active'); //메뉴활성화
+    fixValueOver();
+});
+</script>
+
+</body>
+</html>

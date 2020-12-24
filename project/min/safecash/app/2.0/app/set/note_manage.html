@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko" class="app">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="../../../../global/resources/css/global.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/common.min.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/content.min.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/app.min.css" media="screen" rel="stylesheet">
+<title>세이프캐시</title>
+</head>
+<body class="">
+
+<div id="wrap">
+
+    <header id="header" class="fix top">
+        <button type="button" onclick="" class="btn_close"><i>닫기</i></button>
+		<h1>인증서 관리</h1>
+    </header>
+    <!-- //header -->
+
+    <div id="content">
+        <div class="manage_note">
+            <h3>공인인증서는<br>앱 내 저장공산에 안전하게 보관됩니다.</h3>
+            <section class="note_wrap">
+                <div class="note_desc">
+                    <strong class="name">홍길동(Hong Gildong)</strong>
+                    <ul>
+                        <li>은행 / 신용카드 / 보험(개인)</li>
+                        <li>금융결제원</li>
+                        <li>만료일<span class="date"><i>2020.10.16</i></span></li>
+                    </ul>
+                </div>
+                <button type="button" class="del_note" onclick="popupOpen('delete','mw', 300)">삭제</button>
+            </section>
+            <section class="note_wrap">
+                <div class="note_desc">
+                    <strong class="name">홍길동(Hong Gildong)</strong>
+                    <ul>
+                        <li>은행 / 신용카드 / 보험(개인)</li>
+                        <li>금융결제원</li>
+                        <li>만료일<span class="date soon"><i>2020.10.16</i>만료예정</span></li>
+                    </ul>
+                </div>
+                <button type="button" class="del_note" onclick="popupOpen('delete','mw', 300)">삭제</button>
+            </section>
+            <section class="note_wrap expire">
+                <div class="note_desc">
+                    <strong class="name">홍길동(Hong Gildong)</strong>
+                    <ul>
+                        <li>은행 / 신용카드 / 보험(개인)</li>
+                        <li>금융결제원</li>
+                        <li>만료일<span class="date"><i>2020.10.16</i></span></li>
+                    </ul>
+                </div>
+                <button type="button" class="del_note" onclick="popupOpen('delete','mw', 300)">삭제</button>
+            </section>
+            <div class="btn_area_one"><button type="button" onclick="" class="bring">인증서 가져오기</button></div>
+        </div>
+    </div>
+    <!-- //content -->
+
+</div>
+
+<!-- alert -->
+<div id="mw-delete" class="ly_pop popBtm ly_alert2">
+    <div class="wrap">
+        <div class="content">
+            <h3>인증서를 삭제하시겠습니까?</h3>
+            <p class="txt">인증서 삭제시 해당 인증서로 조회한<br>모든 정보도 함께 삭제되며, 복구할 수 없습니다. </p>
+        </div>
+        <ul class="btn_area_half">
+            <li><button type="button" onclick="popupClose('delete','mw');">취소</button></li>
+            <li><button type="button" onclick="" class="skip">인증요청</button></li>
+        </ul>
+    </div>
+</div>
+<!-- //alert -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../../../../global/resources/js/global.js"></script>
+<script src="../../resources/js/design.js" ></script>
+<script>
+$(function() {
+    // popupOpen('delete','mw', 300)
+});
+</script>
+
+</body>
+</html>

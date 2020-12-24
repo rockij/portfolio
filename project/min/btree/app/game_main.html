@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link rel="preload" href="resources/css/font/NotoSansKR-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link href="resources/css/common.css" media="screen" rel="stylesheet">
+<link href="resources/css/site.css" media="screen" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="resources/js/jquery-1.11.1.min.js"></script>
+<script src="resources/js/jquery.mobile.min.js"></script>
+<script src="resources/js/design.js"></script>
+<title>B-Tree</title>
+</head>
+<body>
+
+<div id="wrap">
+
+	<header id="header" class="main fix_top">
+		<h1 class="blind">게임 메인</h1>
+		<a href="#;" class="logo"><img src="resources/images/header_logo.png" alt="B-tree"></a>
+		<span class="mypoint"><code>1,2540</code> P<button type="button" class="btn_gnb"><i class="bg_com">메뉴열기</i></button></span>
+	</header>
+	<!-- //header -->
+
+	<aside id="gnb">
+		<h2 class="blind">Global navigation bar</h2>
+		<div class="bgb"><div class="bg"></div></div>
+		<div class="panel">
+			<div class="cont">
+				<div class="scroll">
+					<!-- content area -->
+					<div class="profile">
+						<button type="button" onclick="layer_open('logout')" class="btn_s btn_type6">로그아웃</button>
+						<button type="button" class="btn_cls"><i class="bg_com ico_x">메뉴닫기</i></button>
+						<dl>
+							<dt><img src="resources/images/sample/photo.jpg" alt=""></dt>
+							<dd>
+								<span class="id">밝은마루 님</span>
+								<span class="rati">일반회원</span>
+								<a href="#;" class="btn_go">B.bank 바로가기</a>
+							</dd>
+						</dl>
+					</div>
+					<ul class="lnb">
+						<li><a href="#;"><i class="bg_ico ico_p"></i>포인트현황<strong class="fc_blu status">13,000 <span>P</span></strong></a></li>
+						<li><a href="#;"><i class="bg_ico ico_light"></i>토큰 현황<strong class="status fc_pur">0.005 <span>ETH</span></strong></a></li>
+						<li><a href="#;"><i class="bg_ico ico_p2"></i>토큰 전환</a></li>
+						<li><a href="#;"><i class="bg_ico ico_wallet"></i>토큰 입금주소 등록</a></li>
+						<li><a href="#;"><i class="bg_ico ico_medal"></i>포인트 랭킹</a></li>
+					</ul>
+					<div class="ui_inner2">
+						<ul class="menucs">
+							<li><a href="#;"><span><i class="bg_ico ico_spk"></i></span>공지사항</a></li>
+							<li><a href="#;"><span><i class="bg_ico ico_bell"></i></span>알림</a></li>
+							<li><a href="#;"><span><i class="bg_ico ico_cau"></i></span>FAQ</a></li>
+							<li><a href="#;"><span><i class="bg_ico ico_note"></i></span>1:1 문의</a></li>
+						</ul>
+						<ul class="menuset">
+							<li class="push">
+								<span class="wrap">
+									푸시메시지
+									<span class="checkbox"><input type="checkbox" name="push" id="push"><label for="push"></label></span>
+								</span>
+							</li>
+							<li><a href="#;">잠금암호</a></li>
+							<li class="ver"><span class="wrap">App 버전<tt>1.0.0 최신버전입니다.</tt></span></li>
+							<li><a href="#;">이용방법</a></li>
+							<li><a href="#;">서비스 이용약관</a></li>
+							<li><a href="#;">개인정보 취급방침</a></li>
+						</ul>
+						<button type="button" onclick="" class="btn_s btn_type6 btn_withdraw">회원탈퇴</button>
+					</div>
+					<!-- //content area -->
+				</div>
+			</div>
+		</div>
+	</aside>
+	<!-- //gnb -->
+
+	<div id="ct" class="gmain">
+		<section class="swir_cardbn">
+			<span class="bg">
+				<img src="resources/images/cardbn_noimg_bg.png" alt="카드 배경">
+				<!-- 슬라이드 할떄 마다 class="blind" 이미지로 바뀜 -->
+			</span>
+			<h2 class="blind">게임카드</h2>
+			<div id="cardBn" class="swiper-container">
+				<div class="swiper-wrapper">
+					<!-- 배너가 없을시 -->
+					<a href="#;" class="swiper-slide">
+						<img src="resources/images/sample/card2.png" alt="">
+						<img src="resources/images/cardbn_noimg_bg.png" alt="" class="blind">
+					</a>
+					<!-- //배너가 없을시 -->
+					<a href="#;" class="swiper-slide">
+						<img src="resources/images/sample/card.png" alt="">
+						<img src="resources/images/sample/card_bg2.png" alt="" class="blind">
+					</a>
+					<a href="#;" class="swiper-slide">
+						<img src="resources/images/sample/card.png" alt="">
+						<img src="resources/images/sample/card_bg3.png" alt="" class="blind">
+					</a>
+				</div>
+		  </div>
+		  <div class="swiper-pagination"></div>
+		</section>
+		<!-- //card baner -->
+		<section class="ui_inner2 gamelst">
+			<!-- <ul class="tab_type2">
+				<li class="selected"><button type="button" onclick="layer_open('sortOption','no');" class="btn_m2">리스트 정렬</button></li>
+				<li><button type="button" class="btn_m2" onclick="layer_open('sortOption','no');">장르별 정렬</button></li>
+			</ul> -->
+			<script>
+				$(".tab_type2 li").on("click", function(){
+					$(".tab_type2 li").removeClass();
+					$(this).addClass("selected");
+				});
+			</script>
+			<h3>최근 플레이 인기게임</h3>
+			<button type="button" onclick="layer_open('sortOption','no');" class="btn_refresh">리스트 정렬<i class="bg_com ico_"></i></button>
+			<ul class="list_type3">
+				<li>
+					<dl>
+						<dt><i class="bg_com">1</i><img src="resources/images/sample/photo6.jpg" alt=""></dt>
+						<dd>
+							<a href="#;" class="btn_m btn_type3 btn_go">게임하기<i class="bg_com ico_arr_next3"></i></a>
+							<h4><strong class="elip1">리니지 M</strong></h4>
+							<ul class="data2">
+								<li><span class="name">1분당</span><strong class="fc_org">+1P</strong><i class="bar">/</i><i class="bg_ico ico_memu"></i><span class="name">미뮤</span><strong class="fc_org">+2P</strong></li>
+								<!-- <li><span class="name">누적 게임시간 (인원)</span><span class="gtime"><b>25,000</b> min / <b>52,536</b>명</span></li> -->
+							</ul>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+                        <dt><img src="resources/images/plylst_noimg.png" alt="이미지없음"></dt>
+						<dd>
+							<a href="#;" class="btn_m btn_type11 btn_go">다운로드<i class="bg_com ico_arr_next4"></i></a>
+							<h4><strong class="elip1">검은사막</strong></h4>
+							<ul class="data2">
+								<li><span class="name">다운로드 시</span><span class="fc_org point">+1 P</span></li>
+							</ul>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><i class="bg_com">2</i><img src="resources/images/sample/photo8.jpg" alt=""></dt>
+						<dd>
+							<a href="#;" class="btn_m btn_type3 btn_go">게임하기<i class="bg_com ico_arr_next3"></i></a>
+							<h4><strong class="elip1">이카루스</strong></h4>
+							<ul class="data2">
+								<li><span class="name">10분 게임진행 시</span><span class="fc_org point">+300 P</span></li>
+							</ul>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><i class="bg_com">2</i><img src="resources/images/sample/photo7.jpg" alt=""></dt>
+						<dd>
+							<a href="#;" class="btn_m btn_type3 btn_go">게임하기<i class="bg_com ico_arr_next3"></i></a>
+							<h4><strong class="elip1">검은사막</strong></h4>
+							<ul class="data2">
+								<li><span class="name">10분 게임진행 시</span><span class="fc_org point">+100 P</span></li>
+							</ul>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><i class="bg_com">2</i><img src="resources/images/sample/photo8.jpg" alt=""></dt>
+						<dd>
+							<a href="#;" class="btn_m btn_type3 btn_go">게임하기<i class="bg_com ico_arr_next3"></i></a>
+							<h4><strong class="elip1">이카루스</strong></h4>
+							<ul class="data2">
+								<li><span class="name">10분 게임진행 시</span><span class="fc_org point">+300 P</span></li>
+							</ul>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><i class="bg_com">2</i><img src="resources/images/sample/photo7.jpg" alt=""></dt>
+						<dd>
+							<a href="#;" class="btn_m btn_type3 btn_go">게임하기<i class="bg_com ico_arr_next3"></i></a>
+							<h4><strong class="elip1">검은사막</strong></h4>
+							<ul class="data2">
+								<li><span class="name">10분 게임진행 시</span><span class="fc_org point">+100 P</span></li>
+							</ul>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><i class="bg_com">2</i><img src="resources/images/sample/photo8.jpg" alt=""></dt>
+						<dd>
+							<a href="#;" class="btn_m btn_type3 btn_go">게임하기<i class="bg_com ico_arr_next3"></i></a>
+							<h4><strong class="elip1">이카루스</strong></h4>
+							<ul class="data2">
+								<li><span class="name">10분 게임진행 시</span><span class="fc_org point">+300 P</span></li>
+							</ul>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><i class="bg_com">2</i><img src="resources/images/sample/photo7.jpg" alt=""></dt>
+						<dd>
+							<a href="#;" class="btn_m btn_type3 btn_go">게임하기<i class="bg_com ico_arr_next3"></i></a>
+							<h4><strong class="elip1">검은사막</strong></h4>
+							<ul class="data2">
+								<li><span class="name">10분 게임진행 시</span><span class="fc_org point">+100 P</span></li>
+							</ul>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><i class="bg_com">2</i><img src="resources/images/sample/photo8.jpg" alt=""></dt>
+						<dd>
+							<a href="#;" class="btn_m btn_type3 btn_go">게임하기<i class="bg_com ico_arr_next3"></i></a>
+							<h4><strong class="elip1">이카루스</strong></h4>
+							<ul class="data2">
+								<li><span class="name">10분 게임진행 시</span><span class="fc_org point">+300 P</span></li>
+							</ul>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+		</section>
+		<!-- //게임리스트 -->
+	</div>
+	<!-- //content -->
+
+	<nav class="fix_btm tab_bar">
+		<ul>
+			<li><a href="#;"><i class="bg_ico"></i><br>홈</a></li>
+			<li><a href="#;" class="active"><i class="bg_ico"></i><br>게임</a></li>
+			<li><a href="#;"><i class="bg_ico"></i><br>사전예약</a></li>
+		</ul>
+	</nav>
+	<!-- //메인메뉴 -->
+
+	<!-- alert -->
+	<div id="logout" class="ly_pop ly_alert" style="display: ">
+		<div class="cont">
+			<div class="elm">
+				로그아웃 하시겠습니까?
+				<ul class="btn_area">
+					<li><button type="button" onclick="layer_close()" class="btn_xr btn_type">취소</button></li>
+					<li><button type="button" onclick="layer_close()" class="btn_xr btn_type2">확인</button></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //alert -->
+
+	<!-- 정렬옵션 -->
+	<div id="sortOption" class="ly_pop ly_sortopt" style="display: ">
+		<div class="cont">
+			<div class="elm">
+				<section class="ui_inner">
+					<h2>리스트 정렬 옵션</h2>
+					<ul class="list">
+						<li><span class="checkbox check"><input type="radio" name="sort" id="option1" checked><label for="option1">게임 이름순 ( ㄱ, ㄴ, ㄷ 내림차순 )</label></span></li>
+						<li><span class="checkbox check"><input type="radio" name="sort" id="option2"><label for="option2">게임 이름순 ( ㄱ, ㄴ, ㄷ 오름차순 )</label></span></li>
+						<li><span class="checkbox check"><input type="radio" name="sort" id="option3"><label for="option3">게임 이름순 ( A, B, C 내림차순 )</label></span></li>
+						<li><span class="checkbox check"><input type="radio" name="sort" id="option4"><label for="option4">게임 이름순 ( A, B, C 오름차순 )</label></span></li>
+					</ul>
+				</section>
+				<ul class="btn_area">
+					<li><button type="button" onclick="layer_close()" class="btn_xr btn_type">취소</button></li>
+					<li><button type="button" onclick="layer_close()" class="btn_xr btn_type2">확인</button></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //정렬옵션 -->
+
+	<script src="resources/js/swiper.min.js"></script>
+	<script src="resources/js/design_swiper.js"></script>
+	<script>
+		gmainCard(); //상단 카드배너
+	</script>
+
+</div>
+
+</body>
+</html>

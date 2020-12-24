@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title>SGI서울보증</title>
+    <link rel="stylesheet" type="text/css" href="../../inc/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../inc/css/common-ui.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../inc/css/style-cust.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../inc/css/style-mark.css">
+    <link rel="stylesheet" type="text/css" href="../../inc/css/jquery.mobile-1.4.5.css">
+    <script type="text/javascript" src="../../inc/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="../../inc/js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../inc/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
+</head>
+
+<body>
+    <!-- 페이지 유형 제작시 wrapper에 고유 클레스 추가 -->
+    <div class="wrapper ps-sub-page cstmp1020">
+        <header class="header">
+            <button type="button" class="prev-page" title="이전페이지 이동"></button>
+            <h1 class="header-tit">고객정보상세</h1>
+            <button type="button" class="sidenav-btn srch" title="고객검색 페이지 이동"></button>
+            <button type="button" class="sidenav-btn" title="전체메뉴"></button>
+        </header>
+        <!-- 페이지 하단에 플로팅 버튼이 있을시 class = btm-fixed 추가 -->
+        <section class="container btm-fixed">
+            <!-- 사이드 여백설정 공통 class = inner -->
+            <!-- 페이지 하단에 플로팅 버튼이 있을시 class = acco-fixed 추가 -->
+            <div class="content">
+                <div class="cont-wrap">
+                    <div class="group-info-wrap inner">
+                        <h2 class="group-tit nonlost-wrap">서울보증보험 주식회사</h2>
+                        <button type="button" class="inline-btn blue">기업정보조회</button>
+                    </div>
+                    <!-- 명함 이미지  -->
+                    <div class="card-img-wrap">
+                        <div class="card-img">
+                            <button class="btn-book-mark" type="button" title="즐겨찾기 추가"></button>
+                            <!-- 고객 명함 등록시 -->
+                            <!-- <button class="btn-photo" type="button" title="명함 촬영 앱 실행"> -->
+                                <!-- 명함 이미지 -->
+                                <!-- <img src="../../inc/images/@temp/card-img.png" alt=""> -->
+                            <!-- </button> -->
+                            <!-- //고객 명함 등록시 -->
+                            
+                            <!-- 고객 명함 미 등록시 -->
+                            <button class="btn-photo img-none open-modal" type="button" title="명함 촬영 앱 실행" data-page="pop-modal-01">
+                                <p class="txt">터치하여 <span class="fw-02">고객 명함</span>을 등록하세요.</p>
+                            </button>
+                            <!-- //고객 명함 미 등록시 -->
+                        </div>
+                        <div class="rollup-fix-wrap">
+                            <div class="rollup-fix-data">
+                                <p class="card-img-txt">
+                                    <span class="name"><em class="txt">이고객</em>마케팅팀 팀장</span>
+                                </p>
+                            </div>
+                        </div>    
+                        <button class="inline-btn gray btn-edit" type="button" title="고객정보변경 페이지 이동">변경</button>
+                    </div>
+                    <!-- //명함 이미지  -->
+                    <div class="rollup-fix-wrap">
+                        <div class="rollup-fix-data">
+                            <ul class="tab-01">
+                                <li><button type="button" class="on" title="선택됨">고객정보</button></li>
+                                <li><button type="button">상담이력</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-conts-01">
+                        <div class="tab-cont on">
+                            <ul class="cstm-info-list">
+                                <li class="item">
+                                    <p class="txt-wrap">
+                                        <em class="tit">휴대전화</em>
+                                        <span class="sub">010-1234-1234</span>
+                                    </p>
+                                    <div class="btn-wrap">
+                                        <a href="tel:010-1234-1234" class="btn-call"title="전화 앱 실행"></a>
+                                        <button class="btn-msg" type="button" title="문자 앱 실행"></button>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <p class="txt-wrap">
+                                        <em class="tit">이메일</em>
+                                        <span class="sub">seoul.kim@sgi.com</span>
+                                    </p>
+                                    <div class="btn-wrap">
+                                        <button class="btn-mail" type="button" title="이메일 앱 실행"></button>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <p class="txt-wrap">
+                                        <em class="tit">대표전화</em>
+                                        <span class="sub">02-1234-1234</span>
+                                    </p>
+                                    <div class="btn-wrap">
+                                        <a href="tel:02-1234-1234" class="btn-call" title="전화 앱 실행"></a>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <p class="txt-wrap">
+                                        <em class="tit">FAX</em>
+                                        <span class="sub">02-1234-1234</span>
+                                    </p>
+                                </li>
+                                <li class="item">
+                                    <p class="txt-wrap">
+                                        <em class="tit">회사 주소</em>
+                                        <span class="sub">서울 종로구 김상옥로 29, 서울보증보험</span>
+                                    </p>
+                                    <div class="btn-wrap">
+                                        <button class="btn-copy" type="button" title="주소복사"></button>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="btn-wrap">
+                                <!-- 버튼 두개일 경우 : 아래 버튼 사용 -->
+                                <!-- <button type="button" class="inline-btn blue">고객정보 삭제</button> -->
+                                <!-- 버튼 한개일 경우 -->
+                                <button type="button" class="inline-btn blue">고객정보 변경 이력</button>
+                            </div>
+                        </div>
+                        <div class="tab-cont">내용2</div>
+                    </div>
+                    
+                </div>
+                <!-- cont-wrap -->
+            </div>
+            <!-- content -->
+            <div class="fix-btn-wrap">
+                <button type="button" class="btn blue">상담등록</button>
+            </div>
+        </section>
+        <footer class="footer"></footer>
+        <!-- 서류 촬영 가이드 팝업 -->
+        <article class="pop-modal pop-modal-js-wrap camera-guide-wrap" data-page="pop-modal-01">
+            <header class="pop-head">
+                <h1 class="pop-tit">서류 촬영 가이드</h1>
+            </header>
+            <section class="pop-container btm-fixed">
+                <div class="pop-content">
+                    <div class="cont-wrap">
+                        <div class="inner">
+                            <div class="guide-list-wrap">
+                                <div class="img-wrap">
+                                    <img src="../../inc/images/com/img-docu-guide01.png" alt="">
+                                </div>
+                                <div class="txt-wrap">
+                                    <p class="tit"><span class="fc-01">1. </span>서류의 테두리가 파란색일 때 촬영해 주세요.</p>
+                                    <p class="txt">카메라가 서류를 인식하면 촬영버튼을 누르지 않아도 자동촬영모드가 작동해요.</p>
+                                </div>
+                            </div>
+                            <div class="guide-list-wrap">
+                                <div class="img-wrap">
+                                    <img src="../../inc/images/com/img-docu-guide02.png" alt="">
+                                </div>
+                                <div class="txt-wrap">
+                                    <p class="tit"><span class="fc-01">2. </span>준비하신 문서를 최대한 크게 촬영해주세요.</p>
+                                    <p class="txt">서류가 화면에서 너무 작게 보이거나 흔들린 경우 재촬영 버튼을 눌러 다시 촬영해주세요.</p>
+                                </div>
+                            </div>
+                            <div class="guide-list-wrap">
+                                <div class="img-wrap">
+                                    <img src="../../inc/images/com/img-docu-guide03.png" alt="">
+                                </div>
+                                <div class="txt-wrap">
+                                    <p class="tit"><span class="fc-01">3. </span>촬영하신 문서의 개수를 확인해주세요.</p>
+                                    <p class="txt">준비하신 문서와 촬영하신 문서의 개수가 동일한지 확인하신 후 완료 버튼을 터치해주세요.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fix-btn-wrap">
+                    <button type="button" class="btn blue">다시 보지 않기</button>
+                </div>
+            </section>
+            <button type="button" class="close-pop" title="팝업창 닫기"></button>
+        </article>
+        <!-- 서류 촬영 가이드 팝업  -->
+    </div>
+</body>
+</html>

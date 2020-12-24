@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="TIOR, 모든 시승은 티오르에서">
+    <meta name="keywords" content="티오르, tior, 시승예약, 시승, 시승플랫폼">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="언택트! 시승예약은 간편하게! 실시간 시승예약 서비스">
+    <meta property="og:description" content="차량 구매 전 시승은 필수, 모든시승은 티오르에서">
+    <meta property="og:image" content="https://m.tior.co.kr/resources/images/tior_favicon.png">
+    <meta property="og:url" content="https://m.tior.co.kr/">
+    <link href="../../resources/css/swiper.min.css" media="screen" rel="stylesheet">
+    <link href="../../resources/css/common.min.css" media="screen" rel="stylesheet">
+    <link href="../../resources/css/drive.min.css" media="screen" rel="stylesheet">
+    <title>TIOR, 모든 시승은 티오르에서</title>
+</head>
+<body>
+
+<div id="wrap" class="type">
+    <div id="content">
+        <div class="applyView estimate">
+            <section class="applyState">
+                <h3>견적서 제공</h3>
+                <div class="applyInfo">
+                    <dl class="side">
+                        <dt>예약번호</dt>
+                        <dd>#1234566</dd>
+                    </dl>
+                    <dl class="side">
+                        <dt>이름</dt>
+                        <dd>홍길동</dd>
+                    </dl>
+                    <dl class="side">
+                        <dt>연락처</dt>
+                        <dd>010-1234-7868</dd>
+                    </dl>
+                    <dl class="side">
+                        <dt>차종</dt>
+                        <dd>메르세데스 벤츠</dd>
+                    </dl>
+                    <dl class="side">
+                        <dt>일정</dt>
+                        <dd>2020.09.14 13:30</dd>
+                    </dl>
+                    <dl class="side">
+                        <dt>장소</dt>
+                        <dd>강남대치 전시장</dd>
+                    </dl>
+                    <dl class="side">
+                        <dt>담당SC</dt>
+                        <dd>홍길동</dd>
+                    </dl>
+                </div>
+            </section>
+            <section class="applyState">
+                <h5>추가정보</h5>
+                <div class="applyInfo">
+                    <dl class="side">
+                        <dt>견적서 제공 요청  여부</dt>
+                        <dd>요청</dd>
+                    </dl>
+                    <dl class="side">
+                        <dt>구매 시기</dt>
+                        <dd>1개월 이내</dd>
+                    </dl>
+                    <dl class="side">
+                        <dt>구매 방법</dt>
+                        <dd>할부</dd>
+                    </dl>
+                    <dl class="side">
+                        <dt>선납금</dt>
+                        <dd>30% ( 1,000만원 )</dd>
+                    </dl>
+                    <dl class="side">
+                        <dt>개월 수</dt>
+                        <dd>36개월</dd>
+                    </dl>
+                    <dl class="side">
+                        <dt>장소</dt>
+                        <dd>강남대치 전시장</dd>
+                    </dl>
+                    <dl class="side">
+                        <dt>담당SC</dt>
+                        <dd>홍길동</dd>
+                    </dl>
+                    <dl class="side">
+                        <dt>유효기간</dt>
+                        <dd class="date">2020.09.14<button type="button" class="chgSchedule" onclick="layer_open('schedule', 0);">일정변경</button></dd>
+                    </dl>
+                    <dl class="btn_area_float">
+                        <button type="button" class="btn_xr offer"><u>견적서 첨부하기</u></button>
+                        <ul class="estimate_list">
+                            <li class="ip_del">홍길동_견적서01.jpg<button type="button" class="del"><i class="">삭제</i></button></li>
+                            <li class="ip_del">홍길동_견적서02.excel<button type="button" class="del"><i class="">삭제</i></button></li>
+                            <li class="ip_del">홍길동_견적서03.pdf<button type="button" class="del"><i class="">삭제</i></button></li>
+                        </ul>
+                    </dl>
+                    <dl class="slctBox">
+                        <dt>기타 메시지 [선택]</dt>
+                        <dd class="ip_request">
+                            <div class="ip_box ip_del">
+                                <textarea id="memo" class="ip" rows="1"></textarea>
+                                <label for="memo">메세지를 작성해주세요.</label>
+                                <button type="button" class="del"><i>입력삭제</i></button>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </section>
+        </div>
+        
+        <!-- //시승신청승인 -->
+
+    </div>
+    <!-- //content -->
+
+    <div class="fix btm">
+        <ul class="btn_area_half">
+            <li><button type="button" class="btn_xr reject">닫기</button></li>
+            <li><button type="button" class="btn_xr skip" onclick="layer_open('over');">완료</button></li>
+        </ul>
+    </div>
+    <!-- //nav -->
+
+</div>
+
+<!-- 일정변경 -->
+<div id="mw-schedule" class="ly_pop btm">
+    <div class="wrap">
+        <div class="content">
+            <div class="slct_wrap col2">
+                <section id="slct_day" class="swiper-container slct_container">
+                    <div class="slct_blur top"></div>
+                    <div class="slct_blur btm"></div>
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide slct_item">2020</li>
+                        <li class="swiper-slide slct_item">2021</li>
+                        <li class="swiper-slide slct_item">2022</li>
+                        <li class="swiper-slide slct_item">2023</li>
+                        <li class="swiper-slide slct_item">2024</li>
+                        <li class="swiper-slide slct_item">2025</li>
+                        <li class="swiper-slide slct_item">2026</li>
+                        <li class="swiper-slide slct_item">2027</li>
+                        <li class="swiper-slide slct_item">2028</li>
+                        <li class="swiper-slide slct_item">2029</li>
+                        <li class="swiper-slide slct_item">2030</li>
+                    </ul>
+                </section>
+                <section id="slct_time" class="swiper-container slct_container">
+                    <div class="slct_blur top"></div>
+                    <div class="slct_blur btm"></div>
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide slct_item">09.01 (월)</li>
+                        <li class="swiper-slide slct_item">09.02 (화)</li>
+                        <li class="swiper-slide slct_item">09.03 (수)</li>
+                        <li class="swiper-slide slct_item">09.04 (목)</li>
+                        <li class="swiper-slide slct_item">09.05 (금)</li>
+                        <li class="swiper-slide slct_item">09.06 (토)</li>
+                        <li class="swiper-slide slct_item">09.07 (일)</li>
+                        <li class="swiper-slide slct_item">09.08 (월)</li>
+                        <li class="swiper-slide slct_item">09.09 (화)</li>
+                        <li class="swiper-slide slct_item">09.10 (수)</li>
+                        <li class="swiper-slide slct_item">09.11 (목)</li>
+                        <li class="swiper-slide slct_item">09.12 (금)</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div class="btn_area_sigle">
+            <button type="button" onclick="layer_close('btm')" class="btn_x skip">확인</button>
+        </div>
+    </div>
+</div>
+<!-- //일정변경 -->
+
+<script src="../../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../resources/js/design.js"></script>
+<script>
+$(function() {
+    ScheduleSwir('#slct_day', 5);
+    ScheduleSwir('#slct_time', 5);
+
+    var timeHeight = calcSchedulerHeight({
+    container: '.slct_container ',
+    count: 5
+    })
+});
+</script>
+
+</body>
+</html>

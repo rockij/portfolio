@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>SKT PASS</title>
+  <link rel="stylesheet" type="text/css" href="../../../resources/app/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="../../../resources/app/css/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="../../../resources/app/css/common.css">
+  <link rel="stylesheet" type="text/css" href="../../../resources/app/css/contents.css">
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="header_inner">
+      <a href="#" class="ico-back header_btn"><span class="blind">이전 페이지</span></a>
+      <button type="button" class="ico-back header_btn" onclick="layer_open('mw_agree');"><span class="blind">이전 페이지</span></button>
+      <h1 class="header_tit">수협 적금상품 가입동의</h1>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- wrap -->
+  <div class="wrap wrap-fixed hwv">
+
+    <!-- account_step  -->
+    <div class="account_step">
+      <ol class="account_stepList">
+        <li class="account_stepList_item stepList_item step-on"><span class="step-on_txt">약관동의</span><span class="wrap-bg"><span class="bg-circle"></span></span></li>
+        <li class="account_stepList_item stepList_item"><span class="step-on_txt">고객정보</span><span class="wrap-bg"><span class="bg-circle"></span></span></li>
+        <li class="account_stepList_item stepList_item"><span class="step-on_txt">적금설정</span><span class="wrap-bg"><span class="bg-circle"></span></span></li>
+        <li class="account_stepList_item stepList_item"><span class="step-on_txt">비밀번호</span></li>
+      </ol>
+    </div>
+    <!-- //account_step  -->
+
+    <!-- inner -->
+    <div class="inner inner-low">
+      <form class="form-fixed form-fixed-btn form-fixed-low wrap-check-all">
+        <div class="wrap_check-agree pb0">
+          <input type="checkbox" id="check-all" class="ip-blind check-all">
+          <label for="check-all" class="check-all_label check-all_label-em" onclick="layer_open('doc_wrap',0);">전체동의</label>
+          <div class="wrap-select_checkbox">
+            <input type="checkbox" id="check-box1" class="ip-blind ip-check">
+            <label for="check-box1" class="check-agree_label">(필수)예금 거래 기본 약관</label>
+            <button type="button" class="check_label_link" onclick="layer_open('doc_wrap',0);">보기</button>
+          </div>
+          <div class="wrap-select_checkbox">
+            <input type="checkbox" id="check-box2" class="ip-blind ip-check">
+            <label for="check-box2" class="check-agree_label">(필수)적립식 예금 약관</label>
+            <button type="button" class="check_label_link" onclick="layer_open('doc_wrap',1);">보기</button>
+          </div>
+          <div class="wrap-select_checkbox line2">
+            <input type="checkbox" id="check-box3" class="ip-blind ip-check">
+            <label for="check-box3" class="check-agree_label">(필수)높이다,<br>PASS 정기적금 상품설명서</label>
+            <button type="button" class="check_label_link" onclick="layer_open('doc_wrap',2);">보기</button>
+          </div>
+          <div class="wrap-select_checkbox">
+            <input type="checkbox" id="check-box4" class="ip-blind ip-check">
+            <label for="check-box4" class="check-agree_label">(필수)높이다, PASS 정기적금 특약</label>
+            <button type="button" class="check_label_link" onclick="layer_open('doc_wrap',3);">보기</button>
+          </div>
+          <div class="wrap-select_checkbox more" style="display: none;">
+            <input type="checkbox" id="check-box5" class="ip-blind ip-check">
+            <label for="check-box5" class="check-agree_label">(필수)비과세종합저축특약</label>
+            <button type="button" class="check_label_link" onclick="layer_open('doc_wrap',4);">보기</button>
+          </div>
+          <div class="wrap-select_checkbox more" style="display: none;">
+            <input type="checkbox" id="check-box6" class="ip-blind ip-check">
+            <label for="check-box6" class="check-agree_label">(필수)불법탈법차명거래금지설명확인서</label>
+            <button type="button" class="check_label_link" onclick="layer_open('doc_wrap',5);">보기</button>
+          </div>
+          <div class="wrap-select_checkbox more" style="display: none;">
+            <input type="checkbox" id="check-box7" class="ip-blind ip-check">
+            <label for="check-box7" class="check-agree_label">(필수)계좌간자동이체약관</label>
+            <button type="button" class="check_label_link" onclick="layer_open('doc_wrap',6);">보기</button>
+          </div>
+          <div class="wrap-select_checkbox more" style="display: none;">
+            <input type="checkbox" id="check-box8" class="ip-blind ip-check">
+            <label for="check-box8" class="check-agree_label">(필수)예금보험관계설명확인</label>
+            <button type="button" class="check_label_link" onclick="layer_open('doc_wrap',7);">보기</button>
+          </div>
+        </div>
+        <div class="moreBtn">
+          <button type="button">약관 더보기</button>
+        </div>
+        <div class="wrap_check-agree wrap-item-all pt0">
+          <div class="wrap-select-btn wrap-check-btn pd0">
+            <input type="checkbox" id="check-all2" class="ip-blind ip-check item-all">
+            <label for="check-all2" class="check-agree_label select_label longer">(선택)개인(신용)정보수집,<br>이용제공 동의(상품안내)</label>
+            <button type="button" class="check_label_link" onclick="layer_open('doc_wrap',8);">보기</button>
+            <p>*가입 단계에서 마케팅 <b>전체수단</b> 동의 하셔야 우대금리 연 0.2%가 적용됩니다.</p>
+          </div>
+          <div class="wrap-select-btn wrap-check-btn">
+            <input type="checkbox" name="service-info" id="check-box21" class="ip-blind ip-check item-check">
+            <label for="check-box21" class="check-agree_label select_label">문자</label>
+            <input type="checkbox" name="service-info" id="check-box22" class="ip-blind ip-check item-check">
+            <label for="check-box22" class="check-agree_label select_label">전화</label>
+          </div>
+          <div class="wrap-select-btn wrap-check-btn">
+            <input type="checkbox" name="service-info" id="check-box23" class="ip-blind ip-check item-check">
+            <label for="check-box23" class="check-agree_label select_label">이메일</label>
+            <input type="checkbox" name="service-info" id="check-box24" class="ip-blind ip-check item-check">
+            <label for="check-box24" class="check-agree_label select_label">우편</label>
+          </div>
+        </div>
+      </form>
+      <div class="btn-area-fixed">
+        <button type="button" id="join_submit" class="btn btn-focused btn-wide btn-low" onclick="layer_open('doc_wrap',0);" disabled>동의</button>
+      </div>
+    </div>
+    <!-- //inner -->
+
+  </div>
+  <!-- //wrap-->
+
+  <!-- 팝업 -->
+  <div id="mw_agree" class="ly_pop ly_alert" style="display: ">
+    <div class="content">
+      <h2>알림</h2>
+      <p>상품 가입을 취소하시겠습니까?</p>
+      <ul class="btn_area">
+        <li><button type="button" onclick="layer_close()" class="btn btn-wide btn-focused">확인</button></li>
+        <li><button type="button" onclick="layer_close()" class="btn btn-wide">닫기</button></li>
+      </ul>
+    </div>
+  </div>
+  <!-- //팝업 -->
+
+  <!-- 약관묶음팝업 -->
+  <div id="doc_wrap" class="ly_pop ly_full">
+    <header class="header">
+      <div class="header_inner">
+        <button type="button" class="ico-close header_btn" onclick="layer_close();"><span class="blind">닫기</span></button>
+        <h1 class="header_tit">약관보기</h1>
+      </div>
+    </header>
+    <div id="wrap">
+      <div id="container" class="">
+        <div class="doc_group">
+          <section id="doc-thumbs" class="swiper-container doc_type">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><button type="button" class="docTg" data-idx="0"><span class="elip2">예금거래<br>기본약관</span></button></div>
+              <div class="swiper-slide"><button type="button" class="docTg" data-idx="1"><span class="elip2">적립식<br>예금약관</span></button></div>
+              <div class="swiper-slide"><button type="button" class="docTg" data-idx="2"><span class="elip2">높이다, PASS 정기적금 상품설명서</span></button></div>
+              <div class="swiper-slide"><button type="button" class="docTg" data-idx="3"><span class="elip2">높이다, PASS 정기적금 특약</span></button></div>
+              <div class="swiper-slide"><button type="button" class="docTg" data-idx="4"><span class="elip2">비과세종합<br>저축특약</span></button></div>
+              <div class="swiper-slide"><button type="button" class="docTg" data-idx="5"><span class="elip2">불법탈법차명거래금지설명확인서</span></button></div>
+              <div class="swiper-slide"><button type="button" class="docTg" data-idx="6"><span class="elip2">계좌간자동<br>이체약관</span></button></div>
+              <div class="swiper-slide"><button type="button" class="docTg" data-idx="7"><span class="elip2">예금보험관계<br>설명확인</span></button></div>
+              <div class="swiper-slide"><button type="button" class="docTg" data-idx="8"><span class="elip2">개인(신용)정보 수집, 이용 동의서(상품서비스안내등)</span></button></div>
+            </div>
+          </section>
+          <section id="doc-content" class="swiper-container doc_cont">
+            <div class="swiper-wrapper">
+              <div class="docViewer swiper-slide">
+                <span class="docImg scroll">
+                  <img src="../../../resources/app/image/suhyup/doc/00_공통/예금거래기본약관/01.png" alt="">
+                  <img src="../../../resources/app/image/suhyup/doc/00_공통/예금거래기본약관/02.png" alt="">
+                  <img src="../../../resources/app/image/suhyup/doc/00_공통/예금거래기본약관/03.png" alt="">
+                  <img src="../../../resources/app/image/suhyup/doc/00_공통/예금거래기본약관/04.png" alt="">
+                  <img src="../../../resources/app/image/suhyup/doc/00_공통/예금거래기본약관/05.png" alt="">
+                  <img src="../../../resources/app/image/suhyup/doc/00_공통/예금거래기본약관/06.png" alt="">
+                  <img src="../../../resources/app/image/suhyup/doc/00_공통/예금거래기본약관/07.png" alt="">
+                  <img src="../../../resources/app/image/suhyup/doc/00_공통/예금거래기본약관/08.png" alt="">
+                </span>
+              </div>
+              <!-- //예금거래기본약관 -->
+              <div class="docViewer swiper-slide">
+                <span class="docImg scroll">
+                  <img src="../../../resources/app/image/suhyup/doc/02_적금/적립식예금약관/01.png" alt="">
+                  <img src="../../../resources/app/image/suhyup/doc/02_적금/적립식예금약관/02.png" alt="">
+                </span>
+              </div>
+              <!-- //적립식예금약관 -->
+              <div class="docViewer swiper-slide">
+                <span class="docImg scroll">
+                  <img src="../../../resources/app/image/suhyup/doc/02_적금/높이다,PASS정기적금상품설명서/01.png" alt="">
+                  <img src="../../../resources/app/image/suhyup/doc/02_적금/높이다,PASS정기적금상품설명서/02.png" alt="">
+                  <img src="../../../resources/app/image/suhyup/doc/02_적금/높이다,PASS정기적금상품설명서/03.png" alt="">
+                </span>
+              </div>
+              <!-- //높이다, PASS 자유적금 상품설명서 -->
+              <div class="docViewer swiper-slide">
+                <span class="docImg scroll">
+                  <img src="../../../resources/app/image/suhyup/doc/02_적금/높이다,PASS정기적금특약/01.png" alt="">
+                  <img src="../../../resources/app/image/suhyup/doc/02_적금/높이다,PASS정기적금특약/02.png" alt="">
+                  <img src="../../../resources/app/image/suhyup/doc/02_적금/높이다,PASS정기적금특약/03.png" alt="">
+                </span>
+              </div>
+              <!-- //높이다, PASS 자유적금 특약 -->
+              <div class="docViewer swiper-slide">
+                <span class="docImg scroll">
+                  <img src="../../../resources/app/image/suhyup/doc/02_적금/비과세종합저축특약/01.png" alt="">
+                  <img src="../../../resources/app/image/suhyup/doc/02_적금/비과세종합저축특약/02.png" alt="">
+                  <img src="../../../resources/app/image/suhyup/doc/02_적금/비과세종합저축특약/03.png" alt="">
+                </span>
+              </div>
+              <!-- //비과세종합저축특약 -->
+              <div class="docViewer swiper-slide">
+                <span class="docImg scroll">
+                  <img src="../../../resources/app/image/suhyup/doc/00_공통/불법탈법차명거래금지설명확인서/01.png" alt="">
+                </span>
+              </div>
+              <!-- //불법탈법차명거래금지설명확인서 -->
+              <div class="docViewer swiper-slide">
+                <span class="docImg scroll">
+                  <img src="../../../resources/app/image/suhyup/doc/02_적금/계좌간자동이체약관(전문)/01.png" alt="">
+                  <img src="../../../resources/app/image/suhyup/doc/02_적금/계좌간자동이체약관(전문)/02.png" alt="">
+                  <img src="../../../resources/app/image/suhyup/doc/02_적금/계좌간자동이체약관(전문)/03.png" alt="">
+                </span>
+              </div>
+              <!-- //계좌간자동이체약관 -->
+              <div class="docViewer swiper-slide">
+                <span class="docImg scroll">
+                  <img src="../../../resources/app/image/suhyup/doc/00_공통/예금보험관계설명확인/01.png" alt="">
+                </span>
+              </div>
+              <!-- //예금보험관계설명확인 -->
+              <div class="docViewer swiper-slide">
+                <span class="docImg scroll">
+                  <img src="../../../resources/app/image/suhyup/doc/00_공통/개인(신용)정보수집.이용동의서(상품서비스안내등)/01.png" alt="">
+                </span>
+              </div>
+              <!-- //(선택)개인(신용)정보수집, 이용제공 동의(상품안내) -->
+            </div>
+          </section>
+          <div class="btn-area-fixed">
+            <button type="button" id="certify_submit" class="btn btn-focused btn-wide btn-low">다음</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 약관묶음팝업 -->
+
+  <!-- script -->
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script src="../../../resources/app/js/jquery-3.3.1.min.js"></script>
+  <script src="../../../resources/app/js/swiper.min.js"></script>
+  <script src="../../../resources/app/js/ui.js"></script>
+  <script>
+    $('.moreBtn button').on('click', function() {
+      var btn = $(this);
+      
+      if($(btn).hasClass('rotate')) {
+        $(btn).removeClass('rotate');
+        $('.wrap-select_checkbox.more').hide();
+        $(btn).text('약관 더보기');
+      } else {
+        $(btn).addClass('rotate');
+        $('.wrap-select_checkbox.more').show();
+        $(btn).text('약관 접기');
+      }
+    });
+  </script>
+  <!-- //script -->
+  
+</body>
+
+</html>

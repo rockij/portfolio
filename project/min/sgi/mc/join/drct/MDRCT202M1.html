@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title>SGI서울보증</title>
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/common-ui.css">
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/style-cust.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../../inc/css/style-mark.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/jquery.mobile-1.4.5.css">
+    <script type="text/javascript" src="../../../inc/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../../inc/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
+</head>
+
+<body>
+    <!-- 페이지 유형 제작시 wrapper에 고유 클레스 추가 -->
+    <div class="wrapper ps-sub-page drctp2021">
+        <header class="header">
+            <button type="button" class="prev-page" title="이전페이지 이동"></button>
+            <h1 class="header-tit">보험가입</h1>
+            <button type="button" class="sidenav-btn" title="전체메뉴"></button>
+        </header>
+        <!-- 페이지 하단에 플로팅 버튼이 있을시 class = btm-fixed 추가 -->
+        <section class="container btm-fixed">
+            <!-- 사이드 여백설정 공통 class = inner -->
+            <!-- 페이지 하단에 플로팅 버튼이 있을시 class = acco-fixed 추가 -->
+            <div class="content acco-fixed">
+                <div class="title-wrap inner">
+                    <h2 class="ps-tit02">보험가입 가능여부조회</h2>
+                    <!-- 현진행단계 표시 aria-label = "진행단계, 총 X단계 중 X단계" 진행단계 별로 수정 -->
+                    <div class="ps-step" role="img" aria-label="진행단계, 총 8단계 중 2단계">
+                        <em class="pres-step">2</em><span class="symb"> / </span><em>8</em>
+                    </div>
+                </div>
+                <div class="cont-wrap">
+                    <ul class="ps-accordion-wrap type-list">
+                        <li class="accordion-item">
+                            <button class="accordion-tit inner" type="button" title="접힘">정보입력 <span class="r-txt">미디어포스앤컴퍼니</span></button>
+                            <div class="accordion-docu inner">
+                                <div class="ps-from-item">
+                                    <p class="write-title">상호</p>
+                                    <div class="ps-input in-btn-wrap">
+                                        <input type="text" class="deta-tit-val" title="상호 입력" placeholder="" value="미디어포스앤컴퍼니"  readonly>
+                                        <button type="button" class="inline-btn gray">피보험자조회</button>
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">대표자명</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="대표자명 입력" placeholder="" readonly>
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">법인번호</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="법인번호 입력" placeholder="" readonly>
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">사업자등록번호</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="사업자등록번호 입력" placeholder="" readonly>
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">법인번호</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="법인번호 입력" placeholder="" readonly>
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">보험가입금액(재정보증금)</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="금액 입력" placeholder="금액 입력">
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">보험가입기간</p>
+                                    <div class="ps-rdo-wrap date">
+                                        <div class="ps-rdo">
+                                            <input type="radio" id="date1" name="rdo01" checked="">
+                                            <label for="date1">6개월</label>
+                                        </div>
+                                        <div class="ps-rdo">
+                                            <input type="radio" id="date2" name="rdo01">
+                                            <label for="date2">1년</label>
+                                        </div>
+                                        <div class="ps-rdo">
+                                            <input type="radio" id="date3" name="rdo01">
+                                            <label for="date3">2년</label>
+                                        </div>
+                                        <div class="ps-rdo">
+                                            <input type="radio" id="date4" name="rdo01">
+                                            <label for="date4">3년</label>
+                                        </div>
+                                        <div class="ps-rdo">
+                                            <input type="radio" id="date5" name="rdo01">
+                                            <label for="date5">5년</label>
+                                        </div>
+                                    </div>
+                                    <div class="ps-date-wrap">
+                                        <div class="ps-datepicker" id="uiDatePicker1">
+                                            <div class="ps-date-fild">
+                                                <input class="inp-base" type="text" title="시작일" placeholder="시작일" id="lnd0060Cal1">
+                                                <!-- 최소/최대 선택값 필요시 data-min="2013-10-05" data-max="2020-12-01" -->
+                                                <button type="button" class="btn-base ps-drop ps-datepicker-btn" data-inp="lnd0060Cal1" id="uiDatePck1"
+                                                    aria-expanded="false"><span>시작일 설정</span></button>
+                                            </div>
+                                        </div>
+                                        <span class="txt"> ~ </span>
+                                        <div class="ps-datepicker" id="uiDatePicker2">
+                                            <div class="ps-date-fild">
+                                                <input class="inp-base" type="text" title="종료일" placeholder="종료일" id="lnd0060Cal2">
+                                                <!-- 최소/최대 선택값 필요시 data-min="2013-10-05" data-max="2020-12-01" -->
+                                                <button type="button" class="btn-base ps-drop ps-datepicker-btn" data-inp="lnd0060Cal2" id="uiDatePck2"
+                                                    aria-expanded="false"><span>종료일 설정</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accordion-item on">
+                            <button class="accordion-tit inner on" type="button" title="펼쳐짐">조회결과</button>
+                            <div class="accordion-docu inner" style="display:block;">
+                                <div class="ico-stat-wrap">
+                                    <p class="tit">가입이 가능합니다.</p>
+                                </div>
+                                <div class="ps-pay-wrap">
+                                    <div class="pay-tit">
+                                        <p class="txt">납부하실<br/>보험료</p>
+                                    </div>
+                                    <span class="price"><em>165,000,000,000,000</em>원</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- cont-wrap -->
+            </div>
+            <!-- content -->
+            <div class="ps-accordion-wrap type-message-01">
+                <div class="accordion-item">
+                    <button class="accordion-tit on" type="button" title="펼쳐짐">보험가입안내</button>
+                    <div class="accordion-docu">
+                        <ul class="ps-bu-list gray circle">
+                            <li>청약내용 변경 시 보험료가 달라질 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="fix-btn-wrap">
+                <button type="button" class="btn gray small">다시작성</button>
+                <button type="button" class="btn blue">다음</button>
+            </div>
+        </section>
+        <footer class="footer"></footer>
+    </div>
+</body>
+</html>

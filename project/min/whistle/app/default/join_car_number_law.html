@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link href="../resources/css/font.local.css" media="screen" rel="stylesheet"> <!-- 폐쇄망 -->
+<link href="../resources/css/font.cdn.css" media="screen" rel="stylesheet"> <!-- 인터넷망 -->
+<link href="../resources/css/common.min.css" media="screen" rel="stylesheet">
+<link href="../resources/css/content.min.css" media="screen" rel="stylesheet">
+<title>010휘슬</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header" class="fix top">
+        <h1 class="blind">차량등록</h1>
+        <button type="button" onclick="" class="btn_close"><i>닫기</i></button>
+    </header>
+    <!-- //header -->
+
+    <div id="content" class="member">
+        <fieldset class="section join_forms">
+            <legend>차량번호입력</legend>
+            <p class="mtxt2" icon="car">법인/렌트사명과<br>차량번호를 입력해주세요.</p>
+            <div class="carnum">
+                <div class="ip_line ip_del">
+                    <input type="text" id="name" placeholder="법인/렌트사명" maxlength="">
+                    <button type="button" onclick="" class="del"><i>삭제</i></button>
+                </div>
+                <div class="ip_line ip_del">
+                    <input type="text" id="number" placeholder="000가0000" maxlength="8">
+                    <button type="button" onclick="" class="del"><i>삭제</i></button>
+                </div>
+                <p>※ <u>법인명/렌트사명을 정확하게 기재해주세요.</u><br>명칭이 일치하지 않을 경우 차량 조회가 되지 않습니다.</p>
+            </div>
+            <a href="join_car_number.html" class="btn_skip">개인 차량 등록</a>
+        </fieldset>
+    </div>
+    <!-- //content -->
+
+    <div id="number-btn" class="btn_area_wide terms fix btm">
+        <div class="terms_list">
+            <span class="checkbox" id="number-check">
+                <input type="checkbox" name="private" id="private">
+                <label for="private">개인정보 수집 및 이용 동의(필수)</label>
+            </span>
+            <button type="button" class="doc tx" onclick="alert('약관')"><u>약관보기</u></button>
+        </div>
+        <button type="button" class="skip" onclick="popupOpen('loading','mwf');bodyBlur()">확인</button>
+    </div>
+    <!-- //확인 -->
+
+</div>
+
+<!-- loading -->
+<div id="mw-loading" class="ly_pop ly_loading ndim">
+    <div class="wrap">
+        <div class="content">
+            <figure class="loading_car">
+                <i class="l1"></i>
+                <i class="l2"></i>
+                <i class="o1"></i>
+                <i class="o2"></i>
+                <i class="c"></i>
+            </figure>
+            <h1>차량정보를 조회 중입니다.<br>잠시만 기다려 주세요!</h1>
+            <p>소유자 확인 및 차량조회에 약 10초~1분이 소요됩니다.<br>조회 완료 시 정보가 노출됩니다.</p>
+        </div>
+    </div>
+</div>
+<!-- //loading -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../../../global/resources/js/global.js"></script>
+<script src="../resources/js/gsap.min.js"></script>
+<script src="../resources/js/design.js" defer></script>
+<script>
+$(function() {
+    fixOver();
+});
+function bodyBlur(){
+    $('body').addClass('blur');
+    setTimeout(function(){
+        popupClose('loading','mwf');
+        $('body').removeClass('blur');
+    },1000);
+}
+</script>
+
+</body>
+</html>

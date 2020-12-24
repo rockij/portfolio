@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link rel="preload" href="resources/css/font/NotoSansKR-Regular-Hestia.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link href="resources/css/font.css" media="screen" rel="stylesheet">
+<link href="resources/css/common.css" media="screen" rel="stylesheet">
+<link href="resources/css/site.css" media="screen" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="resources/js/jquery-1.12.4.min.js"></script>
+<script src="resources/js/design.js"></script>
+<title>신한금융투자 계좌개설</title>
+</head>
+<body>
+
+<div id="wrap">
+
+	<header id="header">
+		<h1><a href="#;"><img src="resources/images/header_logo.png" alt="신한은행">신한금융투자 계좌개설</a></h1>
+		<button type="button" onclick="" class="btn_cls"><i class="ico_com ico_x">닫기</i></button>
+	</header>
+	<!-- //header -->
+
+	<div id="ct" class="certify">
+		<ul class="progress">
+			<li>기본정보입력</li>
+			<li>거래목적확인</li>
+			<li>CMA계좌비번설정</li>
+			<li>1원 인증</li>
+		</ul>
+		<!-- //progress -->
+		<section class="ui_cover">
+			<div class="title_type">
+				<h2>인증값 입력</h2>
+				<span class="page"><b>4</b>/5</span>
+			</div>
+			<!-- //title -->
+			<div class="refer_set">
+				입력하신 신한 123456789계좌로
+				<h3>1원을 보내드렸습니다.</h3>
+			</div>
+			<div class="sample">
+				<img src="resources/images/img_sample.png" alt="">
+			</div>
+			<div class="input input_right plc_blue">
+				<label for="code-name">입금자명 앞 3자리 숫자 입력</label>
+				<input type="tel" id="code-name" value="" placeholder="숫자 3자리 입력" maxlength="3">
+			</div>
+			<!-- //input -->
+			<div class="direct_go">
+				<!-- <button type="button" onclick="">뱅크원샷으로 입금내역 확인<i class="ico_com ico_arr_next"></i></button> -->
+				<button type="button" onclick="layer_open('won1-receive')">1원 재입금 요청<i class="ico_com ico_arr_next"></i></button>
+			</div>
+			<ul class="btn_area bt2 fix_btm">
+				<li><button type="button" onclick="" class="btn_xr2 btn_type2">다음에하기</button></li>
+				<li><button type="button" onclick="" class="btn_xr btn_type on">확인</button></li>
+			</ul>
+			<!-- //btn -->
+		</section>
+	</div>
+	<!-- //content -->
+
+	<!-- 1원다시? -->
+	<div id="won1-receive" class="ly_pop ly_com" style="display: ">
+		<div class="cont">
+			<div class="elm">
+				동일한 계좌로 1원을 다시 받으시겠습니까?
+				<ul class="btn_area bt2">
+					<li><button type="button" onclick="layer_close()" class="btn_xr btn_type2">취소</button></li>
+					<li><button type="button" onclick="layer_close(); layer_open('won1-receive2')" class="btn_xr btn_type4">확인</button></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //1원다시? -->
+
+	<!-- 다시보냄 -->
+	<div id="won1-receive2" class="ly_pop ly_com" style="display: ">
+		<div class="cont">
+			<div class="elm">
+				입력하신 계좌로 1원을 다시 보내드렸습니다.<br>입금자명 앞 3자리 숫자를 확인해 주세요.
+				<button type="button" onclick="layer_close()" class="btn_xr btn_type4 btn_skip">확인</button>
+			</div>
+		</div>
+	</div>
+	<!-- //다시보냄 -->
+
+</div>
+
+</body>
+</html>

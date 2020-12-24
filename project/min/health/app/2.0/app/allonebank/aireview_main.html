@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="ko" class="app">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="../../../../global/resources/css/global.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/common.min.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/content.min.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/aobank.min.css" media="screen" rel="stylesheet">
+<title>올원&건강지키미</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header" class="fix top">
+        <h1 class="blind">AI영양제</h1>
+        <ul class="tab_type3">
+            <li><a href="#;" class="on"><strong>건강매거진</strong></a></li>
+            <li><a href="#;"><strong>AI영양제</strong></a></li>
+        </ul>
+    </header>
+    <!-- //header -->
+
+    <div id="content">
+        <section class="aireview_tag">
+            <hgroup class="aireview_title">
+                <h2>AI영양제 분석<button type="button" class="que" onclick="popupOpen('analysis','mw');"><i>AI영양제 분석이란?</i></button></h2>
+                <p>AI가 분석해주는 영양제 정보를 확인하세요.</p>
+            </hgroup>
+            <div class="list_tag">
+                <a href="#;">실리마린</a>
+                <a href="#;">프로바이오틱스</a>
+                <a href="#;">밀크씨슬</a>
+                <a href="#;">알로에전잎</a>
+                <a href="#;">추천검색어</a>
+                <a href="#;">루테인</a>
+                <a href="#;">Ｌ-카르니틴</a>
+                <a href="#;">알로에전잎</a>
+            </div>
+            <button type="button" class="btn_search" onclick="popupOpen('search1','mwb');">성분명을 입력해주세요. (예)비타민C</button>
+        </section>
+        <!-- //AI영양제 분석 -->
+        <section class="aireview_vs">
+            <hgroup class="aireview_title">
+                <h2>AI영양제 비교<button type="button" class="que" onclick="popupOpen('compare','mw');"><i>AI영양제 분석이란?</i></button></h2>
+                <p>AI가 분석해주는 영양제 정보를 확인하세요.</p>
+            </hgroup>
+            <div class="vsbx">
+                <ul>
+                    <li>
+                        <a href="#;">
+                            <span class="img"><img src="../../resources/image/sample/temp_thum_230x170.jpg" alt=""></span>
+                            <strong class="name">멀티비타민웰플러멀티비타민웰플러</strong>
+                        </a>
+                        <button type="button" onclick="" class="del"><i>삭제</i></button>
+                    </li>
+                    <li>
+                        <a href="#;">
+                            <span class="img no"><i></i></span>
+                            <strong class="name">영양제 담기</strong>
+                        </a>
+                    </li>
+                </ul>
+                <div class="btn_area_simp">
+                    <button type="button" class="skip" onclick="popupOpen('vsBasket','mw');">AI 영양제 비교시작</button>
+                </div>
+            </div>
+        </section>
+        <!-- //AI영양제 비교 -->
+        <section class="aireview_tag">
+            <hgroup class="aireview_title">
+                <h2>영양제 시간표<button type="button" class="que" onclick="popupOpen('timetable','mw')"><i>AI영양제 분석이란?</i></button></h2>
+                <p>내가 먹는 영양제는<br>언제 어떻게 섭취하는게 가장 좋을까?</p>
+            </hgroup>
+            <button type="button" class="btn_search" onclick="popupOpen('search2','mwb')">궁금하신 영양제 성분을 입력해주세요.</button>
+            <div class="srchbox">
+                <hgroup class="aireview_title2">
+                    <h2>검색 한 성분명</h2>
+                    <button type="button" onclick="" class="delAll">전체삭제</button>
+                </hgroup>
+                <div class="list_tag">
+                    <button type="button" onclick="" class="del">실리마린<i>삭제</i></button>
+                    <button type="button" onclick="" class="del">프로바이오틱스<i>삭제</i></button>
+                    <button type="button" onclick="" class="del">밀크씨슬<i>삭제</i></button>
+                    <button type="button" onclick="" class="del">알로에전잎<i>삭제</i></button>
+                    <button type="button" onclick="" class="del">추천검색어<i>삭제</i></button>
+                    <button type="button" onclick="" class="del">루테인<i>삭제</i></button>
+                    <button type="button" onclick="" class="del">Ｌ-카르니틴<i>삭제</i></button>
+                    <button type="button" onclick="" class="del">알로에전잎<i>삭제</i></button>
+                </div>
+                <p class="cau">최대 10개 성분명 입력이 가능합니다.</p>            
+                <div class="btn_area_simp">
+                    <button type="button" class="skip" onclick="">영양제 시간표 만들기</button>
+                </div>
+            </div>
+        </section>
+        <!-- //AI시간표 -->
+    </div>
+    <!-- //content -->
+
+    <footer class="global_footer mo">
+        <article>
+            <div class="infobx">
+                <button type="button" onclick="popupOpen('cpinfo','mw'); cpinfoTab('skt')" class="btn_info">(주) 민앤지 사업자 정보</button>
+                <div class="cau">
+                    <p class="po">본 서비스는 가입 즉시 서비스가 개시되는 상품으로 청약철회가 불가능합니다.</p>
+                    (전자상거래 등에서 소비자보호에 관한 법률 제7조 2항 5호에 따라 디지털 콘텐츠의 제공이 개시 된 경우 청약철회를 제공하지 않습니다.)<br>
+                    서비스 이용/가입/해지문의 : ㈜민앤지 고객센터 1599-4760
+                </div>
+            </div>
+        </article>
+    </footer>
+    <!-- //footer -->
+
+    <nav id="gnb" class="fix btm">
+        <ul>
+            <li><a href="#;" data-name="홈"></a></li>
+            <li><a href="#;" data-name="헬스케어"></a></li>
+            <li><a href="#;" data-name="AI영양제리뷰" class="on"></a></li>
+            <li><a href="#;" data-name="건강분석"></a></li>
+        </ul>
+    </nav>
+    <!-- //gnb -->
+
+</div>
+
+<!-- 검색::영양제분석 -->
+<div id="mw-search1" class="ly_pop full ly_search">
+    <div class="wrap">
+        <section class="header">
+            <div class="ipbox ipsrch ipdel">
+                <input type="text" id="" placeholder="궁금하신 영양제의 이름을 입력해주세요" value="" class="">
+                <button type="button" onclick="" class="del"><i>삭제</i></button>
+                <button type="button" onclick="" class="srch"><i>검색</i></button>
+            </div>
+        </section>
+        <div class="content">
+            <div id="" class="history register">
+                <hgroup>
+                    <h2>영양제 검색기록</h2>
+                    <button type="button" onclick="" class="delAll">전체삭제</button>
+                </hgroup>
+                <ul class="list">
+                    <li>
+                        <span class="key">
+                            <button type="button" onclick="" class="del"><i>삭제</i></button>
+                            <a href="#;" class="name">가르니시아캄보캄보가르니시아캄보캄보가르니시아캄보캄보가르니시아캄보캄보</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <button type="button" onclick="" class="del"><i>삭제</i></button>
+                            <a href="#;" class="name">오메가3</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <button type="button" onclick="" class="del"><i>삭제</i></button>
+                            <a href="#;" class="name">오메가3</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <button type="button" onclick="" class="del"><i>삭제</i></button>
+                            <a href="#;" class="name">오메가3</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <button type="button" onclick="" class="del"><i>삭제</i></button>
+                            <a href="#;" class="name">오메가3</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <button type="button" onclick="" class="del"><i>삭제</i></button>
+                            <a href="#;" class="name">오메가3</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <button type="button" onclick="" class="del"><i>삭제</i></button>
+                            <a href="#;" class="name">오메가3</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <button type="button" onclick="" class="del"><i>삭제</i></button>
+                            <a href="#;" class="name">오메가3</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <button type="button" onclick="" class="del"><i>삭제</i></button>
+                            <a href="#;" class="name">오메가3</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <button type="button" onclick="" class="del"><i>삭제</i></button>
+                            <a href="#;" class="name">오메가3</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <button type="button" onclick="" class="del"><i>삭제</i></button>
+                            <a href="#;" class="name">오메가3</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <button type="button" onclick="" class="del"><i>삭제</i></button>
+                            <a href="#;" class="name">오메가3</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <button type="button" onclick="" class="del"><i>삭제</i></button>
+                            <a href="#;" class="name">오메가3</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <button type="button" onclick="" class="del"><i>삭제</i></button>
+                            <a href="#;" class="name">오메가3</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <button type="button" onclick="" class="del"><i>삭제</i></button>
+                            <a href="#;" class="name">오메가3</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <button type="button" onclick="" class="del"><i>삭제</i></button>
+                            <a href="#;" class="name">오메가3</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <button type="button" onclick="" class="del"><i>삭제</i></button>
+                            <a href="#;" class="name">오메가3</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <button type="button" onclick="" class="del"><i>삭제</i></button>
+                            <a href="#;" class="name">오메가3</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <button type="button" onclick="" class="del"><i>삭제</i></button>
+                            <a href="#;" class="name">오메가3</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <button type="button" onclick="" class="del"><i>삭제</i></button>
+                            <a href="#;" class="name">오메가3</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <button type="button" onclick="" class="del"><i>삭제</i></button>
+                            <a href="#;" class="name">오메가3</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <button type="button" onclick="" class="del"><i>삭제</i></button>
+                            <a href="#;" class="name">오메가3</a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <!-- //검색기록 -->
+            <div id="" class="history keyword">
+                <ul class="list">
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">비맥스</span>영양제양야양아영양제양야양아영양제양야양아영양제양야양아영양제양야양아영양제양야양아영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">비맥스</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">비맥스</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">비맥스</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">비맥스</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">비맥스</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <!-- //검색어 -->
+        </div>
+    </div>
+</div>
+<!-- //검색::영양제분석 -->
+
+<!-- 검색::영양제시간표 -->
+<div id="mw-search2" class="ly_pop full ly_search">
+    <div class="wrap">
+        <section class="header">
+            <div class="ipbox ipsrch ipdel">
+                <input type="text" id="" placeholder="궁금하신 영양제의 이름을 입력해주세요" value="">
+                <button type="button" onclick="" class="del"><i>삭제</i></button>
+                <button type="button" onclick="" class="srch"><i>검색</i></button>
+            </div>
+        </section>
+        <div class="content">
+            <div id="" class="history">
+                <ul class="list">
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">비맥스</span>영양제양야양아영양제양야양아영양제양야양아영양제양야양아영양제양야양아영양제양야양아영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">비맥스</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">비맥스</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">비맥스</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">비맥스</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">비맥스</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="key">
+                            <a href="#;" class="name"><span class="live">드시모네드시모네</span>영양제양야양아</a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <!-- //검색어 -->
+        </div>
+    </div>
+</div>
+<!-- //검색::영양제시간표 -->
+
+<!-- 비교함 -->
+<div id="mw-vsBasket" class="ly_pop ly_vs_basket">
+    <div class="wrap">
+        <div class="content">
+            <h2>비교함이 꽉 찼어요!</h2>
+            <p>비교함에 추가하시려면<br>비교함에 담긴 영양제를 삭제해주세요.</p>
+            <section class="aireview_vs">
+                <div class="vsbx">
+                    <ul>
+                        <li>
+                            <a href="#;">
+                                <span class="img"><img src="../../resources/image/sample/temp_thum_230x170_1.jpg" alt=""></span>
+                                <strong class="name">멀티비타민웰플러멀티비타민웰플러</strong>
+                            </a>
+                            <button type="button" onclick="" class="del"><i>삭제</i></button>
+                        </li>
+                        <li>
+                            <a href="#;">
+                                <span class="img"><img src="../../resources/image/sample/thum_500x500.png" alt=""></span>
+                                <strong class="name">영양제 담기</strong>
+                            </a>
+                            <button type="button" onclick="" class="del"><i>삭제</i></button>
+                        </li>
+                    </ul>
+                    <div class="btn_area_simp">
+                        <button type="button" class="under" onclick="">AI 영양제 비교시작</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="btn_area_one"><button type="button" onclick="popupClose('vsBasket','mw')" class="cancel">닫기</button></div>
+    </div>
+</div>
+<!-- //비교함 -->
+
+<!-- 분석? -->
+<div id="mw-analysis" class="ly_pop ly_help">
+    <div class="wrap">
+        <div class="content">
+            <h3><figure class="icon1"></figure>인공지능 건강기능식품분석이란?</h3>
+            <div class="maintxt">
+                <p>건강기능식품, 어떤 걸 살 지 몰라 망설여지시나요?<br>
+                화려한 광고에 반해, 또는 주변 소개로 선택했던<br>건강기능식품! 이제는 건강지키미에서 제공하는<br>인공지능 분석 결과를 참고하여 보다 똑똑하게<br>선택해보세요.</p>
+                <p>건강지키미 AI건강리뷰에서는 건강기능식품의<br>온라인 리뷰 및 소셜 의견을 수집하고<br>NLU(Natural Language Understanding)를<br>이용하여 문장을 분석합니다.<br><u>이렇게 분석된 자료를 바탕으로 의견 긍·부정</u><br><u>경향성을 요약, 리뷰랭킹 및 리뷰점수 등을 제공합니다.</u></p>
+                <ul class="list">
+                    <li>
+                        <figure class="icon1"></figure>
+                        <div><h4>리뷰랭킹</h4>실제 쇼핑몰의 사용자 리뷰 및 소셜 의견 건수와<br>긍정 경향 정도를 반영한 리뷰랭킹은 카테고리 내<br>제품 위치를 직관적으로 파악할 수 있도록 도움을<br>줍니다.</div>
+                    </li>
+                    <li>
+                        <figure class="icon2"></figure>
+                        <div><h4>리뷰점수</h4>인공지능 분석을 통해 제품의 상위 5대 키워드를<br>도출하고, 해당 키워드의 긍정 경향 정도를<br>파악하여 점수로 제공합니다.</div>
+                    </li>
+                </ul>
+                <p class="cau">* 인공지능 분석 결과는 제품에 대한 대표성을 가질 수 없으며,<br>각 기업 또는 개인의 의견과 차이가 있을 수 있습니다</p>
+            </div>
+        </div>
+        <div class="btn_area_one"><button type="button" onclick="popupClose('analysis','mw');" class="skip">확인</button></div>
+    </div>
+</div>
+<!-- //분석? -->
+
+<!-- 비교? -->
+<div id="mw-compare" class="ly_pop ly_help">
+    <div class="wrap">
+        <div class="content">
+            <h3><figure class="icon2"></figure>인공지능 건강기능식품 비교란?</h3>
+            <div class="maintxt">
+                <p>건강기능식품, 어떤 게 더 내가 원하는 제품일까?<br>바로 바로 비교해보세요.<br><u>인공지능이 분석한 리뷰랭킹, 리뷰점수를 통해</u><br><u>제품 순위와 주요 키워드별 점수를 쉽게 비교할 수</u><br><u>있습니다.</u></p>
+                <p>뿐만 아니라 성분, 함량, 제품 유형, 가격도 한 눈에<br>비교하고 똑똑하게 선택해보세요!</p>
+            </div>
+        </div>
+        <div class="btn_area_one"><button type="button" onclick="popupClose('compare','mw');" class="skip">확인</button></div>
+    </div>
+</div>
+<!-- //비교? -->
+
+<!-- 시간표? -->
+<div id="mw-timetable" class="ly_pop ly_help">
+    <div class="wrap">
+        <div class="content">
+            <h3><figure class="icon3"></figure>건강기능식품 성분궁합 시간표란?</h3>
+            <div class="maintxt">
+                <p>건강기능식품에도 궁합이 있다는 것, 알고 계시나요?<br>건강기능식품 성분 간 상호작용에 따라 궁합이<br>좋지 않은 제품을 함께 섭취할 경우 효과는 커녕<br>오히려 흡수를 방해하거나 화학 반응을 일으켜<br>예상치 못한 결과를 초래할 수 있습니다.<br><br>그러나 좋은 궁합의 건강기능식품을 함께 섭취하면<br>시너지를 볼 수도 있죠.<br>또한 성분에 따라 권장 섭취 시간도 다를 수 있습니다.</p>
+                <p class="bold"><u>특히 여러 종류의 건강기능식품을 섭취 중</u>이시라면, <u>건강기능식품 성분궁합시간표를 필수로 참고해보세요.</u><br>건강을 위해 먹는 건강기능식품!<br>더 똑똑하고 안전하게 드세요.</p>
+                <p class="txt">* 건강기능식품 성분별 권장 섭취 시간 및 궁합에 대해서는<br>의사 감수 및 각종 연구 결과를 활용하나, 의견 차이가 있을 수<br>있으므로 참고 용도로만 활용하시기 바랍니다.</p>
+            </div>
+        </div>
+        <div class="btn_area_one"><button type="button" onclick="popupClose('timetable','mw')" class="skip">확인</button></div>
+    </div>
+</div>
+<!-- //시간표? -->
+
+<!-- 사용자정보 -->
+<div id="mw-cpinfo" class="ly_cpinfo_mw">
+    <div class="wrap">
+        <button type="button" onclick="popupClose('cpinfo','mw')" class="close right"><i>닫기</i></button>
+        <div class="content">
+            <h2>사업자 정보</h2>
+            <ul class="list">
+                <li>
+                    <strong>상호</strong>
+                    <span>㈜민앤지</span>
+                </li>
+                <li>
+                    <strong>대표이사</strong>
+                    <span>이현철</span>
+                </li>
+                <li>
+                    <strong>주소</strong>
+                    <span>서울시 강남구 테헤란로 34길 6<br>태광타워 12F, 13F</span>
+                </li>
+                <li>
+                    <strong>통신판매업신고번호</strong>
+                    <span>제2015-서울강남-00012호</span>
+                </li>
+                <li>
+                    <strong>사업자등록번호</strong>
+                    <span>214-88-39117</span>
+                </li>
+                <li>
+                    <strong>고객센터</strong>
+                    <span>1599-4760 (평일 09:00-18:00)</span>
+                </li>
+                <li>
+                    <strong>호스팅서비스사업자</strong>
+                    <span>㈜민앤지</span>
+                </li>
+                <li>
+                    <strong>이메일</strong>
+                    <span>minwise.help@minwise.co.kr</span>
+                </li>
+            </ul>
+            <div class="tabs t3">
+                <button type="button" onclick="cpinfoTab('skt')" data-com="skt">SKT</button>
+                <button type="button" onclick="cpinfoTab('kt')" data-com="kt">KT</button>
+                <button type="button" onclick="cpinfoTab('lgu')" data-com="lgu">LGU+</button>
+            </div>
+            <div class="telecom_terms">
+                <!-- skt -->
+                <ul id="terms-skt" class="list_terms">
+                    <li><button type="button" onclick="">사업자 정보 확인</button></li>
+                    <li><button type="button" onclick="">건강지키미 무료서비스이용약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 유료서비스이용약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 개인정보 수집 및 이용약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 개인정보 제3자 제공 동의약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 SKT 제3자 제공 약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 개인정보 취급위탁약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 서비스 알림 수신동의 약관</button></li>
+                    <li><a href="https://www.minwise.co.kr/sterm/mprivacy" target="_blank">개인정보처리방침</a></li>
+                </ul>
+                <!-- //skt -->
+                <!-- kt -->
+                <ul id="terms-kt" class="list_terms">
+                    <li><button type="button" onclick="">사업자 정보 확인</button></li>
+                    <li><button type="button" onclick="">건강지키미 무료서비스이용약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 유료서비스이용약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 개인정보 수집 및 이용약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 개인정보 제3자 제공 동의약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 알림 및 광고수신동의 약관</button></li>
+                    <li><a href="https://www.minwise.co.kr/sterm/mprivacy" target="_blank">개인정보처리방침</a></li>
+                </ul>
+                <!-- //kt -->
+                <!-- lgu+ -->
+                <ul id="terms-lgu" class="list_terms">
+                    <li><button type="button" onclick="">사업자 정보 확인</button></li>
+                    <li><button type="button" onclick="">건강지키미 무료서비스이용약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 유료서비스이용약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 개인정보 수집 및 이용약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 개인정보 제3자 제공 동의약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 알림 및 광고수신동의 약관</button></li>
+                    <li><a href="https://www.minwise.co.kr/sterm/mprivacy" target="_blank">개인정보처리방침</a></li>
+                </ul>
+                <!-- //lgu+ -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //사용자정보 -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../../resources/js/gsap.min.js"></script>
+<script src="../../../../global/resources/js/global.js"></script>
+<script src="../../resources/js/design.js" defer></script>
+<script>
+$(function() {
+    // popupOpen('search1','mwf');
+});
+</script>
+
+</body>
+</html>
