@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>VideoARTs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="../common/js/design.js"></script>
+<link rel="stylesheet" type="text/css" href="../common/css/site.css" />
+</head>
+
+<!--[if IE 7]><body class="ie7"><![endif]-->
+<!--[if IE 8]><body class="ie8"><![endif]-->
+<!--[if IE 9]><body class="ie9"><![endif]-->
+<!--[if !IE]><!--><body><!--<![endif]-->
+
+<a href="#content" class="skip">컨텐츠 바로가기</a>
+<!-- //skip -->
+
+<div id="wrap">
+
+	<div id="header">
+		<ul class="lnb">
+		<li><a href="">로그인</a></li>
+		<li><a href="">회원가입</a></li>
+		<li><a href="" class="txcr">정기구독</a></li>
+		</ul>
+		<!-- //location navigation bar -->
+		<div class="sta">
+			<h1><img src="../img/common/header_logo.gif" alt="Video ARTs" /></h1>
+			<div class="srch">
+				<input type="text" name="" id="" class="inp0" style="" />
+				<a href="" onClick="" class="btSrch"><span class="blind">검색</span></a>
+			</div>
+			<!-- //service title area -->
+		</div>
+		<!-- //logo & sta -->
+		<div class="gnb">
+			<ul>
+			<li><a href="">월간 Video ARTs</a></li>
+			<li><a href="">TUTORIAL</a></li>
+			<li><a href="">정기구독</a></li>
+			<li class="last"><a href="">고객지원센터</a></li>
+			</ul>
+			<a href="" class="btDep2"><img src="../img/common/gnb_down.gif" alt="" /></a>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<div class="path pt70 brb0">
+		<h2>아이디 찾기</h2>
+		<p class="cmP4 mt15">등록 당시 기재하셨던 회원정보를 입력해 주세요.</p>
+	</div>
+	<!-- //path -->
+
+	<div id="content" class="pb100 pt0">
+
+		<div class="srchChk vamfix">
+			<!--
+				[D] 개발참고사항
+				ㄴinput태그의 value값과 스크립트의 case 값을 맞춰주세요.
+				ㄴname, id 를 변경시 스크립트와 label의 for 값 맞춰주세요.
+			-->
+			<input type="radio" name="joinType" id="private" value="1" checked /><label for="private"><strong>일반회원 (개인회원)</strong></label>
+			<input type="radio" name="joinType" id="law" value="2" class="ml45" /><label for="law">법인회원 (기업/단체)</label>
+			<script type="text/javascript">
+			$(document).ready(function() {
+				$("input[name='joinType']").change(function() {
+					 switch ($("input[name='joinType']:checked").val())
+					 {
+						case '1':
+							$("label[for='law']").find('strong').contents().unwrap();
+							$("label[for='private']").contents().wrap("<strong></strong>");
+							break;
+						case '2':
+							$("label[for='private']").find('strong').contents().unwrap();
+							$("label[for='law']").contents().wrap("<strong></strong>");
+							break;
+					 }
+				});
+			});
+			</script>
+		</div>
+		<!-- //가입종류 선택 -->
+		<div class="tblStyle mt40">
+			<table summary="이름,이메일">
+				<caption>아이디 찾기</caption>
+				<colgroup>
+				<col style="width:102px;" />
+				<col style="width:382px;" />
+				<col style="width:102px;" />
+				<col style="width:*;" />
+				</colgroup>
+				<body>
+				<tr>
+				<th scope="row">이름</th>
+				<td><input type="text" name="idsrch" id="name" title="이름" class="inp1" style="width:275px;" /></td>
+				<th scope="row">이메일</th>
+				<td><input type="text" name="idsrch" id="email" title="이메일" class="inp1" style="width:275px;" /></td>
+				</tr>
+				</body>
+			</table>
+		</div>
+		<!-- //table -->
+		<p class="srchChkP mt10">* 이메일 주소를 무단으로 수집하는 것을 거부하며, 이를 위반시 정보통신망법에 의해 형사 처벌됨을 유념하시기 바랍니다.</p>
+		<div class="srchResult mt45">
+			<p class="tit">다음 정보로 가입된 아이디가 있습니다.</p>
+			<span class="txt">
+				<strong>이름:</strong>&nbsp;김주민<br/>
+				<strong>이메일:</strong>&nbsp;imkorea@naver.com
+			</span><br/>
+			<span class="txt2">wildpig23 (일반회원, 2015-02-02 가입)</span>
+		</div>
+		<!-- //결과보기 -->
+		<div class="btnate2 mt50"><a href=""><img src="../img/common/btn_login2.gif" alt="로그인" /></a></div>
+		<!-- //btn -->
+
+	</div>
+	<!-- //content -->
+
+</div>
+
+<div id="footer">
+	<span class="logo"><img src="../img/common/footer_logo.gif" alt="Video ARTs" /></span>
+	<div class="rt">
+		<ul>
+		<li><a href="">회사소개</a></li>
+		<li><a href="">광고안내</a></li>
+		<li><a href="">이용약관</a></li>
+		<li><a href="" class="txcr5">개인정보취급방침</a></li>
+		<li><a href="">책임의 한계와 법적조치</a></li>
+		</ul>
+		<address>[121-760] 서울시 마포구 서교동 353-1 서교타워 1609호&nbsp;&nbsp;브이에이미디어&nbsp;&nbsp;Tel. 0505-251-7777&nbsp;&nbsp;Fax. 02-6008-6853<br/>대표이사 : 김평재&nbsp;&nbsp;개인정보 관리책임자 : 김진수&nbsp;&nbsp;사업자등록번호 : 201-11-15946&nbsp;&nbsp;통신판매업신고번호 : 2009-서울마포-00072호<br/>Copyright © 2014 VA Media. All rights reserved.</address>
+	</div>
+</div>
+<!-- //footer -->
+
+</body>
+</html>

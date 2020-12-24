@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="resource/css/base.css" media="screen" rel="stylesheet">
+<link href="resource/css/site.css" media="screen" rel="stylesheet">
+<script src="resource/js/jquery-1.11.1.min.js"></script>
+<script src="resource/js/ui.js"></script>
+<title>홈플러스 증빙시스템</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header">
+        <h1><img src="resource/image/logo.png" alt="homeplus"></h1>
+        <div id="gnb">
+            <ul>
+                <li><a href="#;">지점목록</a></li>
+                <li><a href="#;">광고등록</a></li>
+                <li><a href="#;">Total List</a></li>
+                <li><a href="#;">Mass Change</a></li>
+                <li><a href="#;">변경이력</a></li>
+                <li><a href="#;">환경설정</a></li>
+            </ul>
+            <div class="submenu">
+                <ul>
+                    <li><a href="#;">지점목록</a></li>
+                    <li><a href="#;">광고현황</a></li>
+                </ul>
+                <ul class="m2">
+                    <li><a href="#;">Excel업로드</a></li>
+                    <li><a href="#;">광고관리</a></li>
+                </ul>
+                <ul class="m3">
+                    <li><a href="#;">Total List</a></li>
+                </ul>
+                <ul class="m4">
+                    <li><a href="#;">Mass Change</a></li>
+                </ul>
+                <ul class="m5">
+                    <li><a href="#;">변경이력</a></li>
+                </ul>
+                <ul class="m6">
+                    <li><a href="#;">권한관리</a></li>
+                    <li><a href="#;">벤더관리</a></li>
+                </ul>
+            </div>
+        </div>
+        <a href="#;" class="iuser login"><span class="fc_blu">홍길동</span>님</a>
+    </header>
+    <!-- //header -->
+
+    <div id="content">
+        <section class="title_top">
+            <h2>변경이력</h2>
+            <div class="path"><a href="#;" class="home">Home</a><i></i>변경이력</div>
+        </section>
+        <!-- //title -->
+        <div class="tbl_type">
+            <table>
+                <colgroup>
+                    <col style="width:15%">
+                    <col style="width:35%">
+                    <col style="width:15%">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">기준 정보</th>
+                        <td colspan="3">
+                            <select style="width:150px">
+                                <option value="">지역본부 선택</option>
+                            </select>
+                            <select class="ml5" style="width:150px">
+                                <option value="">지점 선택</option>
+                            </select>
+                            <select class="ml5" style="width:150px">
+                                <option value="">팀 선택</option>
+                            </select>
+                            <select class="ml5" style="width:150px">
+                                <option value="">업체명 선택</option>
+                            </select>
+                            <select class="ml5" style="width:150px">
+                                <option value="">위치 선택</option>
+                            </select>
+                            <select class="ml5" style="width:150px">
+                                <option value="">공제여부 선택</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>                       
+                        <th scope="row">변경일시</th>
+                        <td>
+                            <span class="input calendar"><input type="text" id="" class="ip_cal"></span>
+                        </td>
+                        <th scope="row">키워드</th>
+                        <td>
+                            <select style="width:150px">
+                                <option value="">광고명</option>
+                            </select>
+                            <input type="text" id="" value="" class="ml5" style="width:196px">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- //table -->
+        <div class="bta_agn_right mt10">
+            <a href="#;" class="btn_r btn_type" style="width:90px">검색</a><!----><a href="#;" class="btn_r btn_type2" style="width:90px">초기화</a>
+        </div>
+        <!-- //btn -->
+        <div class="bta_agn_half mt40">
+            <ul class="tab_type2 tabchg">
+                <li><a href="#;" class="active">전체보기</a></li>
+                <li><a href="#;">등록</a></li>
+                <li><a href="#;">수정</a></li>
+                <li><a href="#;">삭제</a></li>
+            </ul>
+            <span class="btns">
+                <select style="width:120px">
+                    <option value="">5개씩</option>
+                    <option value="">10개씩</option>
+                    <option value="" selected>15개씩</option>
+                    <option value="">20개씩</option>
+                </select>
+            </span>
+        </div>
+        <!-- //tab -->
+        <div class="tbl_type2">
+            <table>
+                <colgroup>
+                    <col style="width:5%">
+                    <col style="width:17%">
+                    <col style="width:9%">
+                    <col style="width:9%">
+                    <col style="width:9%">
+                    <col>
+                    <col style="width:10%">
+                    <col style="width:15%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">NO</th>
+                        <th scope="col">이력코드</th>
+                        <th scope="col">변경구분</th>
+                        <th scope="col">지역본부</th>
+                        <th scope="col">점포명</th>
+                        <th scope="col">일련번호 (이미지파일명)</th>
+                        <th scope="col">변경자</th>
+                        <th scope="col">일시</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="8" class="nodata">조회 결과가 없습니다.</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>10</td>
+                        <td>UP_20200421_0001</td>
+                        <td>수정</td>
+                        <td>1지역본부</td>
+                        <td>간석점</td>
+                        <td class="name"><a href="#;">경기하남점_B3F_MW상단_10</a></td>
+                        <td>홍길동</td>
+                        <td>2020-04-21 14:30:30 </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>UP_20200421_0001</td>
+                        <td>수정</td>
+                        <td>1지역본부</td>
+                        <td>간석점</td>
+                        <td class="name"><a href="#;">경기하남점_B3F_MW상단_10</a></td>
+                        <td>홍길동</td>
+                        <td>2020-04-21 14:30:30 </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>UP_20200421_0001</td>
+                        <td>등록</td>
+                        <td>1지역본부</td>
+                        <td>간석점</td>
+                        <td class="name"><a href="#;">경기하남점_B3F_MW상단_10</a></td>
+                        <td>홍길동</td>
+                        <td>2020-04-21 14:30:30 </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>UP_20200421_0001</td>
+                        <td>삭제</td>
+                        <td>1지역본부</td>
+                        <td>간석점</td>
+                        <td class="name"><a href="#;">경기하남점_B3F_MW상단_10</a></td>
+                        <td>홍길동</td>
+                        <td>2020-04-21 14:30:30 </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>UP_20200421_0001</td>
+                        <td>수정</td>
+                        <td>1지역본부</td>
+                        <td>간석점</td>
+                        <td class="name"><a href="#;">경기하남점_B3F_MW상단_10</a></td>
+                        <td>홍길동</td>
+                        <td>2020-04-21 14:30:30 </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>UP_20200421_0001</td>
+                        <td>수정</td>
+                        <td>9지역본부</td>
+                        <td>간석점</td>
+                        <td class="name"><a href="#;">경기하남점_B3F_MW상단_10</a></td>
+                        <td>홍길동</td>
+                        <td>2020-04-21 14:30:30 </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>UP_20200421_0001</td>
+                        <td>등록</td>
+                        <td>9지역본부</td>
+                        <td>간석점</td>
+                        <td class="name"><a href="#;">경기하남점_B3F_MW상단_10</a></td>
+                        <td>홍길동</td>
+                        <td>2020-04-21 14:30:30 </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>UP_20200421_0001</td>
+                        <td>삭제</td>
+                        <td>10지역본부</td>
+                        <td>간석점</td>
+                        <td class="name"><a href="#;">경기하남점_B3F_MW상단_10</a></td>
+                        <td>홍길동</td>
+                        <td>2020-04-21 14:30:30 </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>UP_20200421_0001</td>
+                        <td>삭제</td>
+                        <td>10지역본부</td>
+                        <td>간석점</td>
+                        <td class="name"><a href="#;">경기하남점_B3F_MW상단_10</a></td>
+                        <td>홍길동</td>
+                        <td>2020-04-21 14:30:30 </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>UP_20200421_0001</td>
+                        <td>삭제</td>
+                        <td>10지역본부</td>
+                        <td>간석점</td>
+                        <td class="name"><a href="#;">경기하남점_B3F_MW상단_10</a></td>
+                        <td>홍길동</td>
+                        <td>2020-04-21 14:30:30 </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- //table -->
+        <div class="paging">
+            <table>
+                <tr>
+                    <td><a href="#;" class="btn_first"></a></td>
+                    <td><a href="#;" class="btn_prev"></a></td>
+                    <td class="link">
+                        <a href="#;" class="on">1</a>
+                        <a href="#;">2</a>
+                        <a href="#;">3</a>
+                        <a href="#;">4</a>
+                        <a href="#;">5</a>
+                    </td>
+                    <td><a href="#;" class="btn_next"></a></td>
+                    <td><a href="#;" class="btn_last"></a></td>
+                </tr>
+            </table>
+        </div>
+        <!-- //paging -->
+    </div>
+    <!-- //content -->
+
+    <footer id="footer">COPYRIGHT Homeplus. LTD. ALL RIGHTS RESERVED.</footer>
+
+</div>
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$(function(){
+    // 달력
+    $( ".ip_cal" ).datepicker({
+        showOn: "both", 
+        buttonImage: "resource/image/ico_cal.png", 
+        buttonImageOnly: true 
+    });
+});
+</script>
+
+</body>
+</html>

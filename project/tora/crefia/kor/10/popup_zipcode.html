@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<title>여신금융협회::우편번호 찾기</title>
+<link rel="stylesheet" type="text/css" href="../static/css/base.css">
+<link rel="stylesheet" type="text/css" href="../static/css/common.css">
+<link rel="stylesheet" type="text/css" href="../static/css/popup.css">
+<script language="javascript" type="text/javascript" src="../static/js/jquery-1.8.3.min.js"></script>
+<!--[if IE]>
+<script src="../static/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body class="popbg">
+
+<div id="pop_wrap">
+
+	<header id="pop_head">
+		<h1>우편번호 찾기</h1>
+		<a href="javascript:window.close();" class="btCls"><img src="../static/img/com/pop_btn_cls.gif" alt="창닫기"></a>
+	</header>
+	<!-- //header -->
+
+	<div id="pop_ct" class="pop_zipcode">
+		<menu class="tabst brb0">
+			<li><a href="javascript:;" class="tab-zcd1 selected">도로명주소의 우편번호</a></li>
+			<li><a href="javascript:;" class="tab-zcd2">지번주소의 우편번호</a></li>
+		</menu>
+		<script type="text/javascript">
+			$(function($){
+				var zipcodeTbt1 = $(".pop_zipcode .tabst a.tab-zcd1");
+				var zipcodeTbt2 = $(".pop_zipcode .tabst a.tab-zcd2");
+				$(".pop_zipcode .tabst a").click(function(){
+					$(".pop_zipcode .tabst a").removeClass("selected");
+					$(this).addClass("selected");
+				});
+				zipcodeTbt1.click(function(){
+					$('.addchk').show();
+					$('.pop_zipcode .scroll').css('height','195');
+				});
+				zipcodeTbt2.click(function(){
+					$('.addchk').hide();
+					$('.tpslct_box .txt span').text('충무로1가 (동명)');
+					$('.pop_zipcode .scroll').css('height','247');
+				});
+			});
+		</script>
+		<!-- //tab -->
+		<fieldset>
+			<legend>주소검색타입 선택</legend>
+			<div class="tpslct_box">
+				<div class="addchk">
+					<input type="radio" name="zipForm" id="bulid-num" value="" class="ml0" checked onclick="$('.tpslct_box .txt span').text('서울시 중구 소공로 70   예) 소공로(도로명) 70 (건물번호)');"><label for="bulid-num">도로명+건물번호</label>
+					<input type="radio" name="zipForm" id="dong-num" value="" onclick="$('.tpslct_box .txt span').text('서울시 중구 충무로 1가 21-1   예) 충무로 1가(동명)');"><label for="dong-num">동(읍/면/리)명+지번</label>
+					<input type="radio" name="zipForm" id="apt-name" value="" onclick="$('.tpslct_box .txt span').text('서울시 중구 중앙우체국   예) 중앙우체국(건물명)');"><label for="apt-name">건물명(아파트명 등)</label>
+				</div>
+				<label for="codeinp" class="blind">검색어입력</label>
+				<input type="text" name="zipForm" id="codeinp" value="" style="width:178px;"><a href="" class="ml5"><img src="../static/img/btn/srch.gif" alt="검색"></a>
+				<p class="txt">검색방법 : <span>서울시 중구 소공로 70   예) 소공로(도로명) 70 (건물번호)</span></p>
+			</div>
+		</fieldset>
+		<!-- //우편번호입력 -->
+		<div class="scroll mt20" style="height:195px">
+			<fieldset>
+			<legend>주소검색결과</legend>
+			<div class="tblst2 v1">
+				<table summary="입력한주소의 결과입니다.">
+					<caption>입력한주소결과 리스트</caption>
+					<colgroup>
+						<col width="23%">
+						<col width="*">
+					</colgroup>
+					<thead>
+						<tr>
+						<th scope="col" class="brl0">우편번호</th>
+						<th scope="col">주소</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+						<td class="brl0">12345</td>
+						<td class="tl">서울시 중고 소공로</td>
+						</tr>
+						<tr>
+						<td class="brl0">12345</td>
+						<td class="tl">서울시 중고 소공로</td>
+						</tr>
+						<tr>
+						<td class="brl0">12345</td>
+						<td class="tl">서울시 중고 소공로</td>
+						</tr>
+						<tr>
+						<td class="brl0">12345</td>
+						<td class="tl">서울시 중고 소공로</td>
+						</tr>
+						<tr>
+						<td class="brl0">12345</td>
+						<td class="tl">서울시 중고 소공로</td>
+						</tr>
+						<tr>
+						<td class="brl0">12345</td>
+						<td class="tl">서울시 중고 소공로</td>
+						</tr>
+						<tr>
+						<td class="brl0">12345</td>
+						<td class="tl">서울시 중고 소공로</td>
+						</tr>
+						<tr>
+						<td class="brl0">12345</td>
+						<td class="tl">서울시 중고 소공로</td>
+						</tr>
+						<tr>
+						<td class="brl0">&nbsp;</td>
+						<td class="tl"></td>
+						</tr>
+						<tr>
+						<td class="brl0">&nbsp;</td>
+						<td class="tl"></td>
+						</tr>
+						<tr>
+						<td class="brl0">&nbsp;</td>
+						<td class="tl"></td>
+						</tr>
+						<tr>
+						<td class="brl0">&nbsp;</td>
+						<td class="tl"></td>
+						</tr>
+						<tr>
+						<td class="brl0">&nbsp;</td>
+						<td class="tl"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //table -->
+			</fieldset>
+		</div>
+		<!-- //우편번호결과 -->
+		<div class="tc mt20">
+			<a href="" class="btns btns4" style="width:90px">닫기</a>
+		</div>
+	</div>
+	<!-- //content -->
+
+</div>
+
+</body>
+</html>

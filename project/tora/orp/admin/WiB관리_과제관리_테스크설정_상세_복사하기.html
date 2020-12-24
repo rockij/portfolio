@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="resource/css/base.css" media="screen" rel="stylesheet">
+<link href="resource/css/site.css" media="screen" rel="stylesheet">
+<script src="resource/js/jquery-1.11.1.min.js"></script>
+<script src="resource/js/ui.js"></script>
+<title>ORP Assessment center</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header">
+        <h1><img src="resource/image/logo.png" alt="ORP Assessment center"></h1>
+        <div id="gnb">
+            <ul>
+                <li><a href="#;">운영관리</a></li>
+                <li><a href="#;">회원관리</a></li>
+                <li><a href="#;" class="active">WIB관리</a></li>
+                <li><a href="#;">진행정보&평가</a></li>
+            </ul>
+        </div>
+        <a href="#;" class="user">로그아웃</a>
+    </header>
+    <!-- //header -->
+
+    <div id="container">
+        <aside class="lnb">
+            <ul>
+                <li><a href="#;" class="active">과제관리</a></li>
+                <li><a href="#;">과정관리</a></li>
+                <li><a href="#;">테스크관리</a></li>
+            </ul>
+        </aside>
+        <div id="content">
+            <section class="title_top">
+                <h2>관리자관리</h2>
+                <div class="path"><a href="#;">Home</a><i>&gt;</i><a href="#;">WIB관리</a><i>&gt;</i><a href="#;">과제관리</a><i>&gt;</i><b>테스크설정</b></div>
+            </section>
+            <!-- //title -->
+            <div class="bta_agn_right">
+                <button type="button" onclick="" class="btn_m btn_type5" style="width:90px">과제 목록</button>
+            </div>
+            <!-- //btn -->
+            <ul class="tab_type tn9 mt10">
+                <li><a href="#;">과제설정</a></li>
+                <li class="active"><a href="#;">테스크설정</a></li>
+                <li><a href="#;">자료설정</a></li>
+                <li><a href="#;">스케줄설정</a></li>
+                <li><a href="#;">자가진단</a></li>
+                <li><a href="#;">대안선택형</a></li>
+                <li><a href="#;">전문위원평가</a></li>
+                <li><a href="#;">F/U 인터뷰</a></li>
+                <li><a href="#;">상호피드백</a></li>
+            </ul>
+            <!-- //tab -->
+            <h3 class="title_type mt30">테스크 설정</h3>
+            <div class="tbl_type mt15">
+                <table>
+                    <colgroup>
+                        <col style="width:15.5%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">형식</th>
+                            <td>수행과제</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">역량군/역량</th>
+                            <td>
+                                <select style="width:198px">
+                                    <option value="">Business</option>
+                                    <option value="">Business1</option>
+                                    <option value="">Business2</option>
+                                    <option value="">Business3</option>
+                                </select>
+                                <select style="width:198px" class="ml5">
+                                    <option value="">전략적 사고</option>
+                                    <option value="">전략적 사고1</option>
+                                    <option value="">전략적 사고2</option>
+                                    <option value="">전략적 사고3</option>
+                                </select>
+                                <button type="button" onclick="" class="btn_m btn_type5 ml5">역량, 역량군 추가</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">제목</th>
+                            <td><input type="text" id="" value="제목이 출력되는 영역입니다." style="width:378px"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">보낸사람</th>
+                            <td><input type="text" id="" value="보낸사람이 출력되는 영역입니다." style="width:378px"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">받는사람</th>
+                            <td><input type="text" id="" value="받는사람이 출력되는 영역입니다." style="width:378px"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">보낸일시</th>
+                            <td><span class="input calendar"><input type="text" id="" readonly class="ip_cal"></span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">코드</th>
+                            <td>ABC009</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">연결 테스크</th>
+                            <td class="link">
+                                <a href="#;">ABC001</a> - <a href="#;">ABC003</a> – ABC009
+                                <span class="checkbox check ml10">
+                                    <input type="checkbox" id="link-tesk" checked>
+                                    <label for="link-tesk">통계연결 (최초 등록 시 연결설정은 이후 변경이 불가합니다.)</label>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">등록일</th>
+                            <td>2019-01-01 11:11:11</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="edit"><img src="resource/image/temp_edit.gif" alt="" style="max-width:100%"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //table -->
+            <h3 class="title_type mt50">첨부파일</h3>
+            <div class="tbl_type mt15">
+                <table>
+                    <colgroup>
+                        <col style="width:15.5%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">첨부파일 설정</th>
+                            <td class="process link">
+                                <ul>
+                                    <li>
+                                        <span class="filebox button">
+                                            <input type="text" class="upload_name" value="선택된 파일 없음" disabled><!----><label for="fileField1" class="btsrch">찾아보기</label>
+                                            <input type="file" id="fileField1" class="upload_hidden">
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <a href="#;">첨부파일게시물제목이 출력됩니다.</a>
+                                        <button type="button" onclick="" class="btn_del"></button>
+                                    </li>
+                                    <li>
+                                        <a href="#;">첨부파일게시물제목이 출력됩니다.</a>
+                                        <button type="button" onclick="" class="btn_del"></button>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //table -->
+            <h3 class="title_type mt50">영상, 음성 파일</h3>
+            <div class="tbl_type mt15">
+                <table>
+                    <colgroup>
+                        <col style="width:15.5%">
+                        <col style="width:8.6%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row" rowspan="2">영상 설정</th>
+                            <td>
+                                <span class="checkbox circle">
+                                    <input type="radio" name="mov-upload" id="mov-file">
+                                    <label for="mov-file">파일등록</label>
+                                </span>
+                            </td>
+                            <td>
+                                <span class="filebox button">
+                                    <input type="text" class="upload_name" value="선택된 파일 없음" disabled><!----><label for="fileField1" class="btsrch">찾아보기</label>
+                                    <input type="file" id="fileField1" class="upload_hidden">
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="checkbox circle">
+                                    <input type="radio" name="mov-upload" id="mov-URL">
+                                    <label for="mov-URL">URL연결</label>
+                                </span>
+                            </td>
+                            <td>
+                                http:// <input type="text" id="" value="" style="width:298px" class="ml5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" rowspan="2">음성 설정</th>
+                            <td>
+                                <span class="checkbox circle">
+                                    <input type="radio" name="sound-upload" id="sound-file">
+                                    <label for="sound-file">파일등록</label>
+                                </span>
+                            </td>
+                            <td>
+                                Nhn logo.jpg
+                                <button type="button" onclick="" class="btn_del ml5 mr5"></button>
+                                <span class="filebox button">
+                                    <input type="text" class="upload_name" value="선택된 파일 없음" disabled><!----><label for="fileField1" class="btsrch">찾아보기</label>
+                                    <input type="file" id="fileField1" class="upload_hidden">
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="checkbox circle">
+                                    <input type="radio" name="sound-upload" id="sound-URL">
+                                    <label for="sound-URL">URL연결</label>
+                                </span>
+                            </td>
+                            <td>
+                                http:// <input type="text" id="" value="" style="width:298px" class="ml5">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //table -->
+            <div class="bta_agn_right mt10">
+                <button type="button" onclick="" class="btn_m btn_type3" style="width:90px">목록</button><!----><button type="button" onclick="" class="btn_m btn_type4" style="width:90px">저장</button>
+            </div>
+            <!-- //btn -->
+        </div>
+        <!-- //content -->
+    </div>
+    <!-- //container -->
+
+    <footer id="footer">
+        <div class="inner">
+            Copyright ⓒ ORP Institute. All Rights Reserved.
+            <img src="resource/image/logo2.png" alt="ORP Assessment center" class="lg">
+        </div>
+    </footer>
+    <!-- //footer -->
+
+</div>
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$(function(){
+    // 달력
+    $( ".ip_cal" ).datepicker({
+        showOn: "both",
+        buttonImage: "resource/image/ico_cal.png",
+        buttonImageOnly: true,
+        dateFormat: "yy-mm-dd"
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<title>IT서비스데스크</title>
+<link rel="stylesheet" type="text/css" href="../common/css/base.css">
+<link rel="stylesheet" type="text/css" href="../common/css/site.css">
+<script language="javascript" type="text/javascript" src="../common/js/jquery-1.8.3.min.js"></script>
+<script src="../common/js/design.js"></script>
+<!--[if IE]>
+<script src="../common/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+	
+<div id="wrap">
+	
+	<div id="skip">
+		<ul>
+			<li><a href="#content">본문 바로가기</a></li>
+			<li><a href="#gnb">주 메뉴 바로가기</a></li>
+		</ul>
+	</div>
+	<!-- //skip --> 
+	
+	<header id="header">
+		<h1>IT서비스데스크</h1>
+		<nav id="gnb">
+			<menu>
+				<li><a href="" class="active">게시판</a></li>
+				<li><a href="">서비스요청관리</a></li>
+				<li><a href="">기본정보관리</a></li>
+				<li><a href="">인사정보관리</a></li>
+			</menu>
+		</nav>
+		<div class="master">
+			<strong>관리자</strong>님
+			<a href="" class="btns btns3"><span>로그아웃</span></a>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<div id="container">
+
+		<aside class="snb">
+			<div class="log_set">
+				<span class="bar top"></span>
+				<ul class="profile">
+					<li class="img"><img src="../common/img/snb_porfile_no.gif" alt=""></li>
+					<li class="txt"><strong>관리자</strong>님<br>반갑습니다.</li>
+				</ul>	
+				<ul class="link">
+					<li><a href="" class="btns btns2"><span>My Page</span></a></li>
+					<li><a href="" class="btns btns2"><span>Logout</span></a></li>
+				</ul>
+				<span class="bar btm"></span>
+			</div>
+			<menu>
+				<li class="selected"><a href="">공통코드관리</a></li>
+				<li><a href="">메뉴관리</a></li>
+				<li><a href="">권한관리</a></li>
+				<li><a href="">서비스대상관리</a></li>
+				<li><a href="">메일양식관리</a></li>
+				<li><a href="">휴일관리</a></li>
+				<li><a href="">납기일자관리</a></li>
+			</menu>
+			<span class="mascot"></span>
+		</aside>
+		<!-- //snb -->
+
+		<div id="content">
+
+			<h1>공통코드관리</h1>
+			<hgroup class="hst-row mt25">
+				<h2 class="hst mt25">그룹코드목록</h2>
+				<button type="button" class="btns btns1 btns1-4 rt" onclick="layer_open('grpCod_plus')"><b style="width:58px"><em class="imsc imsc_up"></em>등록</b></button>
+			</hgroup>
+			<div class="tblst mt7">
+				<table summary="그룹코드,그룹명,상위코드사용여부,수정">
+					<caption>그룹코드목록</caption>
+					<colgroup>
+						<col width="5%">
+						<col width="8%">
+						<col width="*">
+						<col width="10%">
+						<col width="10%">
+						<col width="10%">
+					</colgroup>
+					<thead>
+						<tr>
+						<th scope="col">&nbsp;</th>
+						<th scope="col">그룹코드</th>
+						<th scope="col">그룹명(<em>*</em>)</th>
+						<th scope="col">상위코드</th>
+						<th scope="col">사용여부</th>
+						<th scope="col">수정</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="ty">
+						<td>1</td>
+						<td>COM004</td>
+						<td class="tl">SR유형</td>
+						<td></td>
+						<td>Y</td>
+						<td><a href="" class="btns btns1 btns1-3" style="width:63px" onclick="layer_open('grpCod_modi'); return false;">수정</a></td>
+						</tr>
+						<tr class="ty">
+						<td>2</td>
+						<td>COM004</td>
+						<td class="tl">SR유형</td>
+						<td></td>
+						<td>Y</td>
+						<td><a href="" class="btns btns1 btns1-3" style="width:63px">수정</a></td>
+						</tr>
+						<tr class="ty">
+						<td>3</td>
+						<td>COM004</td>
+						<td class="tl">SR유형</td>
+						<td></td>
+						<td>Y</td>
+						<td><a href="" class="btns btns1 btns1-3" style="width:63px">수정</a></td>
+						</tr>
+						<tr class="ty">
+						<td>4</td>
+						<td>COM004</td>
+						<td class="tl">SR유형</td>
+						<td></td>
+						<td>Y</td>
+						<td><a href="" class="btns btns1 btns1-3" style="width:63px">수정</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //그룹코드목록 -->
+			<hgroup class="hst-row mt25">
+				<h2 class="hst mt25">공통코드목록</h2>
+				<a href="" class="btns btns1 btns1-4 rt"><b style="width:58px"><em class="imsc imsc_up"></em>등록</b></a>
+			</hgroup>
+			<div class="tblst mt7">
+				<table summary="공통코드,공통코드명,상위코드,조회순서,사용여부,화면표시여부,수정">
+					<caption>공통코드목록</caption>
+					<colgroup>
+						<col width="5%">
+						<col width="8%">
+						<col width="*">
+						<col width="10%">
+						<col width="10%">
+						<col width="10%">
+						<col width="10%">
+						<col width="10%">
+					</colgroup>
+					<thead>
+						<tr>
+						<th scope="col">&nbsp;</th>
+						<th scope="col">공통코드</th>
+						<th scope="col">공통코드명(<em>*</em>)</th>
+						<th scope="col">상위코드</th>
+						<th scope="col">조회순서</th>
+						<th scope="col">사용여부</th>
+						<th scope="col">화면표시여부</th>
+						<th scope="col">수정</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="ty">
+						<td>1</td>
+						<td>COM004</td>
+						<td class="tl">SR유형</td>
+						<td></td>
+						<td></td>
+						<td>Y</td>
+						<td>Y</td>
+						<td><a href="" class="btns btns1 btns1-3" style="width:63px">수정</a></td>
+						</tr>
+						<tr class="ty">
+						<td>2</td>
+						<td>COM004</td>
+						<td class="tl">SR유형</td>
+						<td></td>
+						<td></td>
+						<td>Y</td>
+						<td>Y</td>
+						<td><a href="" class="btns btns1 btns1-3" style="width:63px">수정</a></td>
+						</tr>
+						<tr class="ty">
+						<td>3</td>
+						<td>COM004</td>
+						<td class="tl">SR유형</td>
+						<td></td>
+						<td></td>
+						<td>Y</td>
+						<td>Y</td>
+						<td><a href="" class="btns btns1 btns1-3" style="width:63px">수정</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //그룹코드목록 -->
+
+			<!-- 그룹코드 추가 -->
+			<!-- [D] 젤 위 등록버튼을 누르면 팝업창이 뜹니다 -->
+			<section class="ly_pop">
+				<div class="bg"></div>
+				<div id="grpCod_plus" class="ly_ct" style="width:890px;margin:-270px 0 0 -450px;">
+					<header>
+						<h2>그룹코드 추가</h2>
+						<button type="button" class="btCls" onclick="layer_open_cls();"></button>
+					</header>
+					<article>
+						<div class="tblst2 mt20">
+							<table summary="그룹코드,그룹코드명,상위코드사용여부">
+								<caption>그룹코드추가</caption>
+								<colgroup>
+									<col width="13%">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+									<th scope="row">그룹코드<em>*</em></th>
+									<td><input type="text" name="" id="" style="width:210px;"></td>
+									</tr>
+									<tr>
+									<th scope="row">그룹코드명<em>*</em></th>
+									<td><input type="text" name="" id="" style="width:410px;"></td>
+									</tr>
+									<tr>
+									<th scope="row">상위코드</th>
+									<td><input type="text" name="" id="" style="width:210px;"></td>
+									</tr>
+									<tr>
+									<th scope="row">사용여부</th>
+									<td><input type="checkbox" name="" id="" value=""></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p class="caution_base mt7">* 표시가 된 곳은 필수 입력입니다.</p>
+						<div class="tc mt200">
+							<a href="" class="btns btns1 btns1-4"><b style="width:57px"><span class="imsc imsc_file"></span>확인</b></a><button type="button" class="btns btns1 btns1-5 ml5" onclick="layer_open_cls();"><b style="width:57px"><span class="imsc imsc_del2"></span>취소</b></button>
+						</div>
+					</article>
+				</div>
+			</section>
+			<!-- //그룹코드 추가 -->
+
+			<!-- 그룹코드 수정 -->
+			<!-- [D] 젤 위 등록버튼을 누르면 팝업창이 뜹니다 -->
+			<section class="ly_pop">
+				<div class="bg"></div>
+				<div id="grpCod_modi" class="ly_ct" style="width:890px;margin:-270px 0 0 -450px;">
+					<header>
+						<h2>그룹코드 수정</h2>
+						<button type="button" class="btCls" onclick="layer_open_cls();"></button>
+					</header>
+					<article>
+						<div class="tblst2 mt20">
+							<table summary="그룹코드,그룹코드명,상위코드사용여부">
+								<caption>그룹코드수정</caption>
+								<colgroup>
+									<col width="13%">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+									<th scope="row">그룹코드<em>*</em></th>
+									<td>COM004</td>
+									</tr>
+									<tr>
+									<th scope="row">그룹코드명<em>*</em></th>
+									<td><input type="text" name="" id="" style="width:410px;" value="SR유형"></td>
+									</tr>
+									<tr>
+									<th scope="row">상위코드</th>
+									<td><input type="text" name="" id="" style="width:210px;"></td>
+									</tr>
+									<tr>
+									<th scope="row">사용여부</th>
+									<td><input type="checkbox" name="" id="" value=""></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p class="caution_base mt7">* 표시가 된 곳은 필수 입력입니다.</p>
+						<div class="tc mt200">
+							<a href="" class="btns btns1 btns1-4"><b style="width:57px"><span class="imsc imsc_file"></span>확인</b></a><button type="button" class="btns btns1 btns1-5 ml5" onclick="layer_open_cls();"><b style="width:57px"><span class="imsc imsc_del2"></span>취소</b></button>
+						</div>
+					</article>
+				</div>
+			</section>
+			<!-- //그룹코드 수정 -->
+
+		</div>
+		<!-- //content -->
+
+	</div>
+	<!-- //container -->
+
+</div>
+
+</body>
+</html>

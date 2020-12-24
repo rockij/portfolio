@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>벼룩시장 부동산</title>
+		<link rel="stylesheet" href="../common/css/site.css">
+		<script src="../CDF/js/jquery-1.9.1.min.js"></script>
+		<script src="../CDF/js/jquery.event.drag-1.5.min.js"></script>
+		<script src="../CDF/js/jquery.touchSlider.js"></script>
+		<script src="../common/js/design.js"></script>
+
+		<!--[if lt IE 9]>
+		<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<![endif]-->
+
+		<script>
+		//매물상세정보 - 주변정보
+		$(document).ready(function() {
+			$("#touchSlider").touchSlider({
+				flexible : true,
+				counter : function (e) {
+					$("#count").html(e.current + " / " + e.total);
+				}
+			});
+			
+			$("#touchSlider2").touchSlider({
+				roll : false,
+				flexible : true,
+				btn_prev : $("#touchSlider2").next().find(".btn_prev"),
+				btn_next : $("#touchSlider2").next().find(".btn_next"),
+				counter : function (e) {
+					$("#count2").html("<span style='color:#21ac42'>" + e.current + "</span>" + " / " + e.total);
+				}
+			});
+		});
+		</script>
+	</head>
+
+	<body class="none">
+
+		<div class="skip"><a href="#content">본문 바로가기</a></div>
+		<!-- //skip -->
+
+		<div id="wrap">
+
+			<header id="header">
+
+				<!-- Gnb -->
+				<div class="head_tit">
+					<div class="titb">
+						<span class="txt">매물상세정보</span>
+					</div>
+					<div class="btbr">
+						<a href="#" class="fibg sc_bt">매물 검색</a>
+					</div>
+				</div>
+				<!-- //Gnb -->
+
+			</header>
+			<!-- //header -->
+
+			<section id="content">
+				
+				<!-- 금액 -->
+				<div class="dt_top">
+					<span class="grey">연립/빌라</span>
+					<span class="line"></span>
+					<em class="mm">매매</em>
+					<strong>999,999</strong>
+					<span class="txt">만원</span>
+					<span class="addr">서울시 강남구 역삼동</span>
+
+					<div class="favb">
+						<button type="button" class="dtbg fav_off_ico">즐겨찾기 등록</button>
+					</div>
+				</div>
+				<!-- //금액 -->
+				
+				<!-- 이미지 -->
+				<div class="dt_img">
+					<div id="touchSlider">
+						<ul>
+							<li>
+								<img src="http://image.findall.co.kr/FAImage/M_Paper2/land2/content/detail_img1.jpg" alt="" class="detail_img">
+							</li>
+							<li>
+								<img src="http://image.findall.co.kr/FAImage/M_Paper2/land2/content/detail_img2.jpg" alt="" class="detail_img">
+							</li>
+							<li>
+								<img src="http://image.findall.co.kr/FAImage/M_Paper2/land2/content/detail_img3.jpg" alt="" class="detail_img">
+							</li>
+						</ul>
+					</div>
+					<div class="btn_area">
+						<div id="count"></div>
+					</div>
+				</div>
+				<!-- //이미지 -->
+
+				<!-- 매물정보 -->
+				<div class="dt_box">
+					<div class="topb">
+						<div class="fl"><span class="dtbg dt_ico_info"></span><span class="txt">매물정보</span></div>
+						<div class="fr">
+							<button type="button" class="dtbg dt_ico_share">공유</button>
+							<button type="button" class="dtbg dt_ico_list">목록</button>
+						</div>
+					</div>
+					<div class="dtshare">
+						<ul>
+							<li><a href="#"><span class="dtbg dt_ico_kakao"></span><span class="txt">카카오톡</span></a></li>
+							<li><a href="#"><span class="dtbg dt_ico_face"></span><span class="txt">페이스북</span></a></li>
+							<li><a href="#"><span class="dtbg dt_ico_twit"></span><span class="txt">트위터</span></a></li>
+						</ul>
+					</div>
+					<div class="info_tbl">
+						<table width="100%" border="0" cellpadding="0" cellspacing="0" summary="매물정보를 확인하세요.">
+							<caption>매물정보</caption>
+							<colgroup>
+								<col width="100">
+								<col width="*">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>소재지</th>
+									<td>서울시 강북구 수유동</td>
+								</tr>
+								<tr>
+									<th>매매가</th>
+									<td><strong>22,900</strong> 만원</td>
+								</tr>
+								<tr>
+									<th>면적</th>
+									<td>92.47㎡</td>
+								</tr>
+								<tr>
+									<th>매물특징</th>
+									<td>내부확장</td>
+								</tr>
+								<tr>
+									<th>해당층/총층</th>
+									<td>4/5층</td>
+								</tr>
+								<tr>
+									<th>방수/욕실수</th>
+									<td>2개/1개</td>
+								</tr>
+								<tr>
+									<th>연락처</th>
+									<td>010-1234-5678</td>
+								</tr>
+								<tr class="last">
+									<th>상세내용</th>
+									<td>
+										망우동 망우사거리 근처 반지층<br>
+										방2 주방 거실 화장실 전2000<br>
+										도배장판 깨끗 즉시입주<br>
+										010-1234-5678
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- //매물정보 -->
+
+				<!-- 위치 및 주변정보 -->
+				<div class="dt_box">
+					<div class="topb">
+						<span class="dtbg dt_ico_site"></span><span class="txt">위치 및 주변정보</span>
+					</div>
+					<!-- Tab -->
+					<div class="site_tab">
+						<ul>
+							<li class="on"><a href="#"><span class="dtbg dt_ico_point"></span><span class="txt">매물위치</span></a><span class="line"></span></li>
+							<li><a href="#"><span class="dtbg dt_ico_near"></span><span class="txt">주변정보</span></a></li>
+						</ul>
+					</div>
+					<!-- //Tab -->
+					<!-- Cont -->
+					<div class="site_contb">
+						<div class="site_cont">
+							<div class="site_map">
+								<img src="http://image.findall.co.kr/FAImage/M_Paper2/land2/content/detail_map.jpg" alt="" style="width:100%; height:auto; vertical-align:top">
+							</div>
+						</div>
+						<div class="site_cont" style="display:none">
+							<div class="top">주변매물</div>
+							<div class="site_near" id="touchSlider2">
+								<ul>
+									<li>
+										<ul class="list">
+											<li onclick="#">
+												<em>[연립빌라]1</em>
+												<span class="kind mm">매매</span>
+												<strong>9,999만원</strong>
+												<span class="street">200m<span class="dtbg arrow"></span></span>
+											</li>
+											<li onclick="#">
+												<em>[연립빌라]</em>
+												<span class="kind zs">전세</span>
+												<strong>99,999 / 9,999만원</strong>
+												<span class="street">200m<span class="dtbg arrow"></span></span>
+											</li>
+											<li onclick="#">
+												<em>[연립빌라]</em>
+												<span class="kind ws">월세</span>
+												<strong>999만원</strong>
+												<span class="street">200m<span class="dtbg arrow"></span></span>
+											</li>
+											<li onclick="#">
+												<em>[연립빌라]</em>
+												<span class="kind mm">매매</span>
+												<strong>9,999만원</strong>
+												<span class="street">200m<span class="dtbg arrow"></span></span>
+											</li>
+											<li onclick="#">
+												<em>[연립빌라]</em>
+												<span class="kind ws">월세</span>
+												<strong>99,999 / 9,999만원</strong>
+												<span class="street">200m<span class="dtbg arrow"></span></span>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<ul class="list">
+											<li onclick="#">
+												<em>[연립빌라]2</em>
+												<span class="kind mm">매매</span>
+												<strong>9,999만원</strong>
+												<span class="street">200m<span class="dtbg arrow"></span></span>
+											</li>
+											<li onclick="#">
+												<em>[연립빌라]</em>
+												<span class="kind zs">전세</span>
+												<strong>99,999 / 9,999만원</strong>
+												<span class="street">200m<span class="dtbg arrow"></span></span>
+											</li>
+											<li onclick="#">
+												<em>[연립빌라]</em>
+												<span class="kind ws">월세</span>
+												<strong>999만원</strong>
+												<span class="street">200m<span class="dtbg arrow"></span></span>
+											</li>
+											<li onclick="#">
+												<em>[연립빌라]</em>
+												<span class="kind mm">매매</span>
+												<strong>9,999만원</strong>
+												<span class="street">200m<span class="dtbg arrow"></span></span>
+											</li>
+											<li onclick="#">
+												<em>[연립빌라]</em>
+												<span class="kind ws">월세</span>
+												<strong>99,999 / 9,999만원</strong>
+												<span class="street">200m<span class="dtbg arrow"></span></span>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+
+							<!-- 학교정보 -->
+							<div class="btn_area">
+								<button type="button" class="btn_prev"><span class="fibg pg_l">이전 페이지</span></button>
+								<div id="count2"></div>
+								<button type="button" class="btn_next"><span class="fibg pg_r">다음 페이지</span></button>
+							</div>
+
+							<div class="top">학교정보</div>
+							<div class="sch_list">
+								<ul>
+									<li>서울 역삼초등학교<span class="street">200m</span></li>
+									<li>서울 역삼초등학교<span class="street">200m</span></li>
+									<li>서울 역삼초등학교<span class="street">200m</span></li>
+									<li>서울 역삼초등학교<span class="street">200m</span></li>
+									<li>서울 역삼초등학교<span class="street">200m</span></li>
+								</ul>
+							</div>
+
+							<div class="top">교통정보</div>
+							<div class="sch_list">
+								<ul>
+									<li>[지하철] 2호선 역삼역<span class="street">200m</span></li>
+									<li>[지하철] 2호선 역삼역<span class="street">200m</span></li>
+									<li>[지하철] 2호선 역삼역<span class="street">200m</span></li>
+									<li>[지하철] 2호선 역삼역<span class="street">200m</span></li>
+									<li>[지하철] 2호선 역삼역<span class="street">200m</span></li>
+								</ul>
+							</div>
+							<!-- //학교정보 -->
+						</div>
+					</div>
+					<!-- //Cont -->
+					<div class="unline"></div>
+				</div>
+				<!-- //위치 및 주변정보 -->
+
+				<!-- 중개사 정보 -->
+				<div class="dt_box last_b">
+					<div class="topb">
+						<span class="dtbg dt_ico_info"></span><span class="txt">중개사 정보</span>
+					</div>
+					<div class="info_tbl">
+						<table width="100%" border="0" cellpadding="0" cellspacing="0" summary="중개사 정보를 확인하세요.">
+							<caption>중개사 정보</caption>
+							<colgroup>
+								<col width="100">
+								<col width="*">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>중개업소</th>
+									<td>호수마을공인중개사</td>
+								</tr>
+								<tr>
+									<th>소재지</th>
+									<td>서울시 강북구 수유동</td>
+								</tr>
+								<tr>
+									<th>대표자명</th>
+									<td>김호수</td>
+								</tr>
+								<tr>
+									<th>연락처</th>
+									<td>010-1234-5678</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="explan">※ 본 정보는 게시자가 제공한 자료로, ㈜미디어윌벼룩시장에서는<br>그 내용에 대하여 책임을 지지 않습니다.</div>
+					</div>
+				</div>
+				<!-- //중개사 정보 -->
+
+				<!-- 버튼 -->
+				<div class="dt_bts">
+					<div class="fl">
+						<button type="button" class="btg">목록</button>
+					</div>
+					<div class="fr">
+						<button type="button" class="btg" onClick="location.href='#header'"><span class="fibg arrow"></span>맨위로</button>
+					</div>
+				</div>
+
+				<div class="btb_area btb_fix">
+					<button type="button" class="btb dtdtbtp"><span class="dtbg dt_ico_tel"></span>전화하기</button>
+					<button type="button" class="btb dtdtbtp"><span class="dtbg dt_ico_cus"></span>상담신청</button>
+				</div>
+				<!-- //버튼 -->
+
+				<!-- 광고가 종료되었을때 -->
+				<div class="noda" style="display:none;">
+					<img src="http://image.findall.co.kr/FAImage/M_Paper2/land2/content/detail_noda.png" alt="종료된 광고" class="detail_noda">
+					<div class="txt">종료된 광고입니다.</div>
+					<button type="button" class="detail_noda_bt">확인</button>
+				</div>
+				<!-- //광고가 종료되었을때 -->
+
+				<!-- 광고 -->
+				<div class="ad_box btb_pd">
+					<img src="http://image.findall.co.kr/FAImage/M_Paper2/land2/content/banner.jpg" alt="벼룩시장 구인구직 모바일웹 RENEWAL">
+				</div>
+				<!-- //광고 -->
+
+			</section>
+			<!-- //content -->
+			
+		</div>
+
+	</body>
+</html>

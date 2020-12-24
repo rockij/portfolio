@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="preload" href="../../resources/font/NotoSansKR-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link href="../../resources/css/font.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/base.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/site.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/yjh.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/swiper.min.css" media="screen" rel="stylesheet">
+<script src="../../resources/js/swiper.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<title>코인클럽 멤버십 | 화동양행</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header" class="fix top">
+        <button type="button" onclick="" class="btn_prev"><i>뒤로가기</i></button>
+        <button type="button" onclick="" class="btn_home"><i>처음으로가기</i></button>
+        <h1>코인클럽 멤버십</h1>
+        <button type="button" onclick="" class="btn_srch"><i>검색으로가기</i></button>
+        <button type="button" onclick="" class="btn_gnb"><i>메인메뉴열기</i></button>
+    </header>
+    <!-- //header -->
+
+	<div id="ct" class="customer-container">
+		<div class="content">
+			<div class="customer-box">
+				<h4 class="title_type3">신청방법</h4>
+				<ul class="list_type2 mt15 mb20">
+					<li>가입 신청 후 가입비 12,000원을 결제하시면 정회원 자격이 부여되고 안내 메일이 발송됩니다.</li>
+				</ul>
+				<h4 class="title_type3">정회원 혜택</h4>
+				<ul class="ico-lst ty3">
+					<li>결제금액 0.5% 적립금 제공</li>
+					<li>상품 구매 시 5% 할인</li>
+					<li>화동뉴스 정기 구독서비스 제공</li>
+					<li>화동 코인 캘린더 연 1회 증정</li>
+					<li>화동 뉴스레스 서비스 제공</li>
+				</ul>
+				<div class="care pt0">
+					<p>※ 주의사항</p>
+					<span class="txt-indnt01 fs12">- 옥션 상품의 경우 적립금 제공 및 상품금액 할인 제외</span>
+					<span class="txt-indnt01 fs12">- 코인 캘린더는 당해 년도 구입자 대상 연말에 내년도 코인 캘린더를 증정함</span>
+				</div>
+				<!-- <h4 class="title_type3 mt20">매입 상담 방법</h4>
+				<ul class="list_type2 mt15 mb20">
+					<li>이메일 또는 전화 상담 오프라인 접수<br/>매입 여부를 결정하는데 도움이 될 수 있도록 다음의 내용을 꼭 기술해 주세요.
+						<span class="txt-indnt02">※ 소장자의 성명과 연락처, 발행국가, 액면, 연도, 도안설명, 보존상태</span>
+					</li>
+				</ul> -->
+				<h4 class="title_type3 mt30 mb15">정회원 신청 내역</h4>
+				<div class="table_type v1">
+					<table>
+						<colgroup>
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">결제금액</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="fc_red">12,000원</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<ul class="list_ip_check type2 t3 mt15 mb20">
+					<li>
+						<div class="checkbox">
+							<input type="radio" name="payment" id="payment1" onclick="$('#deposit').hide(); $('#creditcard').show()" checked="">
+							<label for="payment1">신용카드</label>
+						</div>
+					</li>
+					<li>
+						<div class="checkbox">
+							<input type="radio" name="payment" id="payment2">
+							<label for="payment2">실시간 계좌이체</label>
+						</div>
+					</li>
+					<li>
+						<div class="checkbox">
+							<input type="radio" name="payment" id="payment3" onclick="$('#creditcard').hide(); $('#deposit').show()">
+							<label for="payment3">무통장 입금</label>
+						</div>
+					</li>
+				</ul>
+				<!-- 신용카드 -->
+				<div class="payment" id="creditcard" style="display:block">
+					<p class="cmtbox_type3">신청인은 코인클럽 멤버십 가입 및 결제에 동의 합니다.</p>
+					<button class="btn_r btn_type btn_btm_type">동의하고 회원가입</button>
+				</div>
+				<!-- 실시간 계좌이체 -->
+				<div class="payment" id="account" style="display:none">
+					실시간 계좌이체
+				</div>
+				<!-- 무통장 입금 -->
+				<div class="payment" id="deposit" style="display:none">
+					<div class="table_type">
+						<table>
+							<colgroup>
+								<col style="width:104px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">예금주</th>
+									<td>㈜풍산화동양행</td>
+								</tr>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="table_type v2 mt30">
+						<table>
+							<colgroup>
+								<col style="width:33.3%;">
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">은행정보</th>
+									<th scope="col" class="tl">계좌번호</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>국민은행</td>
+									<td class="tl">
+										<span class="checkbox circle">
+											<input type="radio" name="radio1" id="radio1-1" checked="checked">
+											<label for="radio1-1">484201-01-121839</label>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>우리은행</td>
+									<td class="tl">
+										<span class="checkbox circle">
+											<input type="radio" name="radio1" id="radio1-2">
+											<label for="radio1-2">414-316066-13-001</label>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>농협</td>
+									<td class="tl">
+										<span class="checkbox circle">
+											<input type="radio" name="radio1" id="radio1-3">
+											<label for="radio1-3">087-01-16716</label>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>우체국</td>
+									<td class="tl">
+										<span class="checkbox circle">
+											<input type="radio" name="radio1" id="radio1-4">
+											<label for="radio1-4">013227-01-00456</label>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>KEB 하나은행</td>
+									<td class="tl">
+										<span class="checkbox circle">
+											<input type="radio" name="radio1" id="radio1-5">
+											<label for="radio1-5">101-890045-15104</label>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>기업은행</td>
+									<td class="tl">
+										<span class="checkbox circle">
+											<input type="radio" name="radio1" id="radio1-6">
+											<label for="radio1-6">327-024342-01-015</label>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>신한은행</td>
+									<td class="tl">
+										<span class="checkbox circle">
+											<input type="radio" name="radio1" id="radio1-7">
+											<label for="radio1-7">140-007-759016</label>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<p class="cmtbox_type3 mt20">
+						무통장입금 결제 수단 사용 시 관리자가 별도 입금 확인<br/>
+						및 승인을 통해 추후 정회원으로 전환해 드립니다.<br/>
+						신청인은 코인클럽 멤버십 가입 및 결제에 동의 합니다.
+					</p>
+					<button class="btn_r btn_type btn_btm_type">동의하고 결제하기</button>
+				</div>
+			</div>
+		</div>
+	
+	</div> 
+	<!-- //content -->
+	
+	<footer id="footer">
+		<div class="navPrimary nf">
+			<span class="btn_o_s btn_type7 checkbox floating">
+				<input type="checkbox" id="floating_btn">
+				<label for="floating_btn">플로딩메뉴컨트롤</label>
+				<a href="#;" class="btn_o_s btn_type7 btn_qna"><i>Q&amp;A로이동</i></a>
+				<a href="#;" class="btn_o_s btn_type7 btn_like3"><i>위시리스트로이동</i></a>
+				<a href="#;" class="btn_o_s btn_type7 btn_lately"><i>최근본상품으로이동</i></a>
+			</span>
+			<button class="btn_o_s btn_type7 topGo"><i>TOP</i></button>
+		</div>
+		<!-- //nav -->
+		<ul class="menu">
+			<li><a href="#;">회사소개</a></li>
+			<li><a href="#;">개인정보처리방침</a></li>
+			<li><a href="#;">이용약관</a></li>
+		</ul>        
+		<div class="inner">
+			<strong class="lg">㈜풍산화동양행</strong>
+			<p class="cp">Copyright©Hwadong Co.,Ltd. All rights reserved.</p>
+			<button type="button" class="csControl"><i>고객센터열고닫기</i></button>
+			<div class="csarea" style="display: none;">
+				<strong class="tit">고객센터</strong>
+				고객센터 : 02-3491-4586~7(월~금 9시~18시 토/일 공휴일 휴무)<br>
+				FAX : 02-597-8741<br>
+				E-Mail : service@hwadong.com
+				<address>
+					대표이사 : 이제철 │ 개인정보관리책임자 : 김용호<br>
+					주소 : 서울시 서초구 효령로 351(서초동) 2F<br>
+					사업자등록번호 : 214-87-46644<br>
+					통신판매업신고 : 서울서초 제2004-03722호
+				</address>
+				<strong class="tit">소비자피해보상 보상보험<img src="../../resources/image/footer/logo_cm.gif" alt=""></strong>
+				고객님은 안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서<br>가입한 구매안전 서비스로 소비자 피해 보상보험 서비스를<br>이용하실 수 있습니다.
+			</div>
+			<a href="#;" class="pcVer">PC버전</a>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<script src="../../resources/js/jquery-1.12.4.js"></script>
+<script src="../../resources/js/design.js"></script>
+</body>
+</html>

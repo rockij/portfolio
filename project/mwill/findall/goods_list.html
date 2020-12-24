@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>벼룩시장</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="common/css/site.css">
+    <script src="../CDF/js/jquery-1.9.1.min.js"></script>
+    <script src="../CDF/js/design.js"></script>
+    <script src="common/js/design.js"></script>
+</head>
+
+<body>
+
+    <div id="Wrap">
+        <header id="Header">
+            <div class="logo_ar">
+                <h1><a href="#"><img src="http://image.findall.co.kr/FACache/m_paper_findall2/common/logo.png" alt="벼룩시장" class="logo"></a></h1>
+            </div>
+            <div class="search_ar">
+                <ul>
+                    <li class="s1">
+                        <select>
+                            <option>구인구직</option>
+                            <option>부동산</option>
+                            <option>자동차</option>
+                            <option>상품&서비스</option>
+                        </select>
+                    </li>
+                    <li class="s2"><input type="text" class="ip"></li>
+                    <li class="s3"><button type="button" class="bg_hd bt_search"><span>검색</span></button></li>
+                </ul>
+            </div>
+        </header>
+
+        <nav id="Nav">
+            <ul>
+                <li class="job"><a href="#">구인구직</a></li>
+                <li class="land"><a href="#">부동산</a></li>
+                <li class="car"><a href="#">자동차</a></li>
+                <li class="goods active"><a href="#">상품&서비스</a></li>
+            </ul>
+            <button type="button" class="bt_go">지역벼룩시장</button>
+        </nav>
+
+        <section id="Section">
+            <article class="sort_fm">
+                <div class="fm">
+                    <ul class="add_dist">
+                        <li><button type="button" class="select cut bt_area">시/도</button></li>
+                        <li><button type="button" class="select cut">시/구/군</button></li>
+                        <li><button type="button" class="select cut">동/읍/면</button></li>
+                    </ul>
+                    <ul class="add_dist">
+                        <li><button type="button" class="select cut">대분류(전체)</button></li>
+                        <li><button type="button" class="select cut">중분류(전체)</button></li>
+                        <li><button type="button" class="select cut">소분류(전체)</button></li>
+                    </ul>
+                </div>
+                <div class="bt">
+                    <button type="button" class="bt_type1 bt_search">검색</button>
+                </div>
+            </article>
+
+            <article class="dt_list all_list">
+                <div class="tit">
+                    <span class="txt">총 <strong>10,000</strong> 건</span>
+                    <select class="select">
+                        <option>최근순</option>
+                    </select>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li>
+                            <div class="info">
+                                <div class="brand cut">지붕개량 전문업체</div>
+                                <div class="pay cut">50 만원</div>
+                                <div class="model cut">
+                                    <span>서울 강남구 역삼동</span>
+                                    <span>대일상사</span>
+                                </div>
+                            </div>
+                            <div class="date">06.11(수)</div>
+                            <div class="photo"><img src="http://image.findall.co.kr/FACache/m_paper_findall2/cont/car_list_img.png" alt="기아 모닝"></div>
+                        </li>
+                        <li>
+                            <div class="info">
+                                <div class="brand cut">지붕개량 전문업체</div>
+                                <div class="pay cut">50 만원</div>
+                                <div class="model cut">
+                                    <span>서울 강남구 역삼동</span>
+                                    <span>대일상사</span>
+                                </div>
+                            </div>
+                            <div class="date">06.11(수)</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="paginate">
+                    <button type="button" class="bt_first"><span class="bg_pg bt_first_arrow"><span>첫 페이지</span></span></button>
+                    <button type="button" class="bt_prev"><span class="bg_pg bt_prev_arrow"><span>이전</span></span></button>
+                    <strong>1</strong>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <button type="button" class="bt_next"><span class="bg_pg bt_next_arrow"><span>다음</span></span></button>
+                    <button type="button" class="bt_last"><span class="bg_pg bt_last_arrow"><span>마지막 페이지</span></span></button>
+                </div>
+            </article>
+
+            <!-- 지역선택 Layer -->
+            <div class="formSt">
+            <div id="Area" class="area">
+                <div class="cont">
+                    <div class="tit">
+                        <span class="txt">지역선택</span>
+                        <button type="button" class="now_bt"><span class="bg_area_all now_ico"></span>현위치</button>
+                        <button type="button" class="bg_area_all close_bt"><span>닫기</span></button>
+                    </div>
+
+                    <div class="state">
+                        <div class="txt">업직종을 선택해 주세요.</div>
+                        <!-- 선택한 중분류 -->
+                        <div class="selected" style="display:none">섬유/의류/잡화<span class="bg_area_all del_bt"><span>삭제</span></span></div>
+                        <!-- //선택한 중분류 -->
+                        <button type="button" class="bt_type4 area_ok1_bt">완료</button>
+                    </div>
+
+                    <div class="step">
+                        <div class="left">
+                            <div class="noscroll">
+                                <ul class="teps1">
+                                    <li><span>대분류(전체)</span></li>
+                                    <li><span>요리/서빙</span></li>
+                                    <li><span>생산/기술<br>/건설</span></li>
+                                    <li><span>운전/배달</span></li>
+                                    <li><span>매장관리</span></li>
+                                    <li><span>일반서비스<br>/기타</span></li>
+                                    <li><span>간호/의료</span></li>
+                                    <li><span>사무/경리</span></li>
+                                    <li><span>상담/영업</span></li>
+                                    <li><span>교사/강사</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="noscroll">
+                                <div class="cate">
+                                    <ul class="teps2">
+                                        <li>
+                                            <span>중분류(전체)</span>
+                                            <ul class="teps3">
+                                                <li><span>소분류(전체)1</span></li>
+                                                <li><span>미싱사</span></li>
+                                                <li><span>오바사</span></li>
+                                                <li><span>재단사</span></li>
+                                                <li><span>자수사</span></li>
+                                                <li><span>검사자</span></li>
+                                                <li><span>시다</span></li>
+                                                <li><span>염색기사</span></li>
+                                                <li><span>원단관리</span></li>
+                                                <li><span>기타</span></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>제조/조립</span>
+                                            <ul class="teps3">
+                                                <li><span>소분류(전체)2</span></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>미싱/재단/섬유</span>
+                                            <ul class="teps3">
+                                                <li><span>소분류(전체)3</span></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>노무현장/조선소</span>
+                                            <ul class="teps3">
+                                                <li><span>소분류(전체)4</span></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>건설/공사/보수</span>
+                                            <ul class="teps3">
+                                                <li><span>소분류(전체)5</span></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>전기/시설관리</span>
+                                            <ul class="teps3">
+                                                <li><span>소분류(전체)6</span></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>배관/용접/취부/사상</span>
+                                            <ul class="teps3">
+                                                <li><span>소분류(전체)7</span></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>선반/밀링/머시닝</span>
+                                            <ul class="teps3">
+                                                <li><span>소분류(전체)8</span></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>식품제조/가공</span>
+                                            <ul class="teps3">
+                                                <li><span>소분류(전체)9</span></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>자동차정비/튜닝</span>
+                                            <ul class="teps3">
+                                                <li><span>소분류(전체)10</span></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>설치/수리</span>
+                                            <ul class="teps3">
+                                                <li><span>소분류(전체)11</span></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>생산/포장/검사</span>
+                                            <ul class="teps3">
+                                                <li><span>소분류(전체)12</span></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>가구/목공/주방</span>
+                                            <ul class="teps3">
+                                                <li><span>소분류(전체)13</span></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>금형/프레스/성형</span>
+                                            <ul class="teps3">
+                                                <li><span>소분류(전체)14</span></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>기타</span>
+                                            <ul class="teps3">
+                                                <li><span>소분류(전체)15</span></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="bt_area">
+                                    <button type="button" class="bt_type3 area_ok2_bt">완료</button>
+                                </div>
+
+                                <!-- 선택한 중분류가 없을 때 -->
+                                <div class="default" style="display:none;">
+                                    <span class="bg_area_all default_ico"></span>
+                                    <div class="txt">업직종을 선택해주세요.</div>
+                                </div>
+                                <!-- //선택한 중분류가 없을 때 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg"></div>
+            </div>
+            </div>
+            <!-- //지역선택 Layer -->
+        </section>
+
+        <footer id="Footer">
+            <div class="bt_ar">
+                <a href="#" class="bt_type2 bt_prev" style="width:60px"><span class="bg_foo ico_prev"></span>이전</a>
+                <a href="#" class="bt_type2 bt_top" style="width:60px"><span class="bg_foo ico_top"></span>맨위로</a>
+            </div>
+
+            <div class="bott_ar">
+                <ul>
+                    <li><a href="#">벼룩시장 홈</a></li>
+                    <li><a href="#">PC 버전</a></li>
+                    <li><a href="#">앱 다운로드</a></li>
+                    <li><a href="#">전체보기</a></li>
+                </ul>
+
+                <address>서울시 강남구 테헤란로7길 12, 8층(역삼동, 허바허바빌딩)<br>| 역삼동 648번지<br>(주)미디어윌벼룩시장 사업본부 대표 : 최인녕<br>사업자번호2068526551 직업정보제공 : 서울동부 제2008-9호
+                </address>
+
+                <p class="link_ar">
+                    <span>&copy;MediaWill.co., Ltd.</span>
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보취급방침</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>GSTIS 경북과학기술지식정보시스템</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="../common/js/design.js"></script>
+<link rel="stylesheet" type="text/css" href="../common/css/site.css" />
+</head>
+
+<!--[if IE 7]><body class="ie7"><![endif]-->
+<!--[if IE 8]><body class="ie8"><![endif]-->
+<!--[if IE 9]><body class="ie9"><![endif]-->
+<!--[if !IE]><!--><body><!--<![endif]-->
+
+<a href="#content" class="skip">컨텐츠 바로가기</a>
+<!-- //skip -->
+
+<div id="wrap">
+
+	<div id="header">
+		<div class="panel">
+			<div class="lnb">
+				<ul>
+				<li><a href="">HOME</a></li>
+				<li><a href="">로그인</a></li>
+				<li><a href="">회원가입</a></li>
+				<li><a href="">사이트맵</a></li>
+				<li class="n1"><a href="">통합관리시스템</a></li>
+				</ul>
+			</div>
+			<!-- //local navigation bar -->
+			<div class="gnb">
+				<h1><img src="../img/common/header_lg.gif" alt="GSTIS 경북과학기술지식정보시스템" /></h1>
+				<ul>
+				<li><a href="">GSTIS 소개</a></li>
+				<li><a href="">정보마당</a></li>
+				<li><a href="" class="selected">통계</a></li>
+				<li class="n1"><a href="">전체메뉴</a></li>
+				</ul>
+			</div>
+			<!-- //global navigation bar -->
+		</div>
+	</div>
+	<!-- //header -->
+
+	<div id="container">
+		
+		<div class="panel">
+
+			<div class="snb">
+				<h2>통계</h2>
+				<div id="menu_v" class="menu_v">
+					<ul>
+					<li class="active"><a href="#">국가 R&D 사업 통계</a></li>
+					<li><a href="#">지역 R&D 사업 조회</a></li>
+					<li><a href="#">R&D 사업 통계</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //side navigation bar -->
+
+			<div id="content">
+				<div class="path">Home&nbsp;&gt;&nbsp;통계&nbsp;&gt;&nbsp;<strong>국가 R&D 사업 통계</strong></div>
+				<h1>국가 R&D 사업 통계</h1>
+				<div class="chart_form">
+					<div class="inner">
+						<table summary="기준년도, 분류, 사업비 성격, 부처선택">
+							<colgroup>
+							<col style="width:84px;" />
+							<col style="width:*;" />
+							</colgroup>
+							<tr>
+							<th scope="row"><span>기준년도</span></th>
+							<td>
+								<div id="hp1" class="select select2" style="width:124px;">
+									<button type="button" class="my_value">2013</button>
+									<ul class="a_list"> 
+										<li><a href="#" onclick="">2013</a></li>
+										<li><a href="#" onclick="">2012</a></li>
+										<li><a href="#" onclick="">2011</a></li>
+									</ul>
+								</div>
+								<!-- //select -->
+							</td>
+							</tr>
+							<tr>
+							<th scope="row"><span>분류</span></th>
+							<td class="vamfix">
+								<ul class="chkLst">
+								<li><input type="checkbox" name="type" id="All" value="" /><label for="All">전체</label></li>
+								<li><input type="checkbox" name="type" id="type1" value="" /><label for="type1">사업건수</label></li>
+								<li><input type="checkbox" name="type" id="type2" value="" /><label for="type2">사업비</label></li>
+								</ul>
+							</td>
+							</tr>
+							<tr>
+							<th scope="row"><span>사업비 성격</span></th>
+							<td class="vamfix">
+								<ul class="chkLst">
+								<li><input type="checkbox" name="money" id="All" value="" /><label for="All">전체</label></li>
+								<li><input type="checkbox" name="money" id="money1" value="" /><label for="money1">지방비</label></li>
+								<li><input type="checkbox" name="money" id="money2" value="" /><label for="money2">민간</label></li>
+								</ul>
+							</td>
+							</tr>
+							<tr>
+							<th scope="row" class="vt"><span>부처선택</span></th>
+							<td class="vamfix">
+								<p class="chkLst3"><input type="checkbox" name="office" id="All" value="" /><label for="All">전체</label></p>
+								<ul class="chkLst2 ml0">								
+								<li><input type="checkbox" name="office" id="office1" value="" /><label for="office1">교육과학기술부</label></li>
+								<li><input type="checkbox" name="office" id="office6" value="" /><label for="office6">문화체육관광부</label></li>
+								<li><input type="checkbox" name="office" id="office11" value="" /><label for="office11">환경부</label></li>
+								<li><input type="checkbox" name="office" id="office16" value="" /><label for="office16">범부처</label></li>
+								</ul>
+								<ul class="chkLst2">
+								<li><input type="checkbox" name="office" id="office2" value="" /><label for="office2">국토해양부</label></li>
+								<li><input type="checkbox" name="office" id="office7" value="" /><label for="office7">산림청</label></li>
+								<li><input type="checkbox" name="office" id="office12" value="" /><label for="office12">한국기술산업진흥청</label></li>
+								<li><input type="checkbox" name="office" id="office17" value="" /><label for="office17">해양수산부</label></li>
+								</ul>
+								<ul class="chkLst2">
+								<li><input type="checkbox" name="office" id="office3" value="" /><label for="office3">기상청</label></li>
+								<li><input type="checkbox" name="office" id="office8" value="" /><label for="office8">식품의약품안전청</label></li>
+								<li><input type="checkbox" name="office" id="office13" value="" /><label for="office13">교육부</label></li>
+								<li><input type="checkbox" name="office" id="office18" value="" /><label for="office18">산업통상자원부</label></li>
+								</ul>
+								<ul class="chkLst2">
+								<li><input type="checkbox" name="office" id="office4" value="" /><label for="office4">농림수산식품부</label></li>
+								<li><input type="checkbox" name="office" id="office9" value="" /><label for="office9">중소기업청</label></li>
+								<li><input type="checkbox" name="office" id="office14" value="" /><label for="office14">국토교통부</label></li>
+								<li><input type="checkbox" name="office" id="office19" value="" /><label for="office19">농림축산식품부</label></li>
+								</ul>								
+								<ul class="chkLst2">
+								<li><input type="checkbox" name="office" id="office5" value="" /><label for="office5">농촌진흥청</label></li>
+								<li><input type="checkbox" name="office" id="office10" value="" /><label for="office10">지식경제부</label></li>
+								<li><input type="checkbox" name="office" id="office15" value="" /><label for="office15">미래창조과학부</label></li>
+								</ul>
+							</td>
+							</tr>
+						</table>
+					</div>
+					<div class="link">
+						<a href=""><img src="../img/common/btn_reset.gif" alt="초기화" /></a><a href=""><img src="../img/common/btn_srch2.gif" alt="검색" /></a>
+					</div>
+				</div>
+				<!-- //form -->
+				<ul class="chart_tab mt40">
+				<li><a href=""><img src="../img/common/ico_graph.gif" alt="" /></a></li>
+				<li><a href=""><img src="../img/common/ico_graph2.gif" alt="" /></a></li>
+				<li><a href=""><img src="../img/common/ico_graph3.gif" alt="" /></a></li>
+				</ul>
+				<div class="chart">
+					<img src="../img/@temp/chart_702x433.jpg" width="702" height="433" alt="" />
+				</div>
+				<!-- //chart -->
+				<p class="tr mt35">(단위 : 백만원)</p>
+				<div class="chart_tbl mt10">
+					<table summary="사업통계를 년도별로 확인할 수 있는 표입니다.">
+						<colgroup>
+						<col style="width:*;" />
+						<col style="width:122px;" />
+						<col style="width:122px;" />
+						<col style="width:122px;" />
+						<col style="width:122px;" />
+						<col style="width:122;" />
+						</colgroup>
+						<thead>
+						<tr>
+						<th scope="col">부처</th>
+						<th scope="col">2008</th>
+						<th scope="col">2009</th>
+						<th scope="col">2010</th>
+						<th scope="col">2011</th>
+						<th scope="col">2012</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+						<th scope="row">교육부</th>
+						<td><div>44,677</div></td>
+						<td><div>46,818</div></td>
+						<td><div>56,564</div></td>
+						<td><div>36,491</div></td>
+						<td><div>99,401</div></td>
+						</tr>		
+						<tr>
+						<th scope="row">합계</th>
+						<td><div>44,677</div></td>
+						<td><div>46,818</div></td>
+						<td><div>56,564</div></td>
+						<td><div>36,491</div></td>
+						<td><div>99,401</div></td>
+						</tr>		
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //content -->
+
+		</div>
+
+	</div>
+	<!-- //container -->
+
+	<div id="footer">
+		<ul>
+		<li><a href=""><img src="../img/common/footer_nav1.gif" alt="이용약관" /></a></li>
+		<li><a href=""><img src="../img/common/footer_nav2.gif" alt="개인정보취급방침" /></a></li>
+		<li><a href=""><img src="../img/common/footer_nav3.gif" alt="이메일주소무단수집거부" /></a></li>
+		</ul>
+		<address>
+			[730-853] 경상북도 구미시 산동면 첨단 기업1로 17 구미전자정보기술원 경북과학기술진흥센터<br/>
+			TEL 054-479-1804&nbsp;&nbsp;&nbsp;Fax 054-479-1810&nbsp;&nbsp;&nbsp;문의 E-Mail  gbsp@geri.re.kr<br/>
+			Copyright (c) 2014 GSTIS. All Right Reserved.
+		</address>
+		<a href="" class="btSitemap"><img src="../img/common/footer_sitemap.gif" alt="사이트맵" /></a>
+	</div>
+	<!-- //footer -->
+
+</div>
+
+</body>
+</html>

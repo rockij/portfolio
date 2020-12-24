@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta name="HandheldFriendly" content="true">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>서울시민카드</title>
+<link rel="stylesheet" type="text/css" href="../../resources/css/style.css">
+<script type="text/javascript" src="../../resources/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="../../resources/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../../resources/js/front_ui.js"></script>
+</head>
+<body>
+<a href="#container" accesskey="1" class="skip_area">메뉴건너뛰고 본문 바로가기</a>
+
+<div id="wrap">
+
+    <!-- 블록체인 통합인증서 발급안내 -->
+    <div id="mw-proof" class="ly_pop full ly_proof">
+        <div class="ly_content">
+            <header class="fix">
+                <h2>블록체인 통합인증서 발급안내</h2>
+                <button type="button" onclick="layer_close()" class="ly_close"><i class="iplus3">팝업닫기</i></button>
+            </header>
+            <div class="inner ly_cover">
+                <div class="txt">
+                    서울시민카드 보안인증이 강화되어<br>
+                    일부 서비스 및 PC통합인증을 이용하기 위해서는
+                    <p>본인인증 후 간편번호를 등록하시어<br>
+                    <span class="pot">블록체인 통합인증서</span>를 발급 받으셔야 합니다.</p>
+                </div>
+                <ul class="sort" data-type="미발급">
+                    <li>
+                        <figure class="fig1"></figure>
+                        블록체인 인증서
+                    </li>
+                    <li>
+                        <figure class="fig2"></figure>
+                        전자지갑주소
+                    </li>
+                </ul>
+                <button type="button" onclick="ayer_close()" class="btn_r_o btn_type2 skip">확인</button>
+            </div>
+        </div>
+    </div>
+    <!-- //블록체인 통합인증서 발급안내 -->
+
+</div>
+
+<script>
+    window.onload = function(){
+        layer_open('proof');
+    }
+</script>
+
+</body>
+</html>

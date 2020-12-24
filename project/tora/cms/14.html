@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="resources/css/common.css" media="screen" rel="stylesheet">
+<link href="resources/css/site.css" media="screen" rel="stylesheet">
+<script src="resources/js/jquery-1.11.1.min.js"></script>
+<script src="resources/js/design.js"></script>
+<!--[if lt IE 9]>
+<script src="resources/js/html5shiv.js"></script>
+<![endif]-->
+<title>Hackers SCM Portal</title>
+</head>
+<body>
+
+<div id="wrap">
+
+	<header>
+		<h1><a href="/"><img src="resources/images/logo.gif" alt="Hackers SCM Portal"></a></h1>
+		<a href="#;" class="btn_user"><span class="fc_blu">홍길동</span> 님</a>
+		<div id="gnb">
+			<ul>
+				<li><a href="#;">Home</a></li>
+				<li><a href="#;" class="active">발주</a></li>
+				<li><a href="#;">견적</a></li>
+				<li><a href="#;">입고</a></li>
+				<li><a href="#;">출고</a></li>
+				<li><a href="#;">재고</a></li>
+				<li><a href="#;">정산</a></li>
+				<li><a href="#;">미정</a></li>
+			</ul>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<div id="container">
+
+		<aside class="lnb">
+			<h2><a href="#;">견적 관리</a></h2>
+			<h2><a href="#;">개정 계획</a></h2>
+			<h2><a href="#;">교재 관리</a></h2>
+			<ul>
+				<li><a href="#;">교재 정보</a></li>
+				<li><a href="#;">교재 사양</a></li>
+			</ul>
+			<h2><a href="#;">개정 계획</a></h2>
+			<h2><a href="#;">교재별 발주일</a></h2>
+			<h2><a href="#;">그룹설정</a></h2>
+			<h2><a href="#;">발주량산정 관리</a></h2>
+			<h2><a href="#;" class="selected">업체 관리</a></h2>
+			<h2><a href="#;">용지 단가 관리</a></h2>
+			<ul>
+				<li><a href="#;">확인</a></li>
+				<li><a href="#;">고시가 수정</a></li>
+			</ul>
+			<h2><a href="#;">인쇄 사고 이력</a></h2>
+			<h2><a href="#;">인쇄소 분산</a></h2>
+			<h2><a href="#;">후가공 수정필름<br>청구 정보</a></h2>
+			<h2><a href="#;">회원 관리</a></h2>
+			<ul>
+				<li><a href="#;">개인 계정</a></li>
+				<li><a href="#;">법인 계정</a></li>
+			</ul>
+			<h2><a href="#;">권한 관리</a></h2>
+		</aside>
+		<!-- //left-navigation -->
+
+		<div id="ct">
+			<h2>업체 관리</h2>
+			<div class="path">관리 &gt; <span class="on">업체 관리</span></div>
+			<!-- //title -->
+			<div class="inner">
+				<hgroup class="title_type5 clear">
+					<h3 class="fc_blu f_l">업체명 업체명 업체명 업체명 업체명 업체명</h3>
+					<strong class="f_r">상태 : 승인</strong>
+				</hgroup>
+				<div class="clear mt10">
+					<ul class="ui_frm3 list_type v1 f_l mr10" style="width:210px">
+						<li><a href="#;">일반 정보</a></li>
+						<li><a href="#;">정산 정보</a></li>
+						<li><a href="#;">시설 정보</a></li>
+						<li><a href="#;" class="selected">거래 지종 정보</a></li>
+						<li><a href="#;">지점 정보</a></li>
+						<li><a href="#;">플랜트 정보</a></li>
+						<li><a href="#;">계정 정보</a></li>
+					</ul>
+					<!-- // -->
+					<section class="hidden ui_frm4">
+						<div class="clear title_type6">
+							<h4 class="f_l mt7">거래 지종 정보 <span class="stxt">(최근 수정일 : 2017-10-31)</span></h4>
+							<button type="button" onclick="" class="btn_m btn_type f_r">수정 완료</button>
+						</div>
+						<div class="article">
+							<fieldset class="tbl_type" style="width:337px">
+								<legend></legend>
+								<table>
+									<colgroup>
+										<col style="width:19.5%;">
+										<col style="width:28%;">
+										<col style="width:32%;">
+										<col>
+									</colgroup>
+									<thead>
+										<tr class="spce">
+											<th scope="col">No</th>
+											<th scope="col">지종</th>
+											<th scope="col">제지사</th>
+											<th scope="col"><button type="button" onclick=""><img src="resources/images/btn_plus.gif" alt="추가"></button></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="spce2">
+											<td>1</td>
+											<td>
+												<span class="select">
+													<label for="step1">지종 선택</label>
+													<select name="step1" id="step1">
+														<option value="1">지종 선택</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select">
+													<label for="step2">제지사 선택</label>
+													<select name="step2" id="step2">
+														<option value="1">제지사 선택</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td><button type="button" onclick=""><img src="resources/images/btn_minus.gif" alt="삭제"></button></td>
+										</tr>
+										<tr class="spce2">
+											<td>2</td>
+											<td>
+												<span class="select">
+													<label for="step1">지종 선택</label>
+													<select name="step1" id="step1">
+														<option value="1">지종 선택</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select">
+													<label for="step2">제지사 선택</label>
+													<select name="step2" id="step2">
+														<option value="1">제지사 선택</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td><button type="button" onclick=""><img src="resources/images/btn_minus.gif" alt="삭제"></button></td>
+										</tr>
+										<tr class="spce2">
+											<td>3</td>
+											<td>
+												<span class="select">
+													<label for="step1">지종 선택</label>
+													<select name="step1" id="step1">
+														<option value="1">지종 선택</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select">
+													<label for="step2">제지사 선택</label>
+													<select name="step2" id="step2">
+														<option value="1">제지사 선택</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td><button type="button" onclick=""><img src="resources/images/btn_minus.gif" alt="삭제"></button></td>
+										</tr>
+									</tbody>
+								</table>
+							</fieldset>
+							<!-- // -->
+							<fieldset class="tbl_type mt10">
+								<legend></legend>
+								<table>
+									<colgroup>
+										<col style="width:6%;">
+										<col style="width:17.5%;">
+										<col style="width:17.5%;">
+										<col style="width:17.5%;">
+										<col style="width:17.5%;">
+										<col style="width:17.5%;">
+										<col>
+									</colgroup>
+									<thead>
+										<tr class="spce">
+											<th scope="col">No</th>
+											<th scope="col">지종</th>
+											<th scope="col">컬러</th>
+											<th scope="col">평량</th>
+											<th scope="col">규격</th>
+											<th scope="col">단가</th>
+											<th scope="col"><button type="button" onclick=""><img src="resources/images/btn_plus.gif" alt="추가"></button></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="spce3">
+											<td>1</td>
+											<td>
+												<span class="select block">
+													<label for="">모조지</label>
+													<select name="" id="">
+														<option value="1">모조지</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">백색</label>
+													<select name="" id="">
+														<option value="1">백색</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">70G</label>
+													<select name="" id="">
+														<option value="1">70G</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">788*545</label>
+													<select name="" id="">
+														<option value="1">788*545</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">10,000</label>
+													<select name="" id="">
+														<option value="1">10,000</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td><button type="button" onclick=""><img src="resources/images/btn_minus.gif" alt="삭제"></button></td>
+										</tr>
+										<tr class="spce3">
+											<td>2</td>
+											<td>
+												<span class="select block">
+													<label for="">모조지</label>
+													<select name="" id="">
+														<option value="1">모조지</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">백색</label>
+													<select name="" id="">
+														<option value="1">백색</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">70G</label>
+													<select name="" id="">
+														<option value="1">70G</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">788*545</label>
+													<select name="" id="">
+														<option value="1">788*545</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">10,000</label>
+													<select name="" id="">
+														<option value="1">10,000</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td><button type="button" onclick=""><img src="resources/images/btn_minus.gif" alt="삭제"></button></td>
+										</tr>
+										<tr class="spce3">
+											<td>3</td>
+											<td>
+												<span class="select block">
+													<label for="">모조지</label>
+													<select name="" id="">
+														<option value="1">모조지</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">백색</label>
+													<select name="" id="">
+														<option value="1">백색</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">70G</label>
+													<select name="" id="">
+														<option value="1">70G</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">788*545</label>
+													<select name="" id="">
+														<option value="1">788*545</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">10,000</label>
+													<select name="" id="">
+														<option value="1">10,000</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td><button type="button" onclick=""><img src="resources/images/btn_minus.gif" alt="삭제"></button></td>
+										</tr>
+										<tr class="spce3">
+											<td>4</td>
+											<td>
+												<span class="select block">
+													<label for="">모조지</label>
+													<select name="" id="">
+														<option value="1">모조지</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">백색</label>
+													<select name="" id="">
+														<option value="1">백색</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">70G</label>
+													<select name="" id="">
+														<option value="1">70G</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">788*545</label>
+													<select name="" id="">
+														<option value="1">788*545</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">10,000</label>
+													<select name="" id="">
+														<option value="1">10,000</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td><button type="button" onclick=""><img src="resources/images/btn_minus.gif" alt="삭제"></button></td>
+										</tr>
+										<tr class="spce3">
+											<td>5</td>
+											<td>
+												<span class="select block">
+													<label for="">모조지</label>
+													<select name="" id="">
+														<option value="1">모조지</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">백색</label>
+													<select name="" id="">
+														<option value="1">백색</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">70G</label>
+													<select name="" id="">
+														<option value="1">70G</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">788*545</label>
+													<select name="" id="">
+														<option value="1">788*545</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">10,000</label>
+													<select name="" id="">
+														<option value="1">10,000</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td><button type="button" onclick=""><img src="resources/images/btn_minus.gif" alt="삭제"></button></td>
+										</tr>
+										<tr class="spce3">
+											<td>6</td>
+											<td>
+												<span class="select block">
+													<label for="">모조지</label>
+													<select name="" id="">
+														<option value="1">모조지</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">백색</label>
+													<select name="" id="">
+														<option value="1">백색</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">70G</label>
+													<select name="" id="">
+														<option value="1">70G</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">788*545</label>
+													<select name="" id="">
+														<option value="1">788*545</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">10,000</label>
+													<select name="" id="">
+														<option value="1">10,000</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td><button type="button" onclick=""><img src="resources/images/btn_minus.gif" alt="삭제"></button></td>
+										</tr>
+										<tr class="spce3">
+											<td>7</td>
+											<td>
+												<span class="select block">
+													<label for="">모조지</label>
+													<select name="" id="">
+														<option value="1">모조지</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">백색</label>
+													<select name="" id="">
+														<option value="1">백색</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">70G</label>
+													<select name="" id="">
+														<option value="1">70G</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">788*545</label>
+													<select name="" id="">
+														<option value="1">788*545</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">10,000</label>
+													<select name="" id="">
+														<option value="1">10,000</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td><button type="button" onclick=""><img src="resources/images/btn_minus.gif" alt="삭제"></button></td>
+										</tr>
+										<tr class="spce3">
+											<td>8</td>
+											<td>
+												<span class="select block">
+													<label for="">모조지</label>
+													<select name="" id="">
+														<option value="1">모조지</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">백색</label>
+													<select name="" id="">
+														<option value="1">백색</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">70G</label>
+													<select name="" id="">
+														<option value="1">70G</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">788*545</label>
+													<select name="" id="">
+														<option value="1">788*545</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">10,000</label>
+													<select name="" id="">
+														<option value="1">10,000</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td><button type="button" onclick=""><img src="resources/images/btn_minus.gif" alt="삭제"></button></td>
+										</tr>
+										<tr class="spce3">
+											<td>9</td>
+											<td>
+												<span class="select block">
+													<label for="">모조지</label>
+													<select name="" id="">
+														<option value="1">모조지</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">백색</label>
+													<select name="" id="">
+														<option value="1">백색</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">70G</label>
+													<select name="" id="">
+														<option value="1">70G</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">788*545</label>
+													<select name="" id="">
+														<option value="1">788*545</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">10,000</label>
+													<select name="" id="">
+														<option value="1">10,000</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td><button type="button" onclick=""><img src="resources/images/btn_minus.gif" alt="삭제"></button></td>
+										</tr>
+										<tr class="spce3">
+											<td>10</td>
+											<td>
+												<span class="select block">
+													<label for="">모조지</label>
+													<select name="" id="">
+														<option value="1">모조지</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">백색</label>
+													<select name="" id="">
+														<option value="1">백색</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">70G</label>
+													<select name="" id="">
+														<option value="1">70G</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">788*545</label>
+													<select name="" id="">
+														<option value="1">788*545</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td>
+												<span class="select block">
+													<label for="">10,000</label>
+													<select name="" id="">
+														<option value="1">10,000</option>
+														<option value="2">1</option>
+													</select>
+												</span>
+											</td>
+											<td><button type="button" onclick=""><img src="resources/images/btn_minus.gif" alt="삭제"></button></td>
+										</tr>
+									</tbody>
+								</table>
+							</fieldset>
+							<!-- // -->
+						</div>
+					</section>
+					<!-- //거래 지종 정보 -->
+				</div>
+			</div>
+		</div>
+		<!-- //content -->
+
+	</div>
+	<!-- //container -->
+
+</div>
+
+</body>
+</html>

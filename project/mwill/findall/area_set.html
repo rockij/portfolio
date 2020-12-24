@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>벼룩시장</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="common/css/site.css">
+    <script src="../CDF/js/jquery-1.9.1.min.js"></script>
+    <script src="../CDF/js/design.js"></script>
+    <script src="common/js/design.js"></script>
+</head>
+
+<body>
+
+    <div id="Wrap">
+        <header id="Header">
+            <div class="logo_ar">
+                <h1><a href="#"><img src="http://image.findall.co.kr/FACache/m_paper_findall2/common/logo.png" alt="벼룩시장" class="logo"></a></h1>
+            </div>
+            <div class="search_ar">
+                <ul>
+                    <li class="s1">
+                        <select>
+                            <option>구인구직</option>
+                            <option>부동산</option>
+                            <option>자동차</option>
+                            <option>상품&서비스</option>
+                        </select>
+                    </li>
+                    <li class="s2"><input type="text" class="ip"></li>
+                    <li class="s3"><button type="button" class="bg_hd bt_search"><span>검색</span></button></li>
+                </ul>
+            </div>
+        </header>
+
+        <nav id="Nav">
+            <ul>
+                <li class="job"><a href="#">구인구직</a></li>
+                <li class="land"><a href="#">부동산</a></li>
+                <li class="car"><a href="#">자동차</a></li>
+                <li class="goods"><a href="#">상품&서비스</a></li>
+            </ul>
+            <button type="button" class="bt_go">지역벼룩시장</button>
+        </nav>
+
+        <section id="Section">
+            <article class="ad_pp">
+                <h2>지역 벼룩시장</h2>선택하신 발행지역의 벼룩시장 신문을 조회하실 수 있습니다.
+            </article>
+
+            <article class="hsec">
+                <h3 class="hsec_tit"><span>관심</span> 벼룩시장</h3>
+                <!-- [D] 지역 설정 전
+                <p class="hsec_mss">관심 설정한 지역 신문 벼룩시장이 없습니다.</p> -->
+                <!-- [D] 지역 설정 후 -->
+                <p class="hsec_lst"><a href="">강북</a><a href="">동작</a><a href="">부산</a><a href="">의정부</a></p>
+                <a href="#" id="areasetbtn" class="btn_pac btns1">설정<span class="imsc imsc_bu"></span></a>
+            </article>
+
+            <div id="setvw" class="slct_area" style="display:none">
+                <fieldset>
+                    <legend>관심 벼룩시장 선택</legend>
+                    <!-- [D] selectbox 선택시 selected 클래스 추가해주세요 -->
+                    <ul>
+                    <li>
+                        <select class="select selected">
+                            <option>경남/부산</option>
+                            <option></option>
+                        </select>
+                    </li>
+                    <li>
+                        <select class="select selected">
+                            <option>부산 벼룩시장</option>
+                            <option></option>
+                        </select>
+                    </li>
+                    <li><button id="slct_del" type="button" class="btn_pac btns2" onmouseover="">삭제</button></li>
+                    </ul>
+                    <ul>
+                    <li>
+                        <select class="select selected">
+                            <option>전라</option>
+                            <option></option>
+                        </select>
+                    </li>
+                    <li>
+                        <select class="select selected">
+                            <option>전주 벼룩시장</option>
+                            <option></option>
+                        </select>
+                    </li>
+                    <li><button id="slct_del" type="button" class="btn_pac btns2" onmouseover="">삭제</button></li>
+                    </ul>
+                    <ul>
+                    <li>
+                        <select class="select selected">
+                            <option>전라</option>
+                            <option></option>
+                        </select>
+                    </li>
+                    <li>
+                        <select class="select selected">
+                            <option>전주 벼룩시장</option>
+                            <option></option>
+                        </select>
+                    </li>
+                    <li><button id="slct_del" type="button" class="btn_pac btns2" onmouseover="">삭제</button></li>
+                    </ul>
+                    <ul>
+                    <li>
+                        <select class="select">
+                            <option>서울</option>
+                            <option></option>
+                        </select>
+                    </li>
+                    <li>
+                        <select class="select">
+                            <option>강동 벼룩시장</option>
+                            <option></option>
+                        </select>
+                    </li>
+                    <li>&nbsp;</li>
+                    </ul>
+                    <div class="btnate"><button id="slct_del" type="button" class="btn_pac btns3" style="width:80%" onmouseover="">확&nbsp;&nbsp;&nbsp;인</button></div>
+                </fieldset>
+            </div>
+
+            <div id="areainter" class="lst_section">
+                <ul class="tab">
+                    <li><a href="#">서울<span class="clse"></span></a></li>
+                    <li><a href="#">경기/인천<span class="clse"></span></a></li>
+                </ul>
+                <div class="cityset">
+                    <div>
+                        <ul>
+                            <li>
+                                <strong>강남 벼룩시장</strong>
+                                <p><span>강남</span><span>서초</span><span>과천</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><em class="imsc imsc_heart"></em>관심</a>
+                                <a href="#"><em class="imsc imsc_site"></em>사이트</a>
+                                <a href="#"><em class="imsc imsc_view"></em>신문보기</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <strong>강남 벼룩시장</strong>
+                                <p><span>강남</span><span>서초</span><span>과천</span><span>성북</span></p>
+                            </li>
+                            <li>
+                                <a href="#" class="selected"><em class="imsc imsc_heart"></em>관심</a>
+                                <a href="#"><em class="imsc imsc_site"></em>사이트</a>
+                                <a href="#"><em class="imsc imsc_view"></em>신문보기</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//서울 -->
+                    <div>
+                        <ul>
+                            <li>
+                                <strong>성남 벼룩시장</strong>
+                                <p><span>성남</span><span>서초</span><span>과천</span></p>
+                            </li>
+                            <li>
+                                <a href="#" class="selected"><em class="imsc imsc_heart"></em>관심</a>
+                                <a href="#"><em class="imsc imsc_site"></em>사이트</a>
+                                <a href="#"><em class="imsc imsc_view"></em>신문보기</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <strong>연수 벼룩시장</strong>
+                                <p><span>연수</span><span>서초</span><span>과천</span><span>성북</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><em class="imsc imsc_heart"></em>관심</a>
+                                <a href="#"><em class="imsc imsc_site"></em>사이트</a>
+                                <a href="#"><em class="imsc imsc_view"></em>신문보기</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //경기/인천 -->
+                </div>
+                <ul class="tab">
+                <li><a href="">경남/부산<span class="clse"></span></a></li>
+                <li><a href="">경북/대구<span class="clse"></span></a></li>
+                </ul>
+                <div class="cityset">
+                    <div>
+                        <ul>
+                            <li>
+                                <strong>강남 벼룩시장</strong>
+                                <p><span>강남</span><span>서초</span><span>과천</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><em class="imsc imsc_heart"></em>관심</a>
+                                <a href="#"><em class="imsc imsc_site"></em>사이트</a>
+                                <a href="#"><em class="imsc imsc_view"></em>신문보기</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <strong>강남 벼룩시장</strong>
+                                <p><span>강남</span><span>서초</span><span>과천</span><span>성북</span></p>
+                            </li>
+                            <li>
+                                <a href="#" class="selected"><em class="imsc imsc_heart"></em>관심</a>
+                                <a href="#"><em class="imsc imsc_site"></em>사이트</a>
+                                <a href="#"><em class="imsc imsc_view"></em>신문보기</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //경남/부산 -->
+                    <div>
+                        <ul>
+                            <li>
+                                <strong>성남 벼룩시장</strong>
+                                <p><span>성남</span><span>서초</span><span>과천</span></p>
+                            </li>
+                            <li>
+                                <a href="#" class="selected"><em class="imsc imsc_heart"></em>관심</a>
+                                <a href="#"><em class="imsc imsc_site"></em>사이트</a>
+                                <a href="#"><em class="imsc imsc_view"></em>신문보기</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <strong>연수 벼룩시장</strong>
+                                <p><span>연수</span><span>서초</span><span>과천</span><span>성북</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><em class="imsc imsc_heart"></em>관심</a>
+                                <a href="#"><em class="imsc imsc_site"></em>사이트</a>
+                                <a href="#"><em class="imsc imsc_view"></em>신문보기</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //경북/대구 -->
+                </div>
+                <ul class="tab">
+                <li><a href="">전라<span class="clse"></span></a></li>
+                <li><a href="">충청<span class="clse"></span></a></li>
+                </ul>
+                <div class="cityset">
+                    <div>
+                        <ul>
+                            <li>
+                                <strong>강남 벼룩시장</strong>
+                                <p><span>강남</span><span>서초</span><span>과천</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><em class="imsc imsc_heart"></em>관심</a>
+                                <a href="#"><em class="imsc imsc_site"></em>사이트</a>
+                                <a href="#"><em class="imsc imsc_view"></em>신문보기</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <strong>강남 벼룩시장</strong>
+                                <p><span>강남</span><span>서초</span><span>과천</span><span>성북</span></p>
+                            </li>
+                            <li>
+                                <a href="#" class="selected"><em class="imsc imsc_heart"></em>관심</a>
+                                <a href="#"><em class="imsc imsc_site"></em>사이트</a>
+                                <a href="#"><em class="imsc imsc_view"></em>신문보기</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //전라 -->
+                    <div>
+                        <ul>
+                            <li>
+                                <strong>성남 벼룩시장</strong>
+                                <p><span>성남</span><span>서초</span><span>과천</span></p>
+                            </li>
+                            <li>
+                                <a href="#" class="selected"><em class="imsc imsc_heart"></em>관심</a>
+                                <a href="#"><em class="imsc imsc_site"></em>사이트</a>
+                                <a href="#"><em class="imsc imsc_view"></em>신문보기</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <strong>연수 벼룩시장</strong>
+                                <p><span>연수</span><span>서초</span><span>과천</span><span>성북</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><em class="imsc imsc_heart"></em>관심</a>
+                                <a href="#"><em class="imsc imsc_site"></em>사이트</a>
+                                <a href="#"><em class="imsc imsc_view"></em>신문보기</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //충청 -->
+                </div>
+                <ul class="tab">
+                <li><a href="">강원<span class="clse"></span></a></li>
+                <li>&nbsp;</li>
+                </ul>
+                <div class="cityset">
+                    <div>
+                        <ul>
+                            <li>
+                                <strong>강남 벼룩시장</strong>
+                                <p><span>강남</span><span>서초</span><span>과천</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><em class="imsc imsc_heart"></em>관심</a>
+                                <a href="#"><em class="imsc imsc_site"></em>사이트</a>
+                                <a href="#"><em class="imsc imsc_view"></em>신문보기</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <strong>강남 벼룩시장</strong>
+                                <p><span>강남</span><span>서초</span><span>과천</span><span>성북</span></p>
+                            </li>
+                            <li>
+                                <a href="#" class="selected"><em class="imsc imsc_heart"></em>관심</a>
+                                <a href="#"><em class="imsc imsc_site"></em>사이트</a>
+                                <a href="#"><em class="imsc imsc_view"></em>신문보기</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //강원 -->
+                    <div>
+                        <ul>
+                            <li>
+                                <strong>성남 벼룩시장</strong>
+                                <p><span>성남</span><span>서초</span><span>과천</span></p>
+                            </li>
+                            <li>
+                                <a href="#" class="selected"><em class="imsc imsc_heart"></em>관심</a>
+                                <a href="#"><em class="imsc imsc_site"></em>사이트</a>
+                                <a href="#"><em class="imsc imsc_view"></em>신문보기</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <strong>연수 벼룩시장</strong>
+                                <p><span>연수</span><span>서초</span><span>과천</span><span>성북</span></p>
+                            </li>
+                            <li>
+                                <a href="#"><em class="imsc imsc_heart"></em>관심</a>
+                                <a href="#"><em class="imsc imsc_site"></em>사이트</a>
+                                <a href="#"><em class="imsc imsc_view"></em>신문보기</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //제주 -->
+                </div>
+            </div>
+        </section>
+
+        <footer id="Footer">
+            <div class="bt_ar">
+                <a href="#" class="bt_type2 bt_prev" style="width:60px"><span class="bg_foo ico_prev"></span>이전</a>
+                <a href="#" class="bt_type2 bt_top" style="width:60px"><span class="bg_foo ico_top"></span>맨위로</a>
+            </div>
+
+            <div class="bott_ar">
+                <ul>
+                    <li><a href="#">벼룩시장 홈</a></li>
+                    <li><a href="#">PC 버전</a></li>
+                    <li><a href="#">앱 다운로드</a></li>
+                    <li><a href="#">전체보기</a></li>
+                </ul>
+
+                <address>서울시 강남구 테헤란로7길 12, 8층(역삼동, 허바허바빌딩)<br>| 역삼동 648번지<br>(주)미디어윌벼룩시장 사업본부 대표 : 최인녕<br>사업자번호2068526551 직업정보제공 : 서울동부 제2008-9호
+                </address>
+
+                <p class="link_ar">
+                    <span>&copy;MediaWill.co., Ltd.</span>
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보취급방침</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

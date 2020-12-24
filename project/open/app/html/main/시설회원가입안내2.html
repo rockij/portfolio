@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta name="HandheldFriendly" content="true">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- <title>서울시민카드</title> -->
+<link rel="stylesheet" type="text/css" href="../../resources/css/style.css">
+<script type="text/javascript" src="../../resources/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="../../resources/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../../resources/js/front_ui.js"></script>
+</head>
+<body>
+<a href="#container" accesskey="1" class="skip_area">메뉴건너뛰고 본문 바로가기</a>
+
+<div id="wrap">
+
+    <!-- 시설회원가입안내::현장발급이필요없는시설 -->
+    <div id="mw-joinsystem" class="ly_pop full ly_joinsystem">
+        <div class="ly_content">
+            <header class="fix">
+                <h2>카드 등록 안내</h2>
+                <button type="button" onclick="layer_close()" class="ly_close"><i class="iplus3">팝업닫기</i></button>
+            </header>
+            <div class="inner ly_cover iscroll">
+                <h3><strong>00000 시설</strong><br>회원이 아니세요?</h3>
+                <ul class="infolst t2">
+                    <li><figure><i class="icon icon1"></i></figure>시설홈페이지에서<br>회원가입</li>
+                    <li><figure><i class="icon icon3"></i></figure>서울시민카드앱에서<br>시설카드추가</li>
+                </ul>
+                <ol class="txtlst">
+                    <li>시설 홈페이지에서 회원 가입<a href="#;" class="btn_join"><i class="iarr2"></i>회원 가입 페이지 가기</a></li>
+                    <li>시설에 방문하여 안내 데스크에서 시설 카드 발급</li>
+                    <li>서울시민카드 앱에서 “시설카드 추가” 클릭</li>
+                </ol>
+                <div class="caubx">
+                    <h4>이미 00000 시설카드가 있다면?</h4>
+                    00000 시설에 등록하신 성명, 생년월일, 휴대폰번호가 서울시민카드 등록 가입 정보와 일치해야 합니다.<br>
+                    시설에 문의하여 회원등록 정보를 확인해주세요.<br>
+                    성명 : 홍길동 / 생년월일 : 1852.12.15 / 휴대폰번호 : 010-1234-5678<br>
+                    <p class="cs"><i class="icon"></i>02-1234-5678 <a href="#;">시설에문의하기</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //시설회원가입안내 -->
+
+</div>
+
+<script>
+    window.onload = function(){
+        layer_open('joinsystem');
+    }
+</script>
+
+</body>
+</html>

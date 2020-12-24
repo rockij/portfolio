@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="preload" href="../../resources/font/NotoSansKR-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link href="../../resources/css/font.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/base.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/site.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/yjh.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/swiper.min.css" media="screen" rel="stylesheet">
+<script src="../../resources/js/swiper.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<title>통합검색 | 화동양행</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header">
+        <button type="button" onclick="" class="btn_prev"><i>뒤로가기</i></button>
+        <button type="button" onclick="" class="btn_home"><i>처음으로가기</i></button>
+        <h1>타이틀</h1>
+        <button type="button" onclick="layer_open('search')" class="btn_srch"><i>검색으로가기</i></button>
+        <button type="button" onclick="" class="btn_gnb"><i>메인메뉴열기</i></button>
+    </header>
+    <!-- //header -->
+
+    <div id="ct">
+
+    </div>
+    <!-- //content -->
+
+ 
+    <!-- popup -->
+    <div id="search" class="ly_pop full srh-container" style="display:block;">
+		<div class="wrap-layer">
+			<header>
+				<h2>통합검색</h2>
+				<button type="button" onclick="layer_close();" class="popcls"><i>팝업닫기</i></button>
+			</header>
+			<div class="cont-layer">
+
+				<ul class="tab_basic tab tab-fix">
+					<li class="active"><a href="#tab01">상품</a></li>
+					<li><a href="#tab02">옥션</a></li>
+					<li><a href="#tab03">매거진</a></li>
+					<li><a href="#tab04">화폐정보</a></li>
+				</ul>
+
+				<div id="tab01" class="tab-cont">
+
+					<h4 class="title_type3 pt0">상품명</h4>
+					<div class="ipbox del">
+						<input type="text" id="" placeholder="상품명을 입력하세요.">
+						<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+					</div>
+					
+					<div class="box-prd-search">
+						<h4 class="title_type3">국가별</h4>
+						<dl>
+							<dd class="multiple-sel">
+								<dl>
+									<dt class="title_type4">국가 찾기</dt>
+									<dd>
+										<input type="text" id="nation01" placeholder="검색어를 입력하세요">
+										<ul class="keyword-list">
+											<li class="on"><a href="#none">AFGHANITAN</a></li>
+											<li><a href="#none">ALBANIA</a></li>
+											<li><a href="#none">ALDERNEY</a></li>
+											<li><a href="#none">AMERICAN SAMOA</a></li>
+											<li><a href="#none">NADORRA</a></li>
+											<li><a href="#none">ANGOLA</a></li>
+											<li><a href="#none">ANGUILLA</a></li><!-- 19.05.28 -->
+											<li><a href="#none">ANTARCTICA</a></li>
+											<li><a href="#none">ANTIGUA&BARBUDA</a></li>
+											<li><a href="#none">ARMENIA</a></li>
+											<li><a href="#none">AFGHANITAN</a></li>
+											<li><a href="#none">ALBANIA</a></li>
+											<li><a href="#none">ALDERNEY</a></li>
+											<li><a href="#none">AMERICAN SAMOA</a></li>
+											<li><a href="#none">NADORRA</a></li>
+											<li><a href="#none">ANGOLA</a></li>
+											<li><a href="#none">ANGUILLA</a></li><!-- 19.05.28 -->
+											<li><a href="#none">ANTARCTICA</a></li>
+											<li><a href="#none">ANTIGUA&BARBUDA</a></li>
+											<li><a href="#none">ARMENIA</a></li>
+										</ul>
+									</dd>
+								</dl>
+
+								<div class="btn-box">
+									<button class="btn_m btn_type btn_plus">추가</button>
+									<button class="btn_m btn_type2 btn_del">삭제</button>
+								</div>
+
+								<dl>
+									<dt class="title_type4">국가 입력</dt>
+									<dd>
+										<input type="text" id="nation02" placeholder="검색어를 입력하세요">
+										<ul class="keyword-list">
+											<li class="on"><a href="#none">AFGHANITAN</a></li>
+											<li><a href="#none">ALBANIA</a></li>
+										</ul>
+									</dd>
+								</dl>
+							</dd>
+						</dl>
+						
+						<dl>
+							<dt class="title_type3">시대별</dt>
+							<dd>
+								<ul class="list_ip_check type t3">
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category1"><label for="category1">전체</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category2" checked=""><label for="category2">고대</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category3"><label for="category3">중세</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category4"><label for="category4">근대 Ⅰ</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category5"><label for="category5">근대 Ⅱ</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category6"><label for="category6">현대</label></div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+
+						<dl>
+							<dt class="title_type3">소재별</dt>
+							<dd>
+								<ul class="list_ip_check type t3">
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category7"><label for="category7">전체</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category8" checked=""><label for="category8">금</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category9"><label for="category9">은</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category10"><label for="category10">동</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category11"><label for="category11">다중소재</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category12"><label for="category12">기타</label></div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+
+						<dl>
+							<dt class="title_type3">주제별</dt>
+							<dd>
+								<ul class="list_ip_check type t3">
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category13"><label for="category13">전체</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category14" checked=""><label for="category14">인물</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category15"><label for="category15">월드컵</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category16"><label for="category16">운송수단</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category17"><label for="category17">예술/문화</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category18"><label for="category18">십이간지</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category18"><label for="category19">색체</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category20"><label for="category20">올림픽</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category21"><label for="category21">스포츠</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category22"><label for="category22">동식물</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category23"><label for="category23">종교</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category24"><label for="category24">역사</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category25"><label for="category25">특이모양</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category26"><label for="category26">대형</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category27"><label for="category27">현행</label></div>
+									</li>
+									<li>
+										<div class="checkbox"><input type="checkbox" name="category" id="category28"><label for="category28">기타</label></div>
+									</li>
+								</ul>
+								
+							</dd>
+						</dl>
+					</div><!-- //box-prd-search -->
+					<div class="btn-box ty2">
+						<ul class="btn_btm_half">
+							<li><button class="btn_r btn_type">검색</button></li>
+							<li><button class="btn_r btn_type2">초기화</button></li>
+						</ul>
+						<button class="btn_r btn_type3">닫기</button>
+					</div>
+				</div><!-- //#tab01 -->
+
+				<div id="tab02" class="tab-cont">
+
+					<div class="ipbox del">
+						<input type="text" id="" placeholder="검색어를 입력하세요.">
+						<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+					</div>
+
+					<div class="btn-box ty2 fixed">
+						<ul class="btn_btm_half">
+							<li><button class="btn_r btn_type">검색</button></li>
+							<li><button class="btn_r btn_type3">닫기</button></li>
+						</ul>
+					</div>
+				</div><!-- //#tab02 -->
+
+				<div id="tab03" class="tab-cont">
+					<div class="wrap-select">
+						<select class="select">
+							<option value="">화동매거진 2018년</option>
+							<option value="">화동매거진 2017년</option>
+							<option value="">화동매거진 2016년</option>
+							<option value="">화동매거진 2015년</option>
+							<option value="">화동매거진 2014년</option>
+						</select>
+					</div>
+					<ul class="lst-megazine">
+						<li>
+							<a href="#none">
+								<p><span><img src="../../resources/image/search/img-magazine.png" alt="화동 매거진"></span></p>
+								<p><span>화동 매거진</span><strong>2018년 12월호</strong></p>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<p><span><img src="../../resources/image/search/img-magazine.png" alt="화동 매거진"></span></p>
+								<p><span>화동 매거진</span><strong>2018년 12월호</strong></p>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<p><span><img src="../../resources/image/search/img-magazine.png" alt="화동 매거진"></span></p>
+								<p><span>화동 매거진</span><strong>2018년 12월호</strong></p>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<p><span><img src="../../resources/image/search/img-magazine.png" alt="화동 매거진"></span></p>
+								<p><span>화동 매거진</span><strong>2018년 12월호</strong></p>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<p><span><img src="../../resources/image/search/img-magazine.png" alt="화동 매거진"></span></p>
+								<p><span>화동 매거진</span><strong>2018년 12월호</strong></p>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<p><span><img src="../../resources/image/search/img-magazine.png" alt="화동 매거진"></span></p>
+								<p><span>화동 매거진</span><strong>2018년 12월호</strong></p>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<p><span><img src="../../resources/image/search/img-magazine.png" alt="화동 매거진"></span></p>
+								<p><span>화동 매거진</span><strong>2018년 12월호</strong></p>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<p><span><img src="../../resources/image/search/img-magazine.png" alt="화동 매거진"></span></p>
+								<p><span>화동 매거진</span><strong>2018년 12월호</strong></p>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<p><span><img src="../../resources/image/search/img-magazine.png" alt="화동 매거진"></span></p>
+							<p><span>화동 매거진</span><strong>2018년 12월호</strong></p>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<p><span><img src="../../resources/image/search/img-magazine.png" alt="화동 매거진"></span></p>
+								<p><span>화동 매거진</span><strong>2018년 12월호</strong></p>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<p><span><img src="../../resources/image/search/img-magazine.png" alt="화동 매거진"></span></p>
+								<p><span>화동 매거진</span><strong>2018년 12월호</strong></p>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<p><span><img src="../../resources/image/search/img-magazine.png" alt="화동 매거진"></span></p>
+								<p><span>화동 매거진</span><strong>2018년 12월호</strong></p>
+							</a>
+						</li>
+					</ul><!-- //lst-megazine -->
+					<div class="btn-box ty2">
+						<button class="btn_r btn_type3">닫기</button>
+					</div>
+				</div><!-- //#tab03 -->
+
+				<div id="tab04" class="tab-cont">
+					<h4 class="title_type3 pt0">화폐정보 조회</h4>
+					<ul class="list_ip_check type t3 mb15">
+						<li>
+							<div class="checkbox"><input type="checkbox" name="category" id="category29"><label for="category29">전체</label></div>
+						</li>
+						<li>
+							<div class="checkbox"><input type="checkbox" name="category" id="category30" checked=""><label for="category30">국내</label></div>
+						</li>
+						<li>
+							<div class="checkbox"><input type="checkbox" name="category" id="category31"><label for="category31">해외</label></div>
+						</li>
+						<li>
+							<div class="checkbox"><input type="checkbox" name="category" id="category32"><label for="category32">기타</label></div>
+						</li>
+						<li>
+							<div class="checkbox"><input type="checkbox" name="category" id="category33"><label for="category33">화폐계소식</label></div>
+						</li>
+					</ul>
+
+					<div class="ipbox del mb100">
+						<input type="text" id="" placeholder="검색어를 입력하세요.">
+						<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+					</div>
+
+					<div class="btn-box ty2">
+						<ul class="btn_btm_half">
+							<li><button class="btn_r btn_type">검색</button></li>
+							<li><button class="btn_r btn_type3">닫기</button></li>
+						</ul>
+					</div>
+				</div><!-- //#tab04 -->
+
+			</div><!-- //cont-layer -->
+
+
+		</div><!-- //wrap-layer -->
+	</div><!-- pop-layer -->
+    <!-- //popup -->
+
+</div>
+<script src="../../resources/js/jquery-1.12.4.js"></script>
+<script src="../../resources/js/design.js"></script>
+</body>
+</html>

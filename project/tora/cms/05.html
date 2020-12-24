@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="resources/css/common.css" media="screen" rel="stylesheet">
+<link href="resources/css/site.css" media="screen" rel="stylesheet">
+<script src="resources/js/jquery-1.11.1.min.js"></script>
+<script src="resources/js/design.js"></script>
+<!--[if lt IE 9]>
+<script src="resources/js/html5shiv.js"></script>
+<![endif]-->
+<title>Hackers SCM Portal</title>
+</head>
+<body>
+
+<div id="wrap">
+
+	<header>
+		<h1><a href="/"><img src="resources/images/logo.gif" alt="Hackers SCM Portal"></a></h1>
+		<a href="#;" class="btn_user"><span class="fc_blu">홍길동</span> 님</a>
+		<div id="gnb">
+			<ul>
+				<li><a href="#;">Home</a></li>
+				<li><a href="#;" class="active">발주</a></li>
+				<li><a href="#;">견적</a></li>
+				<li><a href="#;">입고</a></li>
+				<li><a href="#;">출고</a></li>
+				<li><a href="#;">재고</a></li>
+				<li><a href="#;">정산</a></li>
+				<li><a href="#;">미정</a></li>
+			</ul>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<div id="container">
+
+		<aside class="lnb">
+			<h2>신간 발주</h2>
+			<ul>
+				<li><a href="#;" class="selected">견적용 데이터</a></li>
+				<li><a href="#;">발주량 산정</a></li>
+				<li><a href="#;">인쇄소 선정</a></li>
+				<li><a href="#;">견적 종합 보고</a></li>
+				<li><a href="#;">발주서 조회</a></li>
+			</ul>
+			<h2>일반 발주</h2>
+			<ul>
+				<li><a href="#;">발주 준비</a></li>
+				<li><a href="#;">발주량 산정</a></li>
+				<li><a href="#;">견적 종합 보고</a></li>
+				<li><a href="#;">발주서 조회</a></li>
+			</ul>
+			<ul class="etc">
+				<li><a href="#;">개정 계획</a></li>
+				<li><a href="#;">교재 관리</a></li>
+				<li><a href="#;">발주량 산정 관리</a></li>
+				<li><a href="#;">인쇄소 분산</a></li>
+				<li><a href="#;">발주서 관리</a></li>
+				<li><a href="#;">교재별 발주일</a></li>
+				<li><a href="#;">용지  단가 관리</a></li>
+				<li><a href="#;">후가공 & 수정필름 정보</a></li>
+			</ul>
+		</aside>
+		<!-- //left-navigation -->
+
+		<div id="ct">
+			<h2>견적용 데이터</h2>
+			<div class="path">발주 &gt; 신간 발주 &gt; <span class="on">견적용 데이터</span></div>
+			<!-- //title -->
+			<div class="inner">
+				<div class="btn_area mt20">
+					<button type="button" onclick="" class="btn_m btn_type4">목록</button><!----><button type="button" onclick="" class="btn_m btn_type6">수정</button><!----><button type="button" onclick="" class="btn_m btn_type7">삭제</button>
+				</div>
+				<!-- //btn -->
+				<ul class="list_stamp mt20">
+					<li>
+						<span class="name">담당자</span>
+						<span class="bx">
+							<strong class="brnd">해커스</strong>
+							<span class="date">2017-10-31<br>10:32</span>
+						</span>
+						<span class="result">승인</span>
+					</li>
+					<li>
+						<span class="name">팀장</span>
+						<span class="bx">
+							<strong class="brnd">해커스</strong>
+							<span class="date">2017-10-31<br>10:32</span>
+						</span>
+						<span class="result">반려</span>
+					</li>
+					<li>
+						<span class="name">실장</span>
+						<span class="bx">
+							<strong class="brnd">해커스</strong>
+							<span class="date">2017-10-31<br>10:32</span>
+						</span>
+						<span class="result">합의</span>
+					</li>
+				</ul>
+				<!-- //결제상태 -->
+				<fieldset class="tbl_type2 mt10">
+					<legend>요청서 작성</legend>
+					<table>
+						<colgroup>
+							<col style="width:6.5%;">
+							<col style="width:42.5%;">
+							<col style="width:6.5%;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">결재상세</th>
+								<td colspan="3">결재 Popup에서 작성한 결재 사유가 입력됨</td>
+							</tr>
+							<tr>
+								<th scope="row">문서번호</th>
+								<td>1234-5678-9012</td>
+								<th scope="row">상신부서</th>
+								<td>서비스인프라혁신팀</td>
+							</tr>
+							<tr>
+								<th scope="row">상신일자</th>
+								<td>2017-10-31(월) 12:34</td>
+								<th scope="row">상신자</th>
+								<td>해커스</td>
+							</tr>
+							<tr>
+								<th scope="row">수신</th>
+								<td colspan="3" class="spce inp_type"><div><span class="input placeholder"><label for="receive" class="lbl">“name” &lt;user_id&gt;, “name” &lt;user_id&gt;, “name” &lt;user_id&gt;, “name” &lt;user_id&gt;, “name” &lt;user_id&gt;, “name” &lt;user_id&gt;</label><input type="text" name="receive" id="receive" class="i_text"></span><button type="button" onclick="" class="btn_m btn_type5">그룹수신</button></div></td>
+							</tr>
+							<tr>
+								<th scope="row">참조</th>
+								<td colspan="3" class="spce inp_type"><span class="input placeholder"><label for="refer" class="lbl">“name” &lt;user_id&gt;, “name” &lt;user_id&gt;, “name” &lt;user_id&gt;, “name” &lt;user_id&gt;, “name” &lt;user_id&gt;, “name” &lt;user_id&gt;</label><input type="text" name="refer" id="refer" class="i_text"></span></td>
+							</tr>
+							<tr>
+								<th scope="row">제목</th>
+								<td colspan="3" class="spce inp_type"><span class="input placeholder"><label for="subject" class="lbl">[관련분들] [해커스 한국사 능력 검정시험 고급 (1.2)급 개정판] 표지/내지 견적용 데이터 기입 요청</label><input type="text" name="subject" id="subject" class="i_text"></span></td>
+							</tr>
+							<tr>
+								<th scope="row">요청기한</th>
+								<td colspan="3">2017-00-00  00:00</td>
+							</tr>
+							<tr>
+								<th scope="row">목적</th>
+								<td colspan="3">1. 교재의 표지/내지 사양을 확인하여 교재 제작에 차질이 없도록 하기 위함입니다.<br>2. 표지/내지 사양에 따른 업체별 견적을 확인하여 제작비를 절감하는 방향으로 업무를 진행하기 위함입니다.</td>
+							</tr>
+							<tr>
+								<th scope="row">요청사항</th>
+								<td colspan="3">1. 아래 표지/내지 견적용 데이터 양식에 교재 사양 정보를 기입해 주시기 바랍니다.<br>(본 게시글은 ‘누구나 수정 가능’ 한 글입니다.)</td>
+							</tr>
+							<tr>
+								<th scope="row">교재정보</th>
+								<td colspan="3" class="spce ">
+									<div class="tbl_type4">
+										<table>
+											<colgroup>
+												<col style="width:7.5%;">
+												<col>
+												<col style="width:12%;">
+												<col style="width:15%;">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">교재 코드</th>
+													<th scope="col">교재명</th>
+													<th scope="col">판-쇄-회차</th>
+													<th scope="col">출판 법인</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>4000000000</td>
+													<td class="tl spce2"><a href="#;" class="ellipsis">해커스 신토익 실전 1000제 3 리딩 해설집 (1판)</a></td>
+													<td>
+														<span class="input placeholder" style="width:15px"><label for="num1" class="lbl">00</label><input type="text" name="num1" id="num1" class="i_text"></span>&nbsp;-&nbsp;<span class="input placeholder" style="width:15px"><label for="num2" class="lbl">00</label><input type="text" name="num2" id="num1" class="i_text"></span>&nbsp;-&nbsp;<span class="input placeholder" style="width:15px"><label for="num3" class="lbl">00</label><input type="text" name="num3" id="num3" class="i_text"></span>
+													</td>
+													<td>
+														<span class="select block">
+															<label for="book">선택</label>
+															<select name="book" id="book">
+																<option value="1">선택</option>
+																<option value="2">1</option>
+															</select>
+														</span>
+													</td>
+												</tr>
+												<tr>
+													<td>4000000000</td>
+													<td class="tl spce2"><a href="#;" class="ellipsis">해커스 신토익 실전 1000제 3 리딩 해설집 (1판)</a></td>
+													<td>
+														<span class="input placeholder" style="width:15px"><label for="num1" class="lbl">00</label><input type="text" name="num1" id="num1" class="i_text"></span>&nbsp;-&nbsp;<span class="input placeholder" style="width:15px"><label for="num2" class="lbl">00</label><input type="text" name="num2" id="num1" class="i_text"></span>&nbsp;-&nbsp;<span class="input placeholder" style="width:15px"><label for="num3" class="lbl">00</label><input type="text" name="num3" id="num3" class="i_text"></span>
+													</td>
+													<td>
+														<span class="select block">
+															<label for="book">선택</label>
+															<select name="book" id="book">
+																<option value="1">선택</option>
+																<option value="2">1</option>
+															</select>
+														</span>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+				<!-- //요청서 작성 -->
+				<fieldset class="list_fileup mt50">
+					<legend>파일첨부</legend>
+					<div class="upload">
+						<strong class="title_type">파일 첨부</strong>
+						<button type="button" onclick="$('#fileUpload').show();" class="btn_m2 btn_type2">파일첨부</button>
+					</div>
+					<ul class="mt10">
+						<li>
+							<a href="#;" class="btn_down">attached file name.xlsx (000.0MB)</a>
+							<span class="data">
+								<span>해커스</span>
+								<span class="ml40">2017-00-00  00:00</span>
+								<button type="button" onclick="" class="btn_del ml40">삭제</button>
+							</span>
+						</li>
+						<li>
+							<a href="#;" class="btn_down">attached file name.xlsx (000.0MB)</a>
+							<span class="data">
+								<span>해커스</span>
+								<span class="ml40">2017-00-00  00:00</span>
+								<button type="button" onclick="" class="btn_del ml40">삭제</button>
+							</span>
+						</li>
+						<li>
+							<a href="#;" class="btn_down">attached file name.xlsx (000.0MB)</a>
+							<span class="data">
+								<span>해커스</span>
+								<span class="ml40">2017-00-00  00:00</span>
+								<button type="button" onclick="" class="btn_del ml40">삭제</button>
+							</span>
+						</li>
+					</ul>
+				</fieldset>
+				<!-- //파일첨부 -->
+				<fieldset class="list_fileup mt50">
+					<legend>댓글 첨부 파일</legend>
+					<strong class="title_type">댓글 첨부 파일</strong>
+					<ul class="mt15">
+						<li>
+							<a href="#;" class="btn_down">attached file name.xlsx (000.0MB)</a>
+							<span class="data">
+								<span>해커스</span>
+								<span class="ml40">2017-00-00  00:00</span>
+								<button type="button" onclick="" class="btn_del ml40">삭제</button>
+							</span>
+						</li>
+						<li>
+							<a href="#;" class="btn_down">attached file name.xlsx (000.0MB)</a>
+							<span class="data">
+								<span>해커스</span>
+								<span class="ml40">2017-00-00  00:00</span>
+								<button type="button" onclick="" class="btn_del ml40">삭제</button>
+							</span>
+						</li>
+						<li>
+							<a href="#;" class="btn_down">attached file name.xlsx (000.0MB)</a>
+							<span class="data">
+								<span>해커스</span>
+								<span class="ml40">2017-00-00  00:00</span>
+								<button type="button" onclick="" class="btn_del ml40">삭제</button>
+							</span>
+						</li>
+					</ul>
+				</fieldset>
+				<!-- //파일첨부 -->
+				<div class="cmt_type mt50">
+					<h3 class="title_type">댓글 및 수정 이력 00개</h3>
+					<fieldset class="note_set">
+						<legend>댓글입력 등록</legend>
+						<div class="listbx">
+							<div class="notefile">
+								<span class="chk"><label for="notesend"><input type="checkbox" name="notesend" id="notesend" value="">답변 쪽지 받기</label></span>
+								<div class="filebox">
+									<strong>첨부파일</strong><!----><input type="text" class="upload_name" value="선택된 파일 없음" disabled="disabled"><!----><label for="fileField1" class="btn_type2">파일찾기</label>
+									<input type="file" id="fileField1" class="upload_hidden">
+								</div>
+							</div>
+							<span class="input"><textarea id=""></textarea></span>
+						</div>
+						<button type="button" onclick="" class="btn_type btn_enter">등록</button>
+					</fieldset>
+					<!-- //입력(최초) -->
+					<div class="cmtlist">
+						<article class="article">
+							<strong class="user">홍길동</strong>
+							<ul>
+								<li class="date">2017-10-31 14:50</li>
+								<li class="btns">
+									<button type="button" onclick="" class="fc_blu">답변 댓글</button><!----><button type="button" onclick="" class="fc_blk2">수정</button><!----><button type="button" onclick="" class="fc_gry">삭제</button><!----><button type="button" onclick="$('#noteSend').show();" class="fc_blu">댓글쪽지발송</button>
+								</li>
+							</ul>
+							<div class="txtresult">comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment com ment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment commentcomment comment comment comment comment comment comment comment comment comment com ment comment comment comment comment comment comment comment comment comment comment comment comment comment ...</div>
+						</article>
+						<article class="article">
+							<strong class="user">홍길동</strong>
+							<ul>
+								<li class="date">2017-10-31 14:50</li>
+								<li class="btns"><button type="button" onclick="" class="fc_gry">댓글 취소</button>
+								</li>
+							</ul>
+							<div class="txtresult">comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment com ment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment commentcomment comment comment comment comment comment comment comment comment comment com ment comment comment comment comment comment comment comment comment comment comment comment comment comment ...</div>
+							<fieldset class="note_set">
+								<legend>답변 댓글입력 등록</legend>
+								<div class="listbx">
+									<div class="notefile">
+										<span class="chk"><label for="notesend"><input type="checkbox" name="notesend" id="notesend" value="">답변 쪽지 받기</label></span>
+										<div class="filebox">
+											<strong>첨부파일</strong><!----><input type="text" class="upload_name" value="선택된 파일 없음" disabled="disabled"><!----><label for="fileField1" class="btn_type2">파일찾기</label>
+											<input type="file" id="fileField1" class="upload_hidden">
+										</div>
+									</div>
+									<span class="input"><textarea id=""></textarea></span>
+								</div>
+								<button type="button" onclick="" class="btn_type btn_enter">등록</button>
+							</fieldset>
+							<div class="article subcmt">
+								<strong class="user">홍길동</strong>
+								<ul>
+									<li class="date">2017-10-31 14:50</li>
+									<li class="btns">
+										<button type="button" onclick="" class="fc_blu">답변 댓글</button><!----><button type="button" onclick="$('#noteSend').show();" class="fc_blu">댓글쪽지발송</button>
+									</li>
+								</ul>
+								<div class="txtresult">comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment com ment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment commentcomment comment comment comment comment comment comment comment comment comment com ment comment comment comment comment comment comment comment comment comment comment comment comment comment ...</div>
+							</div>
+						</article>
+					</div>
+					<!-- //댓글 리스트 -->
+				</div>
+				<!-- //댓글 -->
+			</div>
+		</div>
+		<!-- //content -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- 쪽지발송 (popup) -->
+	<div id="noteSend" class="ly_pop w600">
+		<span class="bg"></span>
+		<span class="wrap">
+			<button type="button" class="popcls"><img src="resources/images/ico_x.gif" alt="창닫기"></button>
+			<h2>댓글 쪽지 발송</h2>
+			<div class="elm">
+				<fieldset class="tbl_type2">
+					<legend>댓글 쪽지 작성</legend>
+					<table>
+						<colgroup>
+							<col style="width:16.5%;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row" class="vt">수신</th>
+								<td class="spce inp_type">
+									<span class="input placeholder"><label for="name" class="lbl">name, name, name,</label><input type="text" name="name" id="name" class="i_text"></span>
+									<p class="fs11 mt5 fc_blu">* 여러 명에게 보낼 경우, ‘,’로 구분하여 입력해 주세요.</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row vt">그룹수신</th>
+								<td class="spce">
+									<span class="select" style="width:83px">
+										<label for="group">그룹 선택</label>
+										<select name="receive" id="group">
+											<option value="1">그룹 선택</option>
+											<option value="2">1</option>
+										</select>
+									</span><!----><span class="input placeholder ml5" style="width:330px"><label for="receive" class="lbl">name, name, name,</label><input type="text" name="receive" id="receive" class="i_text"></span>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" class="spce">
+									<textarea id="" style="width:506px;height:190px"></textarea>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+				<div class="btn_area2">
+					<button type="button" class="btn_r btn_type3">취소</button><!----><button type="button" class="btn_r btn_type">보내기</button>
+				</div>
+			</div>
+			<!-- //element -->
+		</span>
+		<span class="blank"></span>
+	</div>
+	<!-- //쪽지발송 (popup) -->
+
+</div>
+
+</body>
+</html>

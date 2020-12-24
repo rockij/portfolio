@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=1050">
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/sub.css">
+	<link rel="shortcut icon" href="http://www.champstudy.com/favicon.ico">
+	<script src="../../js/jquery-1.11.2.min.js"></script>
+	<script src="../../js/hackers_ui.js"></script>
+	<title>해커스 교육그룹</title>
+</head>
+<body>
+
+	<div id="wrap">
+		
+		<div class="family_site_box">
+			<div class="family_site_open_btn">
+				<!-- 로그인전 -->
+				<a href="#none"><img src="../../img/common/family/family_site_open.png" alt="" /></a>
+
+				<!-- 로그인후 -->
+				<!-- <a href="/html/myclass/index.html?iframe_su=1"><img src="../../img/common/family/family_myclass.png" alt="" /></a> -->
+				<!-- //로그인후 -->
+			</div>
+
+			<div class="close_area">
+				<a href="#;"  class="family_site_close_btn">
+					<img src="../../img/common/family/bg_family_site.png" alt="접기" />
+				</a>
+				
+
+				<!-- 로그인전 -->
+				<strong class="family_site_tit">Hackers Family site</strong>
+				<div class="login_line2">
+					<a href="/contents/event/?evtName=join_event"><img src="http://image.hackers.ac/images/common/bul150514.gif" alt="회원가입 배너" /></a><br />
+					<a href="https://<?=$_SERVER['HTTP_HOST']?>/login_page.html?s_url=<?=$s_url?>" class="login_txt">로그인</a> l
+					<a href="https://<?=$_SERVER['HTTP_HOST']?>/html/kita/member_agree.html">회원가입</a>
+				</div>
+				<!--로그인전 -->
+
+				<!-- 로그인후 
+				<div class="login_after_line">
+					<span class="login_name">해커스님</span>목표달성을 기원합니다!
+					<div class="select_box js-show-area on" id="ajaxMyClass">
+						<a href="http://<?=$_SERVER['HTTP_HOST']?>/html/myclass/index.html" class="select_btn js-show-btn">수강중인 강의</a>
+						<ul class="select_list js-show-box" id="left_myclass">
+							<li><a href="#">내강의실</a></li>
+							<li><a href="#">내강의실</a></li>
+							<li><a href="#">내강의실</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="myclass_desc">
+					<a href="http://<?=$_SERVER['HTTP_HOST']?>/html/myclass/index.html?iframe_su=1">마이클래스</a>
+				</div>
+				<div class="login_line">
+					<a href="<?=$__config['isHttp']?>://<?=$__config['site_name']?>.champstudy.com/html/kita/member_modiframe.html" class="login_txt">정보수정</a> l
+					<a href="/bbs/logout.php?gohome=home">로그아웃</a>
+				</div>
+				<!-- //로그인후  -->
+
+				<ul class="family_list">
+					<li class="on active" id="language">
+						<strong><a href="#none;" >어학</a></strong>
+						<ul class="family_site_sub">
+							<li>
+								<a href="http://www.hackers.ac/?_C_=18577" target="_blank">해커스어학원 </a>
+							</li>
+							<li class="active">
+								<a href="http://<?=$_SERVER['HTTP_HOST']?>">해커스인강</a>
+							</li>
+							<li>
+								<a href="http://www.HackersTalk.co.kr/?_C_=30833" target="_blank">기초영어 <img src="../../img/common/family/gnb_new.png" alt="" /></a>
+							</li>
+							<li>
+								<a href="http://www.hackerschina.co.kr/?_C_=18579" target="_blank">중국어</a>
+							</li>
+							<li>
+								<a href="http://www.hackersuhak.com/?_C_=18580" target="_blank">유학원</a>
+							</li>
+						</ul>
+					</li>
+					<li id="job">
+						<strong><a href="#;">취업</a></strong>
+						<ul class="family_site_sub">
+							<li>
+								<a href="http://www.hackersjob.com/A_online/?_C_=28600" target="_blank">취업 인터넷강의 <img src="../../img/common/family/gnb_new.png" alt="" /></a>
+							</li>
+							<li>
+								<a href="http://www.hackersjob.com/A_offline/?_C_=28601" target="_blank">취업 학원강의 <img src="../../img/common/family/gnb_new.png" alt="" /></a>
+							</li>
+						</ul>
+					</li>
+					<li id="community">
+						<strong><a href="#;">커뮤니티</a></strong>
+						<ul class="family_site_sub">
+							<li>
+								<a href="http://www.hackers.co.kr/?_C_=18581" target="_blank">토익/스피킹 <span>커뮤니티</span></a>
+							</li>
+							<li>
+								<a href="http://www.hackers.co.kr/?c=s_teps&_C_=18582" target="_blank">텝스 <span>커뮤니티</span></a>
+							</li>
+							<li>
+								<a href="http://www.gohackers.com/?_C_=18583" target="_blank">토플/유학 <span>커뮤니티</span></a>
+							</li>
+						</ul>
+					</li>
+					<li id="pass">
+						<strong><a href="#;">공무원</a></strong>
+						<ul class="family_site_sub">
+							<li>
+								<a href="http://gosi.pass.com/?_C_=26526" target="_blank">공무원 인터넷강의</a>
+							</li>
+							<li>
+								<a href="http://gosi.pass.com/event/presentation/event_begin.html?_C_=26527" target="_blank">공무원 학원강의</a>
+							</li>
+							<li>
+								<a href="http://police.pass.com/?_C_=18592" target="_blank">경찰 공무원</a>
+							</li>
+						</ul>
+					</li>
+					<li id="finance">
+						<strong><a href="#;">자격증</a></strong>
+						<ul class="family_site_sub">
+							<li>
+								<a href="http://fn.pass.com/site/?st=family_benefit&_C_=25256" target="_blank">금융자격증</a>
+							</li>
+							<li>
+								<a href="http://fn.pass.com/site/event/mission_zero/event.php?_C_=26027" target="_blank">전산세무회계 <img src="../../img/common/family/gnb_new.png" alt="" /></a>
+							</li>
+							<li>
+								<a href="http://fn.pass.com/site/event/2015/0429_2/event.php?_C_=20459" target="_blank">AFPK/CFP</a>
+							</li>
+							<li>
+								<a href="http://land.pass.com/?_C_=18596" target="_blank">공인중개사 </a>
+							</li>
+							<li>
+								<a href="http://house.pass.com/?_C_=18598" target="_blank">주택관리사</a>
+							</li>
+							<li>
+								<a href="http://www.hackersjob.com/event/2015/0623_1/event.html?connect=pc_mode&_C_=34168" target="_blank">한국사능력검정 <img src="../../img/common/family/gnb_new.png" alt="" /></a>
+							</li>
+						</ul>
+					</li>
+					<li id="hackersut">
+						<strong><a href="#;">편입/평생교육</a></strong>
+						<ul class="family_site_sub">
+							<li>
+								<a href="http://jrjump.co.kr/?_C_=18599" target="_blank">편입학원</a>
+							</li>
+							<li>
+								<a href="http://jrjumpi.co.kr/?_C_=18600" target="_blank">편입인강</a>
+							</li>
+							<li>
+								<a href="http://www.edu2080.co.kr/content.php?co_id=event&pg_id=evt_brand&sp=1&_C_=27579" target="_blank">학점은행제</a>
+							</li>
+						</ul>
+					</li>
+					<li id="group">
+						<strong><a href="#;" >그룹소개/채용</a></strong>
+						<ul class="family_site_sub">
+							<li>
+								<a href="http://hackers.com/?_C_=18605" target="_blank">해커스닷컴</a>
+							</li>
+							<li>
+								<a href="http://recruit.hackers.com/main.php?_C_=18606" target="_blank">해커스채용</a>
+							</li>
+						</ul>
+					</li>
+					<li id="wish" class="noSub">
+						<strong><a href="/bbs/write.php?id=wanna" target="_blank"><span>해커스에 바란다</span></a></strong>
+					</li>
+				</ul>
+				<div class="facebook_btn">
+					<!-- 해커스 SNS 추가 -->
+					<p class="sns_tit">해커스 SNS</p>
+					<div class="sns_btn">
+						<a href="https://www.facebook.com/HackersEnglish" target="_blank" class="btn1">페이스북</a>
+						<a href="https://twitter.com/hackerseng" target="_blank" class="btn2">트위터</a>
+						<a href="https://www.youtube.com/user/HackersEnglish" target="_blank" class="btn3">유투브</a>
+					</div>
+					<!-- //해커스 SNS 추가 -->
+				</div>
+			</div>
+		</div>
+		<!-- // family site -->
+
+		<!-- header -->
+		<div class="top_bnr">
+			<a href="#"><img src="../../img/event/top_bnr.png" alt="20대가 선정한 TOP BRAND 1위 해커스! 여러분이 직접 증명해주셨습니다."></a>
+		</div>
+
+		<!-- header -->
+		<div id="header">
+			<div class="inner">
+				<h1><a href="#"><img src="../../img/common/logo.gif" alt="해커스인강"></a></h1>
+				<ul class="family_link">
+					<li><a href="#" class="family_comm btn_family1"><span class="sr">해커스인강</span></a></li>
+					<li><a href="#" class="family_comm btn_family2"><span class="sr">해커스어학원</span></a></li>
+					<li><a href="#" class="family_comm btn_family3"><span class="sr">기초영어</span></a></li>
+				</ul>
+				<ul class="ignb">
+					<li class="point"><a href="#">로그인</a>|</li>
+					<li><a href="#">회원가입</a>|</li>
+					<li><a href="#">고객센터</a></li>
+				</ul>
+			</div>
+			
+			<!-- gnb -->
+			<div class="gnb">
+				<ul>
+					<li><a href="#" class="gnb_comm btn_gnb1"><span class="sr">전체카테고리</span></a></li>
+					<li><a href="#" class="gnb_comm btn_gnb2"><span class="sr">빠른수강신청</span></a></li>
+					<li><a href="#" class="gnb_comm btn_gnb3"><span class="sr">수강신청</span></a></li>
+					<li><a href="#" class="gnb_comm btn_gnb4"><span class="sr">스타강사</span></a></li>
+					<li><a href="#" class="gnb_comm btn_gnb5"><span class="sr">MP3/자료</span></a></li>
+					<li><a href="#" class="gnb_comm btn_gnb6"><span class="sr">무료강의</span><span class="ico_comm bul_won">11</span></a></li>
+					<li><a href="#" class="gnb_comm btn_gnb7"><span class="sr">교재정보</span><span class="ico_comm bul_won">3</span></a></li>
+					<li><a href="#" class="gnb_comm btn_gnb8"><span class="sr">커뮤니티</span></a></li>
+					<li><a href="#" class="gnb_comm btn_gnb9"><span class="sr">마이클래스</span></a></li>
+				</ul>
+			</div>
+			<!-- //gnb -->
+		</div>
+		<!-- //header -->
+
+		<!-- container -->
+		<div id="container">
+			<div id="content">
+
+				<!-- line_map -->
+				<div class="line_map">
+					<span>HOME</span>
+					&gt;
+					<span>MP3/무료자료</span>
+					&gt;
+					<em>유료MP3</em>
+				</div>
+				<!-- //line_map -->
+
+				<!-- tit_area -->
+				<div class="tit_area">
+					<div class="f_l">
+						<h2 class="tit_h2"><img src="../../img/mp3/tit.png" alt="MP3/무료자료"></h2>
+						<p class="tit_area_txt">
+							<strong>정선아</strong>님, 나른한 오후에도 열공하는 당신을 응원합니다.
+						</p>
+						<span class="tit_area_info">
+							<span class="ico_comm bul_point"></span>포인트 : <span class="fc_point">5,950 Point</span>
+						</span>
+						<span class="tit_area_info">
+							<span class="ico_comm bul_coupon"></span>쿠폰 : <span class="fc_point">1매</span>
+						</span>
+					</div>
+					<div class="f_r">
+						<input type="text" style="width:144px;">
+						<a href="#" class="btn_m btn_type3"><span>상품검색</span></a>
+					</div>
+				</div>
+				<!-- //tit_area -->
+				
+				<!-- sub_nav_dep -->
+				<div class="sub_nav_box tab3">
+					<div class="sub_nav">
+						<ul class="depth1">
+							<li class="on">
+								<strong class="tit_depth1"><a href="#">유료MP3</a></strong>
+							</li>
+							<li>
+								<strong class="tit_depth1"><a href="#">무료MP3/자료</a></strong>
+							</li>
+							<li>
+								<strong class="tit_depth1"><a href="#">내가 구매한 MP3</a></strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- //sub_nav_dep -->
+
+				<!-- mp3_sel_box -->
+				<div class="mp3_sel_box">
+					<select style="width:174px;">
+						<option>대분류 선택</option>
+					</select>
+					<select style="width:174px;">
+						<option>중분류 선택</option>
+					</select>
+					<select style="width:144px;">
+						<option>레벨 선택</option>
+					</select>
+					<select style="width:402px;">
+						<option>교재 선택 </option>
+					</select>
+					<a href="#" class="btn_m btn_type2" style="width:88px;"><span>조회하기</span></a>
+				</div>
+				<!-- //mp3_sel_box -->
+				
+				<!-- section -->
+				<div class="section">
+					<!-- mp3_cont_box -->
+					<div class="mp3_cont_box">
+						<h4 class="tit_h4">해커스 토익 보카 [2014 전면개정판]</h4>
+
+						<div class="mp3_class">
+							<div class="mp3_book">
+								<div class="mp3_book_img">
+									<a href="#">
+										<img src="../../img/mp3/book_img.png" alt="해커스 토익보카">
+										<span class="mp3_tag_best"></span>
+									</a>
+								</div>
+								<div class="mp3_book_btn">
+									<a href="#" class="btn_xxr2 btn_type15" style="width:99px"><span>교재구매</span></a>
+									<a href="#" class="btn_xxr2 btn_type15" style="width:100px"><span>동영상강의</span></a>
+									<a href="#" class="btn_xxr2 btn_type15" style="width:99px"><span>현장강의</span></a>
+								</div>
+							</div>
+							<div class="mp3_info">
+								<div class="t_r">
+									<a href="#" class="btn_m btn_type2"><span>mp3설명</span></a>
+									<a href="#" class="btn_m btn_type2"><span>mp3목차</span></a>
+								</div>
+								<div class="class_list">
+									<ul>
+										<li>
+											<input type="checkbox" id="ClassList1">
+											<div class="subj"><label for="ClassList1">1) 단어 집중 암기(표제어+뜻) <span class="mp3_comm mp3_tag_freedown"><span class="sr">기간한정 무료다운</span></span></label></div>
+											<div class="price">
+												<strong class="pl10">0원</strong>
+											</div>
+											<div class="ico_listen_box">
+												<a href="#" class="ico_comm ico_listen"><span class="sr">듣기</span></a>
+											</div>
+										</li>
+										<li>
+											<input type="checkbox" id="ClassList2">
+											<div class="subj"><label for="ClassList2">2) 단어와 예문 암기(표제어+뜻+예문)</label></div>
+											<div class="price">
+												<span class="original">6,500원</span>
+												<strong class="pl10">5,900원</strong>
+											</div>
+											<div class="ico_listen_box">
+												<a href="#" class="ico_comm ico_listen"><span class="sr">듣기</span></a>
+											</div>
+										</li>
+										<li>
+											<input type="checkbox" id="ClassList3">
+											<div class="subj"><label for="ClassList3"><span class="mp3_comm mp3_tag_package"><span class="sr">패키지</span></span> 단어집중암기 + 예문암기 </label></div>
+											<div class="price">
+												<span class="original">6,500원</span>
+												<strong class="pl10">5,900원</strong>
+											</div>
+											<div class="ico_listen_box">
+												<a href="#" class="ico_comm ico_listen"><span class="sr">듣기</span></a>
+											</div>
+										</li>
+										<li>
+											<input type="checkbox" id="ClassList4">
+											<div class="subj"><label for="ClassList4"><span class="mp3_comm mp3_tag_package"><span class="sr">패키지</span></span> 단어집중암기 + 예문암기 </label></div>
+											<div class="price">
+												<span class="original">6,500원</span>
+												<strong class="pl10">5,900원</strong>
+											</div>
+											<div class="ico_listen_box">
+												<a href="#" class="ico_comm ico_listen"><span class="sr">듣기</span></a>
+											</div>
+										</li>
+										<li>
+											<input type="checkbox" id="ClassList5">
+											<div class="subj"><label for="ClassList5">1) 단어 집중 암기(표제어+뜻) <span class="mp3_comm mp3_tag_freedown"><span class="sr">기간한정 무료다운</span></span></label></div>
+											<div class="price">
+												<strong class="pl10">0원</strong>
+											</div>
+											<div class="ico_listen_box">
+												<a href="#" class="ico_comm ico_listen"><span class="sr">듣기</span></a>
+											</div>
+										</li>
+										<li>
+											<input type="checkbox" id="ClassList6">
+											<div class="subj"><label for="ClassList6">2) 단어와 예문 암기(표제어+뜻+예문)</label></div>
+											<div class="price">
+												<span class="original">6,500원</span>
+												<strong class="pl10">5,900원</strong>
+											</div>
+											<div class="ico_listen_box">
+												<a href="#" class="ico_comm ico_listen"><span class="sr">듣기</span></a>
+											</div>
+										</li>
+										<li>
+											<input type="checkbox" id="ClassList7">
+											<div class="subj"><label for="ClassList7"><span class="mp3_comm mp3_tag_package"><span class="sr">패키지</span></span> 단어집중암기 + 예문암기 </label></div>
+											<div class="price">
+												<span class="original">6,500원</span>
+												<strong class="pl10">5,900원</strong>
+											</div>
+											<div class="ico_listen_box">
+												<a href="#" class="ico_comm ico_listen"><span class="sr">듣기</span></a>
+											</div>
+										</li>
+										<li>
+											<input type="checkbox" id="ClassList8">
+											<div class="subj"><label for="ClassList8"><span class="mp3_comm mp3_tag_package"><span class="sr">패키지</span></span> 단어집중암기 + 예문암기 </label></div>
+											<div class="price">
+												<span class="original">6,500원</span>
+												<strong class="pl10">5,900원</strong>
+											</div>
+											<div class="ico_listen_box">
+												<a href="#" class="ico_comm ico_listen"><span class="sr">듣기</span></a>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="t_r">
+									<span class="pr20 fwb">총 결제금액<strong class="price_box">15,900</strong>원</span>
+									<a href="#" class="btn_xr btn_type1" style="width:88px;"><span class="fs12">MP3 구매</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //mp3_cont_box -->
+
+					<!-- mp3_cont_box -->
+					<div class="mp3_cont_box">
+						<h4 class="tit_h4">해커스 토익 Listening(Hackers toeic Listening)(2015)</h4>
+
+						<div class="mp3_class">
+							<div class="mp3_book">
+								<div class="mp3_book_img">
+									<a href="#">
+										<img src="../../img/mp3/book_img2.png" alt="해커스 토익 실전 1000">
+										<span class="mp3_tag_new"></span>
+									</a>
+								</div>
+								<div class="mp3_book_btn">
+									<a href="#" class="btn_xxr2 btn_type15" style="width:99px"><span>교재구매</span></a>
+									<a href="#" class="btn_xxr2 btn_type15" style="width:100px"><span>동영상강의</span></a>
+									<a href="#" class="btn_xxr2 btn_type15" style="width:99px"><span>현장강의</span></a>
+								</div>
+							</div>
+							<div class="mp3_info">
+								<div class="t_r">
+									<a href="#" class="btn_m btn_type2"><span>mp3설명</span></a>
+									<a href="#" class="btn_m btn_type2"><span>mp3목차</span></a>
+								</div>
+								<div class="class_list">
+									<ul>
+										<li>
+											<input type="checkbox" id="ClassList9">
+											<div class="subj"><label for="ClassList9">1) 단어 집중 암기(표제어+뜻) <span class="mp3_comm mp3_tag_freedown"><span class="sr">기간한정 무료다운</span></span></label></div>
+											<div class="price">
+												<strong class="pl10">0원</strong>
+											</div>
+											<div class="ico_listen_box">
+												<a href="#" class="ico_comm ico_listen"><span class="sr">듣기</span></a>
+											</div>
+										</li>
+										<li>
+											<input type="checkbox" id="ClassList10">
+											<div class="subj"><label for="ClassList10">2) 단어와 예문 암기(표제어+뜻+예문)</label></div>
+											<div class="price">
+												<span class="original">6,500원</span>
+												<strong class="pl10">5,900원</strong>
+											</div>
+											<div class="ico_listen_box">
+												<a href="#" class="ico_comm ico_listen"><span class="sr">듣기</span></a>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="t_r">
+									<span class="pr20 fwb">총 결제금액<strong class="price_box">0</strong>원</span>
+									<a href="#" class="btn_xr btn_type1" style="width:88px;"><span class="fs12">무료다운</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //mp3_cont_box -->
+				</div>
+				<!-- //section -->
+			</div>
+		</div>
+		<!-- //container -->
+
+		<!-- footer -->
+		<div id="footer">
+			<div class="ft_txt"><img src="../../img/common/foot_txt.png" alt="감사합니다. 여러분이 만들어주신 1위 해커스! 해커스를 만나는 사람이라면 누구나 빠르고 효과적으로 성공할 수 있도록 하겠다는 해커스의 신념 그 신념으로 보낸 10만 시간이 1등 해커스를 만들어 냈습니다."></div>
+			
+			<!-- certi -->
+			<div class="certifi_area">
+				<ul>
+					<li><span class="certifi_comm certifi_img1"><span class="sr">20대가 선정한 최고의 토익학원 1위</span></span><a href="#" class="certifi_comm certifi_link"><span class="sr">수상내역확인</span></a></li>
+					<li><span class="certifi_comm certifi_img2"><span class="sr">20대TOP BRAND 토익,토익스피킹 학원 1위</span></span></li>
+					<li><span class="certifi_comm certifi_img3"><span class="sr">고객중심 브랜드 1위</span></span><a href="#" class="certifi_comm certifi_link"><span class="sr">수상내역확인</span></a></li>
+					<li><span class="certifi_comm certifi_img4"><span class="sr">온라인외국어학원 부문 1위</span></span></li>
+					<li><span class="certifi_comm certifi_img5"><span class="sr">어학교재 베스트 셀러</span></span></li>
+					<li><span class="certifi_comm certifi_img6"><span class="sr">어학교육 1위</span></span><a href="#" class="certifi_comm certifi_link"><span class="sr">수상내역확인</span></a></li>
+					<li><span class="certifi_comm certifi_img7"><span class="sr">토익 인터넷강의 1위</span></span><a href="#" class="certifi_comm certifi_link"><span class="sr">수상내역확인</span></a></li>
+					<li><span class="certifi_comm certifi_img8"><span class="sr">2012-2015 올해의 브랜드 선호도 1위</span></span><a href="#" class="certifi_comm certifi_link"><span class="sr">수상내역확인</span></a></li>
+					<li><span class="certifi_comm certifi_img9"><span class="sr">올해의 앱 선정 1위</span></span></li>
+					<li><span class="certifi_comm certifi_img10"><span class="sr">최단기 토익졸업 1위</span></span><a href="#" class="certifi_comm certifi_link"><span class="sr">수상내역확인</span></a></li>
+					<li><span class="certifi_comm certifi_img11"><span class="sr">강의만족도 등 1위</span></span><a href="#" class="certifi_comm certifi_link"><span class="sr">수상내역확인</span></a></li>
+					<li><span class="certifi_comm certifi_img12"><span class="sr">영어교육분야 1위</span></span></li>
+				</ul>
+			</div>
+			<!-- //certi -->
+
+			<!-- footer info -->
+			<div class="ft_area">
+				<div class="inner">
+					<div class="f_l">
+						<div class="ft_logo"><img src="../../img/common/logo.gif" alt="해커스인강"></div>
+						<div class="ft_call">
+							고객센터 : 02-554-7272ㅣ평일 09:00~23:00, 주말(공휴일) 09:00~21:00ㅣ메일 : help@champstudy.com ㅣ 트위터 : @hackerseng
+						</div>
+						<div class="ft_link">
+							<ul>
+								<li class="first"><a href="#">Home</a>|</li>
+								<li><a href="#">해커스소개</a>|</li>
+								<li><a href="#">해커스인강 소개</a>|</li>
+								<li><a href="#">이용약관</a>|</li>
+								<li class="privacy"><a href="#">개인정보취급방침</a>|</li>
+								<li><a href="#">즐겨찾기</a>|</li>
+								<li><a href="#">CONTACT US</a>|</li>
+								<li><a href="#">사이트맵</a>|</li>
+								<li><a href="#">고객센터</a></li>
+							</ul>
+						</div>
+						<div class="ft_info">
+							㈜챔프스터디 TEL : 02)554-7272ㅣFAX : 02)554-0551ㅣE-MAIL : help@champstudy.comㅣ사업자등록번호 [120-87-09984]<br>
+							서울특별시 서초구 강남대로61길 23 (서초동 1316-15) 현대성우빌딩 203호ㅣ 원격평생교육시설신고(제 원-140호)ㅣ호스팅 제공자 : ㈜KT<br>
+							대표이사 : 전재윤ㅣ개인정보관리책임자 : 김병철ㅣ통신판매업신고(제 2008-서울서초-0396호) 정보조회ㅣ부가통신사업신고(신고번호 : 013760)
+						</div>
+						<address>Copyright &copy; 2003 champstudy. All Rights Reserved.</address>
+					</div>
+
+					<div class="f_r">
+						<div class="lg_logo">
+							<img src="../../img/common/logo_lg.gif" alt="LG U+">
+							<a href="#">서비스 가입확인 &gt;</a>
+						</div>
+						<div class="lg_txt">
+							고객님은 안전거래를 위해 교재(유료)가 포함된 상품을 무통장 입금으로 결제하시는 경우 챔프스터디가 가입한 LG U+의 구매안전 서비스를 이용하실 수 있습니다.<br><br>
+							* LG U+의 결제대금예치업 등록번호 : 02-006-00001
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //footer info -->
+		</div>
+		<!-- //footer -->
+
+		<!-- join_ly_point -->
+		<div class="join_ly_point" style="position:fixed;left:50%;top:291px;margin-left:-260px">
+			<h2>교재인증</h2>
+			<a href="" class="btn_cls">창닫기</a>
+			<div class="cont">
+				<h3 class="pop_tit_h3">ISBN(교재 뒷면 바코드 하단 일련번호)를 인증해주세요</h3>
+				<!-- tbl_type10 -->
+				<div class="tbl_type10">
+					<table>
+						<caption>교재인증 정보 등록</caption>
+						<colgroup>
+							<col width="110"><col width="*">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>구매처</th>
+								<td>
+									<label id="Radio1"><input type="radio" for="Radio1" name="Radio">온라인 서점</label>
+									<label id="Radio2"><input type="radio" for="Radio2" name="Radio">오프라인 서점</label>
+									<label id="Radio3"><input type="radio" for="Radio3" name="Radio">학교/어학원 단체</label>
+									<label id="Radio4"><input type="radio" for="Radio4" name="Radio">기타</label>
+								</td>
+							</tr>
+							<tr>
+								<th>구매일시</th>
+								<td>
+									<label><input type="text" style="width:66px;"></label>
+									<span class="pl5 lh30 fc92">ex) 12월 25일 → 1225</span>
+								</td>
+							</tr>
+							<tr>
+								<th>ISBN번호인증</th>
+								<td>
+									<span class="textbook_certify_num">978 – 89 -</span>
+									<label><input type="text" style="width:13px;"></label>
+									<label><input type="text" style="width:13px;"></label>
+									<label><input type="text" style="width:13px;"></label>
+									<label><input type="text" style="width:13px;"></label>
+									<label><input type="text" style="width:13px;"></label>
+									<span class="textbook_certify_num">- 35 - 4</span>
+									<div class="pt5 fs11 fc92">(교재 뒷면 바코드 하단 일련번호)</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //tbl_type10 -->
+				<div class="btn_area t_c">
+					<a href="#" class="btn_r btn_type1" style="width:108px;"><span>인증하기</span></a>
+				</div>
+			</div>
+		</div>
+		<!-- //join_ly_point -->
+	</div>
+</body>
+</html>

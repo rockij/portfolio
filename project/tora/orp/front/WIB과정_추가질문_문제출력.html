@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="resource/css/base.css" media="screen" rel="stylesheet">
+<link href="resource/css/common.css" media="screen" rel="stylesheet">
+<link href="resource/css/site.css" media="screen" rel="stylesheet">
+<script src="resource/js/jquery-1.11.1.min.js"></script>
+<script src="resource/js/ui.js"></script>
+<title>ORP Assessment center</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <div id="container_lnb">
+
+        <header id="header">
+            <h1><a href="javascript:;" onclick="layer_open('mainGo');"><img src="resource/image/logo.png" alt="ORP Assessment center"></a></h1>
+            <div class="snb">
+                <ul>
+                    <li><a href="#;">로그아웃</a></li>
+                    <li class="cs">
+                        <button type="button">고객센터</button>
+                        <ul>
+                            <li><a href="#;">FAQ</a></li>
+                            <li><a href="#;">1:1문의</a></li>
+                            <li><a href="#;">공지사항</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <ul class="tnb">
+                <li class="time"><span class="ui_flex_cc"><i class="bgf"></i><strong>남은시간</strong>00:09:48</span></li>
+                <li class="dsk"><a href="javascript:;" onclick="layer_open('desk');">진행안내</a></li>
+                <li class="end"><a href="javascript:;" onclick="layer_open('end');">종료</a></li>
+            </ul>
+        </header>
+        <!-- //header -->
+
+        <div class="lnbwrap">
+            <a href="javascript:;" onclick="" class="handle_lnb">메뉴펼침</a>
+            <div class="lnbAll">
+                <aside class="lnb">
+                    <div class="favset">
+                        <a href="#;" class="fav"><i class="bgf"></i>즐겨찾기</a><!----><a href="#;" class="pen"><i class="bgf"></i>형광펜체크</a>
+                    </div>
+                    <ul class="menu">
+                        <li><a href="#;" class="sm active">전체자료<br>보기</a></li>
+                        <li>
+                            <a href="#;" class="sm">일정<br>캘린더</a>
+                            <button type="button" class="handle_lnb_menu">일정캘린더</button>
+                            <article class="calendar_set">
+                                <div class="calendar">
+                                    <select name="" id="" class="date">
+                                        <option value="202503" selected>2025년 03월</option>
+                                        <option value="202504">2025년 04월</option>
+                                        <option value="202505">2025년 05월</option>
+                                    </select>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Mo</th>
+                                                <th scope="col">Tu</th>
+                                                <th scope="col">We</th>
+                                                <th scope="col">Th</th>
+                                                <th scope="col">Fr</th>
+                                                <th scope="col">Sa</th>
+                                                <th scope="col">Su</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><a href="#;"></a></td>
+                                                <td><a href="#;"></a></td>
+                                                <td><a href="#;">1</a></td>
+                                                <td><a href="#;">2</a></td>
+                                                <td class="red"><a href="#;">3</a></td>
+                                                <td><a href="#;">4</a></td>
+                                                <td><a href="#;">5</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#;">6</a></td>
+                                                <td><a href="#;">7</a></td>
+                                                <td><a href="#;">8</a></td>
+                                                <td class="red"><a href="#;">9</a></td>
+                                                <td><a href="#;">10</a></td>
+                                                <td><a href="#;">11</a></td>
+                                                <td><a href="#;">12</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#;">13</a></td>
+                                                <td><a href="#;">14</a></td>
+                                                <td><a href="#;">15</a></td>
+                                                <td><a href="#;">16</a></td>
+                                                <td><a href="#;">17</a></td>
+                                                <td><a href="#;">18</a></td>
+                                                <td><a href="#;">19</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#;">20</a></td>
+                                                <td class="on"><a href="#;">21</a></td>
+                                                <td><a href="#;">22</a></td>
+                                                <td><a href="#;">23</a></td>
+                                                <td><a href="#;">24</a></td>
+                                                <td><a href="#;">25</a></td>
+                                                <td><a href="#;">26</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#;">27</a></td>
+                                                <td><a href="#;">28</a></td>
+                                                <td><a href="#;">29</a></td>
+                                                <td><a href="#;">30</a></td>
+                                                <td><a href="#;">31</a></td>
+                                                <td><a href="#;"></a></td>
+                                                <td><a href="#;"></a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="view">
+                                    <li class="date">2025-03-03<strong>1건</strong></li>
+                                    <li>부품사업부 기획팀 팀장 부임</li>
+                                </ul>
+                            </article>
+                        </li>
+                        <li>
+                            <a href="#;" class="sm">부품<br>사업부</a>
+                            <button type="button" class="handle_lnb_menu">부품사업부 정보</button>
+                            <article>
+                                <ul class="list">
+                                    <li>
+                                        <a href="javascript:;" onclick="layer_open('outData')">[시장동향] PC 사운드카드</a>
+                                        <a href="#;" class="bgf fav">즐겨찾기</a>
+                                        <a href="#;" class="bgf pen">형광펜</a>
+                                    </li>
+                                    <li><a href="#;">미래 핵심리더 육성 방안 마련을 위한 내부교육 커리큘럼 구성 건</a></li>
+                                    <li><a href="#;">[경쟁사] 사업 현황</a></li>
+                                </ul>
+                            </article>
+                        </li>
+                        <li>
+                            <a href="#;" class="sm">사내<br>자료</a>
+                            <button type="button" class="handle_lnb_menu">사내 자료 업데이트</button>
+                            <article>
+                                <ul class="list">
+                                    <li>
+                                        <a href="javascript:;" onclick="layer_open('outData')">[시장동향] PC 사운드카드</a>
+                                        <a href="#;" class="bgf fav">즐겨찾기</a>
+                                        <a href="#;" class="bgf pen">형광펜</a>
+                                    </li>
+                                    <li><a href="#;">미래 핵심리더 육성 방안 마련을 위한 내부교육 커리큘럼 구성 건</a></li>
+                                    <li><a href="#;">[경쟁사] 사업 현황</a></li>
+                                </ul>
+                            </article>
+                        </li>
+                        <li>
+                            <a href="#;" class="sm">외부<br>자료</a>
+                            <button type="button" class="handle_lnb_menu">외부 자료 게시판</button>
+                            <article>
+                                <ul class="list">
+                                    <li>
+                                        <a href="javascript:;" onclick="layer_open('outData')">[시장동향] PC 사운드카드</a>
+                                        <a href="#;" class="bgf fav">즐겨찾기</a>
+                                        <a href="#;" class="bgf pen">형광펜</a>
+                                    </li>
+                                    <li><a href="#;">미래 핵심리더 육성 방안 마련을 위한 내부교육 커리큘럼 구성 건</a></li>
+                                    <li><a href="#;">[경쟁사] 사업 현황</a></li>
+                                </ul>
+                            </article>
+                        </li>
+                    </ul>
+                </aside>
+                <aside class="lnb open user">
+                    <strong class="name">OOO님 (일반회원)</strong>
+                    <ul class="menu2">
+                        <li><a href="#;">과제수행<span class="ms c1">완료</span></a></li>
+                        <li><a href="#;">자가진단<span class="ms c1">완료</span></a></li>
+                        <li><a href="#;">작성답안 확인</a></li>
+                        <li><a href="#;" class="active">추가질문</a></li>
+                        <li><a href="#;">상호피드백</a></li>
+                        <li><a href="#;">리포트 산출</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <!-- //lnb -->
+            <div id="content">
+                <div class="ui_cont_half">
+                    <section>
+                        <div class="tbl_type2">
+                            <table summary="Task자료 상세">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="tit2">
+                                            <div class="area">
+                                                <h4>금년도 매출 증대 전략 수립의 건</h4>
+                                                <span class="date">2025.03.03</span>
+                                                <ul class="list_type3">
+                                                    <li>보내는 사람 : 인사팀 송종민 팀장</li>
+                                                    <li>받는 사람 :  전사원</li>
+                                                </ul>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div id="taskTable">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                내용이 출력되는 영역입니다.<br>
+                                                내용이 출력되는 영역입니다.<br>
+                                                내용이 출력되는 영역입니다.<br>
+                                                내용이 출력되는 영역입니다.<br>
+                                                내용이 출력되는 영역입니다.<br>
+                                                내용이 출력되는 영역입니다.<br>
+                                                내용이 출력되는 영역입니다.<br>
+                                                내용이 출력되는 영역입니다.<br>
+                                                내용이 출력되는 영역입니다.<br>
+                                                내용이 출력되는 영역입니다.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table summary="Task자료 상세">
+                                    <colgroup>
+                                        <col style="width:200px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">첨부파일</th>
+                                            <td class="link_list">
+                                                <p><a href="#;">2025년 매출 자료 (대외비)</a></p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="handle_toggle line0 open"><button type="button" onclick="showhideCont('taskTable');"><span class="off">내용 열기</span><span class="on">내용 닫기</span></button></div>
+                        <!-- //table -->
+                        <div class="tbl_type2 mt30">
+                            <table summary="Task자료 상세">
+                                <colgroup>
+                                    <col style="width:200px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">보낸사람</th>
+                                        <td>사업본부 부품사업부 기획팀 최병철 팀장</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">받는사람</th>
+                                        <td>영업팀 하우석 팀장</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">참조</th>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <textarea id="" cols="30" rows="10" style="width:96%;height:110px">
+내용이 출력되는 영역입니다.
+내용이 출력되는 영역입니다.
+                                            </textarea>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //table -->
+                    </section>
+                    <section class="selfTesk">
+                        <h3 class="title_type3">추가질문</h3>
+                        <h3 class="title_type3 mt50">Task 1. 금년도 매출 증대 전략 수립의 건</h3>
+                        <div class="tbl_type2 mt30">
+                            <table summary="추가질문1">
+                                <tbody>
+                                    <tr>
+                                        <th scope="col">1. 시장과 회원의 변화를 파악하여 이로 인한 영향력을 예측하였다.</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <textarea id="" cols="30" rows="10" style="width:94%;height:110px">
+내용이 출력되는 영역입니다.
+내용이 출력되는 영역입니다.
+                                            </textarea>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //1 -->
+                        <div class="tbl_type2 mt30">
+                            <table summary="추가질문1">
+                                <tbody>
+                                    <tr>
+                                        <th scope="col">2. 회사 내부 상황과 담당자를 고려하여 예측하였다.</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            사용자가 입력한 내용이 출력됩니다.<br> 
+                                            사용자가 입력한 내용이 출력됩니다.<br>
+                                            사용자가 입력한 내용이 출력됩니다.<br> 
+                                            사용자가 입력한 내용이 출력됩니다.<br> 
+                                            사용자가 입력한 내용이 출력됩니다.<br> 
+                                            사용자가 입력한 내용이 출력됩니다.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //2 -->
+                        <div class="btn_area_bside mt50">
+                            <button type="button" onclick="" class="btn_m o btn_type f_l" style="width:120px">목록</button><button type="button" onclick="" class="btn_m o btn_type2 f_r" style="width:120px">저장</button>
+                        </div>
+                        <!-- //table -->
+                    </section>
+                </div>
+            </div>
+            <!-- //content -->
+        </div>
+        <!-- //container -->
+
+    </div>
+
+    <footer id="footer">
+        <div class="inner clear">
+            <span class="lg"><img src="resource/image/logo2.png" alt="ORP Assessment center"></span>
+            <address>
+                서울특별시 서초구 서초대로 67, 성령빌딩 3층<span>대표전화 : 02-3473-2206</span><span>팩스 : 02-3473-2209</span>
+                <p>COPYRIGHT(C) 2020 ORP Institute. All Rights reserved</p>
+            </address>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+</div>
+
+<!-- 통합메인 이동 -->
+<div id="mw-mainGo" class="ly_pop ly_alert">
+    <div class="content">
+        <button type="button" onclick="layer_close()" class="close"><i class="bgf">닫기</i></button>
+        <h3 class="title">통합메인 이동</h3>
+        <ul class="list_type2">
+            <li>Web-IB 과제수행 중 통합메인으로 이동 시 진행 시간은 일시정지 됩니다.</li>
+            <li>단, 현재 작업중인 내용이 정상 저장되지 않을 수 있으니 작업중인 내용이 있다면 보내기(임시저장)이 필요합니다.</li>
+        </ul>
+        <div class="btn_area_center">
+            <a href="javascript:;" onclick="layer_close()" class="btn_r o btn_type4" style="width:100px">닫기</a><!----><a href="#;" class="btn_r o btn_type2" style="width:100px">메인 이동</a>
+        </div>
+    </div>
+</div>
+<!-- //통합메인 이동 -->
+
+<!-- 종료안내 -->
+<div id="mw-end" class="ly_pop ly_alert">
+    <div class="content">
+        <button type="button" onclick="layer_close()" class="close"><i class="bgf">닫기</i></button>
+        <h3 class="title">종료안내</h3>
+        <div class="tbl_type2">
+            <table summary="종료안내">
+                <colgroup>
+                    <col>
+                    <col style="width:30%;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row" class="tit">
+                            <ul class="list_type2">
+                                <li>주어진 <span class="fc_red">과제를 모두 마치지 못한<br> 상태에서 종료시 답안수정 혹은 답안 <br>작성이 불가</span>합니다.</li>
+                            </ul>
+                        </th>
+                        <td rowspan="2" class="p0btn"><a href="javascript:;" onclick="layer_close()" class="btn_m o btn_type2" style="width:70px">종료</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="tit">
+                            <ul class="list_type2">
+                                <li>과제 종료 후 <strong>자가진단(Self-Checklist)</strong><br>를 수행하실 수 있습니다.</li>
+                            </ul>
+                        <ul class="list_type2"></th>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="tit">
+                            <ul class="list_type2">
+                                <li>시간이 부족하신 경우 추가시간이<br>주어지니 추가시간을 이용해서 부족한<br>과제를 진행하실 수 있습니다.</li>
+                                <li>추가시간 : 30분</li>
+                            </ul>
+                        </th>
+                        <td class="p0btn"><a href="javascript:;" onclick="layer_close()" class="btn_m o btn_type" style="width:70px">과제 수행
+                        </a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- //table -->
+    </div>
+</div>
+<!-- //종료안내 -->
+
+<!-- 진행안내 -->
+<div id="mw-desk" class="ly_pop ly_txt_dsk">
+    <div class="content">
+        <button type="button" onclick="layer_close()" class="close"><i class="bgf">닫기</i></button>
+        <h3 class="title">진행안내</h3>
+        <article class="ui_flex_cc scroll">
+            진행안내 내용 출력
+        </article>
+        <div class="btn_area_center">
+            <button type="button" onclick="layer_close()" class="btn_r o btn_type2" style="width:120px">닫기</button>
+        </div>
+    </div>
+</div>
+<!-- //진행안내 -->
+
+<!-- 외부자료게시판 -->
+<div id="mw-outData" class="ly_pop ly_outdata">
+    <div class="content">
+        <button type="button" onclick="layer_close()" class="close"><i class="bgf">닫기</i></button>
+        <h3 class="title">외부자료 게시판</h3>
+        <select name="" id="" class="dataselect">
+            <option value="">자료선택</option>
+            <option value="">자료선택1</option>
+            <option value="">자료선택2</option>
+        </select>
+        <div class="tbl_type2">
+            <table summary="외부자료 게시판 상세">
+                <tbody>
+                    <tr>
+                        <th scope="row" class="tit2">
+                            <h4>
+                                [시장동향] PC 사운드 카드
+                                <span class="date">2025.03.03</span>
+                            </h4>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="txtpen">
+                            <div class="favset">
+                                <a href="#;" class="fav handle_onoff"><i class="bgf">즐겨찾기</i></a>
+                                <a href="#;" class="pen handle_onoff"><i class="bgf">형광펜</i></a>
+                                <a href="#;" class="ese handle_onoff"><i class="bgf">지우기</i></a>
+                            </div>
+                            컴퓨터는 개발 초기에는 단순히 커다랗고 비싼 계산기에 불과했고, 용도도 매우 제한적이었다. <br>
+                            하지만 1970년대 후반과 1980년대 초반에 이르자 값이 싸고 크기도 작은 개인용컴퓨터(PC)가 대량 보급되기 시작했다. 특히 PC를 이용해 게임이나 영화, 음악 등을 즐기는 경우가 많아져 PC는 단순한 사무용 기기에서 종합 멀티미디어 <span class="drag">기기로 거듭나게<span class="tooltip2">저장</span></span> 되었다.
+                            <br><br>
+                            멀티미디어 활용도를 높이기 위해서는 우수한 음향 출력 기능이 필수다. 하지만 초기의 PC는 제대로 된
+                            소리를 출력하지 못했다. 기껏 소리를 낸다고 해봐야 메인보드(주기판)에 내장된 단순한 전자회로와
+                            동전만한 간이 스피커를 통해 삐-삐- 정도의 비프(beep)음을 내는 정도였다.
+                            <br><br>
+                            <img src="resource/image/sample_img.png" alt="이미지영역">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- //table -->
+        <div class="btn_area_center">
+            <a href="javascript:;" onclick="layer_close()" class="btn_r o btn_type2" style="width:100px">닫기</a><!----><a href="javascript:;" onclick="$('#mw-outData').hide();layer_open('dataList')" class="btn_r o btn_type4" style="width:100px">목록</a>
+        </div>
+    </div>
+</div>
+<!-- //외부자료게시판 -->
+
+<!-- 자료 -->
+<div id="mw-dataList" class="ly_pop ly_data_lst">
+    <div class="content">
+        <button type="button" onclick="layer_close()" class="close"><i class="bgf">닫기</i></button>
+        <h3 class="title">자료</h3>
+        <div class="srchbx before">
+            <div class="tbl_type2">
+                <table summary="분류선택,제목입력">
+                    <colgroup>
+                        <col style="width:20%;">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">분류</th>
+                            <td>
+                                <select id="" style="width:297px;">
+                                    <option value="">자료선택</option>
+                                    <option value="1">외부자료</option>
+                                    <option value="2">내부자료</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">제목</th>
+                            <td><input type="text" id="" value="" style="width:275px;"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="btn_area_center">
+                <button type="button" onclick="$('.srchbx.before').hide();$('.srchbx.after').show()" class="btn_r o btn_type2" style="width:120px">검색</button>
+            </div>
+        </div>
+        <div class="srchbx after">
+            <ul class="clear">
+                <li class="txt">‘동향’ 으로 검색결과<br>총 <strong class="fc_red">11</strong>개의 자료가 검색되었습니다.</li>
+                <li class="ip">
+                    <span><input type="text" id="" value="" placeholder="검색">
+                    <button type="button" onclick="" class="srch"><i class="bgf"></i></button></span>
+                </li>
+            </ul>
+        </div>
+        <!-- //검색 -->
+        <div class="tbl_type mt50">
+            <table summary="공지사항 리스트">
+                <colgroup>
+                    <col style="width:6.2%;">
+                    <col style="width:13%;">
+                    <col>
+                    <col style="width:23%;">
+                    <col style="width:15%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">분류</th>
+                        <th scope="col">제목</th>
+                        <th scope="col">즐겨찾기, 형광펜</th>
+                        <th scope="col">등록일</th>
+                    </tr>
+                </thead>
+            </table>
+            <div class="scroll lastline">
+                <table summary="공지사항 리스트">
+                    <colgroup>
+                        <col style="width:6.2%;">
+                        <col style="width:13%;">
+                        <col>
+                        <col style="width:25%;">
+                        <col style="width:12%;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>외부자료</td>
+                            <td class="sbj"><a href="#;" class="elip1">제목 노출영역입니다.</a></td>
+                            <td class="txtpen">
+                                <div class="favset">
+                                    <i class="bgf fav">즐겨찾기</i>
+                                    <i class="bgf pen">형광펜</i>
+                                    <i class="bgf ese">지우기</i>
+                                </div>
+                            </td>
+                            <td>2019.03.01</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>외부자료</td>
+                            <td class="sbj"><a href="#;" class="elip1">제목 노출영역입니다.</a></td>
+                            <td class="txtpen">
+                                <div class="favset">
+                                    <i class="bgf fav">즐겨찾기</i>
+                                </div>
+                            </td>
+                            <td>2019.03.01</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>외부자료</td>
+                            <td class="sbj"><a href="#;" class="elip1">제목 노출영역입니다.</a></td>
+                            <td class="txtpen">
+                                <div class="favset">
+                                    <i class="bgf pen">형광펜</i>
+                                    <i class="bgf ese">지우기</i>
+                                </div>
+                            </td>
+                            <td>2019.03.01</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>외부자료</td>
+                            <td class="sbj"><a href="#;" class="elip1">제목 노출영역입니다.</a></td>
+                            <td class="txtpen">
+                                <div class="favset">
+                                    <i class="bgf pen">형광펜</i>
+                                    <i class="bgf ese">지우기</i>
+                                </div>
+                            </td>
+                            <td>2019.03.01</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>외부자료</td>
+                            <td class="sbj"><a href="#;" class="elip1">제목 노출영역입니다.</a></td>
+                            <td class="txtpen">
+                                <div class="favset">
+                                    <i class="bgf pen">형광펜</i>
+                                    <i class="bgf ese">지우기</i>
+                                </div>
+                            </td>
+                            <td>2019.03.01</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>외부자료</td>
+                            <td class="sbj"><a href="#;" class="elip1">제목 노출영역입니다.</a></td>
+                            <td class="txtpen"></td>
+                            <td>2019.03.01</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>외부자료</td>
+                            <td class="sbj"><a href="#;" class="elip1">제목 노출영역입니다.</a></td>
+                            <td class="txtpen">
+                                <div class="favset">
+                                    <i class="bgf fav">즐겨찾기</i>
+                                    <i class="bgf pen">형광펜</i>
+                                    <i class="bgf ese">지우기</i>
+                                </div>
+                            </td>
+                            <td>2019.03.01</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>외부자료</td>
+                            <td class="sbj"><a href="#;" class="elip1">제목 노출영역입니다.</a></td>
+                            <td class="txtpen"></td>
+                            <td>2019.03.01</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>외부자료</td>
+                            <td class="sbj"><a href="#;" class="elip1">제목 노출영역입니다.</a></td>
+                            <td class="txtpen">
+                                <div class="favset">
+                                    <i class="bgf ese">지우기</i>
+                                </div>
+                            </td>
+                            <td>2019.03.01</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>외부자료</td>
+                            <td class="sbj"><a href="#;" class="elip1">제목 노출영역입니다.</a></td>
+                            <td class="txtpen">
+                                <div class="favset">
+                                    <i class="bgf fav">즐겨찾기</i>
+                                    <i class="bgf pen">형광펜</i>
+                                    <i class="bgf ese">지우기</i>
+                                </div>
+                            </td>
+                            <td>2019.03.01</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>외부자료</td>
+                            <td class="sbj"><a href="#;" class="elip1">제목 노출영역입니다.</a></td>
+                            <td class="txtpen"></td>
+                            <td>2019.03.01</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>외부자료</td>
+                            <td class="sbj"><a href="#;" class="elip1">제목 노출영역입니다.</a></td>
+                            <td class="txtpen"></td>
+                            <td>2019.03.01</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>외부자료</td>
+                            <td class="sbj"><a href="#;" class="elip1">제목 노출영역입니다.</a></td>
+                            <td class="txtpen"></td>
+                            <td>2019.03.01</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>외부자료</td>
+                            <td class="sbj"><a href="#;" class="elip1">제목 노출영역입니다.</a></td>
+                            <td class="txtpen"></td>
+                            <td>2019.03.01</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>외부자료</td>
+                            <td class="sbj"><a href="#;" class="elip1">제목 노출영역입니다.</a></td>
+                            <td class="txtpen"></td>
+                            <td>2019.03.01</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btn_area_center">
+            <button type="button" onclick="layer_close()" class="btn_r o btn_type2" style="width:120px">닫기</button>
+        </div>
+        <!-- //list -->
+    </div>
+</div>
+<!-- //자료 -->
+
+</body>
+</html>

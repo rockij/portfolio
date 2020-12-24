@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="resource/css/base.css" media="screen" rel="stylesheet">
+<link href="resource/css/site.css" media="screen" rel="stylesheet">
+<script src="resource/js/jquery-1.11.1.min.js"></script>
+<script src="resource/js/ui.js"></script>
+<title>ORP Assessment center</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header">
+        <h1><img src="resource/image/logo.png" alt="ORP Assessment center"></h1>
+        <div id="gnb">
+            <ul>
+                <li><a href="#;">운영관리</a></li>
+                <li><a href="#;">회원관리</a></li>
+                <li><a href="#;" class="active">WIB관리</a></li>
+                <li><a href="#;">진행정보&평가</a></li>
+            </ul>
+        </div>
+        <a href="#;" class="user">로그아웃</a>
+    </header>
+    <!-- //header -->
+
+    <div id="container">
+        <aside class="lnb">
+            <ul>
+                <li><a href="#;">과제관리</a></li>
+                <li><a href="#;" class="active">과정관리</a></li>
+                <li><a href="#;">테스크관리</a></li>
+            </ul>
+        </aside>
+        <div id="content">
+            <section class="title_top">
+                <h2>과정관리 – NHN WIB1 역량평가 과정</h2>
+                <div class="path"><a href="#;">Home</a><i>&gt;</i><a href="#;">WIB관리</a><i>&gt;</i><a href="#;">과정관리</a><i>&gt;</i><b>과제설정</b></div>
+            </section>
+            <!-- //title -->
+            <ul class="tab_type tn4 mt30">
+                <li><a href="#;">과제설정</a></li>
+                <li class="active"><a href="#;">과제설정</a></li>
+                <li><a href="#;">학습자 설정</a></li>
+                <li><a href="#;">상호피드백 설정</a></li>
+            </ul>
+            <!-- //tab -->
+            <div class="bta_agn_center mt50">
+                <button type="button" onclick="" class="btn_xr btn_type2">과제 불러오기</button><!----><button type="button" onclick="" class="btn_xr btn_type4">과제 수정하기</button>
+                <p class="mt20">* 과제관리에 생성되어 있는 과제를 각 항목단위, 등록단위로 불러올 수 있습니다.</p>
+                <p class="mt10">* 한번 불러온 상태에서 추가로 불러오는 경우 중복을 제외한 자료가 추가됩니다.</p>
+            </div>
+            <!-- //btn -->
+            <h3 class="title_type mt50">과정설정</h3>
+            <div class="tbl_type mt15">
+                <table>
+                    <colgroup>
+                        <col style="width:16%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">제한시간</th>
+                            <td>90분</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">추가시간</th>
+                            <td>60분</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">자가진단</th>
+                            <td>사용</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">대안선택형</th>
+                            <td>사용</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">F/U 인터뷰</th>
+                            <td>미사용</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">전문위원평가</th>
+                            <td>사용</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //table -->
+            <div class="clear mt50">
+                <h3 class="title_type fleft mt15">테스크 설정</h3>
+                <button type="button" onclick="" class="btn_m btn_type4 fright">평가연결 일괄설정</button>
+            </div>
+            <div class="tbl_type2 mt15">
+                <table>
+                    <colgroup>
+                        <col style="width:4.2%">
+                        <col style="width:5.3%">
+                        <col style="width:5%">
+                        <col style="width:20%">
+                        <col style="width:13.5%">
+                        <col style="width:13.5%">
+                        <col style="width:13.5%">
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                <span class="checkbox o check">
+                                    <input type="checkbox" name="tesk-set" id="tesk-all" checked><label for="tesk-all"></label>
+                                </span>
+                            </th>
+                            <th scope="col">순서</th>
+                            <th scope="col">코드</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">
+                                자가진단
+                                <div class="mt5">
+                                    <button type="button" onclick="" class="btn_m btn_type" style="width:68px">사용</button><!----><button type="button" onclick="" class="btn_m btn_type2 ml5" style="width:68px">미사용</button>
+                                </div>
+                            </th>
+                            <th scope="col">
+                                대안선택형
+                                <div class="mt5">
+                                    <button type="button" onclick="" class="btn_m btn_type" style="width:68px">사용</button><!----><button type="button" onclick="" class="btn_m btn_type2 ml5" style="width:68px">미사용</button>
+                                </div>
+                            </th>
+                            <th scope="col">
+                                F/U인터뷰
+                                <div class="mt5">
+                                    <button type="button" onclick="" class="btn_m btn_type" style="width:68px">사용</button><!----><button type="button" onclick="" class="btn_m btn_type2 ml5" style="width:68px">미사용</button>
+                                </div>
+                            </th>
+                            <th scope="col">전문위원</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="checkbox o check">
+                                    <input type="checkbox" name="tesk-set" id="tesk1"><label for="tesk1"></label>
+                                </span>
+                            </td>
+                            <td>1</td>
+                            <td>W5t01</td>
+                            <td class="link left"><a href="#;">제목이 출력됩니다.</a></td>
+                            <td><button type="button" onclick="" class="btn_m btn_type" style="width:68px">사용</button></td>
+                            <td><button type="button" onclick="" class="btn_m btn_type2" style="width:68px">미사용</button></td>
+                            <td><button type="button" onclick="" class="btn_m btn_type2" style="width:68px">미사용</button></td>
+                            <td>
+                                <button type="button" onclick="" class="btn_m btn_type4" style="width:68px">평가연결</button>
+                                <span class="ml10">admin2 / admin3 / Admub / mq215 / sdfsdgfs</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="checkbox o check">
+                                    <input type="checkbox" name="tesk-set" id="tesk2"><label for="tesk2"></label>
+                                </span>
+                            </td>
+                            <td>2</td>
+                            <td>W5t01</td>
+                            <td class="link left"><a href="#;">제목이 출력됩니다.</a></td>
+                            <td><button type="button" onclick="" class="btn_m btn_type2" style="width:68px">미사용</button></td>
+                            <td><button type="button" onclick="" class="btn_m btn_type" style="width:68px">사용</button></td>
+                            <td><button type="button" onclick="" class="btn_m btn_type2" style="width:68px">미사용</button></td>
+                            <td>
+                                <button type="button" onclick="" class="btn_m btn_type4" style="width:68px">평가연결</button>
+                                <span class="ml10">admin2 / admin3</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="checkbox o check">
+                                    <input type="checkbox" name="tesk-set" id="tesk3"><label for="tesk3"></label>
+                                </span>
+                            </td>
+                            <td>3</td>
+                            <td>W5t01</td>
+                            <td class="link left"><a href="#;">제목이 출력됩니다.</a></td>
+                            <td><button type="button" onclick="" class="btn_m btn_type2" style="width:68px">미사용</button></td>
+                            <td><button type="button" onclick="" class="btn_m btn_type" style="width:68px">사용</button></td>
+                            <td><button type="button" onclick="" class="btn_m btn_type" style="width:68px">사용</button></td>
+                            <td>
+                                <button type="button" onclick="" class="btn_m btn_type4 " style="width:68px">평가연결</button>
+                                <span class="ml10">admin2</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="checkbox o check">
+                                    <input type="checkbox" name="tesk-set" id="tesk4"><label for="tesk4"></label>
+                                </span>
+                            </td>
+                            <td>4</td>
+                            <td>W5t01</td>
+                            <td class="link left"><a href="#;">제목이 출력됩니다.</a></td>
+                            <td><button type="button" onclick="" class="btn_m btn_type" style="width:68px">사용</button></td>
+                            <td><button type="button" onclick="" class="btn_m btn_type" style="width:68px">사용</button></td>
+                            <td><button type="button" onclick="" class="btn_m btn_type" style="width:68px">사용</button></td>
+                            <td>
+                                <button type="button" onclick="" class="btn_m btn_type4" style="width:68px">평가연결</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="checkbox o check">
+                                    <input type="checkbox" name="tesk-set" id="tesk5"><label for="tesk5"></label>
+                                </span>
+                            </td>
+                            <td>5</td>
+                            <td>W5t01</td>
+                            <td class="link left"><a href="#;">제목이 출력됩니다.</a></td>
+                            <td><button type="button" onclick="" class="btn_m btn_type" style="width:68px">사용</button></td>
+                            <td><button type="button" onclick="" class="btn_m btn_type" style="width:68px">사용</button></td>
+                            <td><button type="button" onclick="" class="btn_m btn_type" style="width:68px">사용</button></td>
+                            <td>
+                                <button type="button" onclick="" class="btn_m btn_type4" style="width:68px">평가연결</button>
+                            </td>
+                        </tr>
+                        <tr class="rowup">
+                            <td>
+                                <span class="checkbox o check">
+                                    <input type="checkbox" name="tesk-set" id="tesk6"><label for="tesk6"></label>
+                                </span>
+                            </td>
+                            <td>6</td>
+                            <td>-</td>
+                            <td class="link left"><a href="#;">제목이 출력됩니다.</a></td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //table -->
+            <div class="clear mt50">
+                <h3 class="title_type fleft mt15">자료 설정</h3>
+                <button type="button" onclick="" class="btn_m btn_type4 fright">출력순서 설정</button>
+            </div>
+            <ul class="tab_text tabchg mt15">
+                <li class="active"><a href="#;">전체</a></li>
+                <li><a href="#;">기업정보</a></li>
+                <li><a href="#;">부품사업부 정보</a></li>
+                <li><a href="#;">사내 자료 업데이트</a></li>
+                <li><a href="#;">부품사업부 외부 자료게시판</a></li>
+                <li><a href="#;">부품사업부 정보</a></li>
+            </ul>
+            <!-- //tab -->
+            <div class="tbl_type2 mt10">
+                <table>
+                    <colgroup>
+                        <col style="width:4.2%">
+                        <col style="width:5.3%">
+                        <col style="width:40%">
+                        <col>
+                        <col style="width:8.7%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                <span class="checkbox o check">
+                                    <input type="checkbox" name="data-set" id="data-all" checked><label for="data-all"></label>
+                                </span>
+                            </th>
+                            <th scope="col">순서</th>
+                            <th scope="col">게시판 유형</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">등록일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="checkbox o check">
+                                    <input type="checkbox" name="data-set" id="data1"><label for="data1"></label>
+                                </span>
+                            </td>
+                            <td>5</td>
+                            <td class="left">기업정보</td>
+                            <td class="link left"><a href="#;">제목이 출력됩니다.</a></td>
+                            <td>2019-01-01</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="checkbox o check">
+                                    <input type="checkbox" name="data-set" id="data2"><label for="data2"></label>
+                                </span>
+                            </td>
+                            <td>4</td>
+                            <td class="left">부품사업부 정보</td>
+                            <td class="link left"><a href="#;">제목이 출력됩니다.</a></td>
+                            <td>2019-01-01</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="checkbox o check">
+                                    <input type="checkbox" name="data-set" id="data3"><label for="data3"></label>
+                                </span>
+                            </td>
+                            <td>3</td>
+                            <td class="left">사내 자료 업데이트</td>
+                            <td class="link left"><a href="#;">제목이 출력됩니다.</a></td>
+                            <td>2019-01-01</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="checkbox o check">
+                                    <input type="checkbox" name="data-set" id="data4"><label for="data4"></label>
+                                </span>
+                            </td>
+                            <td>2</td>
+                            <td class="left">부품사업부 외부 자료 게시판</td>
+                            <td class="link left"><a href="#;">제목이 출력됩니다.</a></td>
+                            <td>2019-01-01</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="checkbox o check">
+                                    <input type="checkbox" name="data-set" id="data5"><label for="data5"></label>
+                                </span>
+                            </td>
+                            <td>1</td>
+                            <td class="left">부품사업부 정보</td>
+                            <td class="link left"><a href="#;">제목이 출력됩니다.</a></td>
+                            <td>2019-01-01</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //table -->
+            <h3 class="title_type mt50">스케줄 설정</h3>
+            <div class="dataset_wrap mt15">
+                <div class="calendar_type">
+                    <div class="dateslct">
+                        <div class="date">
+                            <select style="width:118px">
+                                <option value="202503" selected>2025.03</option>
+                                <option value="202502">2025.02</option>
+                                <option value="202501">2025.01</option>
+                                <option value="202412">2024.12</option>
+                                <option value="202211">2022.11</option>
+                            </select>
+                        </div>
+                        <div class="table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Mo</th>
+                                        <th scope="col">Tu</th>
+                                        <th scope="col">We</th>
+                                        <th scope="col">Th</th>
+                                        <th scope="col">Fr</th>
+                                        <th scope="col">Sa</th>
+                                        <th scope="col">Su</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><button type="button"></button></td>
+                                        <td><button type="button"></button></td>
+                                        <td><button type="button">1</button></td>
+                                        <td><button type="button">2</button></td>
+                                        <td class="on"><button type="button">3</button></td>
+                                        <td><button type="button">4</button></td>
+                                        <td><button type="button">5</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="on"><button type="button">6</button></td>
+                                        <td><button type="button">7</button></td>
+                                        <td><button type="button">8</button></td>
+                                        <td><button type="button">9</button></td>
+                                        <td><button type="button">10</button></td>
+                                        <td><button type="button">11</button></td>
+                                        <td><button type="button">12</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><button type="button">13</button></td>
+                                        <td><button type="button">14</button></td>
+                                        <td class="on"><button type="button">15</button></td>
+                                        <td><button type="button">16</button></td>
+                                        <td><button type="button">17</button></td>
+                                        <td><button type="button">18</button></td>
+                                        <td><button type="button">19</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><button type="button">20</button></td>
+                                        <td><button type="button">21</button></td>
+                                        <td class="on"><button type="button">22</button></td>
+                                        <td><button type="button">23</button></td>
+                                        <td><button type="button">24</button></td>
+                                        <td><button type="button">25</button></td>
+                                        <td><button type="button">26</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><button type="button">27</button></td>
+                                        <td><button type="button">28</button></td>
+                                        <td><button type="button">29</button></td>
+                                        <td><button type="button">30</button></td>
+                                        <td class="on"><button type="button">31</button></td>
+                                        <td><button type="button"></button></td>
+                                        <td><button type="button"></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- //달력 -->
+                <div class="contfield">
+                    <div class="tbl_type">
+                        <table>
+                            <colgroup>
+                                <col style="width:16%">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="tc">년월</th>
+                                    <td>
+                                        <select style="width:118px">
+                                            <option value="202503" selected>2025.03</option>
+                                            <option value="202502">2025.02</option>
+                                            <option value="202501">2025.01</option>
+                                            <option value="202412">2024.12</option>
+                                            <option value="202211">2022.11</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="tc">날짜</th>
+                                    <th scope="row" class="tc">내용</th>
+                                </tr>
+                                <tr>
+                                    <td class="tc">3</td>
+                                    <td class="rowup">부품사업부 기획팀 팀장 부임</td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">9</td>
+                                    <td class="rowup">회식</td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">21</td>
+                                    <td class="rowup">경영진 사업보고</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="bta_agn_right mt10">
+                        <button type="button" onclick="" class="btn_m btn_type4" style="width:90px">저장</button>
+                    </div>
+                    <!-- //btn -->
+                </div>
+                <!-- //입력폼 -->
+            </div>
+            <!-- //table -->
+        </div>
+        <!-- //content -->
+    </div>
+    <!-- //container -->
+
+    <footer id="footer">
+        <div class="inner">
+            Copyright ⓒ ORP Institute. All Rights Reserved.
+            <img src="resource/image/logo2.png" alt="ORP Assessment center" class="lg">
+        </div>
+    </footer>
+    <!-- //footer -->
+
+</div>
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$(function(){
+    // 달력
+    $( ".ip_cal" ).datepicker({
+        showOn: "both",
+        buttonImage: "resource/image/ico_cal.png",
+        buttonImageOnly: true,
+        dateFormat: "yy-mm-dd"
+    });
+});
+</script>
+
+</body>
+</html>

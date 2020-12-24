@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="resources/css/common.css" media="screen" rel="stylesheet">
+<link href="resources/css/site.css" media="screen" rel="stylesheet">
+<script src="resources/js/jquery-1.11.1.min.js"></script>
+<script src="resources/js/design.js"></script>
+<!--[if lt IE 9]>
+<script src="resources/js/html5shiv.js"></script>
+<![endif]-->
+<title>Hackers SCM Portal</title>
+</head>
+<body>
+
+<div id="wrap">
+
+	<header>
+		<h1><a href="/"><img src="resources/images/logo.gif" alt="Hackers SCM Portal"></a></h1>
+		<a href="#;" class="btn_user"><span class="fc_blu">홍길동</span> 님</a>
+		<div id="gnb">
+			<ul>
+				<li><a href="#;">Home</a></li>
+				<li><a href="#;" class="active">발주</a></li>
+				<li><a href="#;">견적</a></li>
+				<li><a href="#;">입고</a></li>
+				<li><a href="#;">출고</a></li>
+				<li><a href="#;">재고</a></li>
+				<li><a href="#;">정산</a></li>
+				<li><a href="#;">미정</a></li>
+			</ul>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<div id="container">
+
+		<aside class="lnb">
+			<h2><a href="#;">견적 관리</a></h2>
+			<h2><a href="#;">개정 계획</a></h2>
+			<h2><a href="#;">교재 관리</a></h2>
+			<ul>
+				<li><a href="#;">교재 정보</a></li>
+				<li><a href="#;">교재 사양</a></li>
+			</ul>
+			<h2><a href="#;">개정 계획</a></h2>
+			<h2><a href="#;">교재별 발주일</a></h2>
+			<h2><a href="#;">그룹설정</a></h2>
+			<h2><a href="#;">발주량산정 관리</a></h2>
+			<h2><a href="#;">업체 관리</a></h2>
+			<h2><a href="#;">용지 단가 관리</a></h2>
+			<ul>
+				<li><a href="#;">확인</a></li>
+				<li><a href="#;">고시가 수정</a></li>
+			</ul>
+			<h2><a href="#;">인쇄 사고 이력</a></h2>
+			<h2><a href="#;">인쇄소 분산</a></h2>
+			<h2><a href="#;">후가공 수정필름<br>청구 정보</a></h2>
+			<h2><a href="#;">회원 관리</a></h2>
+			<ul>
+				<li><a href="#;">개인 계정</a></li>
+				<li><a href="#;">법인 계정</a></li>
+			</ul>
+			<h2><a href="#;">권한 관리</a></h2>
+		</aside>
+		<!-- //left-navigation -->
+
+		<div id="ct">
+			<h2>개정 계획</h2>
+			<div class="path">관리 &gt; <span class="on">개정 계획</span></div>
+			<!-- //title -->
+			<div class="inner">
+				<div class="tr"><button type="button" onclick="$('#changePlanPlus').show();" class="btn_m btn_type">개정 계획 추가</a></div>
+				<fieldset class="srch_type mt20">
+					<legend>검색</legend>
+					<ul>
+						<li>
+							<span class="select">
+								<label for="step1">담당자</label>
+								<select name="step1" id="step1">
+									<option value="1" selected="">담당자</option>
+									<option value="2">1</option>
+								</select>
+							</span>
+							<span class="select">
+								<label for="step2">분야</label>
+								<select name="step2" id="step2">
+									<option value="1">분야</option>
+									<option value="2">1</option>
+								</select>
+							</span>
+							<span class="select">
+								<label for="step3">개정 여부</label>
+								<select name="step3" id="step3">
+									<option value="1" selected="">개정 여부</option>
+									<option value="2">1</option>
+								</select>
+							</span>
+							<span class="select">
+								<label for="step4">개정 예정 여부</label>
+								<select name="step4" id="step4">
+									<option value="1">개정 예정 여부</option>
+									<option value="2">1</option>
+								</select>
+							</span>
+						</li>
+						<li>
+							<span class="select">
+								<label for="date">개정 예정일</label>
+								<select name="date" id="date">
+									<option value="1">개정 예정일</option>
+									<option value="2">1</option>
+								</select>
+							</span>
+							<span class="input input_cal placeholder"><label for="cal1" class="lbl"><img src="resources/images/txt_cal_placeholder.gif" alt="----.--.--"></label><input type="text" name="" id="cal1" class="i_text"><button type="button" onclick=""><img src="resources/images/ico_cal.gif" alt="달력보기"></button></span>&nbsp;~&nbsp;<span class="input input_cal placeholder"><label for="cal1" class="lbl"><img src="resources/images/txt_cal_placeholder.gif" alt="----.--.--"></label><input type="text" name="" id="cal1" class="i_text" value="2017-12-01"><button type="button" onclick=""><img src="resources/images/ico_cal.gif" alt="달력보기"></button></span>
+							<span class="select ml15">
+								<label for="book-name">교재명</label>
+								<select name="book-name" id="book-name">
+									<option value="1">교재명</option>
+									<option value="2">1</option>
+								</select>
+							</span><input type="text" name="" id="" class="ml5" style="width:176px"><button type="button" onclick="" class="btn_m btn_type2 ml5">검색</button>
+						</li>
+					</ul>
+				</fieldset>
+				<!-- //search -->
+				<ul class="ui_frm2 list_type mt20">
+					<li>발주진행은 기본 '6개월' 단위 를 예상판매시기로 설정하고 발주수량을 산출합니다.</li>
+					<li>문의드린 기간내에는 특이사항이 없지만, 그 기간에 근접한 시기에 교재관련 변동 및 개정 계획이 있다면 공유해주시기 바랍니다. 발주량 산정시, 발주기간과 수량을 결정짓는 중요한 정보가 될 수 있기 때문입니다. (아래 두가지 상황 발생 우려)<br>- 개정판 출간전에 재고가 부족해 소량을 발주하게 되어 제작단가가 비싸짐<br>- 교재가 남아 반품수량이 증가하게 되는 상황이 발생함 (신간출간 3주전 기존판의 출고를 정지하고 반품을 받기 시작하기 때문)</li>
+				</ul>
+				<div class="tr mt20">
+					<button type="button" onclick="" class="btn_m btn_type3">선택 삭제</button>
+				</div>
+				<div class="tbl_type mt20">
+					<table>
+						<colgroup>
+							<col style="width:5.5%;">
+							<col style="width:10.2%;">
+							<col>
+							<col style="width:6.3%;">
+							<col style="width:7%;">
+							<col style="width:9%;">
+							<col style="width:7.8%;">
+							<col style="width:14.5%;">
+							<col style="width:4.5%;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">담당자</th>
+								<th scope="col">분야</th>
+								<th scope="col">교재명</th>
+								<th scope="col">판쇄회</th>
+								<th scope="col">개정 여부</th>
+								<th scope="col">개정 예정 유무</th>
+								<th scope="col">개정 예정일</th>
+								<th scope="col">비고</th>
+								<th scope="col">수정</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row" rowspan="6" class="vt tc">박영진</th>
+								<td rowspan="4" class="stit vt tc">토익</td>
+								<td class="tl spce"><label for=""><input type="checkbox" name="" id="" value="">토익 스타트 리딩</label></td>
+								<td>00–00-00</td>
+								<td>개정 완료</td>
+								<td>개정 계획 없음</td>
+								<td>2017-00 초</td>
+								<td>17년 1월로 변경될 가능성 있음</td>
+								<td><a href="#;"><img src="resources/images/btn_write.gif" alt="수정"></a></td>
+							</tr>
+							<tr>
+								<td class="tl spce"><label for=""><input type="checkbox" name="" id="" value="">토익 스타트 리스닝</label></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>2017-00 중</td>
+								<td></td>
+								<td><a href="#;"><img src="resources/images/btn_write.gif" alt="수정"></a></td>
+							</tr>
+							<tr>
+								<td class="tl spce"><label for=""><input type="checkbox" name="" id="" value="">토익 중급 리딩</label></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>2017-00 말</td>
+								<td></td>
+								<td><a href="#;"><img src="resources/images/btn_write.gif" alt="수정"></a></td>
+							</tr>
+							<tr>
+								<td class="tl spce"><label for=""><input type="checkbox" name="" id="" value="">토익 중급 리스닝</label></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a href="#;"><img src="resources/images/btn_write.gif" alt="수정"></a></td>
+							</tr>
+							<tr>
+								<td rowspan="2" class="stit vt tc">스타 토익</td>
+								<td class="tl spce"><label for=""><input type="checkbox" name="" id="" value="">스타 토익 베이직</label></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a href="#;"><img src="resources/images/btn_write.gif" alt="수정"></a></td>
+							</tr>
+							<tr>
+								<td class="tl spce"><label for=""><input type="checkbox" name="" id="" value="">스타 토익 파트 5,6 실전</label></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a href="#;"><img src="resources/images/btn_write.gif" alt="수정"></a></td>
+							</tr>
+							<tr>
+								<th scope="row" rowspan="3" class="tc">배현영</th>
+								<td rowspan="3" class="stit vt tc">Speakng / OPIc</td>
+								<td class="tl  spce"><label for=""><input type="checkbox" name="" id="" value="">2주 만에 끝내는 해커스 토익 Speaking Start</label></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a href="#;"><img src="resources/images/btn_write.gif" alt="수정"></a></td>
+							</tr>
+							<tr>
+								<td class="tl spce"><label for=""><input type="checkbox" name="" id="" value="">2주 만에 끝내는 해커스 토익 Speaking</label></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a href="#;"><img src="resources/images/btn_write.gif" alt="수정"></a></td>
+							</tr>
+							<tr>
+								<td class="tl spce"><label for=""><input type="checkbox" name="" id="" value="">5일 만에 끝내는 해커스 토익 Speaking 실전모의고사</label></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a href="#;"><img src="resources/images/btn_write.gif" alt="수정"></a></td>
+							</tr>
+							<tr>
+								<th scope="row" class="tc">김승범</th>
+								<td class="stit vt tc">공무원 영어</td>
+								<td class="tl spce" class="tl"><label for=""><input type="checkbox" name="" id="" value="">해커스 공무원 영어 GRAMMAR/READING/VOCABULARY</label></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a href="#;"><img src="resources/images/btn_write.gif" alt="수정"></a></td>
+							</tr>
+							<tr>
+								<th scope="row" class="tc">정향숙</th>
+								<td class="stit vt tc">텝스 / SAT</td>
+								<td class="tl spce"><label for=""><input type="checkbox" name="" id="" value="">텝스 보카</label></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><a href="#;"><img src="resources/images/btn_write.gif" alt="수정"></a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //table -->
+			</div>
+		</div>
+		<!-- //content -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- 개정 계획 추가 (popup) -->
+	<div id="changePlanPlus" class="ly_pop w600">
+		<span class="bg"></span>
+		<span class="wrap">
+			<button type="button" class="popcls"><img src="resources/images/ico_x.gif" alt="창닫기"></button>
+			<h2>개정 계획 추가</h2>
+			<div class="elm">
+				<fieldset class="tbl_type2">
+					<legend>개정 계획 추가 입력</legend>
+					<table>
+						<colgroup>
+							<col style="width:23.2%;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row" colspan="2" class="stit">교재명 교재명 교재명 교재명 교재명 교재명 교재명 교재명 교재명 교재명(00-00-00)</th>
+							</tr>
+							<tr>
+								<th scope="row">담당자</th>
+								<td class="spce">
+									<span class="select">
+										<label for="master">박영진</label>
+										<select name="master" id="master">
+											<option value="1">박영진</option>
+											<option value="2">1</option>
+										</select>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" class="vt">분야</th>
+								<td class="spce">
+									<ul class="chk_list">
+										<li><label for="section1" class="ellipsis"><input type="checkbox" name="section" id="section1" value="">토익</label></li>
+										<li><label for="section2" class="ellipsis"><input type="checkbox" name="section" id="section2" value="">스타토익스타토익스타토익</label></li>
+										<li><label for="section3" class="ellipsis"><input type="checkbox" name="section" id="section3" value="">Speaking</label></li>
+										<li><label for="section4" class="ellipsis"><input type="checkbox" name="section" id="section4" value="">OPIc</label></li>
+										<li><label for="section5" class="ellipsis"><input type="checkbox" name="section" id="section5" value="">공무원 영어</label></li>
+										<li><label for="section6" class="ellipsis"><input type="checkbox" name="section" id="section6" value="">텝스</label></li>
+										<li><label for="section7" class="ellipsis"><input type="checkbox" name="section" id="section7" value="">SAT</label></li>
+										<li><label for="section8" class="ellipsis"><input type="checkbox" name="section" id="section8" value="">토플</label></li>
+										<li><label for="section9" class="ellipsis"><input type="checkbox" name="section" id="section9" value="">IELTS</label></li>
+										<li><label for="section10" class="ellipsis"><input type="checkbox" name="section" id="section10" value="">CBT</label></li>
+										<li><label for="section11" class="ellipsis"><input type="checkbox" name="section" id="section11" value="">일반 영어</label></li>
+										<li><label for="section12" class="ellipsis"><input type="checkbox" name="section" id="section12" value="">기초영어</label></li>
+										<li><label for="section13" class="ellipsis"><input type="checkbox" name="section" id="section13" value="">취업</label></li>
+										<li><label for="section14" class="ellipsis"><input type="checkbox" name="section" id="section14" value="">금융</label></li>
+										<li><label for="section15" class="ellipsis"><input type="checkbox" name="section" id="section15" value="">HSK</label></li>
+										<li><label for="section16" class="ellipsis"><input type="checkbox" name="section" id="section16" value="">한국사능력검정</label></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">개정 여부</th>
+								<td class="spce">
+									<span class="select">
+										<label for="change1">개정 완료</label>
+										<select name="change1" id="change1">
+											<option value="1">개정 완료</option>
+											<option value="2">1</option>
+										</select>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">개정 예정 여부</th>
+								<td class="spce">
+									<span class="select">
+										<label for="change2">개정 계획 없음</label>
+										<select name="change2" id="change2">
+											<option value="1">개정 계획 없음</option>
+											<option value="2">1</option>
+										</select>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">개정 예정일</th>
+								<td class="spce">
+									<span class="select">
+										<label for="year">2017</label>
+										<select name="year" id="year">
+											<option value="1">2017</option>
+											<option value="2">1</option>
+										</select>
+									</span>
+									-
+									<span class="select">
+										<label for="month">12</label>
+										<select name="month" id="month">
+											<option value="1">12</option>
+											<option value="2">1</option>
+										</select>
+									</span>
+									-
+									<span class="select">
+										<label for="day">30</label>
+										<select name="day" id="day">
+											<option value="1">30</option>
+											<option value="2">1</option>
+										</select>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">비고</th>
+								<td class="spce"><span class="input placeholder block"><label for="" class="lbl">추가 사항을 입력해주세요.</label><input type="text" name="" id="" class="i_text"></span></td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+				<div class="btn_area3 mt20">
+					<button type="button" class="btn_r btn_type3">취소</button><!----><button type="button" class="btn_r btn_type">저장</button>
+				</div>
+			</div>
+			<!-- //element -->
+		</span>
+		<span class="blank"></span>
+	</div>
+	<!-- //개정 계획 추가 (popup) -->
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<title>IT서비스데스크</title>
+<link rel="stylesheet" type="text/css" href="../common/css/base.css">
+<link rel="stylesheet" type="text/css" href="../common/css/site.css">
+<script language="javascript" type="text/javascript" src="../common/js/jquery-1.8.3.min.js"></script>
+<script src="../common/js/design.js"></script>
+<!--[if IE]>
+<script src="../common/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body class="pop_bg">
+
+<header id="pop_header">
+	<h1>서비스승인처리</h1>
+	<a href="javascript:window.close();" class="btCls"><span class="blind">창닫기</span></a>
+</header>
+<!-- //header -->
+<section id="pop_ct">
+
+	<h2 class="hst">요청정보</h2>
+	<div class="tblst2 mt5">
+		<table summary="요청정보 양식">
+			<caption>요청정보 양식</caption>
+			<colgroup>
+				<col width="16%">
+				<col width="22%">
+				<col width="15%">
+				<col width="17%">
+				<col width="15%">
+				<col width="*">
+			</colgroup>
+			<tbody>
+				<tr>
+				<th scope="row">서비스유형</th>
+				<td>기능개선</td>
+				<th scope="row">대상업무<em>*</em></th>
+				<td colspan="3">ERP환경가전/영업</td>
+				</tr>
+				<tr>
+				<th scope="row">요청자</th>
+				<td>홍길동 (2001000) / 영업1팀</td>
+				<th scope="row">전화번호<em>*</em></th>
+				<td>02-212-0114</td>
+				<th scope="row">핸드폰<em>*</em></th>
+				<td>010-0000-0000</td>
+				</tr>
+				<tr>
+				<th scope="row">결재자</th>
+				<td>홍인형 (2001001) / 영업1팀</td>
+				<th scope="row">참조자</th>
+				<td colspan="3">홍길영/마케팅팀장  외 3</td>
+				</tr>
+				<tr>
+				<th scope="row">신청일자</th>
+				<td>2016/01/14</td>
+				<th scope="row">희망요청일자<em>*</em></th>
+				<td>2016/01/14</td>
+				<th scope="row">소요시간</th>
+				<td>D + 1</td>
+				</tr>
+				<tr>
+				<th scope="row">접수자</th>
+				<td colspan="5">IBM AMS</td>
+				</tr>
+				<tr>
+				<th scope="row">개인정보구분</th>
+				<td colspan="5">고객</td>
+				</tr>
+				<tr>
+				<th scope="row">개인정보항목</th>
+				<td colspan="5" class="chklst">
+					<input type="checkbox" name="" id="" value="" class="ml0"><label for="">고객명</label>
+					<input type="checkbox" name="" id="" value=""><label for="">계좌번호</label>
+					<input type="checkbox" name="" id="" value=""><label for="">카드번호</label>
+					<input type="checkbox" name="" id="" value=""><label for="">휴대폰번호</label>
+					<input type="checkbox" name="" id="" value=""><label for="">전화번호</label>
+					<input type="checkbox" name="" id="" value=""><label for="">주소공통</label>
+					<input type="checkbox" name="" id="" value=""><label for="">주소상세</label>
+					<input type="checkbox" name="" id="" value=""><label for="">DI(I-PIN)</label>
+					<div class="mt5"><input type="checkbox" name="" id="" value="" class="ml0"><label for="">기타</label>
+					<input type="text" name="" id="" class="ml5" style="width:112px;"></div>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">왼부반출</th>
+				<td colspan="5">외부&nbsp;&nbsp;&nbsp;외부업체 : ICAN&nbsp;&nbsp;&nbsp;외부담당자 : 이재용</td>
+				</tr>
+				<tr>
+				<th scope="row">파기예정일</th>
+				<td colspan="5">2015/12/10</td>
+				</tr>
+				<tr>
+				<th scope="row">ID신청/권한요청</th>
+				<td colspan="5"></td>
+				</tr>
+				<tr>
+				<th scope="row">프로그램명</th>
+				<td colspan="5">Z15215421</td>
+				</tr>
+				<tr>
+				<th scope="row">고객코드</th>
+				<td>A20125021</td>
+				<th scope="row">주문번호</th>
+				<td></td>
+				<th scope="row">고객명</th>
+				<td></td>
+				</tr>
+				<tr>
+				<th scope="row">제목</th>
+				<td colspan="5">COWAY이  ITS 신규화면 테스트</td>
+				</tr>
+				<tr>
+				<th scope="row">요청내용</th>
+				<td colspan="5">1. 프로그램명 :    /login/<br>2. 내         용 :  화면 변경 요청 합니다.  </td>
+				</tr>
+				<tr>
+				<th scope="row">첨부파일</th>
+				<td colspan="5" class="file"><a href="">코웨이 SD 화면개선요청.xls</a>&nbsp;[20151210  홍길동]</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- //요청정보 -->
+	<h2 class="hst mt45">접수정보</h2>
+	<div class="tblst2 mt5">
+		<table summary="접수번호, 접수일시, 담당자, 접수반려 확인">
+			<caption>접수정보 표</caption>
+			<colgroup>
+				<col width="12%">
+				<col width="36%">
+				<col width="12%">
+				<col width="*">
+			</colgroup>
+			<tbody>
+				<tr>
+				<th scope="row">접수번호</th>
+				<td>R20151201-001</td>
+				<th scope="row">접수일시</th>
+				<td>2015/12/15</td>
+				</tr>
+				<tr>
+				<th scope="row">담당자</th>
+				<td>고길동(t1511061)</td>
+				<th scope="row">접수반려</th>
+				<td>02-212-0114</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- //접수정보 -->
+	<h2 class="hst mt45">견적정보</h2>
+	<div class="tblst2 mt5">
+		<table summary="총공수, 예상기간, 견적요청일, 견적규모, 합의목표일자, 견적승인일 확인">
+			<caption>견적정보 표</caption>
+			<colgroup>
+				<col width="12%">
+				<col width="36%">
+				<col width="12%">
+				<col width="*">
+			</colgroup>
+			<tbody>
+				<tr>
+				<th scope="row">총공수</th>
+				<td>40 HR</td>
+				<th scope="row">견적규모</th>
+				<td>단순기능</td>
+				</tr>
+				<tr>
+				<th scope="row">예상기간</th>
+				<td>2015/12/10  ~2015/12/10</td>
+				<th scope="row">합의목표일자</th>
+				<td>2015/12/20</td>
+				</tr>
+				<tr>
+				<th scope="row">견적요청일</th>
+				<td>2015/12/10 </td>
+				<th scope="row">견적승인일</th>
+				<td>2015/12/10</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- //견적정보 -->
+	<h2 class="hst mt45">진행정보</h2>
+	<div class="tblst2 mt5">
+		<table summary="작업기간, 사용자테스트 요청일, 사용자테스트 반려사유, 납기지연시간, 사용자테스트 종료일 확인">
+			<caption>진행정보 표</caption>
+			<colgroup>
+				<col width="14%">
+				<col width="36%">
+				<col width="14%">
+				<col width="*">
+			</colgroup>
+			<tbody>
+				<tr>
+				<th scope="row">작업기간</th>
+				<td>40 HR</td>
+				<th scope="row">견적규모</th>
+				<td>단순기능</td>
+				</tr>
+				<tr>
+				<th scope="row">사용자테스트<br>요청일</th>
+				<td>2015/12/10  ~2015/12/10</td>
+				<th scope="row">합의목표일자</th>
+				<td>2015/12/20</td>
+				</tr>
+				<tr>
+				<th scope="row">사용자테스트<br>반려사유</th>
+				<td>2015/12/10 </td>
+				<th scope="row">견적승인일</th>
+				<td>2015/12/10</td>
+				</tr>
+				<tr>
+				<th scope="row">사용자테스트<br>반려사유</th>
+				<td colspan="3"><textarea cols="30" rows="5" id="" style="width:97%;height:20px;"></textarea></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- //진행정보 -->
+	<h2 class="hst mt45">승인내역</h2>
+	<div class="tblst mt5">
+		<table summary="결제단계, 진행상태, 결재일자, 승인자">
+			<caption>승인내역</caption>
+			<colgroup>
+				<col width="6%">
+				<col width="23%">
+				<col width="23%">
+				<col width="23%">
+				<col width="*">					
+			</colgroup>
+			<thead>
+				<tr>
+				<th scope="col">&nbsp;</th>
+				<th scope="col">결제단계</th>
+				<th scope="col">진행상태</th>
+				<th scope="col">결재일자</th>
+				<th scope="col">승인자</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="ty">
+				<td><a href=""><img src="../common/img/btn_minus.gif" alt=""></a></td>
+				<td>팀장승인</td>
+				<td>승인</td>
+				<td>2015-12-08</td>
+				<td>홍길동</td>
+				</tr>
+				<tr class="even">
+				<td><img src="../common/img/ico_sub.gif" alt=""></td>
+				<td colspan="4">승인합니다.</td>
+				</tr>
+				<tr class="ty">
+				<td><a href=""><img src="../common/img/btn_plus.gif" alt=""></a></td>
+				<td>팀장승인</td>
+				<td>승인</td>
+				<td>2015-12-08</td>
+				<td>홍길동</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- //승인내역 -->
+	<h2 class="hst mt45">승인처리</h2>
+	<div class="tblst2 mt5">
+		<table summary="승인단계, 승인요청일, 내용, 첨부파일">
+			<caption>승인처리</caption>
+			<colgroup>
+				<col width="12%">
+				<col width="36%">
+				<col width="13%">
+				<col width="*">
+			</colgroup>
+			<tbody>
+				<tr>
+				<th scope="row">승인단계</th>
+				<td class="data">
+					<div>
+						BA 승인<a href="" class="btns btns1 btns1-3 rt" style="width:85px">결재라인변경</a>
+					</div>
+				</td>
+				<th scope="row">승인요청일</th>
+				<td class="data">
+					<div>
+						2016-01-14
+						<span class="rt">
+							<a href="" class="btns btns1 btns1-3" style="width:63px">승인</a>
+							<a href="" class="btns btns1 btns1-1" style="width:63px">반려</a>
+						</span>
+					</div>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">내용</th>
+				<td colspan="3"><textarea cols="30" rows="5" id="" style="width:97%;height:40px;background-color:#f8f8f8"></textarea></td>
+				</tr>
+				<tr>
+				<th scope="row">첨부파일</th>
+				<td colspan="3" class="file-upload">
+					<span class="wrap" style="width:360px"><input type="text" id="etc-file" name="etc-file" style="width:282px;"><span class="fileHidden"><input type="file" id="fileipt" name="fileipt" class="fileBtn"><label for="fileipt" class="blind">파일찾기</label></span></span><a href="" class="btns btns1 btns1-1" style="width:63px">삭제</a>
+				</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- //승인처리 -->
+	<h2 class="hst mt45">진행내역</h2>
+	<div class="tblst mt5">
+		<table summary="진행내용, 작업일시, 작업자">
+			<caption>승인내역</caption>
+			<colgroup>
+				<col width="6%">
+				<col width="33%">
+				<col width="33%">
+				<col width="*">					
+			</colgroup>
+			<thead>
+				<tr>
+				<th scope="col">&nbsp;</th>
+				<th scope="col">진행내용</th>
+				<th scope="col">작업일시</th>
+				<th scope="col">작업자</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="ty">
+				<td><a href=""><img src="../common/img/btn_minus.gif" alt=""></a></td>
+				<td>팀장승인</td>
+				<td>2015-12-08</td>
+				<td>김팀장</td>
+				</tr>
+				<tr class="even">
+				<td><img src="../common/img/ico_sub.gif" alt=""></td>
+				<td colspan="3">승인합니다.</td>
+				</tr>
+				<tr class="ty">
+				<td><a href=""><img src="../common/img/btn_minus.gif" alt=""></a></td>
+				<td>팀장승인</td>
+				<td>2015-12-08</td>
+				<td>김접수</td>
+				</tr>
+				<tr class="even">
+				<td><img src="../common/img/ico_sub.gif" alt=""></td>
+				<td colspan="3">개발요청 -> IT문의로 변경</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- //진행내역 -->
+
+</section>
+<!-- //content -->
+
+</body>
+</html>

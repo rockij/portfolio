@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="resources/css/common.css" media="screen" rel="stylesheet">
+<link href="resources/css/site.css" media="screen" rel="stylesheet">
+<script src="resources/js/jquery-1.11.1.min.js"></script>
+<script src="resources/js/design.js"></script>
+<!--[if lt IE 9]>
+<script src="resources/js/html5shiv.js"></script>
+<![endif]-->
+<title>Hackers SCM Portal</title>
+</head>
+<body>
+
+<div id="wrap">
+
+	<header>
+		<h1><a href="/"><img src="resources/images/logo.gif" alt="Hackers SCM Portal"></a></h1>
+		<a href="#;" class="btn_user"><span class="fc_blu">홍길동</span> 님</a>
+		<div id="gnb">
+			<ul>
+				<li><a href="#;">Home</a></li>
+				<li><a href="#;" class="active">발주</a></li>
+				<li><a href="#;">견적</a></li>
+				<li><a href="#;">입고</a></li>
+				<li><a href="#;">출고</a></li>
+				<li><a href="#;">재고</a></li>
+				<li><a href="#;">정산</a></li>
+				<li><a href="#;">미정</a></li>
+			</ul>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<div id="container">
+
+		<aside class="lnb">
+			<h2>신간 발주</h2>
+			<ul>
+				<li><a href="#;">견적용 데이터</a></li>
+				<li><a href="#;" class="selected">발주량 산정</a></li>
+				<li><a href="#;">인쇄소 선정</a></li>
+				<li><a href="#;">견적 종합 보고</a></li>
+				<li><a href="#;">발주서 조회</a></li>
+			</ul>
+			<h2>일반 발주</h2>
+			<ul>
+				<li><a href="#;">발주 준비</a></li>
+				<li><a href="#;">발주량 산정</a></li>
+				<li><a href="#;">견적 종합 보고</a></li>
+				<li><a href="#;">발주서 조회</a></li>
+			</ul>
+			<ul class="etc">
+				<li><a href="#;">개정 계획</a></li>
+				<li><a href="#;">교재 관리</a></li>
+				<li><a href="#;">발주량 산정 관리</a></li>
+				<li><a href="#;">인쇄소 분산</a></li>
+				<li><a href="#;">발주서 관리</a></li>
+				<li><a href="#;">교재별 발주일</a></li>
+				<li><a href="#;">용지  단가 관리</a></li>
+				<li><a href="#;">후가공 & 수정필름 정보</a></li>
+			</ul>
+		</aside>
+		<!-- //left-navigation -->
+
+		<div id="ct">
+			<h2>발주량 산정</h2>
+			<div class="path">발주 &gt; 신간 발주 &gt; <span class="on">발주량 산정</span></div>
+			<!-- //title -->
+			<div class="inner">
+				<div class="btn_area mt20">
+					<button type="button" onclick="" class="btn_m btn_type4 f_l">결재 라인 지정</button>
+					<div class="f_r">
+						<button type="button" onclick="" class="btn_m btn_type3">취소</button><!----><button type="button" onclick="" class="btn_m btn_type2">임시저장</button><!----><button type="button" onclick="" class="btn_m btn_type2">미리보기</button><!----><button type="button" onclick="" class="btn_m btn_type">등록</button>
+					</div>
+				</div>
+				<!-- //btn -->
+				<fieldset class="tbl_type2 mt20">
+					<legend>요청서 작성</legend>
+					<table>
+						<colgroup>
+							<col style="width:10%;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">수신</th>
+								<td class="spce inp_type"><div><span class="input placeholder"><label for="receive" class="lbl">“name” &lt;user_id&gt;, “name” &lt;user_id&gt;, “name” &lt;user_id&gt;, “name” &lt;user_id&gt;, “name” &lt;user_id&gt;, “name” &lt;user_id&gt;</label><input type="text" name="receive" id="receive" class="i_text"></span><button type="button" onclick="" class="btn_m btn_type5">그룹수신</button></div></td>
+							</tr>
+							<tr>
+								<th scope="row">참조</th>
+								<td class="spce inp_type"><span class="input placeholder"><label for="refer" class="lbl">“name” &lt;user_id&gt;, “name” &lt;user_id&gt;, “name” &lt;user_id&gt;, “name” &lt;user_id&gt;, “name” &lt;user_id&gt;, “name” &lt;user_id&gt;</label><input type="text" name="refer" id="refer" class="i_text"></span></td>
+							</tr>
+							<tr>
+								<th scope="row">제목</th>
+								<td class="spce inp_type"><span class="input placeholder"><label for="subject" class="lbl">[관련분들] [해커스 한국사 능력 검정시험 고급 (1.2)급 개정판] 표지/내지 견적용 데이터 기입 요청</label><input type="text" name="subject" id="subject" class="i_text"></span></td>
+							</tr>
+							<tr>
+								<th scope="row">요청기한</th>
+								<td class="spce inp_type2">
+									<span class="input input_cal placeholder"><label for="cal1" class="lbl"><img src="resources/images/txt_cal_placeholder.gif" alt="----.--.--"></label><input type="text" name="" id="cal1" class="i_text" value=""><button type="button" onclick=""><img src="resources/images/ico_cal.gif" alt="달력보기"></button></span>
+									<span class="select ml5">
+										<label for="hh">hh</label>
+										<select name="hh" id="hh">
+											<option value="1">hh</option>
+											<option value="2">1</option>
+										</select>
+									</span>
+									:
+									<span class="select">
+										<label for="mm">mm</label>
+										<select name="mm" id="mm">
+											<option value="1">mm</option>
+											<option value="2">1</option>
+										</select>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" class="vt">발주량 산정 보고</th>
+								<td class="spce inp_type">
+									<span class="input placeholder"><label for="object" class="lbl">※ 발주량 산정에 대한 보고 내용을 요약하여 작성해 주세요.</label><textarea id="object" class="i_text" style="height:48px"></textarea></span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" class="vt">교재정보</th>
+								<td class="spce">
+									<div class="clear mb4">
+										<button type="button" onclick="$('#bookSearch').show();" class="btn_m btn_type5 f_l">검색</button>
+										<button type="button" onclick="" class="btn_m btn_type5 f_r">교재등록</button>
+									</div>
+									<div class="tbl_type4">
+										<table>
+											<colgroup>
+												<col style="width:7.5%;">
+												<col>
+												<col style="width:8%;">
+												<col style="width:8%;">
+												<col style="width:116px;">
+												<col style="width:116px;">
+												<col style="width:116px;">
+												<col style="width:8%;">
+												<col style="width:8%;">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">교재 코드</th>
+													<th scope="col">교재명</th>
+													<th scope="col">판-쇄-회차</th>
+													<th scope="col">출간일</th>
+													<th scope="col">예약판매일</th>
+													<th scope="col">기준일</th>
+													<th scope="col">산정일</th>
+													<th scope="col">발주량</th>
+													<th scope="col">산정 기간</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>4000000000</td>
+													<td class="tl spce2"><a href="#;" class="ellipsis">IELTS 리딩</a></td>
+													<td>00-00-00</td>
+													<td>2017-09-07</td>
+													<td><span class="input input_cal placeholder"><label for="book-cal1" class="lbl"><img src="resources/images/txt_cal_placeholder.gif" alt="----.--.--"></label><input type="text" name="" id="book-cal1" class="i_text" value=""><button type="button" onclick=""><img src="resources/images/ico_cal.gif" alt="달력보기"></button></span></td>
+													<td><span class="input input_cal placeholder"><label for="book-cal2" class="lbl"><img src="resources/images/txt_cal_placeholder.gif" alt="----.--.--"></label><input type="text" name="" id="book-cal2" class="i_text" value="2017.09.07"><button type="button" onclick=""><img src="resources/images/ico_cal.gif" alt="달력보기"></button></span></td>
+													<td><span class="input input_cal placeholder"><label for="book-cal3" class="lbl"><img src="resources/images/txt_cal_placeholder.gif" alt="----.--.--"></label><input type="text" name="" id="book-cal3" class="i_text" value="2017.09.07"><button type="button" onclick=""><img src="resources/images/ico_cal.gif" alt="달력보기"></button></span></td>
+													<td>자동입력 부</td>
+													<td>7개월</td>
+												</tr>
+												<tr>
+													<td>4000000000</td>
+													<td class="tl spce2"><a href="#;" class="ellipsis">IELTS 리스닝IELTS 리스닝IELTS 리스닝IELTS 리스닝IELTS 리스닝IELTS 리스닝</a></td>
+													<td>00-00-00</td>
+													<td>2017-09-07</td>
+													<td><span class="input input_cal placeholder"><label for="book2-cal1" class="lbl"><img src="resources/images/txt_cal_placeholder.gif" alt="----.--.--"></label><input type="text" name="" id="book2-cal1" class="i_text" value=""><button type="button" onclick=""><img src="resources/images/ico_cal.gif" alt="달력보기"></button></span></td>
+													<td><span class="input input_cal placeholder"><label for="book2-cal2" class="lbl"><img src="resources/images/txt_cal_placeholder.gif" alt="----.--.--"></label><input type="text" name="" id="book2-cal2" class="i_text" value="2017.09.07"><button type="button" onclick=""><img src="resources/images/ico_cal.gif" alt="달력보기"></button></span></td>
+													<td><span class="input input_cal placeholder"><label for="book2-cal3" class="lbl"><img src="resources/images/txt_cal_placeholder.gif" alt="----.--.--"></label><input type="text" name="" id="book2-cal3" class="i_text" value="2017.09.07"><button type="button" onclick=""><img src="resources/images/ico_cal.gif" alt="달력보기"></button></span></td>
+													<td>자동입력 부</td>
+													<td>7개월</td>
+												</tr>
+												<tr>
+													<td>4000000000</td>
+													<td class="tl spce2"><a href="#;" class="ellipsis">IELTS 스피킹</a></td>
+													<td>00-00-00</td>
+													<td>2017-09-07</td>
+													<td><span class="input input_cal placeholder"><label for="book3-cal1" class="lbl"><img src="resources/images/txt_cal_placeholder.gif" alt="----.--.--"></label><input type="text" name="" id="book3-cal1" class="i_text" value=""><button type="button" onclick=""><img src="resources/images/ico_cal.gif" alt="달력보기"></button></span></td>
+													<td><span class="input input_cal placeholder"><label for="book3-cal2" class="lbl"><img src="resources/images/txt_cal_placeholder.gif" alt="----.--.--"></label><input type="text" name="" id="book3-cal2" class="i_text" value="2017.09.07"><button type="button" onclick=""><img src="resources/images/ico_cal.gif" alt="달력보기"></button></span></td>
+													<td><span class="input input_cal placeholder"><label for="book3-cal3" class="lbl"><img src="resources/images/txt_cal_placeholder.gif" alt="----.--.--"></label><input type="text" name="" id="book3-cal3" class="i_text" value="2017.09.07"><button type="button" onclick=""><img src="resources/images/ico_cal.gif" alt="달력보기"></button></span></td>
+													<td>자동입력 부</td>
+													<td>7개월</td>
+												</tr>
+												<tr>
+													<td>4000000000</td>
+													<td class="tl spce2"><a href="#;" class="ellipsis">IELTS 라이팅</a></td>
+													<td>00-00-00</td>
+													<td>2017-09-07</td>
+													<td><span class="input input_cal placeholder"><label for="book4-cal1" class="lbl"><img src="resources/images/txt_cal_placeholder.gif" alt="----.--.--"></label><input type="text" name="" id="book4-cal1" class="i_text" value=""><button type="button" onclick=""><img src="resources/images/ico_cal.gif" alt="달력보기"></button></span></td>
+													<td><span class="input input_cal placeholder"><label for="book4-cal2" class="lbl"><img src="resources/images/txt_cal_placeholder.gif" alt="----.--.--"></label><input type="text" name="" id="book4-cal2" class="i_text" value="2017.09.07"><button type="button" onclick=""><img src="resources/images/ico_cal.gif" alt="달력보기"></button></span></td>
+													<td><span class="input input_cal placeholder"><label for="book4-cal3" class="lbl"><img src="resources/images/txt_cal_placeholder.gif" alt="----.--.--"></label><input type="text" name="" id="book4-cal3" class="i_text" value="2017.09.07"><button type="button" onclick=""><img src="resources/images/ico_cal.gif" alt="달력보기"></button></span></td>
+													<td>자동입력 부</td>
+													<td>7개월</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" class="vt"><em>*</em>개정 계획</th>
+								<td class="spce"><span class="input placeholder block mb3"><label for="idchk" class="lbl">※ 개정 계획에 대한 내용을 요약하여 작성해 주세요.</label><textarea id="idchk" class="i_text" style="height:48px"></textarea></span><strong class="fs11 fc_blu ml10">참고 URL</strong><button type="button" onclick="" class="btn_m2 btn_type2 ml10">링크이동</button></td>
+							</tr>
+							<tr>
+								<th scope="row" class="vt"><em>*</em>발주량 산정 근거</th>
+								<td class="spce">
+									<strong class="block fs11 fc_blu ml10">1. 산정 기간</strong>
+									<span class="input placeholder input_length block mt5"><label for="orderchk1" class="lbl">※ 발주량 산정에 대한 보고 내용을 요약하여 작성해 주세요.</label><textarea id="orderchk1" class="i_text" style="height:84px;"></textarea><button type="button" onclick="" class="btn_control"></button></span>
+									<strong class="block fs11 fc_blu ml10 mt15">2. 산정 근거</strong>
+									<span class="input placeholder input_length block mt5"><label for="orderchk2" class="lbl">※ 발주량 산정에 대한 보고 내용을 요약하여 작성해 주세요.</label><textarea id="orderchk2" class="i_text" style="height:84px;"></textarea><button type="button" onclick="" class="btn_control"></button></span>
+									<strong class="block fs11 fc_blu ml10 mt15">3. 산정 근거 결과</strong>
+									<span class="input placeholder input_length block mt5"><label for="orderchk3" class="lbl">※ 발주량 산정에 대한 보고 내용을 요약하여 작성해 주세요.</label><textarea id="orderchk3" class="i_text" style="height:84px;"></textarea><button type="button" onclick="" class="btn_control"></button></span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" class="vt">월별 출고량</th>
+								<td class="spce">
+									<div class="tbl_type4 v1">
+										<button type="button" onclick="$('#monthRelease').show();" class="btn_m btn_type5">검색</button>
+										<table class="mt4">
+											<colgroup>
+												<col style="width:9.5%;">
+												<col style="width:16.4%;">
+												<col style="width:5.6%;">
+												<col style="width:5.6%;">
+												<col style="width:5.6%;">
+												<col style="width:5.6%;">
+												<col style="width:5.6%;">
+												<col style="width:5.6%;">
+												<col style="width:5.6%;">
+												<col style="width:5.6%;">
+												<col style="width:5.6%;">
+												<col style="width:5.6%;">
+												<col style="width:5.6%;">
+												<col style="width:5.6%;">
+												<col>
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col" colspan="2">구분</th>
+													<th scope="col">1월</th>
+													<th scope="col">2월</th>
+													<th scope="col">3월</th>
+													<th scope="col">4월</th>
+													<th scope="col">5월</th>
+													<th scope="col">6월</th>
+													<th scope="col">7월</th>
+													<th scope="col">8월</th>
+													<th scope="col">9월</th>
+													<th scope="col">10월</th>
+													<th scope="col">11월</th>
+													<th scope="col">12월</th>
+													<th scope="col" class="bold">합계</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td rowspan="2" class="tl">월별 출고량</td>
+													<td class="tl">(기준년 – 1year)</td>
+													<td>-</td>
+													<td>-</td>
+													<td>-</td>
+													<td>-</td>
+													<td>-</td>
+													<td class="point">-</td>
+													<td>-</td>
+													<td>-</td>
+													<td>-</td>
+													<td>-</td>
+													<td>-</td>
+													<td>-</td>
+													<td class="point2 bold">-</td>
+												</tr>
+												<tr>
+													<td class="tl">(기준년)</td>
+													<td>-</td>
+													<td>-</td>
+													<td>-</td>
+													<td>-</td>
+													<td>-</td>
+													<td>-</td>
+													<td>-</td>
+													<td class="point">-</td>
+													<td>-</td>
+													<td>-</td>
+													<td>-</td>
+													<td>-</td>
+													<td class="point2 bold">-</td>
+												</tr>
+												<tr>
+													<td class="tl">전년 대비 비율</td>
+													<td class="tl">(기준년 – 1year) 대비 (기준년)</td>
+													<td>-%</td>
+													<td>-%</td>
+													<td>-%</td>
+													<td>-%</td>
+													<td>-%</td>
+													<td>-%</td>
+													<td>-%</td>
+													<td>-%</td>
+													<td>-%</td>
+													<td>-%</td>
+													<td>-%</td>
+													<td>-%</td>
+													<td class="point2 bold">-%</td>
+												</tr>
+												<tr>
+													<td colspan="2" class="tl">(기준일) ~ (산정일) 예상 출고량</td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td class="point2 bold"></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"><em>*</em>예상 수요량</th>
+								<td class="spce">
+									<strong class="block fs11 fc_blu ml10">1. 발주량 산정 결과</strong>
+									<div class="tbl_type4 mt5">
+										<table>
+											<colgroup>
+												<col style="width:20%;">
+												<col style="width:13.5%;">
+												<col style="width:13.5%;">
+												<col style="width:13.5%;">
+												<col style="width:13.5%;">
+												<col style="width:13.5%;">
+												<col>
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">교재명</th>
+													<th scope="col">예상 출고량</th>
+													<th scope="col">예상 초도 물량</th>
+													<th scope="col">여분 부수 (%)</th>
+													<th scope="col">여분 부수 (부)</th>
+													<th scope="col" class="bold">발주량</th>
+													<th scope="col" class="bold">발주량 조정 수량</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="tl">IELTS 리딩</td>
+													<td><span class="input placeholder" style="width:92px;"><label for="IELTS-reading1" class="lbl">예상 출고량 입력</label><input type="text" name="" id="IELTS-reading1" class="i_text"></span>&nbsp;부</td>
+													<td><span class="input placeholder" style="width:80px;"><label for="IELTS-reading2" class="lbl">예상 초도 물량</label><input type="text" name="" id="IELTS-reading2" class="i_text"></span>&nbsp;부</td>
+													<td><span class="input placeholder" style="width:72px;"><label for="IELTS-reading3" class="lbl">여분 부수(%)</label><input type="text" name="" id="IELTS-reading3" class="i_text"></span>&nbsp;부</td>
+													<td><span class="input placeholder" style="width:100px;"><label for="IELTS-reading4" class="lbl">여분 부수 수량</label><input type="text" name="" id="IELTS-reading4" class="i_text"></span>&nbsp;부</td>
+													<td><span class="input placeholder" style="width:93px;"><label for="IELTS-reading5" class="lbl">발주량(자동계산)</label><input type="text" name="" id="IELTS-reading5" class="i_text"></span>&nbsp;부</td>
+													<td><span class="input placeholder" style="width:97px;"><label for="IELTS-reading6" class="lbl">발주량 (수동입력)</label><input type="text" name="" id="IELTS-reading6" class="i_text"></span></td>
+												</tr>
+												<tr>
+													<td class="tl">IELTS 리스닝</td>
+													<td><span class="input placeholder" style="width:92px;"><label for="IELTS-listening1" class="lbl">예상 출고량 입력</label><input type="text" name="" id="IELTS-listening1" class="i_text"></span>&nbsp;부</td>
+													<td><span class="input placeholder" style="width:80px;"><label for="IELTS-listening2" class="lbl">예상 초도 물량</label><input type="text" name="" id="IELTS-listening2" class="i_text"></span>&nbsp;부</td>
+													<td><span class="input placeholder" style="width:72px;"><label for="IELTS-listening3" class="lbl">여분 부수(%)</label><input type="text" name="" id="IELTS-listening3" class="i_text"></span>&nbsp;부</td>
+													<td><span class="input placeholder" style="width:100px;"><label for="IELTS-listening4" class="lbl">여분 부수 수량</label><input type="text" name="" id="IELTS-listening4" class="i_text"></span>&nbsp;부</td>
+													<td><span class="input placeholder" style="width:93px;"><label for="IELTS-listening5" class="lbl">발주량(자동계산)</label><input type="text" name="" id="IELTS-listening5" class="i_text"></span>&nbsp;부</td>
+													<td><span class="input placeholder" style="width:97px;"><label for="IELTS-listening6" class="lbl">발주량 (수동입력)</label><input type="text" name="" id="IELTS-listening6" class="i_text"></span></td>
+												</tr>
+												<tr>
+													<td class="tl">IELTS 스피킹</td>
+													<td><span class="input placeholder" style="width:92px;"><label for="IELTS-speaking1" class="lbl">예상 출고량 입력</label><input type="text" name="" id="IELTS-speaking1" class="i_text"></span>&nbsp;부</td>
+													<td><span class="input placeholder" style="width:80px;"><label for="IELTS-speaking2" class="lbl">예상 초도 물량</label><input type="text" name="" id="IELTS-speaking2" class="i_text"></span>&nbsp;부</td>
+													<td><span class="input placeholder" style="width:72px;"><label for="IELTS-speaking3" class="lbl">여분 부수(%)</label><input type="text" name="" id="IELTS-speaking3" class="i_text"></span>&nbsp;부</td>
+													<td><span class="input placeholder" style="width:100px;"><label for="IELTS-speaking4" class="lbl">여분 부수 수량</label><input type="text" name="" id="IELTS-speaking4" class="i_text"></span>&nbsp;부</td>
+													<td><span class="input placeholder" style="width:93px;"><label for="IELTS-speaking5" class="lbl">발주량(자동계산)</label><input type="text" name="" id="IELTS-speaking5" class="i_text"></span>&nbsp;부</td>
+													<td><span class="input placeholder" style="width:97px;"><label for="IELTS-speaking6" class="lbl">발주량 (수동입력)</label><input type="text" name="" id="IELTS-speaking6" class="i_text"></span></td>
+												</tr>
+												<tr>
+													<td class="tl">IELTS 라이팅</td>
+													<td><span class="input placeholder" style="width:92px;"><label for="IELTS-writing1" class="lbl">예상 출고량 입력</label><input type="text" name="" id="IELTS-writing1" class="i_text"></span>&nbsp;부</td>
+													<td><span class="input placeholder" style="width:80px;"><label for="IELTS-writing2" class="lbl">예상 초도 물량</label><input type="text" name="" id="IELTS-writing2" class="i_text"></span>&nbsp;부</td>
+													<td><span class="input placeholder" style="width:72px;"><label for="IELTS-writing3" class="lbl">여분 부수(%)</label><input type="text" name="" id="IELTS-writing3" class="i_text"></span>&nbsp;부</td>
+													<td><span class="input placeholder" style="width:100px;"><label for="IELTS-writing4" class="lbl">여분 부수 수량</label><input type="text" name="" id="IELTS-writing4" class="i_text"></span>&nbsp;부</td>
+													<td><span class="input placeholder" style="width:93px;"><label for="IELTS-writing5" class="lbl">발주량(자동계산)</label><input type="text" name="" id="IELTS-writing5" class="i_text"></span>&nbsp;부</td>
+													<td><span class="input placeholder" style="width:97px;"><label for="IELTS-writing6" class="lbl">발주량 (수동입력)</label><input type="text" name="" id="IELTS-writing6" class="i_text"></span></td>
+												</tr>
+											</tbody>
+										</table>
+										<table class="listbx">
+											<colgroup>
+												<col style="width:50%">
+												<col>
+											</colgroup>
+											<tr>
+												<td>
+													<span class="fc_blu">※ 재고량 (2017-00-00 00:00) 기준</span>
+													<ul>
+														<li>- IELTS 리딩 : 000,000부</li>
+														<li>- IELTS 리스닝 : 000,000부</li>
+														<li>- IELTS 스피킹 : 000,000부</li>
+														<li>- IELTS 라이팅 : 000,000부</li>
+													</ul>
+												</td>
+												<td>
+													<span class="fc_blu">※ A급 재생 수량</span>
+													<ul>
+														<li>- IELTS 리딩 : 00,000 부(0000) / 재생 완료일 : 2017-00-00(월)</li>
+														<li>- IELTS 리스닝 : 000,000부(0000) / 재생 완료일 : 2017-00-00(월)</li>
+														<li>- IELTS 스피킹 : 000,000부(0000) / 재생 완료일 : 2017-00-00(월)</li>
+														<li>- IELTS 라이팅 : 000,000부(0000) / 재생 완료일 : 2017-00-00(월)</li>
+													</ul>
+												</td>
+											</tr>
+										</table>
+									</div>
+									<strong class="block fs11 fc_blu ml10 mt15">2. 예상 출고량 – 산정 근거</strong>
+									<span class="input placeholder input_length block mt5"><label for="release-volume" class="lbl">예상 수요량 근거 코멘트를 남겨 주세요.</label><textarea id="release-volume" class="i_text" style="height:84px;"></textarea><button type="button" onclick="" class="btn_control"></button></span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" class="vt"><em>*</em>부수별 제작비</th>
+								<td class="spce">
+									<div class="clear mb4">
+										<label for="order-call" class="f_l mt4"><input type="radio" name="order-call" id="order-call" value="">견적 요청 중</label>
+										<div class="f_r">
+											<button type="button" onclick="$('#orderSelect').show();" class="btn_m2 btn_type2">표지 견적서 선택</button><!----><button type="button" onclick="$('#orderSelect').show();" class="btn_m2 btn_type2 ml5">내지 견적서 선택</button>
+										</div>
+									</div>
+									<div class="tbl_type4 v1">
+										<table>
+											<colgroup>
+												<col style="width:10.3%;">
+												<col style="width:6.5%;">
+												<col style="width:8.4%;">
+												<col style="width:8.4%;">
+												<col style="width:8.4%;">
+												<col style="width:8.4%;">
+												<col style="width:8.4%;">
+												<col style="width:8.4%;">
+												<col style="width:8.4%;">
+												<col style="width:8.4%;">
+												<col style="width:8.4%;">
+												<col>
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col" rowspan="2">교재명</th>
+													<th scope="col" rowspan="2">부수</th>
+													<th scope="col" colspan="2">표지</th>
+													<th scope="col" colspan="2">내지</th>
+													<th scope="col" rowspan="2">합계</th>
+													<th scope="col" rowspan="2">부가세</th>
+													<th scope="col" rowspan="2">총합계</th>
+													<th scope="col" rowspan="2">권당 단가</th>
+													<th scope="col" rowspan="2">총판가<br>(정가 70%)</th>
+													<th scope="col" rowspan="2">차이</th>
+												</tr>
+												<tr>
+													<th scope="col">인쇄비</th>
+													<th scope="col">용지비</th>
+													<th scope="col">인쇄비</th>
+													<th scope="col">용지비</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td rowspan="3">IELTS 리딩</td>
+													<td>700</td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td rowspan="3">
+														<span class="input placeholder" style="width:80px;"><label for="price-IELTS1 " class="lbl">교재 정가 입력</label><input type="text" name="" id="price-IELTS1" class="i_text"></span><p class="mt5">x 70%<br>= -</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>1,000</td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>1,200</td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td rowspan="3">IELTS 리스닝</td>
+													<td>700</td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td rowspan="3">
+														<span class="input placeholder" style="width:80px;"><label for="price-IELTS2" class="lbl">교재 정가 입력</label><input type="text" name="" id="price-IELTS2" class="i_text"></span><p class="mt5">x 70%<br>= -</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>1,000</td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>1,200</td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td rowspan="3">IELTS 스피킹</td>
+													<td>700</td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td rowspan="3">
+														<span class="input placeholder" style="width:80px;"><label for="price-IELTS" class="lbl">교재 정가 입력</label><input type="text" name="" id="price-IELTS3" class="i_text"></span><p class="mt5">x 70%<br>= -</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>1,000</td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>1,200</td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td rowspan="3">IELTS 라이팅</td>
+													<td>700</td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td rowspan="3">
+														<span class="input placeholder" style="width:80px;"><label for="price-IELTS4" class="lbl">교재 정가 입력</label><input type="text" name="" id="price-IELTS4" class="i_text"></span><p class="mt5">x 70%<br>= -</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>1,000</td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>1,200</td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" class="vt"><em>*</em>구판 발주 내역</th>
+								<td class="spce">
+									<div class="tbl_type4">
+										<table>
+											<colgroup>
+												<col style="width:8.8%;">
+												<col style="width:8%;">
+												<col>
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">교재명</th>
+													<th scope="col">날짜</th>
+													<th scope="col">발주량 산정 보고서</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td rowspan="3">IELTS 리딩</td>
+													<td>2017-09-09</td>
+													<td class="tl"><a href="#;" class="fc_blu u">[관련분들] [해커스 한국사 능력 검정시험 고급 (1.2)급 개정판] 표지/내지 견적용 데이터 기입 요청</a></td>
+												</tr>
+												<tr>
+													<td>2017-09-09</td>
+													<td class="tl"><a href="#;" class="fc_blu u">[관련분들] [해커스 한국사 능력 검정시험 고급 (1.2)급 개정판] 표지/내지 견적용 데이터 기입 요청</a></td>
+												</tr>
+												<tr>
+													<td>2017-09-09</td>
+													<td class="tl"><a href="#;" class="fc_blu u">[관련분들] [해커스 한국사 능력 검정시험 고급 (1.2)급 개정판] 표지/내지 견적용 데이터 기입 요청</a></td>
+												</tr>
+												<tr>
+													<td rowspan="3">IELTS 리스닝</td>
+													<td>2017-09-09</td>
+													<td class="tl"><a href="#;" class="fc_blu u">[관련분들] [해커스 한국사 능력 검정시험 고급 (1.2)급 개정판] 표지/내지 견적용 데이터 기입 요청</a></td>
+												</tr>
+												<tr>
+													<td>2017-09-09</td>
+													<td class="tl"><a href="#;" class="fc_blu u">[관련분들] [해커스 한국사 능력 검정시험 고급 (1.2)급 개정판] 표지/내지 견적용 데이터 기입 요청</a></td>
+												</tr>
+												<tr>
+													<td>2017-09-09</td>
+													<td class="tl"><a href="#;" class="fc_blu u">[관련분들] [해커스 한국사 능력 검정시험 고급 (1.2)급 개정판] 표지/내지 견적용 데이터 기입 요청</a></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" class="vt">타팀 의견</th>
+								<td class="spce"><span class="input placeholder input_length block"><label for="team-cmt" class="lbl">예상 수요량 근거 코멘트를 남겨 주세요.</label><textarea id="team-cmt" class="i_text" style="height:66px;"></textarea><button type="button" onclick="" class="btn_control"></button></span></td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+				<!-- //요청서 작성 -->
+				<fieldset class="list_fileup mt50">
+					<legend>첨부 파일</legend>
+					<strong class="title_type">첨부 파일</strong>
+					<ul class="mt15">
+						<li>
+							<a href="#;" class="btn_down">attached file name.xlsx (000.0MB)</a>
+							<span class="data">
+								<span>해커스</span>
+								<span class="ml40">2017-00-00  00:00</span>
+								<button type="button" onclick="" class="btn_del ml40">삭제</button>
+							</span>
+						</li>
+						<li>
+							<a href="#;" class="btn_down">attached file name.xlsx (000.0MB)</a>
+							<span class="data">
+								<span>해커스</span>
+								<span class="ml40">2017-00-00  00:00</span>
+								<button type="button" onclick="" class="btn_del ml40">삭제</button>
+							</span>
+						</li>
+						<li>
+							<a href="#;" class="btn_down">attached file name.xlsx (000.0MB)</a>
+							<span class="data">
+								<span>해커스</span>
+								<span class="ml40">2017-00-00  00:00</span>
+								<button type="button" onclick="" class="btn_del ml40">삭제</button>
+							</span>
+						</li>
+					</ul>
+				</fieldset>
+				<!-- //파일첨부 -->
+			</div>
+		</div>
+		<!-- //content -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- 교재 정보 검색 (popup) -->
+	<div id="bookSearch" class="ly_pop w600">
+		<span class="bg"></span>
+		<span class="wrap">
+			<button type="button" class="popcls"><img src="resources/images/ico_x.gif" alt="창닫기"></button>
+			<h2>교재 정보 검색</h2>
+			<div class="elm">
+				<fieldset class="clear">
+					<legend>교재검색</legend>
+					<span class="f_l"><strong class="fc_blk">교재 검색</strong><input type="text" name="" id="" class="ml10"><button type="button" class="btn_m btn_type2 ml5">검색</button></span>
+					<button type="button" class="btn_m btn_type f_r">교재 등록</button>
+				</fieldset>
+				<fieldset class="tbl_type mt20">
+					<legend>교재검색 리스트</legend>
+					<table>
+						<colgroup>
+							<col style="width:11%;">
+							<col style="width:23%;">
+							<col>
+							<col style="width:20%;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col" class="tc">선택</th>
+								<th scope="col" class="tc">자재코드</th>
+								<th scope="col" class="tc">교재명</th>
+								<th scope="col" class="tc">판-쇄-회차</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="checkbox" name="" id="" value=""></td>
+								<td>1509-3824-9273</td>
+								<td class="tl spce2"><a href="#;" class="ellipsis">해커스 신토익 실전 1000제 3 리딩 해해커스 신토익 실전 1000제 3 리딩 해</a></td>
+								<td>00-00-00</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id="" value=""></td>
+								<td>1509-3824-9273</td>
+								<td class="tl spce2"><a href="#;" class="ellipsis">해커스 신토익 실전 1000제 3 리딩 해해커스 신토익 실전 1000제 3 리딩 해</a></td>
+								<td>00-00-00</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id="" value=""></td>
+								<td>1509-3824-9273</td>
+								<td class="tl spce2"><a href="#;" class="ellipsis">해커스 신토익 실전 1000제 3 리딩 해해커스 신토익 실전 1000제 3 리딩 해</a></td>
+								<td>00-00-00</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id="" value=""></td>
+								<td>1509-3824-9273</td>
+								<td class="tl spce2"><a href="#;" class="ellipsis">해커스 신토익 실전 1000제 3 리딩 해해커스 신토익 실전 1000제 3 리딩 해</a></td>
+								<td>00-00-00</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id="" value=""></td>
+								<td>1509-3824-9273</td>
+								<td class="tl spce2"><a href="#;" class="ellipsis">해커스 신토익 실전 1000제 3 리딩 해해커스 신토익 실전 1000제 3 리딩 해</a></td>
+								<td>00-00-00</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id="" value=""></td>
+								<td>1509-3824-9273</td>
+								<td class="tl spce2"><a href="#;" class="ellipsis">해커스 신토익 실전 1000제 3 리딩 해해커스 신토익 실전 1000제 3 리딩 해</a></td>
+								<td>00-00-00</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id="" value=""></td>
+								<td>1509-3824-9273</td>
+								<td class="tl spce2"><a href="#;" class="ellipsis">해커스 신토익 실전 1000제 3 리딩 해해커스 신토익 실전 1000제 3 리딩 해</a></td>
+								<td>00-00-00</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id="" value=""></td>
+								<td>1509-3824-9273</td>
+								<td class="tl spce2"><a href="#;" class="ellipsis">해커스 신토익 실전 1000제 3 리딩 해해커스 신토익 실전 1000제 3 리딩 해</a></td>
+								<td>00-00-00</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id="" value=""></td>
+								<td>1509-3824-9273</td>
+								<td class="tl spce2"><a href="#;" class="ellipsis">해커스 신토익 실전 1000제 3 리딩 해해커스 신토익 실전 1000제 3 리딩 해</a></td>
+								<td>00-00-00</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id="" value=""></td>
+								<td>1509-3824-9273</td>
+								<td class="tl spce2"><a href="#;" class="ellipsis">해커스 신토익 실전 1000제 3 리딩 해해커스 신토익 실전 1000제 3 리딩 해</a></td>
+								<td>00-00-00</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+				<div class="paging">
+					<a href="#" class="direction first">처음</a>
+					<a href="#" class="direction prev">이전</a>
+					<a href="#">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<strong>5</strong>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="direction next">다음</a>
+					<a href="#" class="direction last">끝</a>
+				</div>
+				<!-- //page -->
+				<div class="btn_area2">
+					<button type="button" class="btn_r btn_type3">취소</button><!----><button type="button" class="btn_r btn_type">적용</button>
+				</div>
+				<!-- //btn -->
+			</div>
+			<!-- //element -->
+		</span>
+		<span class="blank"></span>
+	</div>
+	<!-- //교재 정보 검색 (popup) -->
+
+	<!-- 견적서 선택 (popup) -->
+	<div id="orderSelect" class="ly_pop w600">
+		<span class="bg"></span>
+		<span class="wrap">
+			<button type="button" class="popcls"><img src="resources/images/ico_x.gif" alt="창닫기"></button>
+			<h2>견적서 선택</h2>
+			<div class="elm">
+				<h3 class="fc_blk">견적 요청 업체</h3>
+				<fieldset class="tbl_type mt10">
+					<legend>견적 요청업체 선택</legend>
+					<table>
+						<colgroup>
+							<col style="width:12%;">
+							<col>
+							<col style="width:22%;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col" class="tc">선택</th>
+								<th scope="col" class="tc">업체명</th>
+								<th scope="col" class="tc">견적 총 금액</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="radio" name="" id="" value="" class="mr0"></td>
+								<td class="tl spce2">업체명 업체명 업체명 업체명 업체명 업체명 업체명</td>
+								<td class="tr spce3">00,000,000 원</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="" id="" value="" class="mr0"></td>
+								<td class="tl spce2">업체명 업체명 업체명 업체명 업체명 업체명 업체명</td>
+								<td class="tr spce3">00,000,000 원</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="" id="" value="" class="mr0"></td>
+								<td class="tl spce2">업체명 업체명 업체명 업체명 업체명 업체명 업체명</td>
+								<td class="tr spce3">00,000,000 원</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="" id="" value="" class="mr0"></td>
+								<td class="tl spce2">업체명 업체명 업체명 업체명 업체명 업체명 업체명</td>
+								<td class="tr spce3">00,000,000 원</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="" id="" value="" class="mr0"></td>
+								<td class="tl spce2">업체명 업체명 업체명 업체명 업체명 업체명 업체명</td>
+								<td class="tr spce3">00,000,000 원</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+				<!-- //table -->
+				<h3 class="fc_blk mt30">견적서 조회</h3>
+				<fieldset class="mt10">
+					<legend>견적서 조회</legend>
+					<span class="select">
+						<label for="book-name">교재명</label>
+						<select name="book-name" id="book-name">
+							<option value="1">교재명</option>
+							<option value="2">1</option>
+						</select>
+					</span><!----><input type="text" name="" id="" class="ml5" style="width:176px;"><!----><button type="button" onclick="" class="btn_m btn_type2 ml5">검색</button>
+				</fieldset>
+				<div class="btn_area2 mt20">
+					<button type="button" class="btn_r btn_type3">취소</button><!----><button type="button" class="btn_r btn_type">적용</button>
+				</div>
+			</div>
+			<!-- //element -->
+		</span>
+		<span class="blank"></span>
+	</div>
+	<!-- //견적서 선택 (popup) -->
+
+	<!-- 월별 출고량 (popup) -->
+	<div id="monthRelease" class="ly_pop w600">
+		<span class="bg"></span>
+		<span class="wrap">
+			<button type="button" class="popcls"><img src="resources/images/ico_x.gif" alt="창닫기"></button>
+			<h2>월별 출고량</h2>
+			<div class="elm">
+				<fieldset class="mt10">
+					<legend>교재 검색</legend>
+					<strong class="fc_blk">교재 검색</strong><!----><input type="text" name="" id="" class="ml5" style="width:176px;"><!----><button type="button" onclick="" class="btn_m btn_type2 ml5">검색</button>
+				</fieldset>
+				<fieldset class="tbl_type mt20">
+					<legend>견적 요청업체 선택</legend>
+					<table>
+						<colgroup>
+							<col style="width:23%;">
+							<col>
+							<col style="width:12%;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col" class="tc">교재코드</th>
+								<th scope="col" class="tc">교재명</th>
+								<th scope="col" class="tc">선택</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1509-3824-9273</td>
+								<td class="tl spce2"><span class="ellipsis">해커스 신토익 실전 1000제 3 리딩 해해커스 신토익 실전 1000제 3 리딩 해</span></td>
+								<td><input type="radio" name="" id="" value="" class="mr0"></td>
+							</tr>
+							<tr>
+								<td>1509-3824-9273</td>
+								<td class="tl spce2"><span class="ellipsis">해커스 신토익 실전 1000제 3 리딩 해</span></td>
+								<td><input type="radio" name="" id="" value="" class="mr0"></td>
+							</tr>
+							<tr>
+								<td>1509-3824-9273</td>
+								<td class="tl spce2"><span class="ellipsis">해커스 신토익 실전 1000제 3 리딩 해</span></td>
+								<td><input type="radio" name="" id="" value="" class="mr0"></td>
+							</tr>
+							<tr>
+								<td>1509-3824-9273</td>
+								<td class="tl spce2"><span class="ellipsis">해커스 신토익 실전 1000제 3 리딩 해</span></td>
+								<td><input type="radio" name="" id="" value="" class="mr0"></td>
+							</tr>
+							<tr>
+								<td>1509-3824-9273</td>
+								<td class="tl spce2"><span class="ellipsis">해커스 신토익 실전 1000제 3 리딩 해</span></td>
+								<td><input type="radio" name="" id="" value="" class="mr0"></td>
+							</tr>
+							<tr>
+								<td>1509-3824-9273</td>
+								<td class="tl spce2"><span class="ellipsis">해커스 신토익 실전 1000제 3 리딩 해</span></td>
+								<td><input type="radio" name="" id="" value="" class="mr0"></td>
+							</tr>
+							<tr>
+								<td>1509-3824-9273</td>
+								<td class="tl spce2"><span class="ellipsis">해커스 신토익 실전 1000제 3 리딩 해</span></td>
+								<td><input type="radio" name="" id="" value="" class="mr0"></td>
+							</tr>
+							<tr>
+								<td>1509-3824-9273</td>
+								<td class="tl spce2"><span class="ellipsis">해커스 신토익 실전 1000제 3 리딩 해</span></td>
+								<td><input type="radio" name="" id="" value="" class="mr0"></td>
+							</tr>
+							<tr>
+								<td>1509-3824-9273</td>
+								<td class="tl spce2"><span class="ellipsis">해커스 신토익 실전 1000제 3 리딩 해</span></td>
+								<td><input type="radio" name="" id="" value="" class="mr0"></td>
+							</tr>
+							<tr>
+								<td>1509-3824-9273</td>
+								<td class="tl spce2"><span class="ellipsis">해커스 신토익 실전 1000제 3 리딩 해</span></td>
+								<td><input type="radio" name="" id="" value="" class="mr0"></td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+				<div class="paging">
+					<a href="#" class="direction first">처음</a>
+					<a href="#" class="direction prev">이전</a>
+					<a href="#">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<strong>5</strong>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="direction next">다음</a>
+					<a href="#" class="direction last">끝</a>
+				</div>
+				<fieldset class="srch_type2">
+					<legend>조회년도 검색</legend>
+					<strong class="fc_blk">조회년도</strong>
+					<span class="select ml5">
+						<label for="">2014</label>
+						<select name="" id="">
+							<option value="1">2014</option>
+							<option value="2">1</option>
+						</select>
+					</span>
+					~
+					<span class="select">
+						<label for="">2017</label>
+						<select name="" id="">
+							<option value="1">2017</option>
+							<option value="2">1</option>
+						</select>
+					</span>
+				</fieldset>
+				<div class="btn_area3 mt20">
+					<button type="button" class="btn_r btn_type3">취소</button><!----><button type="button" class="btn_r btn_type">적용</button>
+				</div>
+			</div>
+			<!-- //element -->
+		</span>
+		<span class="blank"></span>
+	</div>
+	<!-- //월별 출고량 (popup) -->
+
+</div>
+
+</body>
+</html>

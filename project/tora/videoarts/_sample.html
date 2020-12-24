@@ -1,0 +1,602 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>벼룩시장</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="common/js/design.js"></script>
+<link rel="stylesheet" type="text/css" href="common/css/site.css" />
+</head>
+
+<body style="background:#fff;padding:20px">
+
+<div class="idsrchChk vamfix">
+	<!--
+		[D] 개발참고사항
+		ㄴinput태그의 value값과 스크립트의 case 값을 맞춰주세요.
+		ㄴname, id 를 변경시 스크립트와 label의 for 값 맞춰주세요.
+	-->
+	<input type="radio" name="joinType" id="private" value="1" checked /><label for="private"><strong>일반회원 (개인회원)</strong></label>
+	<input type="radio" name="joinType" id="law" value="2" class="ml45" /><label for="law">법인회원 (기업/단체)</label>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("input[name='joinType']").change(function() {
+			 switch ($("input[name='joinType']:checked").val())
+			 {
+				case '1':
+					$("label[for='law']").find('strong').contents().unwrap();
+					$("label[for='private']").contents().wrap("<strong></strong>");
+					break;
+				case '2':
+					$("label[for='private']").find('strong').contents().unwrap();
+					$("label[for='law']").contents().wrap("<strong></strong>");
+					break;
+			 }
+		});
+	});
+	</script>
+</div>
+<!-- //가입종류 선택 -->
+
+<div class="loginBx">
+	<div class="form">
+		<fieldset>
+			<legend>로그인</legend>
+			<table summary="아이디, 비밀번호 입력">
+				<caption>로그인</caption>
+				<tr>
+					<th scope="row">아이디</th>
+					<td><input type="text" name="login" id="ID" title="아이디입력" class="inp1" style="width:138px;" /></td>
+					<td rowspan="2" class="pl10"><input type="image" src="img/common/btn_login.gif" alt="로그인" /></td>
+				</tr>
+				<tr>
+					<th scope="row">비밀번호</th>
+					<td><input type="password" name="login" id="PW" title="비밀번호입력" class="inp1" style="width:138px;" /></td>
+				</tr>
+			</table>
+			<ul class="srch">
+			<li><a href="">아이디 찾기</a></li>
+			<li><a href="">비밀번호 찾기</a></li>
+			</ul>
+			<p class="join">
+				회원이 아니십니까?<a href=""><img src="img/common/btn_join.gif" alt="회원가입" /></a>
+			<p>
+		</fieldset>
+	</div>
+	<div class="bnAd"><a href=""><img src="img/@temp/img_392x304.jpg" width="392" height="304" alt="" /></a></div>
+</div>
+<!-- //login -->
+
+<div class="faqMssBx">
+	<p>월간 Video ARTs 서비스 이용 중 궁금하신 사항을 문의해주시면 답변해드리겠습니다.<br/>질문을 등록하기 전에 자주 묻는 질문을 통해 확인하시면 보다 빠르게 원하시는 정보를 얻으실 수 있습니다.</p>
+	<a href=""><img src="img/common/btn_faq.gif" alt="자주묻는질문" /></a>
+</div>
+<!-- //자주묻는질문 -->
+
+<div id="" class="select" style="width:100px;">
+	<button type="button" class="my_value">2014</button>
+	<ul class="a_list">
+		<li><a href="javascript:void(0);" onclick="">2015</a></li>
+		<li><a href="javascript:void(0);" onclick="">2016</a></li>
+	</ul>
+</div>
+<!-- //select -->
+
+<div class="btnate">
+	<span class="lt"><a href=""><img src="img/common/btn_prev3.gif" alt="이전글" /></a><a href=""><img src="img/common/btn_next3.gif" alt="다음글" /></a></span>
+	<a href="" class="fr"><img src="img/common/btn_list.gif" alt="목록" /></a>
+</div>
+<!-- //btn -->
+
+<div class="btnate">
+	<span class="lt"><a href=""><img src="img/common/btn_cancel.gif" alt="취소" /></a><a href=""><img src="img/common/btn_save.gif" alt="저장" /></a></span>
+	<a href="" class="fr"><img src="img/common/btn_list.gif" alt="목록" /></a>
+</div>
+<!-- //btn -->
+
+<div class="btnate2">
+	<a href=""><img src="img/common/btn_ask.gif" alt="정기구독 신청하기" /></a>
+</div>
+<!-- //btn -->
+
+<div class="btnate3">
+	<a href=""><img src="img/common/btn_write.gif" alt="글쓰기" /></a>
+</div>
+<!-- //btn -->
+
+<div class="pgnate">
+	<a href="" class="prev"><img src="img/common/btn_prev4.gif" alt="이전페이지" /></a>
+	<span class="num">
+		<strong>1</strong><a href="">2</a><a href="">3</a><a href="">4</a><a href="">5</a>
+	</span>
+	<a href="" class="next"><img src="img/common/btn_next4.gif" alt="다음페이지" /></a>
+</div>
+<!-- //paging -->
+
+<div class="tabnate3 rollover">
+	<!--
+		[D] 개발시 참고
+		ㄴ첫번째 span, a 태그에는 class="ml0" 들어가야함
+		ㄴa태그마다 스페이스(엔터)가 있으면 안됨
+	-->
+	<span class="ml0"><img src="img/content/02_tab1_on.gif" alt="정기구독 안내" /></span><a href=""><img src="img/content/02_tab2.gif" alt="정기구독 신청" /><img src="img/content/02_tab2_on.gif" alt="정기구독 신청" class="over" /><a href=""><img src="img/content/02_tab3.gif" alt="재발송 신청" /><img src="img/content/02_tab3_on.gif" alt="재발송 신청" class="over" /></a>
+</div>
+<!-- //tab -->
+
+<div class="tabnate3 rollover">
+	<!--
+		[D] 개발시 참고
+		ㄴ첫번째 span, a 태그에는 class="ml0" 들어가야함
+		ㄴa태그마다 스페이스(엔터)가 있으면 안됨
+	-->
+	<span class="ml0"><img src="img/content/04_tab1_on.gif" alt="자주 묻는 질문" /></span><a href=""><img src="img/content/04_tab2.gif" alt="공지사항" /><img src="img/content/04_tab2_on.gif" alt="공지사항" class="over" /></a><a href=""><img src="img/content/04_tab3.gif" alt="뉴스 / 신제품" /><img src="img/content/04_tab3_on.gif" alt="뉴스 / 신제품" class="over" /></a><a href=""><img src="img/content/04_tab4.gif" alt="행사소식" /><img src="img/content/04_tab4_on.gif" alt="행사소식" class="over" /></a><a href=""><img src="img/content/04_tab5.gif" alt="1:1 상담" /><img src="img/content/04_tab5_on.gif" alt="1:1 상담" class="over" /></a>
+</div>
+<!-- //tab -->
+
+<div class="subtitle3">
+	<h3 class="fl"><img src="img/title/h3_subscribe_list.gif" alt="정기구독 내역" /></h3>
+	<p class="rt">전자계산서 신청을 원하시면 <strong class="txcr2">02-6008-6853</strong>으로 사업자등록증을 보내 주십시오.</p>
+</div>
+<!-- //title -->
+
+<div class="subtitle3">
+	<h3 class="fl"><img src="img/title/h3_ship_info.gif" alt="배송지 정보" /></h3>
+	<p class="rt vamfix">
+		<input type="radio" name="shipInfo" id="old" value="" checked /><label for="old">기본 주소정보 사용 </label>
+		<input type="radio" name="shipInfo" id="new" value="" /><label for="new">새로운 배송지 입력</label>
+	</p>
+</div>
+<!-- //title -->
+
+<div class="tblStyle">
+	<table summary="">
+		<caption></caption>
+		<colgroup>
+		<col style="width:151px;" />
+		<col style="width:*;" />
+		</colgroup>
+		<body>
+		<tr>
+		<th scope="row"></th>
+		<td></td>
+		</tr>
+		</body>
+	</table>
+</div>
+<!-- //table -->
+
+<div class="tblStyle v1">
+	<table summary="날짜, 키워드">
+		<caption>공지사항 검색</caption>
+		<colgroup>
+		<col style="width:100px;" />
+		<col style="width:320px;" />
+		<col style="width:100px;" />
+		<col style="width:*;" />
+		</colgroup>
+		<body>
+		<tr>
+		<th scope="row">날짜</th>
+		<td class="vamfix">
+			<input type="text" name="calender" id="calender1" title="달력 앞자리" class="inp1" style="width:87px;" /><input type="image" src="img/common/ico_calender.gif" alt="달력" class="ml10" onClick="" /><span class="ml10 mr10">~</span><input type="text" name="calender" id="calender1" title="달력 앞자리" class="inp1" style="width:87px;" /><input type="image" src="img/common/ico_calender.gif" alt="달력" class="ml10" onClick="" />
+		</td>
+		<th scope="row">키워드</th>
+		<td class="vamfix">
+			<div id="keyword1" class="select" style="width:100px;">
+				<button type="button" class="my_value">제목</button>
+				<ul class="a_list">
+					<li><a href="javascript:void(0);" onclick="">1</a></li>
+					<li><a href="javascript:void(0);" onclick="">2</a></li>
+				</ul>
+			</div><input type="text" name="keyword" id="keyword2" title="" class="inp1 ml5" style="width:235px;" /><input type="image" name="keyword" id="keyword3" src="img/common/btn_srch2.gif" alt="조회" class="ml5" onClick="" />
+		</td>
+		</tr>
+		</body>
+	</table>
+</div>
+<!-- //table -->
+
+<div class="tblStyle">
+	<table summary="신청종류">
+		<caption>정기구독 내역</caption>
+		<colgroup>
+		<col style="width:151px;" />
+		<col style="width:*;" />
+		</colgroup>
+		<body>
+		<tr>
+		<th scope="row">신청종류</th>
+		<td class="vamfix">
+			<input type="radio" name="" id="" value="" /><label for=""><strong>Online/Offline</strong> : 1년 <strong class="txcr2">80,000</strong>원</label>
+			<input type="radio" name="" id="" value="" class="ml25" /><label for=""><strong>Online/Offline</strong> : 2년 <strong class="txcr2">140,000</strong>원</label>
+			<input type="radio" name="" id="" value="" class="ml25" /><label for=""><strong>Online</strong> : 1년 <strong class="txcr2">45,000</strong>원</label>
+		</td>
+		</tr>
+		<tr>
+		<th scope="row">구독시작 년/월</th>
+		<td>
+			<div id="" class="select" style="width:100px;">
+				<button type="button" class="my_value">2014</button>
+				<ul class="a_list">
+					<li><a href="javascript:void(0);" onclick="">2015</a></li>
+					<li><a href="javascript:void(0);" onclick="">2016</a></li>
+				</ul>
+			</div>
+			<div id="" class="select" style="width:100px;">
+				<button type="button" class="my_value">2014</button>
+				<ul class="a_list">
+					<li><a href="javascript:void(0);" onclick="">2015</a></li>
+					<li><a href="javascript:void(0);" onclick="">2016</a></li>
+				</ul>
+			</div>
+		</td>
+		</tr>
+		</body>
+	</table>
+	<table summary="결제은행, 결제방법">
+		<caption>정기구독 내역</caption>
+		<colgroup>
+		<col style="width:151px;" />
+		<col style="width:332px;" />
+		<col style="width:151px;" />
+		<col style="width:*;" />
+		</colgroup>
+		<body>
+		<tr>
+		<th scope="row">결제은행</th>
+		<td>국민은행 : 795301-04-090630 (김평재)</td>
+		<th scope="row">결제방법</th>
+		<td class="vamfix">
+			<input type="radio" name="pice" id="account" /><label for="">계좌이체</label>
+			<input type="radio" name="pice" id="card" /><label for="">신용카드</label>
+		</td>
+		</tr>
+		</body>
+	</table>
+	<table summary="입금자, 기타요청사항">
+		<caption>정기구독 내역</caption>
+		<colgroup>
+		<col style="width:151px;" />
+		<col style="width:*;" />
+		</colgroup>
+		<body>
+		<tr>
+		<th scope="row">입금자</th>
+		<td><input type="text" name="" id="" class="inp1" style="width:217px" /></td>
+		</tr>
+		<tr>
+		<th scope="row">기타요청사항</th>
+		<td><div class="txta1"><textarea cols="30" rows="5" id="" style="height:64px;"></textarea></div></td>
+		</tr>
+		</body>
+	</table>
+</div>
+<!-- //table -->
+
+<div class="tblStyle">
+	<table summary="수취인">
+		<caption>배송지 정보</caption>
+		<colgroup>
+		<col style="width:151px;" />
+		<col style="width:*;" />
+		</colgroup>
+		<body>
+		<tr>
+		<th scope="row">수취인</th>
+		<td><input type="text" name="" id="" class="inp1" style="width:217px" /></td>
+		</tr>
+		</body>
+	</table>
+	<table summary="전화번호, 휴대폰">
+		<caption>배송지 정보</caption>
+		<colgroup>
+		<col style="width:151px;" />
+		<col style="width:332px;" />
+		<col style="width:151px;" />
+		<col style="width:*;" />
+		</colgroup>
+		<body>
+		<tr>
+		<th scope="row">전화번호</th>
+		<td class="vamfix">
+			<div id="tel1" class="select" style="width:80px;">
+				<button type="button" class="my_value">02</button>
+				<ul class="a_list">
+					<li><a href="javascript:void(0);" onclick="">031</a></li>
+					<li><a href="javascript:void(0);" onclick="">051</a></li>
+				</ul>
+			</div>&nbsp;&nbsp;-&nbsp;&nbsp;<input type="text" name="tel" id="tel2" title="전화번호 두번째 자리" class="inp1" style="width:75px;" />&nbsp;&nbsp;-&nbsp;&nbsp;<input type="text" name="tel" id="tel3" title="전화번호 세번째 자리" class="inp1" style="width:75px;" />
+		</td>
+		<th scope="row">휴대폰</th>
+		<td>
+			<div id="hp1" class="select" style="width:80px;">
+				<button type="button" class="my_value">010</button>
+				<ul class="a_list">
+					<li><a href="javascript:void(0);" onclick="">011</a></li>
+					<li><a href="javascript:void(0);" onclick="">019</a></li>
+				</ul>
+			</div>&nbsp;-&nbsp;<input type="text" name="hp" id="hp2" title="휴대폰 두번째 자리" class="inp1" style="width:75px;" />&nbsp;-&nbsp;<input type="text" name="hp" id="hp3" title="휴대폰 세번째 자리" class="inp1" style="width:75px;" />
+		</td>
+		</tr>
+		</body>
+	</table>
+	<table summary="주소">
+		<caption>배송지 정보</caption>
+		<colgroup>
+		<col style="width:151px;" />
+		<col style="width:*;" />
+		</colgroup>
+		<body>
+		<tr>
+		<th scope="row">주소</th>
+		<td class="vamfix">
+			<input type="text" name="zipcode" id="zipcode1" title="우편번호 앞자리" class="inp1" style="width:75px;" />&nbsp;&nbsp;-&nbsp;&nbsp;<input type="text" name="zipcode" id="zipcode2" title="우편번호 뒷자리" class="inp1" style="width:75px;" /><input type="image" name="zipcode" id="zipcode3" src="img/common/btn_srch.gif" alt="우편번호찾기" class="ml10" />
+			<p class="mt10"><input type="text" name="address" id="address1" title="앞주소" class="inp1" style="width:267px;" /><input type="text" name="address" id="address2" title="나머지 주소" class="inp1 ml10" style="width:267px;" /></p>
+		</td>
+		</tr>
+		</body>
+	</table>
+</div>
+<!-- //table -->
+
+<div class="tblStyle">
+	<table summary="신청종류, 결제금액, 입금계좌">
+		<caption>결제할 내역</caption>
+		<colgroup>
+		<col style="width:151px;" />
+		<col style="width:*;" />
+		</colgroup>
+		<body>
+		<tr>
+		<th scope="row">신청종류</th>
+		<td>Online/Offline  1년</td>
+		</tr>
+		<tr>
+		<th scope="row">결제금액</th>
+		<td><strong class="txcr2">80,000</strong>원</td>
+		</tr>
+		<tr>
+		<th scope="row">입금계좌</th>
+		<td>국민은행  795301-04-090630 (김평재)</td>
+		</tr>
+		</body>
+	</table>
+</div>
+<!-- //table -->
+
+<p class="cmP">결제금액 : <strong class="txcr">80,000</strong> 원</p>
+<p class="txcf">* 글 작성 시 주민등록번호, 비밀번호 등과 같은 개인정보를 글 내용에 포함하지 않도록 각별히 유의해주시기 바랍니다.</p>
+<!-- //p -->
+
+<div class="bbsLst">
+	<table summary="번호, 제목, 날짜">
+		<caption>고객지원센터 리스트</caption>
+		<colgroup>
+			<col style="width:98px;" />
+			<col style="width:*;" />
+			<col style="width:136px;" />
+		</colgroup>
+		<thead>
+			<tr>
+			<th scope="col">NO.</th>
+			<th scope="col">제목</th>
+			<th scope="col">날짜</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+			<td>333</td>
+			<td class="data1"><a href="">비디오아트 'GH4 & GH4U 패키지' 프로모션</a></td>
+			<td>2014-06-10</td>
+			</tr>
+			<tr>
+			<td>333</td>
+			<td class="data1"><a href="">비디오아트 'GH4 & GH4U 패키지' 프로모션</a></td>
+			<td>2014-06-10</td>
+			</tr>
+			<tr>
+			<td>333</td>
+			<td class="data1"><a href="">비디오아트 'GH4 & GH4U 패키지' 프로모션</a></td>
+			<td>2014-06-10</td>
+			</tr>
+			<tr>
+			<td>333</td>
+			<td class="data1"><a href="">비디오아트 'GH4 & GH4U 패키지' 프로모션</a></td>
+			<td>2014-06-10</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<!-- //bbs -->
+
+<div class="bbsLst">
+	<table summary="번호, 제목, 날짜">
+		<caption>1:1상담 리스트</caption>
+		<colgroup>
+			<col style="width:98px;" />
+			<col style="width:120px;" />
+			<col style="width:*;" />
+			<col style="width:136px;" />
+		</colgroup>
+		<thead>
+			<tr>
+			<th scope="col">NO.</th>
+			<th scope="col">구분</th>
+			<th scope="col">제목</th>
+			<th scope="col">날짜</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+			<td>333</td>
+			<td><strong class="txcr2">[회원가입]</strong></td>
+			<td class="data1"><a href="">문의 드립니다.</a></td>
+			<td>2014-06-10</td>
+			</tr>
+			<tr>
+			<td>333</td>
+			<td><strong class="txcr2">[회원가입]</strong></td>
+			<td class="data1"><a href="">문의 드립니다.</a></td>
+			<td>2014-06-10</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<!-- //bbs -->
+
+<div class="bbsFaq">
+	<ul class="tab">
+	<li class="selected"><a href="">회원가입</a></li>
+	<li><a href="">우편발송</a></li>
+	<li><a href="">입금확인</a></li>
+	<li><a href="">정기구독</a></li>
+	</ul>
+	<!-- //tab -->
+	<!-- copy -->
+	<div class="article">
+		<a href="javascript:void(0);" class="que">월간 Video Arts는 어떠한 내용으로 구성되어 있습니까?</a>
+		<div class="ans">
+			Online 회원은 웹사이트를 통해서 콘텐츠를 확인하실 수 있고 On/Off-line 회원은 웹사이트도 보시고, 책도 받아보실 수 있습니다. 웹사이트를 통해 제공되는 콘텐츠는 인쇄 잡지와 동일하며, 매월 1일경 새로운 내용을 확인하실 수 있습니다.
+		</div>
+	</div>
+	<!-- //copy -->
+	<div class="article">
+		<a href="javascript:void(0);" class="que">월간 Video Arts는 어떠한 내용으로 구성되어 있습니까?</a>
+		<div class="ans">
+			Online 회원은 웹사이트를 통해서 콘텐츠를 확인하실 수 있고 On/Off-line 회원은 웹사이트도 보시고, 책도 받아보실 수 있습니다. 웹사이트를 통해 제공되는 콘텐츠는 인쇄 잡지와 동일하며, 매월 1일경 새로운 내용을 확인하실 수 있습니다.
+		</div>
+	</div>
+</div>
+<!-- //bbs -->
+
+<div class="bbsView">
+	<div class="subtitle2">
+		<strong class="date">06/01</strong>
+		<h3>새로운 영상 환경에 대응하는 프로페셔널 미디어 백업 스토리지 넥스토디아이 ND2901</h3>
+		<p class="user">장지혁 (rafalc01@chol.com)</p>
+	</div>
+	<!-- //title -->
+	<div class="article mt30">
+		<p style="text-align:center"><img src="img/@temp/img_601x360.jpg" width="601" height="360" alt="" /></p>
+		<br/><br/><br/><br/>
+		영상 환경이 바뀌고 있다. 관찰자 시점 일변도였던 것이 액션 카메라 등장과 함께 1인칭 시점으로 확장되었고, 4K 인프라가 본격 보급되기 시작하면서 고해상도 UHD 환경으로 빠르게 넘어가는 중이다. 기술이 선도한 이들 변화는 이제 본격적인 콘텐츠 생산, 인프라 확보를 요구하면서 또 다른 측면에서 기술 변화를 요구하고 있다.
+		<br/><br/><br/>
+		새로운 기술을 요구하는 영상 환경
+		<br/><br/>
+		액션 카메라가 만들어낸 새로운 시각은 UCC로 시작해 역동성을 보여주는 다양한 장르에서 입지를 넓혀가고 있다. 소형화에 대한 기술적 문제로 답을 찾아낸 개념적 요소를 갖췄지만, 실제로 운용했을 때 충격 등 거친 환경에 적나라하게 노출되는 만큼 생산해내는 콘텐츠를 얼마나 안전하게 보존할 수 있는가가 중요한 요소로 떠올랐다.
+		<br/><br/>
+		<-- 중략 -->
+		<br/><br/>
+		지난 수 년 간 카메라, 캠코더 등 멀티미디어 콘텐츠 생산 기기의 주력 저장장치로 자리 잡은 플래시 메모리는 용량과 속도를 높이면서 용량 당 단가도 급격히 낮췄다. 사진 분야에서 데이터 백업 장치가 여럿 등장했다가 어느 순간 자취를 감춘 까닭도 여기서 찾을 수 있다. 하지만, 멀티미디어 콘텐츠 생산 주체를 프로페셔널로 옮겼을 때 데이터 보존의 중요성과 백업 효율성이 차지하는 비중은 단순히 메모리를 여럿 갖추는 수준으로 해결할 수 없다. 넥스토디아이가 미디어 백업 스토리지라는 표현으로 이들 백업 장치를 꾸준히 개발해 선보이는 것도 이와 같은 맥락이겠다.
+	</div>
+	<!-- //article -->
+	<table class="file">
+		<tr>
+		<th><img src="img/common/ico_file.png" alt="" />첨부파일</th>
+		<td><a href="">aaa.jpg</a></td>
+		</tr>
+	</table>
+	<!-- //file -->
+</div>
+<!--//bbs -->
+
+<div class="bbsView2">
+	<div class="subtitle5">
+		<h4><strong>[배송]</strong> 잡지를 받지 못했습니다.</h4>
+		<em>2015 / 02 / 02</em>
+	</div>
+	<!-- //subject -->
+	<div class="article">
+		전화문의몇번햇는데 수요일날쯤갈꺼라고 해서기다렷더니 택배연락도없구요
+		<br/><br/>
+		화요일 오늘은 전화가가는데받지도않더라고..
+		<br/><br/>
+		끝나고다시전화하면또통화중이고...
+		<br/><br/>
+		10번을넘게햇는데...하아...2주가다돼갑니다주문한지...
+		<br/><br/>
+		어떻게할까요
+	</div>
+	<!-- //article -->
+	<table class="file">
+		<tr>
+		<th><img src="img/common/ico_file.png" alt="" />첨부파일</th>
+		<td><a href="">aaa.jpg</a></td>
+		</tr>
+	</table>
+	<!-- //file -->
+	<div class="btnate mt20"><span class="lt"><a href=""><img src="img/common/btn_del.gif" alt="삭제" /></a></span><a href="" class="fr"><img src="img/common/btn_list.gif" alt="목록"></a></div>
+	<!-- //btn -->
+	<div class="subtitle5">
+		<h4><strong>[배송]</strong> 잡지를 받지 못했습니다.</h4>
+		<em>2015 / 02 / 02</em>
+	</div>
+	<!-- //subject -->
+	<div class="article">
+		전화문의몇번햇는데 수요일날쯤갈꺼라고 해서기다렷더니 택배연락도없구요
+		<br/><br/>
+		화요일 오늘은 전화가가는데받지도않더라고..
+		<br/><br/>
+		끝나고다시전화하면또통화중이고...
+		<br/><br/>
+		10번을넘게햇는데...하아...2주가다돼갑니다주문한지...
+		<br/><br/>
+		어떻게할까요
+	</div>
+	<!-- //article -->
+	<table class="file">
+		<tr>
+		<th><img src="img/common/ico_file.png" alt="" />첨부파일</th>
+		<td><a href="">aaa.jpg</a></td>
+		</tr>
+	</table>
+	<!-- //file -->
+</div>
+<!-- //bbs -->
+
+<div class="tblStyle">
+	<table summary="제목, 구분, 첨부파일">
+		<caption>1:1상담 글쓰기</caption>
+		<colgroup>
+		<col style="width:133px;" />
+		<col style="width:*;" />
+		</colgroup>
+		<body>
+		<tr>
+		<th scope="row">제목</th>
+		<td><p class="inp1"><input type="text" name="subject" id="subject" title="제목" /></p></td>
+		</tr>
+		<tr>
+		<th scope="row">구분</th>
+		<td class="vamfix">
+			<input type="radio" name="section" id="mem" value="" checked /><label for="mem">회원정보</label>
+			<input type="radio" name="section" id="zip" value="" class="ml25" /><label for="zip">우편발송</label>
+			<input type="radio" name="section" id="money" value="" class="ml25" /><label for="money">입금확인</label>
+			<input type="radio" name="section" id="book" value="" class="ml25" /><label for="book">정기구독</label>
+			<input type="radio" name="section" id="etc" value="" class="ml25" /><label for="etc">기타</label>
+		</td>
+		</tr>
+		<tr>
+		<td colspan="2"><div class="txta1"><textarea cols="30" rows="5" id="" style="height:180px;"></textarea></div></td>
+		</tr>
+		<tr>
+		<th scope="row">첨부파일</th>
+		<td class="vamfix"><input type="image" src="img/common/btn_srch3.gif" alt="파일찾기" onClick="" /></td>
+		</tr>
+		</body>
+	</table>
+</div>
+<!-- //bbs -->
+
+<div class="cmBn mt50">
+	<a href=""><img src="../img/@temp/bn_968x140.jpg" width="968" height="140" alt="" /></a>
+</div>
+<!-- //baner -->
+
+</body>
+</html>

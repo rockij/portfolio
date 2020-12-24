@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="resource/css/base.css" media="screen" rel="stylesheet">
+<link href="resource/css/site.css" media="screen" rel="stylesheet">
+<script src="resource/js/jquery-1.11.1.min.js"></script>
+<script src="resource/js/ui.js"></script>
+<title>ORP Assessment center</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header">
+        <h1><img src="resource/image/logo.png" alt="ORP Assessment center"></h1>
+        <div id="gnb">
+            <ul>
+                <li><a href="#;">운영관리</a></li>
+                <li><a href="#;" class="active">회원관리</a></li>
+                <li><a href="#;">WIB관리</a></li>
+                <li><a href="#;">진행정보&평가</a></li>
+            </ul>
+        </div>
+        <a href="#;" class="user">로그아웃</a>
+    </header>
+    <!-- //header -->
+
+    <div id="container">
+        <aside class="lnb">
+            <ul>
+                <li><a href="#;" class="active">기업관리</a></li>
+                <li><a href="#;">전문위원 관리</a></li>
+                <li><a href="#;">학습자 관리</a></li>
+            </ul>
+        </aside>
+        <div id="content">
+            <section class="title_top">
+                <h2>기업관리</h2>
+                <div class="path"><a href="#;">Home</a><i>&gt;</i><a href="#;">회원관리</a><i>&gt;</i><b>기업관리</b></div>
+            </section>
+            <!-- //title -->
+            <h3 class="title_type">기업정보</h3>
+            <div class="tbl_type mt15">
+                <table>
+                    <colgroup>
+                        <col style="width:15.5%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><em>*</em>기업명</th>
+                            <td>
+                                국문 : <input type="text" id="" value="" style="width:298px">
+                                <span class="ml20">영문(URL생성용) :</span>&nbsp;<input type="text" id="" value="" style="width:298px">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><em>*</em>주소</th>
+                            <td>
+                                <input type="text" id="" value="" style="width:198px" placeholder="우편번호" readonly><!----><input type="text" id="" value="" class="ml5" style="width:398px" placeholder="주소" readonly><!----><button type="button" onclick="" class="btn_m btn_type2 ml5" style="width:70px">주소찾기</button>
+                                <p class="mt5"><input type="text" id="" value="" style="width:623px"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><em>*</em>대표번호</th>
+                            <td><input type="text" id="" value="" style="width:298px"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">홈페이지</th>
+                            <td>http:// <input type="text" id="" value="" style="width:298px" class="ml5"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">로고</th>
+                            <td>
+                                Nhn logo.jpg
+                                <button type="button" onclick="" class="btn_del ml5"></button>
+                                <span class="filebox button">
+                                    <input type="text" class="upload_name" value="선택된 파일 없음" disabled><!----><label for="fileField1" class="btsrch">찾아보기</label>
+                                    <input type="file" id="fileField1" class="upload_hidden">
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">사원수</th>
+                            <td><input type="text" id="" value="" style="width:148px" class="mr10">명</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">매출액</th>
+                            <td><input type="text" id="" value="" style="width:148px" class="mr10">억</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">기업규모</th>
+                            <td>
+                                대기업
+                                <span class="checkbox check ml10">
+                                    <input type="checkbox" name="comsize" id="comsize2">
+                                    <label for="comsize2">공기업/공공기관</label>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //table -->
+            <div class="bta_agn_right mt10">
+                <button type="button" onclick="" class="btn_m btn_type4" style="width:90px">저장</button>
+            </div>
+            <!-- //btn -->
+            <h3 class="title_type mt50">기업관리자 정보</h3>
+            <div class="tbl_type2 mt15">
+                <table>
+                    <colgroup>
+                        <col style="width:16.7%">
+                        <col style="width:16.7%">
+                        <col style="width:16.7%">
+                        <col style="width:16.7%">
+                        <col style="width:16.7%">
+                        <col style="width:16.7%">
+                        <col style="width:16.7%">
+                        <col style="width:16.7%">
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">순서</th>
+                            <th scope="col">상태</th>
+                            <th scope="col">아이디</th>
+                            <th scope="col">사용자</th>
+                            <th scope="col">소속</th>
+                            <th scope="col">직급</th>
+                            <th scope="col">최근접속일</th>
+                            <th scope="col">등록일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2</td>
+                            <td>사용</td>
+                            <td class="link"><a href="#;">NHN01</a></td>
+                            <td class="userlink">
+                                김OO
+                                <a href="#;"><img src="resource/image/ico_hp.png" alt="휴대폰"></a>
+                                <a href="#;"><img src="resource/image/ico_email.png" alt="이메일"></a>
+                            </td>
+                            <td>소속출력</td>
+                            <td>직급</td>
+                            <td>2019-01-01</td>
+                            <td>2019-01-01</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>사용</td>
+                            <td class="link"><a href="#;">NHN01</a></td>
+                            <td class="userlink">
+                                김OO
+                                <a href="#;"><img src="resource/image/ico_hp.png" alt="휴대폰"></a>
+                                <a href="#;"><img src="resource/image/ico_email.png" alt="이메일"></a>
+                            </td>
+                            <td>소속출력</td>
+                            <td>직급</td>
+                            <td>2019-01-01</td>
+                            <td>2019-01-01</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //table -->
+            <div class="bta_agn_right mt10">
+                <button type="button" onclick="" class="btn_m btn_type" style="width:90px">등록</button>
+            </div>
+            <!-- //btn -->
+            <h3 class="title_type mt50">과정 및 과제 정보</h3>
+            <!-- 01 -->
+            <div class="tbl_type mt15">
+                <table>
+                    <colgroup>
+                        <col style="width:15.5%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">과제명</th>
+                            <td class="link"><a href="#;">과정명이 출력되는 영역입니다.</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">상태</th>
+                            <td>사용 / 상시</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">접속 URL</th>
+                            <td>http://www.xxxxx.com/nhn/201901-01<button type="button" onclick="" class="btn_m btn_type2 ml10" style="width:70px">복사</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tbl_type2">
+                <table>
+                    <colgroup>
+                        <col style="width:22.2%">
+                        <col style="width:22.2%">
+                        <col style="width:22.2%">
+                        <col style="width:22.2%">
+                        <col style="width:22.2%">
+                        <col style="width:22.2%">
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr class="brt0">
+                            <th scope="col">과제기간</th>
+                            <th scope="col">평가기간</th>
+                            <th scope="col">과제미참여</th>
+                            <th scope="col">과제 진행중</th>
+                            <th scope="col">과제 완료</th>
+                            <th scope="col">전문위원 평가완료</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>상시</td>
+                            <td>상시</td>
+                            <td>-</td>
+                            <td>10명</td>
+                            <td>150명</td>
+                            <td>1590 /1600</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //table -->
+            <div class="bta_agn_right mt10">
+                <button type="button" onclick="" class="btn_m btn_type3" style="width:90px">과제 설정</button><!----><button type="button" onclick="" class="btn_m btn_type3" style="width:90px">진행정보</button><!----><button type="button" onclick="" class="btn_m btn_type3" style="width:90px">평가정보</button>
+            </div>
+            <!-- //btn -->
+            <!-- //01 -->
+            <!-- 02 -->
+            <div class="tbl_type mt30">
+                <table>
+                    <colgroup>
+                        <col style="width:15.5%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">과제명</th>
+                            <td class="link"><a href="#;">과정명이 출력되는 영역입니다.</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">상태</th>
+                            <td>사용 / 2019-01-01 ~ 2019-12-31</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">접속 URL</th>
+                            <td>http://www.xxxxx.com/nhn/201901-01<button type="button" onclick="" class="btn_m btn_type2 ml10" style="width:70px">복사</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tbl_type2">
+                <table>
+                    <colgroup>
+                        <col style="width:22.2%">
+                        <col style="width:22.2%">
+                        <col style="width:22.2%">
+                        <col style="width:22.2%">
+                        <col style="width:22.2%">
+                        <col style="width:22.2%">
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr class="brt0">
+                            <th scope="col">과제기간</th>
+                            <th scope="col">평가기간</th>
+                            <th scope="col">과제미참여</th>
+                            <th scope="col">과제 진행중</th>
+                            <th scope="col">과제 완료</th>
+                            <th scope="col">전문위원 평가완료</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2019-01-01 ~ 2019-01-31</td>
+                            <td>2019-01-01 ~ 2019-01-31</td>
+                            <td>10명</td>
+                            <td>70명</td>
+                            <td>100명</td>
+                            <td>50 /130</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //table -->
+            <div class="bta_agn_right mt10">
+                <button type="button" onclick="" class="btn_m btn_type3" style="width:90px">과제 설정</button><!----><button type="button" onclick="" class="btn_m btn_type3" style="width:90px">진행정보</button><!----><button type="button" onclick="" class="btn_m btn_type3" style="width:90px">평가정보</button>
+            </div>
+            <!-- //btn -->
+            <!-- //02 -->
+            <!-- 03 -->
+            <div class="tbl_type mt30">
+                <table>
+                    <colgroup>
+                        <col style="width:15.5%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">과제명</th>
+                            <td class="link"><a href="#;">과정명이 출력되는 영역입니다.</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">상태</th>
+                            <td>사용 / 2019-01-01 ~ 2019-12-31</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">접속 URL</th>
+                            <td>http://www.xxxxx.com/nhn/201901-01<button type="button" onclick="" class="btn_m btn_type2 ml10" style="width:70px">복사</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tbl_type2">
+                <table>
+                    <colgroup>
+                        <col style="width:22.2%">
+                        <col style="width:22.2%">
+                        <col style="width:22.2%">
+                        <col style="width:22.2%">
+                        <col style="width:22.2%">
+                        <col style="width:22.2%">
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr class="brt0">
+                            <th scope="col">과제기간</th>
+                            <th scope="col">평가기간</th>
+                            <th scope="col">과제미참여</th>
+                            <th scope="col">과제 진행중</th>
+                            <th scope="col">과제 완료</th>
+                            <th scope="col">전문위원 평가완료</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2019-01-01 ~ 2019-01-31</td>
+                            <td>2019-01-01 ~ 2019-01-31</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>130명</td>
+                            <td>130 /130</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //table -->
+            <div class="bta_agn_right mt10">
+                <button type="button" onclick="" class="btn_m btn_type3" style="width:90px">과제 설정</button><!----><button type="button" onclick="" class="btn_m btn_type3" style="width:90px">진행정보</button><!----><button type="button" onclick="" class="btn_m btn_type3" style="width:90px">평가정보</button>
+            </div>
+            <!-- //btn -->
+            <!-- //03 -->
+            <h3 class="title_type mt50">기업 히스토리</h3>
+            <div class="tbl_type2 mt15">
+                <table>
+                    <colgroup>
+                        <col style="width:32.5%">
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">일시</th>
+                            <th scope="col">작업</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2019-01-01 11:11:10</td>
+                            <td>기업수정</td>
+                        </tr>
+                        <tr>
+                            <td>2019-01-01 11:11:10</td>
+                            <td>과정/과제 생성</td>
+                        </tr>
+                        <tr>
+                            <td>2019-01-01 11:11:10</td>
+                            <td>기업 등록</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //table -->
+            <div class="paging">
+                <a href="#;" class="prev"></a>
+                <span class="link">
+                    <a href="#;" class="on">1</a>
+                    <a href="#;">2</a>
+                    <a href="#;">3</a>
+                    <a href="#;">4</a>
+                    <a href="#;">5</a>
+                    <a href="#;">6</a>
+                    <a href="#;">7</a>
+                    <a href="#;">8</a>
+                    <a href="#;">9</a>
+                    <a href="#;">10</a>
+                    <a href="#;">99</a>
+                    <a href="#;">999</a>
+                </span>
+                <a href="#;" class="next"></a>
+            </div>
+            <!-- //paging -->
+        </div>
+        <!-- //content -->
+    </div>
+    <!-- //container -->
+
+    <footer id="footer">
+        <div class="inner">
+            Copyright ⓒ ORP Institute. All Rights Reserved.
+            <img src="resource/image/logo2.png" alt="ORP Assessment center" class="lg">
+        </div>
+    </footer>
+    <!-- //footer -->
+
+</div>
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$(function(){
+    // 달력
+    $( ".ip_cal" ).datepicker({
+        showOn: "both",
+        buttonImage: "resource/image/ico_cal.png",
+        buttonImageOnly: true,
+        dateFormat: "yy-mm-dd"
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>GSTIS 경북과학기술지식정보시스템</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="common/js/design.js"></script>
+<link rel="stylesheet" type="text/css" href="common/css/site.css" />
+</head>
+
+<!--[if IE 7]><body class="ie7"><![endif]-->
+<!--[if IE 8]><body class="ie8"><![endif]-->
+<!--[if IE 9]><body class="ie9"><![endif]-->
+<!--[if !IE]><!--><body><!--<![endif]-->
+
+<a href="#content" class="skip">컨텐츠 바로가기</a>
+<!-- //skip -->
+
+<div id="wrap">
+
+	<div id="header">
+		<div class="panel">
+			<div class="lnb">
+				<ul>
+				<li><a href="">HOME</a></li>
+				<li><a href="">로그인</a></li>
+				<li><a href="">회원가입</a></li>
+				<li><a href="">사이트맵</a></li>
+				<li class="n1"><a href="">통합관리시스템</a></li>
+				</ul>
+			</div>
+			<!-- //local navigation bar -->
+			<div class="gnb">
+				<h1><img src="img/common/header_lg.gif" alt="GSTIS 경북과학기술지식정보시스템" /></h1>
+				<ul>
+				<li><a href="">GSTIS 소개</a></li>
+				<li><a href="">정보마당</a></li>
+				<li><a href="">통계</a></li>
+				<li class="n1"><a href="" onclick="totalMenuOpen(); return false;">전체메뉴</a></li>
+				</ul>
+				<div class="submenu">
+					<ul>
+					<li><a href="">경북SP소개</a></li>
+					<li><a href="">GSTIS 시스템 소개</a></li>
+					<li><a href="">관련기관 안내</a></li>
+					</ul>
+					<ul>
+					<li><a href="">공지사항</a></li>
+					<li><a href="">보도자료</a></li>
+					<li><a href="">보고서</a></li>
+					<li><a href="">Q&A</a></li>
+					<li><a href="">중앙부처 R&D 사업안내</a></li>
+					<li><a href="">경상북도 R&D 사업안내</a></li>
+					<li><a href="">사이트맵</a></li>
+					</ul>
+					<ul class="last">
+					<li><a href="">국가 R&D 사업통계</a></li>
+					<li><a href="">지역 R&D 사업조회</a></li>
+					<li><a href="">R&D 사업통계</a></li>
+					</ul>
+					<a href="" class="btClose" onclick="totalMenuClose(); return false;"><img src="img/common/btn_close.gif" alt="창닫기" /></a>
+				</div>
+				<!-- //submenu -->
+			</div>
+			<!-- //global navigation bar -->
+		</div>
+	</div>
+	<!-- //header -->
+
+	<div id="container">
+		<div id="content" class="main_ct">
+			<div class="visual">
+				<div class="blind">
+					<h2>GSTIS...</h2>
+					경상북도 내 범부처 통합 경북과학기술지식정보서비스(GSTIS)는 지역 R&D의 효율성을 높이고 과학 기술 정책 방향 수립을 위한 '경북과학기술종합정보서비스' 입니다.
+				</div>
+			</div>
+			<!-- //visual -->
+			<ul class="section">
+			<li class="n1">
+				<h3>사업조회</h3>
+				<p>경상북도 내 부처별 및 기관별로<br/>진행중인 사업을 조회하실 수 있습니다.</p>
+				<a href=""><img src="img/content/main_section1_btn.gif" alt="사업조회 자세히보기" /></a>
+			</li>
+			<li class="n2">
+				<h3>GSTIS란?</h3>
+				<p>구미전자정보기술원에서 제공하는 지역<br/>R&D사업 종합관리시스템을 안내해 드립니다.</p>
+				<a href=""><img src="img/content/main_section2_btn.gif" alt="GSTIS란? 자세히보기" /></a>
+			</li>
+			<li class="n3">
+				<h3>유사과제 검색 및 제재정보</h3>
+				<p>이미 수행된 국가 R&D 과제와의<br/>중복여부를 쉽게 검색 하실 수 있습니다.</p>
+				<a href=""><img src="img/content/main_section3_btn.gif" alt="유사과제 검색 및 제재정보 자세히보기" /></a>
+			</li>
+			</ul>
+			<!-- //section -->
+			<div class="clearfix mt30">
+				<div class="notice">
+					<ul class="tab">
+					<li><h3><a href="" class="selected" onclick="mainBBSControl('advertise',1); return false;">통합공고</a></h3></li>
+					<li><h3><a href="" onclick="mainBBSControl('notice',2); return false;">공지사항</a></h3></li>
+					</ul>
+					<a href="" class="btMore"><img src="img/content/main_notice_more.gif" alt="자세히보기" /></a>
+					<!-- 통합공고 -->
+					<div id="advertise" class="hide">
+						<table summary="통합공고를 확인할 수 있습니다">
+							<colgroup>
+								<col style="width:*;" />
+								<col style="width:140px;" />
+								<col style="width:112px;" />
+							</colgroup>
+							<caption>통합공고</caption>
+							<tbody>
+							<tr>
+							<th><span><a href="" class="elip"><strong>[중앙부처R&D사업]</strong> 2013년도 건강기능식품 제품화 지원 현장현장</a></span></th>
+							<td>2013.0.01~2031.03.29</td>
+							<td>식품의약품안전청</td>
+							</tr>
+							<tr>
+							<th><span><a href="" class="elip"><strong>[중앙부처R&D사업]</strong> 2013년도 건강기능식품 제품화 지원 현장현장</a></span></th>
+							<td>2013.0.01~2031.03.29</td>
+							<td>식품의약품안전청</td>
+							</tr>
+							<tr>
+							<th><span><a href="" class="elip"><strong>[중앙부처R&D사업]</strong> 2013년도 건강기능식품 제품화 지원 현장현장</a></span></th>
+							<td>2013.0.01~2031.03.29</td>
+							<td>식품의약품안전청</td>
+							</tr>
+							<tr>
+							<th><span><a href="" class="elip"><strong>[중앙부처R&D사업]</strong> 2013년도 건강기능식품 제품화 지원 현장현장</a></span></th>
+							<td>2013.0.01~2031.03.29</td>
+							<td>식품의약품안전청</td>
+							</tr>
+							<tr>
+							<th><span><a href="" class="elip"><strong>[중앙부처R&D사업]</strong> 2013년도 건강기능식품 제품화 지원 현장현장</a></span></th>
+							<td>2013.0.01~2031.03.29</td>
+							<td>식품의약품안전청</td>
+							</tr>
+							<tr>
+							<th><span><a href="" class="elip"><strong>[중앙부처R&D사업]</strong> 2013년도 건강기능식품 제품화 지원 현장현장</a></span></th>
+							<td>2013.0.01~2031.03.29</td>
+							<td>식품의약품안전청</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //통합공고 -->
+					<!-- 공지사항 -->
+					<div id="notice" class="hide">
+						<table summary="공지사항를 확인할 수 있습니다">
+							<colgroup>
+								<col style="width:*;" />
+								<col style="width:140px;" />
+								<col style="width:112px;" />
+							</colgroup>
+							<caption>공지사항</caption>
+							<tbody>
+							<tr>
+							<th><span><a href="" class="elip"><strong>[중앙부처R&D사업]</strong> 공지사항입니다</a></span></th>
+							<td>2013.0.01~2031.03.29</td>
+							<td>식품의약품안전청</td>
+							</tr>
+							<tr>
+							<th><span><a href="" class="elip"><strong>[중앙부처R&D사업]</strong> 2013년도 건강기능식품 제품화 지원 현장현장</a></span></th>
+							<td>2013.0.01~2031.03.29</td>
+							<td>식품의약품안전청</td>
+							</tr>
+							<tr>
+							<th><span><a href="" class="elip"><strong>[중앙부처R&D사업]</strong> 2013년도 건강기능식품 제품화 지원 현장현장</a></span></th>
+							<td>2013.0.01~2031.03.29</td>
+							<td>식품의약품안전청</td>
+							</tr>
+							<tr>
+							<th><span><a href="" class="elip"><strong>[중앙부처R&D사업]</strong> 2013년도 건강기능식품 제품화 지원 현장현장</a></span></th>
+							<td>2013.0.01~2031.03.29</td>
+							<td>식품의약품안전청</td>
+							</tr>
+							<tr>
+							<th><span><a href="" class="elip"><strong>[중앙부처R&D사업]</strong> 2013년도 건강기능식품 제품화 지원 현장현장</a></span></th>
+							<td>2013.0.01~2031.03.29</td>
+							<td>식품의약품안전청</td>
+							</tr>
+							<tr>
+							<th><span><a href="" class="elip"><strong>[중앙부처R&D사업]</strong> 2013년도 건강기능식품 제품화 지원 현장현장</a></span></th>
+							<td>2013.0.01~2031.03.29</td>
+							<td>식품의약품안전청</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //공지사항 -->
+				</div>
+				<!-- //통합공고 & 공지사항 -->
+				<div class="survey">
+					<h3>만족도 조사</h3>
+					<p class="txt">지속적인 서비스 개선을 위해 만족도 조사를 하오니<br/>많은 참여 부탁 드립니다.</p>
+					<dl>
+					<dt><span>Q.</span>제공해드리는 GSTIS서비스에 대한<br/>만족도는 어떻습니까?</dt>
+					<dd>
+						<ul class="vamfix">
+						<li><input type="radio" name="" id="" value="" checked /><label for="">매우만족</label></li>
+						<li><input type="radio" name="" id="" value="" /><label for="">만족</label></li>
+						<li><input type="radio" name="" id="" value="" /><label for="">보통</label></li>
+						<li><input type="radio" name="" id="" value="" /><label for="">불만족</label></li>
+						<li><input type="radio" name="" id="" value="" /><label for="">매우불만족</label></li>
+						</ul>
+					</dd>
+					</dl>
+					<p class="txt2">불만족한 사유가 있으면 등록해 주세요.</p>
+					<div class="vamfix mt7">
+						<textarea cols="30" rows="5" id="" class="txtarea" style="width:154px;height:39px;"></textarea><input type="image" src="img/content/main_survey_btn.gif" alt="등록" onClick="" class="ml3" />
+					</div>
+				</div>
+				<!-- //만족도조사 -->
+			</div>			
+		</div>
+		<!-- //content -->
+		<div class="main_bn mt20">
+			<h3><img src="img/content/main_bn_tit.gif" alt="BANNER ZONE" /></h3>
+			<div id="mainBn">
+				<ul class="slides">
+				<li>
+					<table>
+					<tr>
+					<td><a href=""><img src="img/content/main_bn_img01.gif" alt="미래창조과학부" /></a></td>
+					<td><a href=""><img src="img/content/main_bn_img02.gif" alt="산업통상자원부" /></a></td>
+					<td><a href=""><img src="img/content/main_bn_img03.gif" alt="구미전자정보기술원" /></a></td>
+					<td><a href=""><img src="img/content/main_bn_img04.gif" alt="지역산업관리종합시스템" /></a></td>
+					</tr>
+					</table>
+				</li>
+				<li>
+					<table>
+					<tr>
+					<td><a href=""><img src="img/content/main_bn_img05.gif" alt="한국산업단지공단" /></a></td>
+					<td><a href=""><img src="img/content/main_bn_img06.gif" alt="대구경북연구원" /></a></td>
+					<td><a href=""><img src="img/content/main_bn_img07.gif" alt="국가과학기술지식정보서비스" /></a></td>
+					<td><a href=""><img src="img/content/main_bn_img08.gif" alt="경북과학기술진흥센터" /></a></td>
+					</tr>
+					</table>
+				</li>
+				<li>
+					<table>
+					<tr>
+					<td><a href=""><img src="img/content/main_bn_img09.gif" alt="KIAT" /></a></td>
+					<td><a href=""><img src="img/content/main_bn_img10.gif" alt="과학기술정책연구원" /></a></td>
+					<td><a href=""><img src="img/content/main_bn_img11.gif" alt="한국산업기술평가관리원" /></a></td>
+					<td><a href=""><img src="img/content/main_bn_img12.gif" alt="한국과학기술기획평가원" /></a></td>
+					</tr>
+					</table>
+				</li>
+				<li class="type">
+					<table>
+					<tr>
+					<td><a href=""><img src="img/content/main_bn_img13.gif" alt="Pride GyongBuk" /></a></td>
+					<td><a href=""><img src="img/content/main_bn_img15.gif" alt="구미시" /></a></td>
+					<td><a href=""><img src="img/content/main_bn_img14.gif" alt="DGIST" /></a></td>
+					<td><a href=""><img src="img/content/main_bn_img16.gif" alt="REDIS 지역발전포털" /></a></td>
+					</tr>
+					</table>
+				</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript" src="common/js/flexslide.js"></script>
+			<script type="text/javascript">
+			window.onload = function(){
+				$('#mainBn').flexslider({
+					animation: "slide",
+					animationSpeed:600,
+					slideshowSpeed:5000,
+					pausePlay:true,
+					directionNav:true,
+					controlNav:false,
+					slideshow:true
+				});
+			};
+			</script>
+		<!-- //bn -->
+	</div>
+	<!-- //container -->
+
+	<div id="footer">
+		<ul>
+		<li><a href=""><img src="img/common/footer_nav1.gif" alt="이용약관" /></a></li>
+		<li><a href=""><img src="img/common/footer_nav2.gif" alt="개인정보취급방침" /></a></li>
+		<li><a href=""><img src="img/common/footer_nav3.gif" alt="이메일주소무단수집거부" /></a></li>
+		</ul>
+		<address>
+			[730-853] 경상북도 구미시 산동면 첨단 기업1로 17 구미전자정보기술원 경북과학기술진흥센터<br/>
+			TEL 054-479-1804&nbsp;&nbsp;&nbsp;Fax 054-479-1810&nbsp;&nbsp;&nbsp;문의 E-Mail  gbsp@geri.re.kr<br/>
+			Copyright (c) 2014 GSTIS. All Right Reserved.
+		</address>
+		<a href="" class="btSitemap"><img src="img/common/footer_sitemap.gif" alt="사이트맵" /></a>
+	</div>
+	<!-- //footer -->
+
+</div>
+
+</body>
+</html>

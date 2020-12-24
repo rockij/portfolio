@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="resource/css/base.css" media="screen" rel="stylesheet">
+<link href="resource/css/site.css" media="screen" rel="stylesheet">
+<script src="resource/js/jquery-1.11.1.min.js"></script>
+<script src="resource/js/ui.js"></script>
+<title>홈플러스 증빙시스템</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header">
+        <h1><img src="resource/image/logo.png" alt="homeplus"></h1>
+        <div id="gnb">
+            <ul>
+                <li><a href="#;">지점목록</a></li>
+                <li><a href="#;">광고등록</a></li>
+                <li><a href="#;">Total List</a></li>
+                <li><a href="#;">Mass Change</a></li>
+                <li><a href="#;">변경이력</a></li>
+                <li><a href="#;">환경설정</a></li>
+            </ul>
+            <div class="submenu">
+                <ul>
+                    <li><a href="#;">지점목록</a></li>
+                    <li><a href="#;">광고현황</a></li>
+                </ul>
+                <ul class="m2">
+                    <li><a href="#;">Excel업로드</a></li>
+                    <li><a href="#;">광고관리</a></li>
+                </ul>
+                <ul class="m3">
+                    <li><a href="#;">Total List</a></li>
+                </ul>
+                <ul class="m4">
+                    <li><a href="#;">Mass Change</a></li>
+                </ul>
+                <ul class="m5">
+                    <li><a href="#;">변경이력</a></li>
+                </ul>
+                <ul class="m6">
+                    <li><a href="#;">권한관리</a></li>
+                    <li><a href="#;">벤더관리</a></li>
+                </ul>
+            </div>
+        </div>
+        <a href="#;" class="iuser login"><span class="fc_blu">홍길동</span>님</a>
+    </header>
+    <!-- //header -->
+
+    <div id="content">
+        <section class="title_top">
+            <h2>Total List</h2>
+            <div class="path"><a href="#;" class="home">Home</a><i></i>Total List</div>
+        </section>
+        <!-- //title -->
+        <div class="tbl_type">
+            <table>
+                <colgroup>
+                    <col style="width:15%">
+                    <col style="width:35%">
+                    <col style="width:15%">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">기준 정보</th>
+                        <td colspan="3">
+                            <select style="width:150px">
+                                <option value="">지역본부 선택</option>
+                            </select>
+                            <select class="ml5" style="width:150px">
+                                <option value="">지점 선택</option>
+                            </select>
+                            <select class="ml5" style="width:150px">
+                                <option value="">팀 선택</option>
+                            </select>
+                            <select class="ml5" style="width:150px">
+                                <option value="">업체명 선택</option>
+                            </select>
+                            <select class="ml5" style="width:150px">
+                                <option value="">위치 선택</option>
+                            </select>
+                            <select class="ml5" style="width:150px">
+                                <option value="">공제여부 선택</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">키워드</th>
+                        <td>
+                            <select style="width:150px">
+                                <option value="">광고명</option>
+                            </select>
+                            <input type="text" id="" value="" class="ml5" style="width:196px">
+                        </td>
+                        <th scope="row">광고활성화</th>
+                        <td>
+                            <span class="checkbox circle">
+                                <input type="radio" name="adchk" id="ad" checked>
+                                <label for="ad">전체</label>
+                            </span>
+                            <span class="checkbox circle ml10">
+                                <input type="radio" name="adchk" id="adY">
+                                <label for="adY">Y</label>
+                            </span>
+                            <span class="checkbox circle ml10">
+                                <input type="radio" name="adchk" id="adN">
+                                <label for="adN">N</label>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- //table -->
+        <div class="bta_agn_right mt10">
+            <a href="#;" class="btn_r btn_type" style="width:90px">검색</a><!----><a href="#;" class="btn_r btn_type2" style="width:90px">초기화</a>
+        </div>
+        <!-- //btn -->
+        <div class="bta_agn_half mt60">
+            <h3 class="title_type"><span>[총 200건 중 <span class="fc_red">15</span>건]</span></h3>
+            <span class="btns">
+                <a href="#;" class="btn_r btn_type2">조회결과 새 창으로 열기</a><!----><a href="#;" class="btn_r btn_type2" style="width:90px">엑셀 다운로드</a>
+                <select class="ml5" style="width:120px">
+                    <option value="">5개씩</option>
+                    <option value="">10개씩</option>
+                    <option value="" selected>15개씩</option>
+                    <option value="">20개씩</option>
+                </select>
+            </span>
+        </div>
+        <!-- //btn -->
+        <div class="tbl_type2">
+            <table>
+                <colgroup>
+                    <col style="width:3.5%">
+                    <col style="width:4%">
+                    <col style="width:12%">
+                    <col style="width:6.5%">
+                    <col style="width:6.5%">
+                    <col style="width:6.5%">
+                    <col style="width:6.5%">
+                    <col style="width:9%">
+                    <col style="width:9%">
+                    <col style="width:4.5%">
+                    <col style="width:4.5%">
+                    <col style="width:4.2%">
+                    <col style="width:7.5%">
+                    <col style="width:7.5%">
+                    <col style="width:4.5%">
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            <span class="checkbox o check">
+                                <input type="checkbox" name="adchk" id="ad-all" class="chkAll">
+                                <label for="ad-all"></label>
+                            </span>
+                        </th>
+                        <th scope="col">NO</th>
+                        <th scope="col">이미지</th>
+                        <th scope="col">KOR</th>
+                        <th scope="col">점포명</th>
+                        <th scope="col">지역<br>본부</th>
+                        <th scope="col">업체<br>코드</th>
+                        <th scope="col">업체명</th>
+                        <th scope="col">광고 상품명</th>
+                        <th scope="col">수량</th>
+                        <th scope="col">층</th>
+                        <th scope="col">위치</th>
+                        <th scope="col">외경<br>(프레임포함)</th>
+                        <th scope="col">내경</th>
+                        <th scope="col">공제<br>여부</th>
+                        <th scope="col">광고<br>활성화</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="16" class="nodata">업로드 된 데이터가 없습니다.</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="checkbox o check">
+                                <input type="checkbox" name="adchk" id="ad1">
+                                <label for="ad1"></label>
+                            </span>
+                        </td>
+                        <td>10</td>
+                        <td class="thum"><img src="resource/image/sample/photo1.png" alt=""></td>
+                        <td>홈플러스주식회사</td>
+                        <td>경기하남점</td>
+                        <td>2지역본부</td>
+                        <td>134557</td>
+                        <td>유한킴벌리(주)</td>
+                        <td>유한킴벌리(주)_기저귀</td>
+                        <td>1</td>
+                        <td>B3F＞B4F</td>
+                        <td>MW상단</td>
+                        <td>1150*680</td>
+                        <td>1070*600</td>
+                        <td>Y</td>
+                        <td>Y</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="checkbox o check">
+                                <input type="checkbox" name="adchk" id="ad2">
+                                <label for="ad2"></label>
+                            </span>
+                        </td>
+                        <td>9</td>
+                        <td class="thum"><img src="resource/image/noimg_homeplus2.gif" alt="홈플러스 자사광고"></td>
+                        <td>홈플러스주식회사</td>
+                        <td>경기하남점</td>
+                        <td>2지역본부</td>
+                        <td>134557</td>
+                        <td>유한킴벌리(주)</td>
+                        <td>유한킴벌리(주)_기저귀</td>
+                        <td>1</td>
+                        <td>B3F＞B4F</td>
+                        <td>MW상단</td>
+                        <td>1150*680</td>
+                        <td>1070*600</td>
+                        <td>Y</td>
+                        <td>Y</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="checkbox o check">
+                                <input type="checkbox" name="adchk" id="ad3">
+                                <label for="ad3"></label>
+                            </span>
+                        </td>
+                        <td>8</td>
+                        <td class="thum"><img src="resource/image/noimg_normal3.gif" alt="이미지없음"></td>
+                        <td>홈플러스주식회사</td>
+                        <td>경기하남점</td>
+                        <td>2지역본부</td>
+                        <td>134557</td>
+                        <td>유한킴벌리(주)</td>
+                        <td>유한킴벌리(주)_기저귀</td>
+                        <td>1</td>
+                        <td>B3F＞B4F</td>
+                        <td>MW상단</td>
+                        <td>1150*680</td>
+                        <td>1070*600</td>
+                        <td>Y</td>
+                        <td>Y</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="checkbox o check">
+                                <input type="checkbox" name="adchk" id="ad4">
+                                <label for="ad4"></label>
+                            </span>
+                        </td>
+                        <td>7</td>
+                        <td class="thum"><img src="resource/image/noimg_normal3.gif" alt="이미지없음"></td>
+                        <td>홈플러스주식회사</td>
+                        <td>경기하남점</td>
+                        <td>2지역본부</td>
+                        <td>134557</td>
+                        <td>유한킴벌리(주)</td>
+                        <td>유한킴벌리(주)_기저귀</td>
+                        <td>1</td>
+                        <td>B3F＞B4F</td>
+                        <td>MW상단</td>
+                        <td>1150*680</td>
+                        <td>1070*600</td>
+                        <td>Y</td>
+                        <td>Y</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="checkbox o check">
+                                <input type="checkbox" name="adchk" id="ad5">
+                                <label for="ad5"></label>
+                            </span>
+                        </td>
+                        <td>6</td>
+                        <td class="thum"><img src="resource/image/noimg_normal3.gif" alt="이미지없음"></td>
+                        <td>홈플러스주식회사</td>
+                        <td>경기하남점</td>
+                        <td>2지역본부</td>
+                        <td>134557</td>
+                        <td>유한킴벌리(주)</td>
+                        <td>유한킴벌리(주)_기저귀</td>
+                        <td>1</td>
+                        <td>B3F＞B4F</td>
+                        <td>MW상단</td>
+                        <td>1150*680</td>
+                        <td>1070*600</td>
+                        <td>Y</td>
+                        <td>Y</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="checkbox o check">
+                                <input type="checkbox" name="adchk" id="ad6">
+                                <label for="ad6"></label>
+                            </span>
+                        </td>
+                        <td>5</td>
+                        <td class="thum"><img src="resource/image/noimg_normal3.gif" alt="이미지없음"></td>
+                        <td>홈플러스주식회사</td>
+                        <td>경기하남점</td>
+                        <td>2지역본부</td>
+                        <td>134557</td>
+                        <td>유한킴벌리(주)</td>
+                        <td>유한킴벌리(주)_기저귀</td>
+                        <td>1</td>
+                        <td>B3F＞B4F</td>
+                        <td>MW상단</td>
+                        <td>1150*680</td>
+                        <td>1070*600</td>
+                        <td>Y</td>
+                        <td>Y</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="checkbox o check">
+                                <input type="checkbox" name="adchk" id="ad7">
+                                <label for="ad7"></label>
+                            </span>
+                        </td>
+                        <td>4</td>
+                        <td class="thum"><img src="resource/image/noimg_normal3.gif" alt="이미지없음"></td>
+                        <td>홈플러스주식회사</td>
+                        <td>경기하남점</td>
+                        <td>2지역본부</td>
+                        <td>134557</td>
+                        <td>유한킴벌리(주)</td>
+                        <td>유한킴벌리(주)_기저귀</td>
+                        <td>1</td>
+                        <td>B3F＞B4F</td>
+                        <td>MW상단</td>
+                        <td>1150*680</td>
+                        <td>1070*600</td>
+                        <td>Y</td>
+                        <td>Y</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="checkbox o check">
+                                <input type="checkbox" name="adchk" id="ad8">
+                                <label for="ad8"></label>
+                            </span>
+                        </td>
+                        <td>3</td>
+                        <td class="thum"><img src="resource/image/noimg_normal3.gif" alt="이미지없음"></td>
+                        <td>홈플러스주식회사</td>
+                        <td>경기하남점</td>
+                        <td>2지역본부</td>
+                        <td>134557</td>
+                        <td>유한킴벌리(주)</td>
+                        <td>유한킴벌리(주)_기저귀</td>
+                        <td>1</td>
+                        <td>B3F＞B4F</td>
+                        <td>MW상단</td>
+                        <td>1150*680</td>
+                        <td>1070*600</td>
+                        <td>Y</td>
+                        <td>Y</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="checkbox o check">
+                                <input type="checkbox" name="adchk" id="ad9">
+                                <label for="ad9"></label>
+                            </span>
+                        </td>
+                        <td>2</td>
+                        <td class="thum"><img src="resource/image/noimg_normal3.gif" alt="이미지없음"></td>
+                        <td>홈플러스주식회사</td>
+                        <td>경기하남점</td>
+                        <td>2지역본부</td>
+                        <td>134557</td>
+                        <td>유한킴벌리(주)</td>
+                        <td>유한킴벌리(주)_기저귀</td>
+                        <td>1</td>
+                        <td>B3F＞B4F</td>
+                        <td>MW상단</td>
+                        <td>1150*680</td>
+                        <td>1070*600</td>
+                        <td>Y</td>
+                        <td>Y</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="checkbox o check">
+                                <input type="checkbox" name="adchk" id="ad10">
+                                <label for="ad10"></label>
+                            </span>
+                        </td>
+                        <td>1</td>
+                        <td class="thum"><img src="resource/image/noimg_normal3.gif" alt="이미지없음"></td>
+                        <td>홈플러스주식회사</td>
+                        <td>경기하남점</td>
+                        <td>2지역본부</td>
+                        <td>134557</td>
+                        <td>유한킴벌리(주)</td>
+                        <td>유한킴벌리(주)_기저귀</td>
+                        <td>1</td>
+                        <td>B3F＞B4F</td>
+                        <td>MW상단</td>
+                        <td>1150*680</td>
+                        <td>1070*600</td>
+                        <td>Y</td>
+                        <td>Y</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- //table -->
+        <div class="paging">
+            <table>
+                <tr>
+                    <td><a href="#;" class="btn_first"></a></td>
+                    <td><a href="#;" class="btn_prev"></a></td>
+                    <td class="link">
+                        <a href="#;" class="on">1</a>
+                        <a href="#;">2</a>
+                        <a href="#;">3</a>
+                        <a href="#;">4</a>
+                        <a href="#;">5</a>
+                    </td>
+                    <td><a href="#;" class="btn_next"></a></td>
+                    <td><a href="#;" class="btn_last"></a></td>
+                </tr>
+            </table>
+        </div>
+        <!-- //paging -->
+    </div>
+    <!-- //content -->
+
+    <footer id="footer">COPYRIGHT Homeplus. LTD. ALL RIGHTS RESERVED.</footer>
+
+</div>
+
+</body>
+</html>

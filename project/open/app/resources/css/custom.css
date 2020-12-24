@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* 개발자 추가 부분 */
+a:focus {outline: none !important;}
+.subpage {position:fixed;left:200%;top:0;width:100% !important;height:100%;background:#fff;overflow:hidden; z-index:1500;overflow-y:scroll;box-shadow: -10px 0px 40px 0px #3F3F3F;}
+.barcodeDimd { position:fixed; left:0; top:0; width:100%; height:100%; background:#000; opacity:0.8; z-index:1000; display:none;}
+.quantity dl dd.coupon_text p:nth-child(n+2) {font-size:14px; font-weight:300; color:#585858; display: -webkit-box; padding-top:4px; text-overflow: ellipsis;white-space:normal;word-wrap: break-word;-webkit-line-clamp:2;-webkit-box-orient: vertical;overflow: hidden;}
+.coupon_list dl dd.expiration {color:#b8b8b8; text-align:right; vertical-align:middle; width:71px; padding-left:10px; box-sizing:border-box;}
+.pay_box.toy .culter_text {padding:15px 15px 0px 15px;}
+.pay_box.toy .picture.nopadding {padding:15px 15px 0 15px;}
+.sub_header {z-index: 1000 !important;}
+.card_lssue {background:url(../images/main/card_lssuebg.jpg) no-repeat;}
+.main_search {right: 0;}
+.coupon_box dt {width:auto; height:auto;}
+.withdrawal.middle {top:35%;}
+.barcode_pop .barcode_box dl dt {width:auto;}
+
+/* 약관제목 길어질 때 오른 화살표 근처 가기도 전에 줄 바뀜 수정 */
+.etc_consent input[type="checkbox"] {position: absolute;}
+.etc_consent label { width: 100% !important; padding-left: 30px; padding-right: 30px; }
+
+/* 메인 카드등록후 사용하세요 삭제버튼 확대 */
+.section02 .card_box ul li > p a img { width: 12px; height: 12px; vertical-align: bottom;}
+.section02 .card_box ul li > p a { display: block; width: 32px; height: 32px; margin-bottom: -15px; margin-right: -15px;}
+
+.tbl_border_1sb { border: 1px solid black; }
+
+/* 메인화면 편집 */
+.content.edit .card_box ul li div.edit_img {
+  padding: 10px !important;
+  margin-left: -15px !important;
+  margin-top: -10px !important;
+}
+.content.edit .card_box ul li div.del_img {
+  padding: 10px !important;
+  margin-right: -10px !important;
+  margin-bottom: -10px !important;
+}
+
+/* 문화행사갤러리 이미지 없는 경우 padding 삭제 */
+.date_box dl.progItemResult dt+dd { padding-left:100px !important; }
+.date_box dl.progItemResult dd {  padding-left:0px !important; }
+
+.disable-select {
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}

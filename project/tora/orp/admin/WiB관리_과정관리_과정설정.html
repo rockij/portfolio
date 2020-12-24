@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="resource/css/base.css" media="screen" rel="stylesheet">
+<link href="resource/css/site.css" media="screen" rel="stylesheet">
+<script src="resource/js/jquery-1.11.1.min.js"></script>
+<script src="resource/js/ui.js"></script>
+<title>ORP Assessment center</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header">
+        <h1><img src="resource/image/logo.png" alt="ORP Assessment center"></h1>
+        <div id="gnb">
+            <ul>
+                <li><a href="#;">운영관리</a></li>
+                <li><a href="#;">회원관리</a></li>
+                <li><a href="#;" class="active">WIB관리</a></li>
+                <li><a href="#;">진행정보&평가</a></li>
+            </ul>
+        </div>
+        <a href="#;" class="user">로그아웃</a>
+    </header>
+    <!-- //header -->
+
+    <div id="container">
+        <aside class="lnb">
+            <ul>
+                <li><a href="#;">과제관리</a></li>
+                <li><a href="#;" class="active">과정관리</a></li>
+                <li><a href="#;">테스크관리</a></li>
+            </ul>
+        </aside>
+        <div id="content">
+            <section class="title_top">
+                <h2>과정관리 – NHN WIB1 역량평가 과정</h2>
+                <div class="path"><a href="#;">Home</a><i>&gt;</i><a href="#;">WIB관리</a><i>&gt;</i><a href="#;">과정관리</a><i>&gt;</i><b>과정설정</b></div>
+            </section>
+            <!-- //title -->
+            <ul class="tab_type tn4 mt30">
+                <li class="active"><a href="#;">과제설정</a></li>
+                <li><a href="#;">과제설정</a></li>
+                <li><a href="#;">학습자 설정</a></li>
+                <li><a href="#;">상호피드백 설정</a></li>
+            </ul>
+            <!-- //tab -->
+            <div class="clear mt30">
+                <h3 class="title_type fleft mt15">과정설정</h3>
+                <button type="button" onclick="" class="btn_m btn_type4 fright" style="width:90px">복사</button>
+            </div>
+            <div class="tbl_type mt15">
+                <table>
+                    <colgroup>
+                        <col style="width:16%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">과정명</th>
+                            <td><input type="text" id="" value="과정명이 출력됩니다." style="width:478px"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">유형</th>
+                            <td>
+                                <span class="checkbox circle">
+                                    <input type="radio" name="process-type" id="company" checked>
+                                    <label for="company">기업형</label>
+                                </span>
+                                <span class="checkbox circle ml15">
+                                    <input type="radio" name="process-type" id="private">
+                                    <label for="private">개인형</label>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">기업명</th>
+                            <td>NHN<button type="button" onclick="" class="btn_m btn_type2 ml10" style="width:70px">선택</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">상태</th>
+                            <td>
+                                <span class="checkbox circle">
+                                    <input type="radio" name="state" id="state1" checked>
+                                    <label for="state1">대기</label>
+                                </span>
+                                <span class="checkbox circle ml15">
+                                    <input type="radio" name="state" id="state2">
+                                    <label for="state2">진행</label>
+                                </span>
+                                <span class="checkbox circle ml15">
+                                    <input type="radio" name="state" id="state3">
+                                    <label for="state3">종료</label>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">기간설정</th>
+                            <td>
+                                <span class="checkbox circle">
+                                    <input type="radio" name="dateset" id="dateset1" checked>
+                                    <label for="dateset1">상시</label>
+                                </span>
+                                <span class="checkbox circle ml15">
+                                    <input type="radio" name="dateset" id="dateset2">
+                                    <label for="dateset2">설정</label>
+                                </span>
+                                <span class="input calendar ml5"><input type="text" id="" readonly class="ip_cal"></span>
+                                &nbsp;~&nbsp;
+                                <span class="input calendar"><input type="text" id="" readonly class="ip_cal"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">평가기간</th>
+                            <td>
+                                <span class="input calendar"><input type="text" id="" readonly class="ip_cal"></span>
+                                &nbsp;~&nbsp;
+                                <span class="input calendar"><input type="text" id="" readonly class="ip_cal"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">접속 URL</th>
+                            <td>
+                                http://www.xxxxx.com/nhn/<input type="text" id="" value="201901" style="width:78px"><button type="button" onclick="" class="btn_m btn_type2 ml10" style="width:90px">복사</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">참여인원</th>
+                            <td class="link left"><a href="#;">120</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //table -->
+            <h3 class="title_type mt50">기타설정</h3>            
+            <div class="tbl_type mt15">
+                <table>
+                    <colgroup>
+                        <col style="width:15.5%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">상호피드백<br>댓글 이름 노출</th>
+                            <td>   
+                                <span class="checkbox circle">
+                                    <input type="radio" name="fidback" id="fidback1" checked>
+                                    <label for="fidback1">노출</label>
+                                </span>
+                                <span class="checkbox circle ml10">
+                                    <input type="radio" name="fidback" id="fidback2">
+                                    <label for="fidback2">비노출</label>
+                                </span>
+                                <p class="mt10">* 퍼실리테이터가 진행하며 설정이 변경될 수 있습니다.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //table -->
+            <div class="clear mt50">
+                <h3 class="title_type fleft mt15">과정관리자 설정</h3>
+                <button type="button" onclick="" class="btn_m btn_type4 fright" style="width:90px">등록</button>
+            </div>
+            <div class="tbl_type mt15">
+                <table>
+                    <colgroup>
+                        <col style="width:15.5%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">과정관리자</th>
+                            <td class="link left"><a href="#;">orpadmin01</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">전문위원권한</th>
+                            <td>
+                                <span class="checkbox check">
+                                    <input type="checkbox" name="master" id="master1" checked>
+                                    <label for="master1">어쎄서</label>
+                                </span>
+                                <span class="checkbox check ml10">
+                                    <input type="checkbox" name="master" id="master2">
+                                    <label for="master2">퍼실리테이터</label>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">IDP 코칭</th>
+                            <td>
+                                <span class="checkbox circle">
+                                    <input type="radio" name="user-state2" id="Y2" checked>
+                                    <label for="Y2">사용</label>
+                                </span>
+                                <span class="checkbox circle ml10">
+                                    <input type="radio" name="user-state2" id="N2">
+                                    <label for="N2">미사용</label>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">권한 사용여부</th>
+                            <td>
+                                <span class="checkbox circle">
+                                    <input type="radio" name="user-state3" id="Y3" checked>
+                                    <label for="Y3">사용</label>
+                                </span>
+                                <span class="checkbox circle ml10">
+                                    <input type="radio" name="user-state3" id="N3">
+                                    <label for="N3">미사용</label>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">권한 변경일</th>
+                            <td>2019-01-01 11:11:11<button type="button" onclick="" class="btn_m btn_type2 ml10" style="width:70px">히스토리</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //table -->
+            <div class="tbl_type mt20">
+                <table>
+                    <colgroup>
+                        <col style="width:15.5%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">과정관리자
+                                </th>
+                            <td>
+                                <span class="filebox button">
+                                    <input type="text" class="upload_name" value="선택된 파일 없음" disabled><!----><label for="fileField1" class="btsrch">찾아보기</label>
+                                    <input type="file" id="fileField1" class="upload_hidden">
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">IDP 코칭</th>
+                            <td>
+                                <span class="checkbox circle">
+                                    <input type="radio" name="user-state4" id="Y4" checked>
+                                    <label for="Y4">사용</label>
+                                </span>
+                                <span class="checkbox circle ml10">
+                                    <input type="radio" name="user-state4" id="N4">
+                                    <label for="N4">미사용</label>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">권한 사용여부</th>
+                            <td>
+                                <span class="checkbox circle">
+                                    <input type="radio" name="user-state5" id="Y5" checked>
+                                    <label for="Y5">사용</label>
+                                </span>
+                                <span class="checkbox circle ml10">
+                                    <input type="radio" name="user-state5" id="N5">
+                                    <label for="N5">미사용</label>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">권한 변경일</th>
+                            <td><button type="button" onclick="" class="btn_m btn_type2" style="width:70px">히스토리</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- table -->
+            <h3 class="title_type mt50">기업관리자 정보</h3>
+            <ul class="tab_text tabchg mt15">
+                <li class="active"><a href="#;">전체</a></li>
+                <li><a href="#;">어쎄서</a></li>
+                <li><a href="#;">퍼실리테이터</a></li>
+            </ul>
+            <div class="tbl_type2 mt15">
+                <table>
+                    <colgroup>
+                        <col style="width:11.1%">
+                        <col style="width:11.1%">
+                        <col style="width:11.1%">
+                        <col style="width:11.1%">
+                        <col style="width:11.1%">
+                        <col style="width:11.1%">
+                        <col style="width:11.1%">
+                        <col style="width:11.1%">
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">순서</th>
+                            <th scope="col">상태</th>
+                            <th scope="col">기업명</th>
+                            <th scope="col">아이디</th>
+                            <th scope="col">어쎄서</th>
+                            <th scope="col">퍼실리테이터</th>
+                            <th scope="col">IDP코칭</th>
+                            <th scope="col">사용자</th>
+                            <th scope="col">등록일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>5</td>
+                            <td>사용</td>
+                            <td class="link"><a href="#;">ORP</a></td>
+                            <td class="link"><a href="#;">ORP2</a></td>
+                            <td>●</td>
+                            <td></td>
+                            <td>●</td>
+                            <td class="userlink">
+                                김OO
+                                <a href="#;"><img src="resource/image/ico_hp.png" alt="휴대폰"></a>
+                                <a href="#;"><img src="resource/image/ico_email.png" alt="이메일"></a>
+                            </td>
+                            <td>2019-01-01</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>미사용</td>
+                            <td class="link"><a href="#;">NHN</a></td>
+                            <td class="link"><a href="#;">ORP2</a></td>
+                            <td>●</td>
+                            <td></td>
+                            <td>●</td>
+                            <td class="userlink">
+                                김OO
+                                <a href="#;"><img src="resource/image/ico_hp.png" alt="휴대폰"></a>
+                                <a href="#;"><img src="resource/image/ico_email.png" alt="이메일"></a>
+                            </td>
+                            <td>2019-01-01</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>사용</td>
+                            <td class="link"><a href="#;">Google</a></td>
+                            <td class="link"><a href="#;">ORP2</a></td>
+                            <td>●</td>
+                            <td>●</td>
+                            <td>●</td>
+                            <td class="userlink">
+                                김OO
+                                <a href="#;"><img src="resource/image/ico_hp.png" alt="휴대폰"></a>
+                                <a href="#;"><img src="resource/image/ico_email.png" alt="이메일"></a>
+                            </td>
+                            <td>2019-01-01</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>사용</td>
+                            <td class="link"><a href="#;">ORP</a></td>
+                            <td class="link"><a href="#;">ORP2</a></td>
+                            <td></td>
+                            <td>●</td>
+                            <td>●</td>
+                            <td class="userlink">
+                                김OO
+                                <a href="#;"><img src="resource/image/ico_hp.png" alt="휴대폰"></a>
+                                <a href="#;"><img src="resource/image/ico_email.png" alt="이메일"></a>
+                            </td>
+                            <td>2019-01-01</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>사용</td>
+                            <td class="link"><a href="#;">ORP</a></td>
+                            <td class="link"><a href="#;">ORP2</a></td>
+                            <td>●</td>
+                            <td></td>
+                            <td>●</td>
+                            <td class="userlink">
+                                김OO
+                                <a href="#;"><img src="resource/image/ico_hp.png" alt="휴대폰"></a>
+                                <a href="#;"><img src="resource/image/ico_email.png" alt="이메일"></a>
+                            </td>
+                            <td>2019-01-01</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //table -->
+            <div class="bta_agn_right mt10">
+                <button type="button" onclick="" class="btn_m btn_type5" style="width:90px">추가</button><!----><button type="button" onclick="" class="btn_m btn_type" style="width:90px">등록</button>
+            </div>
+            <!-- //btn -->
+            <h3 class="title_type mt50">기업관리자 설정</h3>
+            <div class="tbl_type2 mt15">
+                <table>
+                    <colgroup>
+                        <col style="width:12.5%">
+                        <col style="width:12.5%">
+                        <col style="width:12.5%">
+                        <col style="width:12.5%">
+                        <col style="width:12.5%">
+                        <col style="width:12.5%">
+                        <col style="width:12.5%">
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">관리여부</th>
+                            <th scope="col">상태</th>
+                            <th scope="col">아이디</th>
+                            <th scope="col">사용자</th>
+                            <th scope="col">소속</th>
+                            <th scope="col">직급</th>
+                            <th scope="col">최근접속일</th>
+                            <th scope="col">등록일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><button type="button" onclick="" class="btn_m btn_type6" style="width:68px">관리</button></td>
+                            <td>사용</td>
+                            <td class="link"><a href="#;">ORP</a></td>
+                            <td class="userlink">
+                                김OO
+                                <a href="#;"><img src="resource/image/ico_hp.png" alt="휴대폰"></a>
+                                <a href="#;"><img src="resource/image/ico_email.png" alt="이메일"></a>
+                            </td>
+                            <td>소속출력</td>
+                            <td>직급</td>
+                            <td>2019-01-01</td>
+                            <td>2019-01-01</td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" onclick="" class="btn_m btn_type2" style="width:68px">미관리</button></td>
+                            <td>사용</td>
+                            <td class="link"><a href="#;">ORP</a></td>
+                            <td class="userlink">
+                                김OO
+                                <a href="#;"><img src="resource/image/ico_hp.png" alt="휴대폰"></a>
+                                <a href="#;"><img src="resource/image/ico_email.png" alt="이메일"></a>
+                            </td>
+                            <td>소속출력</td>
+                            <td>직급</td>
+                            <td>2019-01-01</td>
+                            <td>2019-01-01</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="mt10">* 관리여부에 따라 안내 등의 SMS, e-Mail이 자동 발송될 수 있습니다.</p>
+            <!-- //table -->
+            <div class="bta_agn_center mt50">
+                <button type="button" onclick="" class="btn_xr btn_type4" style="width:120px">저장</button>
+            </div>
+        </div>
+        <!-- //content -->
+    </div>
+    <!-- //container -->
+
+    <footer id="footer">
+        <div class="inner">
+            Copyright ⓒ ORP Institute. All Rights Reserved.
+            <img src="resource/image/logo2.png" alt="ORP Assessment center" class="lg">
+        </div>
+    </footer>
+    <!-- //footer -->
+
+</div>
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$(function(){
+    // 달력
+    $( ".ip_cal" ).datepicker({
+        showOn: "both",
+        buttonImage: "resource/image/ico_cal.png",
+        buttonImageOnly: true,
+        dateFormat: "yy-mm-dd"
+    });
+});
+</script>
+
+</body>
+</html>

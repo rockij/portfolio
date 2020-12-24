@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="resources/css/common.css" media="screen" rel="stylesheet">
+<link href="resources/css/site.css" media="screen" rel="stylesheet">
+<script src="resources/js/jquery-1.11.1.min.js"></script>
+<script src="resources/js/design.js"></script>
+<!--[if lt IE 9]>
+<script src="resources/js/html5shiv.js"></script>
+<![endif]-->
+<title>Hackers SCM Portal</title>
+</head>
+<body>
+
+<div id="wrap">
+
+	<header>
+		<h1><a href="/"><img src="resources/images/logo.gif" alt="Hackers SCM Portal"></a></h1>
+		<a href="#;" class="btn_user"><span class="fc_blu">홍길동</span> 님</a>
+		<div id="gnb">
+			<ul>
+				<li><a href="#;">Home</a></li>
+				<li><a href="#;" class="active">발주</a></li>
+				<li><a href="#;">견적</a></li>
+				<li><a href="#;">입고</a></li>
+				<li><a href="#;">출고</a></li>
+				<li><a href="#;">재고</a></li>
+				<li><a href="#;">정산</a></li>
+				<li><a href="#;">미정</a></li>
+			</ul>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<div id="ct" class="wide">
+		<h2>계정 생성 및 약관 동의</h2>
+		<div class="path">로그인 &gt; 신규 업체 등록 &gt; <span class="on">계정 생성 및 약관 동의</span></div>
+		<!-- //title -->
+		<div class="inner2">
+			<div class="tab_type2">
+				<ul class="clear">
+					<li><strong>계정 생성 및 약관 동의</strong></li>
+				</ul>
+				<button type="button" onclick="" class="btn_m btn_type pos">계정 생성 완료</button>
+			</div>
+			<!-- //top -->
+			<p class="mt20">계정 생성이 완료되면 이후 남은 절차를 진행하지 않아도 로그인 하실 수 있습니다. 남은 절차는 로그인 이후에 다시 진행하거나 수정하실 수 있습니다.</p>
+			<fieldset class="tbl_type2 mt20">
+				<legend>계정 생성을 위한 업체 정보 입력</legend>
+				<table>
+					<colgroup>
+						<col style="width:11.4%;">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row"><em>*</em>업체 분류</th>
+							<td class="spce4">
+								<label for="company1"><input type="checkbox" name="company" id="company1" value="">공급업체(Vender)</label>
+								<label for="company2" class="ml15"><input type="checkbox" name="company" id="company2" value="">고객(Customer)</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><em>*</em>업체 구분</th>
+							<td class="spce">
+								<span class="select">
+									<label for="com-section">업체 분류를 지정해 주세요.</label>
+									<select name="com-section" id="com-section">
+										<option value="1">업체 분류를 지정해 주세요.</option>
+										<option value="2">1</option>
+									</select>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><em>*</em>업체명</th>
+							<td class="spce">
+								<span class="input placeholder block"><label for="com-name" class="lbl">업체명을 입력해 주세요.</label><input type="text" name="com-name" id="com-name" class="i_text"></span>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row" class="vt"><em>*</em>사업자등록번호</th>
+							<td class="spce inp_type">
+								<div style="padding-right:71px"><span class="input placeholder"><label for="com-num" class="lbl">사업자등록번호를 입력해 주세요.</label><input type="text" name="com-num" id="com-num" class="i_text"></span><button type="button" onclick="" class="btn_m btn_type5">조회</button></div>
+								<p class="fs11 fc_blu mt4">사용 가능한 사업자등록번호 입니다.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><em>*</em>이메일 주소</th>
+							<td class="spce">
+								<span class="input placeholder" style="width:176px;"><label for="email1" class="lbl">이메일 주소</label><input type="text" name="email" id="email1" class="i_text"></span>
+								@
+								<span class="select" style="width:179px">
+									<label for="email2">도메인</label>
+									<select name="email" id="email2">
+										<option value="1">도메인</option>
+										<option value="2">1</option>
+									</select>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row" class="vt"><em>*</em>아이디</th>
+							<td class="spce inp_type">
+								<div style="padding-right:100px"><span class="input placeholder"><label for="com-id" class="lbl">아이디를 입력해 주세요.</label><input type="text" name="com-id" id="com-id" class="i_text"></span><button type="button" onclick="" class="btn_m btn_type5">중복 여부</button></div>
+								<p class="fs11 fc_red2 mt4">영문숫자 혼합 6자 이상의 ID를 지정해 주세요.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><em>*</em>비밀번호</th>
+							<td class="spce"><span class="input placeholder" style="width:476px;"><label for="com-pw" class="lbl">비밀번호를 입력해 주세요. (영문 숫자 혼합 8자 이상)</label><input type="password" name="com-pw" id="com-pw" class="i_text"></span></td>
+						</tr>
+						<tr>
+							<th scope="row" class="vt"><em>*</em>비밀번호 재입력</th>
+							<td class="spce">
+								<span class="input placeholder" style="width:476px;"><label for="com-pw" class="lbl">비밀번호를 입력해 주세요. (영문 숫자 혼합 8자 이상)</label><input type="password" name="com-pw" id="com-pw" class="i_text"></span>
+								<p class="fs11 fc_red2 mt4">비밀번호가 서로 일치하지 않습니다.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row" class="spce vt">이용약관</th>
+							<td class="spce">
+								<span class="input block"><textarea id="agree" style="height:48px;"></textarea></span>
+								<label for="agree" class="fs11 block mt4"><input type="checkbox" name="agree" id="agree" value="">이용약관에 동의합니다.</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row" class="spce vt">개인정보 취급방침</th>
+							<td class="spce">
+								<span class="input block"><textarea id="agree" style="height:48px;"></textarea></span>
+								<label for="agree2" class="fs11 block mt4"><input type="checkbox" name="agree2" id="agree2" value="">개인정보 취급방침에 동의합니다.</label>
+								<p class="fs11 fc_red2 mt4">약관에 모두 동의해 주세요.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</fieldset>
+		</div>
+	</div>
+	<!-- //content -->
+
+</div>
+
+</body>
+</html>

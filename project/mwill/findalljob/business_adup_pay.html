@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>벼룩시장 구인구직</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="common/css/site.css">
+    <script src="../CDF/js/jquery-1.9.1.min.js"></script>
+    <script src="../CDF/js/design.js"></script>
+    <script src="common/js/design.js"></script>
+</head>
+
+<body>
+
+    <div class="skip"><a href="#Article">본문 바로가기</a></div>
+
+    <div id="Wrap">
+        <header id="Header">
+            <div class="head">
+                <h1><a href="#"><img src="http://image.findall.co.kr/FACache/m_paper_job3/common/logo.png" alt="벼룩시장 구인구직" class="logo"></a></h1>
+                <button type="button" class="bg_cm menu_bt new"><span>메뉴</span></button>
+                <button type="button" class="bg_cm search_bt"><span>검색</span></button>
+            </div>
+        </header>
+
+        <nav id="Gnb" class="gnb">
+            <ul>
+                <li><a href="#" class="selected">구인정보</a></li>
+                <li><a href="#">알바정보</a></li>
+                <li><a href="#">전문관</a></li>
+                <li><a href="#">인재정보</a></li>
+                <li><a href="#">상세검색</a></li>
+            </ul>
+        </nav>
+
+		<h2 class="hst7">결제하기</h2>
+
+        <section id="Section">
+			
+			<article class="adup_set">
+				<div class="frm endtxt">결제 후 등록이 <b>완료</b>됩니다.</div>
+				<h3 class="hst8">결제정보</h3>
+				<div class="frm">
+					<ul>
+						<li class="ty">
+							<ul>
+								<li><span class="stit">상품금액</span></li>
+								<li><strong>57,000</strong>&nbsp;원</li>
+							</ul>
+						</li>
+						<li class="ty">
+							<ul>
+								<li><span class="stit">선택상품</span></li>
+								<li>프리미엄리스트[3일]</li>
+							</ul>
+						</li>
+						<li class="ty couponGo">
+							<ul>
+								<li><span class="stit">쿠폰적용</span></li>
+								<li>
+									<button type="button" class="select" onclick="$(this).next('.layer').toggle();">쿠폰선택</button>
+									<div class="layer">고객 감사 쿠폰 5,000원<br><span class="sche">(2015.10.28~2015.12.27)</span></div>
+									<!-- [D} 쿠폰이 없을시 <div class="layer no">적용 가능한 쿠폰이 없습니다.</div> -->
+									<span class="won"><span>5,000</span>&nbsp;원</span><button type="button" class="bt_type1 bt_grey2" style="width:80px" onclick="">취소</button>
+								</li>
+							</ul>
+						</li>
+						<li class="ty buy">
+							<ul>
+								<li><span class="stit">결제금액</span></li>
+								<li><b class="txt_red">57,000</b>&nbsp;원</li>
+							</ul>
+						</li>
+						<li class="payway">
+							<span class="stit">결제수단선택</span>
+							<label class="label_radio" for="card"><input type="radio" id="card" value="">신용카드</label>
+							<label class="label_radio" for="hp"><input type="radio" id="hp" value="" checked>휴대폰결제</label>
+							<label class="label_radio" for="bank"><input type="radio" id="bank" value="">무통장입금</label>
+							<ul class="caution_bx">
+								<li>휴대폰 결제는 소액 결제 시 간편하게 이용하실수 있습니다.<br>결제하신 금액은 다음달 휴대폰 요금에 포함되어 청구됩니다.</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- //결제정보 -->
+				<hgroup class="hst-tax">
+					<h3 class="hst8">세금계산서 발행신청</h3>
+					<p class="caution_base2">* 결제방법과 상관없이 반드시 세금계산서를 발급 받으셔야 하며, 사업자 지출용 현금영수증은 발행되지 않습니다.</p>
+				</hgroup>
+				<div class="frm">
+					<ul>
+						<li>
+							<label for="t-name" class="stit">회사명<em>*</em></label>
+							<input type="text" id="t-name" style="width:100%" placeholder="회사명을 입력해 주세요.">
+							<p class="caution_base">회사명을 입력해 주세요.</p>
+						</li>
+						<li>
+							<label for="t-id" class="stit">아이디</label>
+							<input type="text" id="t-id" style="width:100%" placeholder="아이디를 입력해 주세요.">
+						</li>
+						<li class="cnum">
+							<span class="stit">사업자번호<em>*</em></span>
+							<input type="number" id="t-num1" style="width:38px" value=""><b class="bar">-</b><input type="number" id="t-num2" style="width:28px" value=""><b class="bar">-</b><input type="number" id="t-num3" style="width:70px" value="">
+							<p class="caution_base">사업자번호를 입력해 주세요.</p>
+						</li>
+						<li>
+							<label for="t-ceo" class="stit">대표자명</label>
+							<input type="text" id="t-ceo" style="width:100%" placeholder="대표자명을 입력해 주세요.">
+						</li>
+						<li>
+							<label for="t-biz" class="stit">업태</label>
+							<input type="text" id="t-biz" style="width:100%" placeholder="업태를 입력해 주세요.">
+						</li>
+						<li>
+							<label for="t-work" class="stit">종목</label>
+							<input type="text" id="t-work" style="width:100%" placeholder="종목를 입력해 주세요.">
+						</li>
+						<li>
+							<label for="t-work" class="stit">사업장 소재지</label>
+							<input type="text" id="t-work" style="width:100%" placeholder="사업장 소재지를 입력해 주세요.">
+						</li>
+						<li>
+							<label for="t-work" class="stit">담당자 이름</label>
+							<input type="text" id="t-work" style="width:100%" placeholder="담당자 이름을 입력해 주세요.">
+						</li>
+						<li class="email">
+							<label for="t-email" class="stit">이메일</label>
+							<ul>
+								<li><input type="text" id="t-email" style="width:100%" value=""></li>
+								<li>@</li>
+								<li><input type="text" id="t-email" style="width:100%" value=""></li>
+							</ul>							
+							<label for="t-email-slct" class="blind">이메일 주소 선택</label>
+							<select id="t-email-slct" class="select" style="width:100%">
+								<option>직접입력</option>
+							</select>
+						</li>
+						<li class="hp">
+							<label for="t-hp" class="stit">휴대폰 번호</label>
+							<ul>
+								<li>
+									<label for="t-hp-num" class="blind">휴대폰번호 앞자리 선택</label>
+									<select id="t-hp-num" class="select" style="width:100%">
+										<option value="">선택</option>
+										<option value="010">010</option>
+										<option value="019">019</option>
+									</select>
+								</li>
+								<li><input type="tel" id="t-hp" style="width:100%" placeholder="번호만 입력해 주세요."></li>
+							</ul>
+						</li>
+						<li class="hp">
+							<label for="t-tel" class="stit">전화번호</label>
+							<ul>
+								<li>
+									<label for="t-tel-num" class="blind">전화번호 앞자리 선택</label>
+									<select id="t-tel-num" class="select" style="width:100%">
+										<option value="">선택</option>
+										<option value="010">010</option>
+										<option value="019">019</option>
+									</select>
+								</li>
+								<li><input type="tel" id="t-tel" style="width:100%" placeholder="번호만 입력해 주세요."></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- //세금계산서 발행신청 -->
+				<ul class="caution_bx mt10">
+					<li>세금계산서 발행정보는 모든 사항을 기입해 주셔야 하며, 사업자등록증과 일치해야 됩니다.</li>
+					<li>전자세금계산서는 결제완료일로부터 2일 후에 발행됩니다.</li>
+				</ul>
+			</article>
+			<div class="bt-area">
+				<button type="button" class="bt_type5 bt_blue" style="width:100%" onclick="">결제하기</button>
+				<button type="button" class="bt_type5 bt_bluedark" style="width:100%" onclick="">취소</button>
+			</div>
+
+            <!-- 검색하기 Layer -->
+            <div id="Search" class="search">
+                <div class="cont">
+                    <div class="tit">
+                        <span class="txt">검색하기</span>
+                        <button type="button" class="bg_map close_bt"><span>닫기</span></button>
+                    </div>
+
+                    <div class="scroll">
+                        <div class="form">
+                            <div class="fm">
+                                <input type="text" style="width:100%" placeholder="키워드를 입력하세요">
+                                <a href="#" class="bg_sc bt_reset"><span>새로고침</span></a>
+                            </div>
+                            <div class="fm">
+                                <input type="text" style="width:100%" placeholder="지역명을 입력하세요. (서울 강남)">
+                                <a href="#" class="bg_sc bt_reset"><span>새로고침</span></a>
+                            </div>
+                            <div class="bt">
+                                <button type="button" class="bt_type5 bt_blue" style="width:100%">검색</button>
+                            </div>
+                        </div>
+
+                        <div class="lately">
+                            <dl>
+                                <dt>최근 검색한 결과<span class="bg_sc ico_lately"></span></dt>
+                                <dd class="cut">서울 강남 + 요리를 퍼펙트하게 잘 하는 주방장을 찾는 곳<a href="#" class="bg_sc bt_del"><span>삭제</span></a></dd>
+                                <dd class="cut">경기 인천 + 모델<a href="#" class="bg_sc bt_del"><span>삭제</span></a></dd>
+                                <dd class="cut">서울 서대문구 + 강사<a href="#" class="bg_sc bt_del"><span>삭제</span></a></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg"></div>
+            </div>
+            <!-- //검색하기 Layer -->
+
+            <!-- 메뉴 Layer -->
+            <div id="Menu" class="menu">
+                <div class="cont">
+                    <div class="tit" style="display:none">
+                        <a href="" class="txt"><strong>로그인</strong>하세요</a>
+						<span class="imsc imsc_bar"></span>
+						<a href="" class="txt2">회원가입</a>
+                        <button type="button" class="bg_mn bt_home"><span>홈</span></button>
+                        <button type="button" class="bg_map close_bt"><span>닫기</span></button>
+                    </div>
+
+                    <!-- 로그인 했을 경우 -->
+                    <div class="tit">
+                        <span class="txt"><strong>홍길동</strong>님</span>
+                        <button type="button" class="logout">로그아웃</button>
+                        <button type="button" class="bg_mn bt_home"><span>홈</span></button>
+                        <button type="button" class="bg_map close_bt"><span>닫기</span></button>
+                    </div>
+                    <!-- //로그인 했을 경우 -->
+
+                    <div class="list">
+                        <ul>
+                            <li class="active">
+								<a href="#">개인 서비스<span class="bg_mn ico_mn"></span></a>
+								<ul class="teps2">
+                                    <li><a href="#">맞춤 구인정보</a></li>
+                                    <li><a href="#">스크랩 구인정보</a></li>
+                                    <li class="new"><a href="#">회원정보 관리</a></li>
+                                    <li class="new"><a href="#">비즈니스 회원 전환</a></li>
+                                </ul>
+							</li>
+                            <li class="active">
+                                <a href="#">카테고리<span class="bg_mn ico_mn active"></span></a>
+                                <ul class="teps2">
+                                    <li><a href="#">지역별 구인정보</a></li>
+                                    <li><a href="#">업직종별 구인정보</a></li>
+                                    <li><a href="#">알바정보</a></li>
+                                    <li><a href="#">최근 본 정보</a></li>
+                                    <li><a href="#">인재정보</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+						<div class="bt"><a href="" class="bt_type5 bt_blue" style="width:100%">구인공고 상품 안내</a></div>
+                    </div>					
+                </div>
+                <div class="bg"></div>
+            </div>
+            <!-- //메뉴 Layer -->
+
+        </section>
+
+        <footer id="footer">
+            <div class="btaSt2"><a href="#" class="bt_type1 fl" style="width:62px"><span class="bg_cm page_pv_bt"></span>이전</a><a href="#" class="bt_type1 fr" style="width:62px"><span class="bg_cm page_top_bt"></span>맨위로</a></div>
+            <ul>
+            <li><a href="#">벼룩시장 홈</a></li>
+            <li><a href="#">PC버전</a></li>
+            <li><a href="#">앱 다운로드</a></li>
+            <li><a href="#">전화상담</a></li>
+            </ul>
+            <address>서울시 강남구 테헤란로7길 12, 8층(역삼동, 허바허바빌딩) | 역삼동 648번지<br>(주)미디어윌벼룩시장 사업본부 대표: 백기웅<br>사업자번호2068526551 직업정보제공 : 서울동부 제2008-9호
+            </address>
+            <p class="crt">©MediaWill.co., Ltd.<span>|</span><a href="#">이용약관</a><span>|</span><a href="#">개인정보취급방침</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>

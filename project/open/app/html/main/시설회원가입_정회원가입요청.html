@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta name="HandheldFriendly" content="true">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- <title>서울시민카드</title> -->
+<link rel="stylesheet" type="text/css" href="../../resources/css/style.css">
+<script type="text/javascript" src="../../resources/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="../../resources/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../../resources/js/front_ui.js"></script>
+</head>
+<body>
+<a href="#container" accesskey="1" class="skip_area">메뉴건너뛰고 본문 바로가기</a>
+
+<div id="wrap">
+
+    <!-- 서울마일리지사용신청 -->
+    <div id="mw-member" class="ly_pop full ly_member">
+        <div class="ly_content">
+            <header class="fix">
+                <h2>000 정회원 가입 요청</h2>
+                <button type="button" onclick="layer_close()" class="ly_close"><i class="iplus3">팝업닫기</i></button>
+            </header>
+            <div class="ly_cover iscroll">
+                <div class="inner_bg">
+                    <section class="inner agreetxt">
+                        <div class="txtbx">
+                            정회원 신청을 위한 거주지 확인 서비스입니다.<br>
+                            주민등록등본을 대체하여 시설 방문없이 정회원<br>가입 신청이 가능합니다.             
+                            <p>※ 신청 후 업무일 기준 1일 후 정회원으로 승인됩니다.<br>※ 정회원 승인 후 시설카드를 추가해주세요.</p>                   
+                        </div>
+                        <span class="checkbox check">
+                            <input type="checkbox" name="agree" id="agree">
+                            <label for="agree">행정정보공동이용에 개인정보 제공동의</label>
+                        </span>
+                    </section>
+                    <section class="inner profile_adres">
+                        <fieldset>
+                            <legend>수령인정보 입력</legend>
+                            <ul class="frm_type">
+                                <li>
+                                    <h4 class="title_type3">이름</h4>
+                                    <div class="ipbox ipdel">
+                                        <input type="text" id="">
+                                        <button type="button" onclick="" class="ip_del"><s><i class="iplus">삭제</i></s></button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3>주민등록번호</h3>
+                                    <ul class="mynum">
+                                        <li><div class="ipbox"><input type="text" id="" maxlength="6" placeholder="생년월일6자리"></div></li>
+                                        <li><div class="ipbox"><input type="password" id="" maxlength="7" placeholder="주민번호뒷번호"></div></li>
+                                    </ul>                
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <ul class="btn_type_half2">
+                            <li><button type="button" onclick="" class="btn_r_o btn_type5">취소</button></li>
+                            <li><button type="button" onclick="" class="btn_r_o btn_type2">정회원 가입 신청</button></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //서울마일리지사용신청 -->
+
+</div>
+
+<script>
+    window.onload = function(){
+        layer_open('member');
+    }
+</script>
+
+</body>
+</html>

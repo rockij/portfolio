@@ -1,0 +1,514 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset= utf-8">
+<title>워크시트</title>
+<!-- style -->
+<style type="text/css">
+	* {	margin:0;padding:0;}
+	body {padding:20px;	font-family:Tahoma, Sans-Serif; color:#333; font-size:11px; background-color:#fff;}
+	/* title */
+	h1 {color:#000; letter-spacing:-2px;}
+	.currentsite {display:block; position:absolute; right:40px; top:20px;}
+	#mwork fieldset {border:none;}
+	#mwork legend {display:none;}
+	/* table */
+	#mwork table {width:100%; border-collapse:collapse; border:1px solid #666;}
+	#mwork caption {text-align:left; font-size:200%; color:#999;}
+	#mwork .index td {background:#ccc;}
+	#mwork .indexred td {background:#fdd;}
+	#mwork .indexgreen td {background:#dfd;}
+	#mwork .indexblue td {background:#ddf;}
+	#mwork .indexyellow td {background:#fff1c7;}
+	#mwork .line td {border-top:3px solid #666;}
+	#mwork .line2 td {border-top:2px solid #666;}
+	#mwork th {padding:6px; border:1px solid #666; color:#ccc; font-size:110%; background-color:#000;}
+	#mwork td {padding:4px; padding-left:10px; border:1px solid #666; background-color:#eee;}
+	#mwork td.type,
+	#mwork .filename {padding-left:0; text-align:center;}
+	#mwork .memo {color:#000;}
+	/* task */
+	#mwork .done {padding:0; font-weight:bold;	text-align:center; color:#090;}
+	#mwork .undone {padding:0; font-weight:bold; text-align:center; color:#900;}
+	/* effect */
+	#mwork a,
+	#mwork a:link, #mwork a:visited {color:#009; text-decoration:none;}
+	#mwork a:hover, #mwork a:active {color:#00f; text-decoration:underline;}
+	#mwork td:hover {background-color:#ddd !important;}
+	/* memo */
+	#mwork del {color:#900;}
+	#mwork .add {color:#900;}
+	/* note */
+	#note {margin:10px 0 10px 0; padding:10px; border:2px dotted #000; background:#eee; letter-spacing:0;}
+	#note p {padding-left:10px;}
+	#note pre {margin-top:10px; margin-bottom:10px; font-family:Tahoma, Sans-Serif; color:#333; font-size:small;}
+	#note h2 {margin:0px 0 10px 0;}
+	#note .notice{color:red;}
+	#note .comment {display:block; margin:5px 0 10px 0; color:#666;}
+	#note .issue {color:#900;}
+	#note .add {color:#900; font-weight:bold;}
+	#note ul li {margin-left:20px;}
+	td em {color:#f00; font-style:normal;}
+	td strong {color:red; font-weight:normal;}
+	tr.orange td{background-color:#FFE4CA !important;}
+	tr.purple td{background-color:#F1E6FF !important;}
+	tr.green td{background-color:#DEEED5 !important;}
+	tr.yellow td{background-color:#FCFBDC !important;}
+	tr.blue td{background-color:#E1F5FD !important;}
+	tr.red td{background-color:#FFE6E7 !important;}
+	tr.white td{background-color:#FFF !important;}
+	tr.brown td{background-color:#E6DCD2 !important;}
+	.redfont {color:#f00;}
+	.modify {margin-top:5px; padding:5px; border:1px dotted #000; font-size:13px; background-color:#ccc;}
+	.modify h2 {margin-bottom:3px;}
+	.date{text-align:left}
+	.space{background-color:#ccc !important}
+</style>
+<!-- //style -->
+<!-- html body -->
+</head>
+<body>
+<!-- sheet -->
+<!-- note -->
+<h1>Publishing Work Sheet</h1>
+<div id="note">
+	<ul>
+		<li>모든 문서는 html5을 기준으로 만들었음</li>
+		<li>모든 문서의 인코딩은 UTF-8을 기준으로 하였음</li>
+		<li>PC에선 나눔고딕 or 맑은고딕으로 보임</li>
+		<li>Update는 가장 최신에 수정한 날짜 표시</li>
+		<li>History는 각 날짜별로 수정사항 정리</li>
+	</ul>
+</div>
+<div id="mwork">
+	<fieldset>
+	<legend>Start Date : 2015-07-02</legend>
+	<table class="mwork" summary="WebPublisher Procedure Sheet" border="1">
+		<caption>
+		Project Package Publishing ProcedureSheet
+		</caption>
+		<colgroup>
+		<col width="9%">
+		<col width="10%">
+		<col width="9%">
+		<col width="*">
+		<col width="4%">
+		<col width="12%">
+		<col width="25%">
+		</colgroup>
+		<thead>
+		<tr>
+			<th>1Depth</th>
+			<th>2Depth</th>
+			<th>3Depth</th>
+			<th>FileName/Link</th>
+			<th>DEVICE</th>
+			<th>Update</th>
+			<th>History</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td class="depth1">상세페이지</td>
+			<td class="depth2">채용정보</td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="detail.html">detail</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-07-27</td>
+			<td class="date">*상세정보 포함<br>*지원방법 포함(Popup)<br>*빠른 모바일 지원 포함(Popup)<br>*문자지원 내역저장 포함(Popup)<br>*허위정보 신고 포함(Popup)<br>*마감정보 신고 포함(Popup)</td>
+		</tr>
+        <tr>
+			<td class="depth1">상세페이지</td>
+			<td class="depth2">채용정보</td>
+			<td class="depth3">근무위치</td>
+			<td class="filename"><a target="_blank" href="map.html">map</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-07-06</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">상세페이지</td>
+			<td class="depth2">기업정보</td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="detail_bi.html">detail_bi</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-07-07</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">구인정보</td>
+			<td class="depth2">역세권</td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="station.html">station</a></td>
+			<td class="done">O</td>
+			<td class="date">2016-01-06</td>
+			<td class="date">
+				<b>2015-08-06</b><br>
+				*지역선택 포함(Slider)<br>*검색하기 포함(Slider)<br>*메뉴 포함(Slider)<br>
+				<b>2016-01-06</b><br>
+				*왼쪽메뉴 오픈시키는 버튼 new 아이콘 추가<br>*왼쪽메뉴 오픈시 회원가입 버튼 추가<br>*왼쪽메뉴 오픈시 리스트 new 아이콘추가<br>*구인공고상품안내 버튼 추가
+			</td>
+		</tr>
+        <tr>
+			<td class="depth1">검색하기</td>
+			<td class="depth2">(Solr검색)결과</td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="search_result_solr.html">search_result_solr</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-08-06</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">상세 모바일지원</td>
+			<td class="depth2">개인회원</td>
+			<td class="depth3">모바일지원</td>
+			<td class="filename"><a target="_blank" href="member.html">member</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-07-27</td>
+			<td class="date">*모바일 지원 완료 포함(Popup)</td>
+		</tr>
+        <tr>
+			<td class="depth1">인재정보</td>
+			<td class="depth2">리스트</td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="recruit.html">recruit</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-08-04</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">인재정보</td>
+			<td class="depth2">상세</td>
+			<td class="depth3">기업회원 - 이력서 열람 상품 이용시</td>
+			<td class="filename"><a target="_blank" href="recruit_info.html">recruit_info</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-08-04</td>
+			<td class="date">*면접제의 문자 발송 포함(Popup)</td>
+		</tr>
+        <tr>
+			<td class="depth1">인재정보</td>
+			<td class="depth2">상세</td>
+			<td class="depth3">기업회원 - 이력서 열람 상품 미이용시</td>
+			<td class="filename"><a target="_blank" href="recruit_info_x.html">recruit_info_x</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-08-05</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">인재정보</td>
+			<td class="depth2">상세</td>
+			<td class="depth3">비회원/개인회원</td>
+			<td class="filename"><a target="_blank" href="recruit_info_xx.html">recruit_info_xx</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-08-05</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">최근 본 정보</td>
+			<td class="depth2"></td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="lately.html">lately</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-08-06</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">개인회원</td>
+			<td class="depth2">리스트</td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="individual_list.html">individual_list</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-08-07</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">개인회원</td>
+			<td class="depth2">맞춤 구인정보</td>
+			<td class="depth3">설정</td>
+			<td class="filename"><a target="_blank" href="individual_set.html">individual_set</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-08-07</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">개인회원</td>
+			<td class="depth2">맞춤 구인정보</td>
+			<td class="depth3">리스트</td>
+			<td class="filename"><a target="_blank" href="individual_match.html">individual_match</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-08-10</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">개인회원</td>
+			<td class="depth2">스크랩 구인정보</td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="individual_scrap.html">individual_scrap</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-08-10</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">이벤트</td>
+			<td class="depth2">특별한 혜택</td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="event.html">event</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-08-10</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">기업회원</td>
+			<td class="depth2">지원자 관리</td>
+			<td class="depth3">광고 보기</td>
+			<td class="filename"><a target="_blank" href="business_list01.html">business_list01</a></td>
+			<td class="done">O</td>
+			<td class="date">2016-01-06</td>
+			<td class="date">
+				<b>2015-08-10</b><br>*최초작성<br>
+				<b>2016-01-06</b><br>*왼쪽 메뉴 오픈시 리스트 new 아이콘 추가<br>*구인공고 상품 안내 버튼 추가<br>*웰컴영역추가(slide)
+			</td>
+		</tr>
+        <tr>
+			<td class="depth1">기업회원</td>
+			<td class="depth2">지원자 관리</td>
+			<td class="depth3">지원자 보기</td>
+			<td class="filename"><a target="_blank" href="business_list02.html">business_list02</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-08-10</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">기업회원</td>
+			<td class="depth2">면접제의 인재정보</td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="business_interview.html">business_interview</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-08-10</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">기업회원</td>
+			<td class="depth2">스크랩 인재정보</td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="business_scrap.html">business_scrap</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-08-10</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">기업회원</td>
+			<td class="depth2">기업정보 관리</td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="business_set.html">business_set</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-08-11</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">기업회원</td>
+			<td class="depth2">공고등록</td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="business_adup.html">business_adup</a></td>
+			<td class="done">O</td>
+			<td class="date">2016-01-08</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">기업회원</td>
+			<td class="depth2">공고등록</td>
+			<td class="depth3">항목입력</td>
+			<td class="filename"><a target="_blank" href="business_adup_step01.html">business_adup_step01</a></td>
+			<td class="done">O</td>
+			<td class="date">2016-01-14</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">기업회원</td>
+			<td class="depth2">공고등록</td>
+			<td class="depth3">항목입력</td>
+			<td class="filename"><a target="_blank" href="business_adup_step02.html">business_adup_step02</a></td>
+			<td class="done">O</td>
+			<td class="date">2016-01-18</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">기업회원</td>
+			<td class="depth2">공고등록</td>
+			<td class="depth3">항목입력</td>
+			<td class="filename"><a target="_blank" href="business_adup_step03.html">business_adup_step03</a></td>
+			<td class="done">O</td>
+			<td class="date">2016-01-19</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">기업회원</td>
+			<td class="depth2">공고등록</td>
+			<td class="depth3">항목입력</td>
+			<td class="filename"><a target="_blank" href="business_adup_step04.html">business_adup_step04</a></td>
+			<td class="done">O</td>
+			<td class="date">2016-01-20</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">기업회원</td>
+			<td class="depth2">공고등록</td>
+			<td class="depth3">항목입력</td>
+			<td class="filename"><a target="_blank" href="business_adup_step05.html">business_adup_step05</a></td>
+			<td class="done">O</td>
+			<td class="date">2016-01-20</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">기업회원</td>
+			<td class="depth2">공고등록</td>
+			<td class="depth3">결제</td>
+			<td class="filename"><a target="_blank" href="business_adup_pay.html">business_adup_pay</a></td>
+			<td class="done">O</td>
+			<td class="date">2016-01-20</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">기업회원</td>
+			<td class="depth2">공고등록</td>
+			<td class="depth3">결제(값 없을시)</td>
+			<td class="filename"><a target="_blank" href="business_adup_pay_error.html">business_adup_pay_error</a></td>
+			<td class="done">O</td>
+			<td class="date">2016-01-20</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">기업회원</td>
+			<td class="depth2">공고등록</td>
+			<td class="depth3">결제(성공)</td>
+			<td class="filename"><a target="_blank" href="business_adup_pay_ok.html">business_adup_pay_ok</a></td>
+			<td class="done">O</td>
+			<td class="date"></td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">기업회원</td>
+			<td class="depth2">공고관리</td>
+			<td class="depth3">게재 중 공고</td>
+			<td class="filename"><a target="_blank" href="business_adadm.html">business_adadm</a></td>
+			<td class="done">O</td>
+			<td class="date">2016-01-12</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">브랜드 채용관</td>
+			<td class="depth2"></td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="brand.html">brand</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-09-02</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">브랜드별</td>
+			<td class="depth2">리스트</td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="brand_list.html">brand_list</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-09-02</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">전문관</td>
+			<td class="depth2">홈</td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="pro.html">pro</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-09-02</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">전문관</td>
+			<td class="depth2">김밥전문가</td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="pro_list.html">pro_list</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-09-02</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">상세검색</td>
+			<td class="depth2"></td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="search.html">search</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-09-03</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">상세검색</td>
+			<td class="depth2">(DB검색)결과</td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="search_result_db.html">search_result_db</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-09-03</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">APP 다운로드</td>
+			<td class="depth2"></td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="appdown.html">appdown</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-09-04</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">DA랜딩페이지</td>
+			<td class="depth2"></td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="landing.html">landing</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-09-22</td>
+			<td class="date"></td>
+		</tr>
+		<tr>
+			<td class="depth1">공고등록</td>
+			<td class="depth2">간편등록</td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="simple_adup_step01.html">simple_adup_step01</a></td>
+			<td class="done">O</td>
+			<td class="date">2016-01-07</td>
+			<td class="date"></td>
+		</tr>
+		<tr>
+			<td class="depth1">공고등록</td>
+			<td class="depth2">간편등록</td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="simple_adup_step02.html">simple_adup_step02</a></td>
+			<td class="done">O</td>
+			<td class="date">2016-01-08</td>
+			<td class="date"></td>
+		</tr>
+		<tr>
+			<td class="depth1">공고등록</td>
+			<td class="depth2">간편등록</td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="simple_adup_step03.html">simple_adup_step03</a></td>
+			<td class="done">O</td>
+			<td class="date">2016-01-08</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">APP</td>
+			<td class="depth2">설정</td>
+			<td class="depth3"></td>
+			<td class="filename"><a target="_blank" href="app/set.html">set</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-11-17</td>
+			<td class="date"></td>
+		</tr>        
+		</tbody>
+	</table>
+	</fieldset>
+
+</div>
+<!-- //sheet -->
+<!-- //html body -->
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<title>IT서비스데스크</title>
+<link rel="stylesheet" type="text/css" href="../common/css/base.css">
+<link rel="stylesheet" type="text/css" href="../common/css/site.css">
+<script language="javascript" type="text/javascript" src="../common/js/jquery-1.8.3.min.js"></script>
+<script src="../common/js/design.js"></script>
+<!--[if IE]>
+<script src="../common/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body class="pop_bg">
+
+<header id="pop_header">
+	<h1>서비스요청</h1>
+	<a href="javascript:window.close();" class="btCls"><span class="blind">창닫기</span></a>
+</header>
+<!-- //header -->
+<section id="pop_ct">
+	
+	<div class="tr">
+		<a href="" class="btns btns1 btns1-4"><b style="width:81px"><span class="imsc imsc_file"></span>임시저장</b></a>
+		<a href="" class="btns btns1 btns1-8"><b style="width:58px">요청</b></a>
+		<a href="" class="btns btns1 btns1-5"><b style="width:57px"><span class="imsc imsc_del"></span>삭제</b></a>
+		<a href="" class="btns btns1 btns1-9"><b style="width:67px"><span class="imsc imsc_refresh"></span>초기화</b></a>
+	</div>
+	<div class="tblst2 mt5">
+		<table summary="서비스요청 양식">
+			<caption>서비스요청 양식</caption>
+			<colgroup>
+				<col width="15%">
+				<col width="22%">
+				<col width="15%">
+				<col width="17%">
+				<col width="15%">
+				<col width="*">
+			</colgroup>
+			<tbody>
+				<tr>
+				<th scope="row">서비스유형<em>*</em></th>
+				<td>
+					<span class="select-row">
+						<select name="" id="" title="" style="width:83px">
+							<option value="">선택</option>
+							<option value="">010</option>
+							<option value="">019</option>
+						</select>
+					</span>
+				</td>
+				<th scope="row">대상업무<em>*</em></th>
+				<td colspan="3"><input type="text" name="" id="" style="width:px;"><a href="" class="btns btns1 btns1-7 vm ml5" style="width:22px;"><span><em class="imsc imsc_srch2"></em></span></a></td>
+				</tr>
+				<tr>
+				<th scope="row">요청자</th>
+				<td colspan="5">홍길동 (2001000) / 영업1팀</td>
+				</tr>
+				<tr class="divide">
+				<th scope="row">결재자</th>
+				<td>홍길동 (2001000) / 영업1팀</td>
+				<th scope="row">참조자</th>
+				<td colspan="3"></td>
+				</tr>
+				<tr>
+				<th scope="row">신청일자</th>
+				<td>2015/12/01</td>				
+				<th scope="row">희망요청일자<em>*</em></th>
+				<td>2015/12/30</td>				
+				<th scope="row">소요시간</th>
+				<td>D + 10</td>				
+				</tr>
+				<tr class="divide">
+				<th scope="row">접수자</th>
+				<td colspan="5"></td>
+				</tr>
+				<tr>
+				<th scope="row">개인정보구분<em>*</em></th>
+				<td colspan="5" class="chklst">
+					<input type="radio" name="" id="" value="" class="ml0"><label for="">일반</label>
+					<input type="radio" name="" id="" value="" class="ml30"><label for="">고객</label>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">개인정보항목</th>
+				<td colspan="5" class="chklst">
+					<input type="checkbox" name="" id="" value="" class="ml0"><label for="">고객명</label>
+					<input type="checkbox" name="" id="" value=""><label for="">계좌번호</label>
+					<input type="checkbox" name="" id="" value=""><label for="">카드번호</label>
+					<input type="checkbox" name="" id="" value=""><label for="">휴대폰번호</label>
+					<input type="checkbox" name="" id="" value=""><label for="">전화번호</label>
+					<input type="checkbox" name="" id="" value=""><label for="">주소공통</label>
+					<input type="checkbox" name="" id="" value=""><label for="">주소상세</label>
+					<input type="checkbox" name="" id="" value=""><label for="">DI(I-PIN)</label>
+					<div class="mt5"><input type="checkbox" name="" id="" value="" class="ml0"><label for="">기타</label>
+					<input type="text" name="" id="" class="ml5" style="width:112px;"></div>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">외부반출</th>
+				<td colspan="5">
+					<span class="select-row">
+						<select name="" id="" title="" style="width:83px">
+							<option value="">내부</option>
+							<option value="">1</option>
+							<option value="">2</option>
+						</select>
+					</span><input type="text" name="" id="" class="ml3" style="width:200px;">
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">파기예정일</th>
+				<td colspan="5"><input type="text" name="" id="" class="ml3" style="width:200px;"></td>
+				</tr>
+				<tr>
+				<th scope="row">인증번호</th>
+				<td colspan="5"><input type="password" name="" id="" value="1111" class="ml3" style="width:102px;"><span class="caution ml10"><em>※</em> 요청파일 비밀번호 수령을 위한 인증번호를 입력하세요(필수:4자리이상. 분실 시 확인불가)</span></td>
+				</tr>
+				<tr>
+				<td colspan="6" class="private">
+					<div>
+						<span class="tit">* 개인정보 취급에 관한 주의사항</span><br>
+						개인정보 취급자는 개인정보취급에 있어 각호를 반드시 준수하여야 하며 부주의로 인하여 외부로 유출되거나 승인없이 반출 또는 내부사용의 오남용으로 인한 문제 발생 시 취급자 본인에게 책임이 있습니다.<br>
+						1. 개인정보는 회사가 인가한 개인정보취급자만 사용 가능하며, 같은 팀원이라도 공유할 수 없습니다.<br>
+						2. 개인정보가 포함된 파일은 암호화 하여 PC에 저장하고, 목적 및 기간 종료 시 즉시 파기 합니다.<br>
+						3. 최초 신청한 파기(예정일자 이후 기간 연장이 필요힌 경우 연장 신청 후 연장 승인을 득해야 합니다.<br>
+						4. 내부에서 사용하는 자는 VDI에서 사용 후 결과파일만 다운로드 가능합니다.<br>
+						5. 외부 수탁사에 제공하는 개인정보 파일은 정보관리팀에서 전송하고, 내부 직원에게는 공유하지 않습니다.
+					</div>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">ID신청</th>
+				<td colspan="5" class="stbl ty">
+					<div>
+						<table>
+							<colgroup>
+								<col width="9%">
+								<col width="20%">
+								<col width="19%">
+								<col width="*">
+							</colgroup>
+							<thead>
+							<tr>
+								<th scope="col">순번</th>
+								<th scope="col">코스트센터코드</th>
+								<th scope="col">코스트센터명</th>
+								<th scope="col">신청사유</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>1</td>
+								<td>LEEJY</td>
+								<td>서울지역사업부</td>
+								<td class="tl">지역사업부 통합</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>LEEJY</td>
+								<td>서울지역사업부</td>
+								<td class="tl">지역사업부 통합</td>
+							</tr>
+							</tbody>
+						</table>
+						<span class="rt"><a href="" class="btns btns1 btns1-1" style="width:63px">추가</a><a href="" class="btns btns1 btns1-3 ml5" style="width:63px">삭제</a></span>
+					</div>					
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">권한신청</th>
+				<td colspan="5" class="stbl ty">
+					<div>
+						<table>
+							<colgroup>
+								<col width="9%">
+								<col width="20%">
+								<col width="19%">
+								<col width="*">
+							</colgroup>
+							<thead>
+							<tr>
+								<th scope="col">순번</th>
+								<th scope="col">코스트센터코드</th>
+								<th scope="col">코스트센터명</th>
+								<th scope="col">신청사유</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>1</td>
+								<td>LEEJY</td>
+								<td>서울지역사업부</td>
+								<td class="tl">지역사업부 통합</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>LEEJY</td>
+								<td>서울지역사업부</td>
+								<td class="tl">지역사업부 통합</td>
+							</tr>
+							</tbody>
+						</table>
+						<span class="rt"><a href="" class="btns btns1 btns1-1" style="width:63px">추가</a><a href="" class="btns btns1 btns1-3 ml5" style="width:63px">삭제</a></span>
+					</div>					
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">장애일시<em>*</em></th>
+				<td colspan="5" class="date">
+					<input type="text" name="" id="" style="width:98px;" value="2016-01-12"><a href="" class="ml5"><img src="../common/img/btn_cal.gif" alt="달력보기"></a>
+					<span class="select-row">
+						<select name="" id="" title="" style="width:px">
+							<option value="">선택</option>
+							<option value="">010</option>
+							<option value="">019</option>
+						</select>
+					</span>시
+					<span class="select-row">
+						<select name="" id="" title="" style="width:px">
+							<option value="">선택</option>
+							<option value="">010</option>
+							<option value="">019</option>
+						</select>
+					</span>분
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">프로그램명</th>
+				<td colspan="5"><input type="text" name="" id="" style="width:200px;"></td>
+				</tr>
+				<tr>
+				<th scope="row">고객코드</th>
+				<td><input type="text" name="" id="" style="width:100px;"></td>
+				<th scope="row">주문번호</th>
+				<td><input type="text" name="" id="" style="width:100px;"></td>
+				<th scope="row">고객명</th>
+				<td><input type="text" name="" id="" style="width:100px;"></td>
+				</tr>
+				<tr>
+				<th scope="row">제목</th>
+				<td colspan="5"><input type="text" name="" id="" style="width:98%;"></td>
+				</tr>
+				<tr>
+				<th scope="row">요청내용</th>
+				<td colspan="5">
+					<p class="caution mb5"><em>※</em> 개인정보 보호를 위해 주민번호,계좌/카드번호 등 민감한 고객정보는 입력하지 마세요.</p>
+					<textarea cols="30" rows="5" id="" style="width:98%;height:70px;"></textarea>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">첨부파일</th>
+				<td colspan="3" class="file-upload">
+					<p class="caution2">* 첨부된 파일의 비밀번호는 신청자, 결재자, 정보관리자, IT담당자만 확인 가능합니다.</p>
+					<div class="mt3"><span class="wrap" style="width:360px"><input type="text" id="etc-file" name="etc-file" style="width:282px;"><span class="fileHidden"><input type="file" id="fileipt" name="fileipt" class="fileBtn"><label for="fileipt" class="blind">파일찾기</label></span></span><a href="" class="btns btns1 btns1-1" style="width:63px">삭제</a></div>
+				</td>
+				<th scope="row">비밀번호</th>
+				<td><input type="password" name="" id="" style="width:100px;"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- //table -->
+
+</section>
+<!-- //content -->
+
+</body>
+</html>

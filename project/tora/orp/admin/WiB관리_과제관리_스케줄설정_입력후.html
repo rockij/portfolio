@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="resource/css/base.css" media="screen" rel="stylesheet">
+<link href="resource/css/site.css" media="screen" rel="stylesheet">
+<script src="resource/js/jquery-1.11.1.min.js"></script>
+<script src="resource/js/ui.js"></script>
+<title>ORP Assessment center</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header">
+        <h1><img src="resource/image/logo.png" alt="ORP Assessment center"></h1>
+        <div id="gnb">
+            <ul>
+                <li><a href="#;">운영관리</a></li>
+                <li><a href="#;">회원관리</a></li>
+                <li><a href="#;">WIB관리</a></li>
+                <li><a href="#;">진행정보&평가</a></li>
+            </ul>
+        </div>
+        <a href="#;" class="user">로그아웃</a>
+    </header>
+    <!-- //header -->
+
+    <div id="container">
+        <aside class="lnb">
+            <ul>
+                <li><a href="#;" class="active">과제관리</a></li>
+                <li><a href="#;">과정관리</a></li>
+                <li><a href="#;">테스크관리</a></li>
+            </ul>
+        </aside>
+        <div id="content">
+            <section class="title_top">
+                <h2>과제관리</h2>
+                <div class="path"><a href="#;">Home</a><i>&gt;</i><a href="#;">WIB관리</a><i>&gt;</i><a href="#;">과제관리</a><i>&gt;</i><b>스케줄설정</b></div>
+            </section>
+            <!-- //title -->
+            <div class="bta_agn_right">
+                <button type="button" onclick="" class="btn_m btn_type5" style="width:90px">과제 목록</button>
+            </div>
+            <!-- //btn -->
+            <ul class="tab_type tn9 mt10">
+                <li><a href="#;">과제설정</a></li>
+                <li><a href="#;">테스크설정</a></li>
+                <li><a href="#;">자료설정</a></li>
+                <li class="active"><a href="#;">스케줄설정</a></li>
+                <li><a href="#;">자가진단</a></li>
+                <li><a href="#;">대안선택형</a></li>
+                <li><a href="#;">전문위원평가</a></li>
+                <li><a href="#;">F/U 인터뷰</a></li>
+                <li><a href="#;">상호피드백</a></li>
+            </ul>
+            <!-- //tab -->
+            <h3 class="title_type mt30">자료설정</h3>
+            <div class="dataset_wrap mt15">
+                <div class="calendar_type">
+                    <div class="dateslct">
+                        <div class="date">
+                            <button type="button" onclick="layer_open('yearSelect');$('#yearSelect').slick();" class="handle_yearslct">2025</button>&nbsp;년
+                            <select>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4" selected>4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>&nbsp;월
+                        </div>
+                        <div class="table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Mo</th>
+                                        <th scope="col">Tu</th>
+                                        <th scope="col">We</th>
+                                        <th scope="col">Th</th>
+                                        <th scope="col">Fr</th>
+                                        <th scope="col">Sa</th>
+                                        <th scope="col">Su</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><button type="button"></button></td>
+                                        <td><button type="button"></button></td>
+                                        <td><button type="button">1</button></td>
+                                        <td><button type="button">2</button></td>
+                                        <td class="on"><button type="button">3</button></td>
+                                        <td><button type="button">4</button></td>
+                                        <td><button type="button">5</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="on"><button type="button">6</button></td>
+                                        <td><button type="button">7</button></td>
+                                        <td><button type="button">8</button></td>
+                                        <td><button type="button">9</button></td>
+                                        <td><button type="button">10</button></td>
+                                        <td><button type="button">11</button></td>
+                                        <td><button type="button">12</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><button type="button">13</button></td>
+                                        <td><button type="button">14</button></td>
+                                        <td class="on"><button type="button">15</button></td>
+                                        <td><button type="button">16</button></td>
+                                        <td><button type="button">17</button></td>
+                                        <td><button type="button">18</button></td>
+                                        <td><button type="button">19</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><button type="button">20</button></td>
+                                        <td><button type="button">21</button></td>
+                                        <td class="on"><button type="button">22</button></td>
+                                        <td><button type="button">23</button></td>
+                                        <td><button type="button">24</button></td>
+                                        <td><button type="button">25</button></td>
+                                        <td><button type="button">26</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><button type="button">27</button></td>
+                                        <td><button type="button">28</button></td>
+                                        <td><button type="button">29</button></td>
+                                        <td><button type="button">30</button></td>
+                                        <td class="on"><button type="button">31</button></td>
+                                        <td><button type="button"></button></td>
+                                        <td><button type="button"></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <ul class="tabs tabchg">
+                        <li class="active"><button type="button" onclick="">2025.03</button></li>
+                        <li><button type="button" onclick="">2025.04</button></li>
+                        <li><button type="button" onclick="">2025.05</button></li>
+                        <li><button type="button" onclick="">2025.06</button></li>
+                    </ul>
+                </div>
+                <!-- //달력 -->
+                <div class="contfield">
+                    <div class="tbl_type">
+                        <table>
+                            <colgroup>
+                                <col style="width:16%">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="tc">년월</th>
+                                    <td>2025년 3월<button type="button" onclick="" class="btn_m btn_type2 ml10" style="width:70px">삭제</button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="tc">날짜</th>
+                                    <th scope="row" class="tc">내용</th>
+                                </tr>
+                                <tr>
+                                    <td class="tc">3</td>
+                                    <td class="iplst2">
+                                        <ul>
+                                            <li><input type="text" id="" value="부품사업부 기획팀 팀장 부임" style="width:68%"><button type="button" onclick="" class="btn_del ml5"></button></li>
+                                            <li><input type="text" id="" value="" style="width:68%"><button type="button" onclick="" class="btn_del ml5"></button><button type="button" onclick="" class="btn_m btn_type2 ml10" style="width:70px">추가</button></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">9</td>
+                                    <td class="iplst2">
+                                        <ul>
+                                            <li><input type="text" id="" value="회식" style="width:68%"><button type="button" onclick="" class="btn_del ml5"></button><button type="button" onclick="" class="btn_m btn_type2 ml10" style="width:70px">추가</button></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">21</td>
+                                    <td class="iplst2">
+                                        <ul>
+                                            <li><input type="text" id="" value="경영진 사업보고" style="width:68%"><button type="button" onclick="" class="btn_del ml5"></button><button type="button" onclick="" class="btn_m btn_type2 ml10" style="width:70px">추가</button></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="bta_agn_right mt10">
+                        <button type="button" onclick="" class="btn_m btn_type4" style="width:90px">저장</button>
+                    </div>
+                    <!-- //btn -->
+                </div>
+                <!-- //입력폼 -->
+            </div>
+        </div>
+        <!-- //content -->
+    </div>
+    <!-- //container -->
+
+    <footer id="footer">
+        <div class="inner">
+            Copyright ⓒ ORP Institute. All Rights Reserved.
+            <img src="resource/image/logo2.png" alt="ORP Assessment center" class="lg">
+        </div>
+    </footer>
+    <!-- //footer -->
+
+</div>
+
+<div id="mw-yearSelect" class="ly_pop ly_year_select">
+    <div class="content">
+        <button type="button" onclick="layer_close()" class="close"><i class="bgf">닫기</i></button>
+        <h2 class="title_type2">연도선택</h2>
+        <div id="yearSelect" class="year_list">
+            <div class="inner">
+                <ul class="tabchg">
+                    <li class="active"><button type="button">2006</button></li>
+                    <li><button type="button">2007</button></li>
+                    <li><button type="button">2008</button></li>
+                    <li><button type="button">2009</button></li>
+                    <li><button type="button">2010</button></li>
+                    <li><button type="button">2011</button></li>
+                    <li><button type="button">2012</button></li>
+                    <li><button type="button">2013</button></li>
+                    <li><button type="button">2014</button></li>
+                    <li><button type="button">2015</button></li>
+                    <li><button type="button">2016</button></li>
+                    <li><button type="button">2017</button></li>
+                    <li><button type="button">2018</button></li>
+                    <li><button type="button">2019</button></li>
+                    <li><button type="button">2020</button></li>
+                    <li><button type="button">2021</button></li>
+                    <li><button type="button">2022</button></li>
+                    <li><button type="button">2023</button></li>
+                    <li><button type="button">2024</button></li>
+                    <li><button type="button">2025</button></li>
+                </ul>
+            </div>
+            <div class="inner">
+                <ul class="tabchg">
+                    <li><button type="button">2006</button></li>
+                    <li><button type="button">2007</button></li>
+                    <li><button type="button">2008</button></li>
+                    <li><button type="button">2009</button></li>
+                    <li><button type="button">2010</button></li>
+                    <li class="active"><button type="button">2011</button></li>
+                    <li><button type="button">2012</button></li>
+                    <li><button type="button">2013</button></li>
+                    <li><button type="button">2014</button></li>
+                    <li><button type="button">2015</button></li>
+                    <li><button type="button">2016</button></li>
+                    <li><button type="button">2018</button></li>
+                    <li><button type="button">2019</button></li>
+                    <li><button type="button">2020</button></li>
+                    <li><button type="button">2021</button></li>
+                    <li><button type="button">2022</button></li>
+                    <li><button type="button">2023</button></li>
+                    <li><button type="button">2024</button></li>
+                    <li class="active"><button type="button">2025</button></li>
+                </ul>
+            </div>
+            <div class="inner">
+                <ul class="tabchg">
+                    <li><button type="button">2006</button></li>
+                    <li class="active"><button type="button">2007</button></li>
+                    <li><button type="button">2008</button></li>
+                    <li><button type="button">2009</button></li>
+                    <li><button type="button">2010</button></li>
+                    <li><button type="button">2011</button></li>
+                    <li><button type="button">2012</button></li>
+                    <li><button type="button">2013</button></li>
+                    <li class="active"><button type="button">2016</button></li>
+                    <li><button type="button">2018</button></li>
+                    <li><button type="button">2019</button></li>
+                    <li><button type="button">2020</button></li>
+                    <li><button type="button">2021</button></li>
+                    <li class="active"><button type="button">2022</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //연도선택 -->
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="resource/css/slick.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="resource/js/slick.min.js"></script>
+<script>
+$(function(){
+    // 달력
+    $( ".ip_cal" ).datepicker({
+        showOn: "both",
+        buttonImage: "resource/image/ico_cal.png",
+        buttonImageOnly: true,
+        dateFormat: "yy-mm-dd"
+    });    
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="resources/css/common.css" media="screen" rel="stylesheet">
+<link href="resources/css/site.css" media="screen" rel="stylesheet">
+<script src="resources/js/jquery-1.11.1.min.js"></script>
+<script src="resources/js/design.js"></script>
+<!--[if lt IE 9]>
+<script src="resources/js/html5shiv.js"></script>
+<![endif]-->
+<title>Hackers SCM Portal</title>
+</head>
+<body>
+
+<div id="wrap">
+
+	<header>
+		<h1><a href="/"><img src="resources/images/logo.gif" alt="Hackers SCM Portal"></a></h1>
+		<a href="#;" class="btn_user"><span class="fc_blu">홍길동</span> 님</a>
+		<div id="gnb">
+			<ul>
+				<li><a href="#;">Home</a></li>
+				<li><a href="#;" class="active">발주</a></li>
+				<li><a href="#;">견적</a></li>
+				<li><a href="#;">입고</a></li>
+				<li><a href="#;">출고</a></li>
+				<li><a href="#;">재고</a></li>
+				<li><a href="#;">정산</a></li>
+				<li><a href="#;">미정</a></li>
+			</ul>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<div id="container">
+
+		<aside class="lnb">
+			<h2>신간 발주</h2>
+			<ul>
+				<li><a href="#;">견적용 데이터</a></li>
+				<li><a href="#;" class="selected">발주량 산정</a></li>
+				<li><a href="#;">인쇄소 선정</a></li>
+				<li><a href="#;">견적 종합 보고</a></li>
+				<li><a href="#;">발주서 조회</a></li>
+			</ul>
+			<h2>일반 발주</h2>
+			<ul>
+				<li><a href="#;">발주 준비</a></li>
+				<li><a href="#;">발주량 산정</a></li>
+				<li><a href="#;">견적 종합 보고</a></li>
+				<li><a href="#;">발주서 조회</a></li>
+			</ul>
+			<ul class="etc">
+				<li><a href="#;">개정 계획</a></li>
+				<li><a href="#;">교재 관리</a></li>
+				<li><a href="#;">발주량 산정 관리</a></li>
+				<li><a href="#;">인쇄소 분산</a></li>
+				<li><a href="#;">발주서 관리</a></li>
+				<li><a href="#;">교재별 발주일</a></li>
+				<li><a href="#;">용지  단가 관리</a></li>
+				<li><a href="#;">후가공 & 수정필름 정보</a></li>
+			</ul>
+		</aside>
+		<!-- //left-navigation -->
+
+		<div id="ct">
+			<h2>발주량 산정</h2>
+			<div class="path">발주 &gt; 신간 발주 &gt; <span class="on">발주량 산정</span></div>
+			<!-- //title -->
+		</div>
+		<!-- //content -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- 견적서 선택 (popup) -->
+	<div id="orderSelect" class="ly_pop w600" style="display:block">
+		<span class="bg"></span>
+		<span class="wrap">
+			<button type="button" class="popcls"><img src="resources/images/ico_x.gif" alt="창닫기"></button>
+			<h2>견적서 선택</h2>
+			<div class="elm">
+				<h3 class="fc_blk">견적 요청 업체</h3>
+				<fieldset class="tbl_type mt10">
+					<legend>견적 요청업체 선택</legend>
+					<table>
+						<colgroup>
+							<col style="width:12%;">
+							<col>
+							<col style="width:22%;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col" class="tc">선택</th>
+								<th scope="col" class="tc">업체명</th>
+								<th scope="col" class="tc">견적 총 금액</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="radio" name="" id="" value="" class="mr0"></td>
+								<td class="tl spce2">업체명 업체명 업체명 업체명 업체명 업체명 업체명</td>
+								<td class="tr spce3">00,000,000 원</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="" id="" value="" class="mr0"></td>
+								<td class="tl spce2">업체명 업체명 업체명 업체명 업체명 업체명 업체명</td>
+								<td class="tr spce3">00,000,000 원</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="" id="" value="" class="mr0"></td>
+								<td class="tl spce2">업체명 업체명 업체명 업체명 업체명 업체명 업체명</td>
+								<td class="tr spce3">00,000,000 원</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="" id="" value="" class="mr0"></td>
+								<td class="tl spce2">업체명 업체명 업체명 업체명 업체명 업체명 업체명</td>
+								<td class="tr spce3">00,000,000 원</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="" id="" value="" class="mr0"></td>
+								<td class="tl spce2">업체명 업체명 업체명 업체명 업체명 업체명 업체명</td>
+								<td class="tr spce3">00,000,000 원</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+				<!-- //table -->
+				<h3 class="fc_blk mt30">견적서 조회</h3>
+				<fieldset class="mt10">
+					<legend>견적서 조회</legend>
+					<span class="select">
+						<label for="book-name">교재명</label>
+						<select name="book-name" id="book-name">
+							<option value="1">교재명</option>
+							<option value="2">1</option>
+						</select>
+					</span><!----><input type="text" name="" id="" class="ml5" style="width:176px;"><!----><button type="button" onclick="" class="btn_m btn_type2 ml5">검색</button>
+				</fieldset>
+				<div class="btn_area2 mt20">
+					<button type="button" class="btn_r btn_type3">취소</button><!----><button type="button" class="btn_r btn_type">적용</button>
+				</div>
+			</div>
+			<!-- //element -->
+		</span>
+		<span class="blank"></span>
+	</div>
+	<!-- //견적서 선택 (popup) -->
+
+</div>
+
+</body>
+</html>

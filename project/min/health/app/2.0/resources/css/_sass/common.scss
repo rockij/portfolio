@@ -1967,27 +1967,84 @@ $head_height:110;
         }
     }
 }
+
 .ly_loading {
-    .wrap{
-        overflow: visible;
-    }
     .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 100%;
+        width: 100%;
         background-color: transparent;
-    }
-    .loading-circle {
-        width: px(50);
-        height: px(50);
-        margin-left: px(-25);
-        margin-top: px(-25);
-        @include pos(absolute,$l:50%,$t:50%);
-        @include bdr($o:true);
-        border: 2px solid #fff;
-        border-bottom-color: transparent;
-        background: transparent;
-        animation: ball-clip-rotate .75s linear infinite;
+        overflow: hidden;
+        transform: translate(-50%, -50%);
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 63px;
+            height: 63px;
+            background-color: #007aff;
+            border-radius: 50%;
+            -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+            & > span {
+                display: inline-block;
+                width: 18.9rem;
+                height: 18.9rem;
+                background-image: url(../image/img_loading.png);
+                background-repeat: no-repeat;
+                background-size: 3591px 189px;
+                position: absolute;
+                top: 50%; 
+                left: 50%;
+                transform: translate(-50%,-50%) scale(.3);
+                animation: movLoading 1s step-end infinite;
+                @keyframes movLoading{ /* 100/38(19컷*2) = 2.6 */
+                    0%{ background-position:0 0 }
+                    2.6%{ background-position:-189px 0 }
+                    5.2%{ background-position:-378px 0 }
+                    7.8%{ background-position:-567px 0 }
+                    10.4%{ background-position:-756px 0 }
+                    13%{ background-position:-945px 0 }
+                    15.6%{ background-position:-1134px 0 }
+                    18.2%{ background-position:-1323px 0 }
+                    20.8%{ background-position:-1512px 0 }
+                    23.4%{ background-position:-1701px 0 }
+                    26%{ background-position:-1890px 0 }
+                    28.6%{ background-position:-2079px 0 }
+                    31.2%{ background-position:-2268px 0 }
+                    33.8%{ background-position:-2457px 0 }
+                    36.4%{ background-position:-2646px 0 }
+                    39%{ background-position:-2835px 0 }
+                    41.6%{ background-position:-3024px 0 }
+                    44.2%{ background-position:-3213px 0 }
+                    46.8%{ background-position:-3402px 0 } /* 중간 19컷 */
+
+                    49.4%{ background-position:-3402px 0 }
+                    52%{ background-position:-3213px 0 }
+                    54.6%{ background-position:-3024px 0 }
+                    57.2%{ background-position:-2835px 0 }
+                    59.8%{ background-position:-2646px 0 }
+                    62.4%{ background-position:-2457px 0 }
+                    65%{ background-position:-2268px 0 }
+                    67.6%{ background-position:-2079px 0 }
+                    70.2%{ background-position:-1890px 0 }
+                    72.8%{ background-position:-1701px 0 }
+                    75.4%{ background-position:-1512px 0 }
+                    78%{ background-position:-1323px 0 }
+                    80.6%{ background-position:-1134px 0 }
+                    83.2%{ background-position:-945px 0 }
+                    85.8%{ background-position:-756px 0 }
+                    88.4%{ background-position:-567px 0 }
+                    91%{ background-position:-378px 0 }
+                    93.6%{ background-position:-189px 0 }
+                    96.2% , 100%{ background-position:0 0 }
+                }
+            }
+        }
     }
 }
-
 /* 보험사 color */
 [data-name='메리츠화재'] .fill, [data-name='메리츠화재']:before{background-color:#B21426 !important}
 [data-name='한화손해보험'] .fill, [data-name='한화손해보험']:before{background-color:#F89B6C !important}

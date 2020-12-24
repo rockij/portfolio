@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<title>IT서비스데스크</title>
+<link rel="stylesheet" type="text/css" href="../common/css/base.css">
+<link rel="stylesheet" type="text/css" href="../common/css/site.css">
+<script language="javascript" type="text/javascript" src="../common/js/jquery-1.8.3.min.js"></script>
+<script src="../common/js/design.js"></script>
+<!--[if IE]>
+<script src="../common/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+	
+<div id="wrap">
+	
+	<div id="skip">
+		<ul>
+			<li><a href="#content">본문 바로가기</a></li>
+			<li><a href="#gnb">주 메뉴 바로가기</a></li>
+		</ul>
+	</div>
+	<!-- //skip --> 
+	
+	<header id="header">
+		<h1>IT서비스데스크</h1>
+		<nav id="gnb">
+			<menu>
+				<li><a href="" class="active">게시판</a></li>
+				<li><a href="">서비스요청관리</a></li>
+				<li><a href="">기본정보관리</a></li>
+				<li><a href="">인사정보관리</a></li>
+			</menu>
+		</nav>
+		<div class="master">
+			<strong>관리자</strong>님
+			<a href="" class="btns btns3"><span>로그아웃</span></a>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<div id="container">
+
+		<aside class="snb">
+			<div class="log_set">
+				<span class="bar top"></span>
+				<ul class="profile">
+					<li class="img"><img src="../common/img/snb_porfile_no.gif" alt=""></li>
+					<li class="txt"><strong>관리자</strong>님<br>반갑습니다.</li>
+				</ul>	
+				<ul class="link">
+					<li><a href="" class="btns btns2"><span>My Page</span></a></li>
+					<li><a href="" class="btns btns2"><span>Logout</span></a></li>
+				</ul>
+				<span class="bar btm"></span>
+			</div>
+			<menu>
+				<li class="selected"><a href="">사용자 및 조직관리</a></li>
+				<li><a href="">결재라인관리</a></li>
+				<li><a href="">사용자 별 권한관리</a></li>
+				<li><a href="">담당자관리</a></li>
+			</menu>
+			<span class="mascot"></span>
+		</aside>
+		<!-- //snb -->
+
+		<div id="content">
+
+			<h1>사용자 및 조직관리</h1>
+			<menu class="tabst2 mt15">
+				<li class="selected"><a href="">사용자 관리</a></li>
+				<li><a href="">조직 관리</a></li>
+			</menu>
+			<!-- //tab -->
+			<div class="tblst2 mt20">
+				<table summary="조직,검색어 입력">
+					<caption>사용자 검색</caption>
+					<colgroup>
+						<col width="90">
+						<col width="30%">
+						<col width="90">
+						<col width="*">
+					</colgroup>
+					<tbody>
+						<tr>
+						<th scope="row">조직</th>
+						<td><input type="text" name="" id="" style="width:128px;"><a href="" class="btns btns1 btns1-7 vm ml5" style="width:22px;"><span><em class="imsc imsc_srch2"></em></span></a></td>
+						<th scope="row">검색어</th>
+						<td><input type="text" name="" id="" style="width:128px;"><a href="" class="btns btns1 btns1-7 vm ml5" style="width:22px;"><span><em class="imsc imsc_srch2"></em></span></a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //검색 -->
+			<hgroup class="hst-row mt35">
+				<h2 class="hst">사용자 목록</h2>
+				<button type="button" class="btns btns1 btns1-4 rt" onclick="layer_open('userGroup_adm');"><b style="width:58px"><em class="imsc imsc_up"></em>등록</b></a>
+			</hgroup>
+			<div class="tblst mt7">
+				<table summary="ID, 이름, 직책, 직위, E-mail, 조직, 회사코드, 퇴사여부, 사용여부, 수정여부">
+					<caption></caption>
+					<colgroup>
+						<col width="9%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="*">
+						<col width="9%">
+						<col width="8%">
+						<col width="8%">
+						<col width="8%">
+						<col width="8%">
+					</colgroup>
+					<thead>
+						<tr>
+						<th scope="col">ID</th>
+						<th scope="col">이름</th>
+						<th scope="col">직책</th>
+						<th scope="col">직위</th>
+						<th scope="col">E-mail</th>
+						<th scope="col">조직</th>
+						<th scope="col">회사코드</th>
+						<th scope="col">퇴사여부</th>
+						<th scope="col">사용여부</th>
+						<th scope="col">수정여부</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+						<td>ADMIN</td>
+						<td>관리자</td>
+						<td>과장</td>
+						<td>직위1</td>
+						<td class="tl">admin@coway.co.kr</td>
+						<td>임원실</td>
+						<td>8000</td>
+						<td>N</td>
+						<td>Y</td>
+						<td>Y</td>
+						</tr>
+						<tr>
+						<td>WOUNG</td>
+						<td>박웅</td>
+						<td>대리</td>
+						<td>직위2</td>
+						<td class="tl">qkrdndgg@coway.co.kr</td>
+						<td>코웨이</td>
+						<td>3000</td>
+						<td>N</td>
+						<td>Y</td>
+						<td>N</td>
+						</tr>
+						<tr>
+						<td>TEST_1</td>
+						<td>테스트</td>
+						<td>사원</td>
+						<td>직위3</td>
+						<td class="tl">test@coway.co.kr</td>
+						<td>사업팀</td>
+						<td>2000</td>
+						<td>Y</td>
+						<td>N</td>
+						<td>N</td>
+						</tr>
+						<tr>
+						<td>bong</td>
+						<td>권봉수</td>
+						<td>사원</td>
+						<td>직위4</td>
+						<td class="tl">bong@coway.co.kr</td>
+						<td>해외사업팀</td>
+						<td>1000</td>
+						<td>N</td>
+						<td>Y</td>
+						<td>N</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //bbs -->
+			<div class="paging">
+				<a class="first" href=""><img src="../common/img/pg_first.gif" alt="첫 페이지로 이동"></a><a class="prev" href=""><img src="../common/img/pg_prev.gif" alt="첫 페이지로 이동"></a>
+				<span class="num">
+					<a href="" class="on">1</a><a href="">2</a><a href="">3</a><a href="">4</a><a href="">5</a>
+				</span>
+				<a class="next" href=""><img src="../common/img/pg_next.gif" alt="다음페이지로 이동"></a><a class="last" href=""><img src="../common/img/pg_last.gif" alt="마지막 페이지로 이동"></a>
+			</div>
+			<!-- //paging -->
+
+			<!-- 등록 -->
+			<section class="ly_pop">
+				<div class="bg"></div>
+				<div id="userGroup_adm" class="ly_ct" style="width:890px;margin:-270px 0 0 -450px;">
+					<header>
+						<h2>등록</h2>
+						<button type="button" class="btCls" onclick="layer_open_cls();"></button>
+					</header>
+					<article>
+						<div class="tblst2 mt5">
+							<table summary="ID,직책,E-mail,회사코드,사용여부,이름,직위,조직,퇴사여부">
+								<caption>사용자 및 조직관리 입력</caption>
+								<colgroup>
+									<col width="80">
+									<col width="37%">
+									<col width="80">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+									<th scope="row">ID</th>
+									<td><input type="text" name="" id="" style="width:200px;"></td>
+									<th scope="row">이름</th>
+									<td><input type="text" name="" id="" style="width:200px;"></td>
+									</tr>
+									<tr>
+									<th scope="row">직책</th>
+									<td><input type="text" name="" id="" style="width:200px;"></td>
+									<th scope="row">직위</th>
+									<td><input type="text" name="" id="" style="width:200px;"><a href="" class="btns btns1 btns1-7 vm ml5" style="width:22px;"><span><em class="imsc imsc_srch2"></em></span></a></td>
+									</tr>
+									<tr>
+									<th scope="row">E-mail</th>
+									<td><input type="text" name="" id="" style="width:200px;"></td>
+									<th scope="row">조직</th>
+									<td><input type="text" name="" id="" style="width:200px;"></td>
+									</tr>
+									<tr>
+									<th scope="row">회사코드</th>
+									<td><input type="text" name="" id="" style="width:200px;"></td>
+									<th scope="row">퇴사여부</th>
+									<td><input type="checkbox" name="" id="" value=""></td>
+									</tr>
+									<tr>
+									<th scope="row">사용여부</th>
+									<td colspan="3" class="chklst">
+										<input type="radio" name="user" id="Y" value="" class="ml0"><label for="Y">사용</label><input type="radio" name="user" id="N" value=""><label for="N">미사용</label>
+									</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="tc mt200">
+							<a href="" class="btns btns1 btns1-4"><b style="width:58px"><span class="imsc imsc_file"></span>저장</b></a>
+						</div>
+					</article>
+				</div>
+			</section>
+			<!-- //등록 -->
+
+			<!-- 수정 -->
+			<section class="ly_pop" style="display:block">
+				<div class="bg"></div>
+				<div id="userGroup_adm" class="ly_ct" style="width:890px;margin:-270px 0 0 -450px;">
+					<header>
+						<h2>수정</h2>
+						<button type="button" class="btCls" onclick="layer_open_cls();"></button>
+					</header>
+					<article>
+						<div class="tblst2 mt5">
+							<table summary="ID,직책,E-mail,회사코드,사용여부,이름,직위,조직,퇴사여부">
+								<caption>사용자 및 조직관리 확인</caption>
+								<colgroup>
+									<col width="90">
+									<col width="37%">
+									<col width="90">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+									<th scope="row">ID</th>
+									<td>ADMIN</td>
+									<th scope="row">이름</th>
+									<td>박웅</td>
+									</tr>
+									<tr>
+									<th scope="row">직책</th>
+									<td>과장</td>
+									<th scope="row">직위</th>
+									<td>대리</td>
+									</tr>
+									<tr>
+									<th scope="row">E-mail</th>
+									<td>admin@coway.co.kr</td>
+									<th scope="row">조직</th>
+									<td>코웨이</td>
+									</tr>
+									<tr>
+									<th scope="row">회사코드</th>
+									<td>8000</td>
+									<th scope="row">퇴사여부</th>
+									<td><input type="checkbox" name="" id="" value=""></td>
+									</tr>
+									<tr>
+									<th scope="row">사용여부</th>
+									<td colspan="3" class="chklst">
+										<input type="radio" name="user" id="Y" value="" class="ml0"><label for="Y">사용</label><input type="radio" name="user" id="N" value=""><label for="N">미사용</label>
+									</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="tc mt200">
+							<a href="" class="btns btns1 btns1-4"><b style="width:58px"><span class="imsc imsc_file"></span>저장</b></a><a href="" class="btns btns1 btns1-5 ml5"><b style="width:57px"><span class="imsc imsc_del"></span>삭제</b></a>
+						</div>
+					</article>
+				</div>
+			</section>
+			<!-- //수정 -->
+
+		</div>
+		<!-- //content -->
+
+	</div>
+	<!-- //container -->
+
+</div>
+
+</body>
+</html>
