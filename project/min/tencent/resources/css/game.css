@@ -1,0 +1,63 @@
+/* clearfix */
+.clearfix:after{content:'';display:block;clear:both;}
+/* 공통 */
+.hide{display:block;text-indent:-9999px;}
+.center{width:1000px;margin:0 auto;}
+img{vertical-align: top;max-width:100%;}
+hr{margin:75px 0;border-color:rgba(215,215,215,0.12);}
+/* 유튜브 비율 16:9 */
+.yt{position:relative;width:100%;padding-top:0;padding-bottom:56.25%;}
+.yt iframe{position:absolute;top:0;left:0;width:100%;height:100%;}
+/* wrap */
+#wrap{overflow:hidden;overflow-x:visible;width:100%;}
+
+/* header */
+#header{width:100%;position:fixed;top:0;left:0;right:0;font-size:0;text-align:center;background-image:linear-gradient(to right,rgba(25,114,246,0.7) 0%,rgba(7,6,80,0.7) 100%);-webkit-background-image:linear-gradient(to right,rgba(25,114,246,0.7) 0%,rgba(7,6,80,0.7) 100%);-moz-background-image:linear-gradient(to right,rgba(25,114,246,0.7) 0%,rgba(7,6,80,0.7) 100%);z-index:500;}
+#header .headWrap{display:inline-block;padding:19px 0;}
+#header .headWrap>*{float:left;}
+#header .headWrap .logo{position:relative;width:91px;height:40px;margin-right:15px;}
+#header .headWrap .logo img{position:absolute;top:50%;left:0;margin-top:-15px;}
+#header .headWrap .downBtn{padding:9px 19px;border-radius:25px;border:2px solid #fff;font-size:18px;font-family: 'calibri';color:#fff;letter-spacing:1px;}
+#header .downBtn span{padding-right:25px;vertical-align:middle;background:url(../image/down_icon.png) no-repeat right center;}
+
+/* container */
+.ytWrap{position:relative;width:100%;}
+.ytWrap .popBtn{display:block;width:107px;height:120px;margin-top:-60px;margin-left:-54px;position:absolute;left:50%;top:50%;background:url(../image/yt_play.png) no-repeat 50% 50%;background-size:cover;z-index:2;}
+.ytWrap .popBtn:hover{background:url(../image/yt_play_on.png)}
+.ytWrap .bgDot{width:100%;height:100%;position:absolute;left:0;right:0;top:0;bottom:0;background:url(../image/bg_dot.png);z-index:1;}
+.sec:nth-of-type(2){background-color:#0a0a0a;}
+.downWrap{text-align:center;font-size:0;}
+.downWrap .list{display:inline-block;}
+.downWrap .list li{float:left;padding:36px 25px 43px;}
+.downWrap .list button{display:block;width:352px;height:99px;background-repeat:no-repeat;background-position: 50% 50%;background-size:cover;}
+.downWrap .list .memu{background-image:url(../image/memu_down.png);}
+.downWrap .list .play{background-image:url(../image/play_down.png);}
+.downWrap .list .listDesc{padding-left:120px;text-align:left;letter-spacing:-2px;}
+.downWrap .listDesc span{font-size:16px;font-weight:100;color:#33fdff;}
+.downWrap .listDesc div{margin-top:5px;font-size:26px;font-weight:600;color:#fff;}
+.adverWrap{padding-top:120px;text-align:center;}
+.adverWrap h2{font-size:50px;color:#111;letter-spacing:-2px;}
+.adverWrap h2 i{font-style:italic;}
+.adverWrap h2 .under{position:relative;padding:0 9px 0 13px;z-index:1;}
+.adverWrap h2 .under:after{content:'';overflow:hidden;display:block;width:0;height:17px;position:absolute;left:0;right:0;bottom:12px;z-index:-1;background-color:#a6c5f3;transition:width 500ms linear;-webkit-transition:width 500ms linear;-moz-transition:width 500ms linear;}
+.adverWrap.now h2 .under:after{width:100%;}
+.adverWrap p{margin:32px 0 70px;font-size:18px;color:rgba(23,23,23,0.61);}
+.adverWrap .gif{display:block;}
+.adverWrap .gif img{width:100%;}
+.infoWrap .desc .gamelogo{overflow:hidden;float:left;display:block;width:180px;height:180px;margin-right:34px;}
+.infoWrap .desc h3{font-size:42px;color:#111;line-height: 1;}
+.infoWrap .desc .com{display:block;margin:24px 0 44px;font-size:22px;font-family: 'calibri';letter-spacing:-2px;color:#1972f6;}
+.infoWrap .desc p{font-size:18px;color:rgba(23,23,23,0.61);}
+.infoWrap .img{display:block;margin-top:40px;}
+.infoWrap .img img{width:100%;}
+
+/* footer */
+#footer{margin-top:179px;background-color:#ebebeb;border-top:1px solid #dfdfdf;}
+#footer .footWrap{padding:62px 0;font-size:16px;text-align:center;color:#a0a1a3;}
+
+/* 팝업 유튜브 */
+.popOverlay{display:none;}
+.popOverlay.on{display:block;position:fixed;left:0;right:0;top:0;bottom:0;z-index:100;background-color:rgba(0,0,0,0.2)}
+.ytPop{display:none;}
+.ytPop.on{display:block;width:960px;height:540px;margin-left:-480px;margin-top:-270px;position:absolute;left:50%;top:50%;background-color:rgba(0,0,0,0.2);z-index:190;}
+.ytPop .popClose{width:40px;height:40px;position:absolute;right:-40px;top:0;background:url(../image/pop_close_btn.png) no-repeat 0 0;cursor:pointer;}
