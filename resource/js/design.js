@@ -14,7 +14,7 @@ function gnbMenu(){
         autoAlpha: 1
     });
 
-    t1.staggerFrom(".main-menu li a:not(.submenu li a)", 1, {
+    t1.staggerFrom(".main-menu li a:not(.submenu li a)", .65, {
         opacity: 0,
         y: 10,
         ease: Power3.easeInOut

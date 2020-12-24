@@ -57,22 +57,22 @@ img{
     opacity:0;
     transition: .5s;
 }
-.content h2{
+.content h2{margin-bottom:15px}
+.content h2 a{
     font-weight:700;
-    margin-bottom:20px;
-    font-size:18px
-}
-.content a{
-    text-decoration: underline;
+    letter-spacing:-1px;
+    font-size:16px;
     color:#000;
-    display:block;
-    margin-top:15px;
-    font-size:12px;
+}
+.content h2 a .hydrated{
+    vertical-align:middle;
+    margin:-2px 0 0 4px;
+    font-size:14px
 }
 .content ul, .content ol{
     padding-left:20px;
     margin-bottom:0;
-    font-size:12px;
+    font-size:14px;
 }
 .content article{
     position:absolute;
@@ -85,7 +85,7 @@ img{
     align-items: center;
     flex-direction: column;
     padding:20px;
-    line-height:1.4;
+    line-height:1.5;
     font-size:14px;
     color:#000;
     text-decoration:none;
@@ -96,7 +96,7 @@ img{
     opacity:1;
 }
 .box-item:hover .content article{
-    transform: translateY(0);
+    transform: translateY(-10px);
 }
 
 .menu-btn{
@@ -177,4 +177,22 @@ a icon-icon{
     color:gray;
     font-weight: lighter;
     padding-right:10px
+}
+.media ul li .hydrated{
+    vertical-align:middle;
+    margin:0 4px 0 0
+}
+
+@media (min-width: 768px){
+    .content h2{margin-bottom:10px}
+}
+@media (min-width: 992px){
+    .content h2{margin-bottom:5px}
+    .content h2 a{font-size:14px}
+    .content ul, .content ol{font-size:11px}
+}
+@media (min-width: 1200px){
+    .content h2{margin-bottom:10px}
+    .content h2 a{font-size:16px}
+    .content ul, .content ol{font-size:12px}
 }
