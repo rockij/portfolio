@@ -2,6 +2,8 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
 <meta http-equiv="Content-Language" content="ko-KR">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
@@ -10,8 +12,7 @@
 </head>
 <body>
 
-<header>
-    <h1><img src="resource/image/logo-ijung.png" alt="logo"></h1>
+<header><h1><img src="resource/image/logo-ijung.png" alt="logo"></h1>
     <div class="menu-btn">
         <ion-icon name="menu"></ion-icon>
     </div>
@@ -76,10 +77,47 @@
                             <li>본인확인, 자산관리를 쉽고 빠르게 할 수 있도록 도와주는 앱</li>
                             <li>투입입원 : 2인</li>
                             <li>유지운영 : 4년</li>
+                        </ul>
+                        <button type="button" class="pageview" onclick="popupOpen('PASS-APP','mwf');">작업사항 자세히보기</button>
+                    </article>
+                </div>
+            </div>
+            <div class="col-lg-3 mix box-item mobile">
+                <img src="screen/pass-license.png" alt="PASS">
+                <div class="content">
+                    <article>
+                        <h2><a href="project/min/pass/html/app/license/" target="_blank" title="새창연결">모바일운전면허 확인서비스 소개(mobile)<ion-icon name="copy-outline"></ion-icon></a></h2>
+                        <ul>
+                            <li>운전면허증을 휴대폰에 저장할 수 있도록 해주는 서비스 소개</li>
+                            <li>투입입원 : 1인</li>
+                            <li>작업기간 : 2주</li>
                             <li>
-                                작업내용
+                                작업사항
                                 <ol>
-                                    <li>jquery, swipe, css animation</li>
+                                    <li>폰에서만 확인 가능</li>
+                                    <li>세로 터치 슬라이드</li>
+                                    <li>섹션 마다 animation</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+            <div class="col-lg-3 mix box-item homepage">
+                <img src="screen/pass-license2.png" alt="PASS">
+                <div class="content">
+                    <article>
+                        <h2><a href="project/min/pass/html/web/homp/license.html" target="_blank" title="새창연결">모바일운전면허 확인서비스 소개(homepage)<ion-icon name="copy-outline"></ion-icon></a></h2>
+                        <ul>
+                            <li>운전면허증을 휴대폰에 저장할 수 있도록 해주는 서비스 소개</li>
+                            <li>투입입원 : 1인</li>
+                            <li>작업기간 : 2주</li>
+                            <li>
+                                작업사항
+                                <ol>
+                                    <li>반응형웹</li>
+                                    <li>fullpage.js 사용</li>
+                                    <li>섹션 마다 animation</li>
                                 </ol>
                             </li>
                         </ul>
@@ -275,15 +313,36 @@
 </section>
 <!-- //content -->
 
+<!-- PASS APP -->
+<div id="mw-PASS-APP" class="ly_pop ly_alert">
+    <div class="wrap">        
+        <div class="context">
+            <button type="button" class="close" onclick="popupClose('PASS-APP','mwf');"><ion-icon name="close-outline"></ion-icon></button>
+            <ul>
+                <li><a href="project/min/pass/html/app/default/main_baner_info2.html" target="_blank">차트애니메이션 배너</a></li>
+                <li><a href="project/min/pass/html/app/default/faq.html" target="_blank">selected auto width</a></li>
+                <li><a href="project/min/pass/html/app/default/qr_certify_step1.html" target="_blank">약관체크 활성화</a></li>
+                <li><a href="project/min/pass/resources/app/event/yearend_settlement.html" target="_blank">box floor, bg powder, keyframe animation</a></li>
+                <li><a href="project/min/pass/resources/app/event/thanksgiving_joiner_tab2.html" target="_blank">left right shake box, coin move animation</a></li>
+                <li><a href="project/min/pass/html/app/money/event/visit_check_tab1.html" target="_blank">vw layout, roulette animation</a></li>
+                <li><a href="project/min/pass/html/app/money/send_price.html" target="_blank">계산기 touch action</a></li>
+                <li><a href="#;" target="_blank"></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- //PASS APP -->
+
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+<script src="global/resources/js/global.js"></script>
 <script src="resource/js/design.js"></script>
 <script>
 $(document).ready(function() {
     var mixer = mixitup('.box-list');
-    gnbMenu();
+    gnbMenu();    
 })
 </script>
 

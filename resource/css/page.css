@@ -8,7 +8,19 @@ body{
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+button{
+    background: transparent;
+    border:0
+}
+
 header{text-align:center}
+
+.pageview{
+    width:100%;padding:10px;
+    margin-top:5px;
+    text-decoration:underline;
+    font-size:14px;
+}
 
 .box-item{
     margin-bottom:30px;
@@ -59,8 +71,10 @@ img{
 }
 .content h2{margin-bottom:15px}
 .content h2 a{
+    display:inline-block;
     font-weight:700;
     letter-spacing:-1px;
+    line-height:1.2;
     font-size:16px;
     color:#000;
 }
@@ -183,6 +197,60 @@ a icon-icon{
     margin:0 4px 0 0
 }
 
+.ly_pop{
+    display:none;z-index:10;
+    position:fixed;top:0;left:0;
+}
+.ly_pop, .ly_pop:before{
+    width:100%;height:100vh;
+}
+.ly_pop:before{
+    content:'';
+    position:absolute;top:0;left:0;
+    background-color:rgba(0,0,0,.5);
+}
+.ly_pop .wrap{
+    width:86%;max-width:460px;z-index:1;
+    position:absolute;top:50%;left:50%;
+    border-radius:7px;
+    background-color:#fff;
+    transform: translate(-50%,-50%);
+}
+.ly_pop .context{
+    padding:20px;
+    font-size:14px;
+}
+.ly_pop .context p{
+    margin:0;
+}
+.ly_pop .context ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+.ly_pop .context ul li{
+    position:relative
+}
+.ly_pop .context ul li a{
+    color:#000
+}
+.ly_pop .context ul li:before{
+    content:'-';
+    display:inline-block;
+    margin-right:4px
+}
+.ly_pop .close{
+    position:absolute;top:5px;right:5px;
+    z-index:1;
+    padding:5px
+}
+.ly_pop .close .hydrated{
+    font-size:26px;
+}
+.ly_pop.show{
+    display:block
+}
+
 @media (min-width: 768px){
     .content h2{margin-bottom:10px}
 }
@@ -190,9 +258,11 @@ a icon-icon{
     .content h2{margin-bottom:5px}
     .content h2 a{font-size:14px}
     .content ul, .content ol{font-size:11px}
+    .pageview{font-size:11px}
 }
 @media (min-width: 1200px){
     .content h2{margin-bottom:10px}
     .content h2 a{font-size:16px}
     .content ul, .content ol{font-size:12px}
+    .pageview{font-size:12px}
 }
