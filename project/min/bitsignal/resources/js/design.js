@@ -133,7 +133,7 @@ function layer_close(){
 }
 // 로그인정책변경팝업
 window.onload = function() {
-	if($("#login-service").length) layer_open('login-service');
+	// if($("#login-service").length) layer_open('login-service');
 }
 
 // bbs toggle
