@@ -47,10 +47,12 @@ function gnbMenu(){
     t1.reverse();
 
     $(document).on("click", ".menu-btn", function() {
+        $('body').css('overflow','hidden');
         t1.reversed(!t1.reversed());
     });
-
+    
     $(document).on("click", ".close-menu", function() {
+        $('body').css('overflow','');
         t1.reversed(!t1.reversed());
     });
 }
