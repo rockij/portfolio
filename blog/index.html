@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="resource/css/page.css">
+<title>Kim.I.J Portfolio</title>
+</head>
+<body>
+
+<header><h1><img src="resource/image/logo-ijung.png" alt="logo"></h1>
+    <div class="menu-btn">
+        <ion-icon name="menu"></ion-icon>
+    </div>
+    <div class="menu">
+        <div class="close-menu">
+            <ion-icon name="close"></ion-icon>
+        </div>
+        <div class="nav">
+            <ul class="main-menu">
+                <li class="main-menu-item">
+                    <a href="https://rockij.github.io/portfolio/">Portfolio</a>
+                </li>
+                <li class="main-menu-item">
+                    <a href="https://rockij.github.io/blog/">Blog</a>
+                </li>
+            </ul>
+        </div>
+        <div class="media">
+            <ul>
+                <li><ion-icon name="call"></ion-icon>010 4257 5775</li>
+                <li><ion-icon name="at-outline"></ion-icon>rockij83@nate.com</li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- //header -->
+
+<section class="work-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="box-menu">
+                    <ul>
+                        <li data-filter="*">All</li>
+                        <li data-filter=".app">app</li>
+                        <li data-filter=".mw">mobile web</li>
+                        <li data-filter=".pc">pc</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row box-list">
+
+            <div class="col-lg-3 mix box-item app">
+                <img src="screen/pass2.png" alt="PASS">
+                <div class="content">
+                    <article>
+                        <h2><a href="project/min/pass/html/app/default/" target="_blank" title="전체보기">PASS앱<ion-icon name="copy-outline"></ion-icon></a></h2>
+                        <ul>
+                            <li>본인확인, 자산관리를 쉽고 빠르게 할 수 있도록 도와주는 앱</li>
+                            <li>앱스토어,구글플레이 'PASS' 검색</li>
+                            <li>인원 2 / 운영기간 4년</li>
+                            <li>aos_4.4.2 / ios_9.0 이상</li>
+                        </ul>
+                        <button type="button" class="pageview" onclick="popupOpen('PASS-APP','mwf');">주요작업 리스트</button>
+                    </article>
+                </div>
+            </div>
+            <!-- //PASS APP -->
+
+        </div>
+    </div>
+</section>
+<!-- //content -->
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+<script src="global/resources/js/global.js"></script>
+<script src="resource/js/design.js"></script>
+<script>
+$(document).ready(function() {
+    var mixer = mixitup('.box-list');
+    gnbMenu();
+    $('.box-menu ul li:eq(0)').trigger('click');
+})
+</script>
+
+</body>
+</html>

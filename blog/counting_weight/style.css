@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{margin:0;padding:0;border:0}
+*, *:before, *:after{-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-tap-highlight-color:rgba(255,255,255,0)}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block}
+html{
+  -webkit-text-size-adjust:none;
+  -webkit-overflow-scrolling:touch;
+  touch-action:manipulation;
+  font-size:.625rem;
+  /* font-size:10px */
+  height:100%
+}
+body{
+  height:100%;font-size:1.4rem;font-weight:400;letter-spacing:-.05rem;line-height:1;color:#222;
+  font-family:"Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+  word-wrap:break-word;word-break:keep-all;
+  -webkit-touch-callout:none;-webkit-user-select:none
+}
+
+.mainBaner-mystate h3{font-weight:500;font-size:1.6rem;text-decoration:underline}
+.mainBaner-mystate .rangebox,
+.mainBaner-mystate .weightbox{height:11rem;background-color:#F4F4F4;border-radius:1rem}
+.mainBaner-mystate .rangebox.default,
+.mainBaner-mystate .weightbox.default{background:#F4F4F4 url(bg_none.png) center no-repeat;background-size:4rem 1.3rem;}
+.mainBaner-mystate .rangebox{padding:2.2rem 2rem 0}
+.mainBaner-mystate .rangebox h3{margin-bottom:2.2rem}
+.mainBaner-mystate .range, .mainBaner-mystate .range .per{border-radius:1rem}
+.mainBaner-mystate .range{position:relative;width:100%;height:1rem;background-color:#ddd}
+.mainBaner-mystate .range:before,
+.mainBaner-mystate .range:after,
+.mainBaner-mystate .weight:before,
+.mainBaner-mystate .weight:after{position:absolute;font-size:1.2rem;color:#aaa}
+.mainBaner-mystate .range:before,
+.mainBaner-mystate .range:after{bottom:-2.2rem}
+.mainBaner-mystate .range.num:before,
+.mainBaner-mystate .weightbox.num .weight:before{content:'0점'}
+.mainBaner-mystate .range.num:after,
+.mainBaner-mystate .weightbox.num .weight:after{content:'1000점'}
+.mainBaner-mystate .range.case:before,
+.mainBaner-mystate .weightbox.case .weight:before{content:'우려'}
+.mainBaner-mystate .range.case:after,
+.mainBaner-mystate .weightbox.case .weight:after{content:'매우 우수'}
+.mainBaner-mystate .range:before{left:0}
+.mainBaner-mystate .range:after{right:0}
+.mainBaner-mystate .per{-webkit-transition:1s ease;transition:1s ease}
+.mainBaner-mystate .range .per{
+    background:#84EAFF url(main_bn_chart_bar.png) no-repeat;height:100%;width:0;
+    -webkit-transition:1s ease;transition:1s ease
+}
+.mainBaner-mystate .range .per:before,
+.mainBaner-mystate .range .per:after{position:absolute;top:-4.5rem;color:#436AD5;line-height:3rem}
+.mainBaner-mystate .range .per:before{content:attr(per);padding-left:1.4rem;right:0;background-color:#DEE3F0;border-radius:5rem;font-weight:700;letter-spacing:-.2rem}
+.mainBaner-mystate .range .per.num:before{padding-right:2.4rem;font-size:2rem}
+.mainBaner-mystate .range .per.num:after{content:'점';right:.9rem;font-size:1.4rem}
+.mainBaner-mystate .range .per.case:before{padding-right:1.4rem;font-size:1.8rem}
+.mainBaner-mystate .range .per i{width:2rem;height:2rem;float:right;margin:-.5rem -1.75rem 0 0;background-color:#fff;border-radius:50%;box-shadow:0 0 .8rem rgba(0,0,0,.2)}
+.mainBaner-mystate .weightbox{padding:1.7rem 3rem 0 2rem}
+.mainBaner-mystate .weightbox:after{display:block;clear:both;content:''}
+.mainBaner-mystate .weightbox h4{font-weight:400;font-size:1.4rem}
+.mainBaner-mystate .weightbox > section{width:14.2rem;float:left;text-align:center}
+.mainBaner-mystate .weight{position:relative;width:11.55rem;height:6.3rem;float:right;background:url(main_bn_chart_bg.png) no-repeat;background-size:100% 100%}
+.mainBaner-mystate .weight:before, .mainBaner-mystate .weight:after{bottom:-1.5rem}
+.mainBaner-mystate .weight:before{left:-.4rem}
+.mainBaner-mystate .weight:after{right:-1rem}
+.mainBaner-mystate .weight .per{
+    position:absolute;left:50%;bottom:.9rem;width:.8rem;height:3.5rem;
+    background:url(main_bn_chart_pin.png) no-repeat;background-size:100% 100%;
+    -webkit-transform-origin:50% 100%;transform-origin:50% 100%;
+    -webkit-transform:translateX(-50%) rotate(-90deg);transform:translateX(-50%) rotate(-90deg)
+}
+.mainBaner-mystate .weight .per:before{
+    content:'';display:block;width:1.7rem;height:4.4rem;position:absolute;top:-.2rem;left:-.45rem;
+    background:url(main_bn_chart_pinbg.png) no-repeat;background-size:100% 100%
+}
+.mainBaner-mystate .weightbox .count{position:relative;display:inline-block;margin:.5rem 0 .7rem;padding-right:1.4rem;padding-left:1.4rem;background-color:#DEE3F0;color:#436AD5;line-height:3rem;border-radius:5rem;font-weight:700;letter-spacing:-.2rem;font-size:2rem}
+.mainBaner-mystate .weightbox.num .count:after{content:'점';font-size:1.4rem;font-weight:400;display:inline-block;vertical-align:middle;margin:-.5rem 0 0 .3rem}
+.mainBaner-mystate .weightbox.case h3{margin:.75rem 0}
+@media all and (max-width:320px){
+    .mainBaner-mystate .weightbox{padding-right:2rem;padding-left:1rem}
+}

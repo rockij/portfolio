@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+<title></title>
+</head>
+<body>
+
+<div class="loading-page">
+    <div class="counter">
+        <h1>0</h1>
+    </div>
+</div>
+
+<style>
+    body{
+        background:#0b0b0b;
+        padding:0;
+        width:100vw;
+        height:100vh;
+        overflow: hidden;
+    }
+    .loading-page{
+        background:#161616;
+        width:100%;
+        height:100vh;
+    }
+    .loading-page .counter h1{
+        position:fixed;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        color:gray;
+        font-size:260px;
+        font-weight:bolder;
+        margin-top:-10px
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        var counter = 0;
+        var c = 0;
+        var i = setInterval(function() {
+            $(".loading-page .counter h1").html(c);
+            $(".loading-page").css("width", c + "%");
+            counter++;
+            c++;
+            if(counter == 101){
+                clearInterval(i);
+            }
+        }, 50)
+    })
+</script>
+
+</body>
+</html>

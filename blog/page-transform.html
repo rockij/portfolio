@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="format-detection" content="telephone=no">
+<link href="resources/style.css" media="screen" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<title>페이지 전환 효과</title>
+<script>
+	function changePage($next){
+		var $before = $(".current");
+		$next.addClass("current show");
+		$before.addClass("hide");
+		$next.one("webkitAnimationEnd mozAnimationEnd msAnimationEnd animationEnd", function(){
+			$before.removeClass("current hide");
+			$next.removeClass("show");
+		});
+	}
+	$(function() {
+		$(".page").bind("click", function(event){
+			var target = $(this).data("target");
+			console.log("target:"+target);
+			changePage( $(target) );
+		});
+	});
+</script>
+</head>
+<body>
+
+<div class="page_transform">
+	<div id="d1" class="page current" data-target="#d2"></div>
+	<div id="d2" class="page" data-target="#d1"></div>
+</div>
+
+</body>
+</html>
