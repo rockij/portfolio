@@ -1,0 +1,29 @@
+
+// 가변하는 인수 ...
+@mixin var($w, $h, $bg...){
+    width:$w;
+    height:$h;
+    background:$bg;
+}
+
+@mixin font(
+    $style: normal,
+    $weight: normal,
+    $size: 16px,
+    $family: sans-serif
+){
+    font: {
+        style: $style;
+        weight: $weight;
+        size: $size;
+        family: $family;
+    }
+}
+
+// @content
+@mixin icon ($url){
+    &::after{
+        content:$url;
+        @content;
+    }
+}
