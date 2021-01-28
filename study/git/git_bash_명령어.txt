@@ -3,20 +3,36 @@ git bash 명령어
 pwd : 현재폴더 확인
 
 ls : 현재 폴더 안에 어떤 파일과 폴더들이 있는지
+
 la -al : 숨긴폴더 파일 확인
 
-cd 들어가고자하는 폴더 명 : cd blog
+지우기
+rm -rf 폴더명
 
-git init
+cd 들어가고자하는 폴더 명(ex: cd blog)
+cd .. : 상위폴더로
+
 빈 로컬저장소를 만들기
+git init
 
 파일추가
-git add README.md 
+git add README.md
+
 천체추가
 git add .
 
 커밋하기
 git commit -m "README.md 추가"
 
+push 하기
+git push origin master
+
 로그확인
 git log
+
+내컴퓨터 로컬저장소와 git url연결
+git remote add origin 주소
+
+현재폴더에 복사
+git clone 주소 .
+
