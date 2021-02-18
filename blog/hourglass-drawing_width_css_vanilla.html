@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+<title></title>
+<style>
+:root{
+    --height:450px;
+    --width:calc(var(--height) / 1.5);
+    --color-base1:#8b5f3c;
+    --color-base2:#a97d50;
+    --sand-color:#ffc732;
+    --bg-color:#6fc0e2;
+}
+*,*::before,*::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background:
+        linear-gradient(135deg, #27aae2 21px, var(--bg-color) 22px, var(--bg-color) 22px, var(--bg-color) 24px, transparent 24px, transparent 67px, var(--bg-color) 67px, var(--bg-color) 69px, transparent 69px),
+        linear-gradient(225deg, #27aae2 21px, var(--bg-color) 22px, var(--bg-color) 22px, var(--bg-color) 24px, transparent 24px, transparent 67px, var(--bg-color) 67px, var(--bg-color) 69px, transparent 69px) 0 64px
+    ;
+    background-color:#27aae2;
+    background-size: 64px 128px;
+}
+.wrapper{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+.light-bg{
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:-1;
+    background:
+        radial-gradient(
+            circle,
+            rgba(106,190,226,.75) 50%,
+            transparent 50%
+        );
+    filter: blur(100px);
+}
+.ampulheta{
+    width:var(--width);
+    height:var(--height);
+    position:relative;
+}
+.ampulheta .base::before,
+.ampulheta .base::after{
+    content:'';
+    display:block;
+    background-color:var(--color-base1);
+    width:100%;
+    height:calc(var(--width) / 14.28);
+    border-radius: 4px;
+    position:relative
+}
+.ampulheta .base::after{
+    position:absolute;
+    bottom:0;
+}
+.ampulheta .base div{
+    background-color:var(--color-base2);
+    height:calc(var(--width) / 10);
+    width:80%;
+    position:absolute;
+    top:calc(var(--width) / 14.28);
+    left:50%;
+    transform: translateX(-50%);
+}
+.ampulheta .base div:nth-child(2){
+    bottom:calc(var(--width) / 14.28);
+    top:auto;
+}
+.ampulheta .base div::before,
+.ampulheta .base div::after{
+    content:'';
+    display:block;
+    width:0;
+    height:0;
+    position:absolute;
+    z-index: -1;
+}
+.ampulheta .base div:nth-child(1)::before{
+    border-left: calc(var(--height) / 15) solid transparent;
+    border-top: calc(var(--height) / 10) solid var(--color-base2);
+    transform: translateX( calc(var(--height) / -16.66 ));
+}
+.ampulheta .base div:nth-child(1)::after{
+    border-right: calc(var(--height) / 15) solid transparent;
+    border-top: calc(var(--height) / 10) solid var(--color-base2);
+    transform: translateX( calc(var(--height) / 16.66 ));
+    right:0;
+}
+.ampulheta .base div:nth-child(2)::before{
+    border-left: calc(var(--height) / 15) solid transparent;
+    border-bottom: calc(var(--height) / 10) solid var(--color-base2);
+    transform: translateX( calc(var(--height) / -16.66 ));
+}
+.ampulheta .base div:nth-child(2)::after{
+    border-right: calc(var(--height) / 15) solid transparent;
+    border-bottom: calc(var(--height) / 10) solid var(--color-base2);
+    transform: translateX( calc(var(--height) / 16.66 ));
+    right:0;
+}
+.ampulheta .corpo::before,
+.ampulheta .corpo::after{
+    content:'';
+    display:block;
+    box-shadow: inset 1px 1px 18px #def7fe;
+    position:absolute;
+    width:79.5%;
+    left:50%;
+    height:calc(var(--height) / 2.59);
+    transform: translate(-50%);
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+.ampulheta .corpo::before{
+    top:calc( var(--height) / 8.82 );
+    border-radius: 50% 50% 50% 50% / 0% 0% 100% 100%;
+}
+.ampulheta .corpo::after{
+    bottom:calc( var(--height) / 8.82 );
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;  
+}
+.sand{
+    position:relative;
+    height:calc( var(--height) / 1.29 );
+    top:calc( var(--height) / 15 );
+}
+.sand::before,
+.sand::after{
+    content:'';
+    display:block;
+    background-color:var(--sand-color);
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:1
+}
+.sand::before{
+    height: calc(var(--height) / 4.5);
+    width:60%;
+    left:0;
+    border-radius: 50% 50% 50% 50% / 0 0 100% 100%;
+    box-shadow: inset 20px -10px 0 0 #f8d16c;
+    transform-origin: bottom;
+    transform: translate(calc(var(--height) / 7.5), calc(var(--height) / 7.03));
+    top:0;
+    animation: sand-down3 5s ease-out 1 4.1s both
+}
+@keyframes sand-down3{
+    85%{
+        height: calc( var(--height) / 45 );
+        transform: translate(calc(var(--height) / 4.2), 0);
+        top: calc( var(--height) / 2.81 );
+        width:30%;
+        opacity: 1;
+    }
+    100%{
+        height: 0;
+        transform: translate(calc(var(--height) / 4.2), 0);
+        top: calc( var(--height) / 2.81 );
+        width:30%;
+        opacity: 0;
+    }
+}
+.sand::after{
+    height:0;
+    width:80%;
+    bottom:0;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    box-shadow: inset 0 30px 0 0 #f8d16c;
+    animation: sand-up 6s ease-out 1 3.3s both;
+}
+@keyframes sand-up{
+    100%{
+        height: calc( var(--height) / 3.75 );
+    }
+}
+.sand div{
+    width:auto;
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+    z-index:1;
+    top:calc(var(--height) / 7.03);
+}
+.sand div::before,
+.sand div::after{
+    content:'';
+    display:block;
+}
+.sand div::before{
+    width: calc( var(--height) / 2.48 );
+    height: calc( var(--height) / 4.36 );
+    background-color:var(--sand-color);
+    transform: translate(0, calc(var(--height) / -8.03));
+    border-radius: 60% 61% 54% 38% / 52% 53% 60% 60%;
+    animation: sand-down1 3s ease 2s 1 both;
+}
+@keyframes sand-down1{
+    80%{
+        height:0;
+        transform: translate(0,0);
+        opacity: 1;
+    }
+    100%{
+        height: 0;
+        transform: translate(0,0);
+        opacity: 0;
+    }
+}
+.sand div::after{
+    background-color:var(--sand-color);
+    height:0;
+    width: calc( var(--height) / 90 );
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    top: calc( var(--height) / 4.5 );
+    border-radius: calc(var(--height) / 45);
+    opacity: .5;
+    animation: sand-down2 7.5s ease 1 2s;
+}
+@keyframes sand-down2{
+    20%{
+        opacity: 1;
+        height:calc(var(--height) / 2.45);
+        top:calc(var(--height) / 4.5);
+    }
+    90%{
+        opacity: 1;
+        height:calc(var(--height) / 2.45);
+        top:calc(var(--height) / 4.5);
+    }
+    100%{
+        opacity: 0;
+        height:1px;
+        top:calc(var(--height) / 2.04);
+    }
+}
+.ampulheta{
+    transform: scale(0) rotate(180deg);
+    animation: zoom 2s ease 1 forwards;
+}
+@keyframes zoom{
+    100%{
+        transform: scale(1) rotate(0);
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="ampulheta">
+        <div class="base">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="corpo">
+            <div class="sand"><div></div></div>
+        </div>
+    </div>
+    <div class="light-bg"></div>
+</div>
+
+</body>
+</html>
