@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/css2.0/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/css2.0/content.css" />
+    <script type="text/javascript" src="../../js/js2.0/library/jquery_lib.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/js2.0/common_ui.js" charset="utf-8"></script>
+
+    <!-- cms2.0 추가 -->
+    <link rel="stylesheet" type="text/css" href="../../css/css2.0/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/css2.0/ui.style.css" />
+    <script type="text/javascript" src="../../js/js2.0/swiper.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/js2.0/ui.style.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content">
+            <!-- contInnerWrap -->
+            <div class="contInnerWrap">
+                <div class="pageTab">
+                    <ul>
+                        <li class="on"><a href="javascript:;" title="선택됨">조회정보변경</a></li>
+                        <li class=""><a href="javascript:;">신규기관등록</a></li>
+                    </ul>
+                </div>
+    
+                <div class="bulletWrap typeGrayRound">
+                    <ul>
+                        <li>
+                            선택하신 기관의 조회정보를 설정하는 메뉴입니다.
+                        </li>
+                        <li>
+                            인증서를 사용중인 기관을 선택하면 동일인증서를 사용하는 모든 기관을 일괄변경할 수 있습니다.
+                        </li>
+                    </ul>
+                </div>
+    
+                <h4 class="contTit">매출조회기관</h4>
+                <div class="cardListWrap">
+                    <ul>
+                        <li>
+                            <div class="cardListHeader">
+                                <strong class="tit">여신금융협회</strong>
+                                <span class="tag">아이디</span>
+
+                                <a href="#accountMangeLayer" class="sbtn xs round bgGray layerpop" title="계좌관리 팝업열기"><i class="icon management"></i>관리</a>
+                            </div>
+
+                            <div class="cardListContainer">
+                                <div class="btnWrap xsmall">
+                                    <a href="#" role="button" class="btn bgWhite02">조회정보변경</a>
+                                    
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <h4 class="contTit">김국민</h4>
+                <div class="cardListWrap">
+                    <ul>
+                        <li>
+                            <div class="cardListHeader">
+                                <strong class="tit">국민은행</strong>
+
+                                <a href="#accountMangeLayer" class="sbtn xs round bgGray layerpop" title="계좌관리 팝업열기"><i class="icon management"></i>관리</a>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="cardListHeader">
+                                <strong class="tit">농협은행</strong>
+                                <span class="tag">인증서</span>
+
+                                <a href="#accountMangeLayer" class="sbtn xs round bgGray layerpop" title="계좌관리 팝업열기"><i class="icon management"></i>관리</a>
+                            </div>
+
+                            <div class="cardListContainer">
+                                <div class="btnWrap xsmall">
+                                    <a href="#" role="button" class="btn bgWhite02">조회정보변경</a>
+                                    
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="cardListHeader">
+                                <strong class="tit">기업은행</strong>
+                                <span class="tag disabled">미등록</span>
+
+                                <a href="#accountMangeLayer" class="sbtn xs round bgGray layerpop" title="계좌관리 팝업열기"><i class="icon management"></i>관리</a>
+                            </div>
+
+                            <div class="cardListContainer">
+                                <div class="btnWrap xsmall">
+                                    <a href="#" role="button" class="btn bgWhite02">조회정보변경</a>
+                                    
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <h4 class="contTit">흥국민</h4>
+                <div class="cardListWrap">
+                    <ul>
+                        <li>
+                            <div class="cardListHeader">
+                                <strong class="tit">저축은행</strong>
+                                <span class="tag">인증서</span>
+
+                                <a href="#accountMangeLayer" class="sbtn xs round bgGray layerpop" title="계좌관리 팝업열기"><i class="icon management"></i>관리</a>
+                            </div>
+
+                            <div class="cardListContainer">
+                                <div class="btnWrap xsmall">
+                                    <a href="#" role="button" class="btn bgWhite02">조회정보변경</a>
+                                    
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <!--// contInnerWrap -->
+        </div>
+    </div> 
+    
+    <!-- 계좌관리 레이어팝업 -->
+    <div class="layerwrap bottomType" id="accountMangeLayer" > <!--// 팝업버튼 href와 id 동일하게-->
+        <div class="pop-inner layerInner">
+            <h5 class="pTit">농협은행(김국민) 계좌관리</h5>
+            <a href="javascript:;" class="close" role="button"><span class="blind">팝업 닫기</span></a>
+            <div class="pop-contents">
+                <div class="inner">
+                    <div class="inpWrap typeBorderList">
+                        <ul>
+                            <li>
+                                <div class="inpBox">
+                                    <input type="checkbox" name="chk" id="chk01">
+                                    <label for="chk01">
+                                        <span class="tit">NH기업종합통장-보통예금</span>
+                                        <span class="txt">000000-00-000000</span>
+                                    </label>
+                                </div>
+                                <span class="tag">집금정보</span>
+                            </li>
+                            <li>
+                                <div class="inpBox">
+                                    <input type="checkbox" name="chk" id="chk02">
+                                    <label for="chk02">
+                                        <span class="tit">NH기업종합통장-보통예금</span>
+                                        <span class="txt">000000-00-000000</span>
+                                    </label>
+                                </div>
+                                <span class="tag disabled">미등록</span>
+                            </li>
+                            <li>
+                                <div class="inpBox">
+                                    <input type="checkbox" name="chk" id="chk03">
+                                    <label for="chk03">
+                                        <span class="tit">NH기업종합통장-보통예금</span>
+                                        <span class="txt">000000-00-000000</span>
+                                    </label>
+                                </div>
+                                <span class="tag">집금정보</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="btnWrap">
+                <a href="javascript:;" role="button" class="btn bgYellow">삭제</a>
+            </div>
+        </div>                
+    </div>
+    <!--// 계좌관리 레이어팝업 -->
+</body>
+</html>

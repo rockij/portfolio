@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/css2.0/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/css2.0/content.css" />
+    <script type="text/javascript" src="../../js/js2.0/library/jquery_lib.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/js2.0/common_ui.js" charset="utf-8"></script>
+
+    <!-- cms2.0 추가 -->
+    <link rel="stylesheet" type="text/css" href="../../css/css2.0/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/css2.0/ui.style.css" />
+    <script type="text/javascript" src="../../js/js2.0/swiper.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/js2.0/ui.style.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content">
+            <!-- contInnerWrap -->
+            <div class="contInnerWrap spacePdb0">
+                <div class="jibgeumForm">
+                    <p class="contTit type tac">자금모으기할 집금방법을 선택해주세요.</p>
+                    <p class="subTxt tac">최대 5개의 출금계좌를 지정할 수 있습니다.</p>
+                    <ul class="tabRadio">
+                        <li>
+                            <input type="radio" name="bankRadio" id="bank01" checked="">
+                            <label for="bank01">등록계좌</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="bankRadio" id="bank02">
+                            <label for="bank02">직접입력</label>
+                        </li>
+                    </ul>
+                    <h3 class="contTit">입금계좌 선택</h3>
+                    <div class="formBox">
+                        <select name="" id="">
+                            <option value="">선택하세요.</option>
+                            <option value="">000000-00-000000 : 사업자명</option>
+                            <option value="">000000-00-000000 : 사업자명</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- //입금계좌 선택 -->
+                <div class="jibgeumForm topLine">
+                    <div class="formBox">
+                        <select name="" id="">
+                            <option value="">전체 사업자</option>
+                            <option value="">본사</option>
+                            <option value="">지사</option>
+                        </select>
+                    </div>
+                    <div class="btnWrap bankMemo">
+                        <a href="javascript:;" class="txbtn layerpop" role="button">입금/출금 계좌메모 일괄적용<i class="icon arr"></i></a>
+                    </div>
+                    <ul class="accordionList type02">
+                        <!-- 클릭타켓만 열리고 나머지 닫혀야될때 class="targetJS" 추가 -->
+                        <li>
+                            <a href="javascript:;" class="acc_title">
+                                <!-- 디폴트 open일 경우 class="acc_open" 추가, span "메뉴숨기기"로 변경 필요  -->
+                                <h4 class="tit">추가정보입력</h4>
+                                <span class="blind">메뉴숨기기</span>
+                            </a>
+                            <!-- input의 id값과 lable for 값 매칭 필수 -->
+                            <div class="accContent formField">
+                                <label for="phone" class="sectTit">장애시 연락받을 전화번호</label>
+                                <div class="formBox">
+                                    <input type="text" id="phone" placeholder="전화번호를 입력해주세요.">
+                                </div>
+                                <label for="memo" class="sectTit">이체메모</label>
+                                <div class="formBox">
+                                    <input type="text" id="memo" placeholder="이체메모를 입력해주세요.">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="checkListWrap accordionCheck">
+                        <!-- 리스트중 집금하고 싶은걸 선택하면 이체정보입력 활성화 -->
+                        <ul>
+                            <!-- 조회 -->
+                            <li>
+                                <dl>
+                                    <dt>
+                                        <div class="inpBox">
+                                            <input type="checkbox" name="chk" id="chk01">
+                                            <label for="chk01"><span class="tit">(주)국민상사</span></label>
+                                        </div>
+                                    </dt>
+                                    <dd class="banklst">
+                                        <ul>
+                                            <li>
+                                                <h6 class="sectTit">하나은행 기업보통예금</h6>
+                                                <span class="num">123-45-6788</span>
+                                            </li>
+                                            <li class="price"><a href="javascript:;" role="button">이체가능금액<span class="sbtn round xs">조회</span></a></li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <!-- //조회 -->
+                            <!-- 이체가능금액 -->
+                            <li>
+                                <dl>
+                                    <dt>
+                                        <div class="inpBox">
+                                            <input type="checkbox" name="chk" id="chk02">
+                                            <label for="chk02"><span class="tit">(주)국민상사</span></label>
+                                        </div>
+                                    </dt>
+                                    <dd class="banklst">
+                                        <ul>
+                                            <li>
+                                                <h6 class="sectTit">하나은행 기업보통예금</h6>
+                                                <span class="num">123-45-6788</span>
+                                            </li>
+                                            <li class="price">이체가능금액<strong class="wo">100,000</strong>원</li>
+                                        </ul>
+                                    </dd>
+                                    <!-- input의 id값과 lable for 값 매칭 필수 -->
+                                    <dd class="formField showbox">
+                                        <label for="bankPrice" class="sectTit">이체금액</label>
+                                        <div class="formBox unit">
+                                            <input type="text" id="bankPrice" placeholder="이체금액을 입력해주세요."><em>원</em>
+                                        </div>
+                                        <label for="accountPW" class="sectTit">계좌비밀번호</label>
+                                        <div class="formBox">
+                                            <input type="password" id="accountPW" placeholder="숫자4자리" maxlength="4">
+                                        </div>
+                                        <label for="transferPW" class="sectTit">이체비밀번호</label>
+                                        <div class="formBox">
+                                            <input type="password" id="transferPW" placeholder="숫자4자리" maxlength="4">
+                                        </div>
+                                        <label for="accountMemo" class="sectTit">입금계좌메모</label>
+                                        <div class="formBox">
+                                            <input type="text" id="accountMemo" placeholder="입금계좌메모를 입력해주세요.">
+                                        </div>
+                                        <label for="accountMemo2" class="sectTit">출금계좌메모</label>
+                                        <div class="formBox">
+                                            <input type="text" id="accountMemo2" placeholder="출금계좌메모를 입력해주세요.">
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <!-- //이체가능금액 -->
+                            <!-- 조회 -->
+                            <li>
+                                <dl>
+                                    <dt>
+                                        <div class="inpBox">
+                                            <input type="checkbox" name="chk" id="chk04">
+                                            <label for="chk04"><span class="tit">(주)국민상사</span></label>
+                                        </div>
+                                    </dt>
+                                    <dd class="banklst">
+                                        <ul>
+                                            <li>
+                                                <h6 class="sectTit">하나은행 기업보통예금</h6>
+                                                <span class="num">123-45-6788</span>
+                                            </li>
+                                            <li class="price"><a href="javascript:;" role="button">이체가능금액<span class="sbtn round xs">조회</span></a></li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <!-- //조회 -->
+                            <!-- 이체가능금액 -->
+                            <li>
+                                <dl>
+                                    <dt>
+                                        <div class="inpBox">
+                                            <input type="checkbox" name="chk" id="chk03">
+                                            <label for="chk03"><span class="tit">(주)국민상사</span></label>
+                                        </div>
+                                    </dt>
+                                    <dd class="banklst">
+                                        <ul>
+                                            <li>
+                                                <h6 class="sectTit">하나은행 기업보통예금</h6>
+                                                <span class="num">123-45-6788</span>
+                                            </li>
+                                            <li class="price">이체가능금액<strong class="wo">100,000</strong>원</li>
+                                        </ul>
+                                    </dd>
+                                    <!-- input의 id값과 lable for 값 매칭 필수 -->
+                                    <dd class="formField showbox">
+                                        <label for="bankPrice2" class="sectTit">이체금액</label>
+                                        <div class="formBox unit">
+                                            <input type="text" id="bankPrice2" placeholder="이체금액을 입력해주세요."><em>원</em>
+                                        </div>
+                                        <label for="accountPW2" class="sectTit">계좌비밀번호</label>
+                                        <div class="formBox">
+                                            <input type="password" id="accountPW2" placeholder="숫자4자리" maxlength="4">
+                                        </div>
+                                        <label for="transferPW2" class="sectTit">이체비밀번호</label>
+                                        <div class="formBox">
+                                            <input type="password" id="transferPW2" placeholder="숫자4자리" maxlength="4">
+                                        </div>
+                                        <label for="accountMemo4" class="sectTit">입금계좌메모</label>
+                                        <div class="formBox">
+                                            <input type="text" id="accountMemo4" placeholder="입금계좌메모를 입력해주세요.">
+                                        </div>
+                                        <label for="accountMemo3" class="sectTit">출금계좌메모</label>
+                                        <div class="formBox">
+                                            <input type="text" id="accountMemo3" placeholder="출금계좌메모를 입력해주세요.">
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <!-- //이체가능금액 -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- //사업자정보 -->
+                <!-- 유의사항 -->
+                <ul class="accordionList notiList topLine">
+                    <li>
+                        <a href="javascript:;" class="acc_title acc_open"> <!-- 디폴트 open일 경우 class="acc_open" 추가, span "메뉴숨기기"로 변경 필요  -->
+                            유의사항
+                            <span class="blind">메뉴숨기기</span>
+                        </a>
+                        <div class="accContent">
+                            <div class="bulletWrap typeGrayRound">
+                                <ul>
+                                    <li>자금모으기는 최대 5개의 출금계좌로부터 집금이 가능하며, 다른 은행계좌로부터의 집금은 잔액조회 후 이체금액을 입력하시기 바랍니다.</li>
+                                    <li>잔액조회시 Star CMS에 등록된 게좌중 동일한 인증서를 사용하는 계좌는 한 번에 잔액이 표시됩니다.</li>
+                                    <li>타 금융기관 인터넷뱅킹 1일 및 1회 이체한도를 확인하시기 바랍니다. 또한 다른은행 계좌에서 자금모으기시 해당은행 기준에 따른 이체수수료가 부과될 수 있습니다.</li>
+                                    <li>입금계좌메모 미입력시 '집금_출금계좌 예금주명'으로 모계좌에 기재됩니다.</li>
+                                    <li>출금계좌메모 입력시 입력하신 내용이 출금계좌에 기재되며, 해당은행에 따라 입력글자 모두 인자되지 않을 수 있습니다. 미입력시는 입금계좌 예금주명이 기재됩니다.</li>
+                                    <li>보안카드를 이용하시는 고객님은 자금모으기를 이용하실 수 없습니다.(OTP 이용고객만 가능)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!--// 유의사항 -->
+            </div>
+            <!--// contInnerWrap -->
+            <div class="btnWrap full">
+                <a href="javascript:;" role="button" class="btn bgGray">이체가능금액조회</a>
+                <a href="javascript:;" role="button" class="btn bgYellow">자금모으기 실행</a>
+            </div>
+            <!-- //btn -->
+        </div>
+    </div>
+
+</body>
+</html>
