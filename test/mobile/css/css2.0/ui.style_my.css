@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+.w80{width:80px !important;}
+
+.infoTxtLink{display:block;width:16px;height:16px; background:url('../../img/cms2.0/common/icon_info.png') no-repeat center/contain; }
+
+#content.pagePopup .btnWrap.wide { padding:0 0 16px 0; }
+
+/* 업데이트텍스트 문구  */
+.updateTxt{position:relative; padding-right:20px; font-size:12px; line-height:18px; color:#767676; }
+.updateTxt .infoTxtLink{position:absolute; top:1px; right:0; overflow:hidden; text-indent:-9999px; font-size:0; }
+.updateTxt .txt{position:relative; margin-left:5px; padding-left:5px;}
+.updateTxt .txt:before{position:absolute; top:50%; left:0; margin-top:-4px; content:'';display:block;width:1px; height:10px; background:#e8e8e8;}
+
+/* 자금보고서_자금일보_운용가능액 */
+.infoListWrapper.typeUpdate{margin-top:8px; padding:16px 0; border-top:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8; }
+.infoListWrapper.typeUpdate .date{display:block; margin-bottom:16px; line-height:24px; font-size:16px; font-weight:700; color:#222; }
+.infoListWrapper.typeUpdate .infoListTitle{margin-bottom:16px;}
+.infoListWrapper.typeUpdate .infoListTitle strong{position:relative; display:inline-block; padding-right:6px; line-height:24px; font-size:16px; font-weight:700; color:#222;}
+.infoListWrapper.typeUpdate .infoListTitle strong + strong{padding-left:6px;}
+.infoListWrapper.typeUpdate .infoListTitle strong + strong:before{position:absolute; top:50%; margin-top:-4px; left:-1px; content:'';display:block;width:1px; height:10px; background:#e8e8e8;}
+.infoListWrapper.typeUpdate .infoListTitle .txt{margin-top:2px; font-size:13px; line-height:18px; color:#767676;}
+
+.infoListWrapper.typeUpdate .bankInfoList ul li > span{float:unset;}
+.infoListWrapper.typeUpdate .formBox input + .btn{min-width:80px !important;}
+
+/* 자금보고서_자금일보_입출금불러오기_(팝업)예상압출금입력_여신금융협회 */
+.chkListWrap{}
+.chkListWrap .chkListHeader{}
+
+.chkListWrap > ul{margin-top:8px; border-top:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8;}
+.chkListWrap > ul > li{padding:8px 0;}
+.chkListWrap > ul > li + li{border-top:1px solid #e8e8e8;}
+.chkListWrap > ul > li .inpBox input[type="checkbox"] + label{padding-left:34px;}
+
+.chkListWrap .bankInfoList ul li + li{margin-top:8px;}
+.chkListWrap .bankInfoList ul li > span{width:80px;}
+.chkListWrap .bankInfoList ul li > em{width:calc(100% - 90px); text-align:left;}
+
+/* 자금보고서_자금수지_(탭)일정.html */
+.mobileCalendarWrap{}
+.mobileCalendarWrap .dateNav{}
+.mobileCalendarWrap .dateNav ul{display:flex; justify-content:center; align-items:center; height:24px;}
+.mobileCalendarWrap .dateNav ul > li{margin:0 2px;}
+.mobileCalendarWrap .dateNav ul > li a{display:inline-block; width:16px; height:16px; text-align:center; vertical-align:center; }
+.mobileCalendarWrap .dateNav ul > li a.btnAllPrev{background:url(../../img/cms2.0/common/icon_all_prev.png) no-repeat center/contain;}
+.mobileCalendarWrap .dateNav ul > li a.btnPrev{background:url(../../img/cms2.0/common/icon_prev.png) no-repeat center/contain;}
+.mobileCalendarWrap .dateNav ul > li a.btnNext{background:url(../../img/cms2.0/common/icon_next.png) no-repeat center/contain;}
+.mobileCalendarWrap .dateNav ul > li a.btnAllNext{background:url(../../img/cms2.0/common/icon_all_next.png) no-repeat center/contain;}
+.mobileCalendarWrap .dateNav ul > li.date{margin:0 6px;}
+.mobileCalendarWrap .dateNav ul > li.date span{display:inline-block; line-height:24px;}
+
+.mobileCalendarWrap .calendarContainer{margin-top:24px;}
+.mobileCalendarWrap table{width:100%; border-collapse: collapse;}
+.mobileCalendarWrap table th,
+.mobileCalendarWrap table td{position:relative; padding:4px; text-align:center;}
+.mobileCalendarWrap table th{padding:11px 0; background-color:#f9f8f7; font-size:14px; font-weight:500; color:#222; }
+.mobileCalendarWrap table tbody tr td:first-child a{color:#d02d18;}
+.mobileCalendarWrap table td > a{display:inline-block; padding:8px 0;  width:100%; height:100%; text-align:center; border-radius:4px; font-size:14px; font-weight:400; color:#555; }
+.mobileCalendarWrap table td > a.prevDay,.mobileCalendarWrap table td > a.nextDay{color:#919191 !important;}
+
+.mobileCalendarWrap table td > a.active{background-color:#ffd800;}
+
+.mobileCalendarWrap table td .dataRound{position:absolute; bottom:2px; left:0; right:0; display:flex; justify-content:center;}
+.mobileCalendarWrap table td .dataRound li{border-radius:50%; display:inline-block; margin:0 1px; width:6px; height:6px;}
+.mobileCalendarWrap table td .dataRound .dataRoundYellow{background-color:#ffe760;}
+.mobileCalendarWrap table td .dataRound .dataRoundDark{background-color:#60584d;}
+.mobileCalendarWrap table td .dataRound .dataRoundBrown{background-color:#c4b496;}

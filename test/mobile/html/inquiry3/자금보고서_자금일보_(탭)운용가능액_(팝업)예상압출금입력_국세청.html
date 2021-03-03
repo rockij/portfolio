@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/css2.0/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/css2.0/content.css" />
+    <script type="text/javascript" src="../../js/js2.0/library/jquery_lib.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/js2.0/common_ui.js" charset="utf-8"></script>
+
+    <!-- cms2.0 추가 -->
+    <link rel="stylesheet" type="text/css" href="../../css/css2.0/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/css2.0/ui.style.css" />
+    <script type="text/javascript" src="../../js/js2.0/swiper.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/js2.0/ui.style.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content" class="pagePopup">
+            <!-- contInnerWrap -->
+            <div class="contInnerWrap">
+
+                <div class="inpWrap">
+                    <h5 class="sectTit">조회기관</h5>
+                    <ul>
+                        <li>
+                            <ul class="tabRadio">
+                                <li>
+                                    <input type="radio" name="radio01" id="radio01_1" >
+                                    <label for="radio01_1">여신금융협회</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio01" id="radio01_2" checked="">
+                                    <label for="radio01_2">국세청</label>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="inpWrap">
+                    <h5 class="sectTit">발급구분</h5>
+                    <ul>
+                        <li>
+                            <ul class="tabRadio">
+                                <li>
+                                    <input type="radio" name="radio02" id="radio02_1" checked="">
+                                    <label for="radio02_1">전자세금계산서</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio02" id="radio02_2" >
+                                    <label for="radio02_2">현금영수증</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio02" id="radio02_3" >
+                                    <label for="radio02_3">전자계산서</label>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="inpWrap">
+                    <h5 class="sectTit">조회구분</h5>
+                    <ul>
+                        <li>
+                            <ul class="tabRadio">
+                                <li>
+                                    <input type="radio" name="radio03" id="radio03_1" checked="">
+                                    <label for="radio03_1">매출내역</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio03" id="radio03_2">
+                                    <label for="radio03_2">매입내역</label>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="inpWrap">
+                    <h5 class="sectTit">사업자번호</h5>
+                    <ul>
+                        <li>
+                            <div class="formBox">
+                                <select name="" id="">
+                                    <option value="">사업자번호 선택</option>
+                                    <option value="">옵션2</option>
+                                    <option value="">옵션3</option>
+                                </select>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="btnWrap small2 wide mt24">
+                    <a href="javascript:;" role="button" class="btn bgYellow">조회</a>
+                </div>
+
+                <!--발급구분-전자세금계산서,전자계산서일 경우 노출-->
+                <div class="chkListWrap mt24">
+                    <!--전체선택-->
+                    <div class="chkListHeader">
+                        <div class="inpBox">
+                            <input type="checkbox" name="chk01" id="chk01_1">
+                            <label for="chk01_1">
+                                <span class="tit">전체선택</span>
+                            </label>
+                        </div>
+                    </div>
+                    <!--// 전체선택-->
+
+                    <!--리스트-->
+                    <ul>
+                        <li>
+                            <div class="inpBox">
+                                <input type="checkbox" name="chk01" id="chk01_2">
+                                <label for="chk01_2">
+                                    <div class="bankInfoList">
+                                        <ul>
+                                            <li>
+                                                <span>발급일자</span>
+                                                <em>2020.02.22</em>
+                                            </li>
+                                            <li>
+                                                <span>상호</span>
+                                                <em>(주)고려상사</em>
+                                            </li>
+                                            <li>
+                                                <span>품목</span>
+                                                <em>휴대폰케이스</em>
+                                            </li>
+                                            <li>
+                                                <span>합계금액</span>
+                                                <em>10,000,000원</em>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="inpBox">
+                                <input type="checkbox" name="chk01" id="chk01_3">
+                                <label for="chk01_3">
+                                    <div class="bankInfoList">
+                                        <ul>
+                                            <li>
+                                                <span>발급일자</span>
+                                                <em>2020.02.22</em>
+                                            </li>
+                                            <li>
+                                                <span>상호</span>
+                                                <em>(주)고려상사</em>
+                                            </li>
+                                            <li>
+                                                <span>품목</span>
+                                                <em>휴대폰케이스</em>
+                                            </li>
+                                            <li>
+                                                <span>합계금액</span>
+                                                <em>10,000,000원</em>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="inpBox">
+                                <input type="checkbox" name="chk01" id="chk01_4">
+                                <label for="chk01_4">
+                                    <div class="bankInfoList">
+                                        <ul>
+                                            <li>
+                                                <span>발급일자</span>
+                                                <em>2020.02.22</em>
+                                            </li>
+                                            <li>
+                                                <span>상호</span>
+                                                <em>(주)고려상사</em>
+                                            </li>
+                                            <li>
+                                                <span>품목</span>
+                                                <em>휴대폰케이스</em>
+                                            </li>
+                                            <li>
+                                                <span>합계금액</span>
+                                                <em>10,000,000원</em>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                    <!--// 리스트-->
+                </div>
+                <!--//발급구분-전자세금계산서,전자계산서일 경우 노출-->
+
+                <!--발급구분-현금영수증일 경우 노출-->
+                <div class="chkListWrap mt24">
+                    <!--전체선택-->
+                    <div class="chkListHeader">
+                        <div class="inpBox">
+                            <input type="checkbox" name="chk02" id="chk02_1">
+                            <label for="chk02_1">
+                                <span class="tit">전체선택</span>
+                            </label>
+                        </div>
+                    </div>
+                    <!--// 전체선택-->
+
+                    <!--리스트-->
+                    <ul>
+                        <li>
+                            <div class="inpBox">
+                                <input type="checkbox" name="chk02" id="chk02_2">
+                                <label for="chk02_2">
+                                    <div class="bankInfoList">
+                                        <ul>
+                                            <li>
+                                                <span>사용일시</span>
+                                                <em>2021.02.07 12:12:12</em>
+                                            </li>
+                                            <li>
+                                                <span>합계금액</span>
+                                                <em>10,000,000원</em>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="inpBox">
+                                <input type="checkbox" name="chk02" id="chk02_3">
+                                <label for="chk02_3">
+                                    <div class="bankInfoList">
+                                        <ul>
+                                            <li>
+                                                <span>사용일시</span>
+                                                <em>2021.02.07 12:12:12</em>
+                                            </li>
+                                            <li>
+                                                <span>합계금액</span>
+                                                <em>10,000,000원</em>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="inpBox">
+                                <input type="checkbox" name="chk02" id="chk02_4">
+                                <label for="chk02_4">
+                                    <div class="bankInfoList">
+                                        <ul>
+                                            <li>
+                                                <span>사용일시</span>
+                                                <em>2021.02.07 12:12:12</em>
+                                            </li>
+                                            <li>
+                                                <span>합계금액</span>
+                                                <em>10,000,000원</em>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                    <!--// 리스트-->
+                </div>
+                <!--//발급구분-현금영수증일 경우 노출-->
+
+
+                <div class="bankInfoList boxType mt24">
+                    <ul>
+                        <li>
+                            <span>선택항목 합계</span>
+                            <em>60,000,000원</em>
+                        </li>
+                        <li>
+                            <span>여신금융협회</span>
+                            <em>30,000,000원</em>
+                        </li>
+                        <li>
+                            <span>국세청</span>
+                            <em>20,000,000원</em>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--조회내역 없을시 노출-->
+                <div class="dataNone">
+                    <p class="txt">조회 내역이 없습니다.</p>
+                </div>
+                <!--// 조회내역 없을시 노출-->
+
+            </div>
+            <!--// contInnerWrap -->
+
+            <div class="btnWrap full">
+                <a href="javascript:;" role="button" class="btn bgYellow">확인</a>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

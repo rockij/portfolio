@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko"><head>
 <meta charset="UTF-8">
 <meta http-equiv="Content-Language" content="ko-KR">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
-<title></title>
+<script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-1.6.4.min.js" charset="utf-8"></script>
 <style>
 html{
     background:#58DDAF;
@@ -68,16 +65,6 @@ a.control_next{right:0;border-radius: 0 2px 2px 0;}
 </style>
 <script>
 $(document).ready(function(){
-    $('#checkbox').change(function(){
-        // $('#slider ul').css('left', '');
-        if( $(this).prop('checked') ){
-            timer = setInterval(function(){
-                moveRight();
-            }, 3000);
-        }else{
-            clearInterval(timer);
-        }
-    });
 
     var slideCount = $('#slider ul li').length;
     var slideWidth = $('#slider ul li').width();
@@ -85,50 +72,49 @@ $(document).ready(function(){
     var slidePage = $('.slider_paging li').length;
     var sliderUIWidth = slideCount * slideWidth;
 
+    timer = setInterval(function(){
+        $('.slider_paging li a:eq('+count+')').trigger('click');
+        idx = parseInt( $('.slider_paging li.on a').text() );
+        if(idx === slidePage){
+            count = -1;
+            console.log('end');
+        }else{
+            count = idx-1;
+        }
+        count++;
+    }, 3000);
+
     $('#slider').css({ width: slideWidth, height: slideHeight });
 
-    $('#slider ul').css({ width: sliderUIWidth, marginLeft: - slideWidth });
-
-    $('#slider ul li:last-child').prependTo('#slider ul');
-
-    function moveLeft() {
-        $('#slider ul').animate({
-            left: + slideWidth
-        }, 200, function(){
-            $('#slider ul li:last-child').prependTo('#slider ul');
-            $('#slider ul').css('left', '');
-        });
-    };
-
-    function moveRight() {
-        $('#slider ul').animate({
-            left: - slideWidth*1
-        }, 200, function(){
-            $('#slider ul li:first-child').appendTo('#slider ul');
-            $('#slider ul').css('left', '');
-        });
-    };
-
-    $('a.control_prev').click(function (e) {
-        e.preventDefault();
-        moveLeft();
-    });
-
-    $('a.control_next').click(function (e) {
-        e.preventDefault();
-        moveRight();
-    });
+    $('#slider ul').css({ width: sliderUIWidth });
 
     $('.slider_paging li a').click(function (e) {
         e.preventDefault();
-        var idx = $(this).parent().index()+1;
-        if(idx === 1){
-            $('#slider ul li:first-child').appendTo('#slider ul');
-        }else if(idx === 2){
-            $('#slider ul li:nth-child(3)').prependTo('#slider ul');
+        var idx = $(this).parent().index();
+        $('.slider_paging li').removeClass('on');
+        $(this).parent().addClass('on');
+        $('#slider ul').animate({
+            left: - slideWidth * idx
+        }, 200);
+    });
+
+    $('.slider_paging li a').hover(function () {
+        clearInterval(timer);
+    }, function(){
+    });
+
+    $('#checkbox').change(function(){
+        if( $(this).prop('checked') ){
+            idx = parseInt( $('.slider_paging li.on a').text() );
+            if( $('.slider_paging li').hasClass('on') ){
+                count = idx;
+            }else{
+                idx = 1, count = 1;
+            }
+            timer;
+        }else{
+            clearInterval(timer);
         }
-        $('#slider ul').css('left', '');
-        console.log(idx);
     });
 
 })
@@ -137,8 +123,6 @@ $(document).ready(function(){
 <body>
 
 <div id="slider">
-    <a href="#" class="control_next">&gt;</a>
-    <a href="#" class="control_prev">&lt;</a>
     <ul>
         <li>SLIDE1</li>
         <li style="background:#aaa">SLIDE2</li>
@@ -147,3 +131,17 @@ $(document).ready(function(){
         <li>SLIDE5</li>
     </ul>
 </div>
+<div class="slider_option">
+    <input type="checkbox" id="checkbox">
+    <label for="checkbox">Autoplay Slider</label>
+</div>
+<ul class="slider_paging">
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+</ul>
+
+
+</body></html>
