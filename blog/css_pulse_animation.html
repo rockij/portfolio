@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<title></title>
+<style>
+body{
+    background-color:#e5e5fa
+}
+.pulse{
+    height:150px;
+    width:150px;
+    background:  linear-gradient(
+        #8a82fb,
+        #407ed7
+    );
+    position:absolute;
+    margin:auto;border-radius:50%;
+    left:0;right:0;top:0;bottom:0;
+    font-size:50px;
+    display:grid;
+    place-items:center;
+    color:#fff;
+}
+.pulse::before,
+.pulse::after{
+    content:'';
+    position:absolute;
+    height:100%;
+    width:100%;
+    background-color:#8a82fb;
+    border-radius: 50%;
+    z-index:-1;
+    opacity: .7;
+}
+.pulse::before{
+    animation: pulse 2s ease-out infinite;
+}
+.pulse::after{
+    animation: pulse 2s 1s ease-out infinite;
+}
+@keyframes pulse{
+    100%{
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="pulse">
+    <i class="fas fa-bell"></i>
+</div>
+
+</body>
+</html>
