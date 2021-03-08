@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+<title></title>
+<style>
+body{
+    background-color:#333
+}
+p{
+    color:#fff;
+    font-size:100px;
+    display:inline;
+    border-right:4px solid #66ccff;
+    animation: blink 1s infinite;
+    padding-right:8px;
+}
+@keyframes blink {
+    50%{
+        border-right: none;
+    }
+}
+</style>
+</head>
+<body>
+
+<p id="type"></p>
+
+<script>
+var i = 0;
+var txt="How to create typing animation.";
+var speed=150;
+function type(){
+    document.getElementById("type").innerHTML+=txt.charAt(i);
+    i++;
+    setTimeout(type,speed);
+}
+type();
+</script>
+
+</body>
+</html>
