@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+<title></title>
+<style>
+*{
+    box-sizing: border-box;    
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    flex-wrap: wrap;
+    background:#111;
+}
+.box{
+    position:relative;
+    width:300px;
+    height:300px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:#111;
+    border:20px solid #151515;
+    margin:30px;
+    transition: .5s;
+}
+.box:hover{
+    box-shadow: 0 40px 0 -20px #19b73e,
+                0 -40px 0 -20px #dc0028,
+                -40px 0 0 -20px #1328db,
+                40px 0 0 -20px #ff560b,
+                inset 0 40px 0 -20px #19b73e,
+                inset 0 -40px 0 -20px #dc0028,
+                inset -40px 0 0 -20px #1328db,
+                inset 40px 0 0 -20px #ff560b;
+}
+.box h2{
+    position:relative;
+    color:#fff;
+    font-size:3em;
+    opacity:.1;
+    transition: .5s;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+    <h2>box1</h2>
+</div>
+<div class="box">
+    <h2>box2</h2>
+</div>
+<div class="box">
+    <h2>box3</h2>
+</div>
+
+</body>
+</html>
