@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+<title></title>
+<style>
+body{
+    font-family: 'Poppins', sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    background:#222
+}
+ul{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+ul li{
+    position:relative;
+    margin:5px;
+}
+ul li a{
+    overflow:hidden;
+    position:relative;
+    height:40px;
+    display:block;
+    text-decoration: none;
+    padding:5px 10px;
+    letter-spacing: 2px;
+}
+ul li a::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#ec333f;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s ease-in-out;
+    transition-delay: 0s;
+}
+ul li a:hover::before{
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform .5s ease-in-out;
+    transition-delay: .5s;
+}
+ul li a span{
+    position:relative;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    color:#fff;
+    font-size:20px;
+    transition-delay: .5s;
+}
+ul li a:hover span:nth-child(1){transform: translateY(-100%);transition-delay: 0s;}
+ul li a:hover span:nth-child(2){transform: translateY(-100%);transition-delay: 0s;}
+</style>
+</head>
+<body>
+
+<ul>
+    <li>
+        <a href="#">
+            <span>Home</span>
+            <span>Home</span>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <span>About</span>
+            <span>About</span>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <span>Portfolio</span>
+            <span>Portfolio</span>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <span>Team</span>
+            <span>Team</span>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <span>Contact</span>
+            <span>Contact</span>
+        </a>
+    </li>
+</ul>
+
+</body>
+</html>
