@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/jquery-ui-1.8.16.css" />
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/osite/cms_base.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.common.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.style.css" />
+    
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-1.6.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-ui-1.8.16.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery_bgiframe_min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery.validity.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mCustomScrollbar.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/ui.common.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="navSkip"><a href="#containerWrap">본문으로 바로가기</a></div>
+        <!-- header -->
+        <div class="headerWrap">            
+			<script type="text/javascript" src="../../assets/js2.0/ui.header.js" charset="utf-8"></script>
+        </div>
+        <!--// header -->
+
+        <!-- containerWrap -->
+        <div id="containerWrap" role="main" class="inquiry">
+            <div id="container">
+                <!-- 컨텐츠 내용 -->
+
+                <div class="location">
+                    <span class="blind">페이지 위치</span>
+                    <ul>
+                        <li><a href="javascript:;">Star CMS</a></li>
+                        <li><a href="javascript:;">조회/자금모으기</a></li>
+                        <li><a href="javascript:;">통합자금관리</a></li>
+                        <li class="curr">자금모으기</li>
+                    </ul>
+                </div>
+                
+                <div class="pageTop">
+                    <h2 class="pageTit">자금모으기</h2>
+					<ol class="stepProcess">
+						<!--// 활성화시 li에 on 클래스 추가 - 완료된 스탭에는 li에 compleate 클래스 추가 -->
+						<li class="on compleate">
+							<i>01</i>
+							<span>자금모으기 실행</span>
+						</li>
+						<li class="on">
+							<i>02</i>
+							<span>자금모으기 완료</span>
+						</li>
+					</ol>
+				</div>
+
+                <!-- page tab -->
+                <ul class="pageTab" role="tablist">
+                    <li><a href="javascript:;" class="on">자금모으기</a></li>
+                    <li><a href="javascript:;">처리결과 조회</a></li>
+                    <li><a href="javascript:;">자금모으기 그룹</a></li>
+                </ul>
+
+				<!-- view area 개발자 분들은 이부분 부터 쓰시면 됩니다. -->
+				<div class="viewArea inquiryAccount">
+					<!-- notiBox -->
+					<div class="notiBox">
+						<!-- accordionWrap -->
+						<dl class="accordionWrap">
+							<dt><a href="javascript:;">유의사항</a></dt>
+							<dd>
+								<div>
+									<!-- notiList -->
+									<ul class="notiList">
+										<li>자금모으기 실행 처리결과를 [처리결과 조회]에서 꼭 확인하시기 바랍니다.</li>
+                                        <li>자금모으기시 발생한 건너뛰기 건은 처리결과조회의 [자금모으기 재실행]을 통해 다시 진행 가능합니다.</li>
+									</ul>
+									<!--// notiList -->
+								</div>
+							</dd>
+						</dl>
+						<!--// accordionWrap -->
+					</div>					
+                    <!--// notiBox -->
+
+                    <!-- 기 등록된 자금모으기그룹으로 실행하지 않았을 시 -->
+                    <div class="alarmInfoBox mt50">
+                        <p>자금모으기 정보를 저장하면 자금모으기 시 자금모으기 그룹에서 바로 이용 가능합니다.</p>
+                        <a href="javascript:;" role="button" class="sbtn bgWhite2 round" title="자금모으기 그룹 등록/수정">자금모으기 그룹 저장</a>
+                    </div>
+                    <!--// 기 등록된 자금모으기그룹으로 실행하지 않았을 시 -->
+                    
+                    <!-- 자금모으기결과 -->
+                    <h3 class="contTit mt50">자금모으기 결과</h3>
+                    <div class="tableWrap mt20">
+                        <table summary="">
+                            <caption></caption>
+                            <colgroup>
+                                <col width="200px;">
+                                <col width="340px;">
+                                <col width="200px;">
+                                <col width="340px;">
+                            </colgroup>
+                            <tbody>
+								<tr>
+                                    <th scope="row">입금계좌</th>
+									<td colspan="3">국민은행 123456-12-123456 : 사업자명</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">자금모으기 실행</th>
+                                    <td>출금계좌 17건 (200,000원)</td>
+                                    <th scope="row">자금모으기 미실행</th>
+									<td>출금계좌 3건 (100,000원)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="tableWrap type02 mt30">
+                        <table summary="">
+                            <caption></caption>
+                            <colgroup>
+                                <col width="64px;">
+                                <col width="120px;">
+                                <col width="100px;">
+                                <col width="160px;">
+                                <col width="170px;">
+                                <col width="130px;">
+                                <col width="130px;">
+                                <col width="98px;">
+                                <col width="98px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col"><input type="checkbox" id="chk1" title="등록가능한 계좌 선택하기"></th>
+                                    <th scope="col">사업자명</th>
+                                    <th scope="col">금융기관</th>
+                                    <th scope="col">출금계좌</th>
+                                    <th scope="col">이체금액(원)</th>
+                                    <th scope="col">출금계좌메모</th>
+                                    <th scope="col">이체계좌메모</th>
+                                    <th scope="col">등록구분</th>
+                                    <th scope="col">처리결과</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td>방교섭영(장)</td>
+                                    <td>국민은행</td>
+                                    <td>123456-12-123456</td>
+                                    <td class="price">100,000</td>
+                                    <td>메모</td>
+                                    <td></td>
+                                    <td>등록계좌</td>
+                                    <td>실행완료</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="chk3" title="계좌 선택하기"></td>
+                                    <td>방교섭영(장)</td>
+                                    <td>국민은행</td>
+                                    <td>123456-12-123456</td>
+                                    <td class="price">100,000</td>
+                                    <td>메모</td>
+                                    <td></td>
+                                    <td>등록가능</td>
+                                    <td>실행완료</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>방교섭영(장)</td>
+                                    <td>국민은행</td>
+                                    <td>123456-12-123456</td>
+                                    <td class="price">100,000</td>
+                                    <td>메모</td>
+                                    <td></td>
+                                    <td>등록불가</td>
+                                    <td class="error">오류</td>
+                                </tr>
+                            </tbody>
+                        </table>                        
+                    </div>
+                    <!--// 자금모으기결과 -->
+
+					<div class="btnWrap mt60">
+                        <a href="javascript:;" role="button" class="btn bgYellow" title="미등록 계좌등록하기">계좌등록</a>
+                        <a href="javascript:;" role="button" class="btn bgYellow" title="처리결과조회 화면으로 이동">처리결과조회 및 확인증발급</a>
+					</div>
+				</div>
+                <!--// view area -->
+                
+                <!--// 컨텐츠 내용 -->
+            </div>
+            <!--// container -->
+        </div>
+        <!--// containerWrap -->
+
+        <!-- footer -->
+        <div class="footerWrap">
+			<script type="text/javascript" src="../../assets/js2.0/ui.footer.js" charset="utf-8"></script>
+        </div>
+        <!-- footer -->
+    </div>
+    
+</body>
+</html>

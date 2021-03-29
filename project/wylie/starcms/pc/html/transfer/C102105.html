@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/jquery-ui-1.8.16.css" />
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/osite/cms_base.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.common.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.style.css" />
+    
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-1.6.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-ui-1.8.16.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery_bgiframe_min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery.validity.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mCustomScrollbar.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/ui.common.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="navSkip"><a href="#containerWrap">본문으로 바로가기</a></div>
+        <!-- header -->
+        <div class="headerWrap">            
+			<script type="text/javascript" src="../../assets/js2.0/ui.header.js" charset="utf-8"></script>
+        </div>
+        <!--// header -->
+
+        <!-- containerWrap -->
+        <div id="containerWrap" role="main" class="inquiry">
+            <div id="container">
+                <!-- 컨텐츠 내용 -->
+
+                <div class="location">
+                    <span class="blind">페이지 위치</span>
+                    <ul>
+                        <li><a href="javascript:;">Star CMS</a></li>
+                        <li><a href="javascript:;">이체/수납</a></li>
+                        <li><a href="javascript:;">외화가상계좌</a></li>
+                        <li><a href="javascript:;">계좌정보관리</a></li>
+                        <li><a href="javascript:;">건별관리</a></li>
+                        <li class="curr">계좌정보등록</li>
+                    </ul>
+                </div>
+                
+                <div class="pageTop">
+                    <h2 class="pageTit">계좌정보관리</h2>
+					<ol class="stepProcess">
+						<!--// 활성화시 li에 on 클래스 추가 - 완료된 스탭에는 li에 compleate 클래스 추가 -->
+						<li class="on">
+							<i>01</i>
+							<span>정보입력</span>
+						</li>
+						<li>
+							<i>02</i>
+							<span>입력완료</span>
+						</li>
+						<li>
+							<i>03</i>
+							<span>등록완료</span>
+						</li>
+					</ol>	
+				</div>
+
+                <!-- page tab -->
+                <ul class="pageTab" role="tablist">
+                    <li><a href="javascript:;" class="on">건별관리</a></li>
+                    <li><a href="javascript:;">대량관리</a></li>
+                </ul>
+
+				<!-- view area 개발자 분들은 이부분 부터 쓰시면 됩니다. -->
+				<div class="viewArea inquiryAccount">
+
+					<ul class="subTab" role="tablist"> 
+                        <li><a href="javascript:;" class="on" title="현재 탭" aria-selected="true">계좌정보등록</a></li>
+                        <li><a href="javascript:;" title="" aria-selected="false">계좌정보수정</a></li>
+                    </ul>
+
+					<!-- noti box -->
+					<div class="notiBox">
+                        <!-- accordionWrap -->
+                        <dl class="accordionWrap">
+                            <dt role="presentation"><a href="javascript:;" class="trigger" title="상세내용 열림" role="button">유의사항</a></dt>
+                            <dd style="height: 0px;">
+                                <div>
+                                    <!-- notiList -->
+                                    <ul class="notiList">
+										<li>가상계좌 건별로 고객정보를 등록하거나 입금조건을 설정하실 수 있습니다.</li>
+										<li>고객명은 가상계좌로 입금 시 보여지는 해당 가상계좌 수취인명이며, 필수 선택사항입니다.</li>
+										<li>
+											고객명은 착오송금을 방지하기 위하여 가상계좌를 발급한 업체명이 자동으로 표시되며, 필요 시 업체명 추가입력이 가능합니다.<br />
+											예) 업체명-"(주)국민상사", 추가입력-"홍길동"인 경우, 가상계좌 수치인명은 "(주)국민상사_홍길동"으로 보여집니다.										
+										</li>
+										<li>추가입력을 포함한 전체 고객명(한글 15자, 영문/숫자 30자 이내)에서 자동생성된 업체명(한글 8자, 영문/숫자 16자 이내) 자리수를 제외한 추가입력이 가능합니다.</li>
+										<li>
+											등록고유번호는 선택사항이며, 가상계좌 입금 발생 시 등록고유번호에 입력하신 내용으로 입금자를 확인 할 수 있습니다.<br />
+											(주민등록번호 입력 불가하며, 한글은 8자, 영문/숫자는 16자 이내 가능)<br />
+											예) 등록고유번호에 "홍길동"이라 입력 후 해당 계좌로 입금이 되면, 등록고유번호 "홍길동"으로 입금내역 확인 가능합니다.
+										</li>
+										<li>입금조건설정을 하시려면 아래 입금조건설정에 '적용'을 클릭하십시오.</li>
+                                    </ul>
+                                    <!--// notiList -->
+                                </div>
+                            </dd>
+                        </dl>
+						<!--// accordionWrap -->
+					</div>
+					<!--// noti box -->
+					<!-- 옵션1 -->
+					<div class="tableWrap mt50">
+                        <table summary="">
+                            <caption></caption>
+                            <colgroup>
+                                <col width="200px;">
+                                <col width="auto;">
+                            </colgroup>
+                            <tbody>
+								<tr>
+                                    <th scope="row">회원사구분</th>
+									<td>
+										<select class="selbox w300">
+											<option value="" selected="selected">회원사를 선택하세요.</option>
+											<option value="">회원사를 선택하세요.</option>
+										</select>
+									</td>
+								</tr>
+                                <tr>
+                                    <th scope="row">고객명</th>
+                                    <td>
+										<div class="formOtherType01">
+											<ul class="formList">
+												<li>
+													<input type="radio" id="inquiry01" name="inquiry" checked="checked">
+													<label for="inquiry01">업체명만 표시</label>
+												</li>
+											</ul>
+											<input type="text" class="w300" data-placeholder="(주)국민산업">
+										</div>
+										<div class="formOtherType01 mt20">
+											<ul class="formList">
+												<li>
+													<input type="radio" id="inquiry02" name="inquiry">
+													<label for="inquiry02">업체명 + 추가입력</label>
+												</li>
+											</ul>
+											<input type="text" class="w300" data-placeholder="(주)국민산업" disabled="true">
+											<span>-</span>
+											<input type="text" class="w300" data-placeholder="(주)국민산업" disabled="true">
+										</div>
+										<p class="infoTxt">
+											입금 시 보여지는 가상계좌 수취인명<br/>
+											추가입력을 포함한 전체 고객명 - 한글 15자, 영문/숫자 30자 이내 입력
+										</p>
+									</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">등록고유번호</th>
+                                    <td>
+										<input type="text" class="w300" data-placeholder="등록고유번호를 입력하세요.">
+										<p class="infoTxt">
+											가상계좌 입금내역 조회 시 등록고유번호에 입력한 내용으로 입금자 확인 가능(주민등록번호 입력 불가)<br />
+											한글 8자, 영문/숫자 16자 이내 입력 가능
+										</p>
+									</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+					<!--// 옵션1 -->
+					<!-- 옵션2 -->
+					<div class="tableWrap mt30">
+                        <table summary="">
+                            <caption></caption>
+                            <colgroup>
+                                <col width="200px;">
+                                <col width="auto;">
+                            </colgroup>
+                            <tbody>
+								<tr>
+                                    <th scope="row">입금가능여부</th>
+									<td>
+                                        <ul class="formList">
+                                            <li>
+                                                <input type="radio" id="inquiry03" name="inquiry2" checked />
+                                                <label for="inquiry03">입금가능</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="inquiry04" name="inquiry2" />
+                                                <label for="inquiry04">입금불가</label>
+                                            </li>
+                                        </ul>
+									</td>
+								</tr>
+								<tr>
+                                    <th scope="row">입금가능기간</th>
+									<td>
+                                        <ul class="formList">
+                                            <li>
+                                                <input type="radio" id="inquiry05" name="inquiry3" checked />
+                                                <label for="inquiry05">미설정</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="inquiry06" name="inquiry3" />
+                                                <label for="inquiry06">설정</label>
+                                            </li>
+                                        </ul>
+                                        <div class="dateInput mt20">
+                                            <div class="inpArea">
+                                                <input type="text" value="2020.12.11" data-placeholder="입력해주세요" class="isValue" disabled>
+                                                <button type="button" class="btnIcon calendar"><span class="blind">날짜 선택</span></button> 
+                                            </div>
+                                            <span>~</span>
+                                            <div class="inpArea">
+                                                <input type="text" value="2020.12.11" data-placeholder="입력해주세요" class="isValue">
+                                                <button type="button" class="btnIcon calendar"><span class="blind">날짜 선택</span></button> 
+                                            </div>
+                                        </div>
+									</td>
+								</tr>
+								<tr>
+                                    <th scope="row">입금가능시간</th>
+									<td>
+                                        <ul class="formList">
+                                            <li>
+                                                <input type="radio" id="inquiry07" name="inquiry4" checked />
+                                                <label for="inquiry07">미설정</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="inquiry08" name="inquiry4" />
+                                                <label for="inquiry08">설정</label>
+                                            </li>
+                                        </ul>
+										<div class="formOtherType02 mt20">
+											<select class="selbox" disabled="disabled">
+												<option value="" selected="selected">09</option>
+											</select>											
+											<em>시</em>
+											<select class="selbox" disabled="disabled">
+												<option value="" selected="selected">09</option>
+											</select>											
+											<em>분</em>
+											<span>~</span>
+											<select class="selbox" disabled="disabled">
+												<option value="" selected="selected">09</option>
+											</select>											
+											<em>시</em>
+											<select class="selbox" disabled="disabled">
+												<option value="" selected="selected">09</option>
+											</select>											
+											<em>분</em>
+										</div>
+									</td>
+								</tr>
+								<tr>
+                                    <th scope="row">입금가능횟수</th>
+                                    <td>
+										<div class="formOtherType03">
+											<ul class="formList">
+												<li>
+													<input type="radio" id="inquiry09" name="inquiry5" checked />
+													<label for="inquiry09">미설정</label>
+												</li>
+												<li>
+													<input type="radio" id="inquiry10" name="inquiry5" />
+													<label for="inquiry10">설정</label>
+												</li>
+											</ul>
+											<label for="input01" class="blind">입금가능횟수</label><input type="text" id="input01" class="w300" disabled="true">
+										</div>
+                                    </td>
+                                </tr>
+								<tr>
+                                    <th scope="row">입금가능금액</th>
+                                    <td>
+										<div class="formOtherType03">
+											<ul class="formList">
+												<li>
+													<input type="radio" id="inquiry11" name="inquiry6" checked />
+													<label for="inquiry11">미설정(자유입금)</label>
+												</li>
+												<li>
+													<input type="radio" id="inquiry12" name="inquiry6" />
+													<label for="inquiry12">설정(정액입금)</label>
+												</li>
+											</ul>
+											<label for="input01" class="blind">설정(정액입금)</label><input type="text" id="input01" class="w300" disabled="true">
+										</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+					<!--// 옵션2 -->
+					<div class="btnWrap mt60">
+                        <a href="javascript:;" role="button" class="btn bgYellow" title="확인">확인</a>
+                        <a href="javascript:;" role="button" class="btn bgGray" title="취소">취소</a>
+					</div>
+				</div>
+
+                <!--// view area -->
+                
+                <!--// 컨텐츠 내용 -->
+            </div>
+            <!--// container -->
+        </div>
+        <!--// containerWrap -->
+
+        <!-- footer -->
+        <div class="footerWrap">
+			<script type="text/javascript" src="../../assets/js2.0/ui.footer.js" charset="utf-8"></script>
+        </div>
+        <!-- footer -->
+    </div>
+</body>
+</html>

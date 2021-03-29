@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--
+	2020-07-06 		신청인 이름 가운데 마스킹 처리, 대출챠량정보 위치수정
+-->
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<!--target-densitydpi=medium-dpi-->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<!-- 아이폰 전체화면 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<title>딜러라운지</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../assets/css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick-theme.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/swiper.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/ui.common.css" type="text/css" /> <!-- 공통 요소 -->
+
+	<!-- JS -->
+	<script type="text/javascript" src="../../assets/js/jquery.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/slick.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/Chart.min.js"></script><!-- 공통 요소 -->
+	<script type="text/javascript" src="../../assets/js/ui.common.js"></script><!-- 공통 요소 -->
+</head>
+
+<body>
+	<section id="wrap">
+		<div id="skipNavi">
+			<a href="#container">본문 바로가기</a>
+		</div>
+		<main id="newDetail" class="loan">
+			<link rel="stylesheet" href="../../assets/css/ui.loan.css" type="text/css" />
+			<section id="container" class="newDetail">
+
+				<div class="currStep">
+					<ul>
+						<li class="end">1</li> <!-- 완료시 class="end", 현재단계 class="curr" -->
+						<li class="curr">신청정보확인</li>
+						<li>3</li>
+					</ul>
+				</div>
+
+				<div class="loanInfo">
+					<ul class="accordionList">
+						<li>
+							<dl>
+								<dt class="trigger on">1. 신청인정보</dt>
+								<dd>
+									<dl class="dataList">
+										<dt>사업자번호</dt>
+										<dd>123차1234</dd>
+										<dt>대표자</dt>
+										<dd>김●범</dd> <!--// 2020-07-06 이름 가운데 마스킹 처리 -->
+										<dt>상호명</dt>
+										<dd>수성모터스</dd>
+									</dl>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt class="trigger on">2. 대출신청 정보</dt>
+								<dd>
+									<dl class="dataList">
+										<dt>대출상품</dt>
+										<dd>5개월 무연장 딜러론</dd>
+										<dt>대출기간</dt>
+										<dd>5개월</dd>
+										<dt>이자율</dt>
+										<dd>3.60%</dd>
+										<dt>지연배상금<span>(연체이자율)</span></dt>
+										<dd>6.6%</dd>
+									</dl>
+									<ul class="notiList">
+										<li>(약정금리+최대3%, 법정최고금리 연24%이내)</li>
+									</ul>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+
+				<div class="loanCarInfo">
+					<h3>3. 대출차량 정보</h3>
+					<ul class="carInfoList">
+						<li>
+							<strong>[기아] 스포티지 스포티지 R 2WD TLX</strong>
+							<!-- 2020-07-06 위치수정 -->
+							<div class="info">
+								<span>42마7874</span>
+								<span>결제일 14일</span>
+							</div>
+							<!--// 2020-07-06 위치수정 -->
+							<p class="price"><em>900</em> 만원</p>
+						</li>
+						<li>
+							<strong>[삼성] SMS3 뉴SMS3 1.6 SE</strong>
+							<!-- 2020-07-06 위치수정 -->
+							<div class="info">
+								<span>42마7874</span>
+								<span>결제일 14일</span>
+							</div>
+							<!--// 2020-07-06 위치수정 -->
+							<p class="price"><em>150</em> 만원</p>
+						</li>
+					</ul>
+				</div>
+
+				<dl class="priceBox">
+					<dt>총 대출금액</dt>
+					<dd>1,050만원</dd>
+				</dl>
+
+				<fieldset class="agreeList">
+                    <legend>약정사실 확인 체크박스</legend>
+                    <label class="formChkbox allChk">
+                        <input type="checkbox">
+                        <i class="icon"></i>
+                        <span class="txt">약정사실 확인 </span>
+                    </label>
+                    <ul>
+                        <li>
+                            <label class="formChkbox bgnone">
+                                <input type="checkbox">
+                                <i class="icon"></i>
+                                <span class="txt">본인 겸 대출신청인은 본 대출신청과 대출금액, 대출기간, 대출금리, 지연배상금, 상황방법,  각종  수수료 등에 중요한 대출상품 정보를 충분히 확인하고 이해하였으며, 본인의 의사에 따라  본 대출약정을 체결 함을 확인 합니다. </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="formChkbox bgnone">
+                                <input type="checkbox">
+                                <i class="icon"></i>
+                                <span class="txt">본 대출은 판매용도의 중고차 매입자금 대출목적으로만 활용 할 것임을 확인하고, 이외의 금전 편취/자금유용을 목적으로 한  대출일 시, 대출금의 변제를 포함한 모든 민/형사  상의 책임을  질  것을 약정합니다.</span>
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+
+			</section>
+			<div class="btnArea full">
+				<a href="#" class="lightGray">신청정보수정</a>
+                <a href="#" class="blue">대출신청</a>
+            </div>
+		</main>
+	</section>
+</body>
+</html>

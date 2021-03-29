@@ -1,0 +1,1412 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/jquery-ui-1.8.16.css" />
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/osite/cms_base.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.common.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.style.css" /> 
+    
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-1.6.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-ui-1.8.16.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery_bgiframe_min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery.validity.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mCustomScrollbar.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/ui.common.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="navSkip"><a href="#containerWrap">본문으로 바로가기</a></div>
+        <!-- header -->
+        <div class="headerWrap">            
+			<script type="text/javascript" src="../../assets/js2.0/ui.header.js" charset="utf-8"></script>
+        </div>
+        <!--// header -->
+
+        <!-- containerWrap -->
+        <div id="containerWrap" role="main" class="inquiry">
+            <div id="container">
+                <!-- 컨텐츠 내용 -->
+
+                <div class="location">
+                    <span class="blind">페이지 위치</span>
+                    <ul>
+                        <li><a href="javascript:;">Star CMS</a></li>
+                        <li><a href="javascript:;">조회/자금모으기</a></li>
+                        <li><a href="curr">매출/입금내역 조회</a></li>
+                    </ul>
+                </div>
+                
+                <div class="pageTop">
+                    <h2 class="pageTit">매출/입금내역 조회</h2>
+                </div>
+
+				<!-- view area 개발자 분들은 이부분 부터 쓰시면 됩니다. -->
+				<div class="viewArea inquiryAccount">
+					<!-- notiBox -->
+					<div class="notiBox">
+						<!-- accordionWrap -->
+						<dl class="accordionWrap">
+							<dt><a href="javascript:;">유의사항</a></dt>
+							<dd>
+								<div>
+									<!-- notiList -->
+									<ul class="notiList">
+										<li>여신금융협회 및 국세청에서 제공하는 매출/매입내역 데이터가 조회됩니다.</li>
+                                        <li>[최신정보조회]버튼을 통해 각 기관의 최신내역을 확인하실 수 있습니다. (단, 조회정보가 등록되어 있는 고객만 실행 가능)</li>
+									</ul>
+									<!--// notiList -->
+								</div>
+							</dd>
+						</dl>
+						<!--// accordionWrap -->
+					</div>
+					<!--// notiBox -->
+					<!-- 조회 옵션 -->
+					<div class="tableWrap mt50">
+						<table summary="">
+							<caption></caption>
+							<colgroup>
+								<col width="200px;">
+								<col width="auto;">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">조회유형</th>
+									<td>
+										<ul class="formList">
+											<li>
+												<input type="radio" id="inquiry01" name="inquiry">
+												<label for="inquiry01">여신금융협회</label>
+											</li>
+											<li>
+												<input type="radio" id="inquiry02" name="inquiry">
+												<label for="inquiry02">국세청</label>
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">발급구분</th>
+									<td>
+										<ul class="formList">
+											<li>
+												<input type="radio" id="inquiry03" name="inquiry2">
+												<label for="inquiry03">전자세금계산서</label>
+											</li>
+											<li>
+												<input type="radio" id="inquiry04" name="inquiry2">
+												<label for="inquiry04">현금영수증</label>
+                                            </li>
+											<li>
+												<input type="radio" id="inquiry05" name="inquiry2">
+												<label for="inquiry05">전자계산서</label>
+                                            </li>
+											<li>
+												<input type="radio" id="inquiry06" name="inquiry2">
+												<label for="inquiry06">위수탁 전자세금계산서</label>
+											</li>
+											<li>
+												<input type="radio" id="inquiry07" name="inquiry2">
+												<label for="inquiry07">위수탁 전자계산서</label>
+											</li>
+										</ul>
+									</td>
+								</tr> 
+                                <tr>
+									<th scope="row">조회구분</th>
+									<td>
+										<ul class="formList">
+											<li>
+												<input type="radio" id="inquiry08" name="inquiry3">
+												<label for="inquiry08">매출내역</label>
+											</li>
+											<li>
+												<input type="radio" id="inquiry09" name="inquiry3">
+												<label for="inquiry09">매입내역</label>
+                                            </li>
+										</ul>
+									</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">사업자번호</th>
+                                    <td>
+                                        <div class="accountSelect">
+                                            <select class="selbox w300">
+                                                <option value selected="selected">선택하세요.</option>
+                                                <option value="">214-86-66742</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>  
+								<tr>
+									<th scope="row">조회기간</th>
+									<td>
+										<!-- periodArea -->
+										<div class="periodArea">
+											<a href="javascript:;" role="button" class="sbtn small active" title="선택됨">당일</a>
+											<a href="javascript:;" role="button" class="sbtn small">3일</a>
+											<a href="javascript:;" role="button" class="sbtn small">1주일</a>
+											<a href="javascript:;" role="button" class="sbtn small">1개월</a>
+										</div>
+										<!-- periodArea -->
+										<div class="dateInput">
+											<div class="inpArea">
+												<input type="text" value="2020.12.11" data-placeholder="입력해주세요" class="isValue">
+												<button type="button" class="btnIcon calendar"><span class="blind">날짜 선택</span></button> 
+											</div>
+											<span>~</span>
+											<div class="inpArea">
+												<input type="text" value="2020.12.11" data-placeholder="입력해주세요" class="isValue">
+												<button type="button" class="btnIcon calendar"><span class="blind">날짜 선택</span></button> 
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="btnWrap small mt30">
+							<a href="javascript:;" role="button" class="btn bgWhite">조회</a>
+						</div>
+					</div>
+                    <!--// 조회 옵션 -->
+                    
+					<!-- 요약 정보 : 발급구분_전자세금계산서_조회구분_매출내역 선택시 -->
+					<div class="accountInfoList mt80">
+						<div class="listHeader sm">
+							<dl class="bank">
+								<dt>총 매출승인금액</dt>
+								<dd>1,360,000원<i>65</i></dd>
+							</dl>
+							<div class="updateBtnArea mt0">
+								<a href="javascript:uiCommon.layer.open('recentListUpdateLayer');" role="button" class="sbtn small bgGray" title="최신내역 업데이트">
+                                <i class="icon update"></i>최신내역 업데이트</a>
+							</div>
+						</div>
+					</div>
+                    <!--// 요약 정보 -->
+                    
+					<div class="inqBtn mt50">
+						<div class="floatL">
+							<p class="date">
+								조회기간  : 2020.12.12 ~ 2020.12.11
+							</p>
+						</div>
+						<div class="floatR">
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon memo"></i>메모장</a>
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon excel"></i>엑셀</a>
+							<a href="javascript:uiCommon.layer.open('accountInfoPrintLayer3');" role="button" class="sbtn small"><i class="icon print"></i>인쇄</a>
+						</div>
+					</div>
+
+					<!-- 거래내역 -->
+					<div class="tableWrap type02" scrollTablexy>
+						<table class="scrollTableHead">
+							<colgroup>
+								<col width="56px;">
+								<col width="110px;">
+								<col width="110px;">
+								<col width="110px;">
+								<col width="110px;">
+								<col width="150px;">
+								<col width="150px;">
+								<col width="110px;">
+								<col width="130px;">
+                                <col width="130px;">
+								<col width="130px;">
+								<col width="150px;">
+								<col width="100px;">
+								<col width="100px;">
+								<col width="96px;">                                
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">
+										No
+										<button type="button" class="btnSort"><span class="blind">오름차순 정렬</span></button>
+									</th>
+									<th scope="col">발급일자</th>
+									<th scope="col">작성일자</th>
+									<th scope="col">전송일자</th>
+									<th scope="col">발급형태</th>
+									<th scope="col">공급받는 자 등록번호</th>
+									<th scope="col">공급받는 자 상호</th>
+									<th scope="col">대표품목</th>
+									<th scope="col">합계금액(원)</th>
+									<th scope="col">공급가액(원)</th>
+									<th scope="col">세액(원)</th>
+									<th scope="col">전자세금계산서 종류</th>
+									<th scope="col">영수/청구</th>
+									<th scope="col">승인번호</th>
+									<th scope="col">바로가기</th>
+                                </tr>
+							</thead>					
+						</table>
+						<table summary="">
+							<caption></caption>
+							<colgroup>
+								<col width="56px;">
+								<col width="110px;">
+								<col width="110px;">
+								<col width="110px;">
+								<col width="110px;">
+								<col width="150px;">
+								<col width="150px;">
+								<col width="110px;">
+								<col width="130px;">
+                                <col width="130px;">
+								<col width="130px;">
+								<col width="150px;">
+								<col width="100px;">
+								<col width="100px;">
+								<col width="96px;">     
+							</colgroup>
+							<tbody>
+								<tr>
+									<td colspan="15">
+										<!-- 데이터 없을 경우 -->
+										<div class="dataNone">
+											<i class="icon"></i>
+											<p>조회하실 내역이 없습니다.</p>
+										</div>
+										<!--// 데이터 없을 경우 -->
+									</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>2020.02.07</td>
+									<td>2020.02.07</td>
+									<td>2020.02.07</td>
+                                    <td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="price">565,000</td>
+									<td class="price">420,000</td>
+									<td class="price">45,000</td>
+                                    <td>전자세금계산서</td>
+									<td>영수</td>
+									<td></td>									
+									<td class="btnText"><a href="javascript:uiCommon.layer.open('accountInfoPrintLayer');" role="button">상세보기</a></td>
+                                </tr>
+								<tr>
+									<td>2</td>
+									<td>2020.02.07</td>
+									<td>2020.02.07</td>
+									<td>2020.02.07</td>
+                                    <td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="price">565,000</td>
+									<td class="price">420,000</td>
+									<td class="price">45,000</td>
+                                    <td>전자세금계산서</td>
+									<td>영수</td>
+									<td></td>
+									<td class="btnText"><a href="javascript:uiCommon.layer.open('accountInfoPrintLayer');" role="button">상세보기</a></td>
+								</tr>
+							</tbody>
+						</table>                        
+					</div>
+                    <!--// 거래내역 -->
+                    
+					<!-- 요약 정보 : 발급구분_전자세금계산서_조회구분_매입내역 선택시-->
+					<div class="accountInfoList mt80">
+						<div class="listHeader sm">
+							<dl class="bank">
+								<dt>총 매입금액(전자세금계산서)</dt>
+								<dd>1,360,000원<i>65</i></dd>
+							</dl>
+							<div class="updateBtnArea mt0">
+								<a href="javascript:uiCommon.layer.open('recentListUpdateLayer');" role="button" class="sbtn small bgGray" title="최신내역 업데이트">
+                                <i class="icon update"></i>최신내역 업데이트</a>
+							</div>
+						</div>
+					</div>
+                    <!--// 요약 정보 -->
+                    
+					<div class="inqBtn mt50">
+						<div class="floatL">
+							<p class="date">
+								조회기간  : 2020.12.12 ~ 2020.12.11
+							</p>
+						</div>
+						<div class="floatR">
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon memo"></i>메모장</a>
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon excel"></i>엑셀</a>
+							<a href="javascript:uiCommon.layer.open('accountInfoPrintLayer4');" role="button" class="sbtn small"><i class="icon print"></i>인쇄</a>
+						</div>
+					</div>
+					<!-- 거래내역 -->
+					<div class="tableWrap type02" scrollTablexy>
+						<table class="scrollTableHead">
+							<colgroup>
+								<col width="56px;">
+								<col width="110px;">
+								<col width="110px;">
+								<col width="110px;">
+								<col width="110px;">
+								<col width="150px;">
+								<col width="110px;">
+								<col width="110px;">
+								<col width="130px;">
+                                <col width="130px;">
+								<col width="130px;">
+								<col width="150px;">
+								<col width="100px;">
+								<col width="100px;">
+								<col width="96px;">                                
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">
+										No
+										<button type="button" class="btnSort"><span class="blind">오름차순 정렬</span></button>
+									</th>
+									<th scope="col">발급일자</th>
+									<th scope="col">작성일자</th>
+									<th scope="col">전송일자</th>
+									<th scope="col">발급형태</th>
+									<th scope="col">공급자 등록번호</th>
+									<th scope="col">공급자 상호</th>
+									<th scope="col">대표품목</th>
+									<th scope="col">합계금액(원)</th>
+									<th scope="col">공급가액(원)</th>
+									<th scope="col">세액(원)</th>
+									<th scope="col">전자세금계산서 종류</th>
+									<th scope="col">영수/청구</th>
+									<th scope="col">승인번호</th>
+									<th scope="col">바로가기</th>
+                                </tr>
+							</thead>					
+						</table>
+						<table summary="">
+							<caption></caption>
+							<colgroup>
+								<col width="56px;">
+								<col width="110px;">
+								<col width="110px;">
+								<col width="110px;">
+								<col width="110px;">
+								<col width="150px;">
+								<col width="110px;">
+								<col width="110px;">
+								<col width="130px;">
+                                <col width="130px;">
+								<col width="130px;">
+								<col width="150px;">
+								<col width="100px;">
+								<col width="100px;">
+								<col width="96px;">    
+							</colgroup>
+							<tbody>
+								<tr>
+									<td colspan="15">
+										<!-- 데이터 없을 경우 -->
+										<div class="dataNone">
+											<i class="icon"></i>
+											<p>조회하실 내역이 없습니다.</p>
+										</div>
+										<!--// 데이터 없을 경우 -->
+									</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>2020.02.07</td>
+									<td>2020.02.07</td>
+									<td>2020.02.07</td>
+                                    <td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="price">565,000</td>
+									<td class="price">420,000</td>
+									<td class="price">45,000</td>
+                                    <td>전자세금계산서</td>
+									<td>영수</td>
+									<td></td>
+									<td class="btnText"><a href="javascript:uiCommon.layer.open('accountInfoPrintLayer2');" role="button">상세보기</a></td>
+                                </tr>
+								<tr>
+									<td>2</td>
+									<td>2020.02.07</td>
+									<td>2020.02.07</td>
+									<td>2020.02.07</td>
+                                    <td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="price">565,000</td>
+									<td class="price">420,000</td>
+									<td class="price">45,000</td>
+                                    <td>전자세금계산서</td>
+									<td>영수</td>
+									<td></td>
+									<td class="btnText"><a href="javascript:uiCommon.layer.open('accountInfoPrintLayer2');" role="button">상세보기</a></td>
+								</tr>
+							</tbody>
+						</table>                        
+					</div>
+                    <!--// 거래내역 -->
+                    
+					<!-- 요약 정보 : 발급구분_현금영수증_조회구분_매출내역 선택시 -->
+					<div class="accountInfoList mt80">
+						<div class="listHeader sm">
+							<dl class="bank">
+								<dt>총 매출금액(현금영수증)</dt>
+								<dd>1,360,000원<i>65</i></dd>
+							</dl>
+							<div class="updateBtnArea mt0">
+								<a href="javascript:uiCommon.layer.open('recentListUpdateLayer');" role="button" class="sbtn small bgGray" title="최신내역 업데이트">
+                                <i class="icon update"></i>최신내역 업데이트</a>
+							</div>
+						</div>
+					</div>
+                    <!--// 요약 정보 -->
+                    
+					<div class="inqBtn mt50">
+						<div class="floatL">
+							<p class="date">
+								조회기간  : 2020.12.12 ~ 2020.12.11
+							</p>
+						</div>
+						<div class="floatR">
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon memo"></i>메모장</a>
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon excel"></i>엑셀</a>
+							<a href="javascript:uiCommon.layer.open('accountInfoPrintLayer5');" role="button" class="sbtn small"><i class="icon print"></i>인쇄</a>
+						</div>
+					</div>                    
+					<!-- 거래내역 : 발급구분_현금영수증_조회구분_매출내역 선택시 -->
+					<div class="tableWrap type02" scrollTablexy>
+						<table class="scrollTableHead">
+							<colgroup>
+								<col width="56px;">
+								<col width="184px;">
+								<col width="150px;">
+								<col width="150px;">
+								<col width="150px;">
+								<col width="130px;">
+								<col width="130px;">
+								<col width="130px;">                         
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">
+										No
+										<button type="button" class="btnSort"><span class="blind">오름차순 정렬</span></button>
+									</th>
+									<th scope="col">사용일시</th>
+									<th scope="col">거래구분명</th>
+									<th scope="col">합계금액(원)</th>
+									<th scope="col">공급가액(원)</th>
+									<th scope="col">부가세(원)</th>
+									<th scope="col">봉사료(원)</th>
+									<th scope="col">승인번호</th>
+                                </tr>
+							</thead>					
+						</table>
+						<table summary="">
+							<caption></caption>
+							<colgroup>
+								<col width="56px;">
+								<col width="184px;">
+								<col width="150px;">
+								<col width="150px;">
+								<col width="150px;">
+								<col width="130px;">
+								<col width="130px;">
+								<col width="130px;">        
+							</colgroup>
+							<tbody>
+								<tr>
+									<td colspan="8">
+										<!-- 데이터 없을 경우 -->
+										<div class="dataNone">
+											<i class="icon"></i>
+											<p>조회하실 내역이 없습니다.</p>
+										</div>
+										<!--// 데이터 없을 경우 -->
+									</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>2020.02.07</td>
+									<td></td>
+									<td class="price">565,000</td>
+									<td class="price">420,000</td>
+									<td class="price">90,000</td>
+									<td class="price">10,000</td>
+									<td>30058308</td>
+                                </tr>
+								<tr>
+									<td>2</td>
+									<td>2020.02.07</td>
+									<td></td>
+									<td class="price">565,000</td>
+									<td class="price">420,000</td>
+									<td class="price">90,000</td>
+									<td class="price">10,000</td>
+									<td>30058308</td>
+								</tr>
+							</tbody>
+						</table>                        
+					</div>
+					<!--// 거래내역  -->
+
+					<!-- 요약 정보 : 발급구분_현금영수증_조회구분_매입내역 선택시 -->
+					<div class="accountInfoList mt80">
+						<div class="listHeader sm">
+							<dl class="bank">
+								<dt>총 매입금액(현금영수증)</dt>
+								<dd>1,360,000원<i>65</i></dd>
+							</dl>
+							<div class="updateBtnArea mt0">
+								<a href="javascript:uiCommon.layer.open('recentListUpdateLayer');" role="button" class="sbtn small bgGray" title="최신내역 업데이트">
+                                <i class="icon update"></i>최신내역 업데이트</a>
+							</div>
+						</div>
+					</div>
+                    <!--// 요약 정보 -->
+                    
+					<div class="inqBtn mt50">
+						<div class="floatL">
+							<p class="date">
+								조회기간  : 2020.12.12 ~ 2020.12.11
+							</p>
+						</div>
+						<div class="floatR">
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon memo"></i>메모장</a>
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon excel"></i>엑셀</a>
+							<a href="javascript:uiCommon.layer.open('accountInfoPrintLayer6');" role="button" class="sbtn small"><i class="icon print"></i>인쇄</a>
+						</div>
+					</div>                    
+					<!-- 거래내역 -->
+					<div class="tableWrap type02" scrollTablexy>
+						<table class="scrollTableHead">
+							<colgroup>
+								<col width="56px;">
+								<col width="184px;">
+								<col width="150px;">
+								<col width="100px;">
+								<col width="150px;">
+								<col width="130px;">
+								<col width="130px;">
+								<col width="110px;">                         
+								<col width="110px;">                         
+								<col width="110px;">                         
+                            </colgroup>
+							<thead>
+								<tr>
+									<th scope="col">
+										No
+										<button type="button" class="btnSort"><span class="blind">오름차순 정렬</span></button>
+									</th>
+									<th scope="col">사용일시</th>
+									<th scope="col">거래구분명</th>
+									<th scope="col">가맹점명</th>
+									<th scope="col">가맹점 사업자번호</th>
+                                    <th scope="col">합계금액(원)</th>
+									<th scope="col">공급가액(원)</th>
+									<th scope="col">부가세(원)</th>
+									<th scope="col">봉사료(원)</th>
+									<th scope="col">승인번호</th>
+                                </tr>
+							</thead>					
+						</table>
+						<table summary="">
+							<caption></caption>
+							<colgroup>
+								<col width="56px;">
+								<col width="184px;">
+								<col width="150px;">
+								<col width="100px;">
+								<col width="150px;">
+								<col width="130px;">
+								<col width="130px;">
+								<col width="110px;">                         
+								<col width="110px;">                         
+								<col width="110px;">          
+							</colgroup>
+							<tbody>
+								<tr>
+									<td colspan="8">
+										<!-- 데이터 없을 경우 -->
+										<div class="dataNone">
+											<i class="icon"></i>
+											<p>조회하실 내역이 없습니다.</p>
+										</div>
+										<!--// 데이터 없을 경우 -->
+									</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>2020.02.07</td>
+									<td></td>
+									<td>대청마루</td>
+									<td>214-86-66942</td>
+                                    <td class="price">565,000</td>
+									<td class="price">420,000</td>
+									<td class="price">90,000</td>
+									<td class="price">10,000</td>
+                                    <td>30058308</td>
+                                </tr>
+								<tr>
+									<td>2</td>
+									<td>2020.02.07</td>
+									<td></td>
+									<td>대청마루</td>
+									<td>214-86-66942</td>
+                                    <td class="price">565,000</td>
+									<td class="price">420,000</td>
+									<td class="price">90,000</td>
+									<td class="price">10,000</td>
+                                    <td>30058308</td>
+                                </tr>
+							</tbody>
+						</table>                        
+					</div>
+					<!--// 거래내역  -->
+
+					<div class="tblBottom">
+						<div class="floatR">
+							<span class="pageIdx">11/52</span>
+						</div>
+					</div>	
+				</div>
+				<!--// view area -->
+
+                <!--// 컨텐츠 내용 -->
+            </div>
+            <!--// container -->
+        </div>
+        <!--// containerWrap -->
+
+        <!-- footer -->
+        <div class="footerWrap">
+			<script type="text/javascript" src="../../assets/js2.0/ui.footer.js" charset="utf-8"></script>
+        </div>
+        <!-- footer -->
+    </div>
+
+	<!-- layer popup : 최신내역 업데이트 (1000x689) -->
+	<div class="layer recentListUpdateLayer">
+		<a href="javascript: uiCommon.layer.close('recentListUpdateLayer');" class="popClose"><span class="blind">팝업 닫기</span></a>
+		<h4 class="popTitle">최신 내역 업데이트</h4>
+		<!-- popContent -->
+		<div class="popCont">
+            <div class="compleateBox">
+                <div class="notiBox">
+                    <ul class="notiList">
+                        <li>조회유형 및 조회기간을 설정해 주십시오.</li>
+                        <li>여신금융협회, 국세청(전자세금계산서)의 경우 최대 1개월, 국세청(현금영수증)의 경우 최대 18개월까지 조회가 가능합니다.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 조회 옵션 -->
+            <div class="tableWrap mt50">
+                <table summary="">
+                    <caption></caption>
+                    <colgroup>
+                        <col width="200px;">
+                        <col width="auto;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">조회유형</th>
+                            <td>
+                                <ul class="formList">
+                                    <li>
+                                        <input type="radio" id="inquiry01" name="inquiry">
+                                        <label for="inquiry01">여신금융협회</label><!-- 선택시 조회기간만 노출 -->
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="inquiry02" name="inquiry">
+                                        <label for="inquiry02">국세청</label>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">조회구분</th>
+                            <td>
+                                <ul class="formList">
+                                    <li>
+                                        <input type="radio" id="inquiry03" name="inquiry2">
+                                        <label for="inquiry03">전자세금계산서</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="inquiry04" name="inquiry2">
+                                        <label for="inquiry04">현금영수증</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="inquiry05" name="inquiry2">
+                                        <label for="inquiry05">전자계산서</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="inquiry06" name="inquiry2">
+                                        <label for="inquiry06">위수탁 전자세금계산서</label><!-- 선택시 사업자번호 행 비노출 -->
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="inquiry07" name="inquiry2">
+                                        <label for="inquiry07">위수탁 전자계산서</label><!-- 선택시 사업자번호 행 비노출 -->
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>    
+                        <tr>
+                            <th scope="row">사업자번호</th>
+                            <td>
+                                <div class="accountSelect">
+                                    <select class="selbox w300">
+                                        <option value selected="selected">선택하세요.</option>
+                                        <option value="">214-86-66742</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>                            
+                        <tr>
+                            <th scope="row">조회기간</th>
+                            <td>
+                                <!-- periodArea -->
+                                <div class="periodArea">
+                                    <a href="javascript:;" role="button" class="sbtn small active" title="선택됨">당일</a>
+                                    <a href="javascript:;" role="button" class="sbtn small">3일</a>
+                                    <a href="javascript:;" role="button" class="sbtn small">1주일</a>
+                                    <a href="javascript:;" role="button" class="sbtn small">1개월</a>
+                                </div>
+                                <!-- periodArea -->
+                                <div class="dateInput">
+                                    <div class="inpArea">
+                                        <input type="text" value="2020.12.11" data-placeholder="입력해주세요" class="isValue">
+                                        <button type="button" class="btnIcon calendar"><span class="blind">날짜 선택</span></button> 
+                                    </div>
+                                    <span>~</span>
+                                    <div class="inpArea">
+                                        <input type="text" value="2020.12.11" data-placeholder="입력해주세요" class="isValue">
+                                        <button type="button" class="btnIcon calendar"><span class="blind">날짜 선택</span></button> 
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--// 조회 옵션 -->
+			<div class="btnWrap small">
+				<a href="javascript:;" role="button" class="btn bgYellow">실행</a>			
+			</div>
+		</div>
+		<!--// popCont -->
+	</div>
+	<!--// layer popup : 최신내역 업데이트 -->
+
+    <!-- layer popup : 거래항목 상세정보 : 조회구분_매출내역 (1000x769) -->
+	<div class="layer accountInfoPrintLayer">
+        <a href="javascript: uiCommon.layer.close('accountInfoPrintLayer');" class="popClose"><span class="blind">팝업 닫기</span></a>
+        <h4 class="popTitle">거래항목 상세정보</h4>
+        <!-- popContent -->
+        <div class="popCont">
+            <!-- 요약 정보 -->
+            <div class="accountInfoList mt40 sm">
+                <dl class="list">
+                    <dt>공급받는자 상호</dt>
+                    <dd>대청마루(214-86-66942)</dd>
+                    <dt>합계금액(원)</dt>
+                    <dd>565,000</dd>
+                    <dt>대표품목</dt>
+                    <dd>대표품목명</dd>
+                </dl>
+            </div>
+            <!--// 요약 정보 -->
+
+            <!-- 거래내역 --->
+            <div class="tableWrap type02 mt50">
+                <table summary="">
+                    <caption></caption>
+                    <colgroup>
+                        <col width="50px;">
+                        <col width="130px;">
+                        <col width="100px;">
+                        <col width="130px;">
+                        <col width="100px;">
+                        <col width="140px;">
+                        <col width="150px;">
+                        <col width="140px;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">구매만료일자</th>
+                            <th scope="col">품목</th>
+                            <th scope="col">규격</th>
+                            <th scope="col">수량</th>
+                            <th scope="col">단가(원)</th>
+                            <th scope="col">공급가액(원)</th>
+                            <th scope="col">세액(원)</th>
+					</thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="8">
+                                <!-- 데이터 없을 경우 -->
+                                <div class="dataNone">
+                                    <i class="icon"></i>
+                                    <p>조회하실 내역이 없습니다.</p>
+                                </div>
+                                <!--// 데이터 없을 경우 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2020.02.07</td>
+                            <td>제품A</td>
+                            <td></td>
+                            <td>10</td>
+                            <td class="price">120,000</td>
+                            <td class="price">80,000</td>
+                            <td class="price">40,000</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2020.02.07</td>
+                            <td>제품B</td>
+                            <td></td>
+                            <td>2</td>
+                            <td class="price">120,000</td>
+                            <td class="price">80,000</td>
+                            <td class="price">40,000</td>
+                        </tr>
+					</tbody>
+                </table>                        
+            </div>
+            <!--// 거래내역 -->
+			<div class="btnWrap small">
+				<a href="javascript:;" role="button" class="btn bgYellow" title="인쇄하기">인쇄</a>
+			</div>
+
+		</div>
+        <!--// popCont -->
+    </div>
+	<!--//  layer popup : 거래항목 상세정보 : 조회구분_매출내역 -->
+
+    <!-- layer popup : 거래항목 상세정보 : 조회구분_매입내역 (1000x769) -->
+	<div class="layer accountInfoPrintLayer2">
+        <a href="javascript: uiCommon.layer.close('accountInfoPrintLayer2');" class="popClose"><span class="blind">팝업 닫기</span></a>
+        <h4 class="popTitle">거래항목 상세정보</h4>
+        <!-- popContent -->
+        <div class="popCont">
+            <!-- 요약 정보 -->
+            <div class="accountInfoList mt40 sm">
+                <dl class="list">
+                    <dt>공급자 상호</dt>
+                    <dd>대청마루(214-86-66942)</dd>
+                    <dt>합계금액(원)</dt>
+                    <dd>565,000</dd>
+                    <dt>대표품목</dt>
+                    <dd>대표품목명</dd>
+                </dl>
+            </div>
+            <!--// 요약 정보 -->
+
+            <!-- 거래내역 --->
+            <div class="tableWrap type02 mt50">
+                <table summary="">
+                    <caption></caption>
+                    <colgroup>
+                        <col width="50px;">
+                        <col width="130px;">
+                        <col width="100px;">
+                        <col width="130px;">
+                        <col width="100px;">
+                        <col width="140px;">
+                        <col width="150px;">
+                        <col width="140px;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">구매만료일자</th>
+                            <th scope="col">품목</th>
+                            <th scope="col">규격</th>
+                            <th scope="col">수량</th>
+                            <th scope="col">단가(원)</th>
+                            <th scope="col">공급가액(원)</th>
+                            <th scope="col">세액(원)</th>
+					</thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="8">
+                                <!-- 데이터 없을 경우 -->
+                                <div class="dataNone">
+                                    <i class="icon"></i>
+                                    <p>조회하실 내역이 없습니다.</p>
+                                </div>
+                                <!--// 데이터 없을 경우 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2020.02.07</td>
+                            <td>제품A</td>
+                            <td></td>
+                            <td>10</td>
+                            <td class="price">120,000</td>
+                            <td class="price">80,000</td>
+                            <td class="price">40,000</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2020.02.07</td>
+                            <td>제품B</td>
+                            <td></td>
+                            <td>2</td>
+                            <td class="price">120,000</td>
+                            <td class="price">80,000</td>
+                            <td class="price">40,000</td>
+                        </tr>
+					</tbody>
+                </table>                        
+            </div>
+            <!--// 거래내역 -->
+			<div class="btnWrap small">
+				<a href="javascript:;" role="button" class="btn bgYellow" title="인쇄하기">인쇄</a>
+			</div>
+
+		</div>
+        <!--// popCont -->
+    </div>
+	<!--//  layer popup : 거래항목 상세정보 : 조회구분_매입내역 -->	
+
+    <!-- layer popup : 국세청매출매입내역조회 : 발급구분_전자세금계산서 : 조회구분_매출내역 (1000x748) -->
+	<div class="layer accountInfoPrintLayer3">
+        <a href="javascript: uiCommon.layer.close('accountInfoPrintLayer3');" class="popClose"><span class="blind">팝업 닫기</span></a>
+        <h4 class="popTitle">국세청 매출/매입내역 조회</h4>
+        <!-- popContent -->
+        <div class="popCont">
+            <!-- 요약 정보 -->
+            <div class="accountInfoList sm">
+				<div class="listHeader sm">
+                    <dl class="bank">
+                        <dt>총 매출금액(전자세금계산서)</dt>
+                        <dd>1,360,000원<i>65</i></dd>
+                    </dl>
+                </div>
+            </div>
+			<!--// 요약 정보 -->
+			
+			<div class="inqBtn mt50">
+				<div class="floatL">
+					<p class="date">
+						조회기간  : 2020.12.12 ~ 2020.12.11
+					</p>
+				</div>
+			</div>	
+
+            <!-- 거래내역 --->
+            <div class="tableWrap type02" scrolltablexy>
+                <table summary="">
+                    <caption></caption>
+                    <colgroup>
+                        <col width="50px;">
+                        <col width="100px;">
+                        <col width="100px;">
+                        <col width="100px;">
+                        <col width="90px;">
+                        <col width="150px;">
+                        <col width="130px;">
+						<col width="90px;">
+                        <col width="110px;">
+                        <col width="110px;">
+                        <col width="100px;">
+                        <col width="150px;">
+                        <col width="80px;">
+                        <col width="80px;">						
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">발급일자</th>
+                            <th scope="col">작성일자</th>
+                            <th scope="col">전송일자</th>
+                            <th scope="col">발급형태</th>
+                            <th scope="col">공급받는자 등록번호</th>
+                            <th scope="col">공급받는자 상호</th>
+							<th scope="col">대표품목</th>
+                            <th scope="col">합계금액(원)</th>
+                            <th scope="col">공급가액(원)</th>
+                            <th scope="col">세액(원)</th>
+                            <th scope="col">전자세금계산서 종류</th>
+                            <th scope="col">영수/청구</th>
+                            <th scope="col">승인번호</th>
+					</thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="14">
+                                <!-- 데이터 없을 경우 -->
+                                <div class="dataNone">
+                                    <i class="icon"></i>
+                                    <p>조회하실 내역이 없습니다.</p>
+                                </div>
+                                <!--// 데이터 없을 경우 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2020.02.07</td>
+                            <td>2020.02.07</td>
+                            <td>2020.02.07</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+							<td class="price">565,500</td>
+                            <td class="price">420,000</td>
+                            <td class="price">45,000</td>
+                            <td>전자세금계산서</td>
+                            <td>영수</td>
+                            <td></td>
+						</tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2020.02.07</td>
+                            <td>2020.02.07</td>
+                            <td>2020.02.07</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+							<td class="price">565,500</td>
+                            <td class="price">420,000</td>
+                            <td class="price">45,000</td>
+                            <td>전자세금계산서</td>
+                            <td>영수</td>
+                            <td></td>
+                        </tr>
+					</tbody>
+                </table>                        
+            </div>
+            <!--// 거래내역 -->
+			<div class="btnWrap small">
+				<a href="javascript:;" role="button" class="btn bgYellow" title="인쇄하기">인쇄</a>
+			</div>
+
+		</div>
+        <!--// popCont -->
+    </div>
+	<!--//  layer popup : 국세청매출매입내역조회 : 발급구분_전자세금계산서 : 조회구분_매출내역 -->	
+
+    <!-- layer popup : 국세청매출매입내역조회 : 발급구분_전자세금계산서 : 조회구분_매입내역 (1000x748) -->
+	<div class="layer accountInfoPrintLayer4">
+        <a href="javascript: uiCommon.layer.close('accountInfoPrintLayer4');" class="popClose"><span class="blind">팝업 닫기</span></a>
+        <h4 class="popTitle">국세청 매출/매입내역 조회</h4>
+        <!-- popContent -->
+        <div class="popCont">
+            <!-- 요약 정보 -->
+            <div class="accountInfoList sm">
+				<div class="listHeader sm">
+                    <dl class="bank">
+                        <dt>총 매입금액(전자세금계산서)</dt>
+                        <dd>1,360,000원<i>65</i></dd>
+                    </dl>
+                </div>
+            </div>
+			<!--// 요약 정보 -->
+			<div class="inqBtn mt50">
+				<div class="floatL">
+					<p class="date">
+						조회기간  : 2020.12.12 ~ 2020.12.11
+					</p>
+				</div>
+			</div>	
+            <!-- 거래내역 --->
+            <div class="tableWrap type02" scrolltablexy>
+                <table summary="">
+                    <caption></caption>
+                    <colgroup>
+                        <col width="50px;">
+                        <col width="100px;">
+                        <col width="100px;">
+                        <col width="100px;">
+                        <col width="90px;">
+                        <col width="150px;">
+                        <col width="130px;">
+						<col width="90px;">
+                        <col width="110px;">
+                        <col width="110px;">
+                        <col width="100px;">
+                        <col width="150px;">
+                        <col width="80px;">
+                        <col width="80px;">						
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">발급일자</th>
+                            <th scope="col">작성일자</th>
+                            <th scope="col">전송일자</th>
+                            <th scope="col">발급형태</th>
+                            <th scope="col">공급받는자 등록번호</th>
+                            <th scope="col">공급받는자 상호</th>
+							<th scope="col">대표품목</th>
+                            <th scope="col">합계금액(원)</th>
+                            <th scope="col">공급가액(원)</th>
+                            <th scope="col">세액(원)</th>
+                            <th scope="col">전자세금계산서 종류</th>
+                            <th scope="col">영수/청구</th>
+                            <th scope="col">승인번호</th>
+					</thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="14">
+                                <!-- 데이터 없을 경우 -->
+                                <div class="dataNone">
+                                    <i class="icon"></i>
+                                    <p>조회하실 내역이 없습니다.</p>
+                                </div>
+                                <!--// 데이터 없을 경우 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2020.02.07</td>
+                            <td>2020.02.07</td>
+                            <td>2020.02.07</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+							<td class="price">565,500</td>
+                            <td class="price">420,000</td>
+                            <td class="price">45,000</td>
+                            <td>전자세금계산서</td>
+                            <td>영수</td>
+                            <td></td>
+						</tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2020.02.07</td>
+                            <td>2020.02.07</td>
+                            <td>2020.02.07</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+							<td class="price">565,500</td>
+                            <td class="price">420,000</td>
+                            <td class="price">45,000</td>
+                            <td>전자세금계산서</td>
+                            <td>영수</td>
+                            <td></td>
+                        </tr>
+					</tbody>
+                </table>                        
+            </div>
+            <!--// 거래내역 -->
+			<div class="btnWrap small">
+				<a href="javascript:;" role="button" class="btn bgYellow" title="인쇄하기">인쇄</a>
+			</div>
+
+		</div>
+        <!--// popCont -->
+    </div>
+	<!--//  layer popup : 국세청매출매입내역조회 : 발급구분_전자세금계산서 : 조회구분_매출내역 -->
+
+    <!-- layer popup : 국세청매출매입내역조회 : 발급구분_현금영수증 : 조회구분_매출내역 (1000x748) -->
+	<div class="layer accountInfoPrintLayer5">
+        <a href="javascript: uiCommon.layer.close('accountInfoPrintLayer5');" class="popClose"><span class="blind">팝업 닫기</span></a>
+        <h4 class="popTitle">국세청 매출/매입내역 조회</h4>
+        <!-- popContent -->
+        <div class="popCont">
+            <!-- 요약 정보 -->
+            <div class="accountInfoList sm">
+				<div class="listHeader sm">
+                    <dl class="bank">
+                        <dt>총 매출금액(현금영수증)</dt>
+                        <dd>1,360,000원<i>65</i></dd>
+                    </dl>
+                </div>
+            </div>
+			<!--// 요약 정보 -->
+			<div class="inqBtn mt50">
+				<div class="floatL">
+					<p class="date">
+						조회기간  : 2020.12.12 ~ 2020.12.11
+					</p>
+				</div>
+			</div>	
+            <!-- 거래내역 --->
+            <div class="tableWrap type02" scrolltablexy>
+                <table summary="">
+                    <caption></caption>
+                    <colgroup>
+                        <col width="50px;">
+                        <col width="200px;">
+                        <col width="150px;">
+                        <col width="110px;">
+                        <col width="110px;">
+                        <col width="110px;">
+                        <col width="110px;">
+						<col width="100px;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">사용일시</th>
+                            <th scope="col">거래구분명</th>
+                            <th scope="col">합계금액(원)</th>
+                            <th scope="col">공급가액(원)</th>
+                            <th scope="col">부가세(원)</th>
+                            <th scope="col">봉사료(원)</th>
+							<th scope="col">승인번호</th>
+					</thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="8">
+                                <!-- 데이터 없을 경우 -->
+                                <div class="dataNone">
+                                    <i class="icon"></i>
+                                    <p>조회하실 내역이 없습니다.</p>
+                                </div>
+                                <!--// 데이터 없을 경우 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2020.02.07</td>
+                            <td></td>
+							<td class="price">565,500</td>
+                            <td class="price">465,000</td>
+                            <td class="price">90,000</td>
+                            <td class="price">10,000</td>
+                            <td>30058308</td>
+						</tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2020.02.07</td>
+                            <td></td>
+							<td class="price">565,500</td>
+                            <td class="price">465,000</td>
+                            <td class="price">90,000</td>
+                            <td class="price">10,000</td>
+                            <td>30058308</td>
+						</tr>
+					</tbody>
+                </table>                        
+            </div>
+            <!--// 거래내역 -->
+			<div class="btnWrap small">
+				<a href="javascript:;" role="button" class="btn bgYellow" title="인쇄하기">인쇄</a>
+			</div>
+
+		</div>
+        <!--// popCont -->
+    </div>
+	<!--//  layer popup : 국세청매출매입내역조회 : 발급구분_현금영수증 : 조회구분_매출내역 -->		
+
+    <!-- layer popup : 국세청매출매입내역조회 : 발급구분_현금영수증 : 조회구분_매입내역 (1000x748) -->
+	<div class="layer accountInfoPrintLayer6">
+        <a href="javascript: uiCommon.layer.close('accountInfoPrintLayer6');" class="popClose"><span class="blind">팝업 닫기</span></a>
+        <h4 class="popTitle">국세청 매출/매입내역 조회</h4>
+        <!-- popContent -->
+        <div class="popCont">
+            <!-- 요약 정보 -->
+            <div class="accountInfoList sm">
+				<div class="listHeader sm">
+                    <dl class="bank">
+                        <dt>총 매입금액(현금영수증)</dt>
+                        <dd>1,360,000원<i>65</i></dd>
+                    </dl>
+                </div>
+            </div>
+			<!--// 요약 정보 -->
+			<div class="inqBtn mt50">
+				<div class="floatL">
+					<p class="date">
+						조회기간  : 2020.12.12 ~ 2020.12.11
+					</p>
+				</div>
+			</div>	
+            <!-- 거래내역 --->
+            <div class="tableWrap type02" scrolltablexy>
+                <table summary="">
+                    <caption></caption>
+                    <colgroup>
+                        <col width="50px;">
+                        <col width="180px;">
+                        <col width="130px;">
+                        <col width="100px;">
+                        <col width="150px;">
+                        <col width="110px;">
+                        <col width="110px;">
+						<col width="110px;">
+                        <col width="110px;">
+						<col width="100px;">						
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">사용일시</th>
+                            <th scope="col">거래구분명</th>
+                            <th scope="col">가맹점명</th>
+							<th scope="col">가맹점 사업자번호</th>                           
+							<th scope="col">합계금액(원)</th>
+							<th scope="col">공급가액(원)</th>
+                            <th scope="col">부가세(원)</th>
+                            <th scope="col">봉사료(원)</th>
+							<th scope="col">승인번호</th>
+					</thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="10">
+                                <!-- 데이터 없을 경우 -->
+                                <div class="dataNone">
+                                    <i class="icon"></i>
+                                    <p>조회하실 내역이 없습니다.</p>
+                                </div>
+                                <!--// 데이터 없을 경우 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2020.02.07</td>
+							<td></td>
+							<td>대청마루</td>
+							<td>214-86-66942</td>
+							<td class="price">565,500</td>
+                            <td class="price">465,000</td>
+                            <td class="price">90,000</td>
+                            <td class="price">10,000</td>
+                            <td>30058308</td>
+						</tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2020.02.07</td>
+							<td></td>
+							<td>대청마루</td>
+							<td>214-86-66942</td>
+							<td class="price">565,500</td>
+                            <td class="price">465,000</td>
+                            <td class="price">90,000</td>
+                            <td class="price">10,000</td>
+                            <td>30058308</td>
+						</tr>
+					</tbody>
+                </table>                        
+            </div>
+            <!--// 거래내역 -->
+			<div class="btnWrap small">
+				<a href="javascript:;" role="button" class="btn bgYellow" title="인쇄하기">인쇄</a>
+			</div>
+
+		</div>
+        <!--// popCont -->
+    </div>
+    <!--//  layer popup : 국세청매출매입내역조회 : 발급구분_현금영수증 : 조회구분_매입내역 --> 	
+	
+</body>
+</html>

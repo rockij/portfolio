@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!--
+	2020-06-18			딜러선택 아이콘 추가
+	2020-06-25 			즐겨찾기 checked disabled 처리
+	2020-07-03 			상단 슬라이드 탭 항목 추가 및 수정
+	2020-07-06 			리스트 태그 수정, 뱃지 추가, 텍스트 수정
+-->
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<!--target-densitydpi=medium-dpi-->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<!-- 아이폰 전체화면 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<title>딜러라운지</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../assets/css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick-theme.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/swiper.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/ui.common.css" type="text/css" /> <!-- 공통 요소 -->
+
+	<!-- JS -->
+	<script type="text/javascript" src="../../assets/js/jquery.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/slick.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/Chart.min.js"></script><!-- 공통 요소 -->
+	<script type="text/javascript" src="../../assets/js/ui.common.js"></script><!-- 공통 요소 -->
+</head>
+
+<body>
+	<section id="wrap">
+		<div id="skipNavi">
+			<a href="#container">본문 바로가기</a>
+		</div>
+		<main id="dealerList" class="salesPlan">
+			<link rel="stylesheet" href="../../assets/css/ui.salesPlan.css" type="text/css" />
+			<header>
+				<h2>딜러선택</h2>
+				<a href="javascript:;" class="btnPrev">이전페이지로 이동</a>
+				<!-- <a href="#" class="btnSearch">검색</a> -->
+				<!-- 클릭시 searchFixBox 검색창 show -->
+				<a href="#" class="btnCancle">취소</a>
+				<!--// 검색창 show 시 -->
+			</header>
+			<section id="container" class="dealerList">
+
+				<!-- 검색창 -->
+				<div class="searchFixBox">
+					<div class="formInput search">
+						<input type="text" placeholder="딜러, 상사명으로 검색하세요.">
+						<a href="javascript:;" class="btnSearch">검색</a>
+					</div>
+					<a href="javascript:;" class="btnFilter">필터검색</a>
+				</div>
+				<!--// 검색창 -->
+
+				<ul class="lineTab">
+					<li class="on"><a href="javascript:;">딜러관리</a></li>
+					<li><a href="javascript:;">상사관리</a></li>
+				</ul>
+
+				<div class="itemTab swiper-container">
+					<!-- 2020-07-03 항목 추가 및 변경 -->
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide on"><a href="javascript:;">전체(45)</a></li>
+						<li class="swiper-slide"><a href="javascript:;">신규확보(10)</a></li>
+						<li class="swiper-slide"><a href="javascript:;">신규배정(5)</a></li>
+					 	<li class="swiper-slide"><a href="javascript:;">리텐션대상(1)</a></li>
+						<li class="swiper-slide"><a href="javascript:;">Champion(10)</a></li>
+						<li class="swiper-slide"><a href="javascript:;">이탈위험(5)</a></li>
+						<li class="swiper-slide"><a href="javascript:;">미터치(5)</a></li>
+						<li class="swiper-slide"><a href="javascript:;">Favorite(5)</a></li>
+					</ul>
+					<!--// 2020-07-03 항목 추가 및 변경 -->
+				</div>
+
+				<div class="listIdx">
+					<div class="idx">
+						<label class="formChkbox bgCheck">
+							<input type="checkbox">
+							<i class="icon"></i>
+						</label>
+						<span class="num">총 <em>45</em>명</span>
+					</div>
+					<div class="dropBox sort">
+						<a href="javascript:;" class="dropBtn">최신순</a>
+						<ul class="dropList">
+							<li class="selected"><a href="javascript:;">최신순</a></li>
+							<li><a href="javascript:;">낮은 가격순</a></li>
+							<li><a href="javascript:;">높은 가격순</a></li>
+							<li><a href="javascript:;">등록일순</a></li>
+							<li><a href="javascript:;">좋아요순</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="partnerList">
+					<!-- 검색결과 없을경우 -->
+					<div class="dataNone">
+						<div class="shape"></div>
+						<p>검색 결과가 없습니다.</p>
+					</div>
+					<!--// 검색결과 없을경우 -->
+
+					<ul>
+						<li>
+							<label class="formChkbox bgCheck">
+								<input type="checkbox">
+								<i class="icon"></i>
+							</label>
+							<!-- 2020-07-06 태그 수정, 뱃지 추가, 텍스트 수정 -->
+							<div class="txtArea">
+								<div class="top">
+									<span class="iconMedium">Medium</span>
+									<span class="iconRetention">리텐션대상</span>
+									<span class="iconNewAssign">신규배정</span>
+								</div>
+								<div class="ptTit">
+									<strong>홍길동</strong>
+									<div class="info">
+										<span>Welcome</span>
+										<span>Champion</span>
+									</div>
+								</div>
+								<div class="info">
+									<span>DY카랜드</span>
+									<span>모터스상사</span>
+								</div>
+							</div>
+							<!--// 2020-07-06 태그 수정, 뱃지 추가, 텍스트 수정 -->
+							<label class="icon_favorite">
+								<!--// 즐겨찾기-->
+								<input type="checkbox" checked disabled>  <!--// 2020-06-25 즐겨찾기 checked disabled 처리 -->
+								<i></i>
+							</label>
+						</li>
+						<li>
+							<label class="formChkbox bgCheck">
+								<input type="checkbox">
+								<i class="icon"></i>
+							</label>
+							<!-- 2020-07-06 태그 수정, 뱃지 추가, 텍스트 수정 -->
+							<div class="txtArea">
+								<div class="top">
+									<span class="iconMedium">Medium</span>
+									<span class="iconRetention">리텐션대상</span>
+									<span class="iconNewAssign">신규배정</span>
+								</div>
+								<div class="ptTit">
+									<strong>홍길동</strong>
+									<div class="info">
+										<span>Welcome</span>
+										<span>Champion</span>
+									</div>
+								</div>
+								<div class="info">
+									<span>DY카랜드</span>
+									<span>모터스상사</span>
+								</div>
+							</div>
+							<!--// 2020-07-06 태그 수정, 뱃지 추가, 텍스트 수정 -->
+							<label class="icon_favorite">
+								<!--// 즐겨찾기-->
+								<input type="checkbox" checked disabled> <!--// 2020-06-25 즐겨찾기 checked disabled 처리 -->
+								<i></i>
+							</label>
+						</li>
+					</ul>
+					<div class="btnArea">
+						<a href="#" class="white">더보기</a>
+					</div>
+				</div>
+			</section>
+			<div class="btnArea full">
+				<a href="#" class="lightGray">취소</a>
+				<a href="#" class="blue">적용</a>
+			</div>
+		</main>
+	</section>
+</body>
+
+</html>

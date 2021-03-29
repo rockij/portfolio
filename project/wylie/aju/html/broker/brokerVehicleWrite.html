@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<!--
+	2020-07-01 최초등록일로 문구수정
+	2020-07-02 최하단 안내 문구 삭제
+	2020-07-03 차랑사진등록 문구 변경
+-->
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<!--target-densitydpi=medium-dpi-->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<!-- 아이폰 전체화면 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<title>딜러라운지</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../assets/css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick-theme.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/swiper.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/ui.common.css" type="text/css" /> <!-- 공통 요소 -->
+
+	<!-- JS -->
+	<script type="text/javascript" src="../../assets/js/jquery.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/slick.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/Chart.min.js"></script><!-- 공통 요소 -->
+	<script type="text/javascript" src="../../assets/js/ui.common.js"></script><!-- 공통 요소 -->
+</head>
+
+<body>
+	<section id="wrap">
+		<div id="skipNavi">
+			<a href="#container">본문 바로가기</a>
+		</div>
+		<main id="brokerVehicleWrite" class="broker">
+			<link rel="stylesheet" href="../../assets/css/ui.broker.css" type="text/css" />
+			<section id="container" class="brokerVehicleWrite">
+
+				<div class="carInfoHeader">
+					<em>34오 0000</em>
+					<strong>현대 투싼 ix 디젤 2WD LX 프리미어</strong>
+				</div>
+				<div class="carInfoList">
+					<dl class="accordionList">
+						<dt class="trigger on"><a href="javascript:;">차량정보</a></dt>
+						<dd>
+							<div class="carReponseData">
+								<ul class="defalutList">
+									<li>
+										<span>모델연형</span>
+										<em>2012</em>
+									</li>
+									<li>
+										<span>주행거리</span>
+										<em>50,000km</em>
+									</li>
+									<li>
+										<span>최초등록일</span> <!--// 2020-07-01 최초등록일로 문구수정 -->
+										<em>2012.04.01</em>
+									</li>
+									<li>
+										<span>연료</span>
+										<em>가솔린</em>
+									</li>
+									<li>
+										<span>배기량</span>
+										<em>2,980cc</em>
+									</li>
+									<li>
+										<span>용도</span>
+										<em>자가용</em>
+									</li>
+									<li>
+										<span>색상</span>
+										<em>검정</em>
+									</li>
+									<li>
+										<span>차종</span>
+										<em>중형차</em>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<fieldset>
+					<legend>판매정보 실차확인 선택</legend>
+					<div class="titArea">
+						<h3>판매정보 실차확인</h3>
+						<label class="settingCheckBox">
+							<input type="checkbox">
+							<i><span></span></i>
+						</label>
+					</div>
+					<dl class="fieldList">
+						<dt class="block">
+							<!-- 2020-06-04 dt,dd 두줄처리시 dt에 class="block" 추가 -->
+							거래확률
+							<div class="cmmTooltip">
+								<a href="javascript:;">tooltip</a>
+								<div class="toolCont">
+									<em>거래확률이란?</em><br />
+									판매자가 거래조건에<br />
+									동의하여 실제 매물로 나와 <br />
+									거래가 성사될 가능성을 <br />
+									의미합니다.
+								</div>
+							</div>
+						</dt>
+						<dd>
+							<div class="radioArea">
+								<span class="roundRadio type2">
+									<input type="radio" name="dealRadio" id="deal1">
+									<label for="deal1">50% 이하</label>
+								</span>
+
+								<span class="roundRadio type2">
+									<input type="radio" name="dealRadio" id="deal2">
+									<label for="deal2">60%</label>
+								</span>
+
+								<span class="roundRadio type2">
+									<input type="radio" name="dealRadio" id="deal3">
+									<label for="deal3">70%</label>
+								</span>
+
+								<span class="roundRadio type2">
+									<input type="radio" name="dealRadio" id="deal4">
+									<label for="deal4">80%</label>
+								</span>
+
+								<span class="roundRadio type2">
+									<input type="radio" name="dealRadio" id="deal5">
+									<label for="deal5">90%</label>
+								</span>
+
+								<span class="roundRadio type2">
+									<input type="radio" name="dealRadio" id="deal6" checked="">
+									<label for="deal6">100%</label>
+								</span>
+							</div>
+						</dd>
+						<dt class="block">현 소유자</dt>
+						<dd>
+							<div class="radioArea">
+								<span class="roundRadio type2">
+									<input type="radio" name="ownerRadio" id="owner1">
+									<label for="owner1">개인</label>
+								</span>
+
+								<span class="roundRadio type2">
+									<input type="radio" name="ownerRadio" id="owner2">
+									<label for="owner1">사업자</label>
+								</span>
+
+								<span class="roundRadio type2">
+									<input type="radio" name="ownerRadio" id="owner3">
+									<label for="owner3">상사(딜러)</label>
+								</span>
+							</div>
+						</dd>
+						<dt class="block">사고유무</dt>
+						<dd>
+							<div class="radioArea">
+								<span class="roundRadio type2">
+									<input type="radio" name="hitchRadio" id="hitch1">
+									<label for="hitch1">완전 무사고</label>
+								</span>
+
+								<span class="roundRadio type2">
+									<input type="radio" name="hitchRadio" id="hitch2">
+									<label for="hitch2">무사고</label>
+								</span>
+
+								<span class="roundRadio type2">
+									<input type="radio" name="hitchRadio" id="hitch3">
+									<label for="hitch3">유사고</label>
+								</span>
+							</div>
+						</dd>
+						<dt class="block">외판수리</dt>
+						<dd>
+							<div class="radioArea">
+								<span class="roundRadio type2">
+									<input type="radio" name="fixRadio" id="fix1">
+									<label for="fix1">수리 불필요</label>
+								</span>
+
+								<span class="roundRadio type2">
+									<input type="radio" name="fixRadio" id="fix2">
+									<label for="fix2">1판</label>
+								</span>
+
+								<span class="roundRadio type2">
+									<input type="radio" name="fixRadio" id="fix3">
+									<label for="fix3">2판</label>
+								</span>
+
+								<span class="roundRadio type2">
+									<input type="radio" name="fixRadio" id="fix4">
+									<label for="fix4">3판</label>
+								</span>
+
+								<span class="roundRadio type2">
+									<input type="radio" name="fixRadio" id="fix5">
+									<label for="fix5">4판</label>
+								</span>
+
+								<span class="roundRadio type2">
+									<input type="radio" name="fixRadio" id="fix6">
+									<label for="fix6">5판이상</label>
+								</span>
+							</div>
+						</dd>
+						<dt class="block">옵션(선택)</dt>
+						<dd>
+							<ul class="optionSelected">
+								<li>
+									<label class="formChkbox">
+										<input type="checkbox">
+										<i class="icon"></i>
+										<span class="txt">일반 썬루프</span>
+									</label>
+								</li>
+								<li>
+									<label class="formChkbox">
+										<input type="checkbox">
+										<i class="icon"></i>
+										<span class="txt">파노라마 썬루프</span>
+									</label>
+								</li>
+								<li>
+									<label class="formChkbox">
+										<input type="checkbox">
+										<i class="icon"></i>
+										<span class="txt">네비게이션</span>
+									</label>
+								</li>
+								<li>
+									<label class="formChkbox">
+										<input type="checkbox">
+										<i class="icon"></i>
+										<span class="txt">열선시트</span>
+									</label>
+								</li>
+								<li>
+									<label class="formChkbox">
+										<input type="checkbox">
+										<i class="icon"></i>
+										<span class="txt">에어백</span>
+									</label>
+								</li>
+							</ul>
+							<ul class="notiList">
+								<li>
+									다중선택이 가능합니다.
+								</li>
+							</ul>
+						</dd>
+						<dt class="block">차량설명</dt>
+						<dd>
+							<div class="textareaWrap">
+								<textarea>입력해 주세요.
+								</textarea>
+								<p><strong>7</strong>/1000</p>
+							</div>
+						</dd>
+					</dl>
+				</fieldset>
+
+				<div class="attachBtn">
+					<a href="#">차량사진등록 (선택) <em>2</em></a> <!--// 2020-07-03 문구수정 -->
+				</div>
+
+				<fieldset>
+					<legend>가격정보 입력</legend>
+					<div class="titArea">
+						<h3>가격정보</h3>
+					</div>
+					<dl class="fieldList">
+						<dt>주행거리</dt>
+						<dd>
+							<div class="formInput">
+								<input type="text" placeholder="입력해 주세요." value="">
+								<span class="unit">km</span>
+							</div>
+							<div class="btnArea">
+								<a href="#" class="darkGray disabled">시세조회하기</a>
+							</div>
+						</dd>
+					</dl>
+					<ul class="notiList">
+						<li>주행거리를 입력하시면 판매시세를 확인할 수 있습니다.</li>
+					</ul>
+				</fieldset>
+
+				<dl class="priceBox">
+					<dt>적정 판매시세<span>(엔카기준)</span></dt> <!-- 2020-05-25 sk 텍스트 삭제 -->
+					<dd>0만원</dd>
+				</dl>
+
+				<div class="hopePrice">
+					<dl class="fieldList">
+						<!-- 2020-06-04 클래스 추가 -->
+						<dt>판매 희망가격</dt>
+						<dd>
+							<div class="formInput">
+								<input type="text" placeholder="입력해 주세요." value="">
+								<span class="unit">만원</span>
+							</div>
+						</dd>
+					</dl>
+					<ul class="notiList">
+						<li>판매 희망가격은 소매가격대비 낮게 입력해 주세요. </li>
+					</ul>
+				</div>
+				<!-- 2020-07-02 삭제
+				<ul class="notiList">
+					<li>“팔아주세요” 로 전환 시 딜러Pick > 팔아주세요 메뉴에 보여집니다.</li>
+				</ul>
+				-->
+
+			</section>
+			<div class="btnArea full">
+				<a href="#" class="blue disabled">확인</a>
+			</div>
+		</main>
+	</section>
+</body>
+
+</html>

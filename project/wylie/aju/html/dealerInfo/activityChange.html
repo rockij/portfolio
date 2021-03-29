@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <!--target-densitydpi=medium-dpi-->
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <!-- 아이폰 전체화면 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>딜러라운지</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/reset.css" type="text/css" />
+    <link rel="stylesheet" href="../../assets/css/slick.css" type="text/css" />
+    <link rel="stylesheet" href="../../assets/css/slick-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../assets/css/swiper.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../assets/css/ui.common.css" type="text/css" /> <!-- 공통 요소 -->
+
+    <!-- JS -->
+    <script type="text/javascript" src="../../assets/js/jquery.js"></script>
+    <script type="text/javascript" src="../../assets/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/slick.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui.common.js"></script><!-- 공통 요소 -->
+</head>
+
+<body>
+    <section id="wrap">
+        <div id="skipNavi">
+            <a href="#container">본문 바로가기</a>
+        </div>
+        <main id="activityChange" class="dealerInfo">
+
+            <link rel="stylesheet" href="../../assets/css/ui.dealerInfo.css" type="text/css" />
+
+            <section id="container" class="activityChange">
+
+                <div class="infoBox">
+                    <p>활동정보를 입력하면 포인트 추가 충전!</p>
+                </div>
+
+                <form>
+                    <fieldset>
+                        <legend>활동정보 선택</legend>
+                        <dl class="fieldList">
+                            <dt class="block">딜러경력</dt>
+                            <dd>
+                                <div class="radioArea">
+                                    <span class="roundRadio">
+                                        <input type="radio" name="career" id="career01">
+                                        <label for="career01">1년이내</label>
+                                    </span>
+
+                                    <span class="roundRadio">
+                                        <input type="radio" name="career" id="career02" checked>
+                                        <label for="career02">1~3년</label>
+                                    </span>
+
+                                    <span class="roundRadio">
+                                        <input type="radio" name="career" id="career03">
+                                        <label for="career03">5~10년</label>
+                                    </span>
+
+                                    <span class="roundRadio">
+                                        <input type="radio" name="career" id="career04">
+                                        <label for="career04">10년 이상</label>
+                                    </span>
+                                </div>
+                            </dd>
+                            <dt class="block">주요 취급 차종</dt>
+                            <dd>
+                                <div class="radioArea">
+                                    <span class="roundRadio">
+                                        <input type="radio" name="car" id="car01">
+                                        <label for="car01">전체</label>
+                                    </span>
+
+                                    <span class="roundRadio">
+                                        <input type="radio" name="car" id="car02">
+                                        <label for="car02">국산승용</label>
+                                    </span>
+
+                                    <span class="roundRadio">
+                                        <input type="radio" name="car" id="car03" checked>
+                                        <label for="car03">수입승용</label>
+                                    </span>
+
+                                    <span class="roundRadio">
+                                        <input type="radio" name="car" id="car04">
+                                        <label for="car04">경상용</label>
+                                    </span>
+                                </div>
+                            </dd>
+                            <dt class="block">차량 확보 경로</dt>
+                            <dd>
+                                <div class="radioArea">
+                                    <span class="roundRadio">
+                                        <input type="radio" name="route" id="route01">
+                                        <label for="route01">알선</label>
+                                    </span>
+
+                                    <span class="roundRadio">
+                                        <input type="radio" name="route" id="route02">
+                                        <label for="route02">신차영업소</label>
+                                    </span>
+
+                                    <span class="roundRadio">
+                                        <input type="radio" name="route" id="route03" checked>
+                                        <label for="route03">경매</label>
+                                    </span>
+
+                                    <span class="roundRadio">
+                                        <input type="radio" name="route" id="route04">
+                                        <label for="route04">공매</label>
+                                    </span>
+
+                                    <span class="roundRadio">
+                                        <input type="radio" name="route" id="route05">
+                                        <label for="route05">판매 APP</label>
+                                    </span>
+
+                                    <span class="roundRadio">
+                                        <input type="radio" name="route" id="route06">
+                                        <label for="route06">기타</label>
+                                    </span>
+                                </div>
+                            </dd>
+							<!--
+                            <dt>월평균 매입 대수</dt>
+                            <dd>
+                                <div class="radioArea">
+                                    <span class="roundRadio">
+                                        <input type="radio" name="buyIdx" id="buyIdx01">
+                                        <label for="buyIdx01">5대미만</label>
+                                    </span>
+
+                                    <span class="roundRadio">
+                                        <input type="radio" name="buyIdx" id="buyIdx02">
+                                        <label for="buyIdx02">5~10대</label>
+                                    </span>
+
+                                    <span class="roundRadio">
+                                        <input type="radio" name="buyIdx" id="buyIdx03">
+                                        <label for="buyIdx03">10~20대</label>
+                                    </span>
+
+                                    <span class="roundRadio">
+                                        <input type="radio" name="buyIdx" id="buyIdx04" checked>
+                                        <label for="buyIdx04">20대 이상</label>
+                                    </span>
+                                </div>
+                            </dd>
+							-->
+                            <dt class="block">차량 판매 채널</dt>
+                            <dd>
+                                <div class="chkList">
+                                    <label class="formChkbox">
+                                        <input type="checkbox">
+                                        <i class="icon"></i>
+                                        <span class="txt">SK엔카</span>
+                                    </label>
+                                    <label class="formChkbox">
+                                        <input type="checkbox">
+                                        <i class="icon"></i>
+                                        <span class="txt">KB 차차차</span>
+                                    </label>
+                                    <label class="formChkbox">
+                                        <input type="checkbox">
+                                        <i class="icon"></i>
+                                        <span class="txt">보배드림</span>
+                                    </label>
+                                    <label class="formChkbox">
+                                        <input type="checkbox">
+                                        <i class="icon"></i>
+                                        <span class="txt">첫차</span>
+                                    </label>
+                                    <label class="formChkbox">
+                                        <input type="checkbox">
+                                        <i class="icon"></i>
+                                        <span class="txt">카마트</span>
+                                    </label>
+                                    <label class="formChkbox">
+                                        <input type="checkbox" checked>
+                                        <i class="icon"></i>
+                                        <span class="txt">직접입력</span>
+                                    </label>
+                                    <div class="formInput bdcolor">
+                                        <!-- border 있는 경우 bdcolor 추가 -->
+                                        <input type="text" placeholder="입력해 주세요.">
+                                    </div>
+                                </div>
+                                <ul class="notiList">
+                                    <li>다중 선택이 가능합니다.</li>
+                                </ul>
+                            </dd>
+							<!--
+                            <dt>금융사 선택기준</dt>
+                            <dd>
+                                <div class="chkList">
+                                    <label class="formChkbox">
+                                        <input type="checkbox" checked>
+                                        <i class="icon"></i>
+                                        <span class="txt">수수료</span>
+                                    </label>
+                                    <label class="formChkbox">
+                                        <input type="checkbox">
+                                        <i class="icon"></i>
+                                        <span class="txt">금리</span>
+                                    </label>
+                                    <label class="formChkbox">
+                                        <input type="checkbox">
+                                        <i class="icon"></i>
+                                        <span class="txt">한도</span>
+                                    </label>
+                                    <label class="formChkbox">
+                                        <input type="checkbox">
+                                        <i class="icon"></i>
+                                        <span class="txt">승인율</span>
+                                    </label>
+                                    <label class="formChkbox">
+                                        <input type="checkbox">
+                                        <i class="icon"></i>
+                                        <span class="txt">인간관계</span>
+                                    </label>
+                                    <label class="formChkbox">
+                                        <input type="checkbox" checked>
+                                        <i class="icon"></i>
+                                        <span class="txt">직접입력</span>
+                                    </label>
+                                    <div class="formInput bdcolor">
+                                        <input type="text" placeholder="입력해 주세요.">
+                                    </div>
+                                </div>
+                                <ul class="notiList">
+                                    <li>다중 선택이 가능합니다.</li>
+                                </ul>
+                            </dd>
+							-->
+                        </dl>
+                    </fieldset>
+                </form>
+
+            </section>
+
+            <div class="btnArea full">
+                <a href="#" class="blue">확인</a>
+            </div>
+
+        </main>
+    </section>
+</body>
+
+</html>

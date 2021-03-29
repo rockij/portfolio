@@ -1,0 +1,369 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/jquery-ui-1.8.16.css" />
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/osite/cms_base.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.common.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.style.css" />
+    
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-1.6.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-ui-1.8.16.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery_bgiframe_min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery.validity.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mCustomScrollbar.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/ui.common.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="navSkip"><a href="#containerWrap">본문으로 바로가기</a></div>
+        <!-- header -->
+        <div class="headerWrap">            
+			<script type="text/javascript" src="../../assets/js2.0/ui.header.js" charset="utf-8"></script>
+        </div>
+        <!--// header -->
+
+        <!-- containerWrap -->
+        <div id="containerWrap" role="main" class="inquiry">
+            <div id="container">
+                <!-- 컨텐츠 내용 -->
+
+                <div class="location">
+                    <span class="blind">페이지 위치</span>
+                    <ul>
+                        <li><a href="javascript:;">Star CMS</a></li>
+                        <li><a href="javascript:;">조회/자금모으기</a></li>
+                        <li class="curr">KB금융그룹 조회</li>
+                    </ul>
+                </div>
+                
+                <div class="pageTop">
+                    <h2 class="pageTit">KB금융그룹 조회</h2>
+                </div>
+
+                <!-- page tab -->
+                <ul class="pageTab" role="tablist">
+                    <li><a href="javascript:;">KB국민카드</a></li>
+                    <li><a href="javascript:;">KB증권</a></li>
+                    <li><a href="javascript:;">KB손해보험</a></li>
+                    <li><a href="javascript:;" class="on">KB저축은행</a></li>
+                    <li><a href="javascript:;">KB캐피탈</a></li>
+                </ul>
+				<!-- view area 개발자 분들은 이부분 부터 쓰시면 됩니다. -->
+				<div class="viewArea inquiryAccount">
+
+					<!-- 2021-02-22 삭제 -->
+					<!--  div class="inquiryArea">
+                        <div class="inpArea">
+                            <select class="selbox round">
+                                <option value="">사업자 전체</option>
+                                <option value="">사업자 전체</option>
+                            </select>
+                            <a href="javascript:;" role="button" class="sbtn round">조회</a>
+                        </div>
+					</div -->
+					<!--// 2021-02-22 삭제 -->					
+
+					<!-- 데이터 없을 경우 -->
+					<div class="dataNone">
+						<i class="icon"></i>
+						<p>조회 내역이 없습니다.</p>
+					</div>
+					<!--// 데이터 없을 경우 -->
+		            <!-- 요약 정보 : 2021-02-22 수정-->
+		            <div class="accountInfoList">
+		                <div class="col2">
+		                    <div class="colArea">
+		                        <div class="listHeader">
+		                            <strong>총 예금 계좌수<i>12</i></strong>
+		                        </div>
+		                        <dl class="list">
+		                            <dt>총 예금 잔액</dt>
+		                            <dd>25,894,660원</dd>
+		                        </dl>
+		                    </div>
+		                    <div class="colArea">
+		                        <div class="listHeader">
+		                            <strong>총 대출 계좌수<i>2</i></strong>
+		                        </div>
+		                        <dl class="list">
+		                            <dt>총 대출 잔액</dt>
+		                            <dd>25,890,446원</dd>
+		                        </dl>
+		                    </div>
+		                </div>
+		            </div>
+		            <!--// 요약 정보 -->
+					<div class="inqBtn mt50">
+						<!-- : 2021-02-22 삭제 div class="floatL">
+							<p class="total">
+								총 10건
+							</p>
+						</div -->
+						<div class="floatR">
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon memo"></i>메모장</a>
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon excel"></i>엑셀</a>
+							<a href="javascript:uiCommon.layer.open('detailViewLayer');" role="button" class="sbtn small"><i class="icon print"></i>인쇄</a>
+						</div>
+					</div>
+
+					<!-- 조회 리스트 --->
+					<div class="tableWrap type02" scrollTablexy>
+						<table summary="">
+							<caption></caption>
+							<colgroup>
+		                        <col width="68px;">
+		                        <col width="200px;">
+		                        <col width="100px;">
+		                        <col width="150px;">
+		                        <col width="150px;">
+		                        <col width="120px;">
+		                        <col width="120px;">
+		                        <col width="150px;">
+		                        <col width="150px;">
+		                        <col width="150px;">
+								<col width="150px;" >
+		                        <col width="150px;">
+		                        <col width="150px;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">No <button type="button" class="btnSort"><span class="blind">No 오름차순 정렬</span></button></th>
+									<th scope="col">계좌번호 <button type="button" class="btnSort"><span class="blind">계좌번호 오름차순 정렬</span></button></th>
+									<th scope="col">조회</th>
+									<th scope="col">상품종류 <button type="button" class="btnSort"><span class="blind">상품종류 오름차순 정렬</span></button></th>
+									<th scope="col">신규일 <button type="button" class="btnSort"><span class="blind">신규일 오름차순 정렬</span></button></th>
+									<th scope="col">만기일 <button type="button" class="btnSort"><span class="blind">만기일 오름차순 정렬</span></button></th>
+									<th scope="col">이율 <button type="button" class="btnSort"><span class="blind">이율 오름차순 정렬</span></button></th>
+									<th scope="col">대출금액 <button type="button" class="btnSort"><span class="blind">대출금액 오름차순 정렬</span></button></th>
+									<th scope="col">잔액 <button type="button" class="btnSort"><span class="blind">잔액 오름차순 정렬</span></button></th>
+									<th scope="col">출금가능액 <button type="button" class="btnSort"><span class="blind">출금가능액 오름차순 정렬</span></button></th>
+									<!-- 2021-03-02 위치변경 -->
+									<th scope="col">계좌별명 <button type="button" class="btnSort"><span class="blind">계좌별명 오름차순 정렬</span></button></th>
+									<th scope="col">대출세부구분 <button type="button" class="btnSort"><span class="blind">대출세구분 오름차순 정렬</span></button></th>
+									<th scope="col">상호 <button type="button" class="btnSort"><span class="blind">상호 오름차순 정렬</span></button></th>
+									<!--// 2021-03-02 위치변경 -->
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="13">
+										<!-- 데이터 없을 경우 -->
+										<div class="dataNone">
+											<i class="icon"></i>
+											<p>조회하실 내역이 없습니다.</p>
+										</div>
+										<!--// 데이터 없을 경우 -->
+									</td>
+								</tr>
+								<tr>
+									<td>1</td>
+								    <td>065-01-13-2262296</td>
+									<td><a href="javascript:;" class="search" title="조회" role="button">조회</a></td>								    
+									<td>저축예금</td>
+		                            <td>2015.10.02</td>
+		                            <td>2015.10.02</td>
+		                            <td>0.200</td>
+		                            <td class="price">894,660</td>
+		                            <td class="price">894,660</td>
+		                            <td class="price">500,000,000</td>
+									<td>계좌별명</td>
+		                            <td>0.해당사항없음</td>
+		                            <td>(주)국민상사</td>
+								</tr>
+								<tr>
+									<td>2</td>
+								    <td>065-01-13-2262296</td>
+									<td><a href="javascript:;" class="search" title="조회" role="button">조회</a></td>								    
+									<td>저축예금</td>
+		                            <td>2015.10.02</td>
+		                            <td>2015.10.02</td>
+		                            <td>0.200</td>
+		                            <td class="price">894,660</td>
+		                            <td class="price">894,660</td>
+		                            <td class="price">500,000,000</td>
+									<td>계좌별명</td>
+		                            <td>0.해당사항없음</td>
+		                            <td>(주)국민상사</td>
+								</tr>
+							</tbody>
+						</table>                        
+					</div>
+					
+					<!--// 조회 리스트  -->
+					<!-- 필터/검색/편집 : 2021-02-22 삭제  -->
+					<!--  div class="tblBottom">
+						<div class="floatL">
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon filter"></i>필터</a>
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon search"></i>검색</a>
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon edit"></i>편집</a>
+						</div>
+						<div class="floatR">
+							<span class="pageIdx">11/52</span>
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon more"></i>더불러오기</a>
+						</div>
+					</div -->
+					<!--// 필터/검색/편집 : 2021-02-22 삭제  -->
+					
+					<div class="btnWrap mt60">
+				    	<a href="javascript:;" role="button" class="btn bgYellow" title="목록으로이동">목록</a>
+				    </div>
+
+				</div>
+				<!--// view area -->
+
+                
+                <!--// 컨텐츠 내용 -->
+            </div>
+            <!--// container -->
+        </div>
+        <!--// containerWrap -->
+
+        <!-- footer -->
+        <div class="footerWrap">
+			<script type="text/javascript" src="../../assets/js2.0/ui.footer.js" charset="utf-8"></script>
+        </div>
+        <!--// footer -->
+    </div>
+    
+	<!-- 윈도우 popup : 계좌내역인쇄 (1000x758) -->
+	 <div class="layer detailViewLayer">
+        <a href="javascript: uiCommon.layer.close('detailViewLayer');" class="popClose"><span class="blind">팝업 닫기</span></a>
+        <h4 class="popTitle">KB저축은행</h4>
+        <!-- popContent -->
+        <div class="popCont">
+            <!-- 요약 정보 -->
+            <div class="accountInfoList type02 sm">
+                <div class="col2">
+                    <div class="colArea">
+                        <div class="listHeader">
+                            <strong>총 예금 계좌수<i>12</i></strong>
+                        </div>
+                        <dl class="list">
+                            <dt>총 예금 잔액</dt>
+                            <dd>25,894,660원</dd>
+                        </dl>
+                    </div>
+                    <div class="colArea">
+                        <div class="listHeader">
+                            <strong>총 대출 계좌수<i>2</i></strong>
+                        </div>
+                        <dl class="list">
+                            <dt>총 대출 잔액</dt>
+                            <dd>25,890,446원</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <!--// 요약 정보 -->
+			<!-- 조회 리스트 --->
+			<div class="tableWrap type02 mt30" scrollTablexy>
+                <table class="scrollTableHead">
+                    <colgroup>
+                        <col width="68px;" >
+                        <col width="200px;">
+                        <col width="150px;">
+                        <col width="150px;">
+                        <col width="120px;">
+                        <col width="120px;">
+                        <col width="150px;">
+                        <col width="150px;">
+                        <col width="150px;">
+						<col width="150px;" >
+                        <col width="150px;">
+                        <col width="150px;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">계좌번호</th>
+                            <th scope="col">상품종류</th>
+                            <th scope="col">신규일</th>
+                            <th scope="col">만기일</th>
+                            <th scope="col">이율</th>
+                            <th scope="col">대출금액</th>
+                            <th scope="col">잔액</th>
+                            <th scope="col">출금가능액</th>
+							<!-- 2021-03-02 위치변경 -->
+							<th scope="col">계좌별명</th>
+                            <th scope="col">대출세부구분</th>
+                            <th scope="col">상호</th>
+							<!--// 2021-03-02 위치변경 -->
+                        </tr>
+                    </thead>					
+                </table>
+                <table summary="">
+                    <caption></caption>
+                    <colgroup>
+                        <col width="68px;" >
+                        <col width="200px;">
+                        <col width="150px;">
+                        <col width="150px;" >
+                        <col width="150px;">
+                        <col width="150px;">
+                        <col width="150px;">
+                        <col width="120px;">
+                        <col width="120px;">
+                        <col width="150px;">
+                        <col width="150px;">
+                        <col width="150px;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td colspan="12">
+                                <!-- 데이터 없을 경우 -->
+                                <div class="dataNone">
+                                    <i class="icon"></i>
+                                    <p>조회하실 내역이 없습니다.</p>
+                                </div>
+                                <!--// 데이터 없을 경우 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>065-01-13-2262296</td>
+							<td>저축예금</td>                            
+                            <td>2015.10.02</td>
+                            <td>2015.10.02</td>
+                            <td>0.200</td>
+                            <td class="price">894,660</td>
+                            <td class="price">894,660</td>
+                            <td class="price">500,000,000</td>
+							<td>계좌별명</td>
+                            <td>0.해당사항없음</td>
+                            <td>(주)국민상사</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>065-01-13-2262296</td>
+							<td>저축예금</td>
+                            <td>2015.10.02</td>
+                            <td>2015.10.02</td>
+                            <td>0.200</td>
+                            <td class="price">894,660</td>
+                            <td class="price">894,660</td>
+                            <td class="price">500,000,000</td>
+							<td>계좌별명</td>
+                            <td>0.해당사항없음</td>
+                            <td>(주)국민상사</td>
+                        </tr>
+                    </tbody>
+                </table>                        
+            </div> 
+
+			<!--// 조회 리스트  -->
+			<div class="btnWrap small">
+				<a href="javascript:;" role="button" class="btn bgYellow" title="인쇄하기">인쇄</a>
+			</div>
+		</div>
+        <!--// popCont -->
+    </div>
+	<!--// 윈도우 popup : 계좌내역인쇄 -->
+
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/jquery-ui-1.8.16.css" />
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/osite/cms_base.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.common.css" />
+    
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-1.6.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-ui-1.8.16.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery_bgiframe_min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery.validity.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mCustomScrollbar.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/ui.common.js" charset="utf-8"></script>
+
+    <style>
+	h2{margin:15px 0; font-size:30px; color:#222; font-weight:700; text-align: center;}
+	h3{margin:30px 0; font-size:25px; color:#222; font-weight:700;}
+	.h4{margin:30px 0 10px 0; font-size:18px; color:#222; font-weight:700;}
+	.sBtn{display: inline-block; border: 1px solid #222; padding: 10px 20px;}
+	.con p{margin-bottom: 20px; font-size: 15px;}
+
+	/* .layer{display: none; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 10; width: 500px; height: 500px; border: 1px solid red; background: #fff;} */
+	/* .dim{position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: #000; opacity: 0.5;} */
+
+	.tab{overflow: hidden;}
+	.tab li{float: left; width: 100px; border: 1px solid #222; border-width: 1px 1px 1px 0;}
+	.tab li:first-child{border-width: 1px;}
+	.tab li a{display: block; text-align: center;}
+	.tab li a.on{background: #222; color: #fff;}
+	.tabContent{margin-top: 10px;}
+	.tabContent > div{display: none; border: 1px solid #222; width: 400px; height: 200px; text-align: center; line-height: 200px;}
+	.tabContent > div:first-child{display: block;}
+
+	.accordionWrap{}
+	.accordionWrap dt{width: 400px; border: 1px solid #222; border-width: 0 1px 1px 1px;}
+	.accordionWrap dt:first-child{border-width: 1px;}
+	.accordionWrap dt a{display: block; padding-left: 20px; line-height: 40px;}
+	.accordionWrap dd{width: 400px; height: 0; overflow: hidden; }
+	.accordionWrap dd div{height: 200px; background: #eee; border-bottom: 1px solid #222; text-align: center; line-height: 200px;}
+	.accordionWrap dd:last-child div{border: 0;}
+
+	input[type=text]{width: 400px; margin-bottom: 10px; border-color: #222;}
+
+	.menu{position: fixed; top: 150px; right: 20px; z-index: 100;}
+	.menu li{width: 150px; border: 1px solid #222; border-width: 0 1px 1px 1px;}
+	.menu li:first-child{border-width: 1px;}
+	.menu li a{display: block; padding-left: 20px; line-height: 25px;}
+
+    </style>
+</head>
+<body>
+	<ul class="menu">
+		<li><a href="#layer">레이어</a></li>
+		<li><a href="#tab">탭</a></li>
+		<li><a href="#accordion">아코디언</a></li>
+		<li><a href="#placeholder">플레이스홀더</a></li>
+	</ul>
+    <div id="wrap">
+        <!-- header -->
+        <div class="headerWrap">            
+            <div class="headerTop">
+                <div class="inner">
+                    <h1 class="logo"><a href="#"><img src="../../assets/images/common/cms_logo.png" alt="Star CMS"></a></h1>
+                </div>
+            </div>
+        </div>
+        <!--// header -->
+
+        <!-- containerWrap -->
+        <div id="containerWrap" role="main" class="1depth 클래스">
+            <div id="container" class="페이지ID">
+                <!-- 컨텐츠 내용 -->
+                
+                <h2>스크립트 사용 가이드</h2>
+				<!-- 레이어 -->
+				<div id="layer">
+					<h3>레이어 팝업 가이드</h3>
+					<div>
+						<h4 class="h4">열기 : Jquery click 이벤트를 이용한 예</h4>
+						<div class="con">
+							<p>
+								<strong>열기</strong> : target-layer-open의 속성값에 "열고 싶은 타겟레이어의 클래스명; dim의 사용여부" 를 순서대로 넣어준다.<br>
+								ex) &lta href="javascript:;" target-layer-open="layer;dim;"&gtjquery click open&lt/a&gt<br>
+							</p>
+							
+							<a href="javascript:;" class="sBtn" target-layer-open="guideLayer;dim;">jquery click open</a>
+						</div>
+					</div>
+					<div>
+						<h4 class="h4">열기 : javascript function을 이용한 예</h4>
+						<div class="con">
+							<p>
+								uiCommon.layer.open 호출 할때 스트링 파라미터 값으로 타겟레이어의 클래스와 dim 사용 여부를 순서대로 넣어준다<br>
+								ex) &lta href="javascript: uiCommon.layer.open('layer', 'dim');"&gtjavascript function open&lt/a&gt<br>
+							</p>
+							
+							<a href="javascript: uiCommon.layer.open('layer', 'dim');" class="sBtn">javascript function open</a>
+						</div>
+					</div>
+					<div>
+						<h4 class="h4">닫기 : Jquery click 이벤트를 이용한 예</h4>
+						<div class="con">
+							<p>
+								target-layer-close의 속성값에 "닫고 싶은 타겟레이어의 클래스명" 을 넣어준다.<br>
+								ex) &lta href="javascript:;" target-layer-close="layer"&gtjquery click close&lt/a&gt<br>
+							</p>
+							
+						</div>
+					</div>
+					<div>
+						<h4 class="h4">닫기 : javascript function을 이용한 예</h4>
+						<div class="con">
+							<p>
+								uiCommon.layer.close 호출 할때 스트링 파라미터 값으로 타겟레이어의 클래스를 넣어준다<br>
+								ex) &lta href="javascript: uiCommon.layer.close('layer');"&gtjavascript function close&lt/a&gt<br>
+							</p>
+						</div>
+					</div>				
+				</div>
+
+				<!--// 레이어 -->
+				<!-- 탭 -->
+				<div id="tab">
+					<h3>탭 가이드</h3>
+					<div>
+						<h4 class="h4">TAB</h4>
+						<div class="con">
+							<p>
+								아래의 구조를 그대로 이용하고 tab과 tabContent 클래스는 스타일링에 이용하지 않는다.<br>
+								css를 입히기 위한 클래스를 추가 하여 사용한다.
+							</p>
+<pre>
+&ltul class="tab"&gt
+	&ltli&gt&lta href="javascript:;"&gt menu01&lt/a&gt&lt/li&gt
+	&ltli&gt&lta href="javascript:;"&gt menu02&lt/a&gt&lt/li&gt
+	&ltli&gt&lta href="javascript:;"&gt menu03&lt/a&gt&lt/li&gt
+	&ltli&gt&lta href="javascript:;"&gt menu04&lt/a&gt&lt/li&gt
+&lt/ul&gt
+&ltdiv class="tabContent"&gt
+	&ltdiv&gt
+		content01
+	&lt/div&gt
+	&ltdiv&gt
+		content02
+	&lt/div&gt
+	&ltdiv&gt
+		content03
+	&lt/div&gt
+	&ltdiv&gt
+		content04
+	&lt/div&gt
+&lt/div&gt							
+</pre>
+							<ul class="tab">
+								<li><a href="javascript:;">menu01</a></li>
+								<li><a href="javascript:;">menu02</a></li>
+								<li><a href="javascript:;">menu03</a></li>
+								<li><a href="javascript:;">menu04</a></li>
+							</ul>
+							<div class="tabContent">
+								<div>
+									content01
+								</div>
+								<div>
+									content02
+								</div>
+								<div>
+									content03
+								</div>
+								<div>
+									content04
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--// 탭 -->
+				<!-- 아코디언 리스트 -->
+				<div id="accordion">
+					<h3>아코디언 가이드</h3>
+					<div>
+						<h4>accordion</h4>
+						<div class="con">
+							<p>
+								아래의 구조를 그대로 이용하고 accordionWrap 클래스는 스타일링에 이용하지 않는다.<br>
+								css를 입히기 위한 클래스를 추가 하여 사용한다.<br>
+							</p>
+<pre>
+&ltdl class="accordionWrap"&gt
+	&ltdt&gt&lta href="javascript:;"&gt타이틀1&lt/a&gt&lt/dt&gt
+	&ltdd&gt
+		&ltdiv&gt
+			내용1
+		&lt/div&gt
+	&lt/dd&gt
+	&ltdt&gt&lta href="javascript:;"&gt타이틀2&lt/a&gt&lt/dt&gt
+	&ltdd&gt
+		&ltdiv&gt
+			내용2
+		&lt/div&gt
+	&lt/dd&gt
+	&ltdt&gt&lta href="javascript:;"&gt타이틀3&lt/a&gt&lt/dt&gt
+	&ltdd&gt
+		&ltdiv&gt
+			내용3
+		&lt/div&gt
+	&lt/dd&gt
+	&ltdt&gt&lta href="javascript:;"&gt타이틀4&lt/a&gt&lt/dt&gt
+	&ltdd&gt
+		&ltdiv&gt
+			내용4
+		&lt/div&gt
+	&lt/dd&gt
+&lt/dl&gt
+
+</pre>
+
+							<dl class="accordionWrap">
+								<dt><a href="javascript:;">타이틀1</a></dt>
+								<dd>
+									<div>
+										내용1
+									</div>
+								</dd>
+								<dt><a href="javascript:;">타이틀2</a></dt>
+								<dd>
+									<div>
+										내용2
+									</div>
+								</dd>
+								<dt><a href="javascript:;">타이틀3</a></dt>
+								<dd>
+									<div>
+										내용3
+									</div>
+								</dd>
+								<dt><a href="javascript:;">타이틀4</a></dt>
+								<dd>
+									<div>
+										내용4
+									</div>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<!--// 아코디언 리스트 -->
+				<!-- 플레이스 홀더 -->
+				<div id="placeholder">
+					<h3>placeholder 가이드</h3>
+					<div class="con">
+						<h4>input placeholder</h4>
+						<p>
+							IE9의 크로스 브라우징을 위해 placeholder 기능을 스크립트로 구현<br>
+							input의 data-placeholder 속성 안에 placeholder의 내용을 입력하면 해당 input의 value값에 들어가는 방식.<br>
+							ex) &ltinput type="text" value="" data-placeholder="입력해주세요."&gt
+						</p>
+						<input type="text" value="기본 데이터 블러 왔을 때 작동 안함" data-placeholder="입력해주세요1."><br/>
+						<input type="text" value="" data-placeholder="입력해주세요2."><br/>
+						<input type="text" value="" data-placeholder="입력해주세요3.">
+					</div>
+				</div>
+				<!--// 플레이스 홀더 -->
+
+                <!--// 컨텐츠 내용 -->
+            </div>
+        </div>
+        <!--// containerWrap -->
+
+    </div>
+
+	<!-- <div class="layer">
+		<a href="javascript: uiCommon.layer.close('layer');">close</a>
+	</div> -->
+
+
+	 <!-- layer popup -->
+	 <div class="layer guideLayer">
+        <a href="javascript: uiCommon.layer.close('guideLayer');" class="popClose"><span class="blind">팝업 닫기</span></a>
+        <h4 class="popTitle">자주 사용하는 계좌 설정</h4>
+		<p class="popDesc">
+			공동인증서 하나로 다른 은행 계정을 등록하면서, 카드사와<br />
+			국세청까지 한번에 등록할 수 있습니다.		
+		</p>
+        <!-- popContent -->
+        <div class="popCont">
+            <h5>계좌선택</h5>
+            <div style="height:500px;"></div>
+        </div>
+        <!--// popCont -->
+    </div>
+    <!--// layer popup -->
+
+</body>
+</html>

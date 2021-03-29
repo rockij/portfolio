@@ -1,0 +1,490 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/jquery-ui-1.8.16.css" />
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/osite/cms_base.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.common.css" />    
+	<link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.style.css" />
+    
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-1.6.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-ui-1.8.16.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery_bgiframe_min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery.validity.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mCustomScrollbar.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/ui.common.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="navSkip"><a href="#containerWrap">본문으로 바로가기</a></div>
+        <!-- header -->
+        <div class="headerWrap">            
+			<script type="text/javascript" src="../../assets/js2.0/ui.header.js" charset="utf-8"></script>
+        </div>
+        <!--// header -->
+
+        <!-- containerWrap -->
+        <div id="containerWrap" role="main">
+            <div id="container">
+                <!-- 컨텐츠 내용 -->
+
+                <div class="location">
+                    <span class="blind">페이지 위치</span>
+                    <ul>
+                        <li><a href="javascript:;">Star CMS</a></li>
+                        <li><a href="javascript:;">조회/자금모으기</a></li>
+                        <li><a href="javascript:;">통합카드조회</a></li>
+                        <li class="curr">카드대사관리</li>
+                    </ul>
+                </div>
+                
+                <div class="pageTop">
+					<h2 class="pageTit">카드대사관리</h2>
+                </div>
+
+				<!-- view area 개발자 분들은 이부분 부터 쓰시면 됩니다. -->
+				<div class="viewArea inquiryAccount">
+
+                    <div class="compleateArea">
+                        <i class="icon"></i>
+                        <p>카드대사실행이 정상적으로 완료되었습니다.</p>
+                    </div>
+
+                    <!-- notiBox -->
+					<div class="notiBox">
+						<dl>
+							<dt class="blind">유의사항</dt>
+							<dd>
+								<div>
+									<!-- notiList -->
+									<ul class="notiList">
+                                        <li>대사상태가 미확인 상태인 내역을 선택하여 수동으로 대사실행할 수 있습니다.</li>
+									</ul>
+									<!--// notiList -->
+								</div>
+							</dd>
+						</dl>
+					</div>
+                    <!--// notiBox -->
+
+                    <div class="tableWrap mt30">
+						<table summary="">
+							<caption></caption>
+							<colgroup>
+								<col width="200px;">
+								<col width="auto;">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">실행결과</th>
+									<td>총 실행 건 수 100건 (확인 62건/중복 35건/<em class="fcRed">미확인 3건</em>)</td>
+                                </tr>
+							</tbody>
+                        </table>
+					</div>
+                    
+                    <div class="inqBtn mt50">
+                        <div class="floatL mb10">
+                            <h3 class="contTit">미확인 대사실행</h3>
+                        </div>
+                        <div class="floatR mt10">
+                            <a href="javascript:;" role="button" class="sbtn small"><i class="icon memo"></i>메모장</a>
+                            <a href="javascript:;" role="button" class="sbtn small"><i class="icon excel"></i>엑셀</a>
+                            <a href="javascript:uiCommon.layer.open('cardStatusLayer');" role="button" class="sbtn small"><i class="icon print"></i>인쇄</a>
+                        </div>
+                    </div>
+					<!-- 조회 리스트 --->
+					<div class="tableWrap type02" scrolltablexy>
+                        <table summary="">
+                            <caption></caption>
+                            <colgroup>
+                                <col width="130px;">
+                                <col width="130px;">
+                                <col width="130px;">
+                                <col width="130px;">
+                                <col width="130px;">
+                                <col width="100px;">
+                                <col width="100px;">
+                                <col width="100px;">
+                                <col width="100px;">
+                                <col width="100px;">
+                                <col width="100px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">이용일 <button type="button" class="btnSort"><span class="blind">이용일 오름차순 정렬</span></button></th>
+                                    <th scope="col">가맹점 <button type="button" class="btnSort"><span class="blind">가맹점 오름차순 정렬</span></button></th>
+                                    <th scope="col">청구금액(원) <button type="button" class="btnSort"><span class="blind">청구금액(원) 오름차순 정렬</span></button></th>
+                                    <th scope="col">이용수수료(원) <button type="button" class="btnSort"><span class="blind">이용수수료(원) 오름차순 정렬</span></button></th>
+                                    <th scope="col">결제예정일 <button type="button" class="btnSort"><span class="blind">결제예정일 오름차순 정렬</span></button></th>
+                                    <th scope="col">결제방법 <button type="button" class="btnSort"><span class="blind">결제방법 오름차순 정렬</span></button></th>
+                                    <th scope="col">할부기간 <button type="button" class="btnSort"><span class="blind">할부기간 오름차순 정렬</span></button></th>
+                                    <th scope="col">할부회차 <button type="button" class="btnSort"><span class="blind">할부회차 오름차순 정렬</span></button></th>
+                                    <th scope="col">할부개월 <button type="button" class="btnSort"><span class="blind">할부개월 오름차순 정렬</span></button></th>
+                                    <th scope="col">상태 <button type="button" class="btnSort"><span class="blind">상태 오름차순 정렬</span></button></th>
+                                    <th scope="col">대사상태 <button type="button" class="btnSort"><span class="blind">대사상태 오름차순 정렬</span></button></th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <table summary="">
+                            <caption></caption>
+                            <colgroup>
+                                <col width="130px;">
+                                <col width="130px;">
+                                <col width="130px;">
+                                <col width="130px;">
+                                <col width="130px;">
+                                <col width="100px;">
+                                <col width="100px;">
+                                <col width="100px;">
+                                <col width="100px;">
+                                <col width="100px;">
+                                <col width="100px;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td>2020.12.01</td>
+                                    <td>김밥천국</td>
+                                    <td class="price">34,000</td>
+                                    <td class="price">100</td>
+                                    <td>2021.02.02</td>
+                                    <td>일시불</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><a href="javascript:;" role="button" class="btnText" title="대사실행 처리 팝업 열기">미확인</a></td>
+                                </tr>
+                                <tr>
+                                    <td>2020.12.01</td>
+                                    <td>김밥천국</td>
+                                    <td class="price">34,000</td>
+                                    <td class="price">100</td>
+                                    <td>2021.02.02</td>
+                                    <td>할부</td>
+                                    <td>3개월</td>
+                                    <td>3회차</td>
+                                    <td>3개월</td>
+                                    <td>정상</td>
+                                    <td><a href="javascript:;" role="button" class="btnText" title="대사실행 처리 팝업 열기">미확인</a></td>
+                                </tr>
+                                <tr>
+                                    <td>2020.12.01</td>
+                                    <td>김밥천국</td>
+                                    <td class="price">34,000</td>
+                                    <td class="price">100</td>
+                                    <td>2021.02.02</td>
+                                    <td>할부</td>
+                                    <td>3개월</td>
+                                    <td>3회차</td>
+                                    <td>3개월</td>
+                                    <td>정상</td>
+                                    <td><a href="javascript:;" role="button" class="btnText" title="대사실행 처리 팝업 열기">미확인</a></td>
+                                </tr>
+                            </tbody>
+                        </table>                        
+                    </div>
+					<!--// 조회 리스트  -->
+
+					<div class="tblBottom">
+						<div class="floatL">
+							<a href="javascript:uiCommon.layer.open('inquiryFilter');" role="button" class="sbtn small"><i class="icon filter"></i>필터</a>
+							<a href="javascript:uiCommon.layer.open('inquirySearchLayer');" role="button" class="sbtn small"><i class="icon search"></i>검색</a>
+							<a href="javascript:uiCommon.layer.open('itemSelectLayer');" role="button" class="sbtn small"><i class="icon edit"></i>편집</a>
+						</div>
+						<div class="floatR">
+							<span class="pageIdx">11/52</span>
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon more"></i>더불러오기</a>
+						</div>
+                    </div>
+                    
+                    <div class="btnWrap mt60">
+						<a href="javascript:;" role="button" class="btn bgYellow" title="카드대사관리 목록조회 페이지로 이동">카드대사목록</a>
+					</div>
+				</div>
+				<!--// view area -->
+                
+                <!--// 컨텐츠 내용 -->
+            </div>
+            <!--// container -->
+        </div>
+        <!--// containerWrap -->
+
+        <!-- footer -->
+        <div class="footerWrap">
+			<script type="text/javascript" src="../../assets/js2.0/ui.footer.js" charset="utf-8"></script>
+        </div>
+        <!-- footer -->
+    </div>
+
+    <!-- 대사실행처리 팝업 (1010x1108) -->
+	<div class="layer cardStatusLayer">
+		<a href="javascript: uiCommon.layer.close('cardStatusLayer');" class="popClose"><span class="blind">팝업 닫기</span></a>
+		<h4 class="popTitle">대사실행 처리</h4>
+		<!-- popContent -->
+		<div class="popCont">
+             <!-- notiBox -->
+            <div class="notiBox">
+                <dl>
+                    <dt class="blind">유의사항</dt>
+                    <dd>
+                        <div>
+                            <!-- notiList -->
+                            <ul class="notiList">
+                                <li>해당 승인내역을 확인 후 미확인 대사실행건과 맞는 내역을 선택합니다.</li>
+                                <li>[확인] 선택 시 수동으로 대사실행되며 카드대사관리 화면의 대사상태에 반영됩니다.</li>
+                            </ul>
+                            <!--// notiList -->
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+            <!--// notiBox -->
+            <div class="accountInfoList sm mt50">
+                <div class="listHeader">
+                    <dl class="bank">
+                        <dt>KB국민카드</dt>
+                        <dd>9555-****-****-9807</dd>
+                    </dl>
+                    <p class="rightTxt">국민상사(영업관리부)</p>
+                </div>
+                <dl class="list">
+                    <dt>이용일</dt>
+                    <dd>2020.12.15</dd>
+                    <dt>가맹점</dt>
+                    <dd>김밥천국</dd>
+                    <dt>청구금액(원)</dt>
+                    <dd>34,000</dd>
+                    <dt>이용수수료(원)</dt>
+                    <dd>100</dd>
+                    <dt>결제방법</dt>
+                    <dd>일시불</dd>
+                    <dt>할부기간/회차</dt>
+                    <dd>-</dd>
+                </dl>
+            </div>
+
+            <div class="tableWrap mt50">
+                <table summary="">
+                    <caption></caption>
+                    <colgroup>
+                        <col width="200px;">
+                        <col width="740px;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">승인내역 조회기간</th>
+                            <td>
+                                <!-- periodArea -->
+                                <div class="periodArea">
+                                    <a href="javascript:;" role="button" class="sbtn small active" title="선택됨">당일</a>
+                                    <a href="javascript:;" role="button" class="sbtn small">3일</a>
+                                    <a href="javascript:;" role="button" class="sbtn small">1주일</a>
+                                    <a href="javascript:;" role="button" class="sbtn small">1개월</a>
+                                    <a href="javascript:;" role="button" class="sbtn small">3개월</a>
+                                    <a href="javascript:;" role="button" class="sbtn small">6개월</a>
+                                </div>
+                                <!-- periodArea -->
+                                <div class="dateInput">
+                                    <div class="inpArea">
+                                        <input type="text" value="2020.12.11" data-placeholder="입력해주세요" class="isValue">
+                                        <button type="button" class="btnIcon calendar"><span class="blind">날짜 선택</span></button> 
+                                    </div>
+                                    <span>~</span>
+                                    <div class="inpArea">
+                                        <input type="text" value="2020.12.11" data-placeholder="입력해주세요" class="isValue">
+                                        <button type="button" class="btnIcon calendar"><span class="blind">날짜 선택</span></button> 
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="btnWrap small mt30">
+                    <a href="javascript:;" role="button" class="btn bgWhite">조회</a>
+                </div>
+            </div>
+
+            <p class="tblDesc mt80">승인내역 조회기간 : 2020.12.11 ~ 2020.12.11 </p>
+			<div class="tableWrap type02">
+                <table summary="">
+                    <caption></caption>
+                    <colgroup>
+                        <col width="64px;">
+                        <col width="150px;">
+                        <col width="176px;">
+                        <col width="130px;">
+                        <col width="110px;">
+                        <col width="110px;">
+                        <col width="100px;">
+                        <col width="110px;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col"><input type="radio" id="radioStatus0" name="radioStatus" title="카드 청구정보의 대사실행 할 항목 선택"></th>
+                            <th scope="col">승인일</th>
+                            <th scope="col">가맹점</th>
+                            <th scope="col">승인금액</th>
+                            <th scope="col">승인번호</th>
+                            <th scope="col">결제방법</th>
+                            <th scope="col">할부개월</th>
+                            <th scope="col">상태</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="radio" id="radioStatus01" name="radioStatus" title="1번째 카드 청구정보 선택"></td>
+                            <td>2020.12.15</td>
+                            <td>김밥천국</td>
+                            <td class="price">34,000</td>
+                            <td>3000554</td>
+                            <td>일시불</td>
+                            <td>-</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" id="radioStatus02" name="radioStatus" title="2번째 카드 청구정보 선택"></td>
+                            <td>2020.12.15</td>
+                            <td>김밥천국</td>
+                            <td class="price">34,000</td>
+                            <td>3000554</td>
+                            <td>할부</td>
+                            <td>3개월</td>
+                            <td>정상</td>
+                        </tr>
+                    </tbody>
+                </table>                        
+            </div>
+            <div class="btnWrap small">
+                <a href="javascript:;" role="button" class="btn bgYellow" title="대사실행하기">확인</a>
+                <a href="javascript:;" role="button" class="btn bgGray" title="취소하기">취소</a>
+            </div>
+		</div>
+		<!--// popCont -->
+	</div>
+    <!--// 대사실행처리 팝업 -->
+	    
+    <!--항목 편집 layer popup (480x519) -->
+	<div class="layer itemSelectLayer">
+		<a href="javascript: uiCommon.layer.close('itemSelectLayer');" class="popClose"><span class="blind">팝업 닫기</span></a>
+		<h4 class="popTitle">편집</h4>
+		<p class="popDesc">
+			원하는 항목 열만 선택하여 조회하실 수 있습니다.<br />
+			편집한 설정값은 저장되지 않습니다.		
+		</p>
+		<!-- popContent -->
+		<div class="popCont">
+			<ul class="itemSelectList">
+				<li>
+					<input type="checkbox" id="checkbox01" checked />
+					<label for="checkbox01">이용일</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox02" checked />
+					<label for="checkbox02">사업자</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox03" checked />
+					<label for="checkbox03">부서<label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox04" checked />
+					<label for="checkbox04">카드사</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox05" checked />
+					<label for="checkbox05">카드구분</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox06" checked />
+					<label for="checkbox06">카드번호</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox07" checked />
+					<label for="checkbox07">가맹점</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox08" checked />
+					<label for="checkbox08">청구금액(원)</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox09" checked />
+					<label for="checkbox09">수수료/할인금액(원)</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox10" checked />
+					<label for="checkbox10">결제예정일</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox11" checked />
+					<label for="checkbox11">결제방법</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox12" checked />
+					<label for="checkbox12">할부기간</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox13" checked />
+					<label for="checkbox13">할부회차</label>
+				</li>
+			</ul>
+			<ul class="notiList sm">
+				<li>전체 항목 선택 시, 일부 인쇄항목이 표시되지 않을 수 있습니다.</li>
+			</ul>
+
+			<div class="btnWrap small">
+				<a href="javascript:;" role="button" class="btn bgYellow">확인</a>			
+				<a href="javascript:;" role="button" class="btn bgGray">초기화</a>			
+			</div>
+		</div>
+		<!--// popCont -->
+	</div>
+	<!--// 항목 편집 layer popup -->
+
+	<!-- 검색 layer popup (480x251) -->
+	<div class="layer inquirySearchLayer">
+		<a href="javascript: uiCommon.layer.close('inquirySearchLayer');" class="popClose"><span class="blind">팝업 닫기</span></a>
+		<h4 class="popTitle">검색</h4>
+		<p class="popDesc">
+			입력하신 키워드가 포함된 행을 찾아드립니다.
+		</p>
+		<!-- popContent -->
+		<div class="popCont">
+			<div class="inputField">
+				<input type="text" value="" data-placeholder="찾을 내용 입력">
+				<a href="javascript:;" role="button" class="sbtn">검색</a>
+			</div>
+			<div class="iconBtn">
+				<a href="javascript:;" role="button" class="sbtn small"><i class="icon prev"></i>이전</a>
+				<a href="javascript:;" role="button" class="sbtn small">다음<i class="icon next"></i></a>
+			</div>
+		</div>
+		<!--// popCont -->
+	</div>
+	<!--// 검색 layer popup -->
+
+	<!-- 필터 layer popup (480x237) -->
+	<div class="layer inquiryFilter">
+		<a href="javascript: uiCommon.layer.close('inquiryFilter');" class="popClose"><span class="blind">팝업 닫기</span></a>
+		<h4 class="popTitle">필터</h4>
+		<p class="popDesc">
+			입력하신 키워드가 포함된 행만 추출하여<br />
+			확인하실 수 있습니다.
+		</p>
+		<!-- popContent -->
+		<div class="popCont">
+			<div class="inputField">
+				<input type="text" value="" data-placeholder="찾을 내용 입력">
+				<a href="javascript:;" role="button" class="sbtn">필터</a>
+			</div>
+		</div>
+		<!--// popCont -->
+	</div>
+	<!--// 필터 layer popup -->
+</body>
+</html>

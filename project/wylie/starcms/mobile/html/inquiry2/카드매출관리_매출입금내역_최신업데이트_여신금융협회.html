@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/content.css" />
+    <script type="text/javascript" src="../../js/cms2.0/library/jquery_lib.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/cms2.0/common_ui.js" charset="utf-8"></script>
+
+    <!-- cms2.0 추가 -->
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/ui.style.css" />
+    <script type="text/javascript" src="../../js/cms2.0/swiper.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/cms2.0/ui.style.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content">
+            <!-- contInnerWrap -->
+            <div class="contInnerWrap">
+
+                <div class="bulletWrap typeGrayRound">
+                    <ul>
+                        <li>
+                            여신금융협회의 경우 최대 1개월, 국세청-전자세금계산서의 경우 최대 1개월, 국세청-현금영수증의 경우 최대 18개월까지 조회가 가능합니다.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="inpWrap">
+                    <h5 class="sectTit">조회기관</h5>
+                    <ul>
+                        <li>
+                            <ul class="tabRadio">
+                                <li>
+                                    <input type="radio" name="agencyRadio" id="agency01" checked="">
+                                    <label for="agency01">여신금융협회</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="agencyRadio" id="agency02">
+                                    <label for="agency02">국세청</label>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="inpWrap">
+                    <h5 class="sectTit">조회기간</h5>
+                    <ul>
+                        <li>
+                            <!--퍼블수정2021-03-10 라디오에서 a태그로 마크업교체
+                            <ul class="tabRadio">
+                                <li>
+                                    <input type="radio" name="periodRadio" id="period01" checked="">
+                                    <label for="period01">당일</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="periodRadio" id="period02">
+                                    <label for="period02">3일</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="periodRadio" id="period03">
+                                    <label for="period03">1주일</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="periodRadio" id="period04">
+                                    <label for="period04">1개월</label>
+                                </li>
+                            </ul>
+                            -->
+
+                            <!--퍼블수정2021-03-10 라디오에서 a태그로 마크업교체 -->
+                            <ul class="tabRadio">
+                                <li>
+                                    <a href="javascript:;" class="active">당일</a> <!-- 선택된 태그에 클래스명 .active 추가 -->
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="">3일</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="">1주일</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="">1개월</a>
+                                </li>
+                            </ul>
+                            <!--// 2021-03-10 라디오에서 a태그로 마크업교체 -->
+                        </li>
+                        <li>
+                            <div class="formWrap date">
+                                <div class="formBox dateInput">
+                                    <input type="text" value="2020.12.11">
+                                    <button type="button" class="btnCalendar"><span class="blind">날짜 선택</span></button>
+                                </div>
+                                <span class="dash">~</span>
+                                <div class="formBox dateInput">
+                                    <input type="text" value="2020.12.11">
+                                    <button type="button" class="btnCalendar"><span class="blind">날짜 선택</span></button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--// contInnerWrap -->
+            
+            <div class="btnWrap full">
+                <a href="javascript:;" role="button" class="btn bgYellow">실행</a>
+            </div>
+            
+        </div>
+    </div>    
+</body>
+</html>

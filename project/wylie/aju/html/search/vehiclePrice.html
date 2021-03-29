@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!--
+	2020-06-18 포인트 영역 추가	
+	2020-06-18 엔카 상세와 중복되는 버튼영역 삭제
+	2020-07-02 상단 포인트 안내 문구 수정
+-->
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<!--target-densitydpi=medium-dpi-->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<!-- 아이폰 전체화면 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<title>딜러라운지</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../assets/css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick-theme.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/swiper.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/ui.common.css" type="text/css" /> <!-- 공통 요소 -->
+
+	<!-- JS -->
+	<script type="text/javascript" src="../../assets/js/jquery.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/slick.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/ui.common.js"></script><!-- 공통 요소 -->
+</head>
+
+<body>
+	<section id="wrap">
+		<div id="skipNavi">
+			<a href="#container">본문 바로가기</a>
+		</div>
+		<main id="vehiclePrice" class="search">
+			<link rel="stylesheet" href="../../assets/css/ui.search.css" type="text/css" />
+			<section id="container" class="vehiclePrice">
+				<ul class="lineTab">
+                    <li><a href="javascript:;">기본정보</a></li>
+                    <li><a href="javascript:;">옵션정보</a></li>
+                    <li><a href="javascript:;">사고이력</a></li>
+                    <li class="on"><a href="javascript:;">시세정보</a></li>
+                </ul>
+				<!-- 2020-06-18 추가 -->
+				<div class="searchPoint">
+					<!-- 2020-07-02 텍스트 수정 -->
+					<strong>
+						정보 조회 시<br>
+						라운지 포인트 <em>1P</em>가 차감됩니다. 
+					</strong>
+					<dl>
+						<dt>라운지 포인트</dt>
+						<dd>105P</dd>
+					</dl>
+					<div class="btnArea">
+						<a href="javascript:;" class="white">조회하기</a>
+					</div>
+				</div>
+				<!--// 2020-06-18 추가 -->
+				<div class="carSearchDate">
+					<h2>현대 i30 1.6 VVT 프리미어</h2>
+					<div class="img">
+						<img src="../../assets/img/temp/temp_vehicle.png" alt="">
+					</div>
+					<p>
+						<span>정보조회일자</span>
+						<em>2020.04.06</em>
+					</p>
+				</div>
+				<div class="carSearchCon">
+					<a href="#" class="topArea">
+						<img src="../../assets/img/search/logo_encar.png" alt="SK엔카">
+						<strong>엔카</strong> <!-- 2020-05-19 수정 -->
+					</a>
+					<div class="price">
+						<dl class="regular">
+							<dt>적정 판매시세</dt>
+							<dd>1,640만원</dd>
+						</dl>
+						<dl class="minMax">
+							<dt>추천 min</dt>
+							<dd>1,640만원</dd>
+							<dt>추천 max</dt>
+							<dd>1,720만원</dd>
+						</dl>
+					</div>
+					<h3>
+						기본검색조건
+						<a href="#"></a>
+					</h3>
+					<dl class="searchList">
+						<dt>주행거리</dt>
+						<dd>10,000 km</dd>
+						<dt>색상</dt>
+						<dd>흰색</dd>
+						<dt>사고유무</dt>
+						<dd>무사고</dd>
+						<dt>옵션</dt>
+						<dd>썬루프, 네비게이션</dd>
+					</dl>
+					<ul class="notiList">
+						<li>
+							차량시세는 무사고, <em>연 20,000km</em> 기준으로 계산된 금액<br>
+							입니다.
+						</li>
+					</ul>
+					<!-- 2020-06-18 영역 삭제
+					<div class="btnArea space">
+						<a href="#" class="white">매입계산기</a>
+						<a href="#" class="white">동급모델조회</a>
+					</div>
+					<div class="counselArea">
+						<p>
+							조회하신 차량은 <strong>내수 판매가 유리</strong>한 차량입니다.<br>
+							자세한 내용은 상담을 받아보세요.
+						</p>
+						<div class="btnArea">
+							<a href="#" class="blue">상담하기</a>
+						</div>
+					</div>
+					<!--
+					<div class="counselArea">
+						<p>
+							조회하신 차량은 <strong>수출이 유리한</strong>한 차량입니다.<br>
+							견적을 진행해 보세요.
+						</p>
+						<div class="btnArea">
+							<a href="#" class="blue">견적요청</a>
+						</div>
+					</div>
+					<div class="counselArea">
+						<p>
+							조회하신 차량은 <strong>수출시세가 조회되지 않는</strong><br>
+							차량입니다. 자세한 내용은 상담을 받아보세요.
+						</p>
+						<div class="btnArea">
+							<a href="#" class="blue">상담하기</a>
+						</div>
+					</div>
+					-->
+				</div>
+				<div class="searchCarManager">
+					<a href="#">카매니저</a>
+					<div class="price">
+						<dl class="regular">
+							<dt>판매시세</dt>
+							<dd>1,640만원</dd>
+						</dl>
+						<dl class="minMax">
+							<dt>평균광고가</dt>
+							<dd>788만원</dd>
+							<dt>평균재고기간</dt>
+							<dd>66일</dd>
+						</dl>
+					</div>
+					<!-- 조회 결과 없을 때
+					<p class="none">
+						조회결과가 없습니다.
+					</p>
+					-->
+				</div>
+				<div class="searchCarMart">
+					<a href="#">카마트</a>
+					<div class="priceTooltip">
+						<dl>
+							<dt><a href="javascript:;" data-tooltip-class="high">상</a></dt>
+							<dd>2,400만원</dd>
+							<dt><a href="javascript:;" data-tooltip-class="mid">중</a></dt>
+							<dd>1,000만원</dd>
+						</dl>
+						<!-- 2020-05-26 문구수정 -->
+						<div class="tooltip high">
+							<strong>상</strong> 가격은 주행거리 1년 2만km미만 무사고 차량으로 상태가 아주 우수한 차량의 경우에 해당됩니다.
+						</div>
+						<div class="tooltip mid">
+							<span>중</span> 가격은 주행거리 1년 2만km 미만 고체부위가 일부 있는 차량으로 상태가 아주 우수한 차량의 경우에 해당됩니다.
+						</div>
+						<!--// 2020-05-26 문구수정 -->
+					</div>
+					<!-- 조회 결과 없을 때
+					<p class="none">
+						조회결과가 없습니다.
+					</p>
+					-->
+				</div>
+				<div class="searchRatal">
+					<a href="#">과세표준금액</a>
+					<!-- 2020-05-13 수정 -->
+					<dl>
+						<dt>과세표준금액</dt>
+						<dd>1,600만원</dd>
+					</dl>
+					<!--// 2020-05-13 수정 -->
+
+					<!-- 조회 결과 없을 때
+					<p class="none">
+						조회결과가 없습니다.
+					</p>
+					-->
+				</div>
+			</section>
+			<!-- 2020-05-27 하단 버튼 추가 -->
+			<div class="footMenu">
+                <a href="javascript:;" class="iconFootWrite">날립니다 (등록)</a>
+                <a href="javascript:;" class="iconFootConsult">대출상담</a>
+			</div>
+			<!--// 2020-05-27 하단 버튼 추가 -->
+		</main>
+	</section>
+</body>
+
+</html>

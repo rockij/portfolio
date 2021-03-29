@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<!--
+	2020-06-18 			하단 풋메뉴, 메시지 팝업 추가
+	2020-06-19 			경기부천 텍스트 삭제
+	2020-06-19 			그래프 텍스트 이율삭제
+	2020-07-06 			뱃지 추가 및 프로필 텍스트 수정
+-->
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<!--target-densitydpi=medium-dpi-->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<!-- 아이폰 전체화면 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<title>딜러라운지</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../assets/css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick-theme.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/swiper.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/ui.common.css" type="text/css" /> <!-- 공통 요소 -->
+
+	<!-- JS -->
+	<script type="text/javascript" src="../../assets/js/jquery.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/slick.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/Chart.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/ui.common.js"></script><!-- 공통 요소 -->
+</head>
+
+<body>
+	<section id="wrap">
+		<div id="skipNavi">
+			<a href="#container">본문 바로가기</a>
+		</div>
+		<main id="dealerResult" class="partner">
+			<link rel="stylesheet" href="../../assets/css/ui.partner.css" type="text/css" />
+			<section id="container" class="dealerResult">
+				<div class="profileArea">
+					<!-- 2020-07-06 뱃지 추가 및 프로필 텍스트 수정  -->
+					<div class="iconArea">
+						<span class="iconMedium">Medium</span>
+						<span class="iconRetention">리텐션대상</span>
+						<span class="iconNewAssign">신규배정</span>
+						<span class="iconKcar">K Car</span>
+					</div>
+					<p>
+						<strong>홍길동</strong>
+						<span>
+							<em>Welcome</em>
+							<em>Champion</em>
+						</span>
+						<span>
+							<em>DY카랜드</em>
+							<em>모터스상사</em>
+						</span>
+					</p>
+					<!--// 2020-07-06 뱃지 추가 및 프로필 텍스트 수정  -->
+					<label class="icon_favorite">
+						<input type="checkbox" />
+						<i></i>
+					</label>
+				</div>
+				<ul class="myUtillPage">
+					<li>
+						<a href="#">
+							<em>5100P</em>
+							라운지 포인트
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<!-- 마이너스 일때 em에 minus class 추가 -->
+							<em><!--▼--> ▲ 123,456</em>
+							영업실적
+						</a>
+					</li>
+				</ul>
+				<div class="wideArea">
+					<ul class="lineTab">
+						<li><a href="javascript:;">프로필</a></li>
+						<li class="on"><a href="javascript:;">실적정보</a></li>
+						<li><a href="javascript:;">활동정보</a></li>
+						<li><a href="javascript:;">선물내역</a></li>
+					</ul>
+					<div class="titleArea">
+						<h3>당월 실적현황</h3>
+					</div>
+					<ul class="registeredList">
+						<li>
+							<strong>상담건수</strong>
+							<p>5건</p>
+						</li>
+						<li>
+							<strong>대출건수</strong>
+							<p>3건</p>
+						</li>
+						<li>
+							<strong>대출금액</strong>
+							<p>87,500,000원</p>
+						</li>
+						<li>
+							<strong>평균금리</strong>
+							<p>5.8%</p>
+						</li>
+						<li>
+							<strong>연체율</strong>
+							<p>5.8%</p>
+						</li>
+						<li>
+							<strong>초기도래회수율</strong>
+							<p>45%</p>
+						</li>
+					</ul>
+					<div class="graphWrap">
+						<div class="titleArea">
+							<h3>상담 및 대출 건수</h3>
+						</div>
+						<div class="graphArea">
+							<canvas id="graph01"></canvas>
+						</div>
+						<div class="titleArea">
+							<h3>취급금리</h3> <!-- 2020-06-19 그래프 텍스트 이율삭제 -->
+						</div>
+						<div class="graphArea">
+							<canvas id="graph02"></canvas>
+						</div>
+						<div class="titleArea">
+							<h3>영업실적</h3>
+							<span>단위: 백만</span>
+						</div>
+						<div class="graphArea">
+							<canvas id="graph03"></canvas>
+						</div>
+						<div class="titleArea">
+							<h3>초기도래 회수율</h3> <!-- 2020-06-19 그래프 텍스트 이율삭제 -->
+						</div>
+						<div class="graphArea">
+							<canvas id="graph04"></canvas>
+						</div>
+						<div class="titleArea">
+							<h3>연체율</h3> <!-- 2020-06-19 그래프 텍스트 이율삭제 -->
+						</div>
+						<div class="graphArea">
+							<canvas id="graph05"></canvas>
+						</div>
+						<div class="titleArea">
+							<h3>외부 판매실적</h3>
+						</div>
+						<div class="graphArea">
+							<canvas id="graph06"></canvas>
+						</div>
+						<div class="titleArea">
+							<h3>경매 낙찰 대수</h3>
+						</div>
+						<div class="graphArea">
+							<canvas id="graph07"></canvas>
+						</div>
+
+					</div>
+			</section>
+			<!-- 2020-06-18 하단 풋메뉴 추가 -->
+			<div class="footMenu">
+				<a href="javascript:;" class="iconFootSchedule">일정등록</a>
+				<a href="javascript:;" class="iconFootCall">통화하기</a>
+				<a href="#messagePopup" class="iconFootMessage openLayer">메시지</a>
+				<a href="javascript:;" class="iconFootPoint">포인트</a>
+				<a href="javascript:;" class="iconFootGiftcon">기프티콘</a>
+			</div>
+			<!--// 2020-06-18 하단 풋메뉴 추가 -->
+		</main>
+	</section>
+	<!-- 2020-06-19 messagePopup -->
+	<div id="messagePopup" class="messagePopup">
+		<strong>메시지</strong>
+		<ul>
+			<li><a href="javascript:;">SMS 발송</a></li>
+			<li><a href="javascript:;">PUSH 발송</a></li>
+		</ul>
+		<a href="javascript:;" class="btnPopClose btnLayerClose">닫기</a>
+	</div>
+	<!--// 2020-06-19  messagePopup -->
+<script>
+	var option01 = {
+		data: {
+			labels: ['10월', '11월', '12월', '1월', '2월', '3월'],
+			datasets: [{
+				type: 'line',
+				label: '상담',
+				backgroundColor: '#2962c2',
+				borderColor: '#2962c2',
+				borderWidth: 0.7,
+				fill: false,
+				data: [6, 5, 7, 8, 3, 1]
+			},{
+				type: 'line',
+				label: '대출',
+				backgroundColor: '#333333',
+				borderColor: '#aaaaaa',
+				borderWidth: 0.7,
+				fill: false,
+				data: [3, 8, 7, 5, 6, 2]
+			}]
+		},
+		options: {
+			responsive: true,
+			maintainAspectRatio: true,
+			devicePixelRatio: 1,
+			title: {
+				display: false
+			},
+			legend: {
+				display: true,
+				position: 'top',
+				labels: {
+					usePointStyle : false,
+					boxWidth : 10,
+					fontSize : 10,
+					fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif'
+				}
+			},
+			layout: {
+				padding:{
+					top: 0,
+					right: 0,
+					bottom: 0,
+					left: 0
+				}
+			},
+			scales: {
+				xAxes: [{
+					display: true,
+					gridLines: {
+						drawOnChartArea: false
+					},
+					offset: true,
+					ticks: {
+						fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif'
+					}
+				}],
+				yAxes: [{
+					display: false,
+					ticks: {
+						beginAtZero: true,
+						fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif',
+						min: 0,
+						max: 30,
+						stepSize: 5
+					}
+				}]
+			}
+		}
+	};
+	var option02 = {
+		data: {
+			labels: ['10월', '11월', '12월', '1월', '2월', '3월'],
+			datasets: [{
+				type: 'line',
+				label: '거래완료',
+				backgroundColor: '#2962c2',
+				borderColor: '#2962c2',
+				borderWidth: 0.7,
+				fill: false,
+				data: [6, 5, 7, 8, 3, 1]
+			}]
+		},
+		options: {
+			responsive: true,
+			maintainAspectRatio: true,
+			devicePixelRatio: 1,
+			title: {
+				display: false
+			},
+			legend: {
+				display: false
+			},
+			layout: {
+				padding:{
+					top: 0,
+					right: 0,
+					bottom: 0,
+					left: 0
+				}
+			},
+			scales: {
+				xAxes: [{
+					display: true,
+					gridLines: {
+						drawOnChartArea: false
+					},
+					offset: true,
+					ticks: {
+						fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif'
+					}
+				}],
+				yAxes: [{
+					display: false,
+					ticks: {
+						beginAtZero: true,
+						fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif',
+						min: 0,
+						max: 50,
+						stepSize: 5
+					}
+				}]
+			}
+		}
+	};
+
+	var option03 = {
+		data: {
+			labels: ['10월', '11월', '12월', '1월', '2월', '3월'],
+			datasets: [{
+				type: 'bar',
+				label: '거래완료',
+				backgroundColor: '#2962c2',
+				borderColor: '#94b0e0',
+				barPercentage: 0.5,
+				fill: false,
+				data: [6000000, 5000000, 7000000, 8000000, 3000000, 10000000]
+			}]
+		},
+		options: {
+			responsive: true,
+			maintainAspectRatio: true,
+			devicePixelRatio: 1,
+			title: {
+				display: false
+			},
+			legend: {
+				display: false
+			},
+			layout: {
+				padding:{
+					top: 0,
+					right: 0,
+					bottom: 0,
+					left: 0
+				}
+			},
+			scales: {
+				xAxes: [{
+					display: true,
+					offset: true,
+					gridLines: {
+						drawOnChartArea: false
+					},
+					ticks: {
+						fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif'
+					}
+				}],
+				yAxes: [{
+					display: false,
+					ticks: {
+						beginAtZero: true,
+						fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif',
+						min: 0,
+						max: 15000000,
+						stepSize: 10000000
+					}
+				}]
+			}
+		}
+	};
+
+	var option04 = {
+		data: {
+			labels: ['10월', '11월', '12월', '1월', '2월', '3월'],
+			datasets: [{
+				type: 'line',
+				backgroundColor: '#2962c2',
+				borderColor: '#2962c2',
+				borderWidth: 0.7,
+				fill: false,
+				data: [60, 50, 70, 80, 30, 10]
+			}]
+		},
+		options: {
+			responsive: true,
+			maintainAspectRatio: true,
+			devicePixelRatio: 1,
+			title: {
+				display: false
+			},
+			legend: {
+				display: false
+			},
+			layout: {
+				padding:{
+					top: 0,
+					right: 0,
+					bottom: 0,
+					left: 0
+				}
+			},
+			scales: {
+				xAxes: [{
+					display: true,
+					offset: true,
+					gridLines: {
+						drawOnChartArea: false
+					},
+					ticks: {
+						fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif'
+					}
+				}],
+				yAxes: [{
+					display: false,
+					ticks: {
+						beginAtZero: true,
+						fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif',
+						min: 0,
+						max: 100,
+						stepSize: 1
+					}
+				}]
+			}
+		}
+	};
+	var option05 = {
+		data: {
+			labels: ['10월', '11월', '12월', '1월', '2월', '3월'],
+			datasets: [{
+				type: 'line',
+				backgroundColor: '#2962c2',
+				borderColor: '#2962c2',
+				borderWidth: 0.7,
+				fill: false,
+				data: [60, 50, 70, 80, 30, 10]
+			}]
+		},
+		options: {
+			responsive: true,
+			maintainAspectRatio: true,
+			devicePixelRatio: 1,
+			title: {
+				display: false
+			},
+			legend: {
+				display: false
+			},
+			layout: {
+				padding:{
+					top: 0,
+					right: 0,
+					bottom: 0,
+					left: 0
+				}
+			},
+			scales: {
+				xAxes: [{
+					display: true,
+					offset: true,
+					gridLines: {
+						drawOnChartArea: false
+					},
+					ticks: {
+						fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif'
+					}
+				}],
+				yAxes: [{
+					display: false,
+					ticks: {
+						beginAtZero: true,
+						fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif',
+						min: 0,
+						max: 100,
+						stepSize: 1
+					}
+				}]
+			}
+		}
+	};
+	var option06 = {
+		data: {
+			labels: ['10월', '11월', '12월', '1월', '2월', '3월'],
+			datasets: [{
+				type: 'bar',
+				label: '판매대수',
+				backgroundColor: '#2962c2',
+				borderColor: '#94b0e0',
+				barPercentage: 1,
+				fill: false,
+				data: [6, 5, 7, 8, 3, 1]
+			},{
+				type: 'bar',
+				label: '보유대수',
+				backgroundColor: '#cccccc',
+				borderColor: '#f5f5f5',
+				barPercentage: 1,
+				fill: false,
+				data: [3, 8, 7, 5, 6, 2]
+			},{
+				type: 'bar',
+				label: '매입대수',
+				backgroundColor: '#333333',
+				borderColor: '#aaaaaa',
+				barPercentage: 1,
+				fill: false,
+				data: [6, 5, 7, 8, 3, 1]
+			}]
+		},
+		options: {
+			responsive: true,
+			maintainAspectRatio: true,
+			devicePixelRatio: 1,
+			title: {
+				display: false
+			},
+			legend: {
+				display: true,
+				position: 'top',
+				labels: {
+					usePointStyle : false,
+					boxWidth : 10,
+					fontSize : 10,
+					fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif'
+				}
+			},
+			layout: {
+				padding:{
+					top: 0,
+					right: 0,
+					bottom: 0,
+					left: 0
+				}
+			},
+			scales: {
+				xAxes: [{
+					display: true,
+					offset: true,
+					gridLines: {
+						drawOnChartArea: false
+					},
+					ticks: {
+						fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif'
+					}
+				}],
+				yAxes: [{
+					display: false,
+					ticks: {
+						beginAtZero: true,
+						fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif',
+						min: 0,
+						max: 20,
+						stepSize: 1
+					}
+				}]
+			}
+		}
+	};
+	var option07 = {
+		data: {
+			labels: ['10월', '11월', '12월', '1월', '2월', '3월'],
+			datasets: [{
+				type: 'bar',
+				label: '판매대수',
+				backgroundColor: '#2962c2',
+				borderColor: '#94b0e0',
+				barPercentage: 1,
+				fill: false,
+				data: [6, 5, 7, 8, 3, 1]
+			},{
+				type: 'bar',
+				label: '매입대수',
+				backgroundColor: '#333333',
+				borderColor: '#aaaaaa',
+				barPercentage: 1,
+				fill: false,
+				data: [3, 8, 7, 5, 6, 2]
+			}]
+		},
+		options: {
+			responsive: true,
+			maintainAspectRatio: true,
+			devicePixelRatio: 1,
+			title: {
+				display: false
+			},
+			legend: {
+				display: true,
+				position: 'top',
+				labels: {
+					usePointStyle : false,
+					boxWidth : 10,
+					fontSize : 10,
+					fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif'
+				}
+			},
+			layout: {
+				padding:{
+					top: 0,
+					right: 0,
+					bottom: 0,
+					left: 0
+				}
+			},
+			scales: {
+				xAxes: [{
+					display: true,
+					gridLines: {
+						drawOnChartArea: false
+					},
+					offset: true,
+					ticks: {
+						fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif'
+					}
+				}],
+				yAxes: [{
+					display: false,
+					ticks: {
+						beginAtZero: true,
+						fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif',
+						min: 0,
+						max: 20,
+						stepSize: 1
+					}
+				}]
+			}
+		}
+	};
+
+
+	window.onload = function() {
+		var cv01 = document.getElementById('graph01').getContext('2d');
+		var cv02 = document.getElementById('graph02').getContext('2d');
+		var cv03 = document.getElementById('graph03').getContext('2d');
+		var cv04 = document.getElementById('graph04').getContext('2d');
+		var cv05 = document.getElementById('graph05').getContext('2d');
+		var cv06 = document.getElementById('graph06').getContext('2d');
+		var cv07 = document.getElementById('graph07').getContext('2d');
+		var chart01 = new Chart(cv01, option01);
+		var chart02 = new Chart(cv02, option02);
+		var chart03 = new Chart(cv03, option03);
+		var chart04 = new Chart(cv04, option04);
+		var chart05 = new Chart(cv05, option05);
+		var chart06 = new Chart(cv06, option06);
+		var chart07 = new Chart(cv07, option07);
+	};
+
+</script>
+</body>
+
+</html>

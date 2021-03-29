@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/jquery-ui-1.8.16.css" />
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/osite/cms_base.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.common.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.style.css" />
+    
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-1.6.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-ui-1.8.16.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery_bgiframe_min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery.validity.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mCustomScrollbar.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/ui.common.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="navSkip"><a href="#containerWrap">본문으로 바로가기</a></div>
+        <!-- header -->
+        <div class="headerWrap">            
+			<script type="text/javascript" src="../../assets/js2.0/ui.header.js" charset="utf-8"></script>
+        </div>
+        <!--// header -->
+
+        <!-- containerWrap -->
+        <div id="containerWrap" role="main" class="inquiry">
+            <div id="container">
+                <!-- 컨텐츠 내용 -->
+
+                <div class="location">
+                    <span class="blind">페이지 위치</span>
+                    <ul>
+                        <li><a href="javascript:;">Star CMS</a></li>
+                        <li><a href="javascript:;">부가서비스</a></li>
+                        <li class="curr">휴폐업조회</li>
+                    </ul>
+                </div>
+                
+                <div class="pageTop">
+                    <h2 class="pageTit">휴폐업조회</h2>
+                </div>
+
+				<!-- view area 개발자 분들은 이부분 부터 쓰시면 됩니다. -->
+				<div class="viewArea addService">
+                    
+                    <!-- notiBox -->
+					<div class="notiBox">
+						<!-- accordionWrap -->
+						<dl class="accordionWrap">
+							<dt><a href="javascript:;">유의사항</a></dt>
+							<dd>
+								<div>
+									<!-- notiList -->
+									<ul class="notiList">
+                                        <li>대량의 사업자 정보를 조회하실 경우 대량조회를 선택하여 진행하시기 바랍니다.</li>
+                                        <li>사업자번호 정보가 올바르지 않을 경우 휴폐업조회가 실행되지 않습니다.</li>
+                                        <li>당일 신청한 사업자상태변경(신규등록, 휴/폐업 등) 사항은 반영되지 않을 수 있습니다.</li>
+                                        <li>[샘플파일다운로드]를 클릭하시면 대량조회 파일 작성요령을 보실 수 있습니다.</li>
+									</ul>
+									<!--// notiList -->
+								</div>
+							</dd>
+						</dl>
+						<!--// accordionWrap -->
+					</div>
+                    <!--// notiBox -->
+
+                    <div class="inqBtn mt50">
+                        <div class="floatL">
+                            <h3 class="contTit">사업자정보 입력</h3>
+                        </div>
+                        <div class="floatR mt10">
+                            <a href="javascript:;" role="button" class="sbtn small"><i class="icon download"></i>샘플파일 다운로드</a>
+                        </div>
+                    </div>
+                    <div class="tableWrap mt20">
+						<table summary="">
+							<caption></caption>
+							<colgroup>
+								<col width="220px;">
+								<col width="860px;">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">조회구분</th>
+									<td>
+										<ul class="formList">
+											<li>
+												<input type="radio" id="idxInquiry01" name="idxInquiry" checked>
+												<label for="idxInquiry01">건별조회</label>
+											</li>
+											<li>
+												<input type="radio" id="idxInquiry02" name="idxInquiry">
+												<label for="idxInquiry02">대량조회</label>
+											</li>
+										</ul>
+									</td>
+								</tr>
+                                <!-- 건별조회 -->
+                                <tr>
+									<th scope="row">사업자번호(또는 고유번호)</th>
+									<td><input type="text" class="w300" data-placeholder="사업장관리번호를 입력하세요."></td>
+                                </tr>
+                                <!--// 건별조회 -->
+                                <!-- 대량조회 시 -->
+                                <tr>
+									<th scope="row">사업자번호(또는 고유번호)</th>
+									<td>
+                                        <div class="fileAttach">
+                                            <div class="fileUpload">
+                                                <input type="text" class="upload_name w300" value="" disabled="disabled">
+                                                <label for="inpfile" class="sbtn bgWhite">찾아보기</label> 
+                                                <input type="file" id="inpfile"> 
+                                            </div>
+                                            <a href="javascript:;" role="button" class="sbtn">적용</a>
+                                        </div>
+                                        <textarea class="mt10" placeholder="‘,’로 구분하여 입력 (예: 111-00-00000, 122-00-0000)"></textarea>
+                                    </td>
+								</tr>
+                                <!--// 대량조회 시 -->
+							</tbody>
+                        </table>
+                        <!-- 대량조회 시 -->
+                        <ul class="notiList sm mt10">
+                            <li>최대 500건까지 대량의 사업자 정보를 입력하여 일괄로 조회하실 수 있습니다.</li>
+                            <li>파일 등록 시 파일 내 입력되어 있는 형태로 필드에 노출됩니다.(xlsx, txt 확장자 파일만 등록 가능)</li>
+                        </ul>
+                        <!--// 대량조회 시 -->
+						<div class="btnWrap small mt30">
+							<a href="javascript:;" role="button" class="btn bgWhite">조회</a>
+						</div>
+                    </div>
+                    
+                    <div class="tableWrap type02 mt80">
+                        <table summary="">
+                            <caption></caption>
+                            <colgroup>
+                                <col width="540px;">
+                                <col width="540px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">사업자번호(또는 고유번호)</th>
+                                    <th scope="col">사업자등록상태</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="2">
+                                        <!-- 데이터 없을 경우 -->
+                                        <div class="dataNone">
+                                            <i class="icon"></i>
+                                            <p>조회하실 내역이 없습니다.</p>
+                                        </div>
+                                        <!--// 데이터 없을 경우 -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>111-11-11111</td>
+                                    <td><a href="javascript:uiCommon.layer.open('errorLayer');" class="btnText error" title="오류팝업 열기">오류</a></td>
+                                </tr>
+                                <tr>
+                                    <td>222-11-11111</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>                        
+                    </div>
+
+				</div>
+                <!--// view area -->
+                
+                <!--// 컨텐츠 내용 -->
+            </div>
+            <!--// container -->
+        </div>
+        <!--// containerWrap -->
+
+        <!-- footer -->
+        <div class="footerWrap">
+			<script type="text/javascript" src="../../assets/js2.0/ui.footer.js" charset="utf-8"></script>
+        </div>
+        <!-- footer -->
+    </div>
+
+    <!--  오류 팝업 (480x474) -->
+	<div class="layer errorLayer">
+		<a href="javascript: uiCommon.layer.close('errorLayer');" class="popClose"><span class="blind">팝업 닫기</span></a>
+		<h4 class="popTitle">오류</h4>
+		<!-- popContent -->
+		<div class="popCont">
+			<div class="errorArea">
+				<i class="icon"></i>
+				<p>이용에 불편을 드려 죄송합니다.</p>
+				<p class="subtxt">최신정보 조회 시 모듈 오류가 발생하였습니다.<br/>업무 담당자에게 문의하시기 바랍니다.</p>
+				<em>오류발생코드(UKFK3224)</em>
+			</div>
+			<ul class="notiList mt50">
+				<li>대표전화 : 1588-9999, 1599-9999, 1644-9999</li>
+			</ul>
+		</div>
+		<!--// popCont -->
+	</div>
+	<!--// 오류 팝업 -->
+</body>
+</html>

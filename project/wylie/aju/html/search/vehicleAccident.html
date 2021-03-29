@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<!--
+	2020-06-18 포인트 영역 추가
+	2020-06-18 자동차 일반 사양정보 > 일반 사양정보 텍스트 수정
+	2020-07-02 상단 포인트 안내 문구 수정
+	2020-07-02 일반 사양정보 텍스트 수정
+-->
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<!--target-densitydpi=medium-dpi-->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<!-- 아이폰 전체화면 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<title>딜러라운지</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../assets/css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick-theme.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/swiper.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/ui.common.css" type="text/css" /> <!-- 공통 요소 -->
+
+	<!-- JS -->
+	<script type="text/javascript" src="../../assets/js/jquery.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/slick.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/ui.common.js"></script><!-- 공통 요소 -->
+</head>
+
+<body>
+	<section id="wrap">
+		<div id="skipNavi">
+			<a href="#container">본문 바로가기</a>
+		</div>
+		<main id="vehicleAccident" class="search">
+			<link rel="stylesheet" href="../../assets/css/ui.search.css" type="text/css" />
+			<section id="container" class="vehicleAccident">
+				<ul class="lineTab">
+                    <li><a href="javascript:;">기본정보</a></li>
+                    <li><a href="javascript:;">옵션정보</a></li>
+                    <li class="on"><a href="javascript:;">사고이력</a></li>
+                    <li><a href="javascript:;">시세정보</a></li>
+                </ul>
+				<!-- 2020-06-18 추가 -->
+				<div class="searchPoint">
+					<!-- 2020-07-02 텍스트 수정 -->
+					<strong>
+						정보 조회 시<br>
+						라운지 포인트 <em>1P</em>가 차감됩니다.
+					</strong>
+					<dl>
+						<dt>라운지 포인트</dt>
+						<dd>105P</dd>
+					</dl>
+					<div class="btnArea">
+						<a href="javascript:;" class="white">조회하기</a>
+					</div>
+				</div>
+				<!--// 2020-06-18 추가 -->
+				<div class="carSearchDate">
+					<h2>현대 i30 1.6 VVT 프리미어</h2>
+					<p>
+						<span>정보조회일자</span>
+						<em>2020.04.06</em>
+					</p>
+				</div>
+				<div class="carAccidentCon">
+					<ul class="accordionList">
+						<li>
+							<dl>
+								<!-- 데이터 없을때 none 클래스 추가 -->
+								<dt class="trigger on">
+									<a href="javascript:;">
+										<!-- 2020-06-18 텍스트 수정 -->
+										<strong>일반 사양정보</strong>
+										<!--// 2020-06-18 텍스트 수정 -->
+									</a>
+								</dt>
+								<dd>
+									<dl>
+										<!-- 2020-07-02 텍스트 수정 -->
+										<dt>최초 보험 가입일자</dt>
+										<dd>YYYY.MM.DD</dd>
+										<dt>연식</dt>
+										<dd>YYYY</dd>
+										<dt>사용연료</dt>
+										<dd>가솔린/디젤/LPG/전기</dd>
+										<dt>배기량</dt>
+										<dd>000cc</dd>
+										<dt>용도 및 차종</dt>
+										<dd>용도 및 차종</dd>
+										<dt>차체형상</dt>
+										<dd></dd>
+									</dl>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<!-- 데이터 없을때 none 클래스 추가 -->
+								<dt class="trigger on">
+									<a href="javascript:;">
+										<strong>중고차 사고이력 정보 (요약)</strong>
+									</a>
+								</dt>
+								<dd>
+									<dl>
+										<dt>전손 보험사고</dt>
+										<dd>00회</dd>
+										<dt>도난 보험사고</dt>
+										<dd>00회</dd>
+										<dt>침수 보험사고</dt>
+										<dd>있음/없음</dd>
+										<dt>특수 용도 이력</dt>
+										<dd>있음/없음</dd>
+										<dt>내차 피해 건수</dt>
+										<dd>00회</dd>
+										<dt>내차 피해 금액</dt>
+										<dd>0,000,000만원</dd>
+										<dt>상대차 피해</dt>
+										<dd>00회</dd>
+										<dt>상대차 피해 금액</dt>
+										<dd>0,000,000만원</dd>
+										<dt>소유차 변경</dt>
+										<dd>00회</dd>
+										<dt>차량번호 변경</dt>
+										<dd>있음/없음</dd>
+									</dl>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<!-- 데이터 없을때 none 클래스 추가 -->
+								<dt class="trigger">
+									<a href="javascript:;">
+										<strong>주행거리 정보</strong>
+										<span>00회</span>
+									</a>
+								</dt>
+								<dd>
+									<table summary="주행거리 정보의 일자와 내용 제공">
+										<caption>주행거리 정보 표</caption>
+										<colgroup>
+											<col width="30%">
+											<col width="*" >
+										</colgroup>
+										<thead>
+											<tr>
+												<th>일자</th>
+												<th>내용</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>YYYY.MM.DD</td>
+												<td>000,000,000km(자동차보험회사)</td>
+											</tr>
+											<tr>
+												<td>YYYY.MM.DD</td>
+												<td>17,343km(자동차보험회사)</td>
+											</tr>
+										</tbody>
+									</table>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<!-- 데이터 없을때 none 클래스 추가 -->
+								<dt class="trigger">
+									<a href="javascript:;">
+										<strong>용도 변경</strong>
+										<span>있음</span>
+									</a>
+								</dt>
+								<dd>
+									<ul class="notiList">
+										<li>
+											과거 자동차번호 변경기록을 모두 검색하여 제공하는<br>
+											것으로 <em>대여용(렌터카), 영업용(택시 등)으로 사용 된<br>
+											이력이 있는지 확인할 수 있습니다.</em>
+										</li>
+									</ul>
+									<table summary="용도변경의 사용이력과 변경여부 정보 제공">
+										<caption>용도변경 정보 표</caption>
+										<colgroup>
+											<col width="50%">
+											<col width="*" >
+										</colgroup>
+										<thead>
+											<tr>
+												<th>사용이력</th>
+												<th>변경 여부</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>대여용도(렌터카)</td>
+												<td>있음</td>
+											</tr>
+											<tr>
+												<td>영업용도</td>
+												<td>없음</td>
+											</tr>
+											<tr>
+												<td>관용용도</td>
+												<td>없음</td>
+											</tr>
+										</tbody>
+									</table>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<!-- 데이터 없을때 none 클래스 추가 -->
+								<dt class="trigger">
+									<a href="javascript:;">
+										<strong>소유자 변경</strong>
+										<span>00회</span>
+									</a>
+								</dt>
+								<dd>
+									<ul class="notiList">
+										<li>
+											자동차 번호/소유자 변경이력은 <em>최근4회까지만 제공<br>
+											되기 때문에 실제 정보와 상이할 수 있습니다.</em>
+										</li>
+									</ul>
+									<table summary="소유자 변경의 일자, 구분, 내용 정보 제공">
+										<caption>소유자 변경 정보 표</caption>
+										<colgroup>
+											<col width="30%">
+											<col width="30%">
+											<col width="*" >
+										</colgroup>
+										<thead>
+											<tr>
+												<th>일자</th>
+												<th>구분</th>
+												<th>내용</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>YYYY.MM.DD</td>
+												<td>소유자변경</td>
+												<td>소유자변경</td>
+											</tr>
+											<tr>
+												<td>YYYY.MM.DD</td>
+												<td>소유자변경</td>
+												<td>소유자변경</td>
+											</tr>
+											<tr>
+												<td>YYYY.MM.DD</td>
+												<td>소유자변경</td>
+												<td>소유자변경</td>
+											</tr>
+											<tr>
+												<td>YYYY.MM.DD</td>
+												<td>소유자변경</td>
+												<td>소유자변경</td>
+											</tr>
+										</tbody>
+									</table>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<!-- 데이터 없을때 none 클래스 추가 -->
+								<dt class="trigger">
+									<a href="javascript:;">
+										<strong>차량번호 변경</strong>
+										<span>있음</span>
+									</a>
+								</dt>
+								<dd>
+									<ul class="notiList">
+										<li>
+											자동차 번호/소유자 변경이력은 <em>최근4회까지만 제공<br>
+											되기 때문에 실제 정보와 상이할 수 있습니다.</em>
+										</li>
+									</ul>
+									<table summary="차량번호 변경의 일자, 구분, 내용 정보 제공">
+										<caption>차량번호 변경 정보 표</caption>
+										<colgroup>
+											<col width="30%">
+											<col width="30%">
+											<col width="*" >
+										</colgroup>
+										<thead>
+											<tr>
+												<th>일자</th>
+												<th>구분</th>
+												<th>내용</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>YYYY.MM.DD</td>
+												<td>최초등록</td>
+												<td>123가XXXX(자가용)</td>
+											</tr>
+										</tbody>
+									</table>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<!-- 데이터 없을때 none 클래스 추가 -->
+								<dt class="trigger">
+									<a href="javascript:;">
+										<strong>전손 &middot; 침수 &middot; 도난</strong>
+										<span>있음</span>
+									</a>
+								</dt>
+								<dd>
+									<ul class="notiList">
+										<li>
+											자동차 전손 &middot; 침수 &middot; 도난 이력은 <em>최근4회까지만 제공<br>
+											되기 때문에 실제 정보와 상이할 수 있습니다.</em>
+
+										</li>
+									</ul>
+									<table summary="전손 &middot; 침수 &middot; 도난 이력의 일자, 구분, 내용 정보 제공">
+										<caption>전손 &middot; 침수 &middot; 도난 이력 정보 표</caption>
+										<colgroup>
+											<col width="30%">
+											<col width="30%">
+											<col width="*" >
+										</colgroup>
+										<thead>
+											<tr>
+												<th>일자</th>
+												<th>구분</th>
+												<th>내용</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>YYYY.MM.DD</td>
+												<td>최초등록</td>
+												<td>123가XXXX(자가용)</td>
+											</tr>
+										</tbody>
+									</table>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<!-- 데이터 없을때 none 클래스 추가 -->
+								<dt class="trigger">
+									<a href="javascript:;">
+										<strong>내 차 피해</strong>
+										<span>00회/0,000,000원</span>
+									</a>
+								</dt>
+								<dd>
+									<ul class="notiList">
+										<li>
+											자기차량손해담보에 <em>가입하지 않은 동안에는
+											내 보험으로 처리한 사고이력 정보 제공이
+											불가능 합니다. </em>
+										</li>
+									</ul>
+									<table summary="내 차 피해의 자기차량손해담보 미 가입기간 정보 제공">
+										<caption>내 차 피해의 자기차량손해담보 미 가입기간 표</caption>
+										<colgroup>
+											<col width="*" >
+										</colgroup>
+										<thead>
+											<tr>
+												<th>미 가입기간 (최대 00건)</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>YYYY.MM - YYYY.MM</td>
+											</tr>
+										</tbody>
+									</table>
+									<dl>
+										<dt>보험사고내역</dt>
+										<dd>최대 00건</dd>
+									</dl>
+									<table summary="보험사고내역의 일자, 구분, 내역 및 금액 정보 제공">
+										<caption>보험사고내역 정보 표</caption>
+										<colgroup>
+											<col width="30%">
+											<col width="25%">
+											<col width="*" >
+										</colgroup>
+										<thead>
+											<tr>
+												<th>일자</th>
+												<th>구분</th>
+												<th>내역 및 금액</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>YYYY.MM.DD</td>
+												<td>대물가해</td>
+												<td>
+													<dl>
+														<dt>부품</dt>
+														<dd>306,680원</dd>
+														<dt>공임</dt>
+														<dd>000,000원</dd>
+														<dt>도장</dt>
+														<dd> 0,000,000원</dd>
+														<dt>총액</dt>
+														<dd> 0,000,000원</dd>
+														<dt>미확정</dt>
+														<dd> 0,000,000원</dd>
+													</dl>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<!-- 데이터 없을때 none 클래스 추가 -->
+								<dt class="trigger">
+									<a href="javascript:;">
+										<strong>상대 차 가해</strong>
+										<span>00회/0,000,000원</span>
+									</a>
+								</dt>
+								<dd>
+									<ul class="notiList">
+										<li>
+											자기차량손해담보에 <em>가입하지 않은 동안에는
+											내 보험으로 처리한 사고이력 정보 제공이
+											불가능 합니다. </em>
+										</li>
+									</ul>
+									<table summary="상대 차 가해의 자기차량손해담보 미 가입기간 정보 제공">
+										<caption>상대 차 가해의 자기차량손해담보 미 가입기간 표</caption>
+										<colgroup>
+											<col width="*" >
+										</colgroup>
+										<thead>
+											<tr>
+												<th>미 가입기간 (최대 00건)</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>YYYY.MM - YYYY.MM</td>
+											</tr>
+										</tbody>
+									</table>
+									<dl>
+										<dt>보험사고내역</dt>
+										<dd>최대 00건</dd>
+									</dl>
+									<table summary="보험사고내역의 일자, 구분, 내역 및 금액 정보 제공">
+										<caption>보험사고내역 정보 표</caption>
+										<colgroup>
+											<col width="30%">
+											<col width="25%">
+											<col width="*" >
+										</colgroup>
+										<thead>
+											<tr>
+												<th>일자</th>
+												<th>구분</th>
+												<th>내역 및 금액</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>YYYY.MM.DD</td>
+												<td>대물가해</td>
+												<td>
+													<dl>
+														<dt>부품</dt>
+														<dd>306,680원</dd>
+														<dt>공임</dt>
+														<dd>000,000원</dd>
+														<dt>도장</dt>
+														<dd> 0,000,000원</dd>
+														<dt>총액</dt>
+														<dd> 0,000,000원</dd>
+														<dt>미확정</dt>
+														<dd> 0,000,000원</dd>
+													</dl>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- 2020-05-27 하단 버튼 추가 -->
+			<div class="footMenu">
+                <a href="javascript:;" class="iconFootWrite">날립니다 (등록)</a>
+                <a href="javascript:;" class="iconFootConsult">대출상담</a>
+			</div>
+			<!--// 2020-05-27 하단 버튼 추가 -->
+		</main>
+	</section>
+</body>
+
+</html>

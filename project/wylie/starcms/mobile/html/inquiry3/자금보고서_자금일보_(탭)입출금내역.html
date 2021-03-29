@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/content.css" />
+    <script type="text/javascript" src="../../js/cms2.0/library/jquery_lib.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/cms2.0/common_ui.js" charset="utf-8"></script>
+
+    <!-- cms2.0 추가 -->
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/ui.style.css" />
+    <script type="text/javascript" src="../../js/cms2.0/swiper.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/cms2.0/ui.style.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content">
+            <!-- contInnerWrap -->
+            <div class="contInnerWrap">
+                <div class="pageTab">
+                    <ul>
+                        <li><a href="javascript:;">운용가능액</a></li>
+                        <li class="on"><a href="javascript:;" title="선택됨">입출금내역</a></li>
+                    </ul>
+                </div>
+
+                <!--퍼블수정2021-03-11 마크업 ui 수정 -->
+                <div class="inpWrap">
+                    <h5 class="sectTit">사업자 선택</h5>
+                    <ul>
+                        <li>
+                            <div class="formBox">
+                                <select name="" id="">
+                                    <option value="">사업자 전체</option>
+                                    <option value="">옵션2</option>
+                                    <option value="">옵션3</option>
+                                </select>
+                            </div>
+                        </li>
+                    </ul>
+                    <h5 class="sectTit">조회일자</h5>
+                    <ul>
+                        <li>
+                            <div class="formBox dateInput">
+                                <input type="text" value="2020.12.11">
+                                <button type="button" class="btnCalendar"><span class="blind">날짜 선택</span></button>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="btnWrap small2 mt24">
+                        <a href="javascript:;" role="button" class="btn bgYellow">조회</a>
+                    </div>
+                </div>
+                <!--// 2021-03-11 마크업 ui 수정 -->
+                
+                <div class="updateTxt mt40">
+                    업데이트 일시 : 2020.01.22 22:11:12
+                    <span class="txt">전일기준</span>
+                </div>
+                <ul class="infoListWrapper typeUpdate">
+                    <li>
+                        <div class="infoListTitle">
+                            <div class="tit">
+                                <strong>사업자명</strong>
+                                <strong>기관명</strong>
+                            </div>
+                            <p class="txt">000-00-0000-000(KB입출금이 자유로운 계좌)</p>
+                        </div>
+
+                        <!-- bankInfoList -->
+                        <div class="bankInfoList">
+                            <ul>
+                                <li>
+                                    <span>잔액</span>
+                                    <em>5,000,000원</em>
+                                </li>
+                                <li>
+                                    <span class="amount plus">입금액</span> <!--퍼블수정2021-03-12 클래스명 추가 -->
+                                    <em>300,000원</em>
+                                </li>
+                                <li>
+                                    <span class="amount minus">출금액</span> <!--퍼블수정2021-03-12 클래스명 추가 -->
+                                    <em>100,000원</em>
+                                </li>
+                                <li>
+                                    <span>전일 운용가능액</span>
+                                    <em>5,200,000원</em>
+                                </li>
+                                <li>
+                                    <span>전전일 대비</span>
+                                    <em>+ 1,000.000원</em> <!--퍼블수정2021-03-12 문구 수정 -->
+                                </li>
+                            </ul>
+                        </div>
+                        <!--// bankInfoList -->
+                    </li>
+                    <li>
+                        <div class="infoListTitle">
+                            <div class="tit">
+                                <strong>사업자명2</strong>
+                                <strong>기관명2</strong>
+                            </div>
+                            <p class="txt">000-00-0000-000(KB입출금이 자유로운 계좌)</p>
+                        </div>
+
+                        <!-- bankInfoList -->
+                        <div class="bankInfoList">
+                            <ul>
+                                <li>
+                                    <span>잔액</span>
+                                    <em>5,000,000원</em>
+                                </li>
+                                <li>
+                                    <span class="amount plus">입금액</span> <!--퍼블수정2021-03-12 클래스명 추가 -->
+                                    <em>300,000원</em>
+                                </li>
+                                <li>
+                                    <span class="amount minus">출금액</span> <!--퍼블수정2021-03-12 클래스명 추가 -->
+                                    <em>100,000원</em>
+                                </li>
+                                <li>
+                                    <span>전일 운용가능액</span>
+                                    <em>5,200,000원</em>
+                                </li>
+                                <li>
+                                    <span>전전일 대비</span>
+                                    <em>- 1,000.000원</em> <!--퍼블수정2021-03-12 문구 수정 -->
+                                </li>
+                            </ul>
+                        </div>
+                        <!--// bankInfoList -->
+                    </li>
+                </ul>
+
+                <div class="btnWrap mt32">
+                    <a href="javascript:;" role="button" class="sbtn round">더 불러오기<i class="icon more"></i></a>
+                </div>
+
+
+                <!--데이터 없을경우 -->
+                <div class="dataNone">
+                    <p class="txt">조회 내역이 없습니다.</p> <!--퍼블수정2021-03-12 문구수정-->
+                </div>
+                <!--//데이터 없을경우 -->
+            </div>
+            <!--// contInnerWrap -->
+
+            <dl class="grayNotiBox">
+                <dt>유의사항</dt>
+                <dd>
+                    <div class="bulletWrap typeGrayRound">
+                        <ul>
+                            <li>수시입출금 거래내역을 조회하는 화면입니다.</li>
+                            <li>수시입출금 잔액, 거래내역은 모든 내역을 업데이트합니다.</li>
+                            <li>매입/매출 내역은 1개월 내역을 업데이트합니다.</li>
+                            <li>거래 내역이 많을 경우 업데이트에 시간이 오래 걸릴 수 있습니다.</li>
+                            <li>일정은 매출/매입 내역을 입력 후 확인할 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </dd>
+            </dl>
+
+        </div>
+    </div>    
+</body>
+</html>

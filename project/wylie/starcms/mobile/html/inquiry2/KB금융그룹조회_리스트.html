@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/content.css" />
+    <script type="text/javascript" src="../../js/cms2.0/library/jquery_lib.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/cms2.0/common_ui.js" charset="utf-8"></script>
+
+    <!-- cms2.0 추가 -->
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/ui.style.css" />
+    <script type="text/javascript" src="../../js/cms2.0/swiper.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/cms2.0/ui.style.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content">
+
+            <!-- contInnerWrap -->
+            <div class="contInnerWrap spacePdt0">
+
+                <ul class="accordionList accInqList targetJS">
+                    <li>
+                        <a href="javascript:;" class="acc_title">
+                            KB국민카드
+                            <span class="blind">메뉴펼쳐보기</span>
+                        </a>
+                        <div class="accContent">
+                            <!-- KB국민카드 리스트 -->
+                            <div class="tab_wrap">
+                                <ul class="tabs type03">
+                                    <li class="on"><a href="javascript:;">결제예정</a></li>
+                                    <li><a href="javascript:;">승인금액</a></li>
+                                    <li><a href="javascript:;">부가세환급</a></li>
+                                    <li><a href="javascript:;">포인트</a></li>
+                                    <li><a href="javascript:;">이용한도</a></li>
+                                </ul>
+
+                                <!-- 결제예정 -->
+                                <div class="tab_content" title="현재탭">
+                                    <!-- 조회 내역 없을 경우 -->
+                                    <div class="dataNone">
+                                        <p class="txt">조회 내역이 없습니다.</p> <!--퍼블수정2021-03-12 문구수정-->
+                                    </div>
+                                    <!--// 조회 내역 없을 경우 -->
+
+                                    <!--퍼블수정2021-03-10 추가 -->
+                                    <div class="bankInfoList dashed">
+                                        <ul>
+                                            <li>
+                                                <span>사업자명</span>
+                                                <em>(주)국민상사</em>
+                                            </li>
+                                            <li>
+                                                <span>총 결제 예정</span>
+                                                <em>11,928,450원</em>
+                                            </li>
+                                            <li>
+                                                <span>결제 부서 수</span>
+                                                <em>4개</em>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--// 2021-03-10 추가 -->
+
+                                    <!-- cmsAccountList -->
+                                    <ul class="cmsAccountList">
+                                        <li>
+                                            <div class="cmsAccountBox logoNone">
+                                                <a href="#" class="inner">
+                                                    <div class="bankInfo">
+                                                        <div class="info">
+                                                            <strong>영업1팀<span>(00001)</span></strong>
+                                                            <p>2021.06.01</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price">
+                                                        <p>
+                                                            결제예정
+                                                            <em>5,000,000<span>원</span></em>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cmsAccountBox logoNone">
+                                                <a href="#" class="inner">
+                                                    <div class="bankInfo">
+                                                        <div class="info">
+                                                            <strong>총무부<span>(00002)</span></strong>
+                                                            <p>2021.06.01</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price">
+                                                        <p>
+                                                            결제예정
+                                                            <em>5,000,000<span>원</span></em>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!--// cmsAccountList -->
+                                </div>
+                                <!--// 결제예정 -->
+
+                                <!-- 승인내역 -->
+                                <div class="tab_content">
+                                    <!-- 조회 내역 없을 경우 -->
+                                    <div class="dataNone">
+                                        <p class="txt">조회 내역이 없습니다.</p> <!--퍼블수정2021-03-12 문구수정-->
+                                    </div>
+                                    <!--// 조회 내역 없을 경우 -->
+
+                                    <!--퍼블수정2021-03-10 라디오에서 a태그로 마크업 교체 
+                                    <ul class="tabRadio">
+                                        <li>
+                                            <input type="radio" name="periodRadio" id="period01" checked="">
+                                            <label for="period01">당일</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="periodRadio" id="period02">
+                                            <label for="period02">3일</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="periodRadio" id="period03">
+                                            <label for="period03">1주일</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="periodRadio" id="period04">
+                                            <label for="period04">1개월</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="periodRadio" id="period05">
+                                            <label for="period05">3개월</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="periodRadio" id="period06">
+                                            <label for="period06">6개월</label>
+                                        </li>
+                                    </ul>
+                                    -->
+
+                                    <!--퍼블수정2021-03-10 라디오에서 a태그로 마크업 교체 -->
+                                    <ul class="tabRadio">
+                                        <li>
+                                            <a href="javascript:;" class="active">당일</a> <!-- 선택된 태그에 클래스명 .active 추가 -->
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" class="">3일</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" class="">1주일</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" class="">1개월</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" class="">3개월</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" class="">6개월</a>
+                                        </li>
+                                    </ul>
+                                    <!--// 2021-03-10 라디오에서 a태그로 마크업 교체 -->
+
+                                    <!--퍼블수정2021-03-10 추가 -->
+                                    <div class="bankInfoList dashed">
+                                        <ul>
+                                            <li>
+                                                <span>사업자명</span>
+                                                <em>(주)국민상사</em>
+                                            </li>
+                                            <li>
+                                                <span>정상/취소(건)</span>
+                                                <em>국내 6건 / 0건 <br/>해외 0건 / 0건</em>
+                                            </li>
+                                            <li>
+                                                <span>정상/취소(금액)</span>
+                                                <em>국내 11,700원 / 0원 <br/>해외 $0.0 / $0.0</em>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--// 2021-03-10 추가 -->
+
+                                    <!-- cmsAccountList -->
+                                    <!--퍼블수정2021-03-10 수정 -->
+                                    <ul class="cmsAccountList">
+                                        <li>
+                                            <div class="cmsAccountBox logoNone">
+                                                <a href="#" class="inner">
+                                                    <div class="bankInfo">
+                                                        <div class="info">
+                                                            <strong>1234-56**-****-1111</strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price">
+                                                        <p>
+                                                            국내<em>5,000,000,000<span>원</span></em> 
+                                                            <span class="info">(취소 : 100,000원)</span>
+                                                        </p>
+                                                        <p>
+                                                            해외 $<em>5,000,000,000</em> 
+                                                            <span class="info">(취소 : $ 1,000)</span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cmsAccountBox logoNone">
+                                                <a href="#" class="inner">
+                                                    <div class="bankInfo">
+                                                        <div class="info">
+                                                            <strong>1234-56**-****-1111</strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price">
+                                                        <p>
+                                                            국내<em>0<span>원</span></em> 
+                                                            <span class="info">(취소 : 0원)</span>
+                                                        </p>
+                                                        <p>
+                                                            해외 $<em>0</em> 
+                                                            <span class="info">(취소 : $ 0)</span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!--// 2021-03-10 수정 -->
+                                    <!--// cmsAccountList -->
+                                </div>
+                                <!--// 승인내역 -->
+
+                                <!-- 부가세환급 -->
+                                <div class="tab_content">
+                                    <!-- 조회 내역 없을 경우 -->
+                                    <div class="dataNone">
+                                        <p class="txt">조회 내역이 없습니다.</p> <!--퍼블수정2021-03-12 문구수정-->
+                                    </div>
+                                    <!--// 조회 내역 없을 경우 -->
+
+                                    <!--퍼블수정2021-03-10 라디오에서 a태그로 마크업 교체 
+                                    <ul class="tabRadio">
+                                        <li>
+                                            <input type="radio" name="periodRadio" id="period01" checked="">
+                                            <label for="period01">당일</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="periodRadio" id="period02">
+                                            <label for="period02">3일</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="periodRadio" id="period03">
+                                            <label for="period03">1주일</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="periodRadio" id="period04">
+                                            <label for="period04">1개월</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="periodRadio" id="period05">
+                                            <label for="period05">3개월</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="periodRadio" id="period06">
+                                            <label for="period06">6개월</label>
+                                        </li>
+                                    </ul>
+                                    -->
+
+                                    <!--퍼블수정2021-03-10 라디오에서 a태그로 마크업 교체 -->
+                                    <ul class="tabRadio">
+                                        <li>
+                                            <a href="javascript:;" class="active">당일</a> <!-- 선택된 태그에 클래스명 .active 추가 -->
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" class="">3일</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" class="">1주일</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" class="">1개월</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" class="">3개월</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" class="">6개월</a>
+                                        </li>
+                                    </ul>
+                                    <!--// 2021-03-10 라디오에서 a태그로 마크업 교체 -->
+
+                                    <!--퍼블수정2021-03-10 추가 -->
+                                    <div class="bankInfoList dashed">
+                                        <ul>
+                                            <li>
+                                                <span>사업자명</span>
+                                                <em>(주)국민상사</em>
+                                            </li>
+                                            <li>
+                                                <span>정상/취소(건)</span>
+                                                <em>6건 / 0건</em>
+                                            </li>
+                                            <li>
+                                                <span>정상/취소(금액)</span>
+                                                <em>11,700원 / 0원</em>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--// 2021-03-10 추가 -->
+
+                                    <!-- cmsAccountList -->
+                                    <!--퍼블수정2021-03-10 수정 -->
+                                    <ul class="cmsAccountList">
+                                        <li>
+                                            <div class="cmsAccountBox logoNone">
+                                                <a href="#" class="inner">
+                                                    <div class="bankInfo">
+                                                        <div class="info">
+                                                            <strong>1234-56**-****-1111</strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price">
+                                                        <p>
+                                                            <em>5,000,000<span>원</span></em>
+                                                            <span class="info">(취소 : 100,000원)</span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cmsAccountBox logoNone">
+                                                <a href="#" class="inner">
+                                                    <div class="bankInfo">
+                                                        <div class="info">
+                                                            <strong>1234-56**-****-1111</strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price">
+                                                        <p>
+                                                            <em>5,000,000<span>원</span></em>
+                                                            <span class="info">(취소 : 100,000원)</span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!--// 2021-03-10 수정 -->
+                                    <!--// cmsAccountList -->
+                                </div>
+                                <!--// 부가세환급 -->
+                                
+                                <!-- 포인트 -->
+                                <div class="tab_content">
+                                    <!-- 조회 내역 없을 경우 -->
+                                    <div class="dataNone">
+                                        <p class="txt">조회 내역이 없습니다.</p> <!--퍼블수정2021-03-12 문구수정-->
+                                    </div>
+                                    <!--// 조회 내역 없을 경우 -->
+
+                                    <!--퍼블수정2021-03-10 추가 -->
+                                    <div class="bankInfoList dashed">
+                                        <ul>
+                                            <li>
+                                                <span>총 포인트리(점)</span>
+                                                <em>13</em>
+                                            </li>
+                                            <li>
+                                                <span>부서수</span>
+                                                <em>4개</em>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--// 2021-03-10 추가 -->
+
+                                    <!-- cmsAccountList -->
+                                    <!--퍼블수정2021-03-10 수정 -->
+                                    <ul class="cmsAccountList">
+                                        <li>
+                                            <div class="cmsAccountBox logoNone">
+                                                <a href="#" class="inner">
+                                                    <div class="bankInfo">
+                                                        <div class="info">
+                                                            <strong>영업1팀<span>(00001)</span></strong>
+                                                            <p>2021.06.01</p>
+                                                        </div>
+                                                    </div>
+                                                    <p class="type">포인트리 구분</p>
+                                                    <div class="price">
+                                                        <p>잔여<em>5,000<span>점</span></em></p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cmsAccountBox logoNone">
+                                                <a href="#" class="inner">
+                                                    <div class="bankInfo">
+                                                        <div class="info">
+                                                            <strong>총무부<span>(00002)</span></strong>
+                                                            <p>2021.06.01</p>
+                                                        </div>
+                                                    </div>
+                                                    <p class="type">포인트리 구분</p>
+                                                    <div class="price">
+                                                        <p>잔여<em>5,000<span>점</span></em></p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!--// 2021-03-10 수정 -->
+                                    <!--// cmsAccountList -->
+                                </div>
+                                <!--// 포인트 -->
+
+                                <!-- 이용한도 -->
+                                <div class="tab_content">
+                                    <!--퍼블수정2021-03-10 삭제 조회 내역 없을 경우 -->
+                                    <!-- <div class="dataNone">
+                                        <p class="txt">조회 내역이 없습니다.</p>
+                                    </div> -->
+                                    <!--// 조회 내역 없을 경우 -->
+
+                                    <!--퍼블수정2021-03-10 수정 -->
+                                    <div class="inpWrap">
+                                        <h5 class="sectTit mt0">카드번호 입력</h5>
+                                        <div class="cardNumArea">
+                                            <div class="formBox">
+                                                <input type="text" maxlength="4">
+                                            </div>
+                                            <span class="dash">-</span>
+                                            <div class="formBox">
+                                                <input type="text" maxlength="4">
+                                            </div>
+                                            <span class="dash">-</span>
+                                            <div class="formBox">
+                                                <input type="text" maxlength="4">
+                                            </div>
+                                            <span class="dash">-</span>
+                                            <div class="formBox">
+                                                <input type="text" maxlength="4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btnWrap small2 mt16">
+                                        <a href="javascript:;" role="button" class="btn bgYellow">조회</a>
+                                    </div>
+                                    <div class="bulletWrap typeGrayRound mt13">
+                                        <ul>
+                                            <li>보유한 카드번호를 입력 후 조회 버튼을 눌러주세요.</li>
+                                            <li>카드 관련 문의사항은 KB국민카드 고객센터로(1588-1688) 문의하시기 바랍니다.</li>
+                                        </ul>
+                                    </div>
+                                    <!--// 2021-03-10 수정 -->
+                                </div>
+                                <!--// 이용한도 -->
+
+                            </div>
+                            <!--// KB국민카드 리스트 -->
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="acc_title">
+                            KB증권
+                            <span class="blind">메뉴펼쳐보기</span>
+                        </a>
+                        <div class="accContent">
+                            <!-- KB증권 리스트 -->
+
+                            <!-- 조회 내역 없을 경우 -->
+                            <div class="dataNone">
+                                <p class="txt">조회 내역이 없습니다.</p> <!--퍼블수정2021-03-12 문구수정-->
+                            </div>
+                            <!--// 조회 내역 없을 경우 -->
+
+                            <!-- cmsAccountList -->
+                            <ul class="cmsAccountList">
+                                <li>
+                                    <div class="cmsAccountBox logoNone">
+                                        <a href="#pwInputLayer" class="inner layerpop">
+                                            <div class="bankInfo">
+                                                <div class="info">
+                                                    <strong>종합위탁계좌</strong>
+                                                    <P>000000-00-000000</P>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <p>출금가능금액<em>894,660<span>원</span></em></p> <!--// 2021-03-10 <span>원</span> 추가 -->
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cmsAccountBox logoNone">
+                                        <a href="#pwInputLayer" class="inner layerpop">
+                                            <div class="bankInfo">
+                                                <div class="info">
+                                                    <strong>종합위탁계좌(MMT)</strong>
+                                                    <P>000000-00-000000</P>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <p>출금가능금액<em>15,000,000<span>원</span></em></p> <!--// 2021-03-10 <span>원</span> 추가 -->
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!--// cmsAccountList -->
+                            <!--// KB증권 리스트 -->
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="acc_title">
+                            KB손해보험
+                            <span class="blind">메뉴펼쳐보기</span>
+                        </a>
+                        <div class="accContent">
+                            <!-- KB손해보험 리스트 -->
+                            <!-- 조회 내역 없을 경우 -->
+                            <div class="dataNone">
+                                <p class="txt">조회 내역이 없습니다.</p> <!--퍼블수정2021-03-12 문구수정-->
+                            </div>
+                            <!--// 조회 내역 없을 경우 -->
+
+                            <!-- cmsAccountList -->
+                            <ul class="cmsAccountList">
+                                <li>
+                                    <div class="cmsAccountBox logoNone">
+                                        <a href="#" class="inner">
+                                            <div class="bankInfo">
+                                                <div class="info">
+                                                    <strong>235000861 (무)LIG 자녀사랑꼬꼬마보험 (L8.04)(20984)</strong>
+                                                    <P>
+                                                        <span>장기</span>
+                                                        <span>정상</span>
+                                                    </P>
+                                                    <P>202012.12 ~ 2030.12.12</P>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <p>보험료<em>100,000<span>원</span></em></p> <!--// 2021-03-10 <span>원</span> 추가 -->
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cmsAccountBox logoNone">
+                                        <a href="#" class="inner">
+                                            <div class="bankInfo">
+                                                <div class="info">
+                                                    <strong>235000861 자동차보험</strong>
+                                                    <P>
+                                                        <span>자동차보험</span>
+                                                        <span>정상</span>
+                                                    </P>
+                                                    <P>202012.12 ~ 2030.12.12</P>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <p>보험료<em>100,000<span>원</span></em></p> <!--// 2021-03-10 <span>원</span> 추가 -->
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cmsAccountBox logoNone">
+                                        <a href="#" class="inner">
+                                            <div class="bankInfo">
+                                                <div class="info">
+                                                    <strong>235000861 KB국내여행보험(15301)</strong>
+                                                    <P>
+                                                        <span>일반</span>
+                                                        <span>정상</span>
+                                                    </P>
+                                                    <P>202012.12 ~ 2030.12.12</P>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <p>보험료<em>100,000<span>원</span></em></p> <!--// 2021-03-10 <span>원</span> 추가 -->
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!--// cmsAccountList -->
+                            <!--// KB손해보험 리스트 -->
+                        </div>
+                    </li>
+                    <li class="active">
+                        <a href="javascript:;" class="acc_title"> <!-- 디폴트 open일 경우 class="acc_open" 추가, span "메뉴숨기기"로 변경 필요  -->
+                            KB저축은행
+                            <span class="blind">메뉴 펼쳐보기</span>
+                        </a>
+                        <div class="accContent">
+
+                            <!-- 조회 내역 없을 경우 -->
+                            <div class="dataNone">
+                                <p class="txt">조회 내역이 없습니다.</p> <!--퍼블수정2021-03-12 문구수정-->
+                            </div>
+                            <!--// 조회 내역 없을 경우 -->
+                            
+                            <!-- cmsAccountList -->
+                            <ul class="cmsAccountList">
+                                <li>
+                                    <div class="cmsAccountBox logoNone">
+                                        <a href="#" class="inner">
+                                            <div class="bankInfo">
+                                                <div class="info">
+                                                    <strong>저축예금</strong>
+                                                    <p>000000-00-00000</p>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <p>잔액<em>894,660<span>원</span></em></p> <!--// 2021-03-10 <span>원</span> 추가 -->
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cmsAccountBox logoNone">
+                                        <a href="#" class="inner">
+                                            <div class="bankInfo">
+                                                <div class="info">
+                                                    <strong>거치식예금</strong>
+                                                    <p>000000-00-00000</p>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <p>잔액<em>5,000,000<span>원</span></em></p> <!--// 2021-03-10 <span>원</span> 추가 -->
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cmsAccountBox logoNone">
+                                        <a href="#" class="inner">
+                                            <div class="bankInfo">
+                                                <div class="info">
+                                                    <strong>대출</strong>
+                                                    <p>000000-00-00000</p>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <p>잔액<em>15,894,660<span>원</span></em></p> <!--// 2021-03-10 <span>원</span> 추가 -->
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!--// cmsAccountList -->
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="acc_title">
+                            KB캐피탈
+                            <span class="blind">메뉴펼쳐보기</span>
+                        </a>
+                        <div class="accContent">
+                            <!-- KB캐피탈 리스트 -->
+                            <!-- 조회 내역 없을 경우 -->
+                            <div class="dataNone">
+                                <p class="txt">조회 내역이 없습니다.</p> <!--퍼블수정2021-03-12 문구수정-->
+                            </div>
+                            <!--// 조회 내역 없을 경우 -->
+
+                            <!-- cmsAccountList -->
+                            <ul class="cmsAccountList">
+                                <li>
+                                    <div class="cmsAccountBox logoNone">
+                                        <a href="#" class="inner">
+                                            <div class="bankInfo">
+                                                <div class="info">
+                                                    <strong>대출</strong> <!--퍼블수정2021-03-11 수정 -->
+                                                    <P>상품코드 1020010001</P>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cmsAccountBox logoNone">
+                                        <a href="#" class="inner">
+                                            <div class="bankInfo">
+                                                <div class="info">
+                                                    <strong>금융리스</strong> <!--퍼블수정2021-03-11 수정 -->
+                                                    <P>상품코드 1020010001</P>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cmsAccountBox logoNone">
+                                        <a href="#" class="inner">
+                                            <div class="bankInfo">
+                                                <div class="info">
+                                                    <strong>운용리스</strong>  <!--퍼블수정2021-03-11 수정 -->
+                                                    <P>상품코드 1020010001</P>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cmsAccountBox logoNone">
+                                        <a href="#" class="inner">
+                                            <div class="bankInfo">
+                                                <div class="info">
+                                                    <strong>운용(금융)</strong>  <!--퍼블수정2021-03-11 수정 -->
+                                                    <P>상품코드 1020010001</P>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!--// cmsAccountList -->
+                            <!--// KB캐피탈 리스트 -->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--// contInnerWrap -->            
+        </div>
+    </div> 
+
+    <!-- 비밀번호 입력 레이어 -->
+    <div class="layerwrap" id="pwInputLayer" > <!--// 팝업버튼 href와 id 동일하게-->
+        <div class="pop-inner layerInner">
+            <h5 class="pTit">비밀번호</h5>
+            <div class="pop-contents">
+                <p class="text mt8">계좌 비밀번호를 입력해주세요.(4~8자리)</p>
+                <div class="formBox mt24">
+                    <input type="password" id="pwInput" placeholder="비밀번호" maxlength="8">
+                </div>
+            </div>
+            <div class="btnWrap">
+                <a href="javascript:;" role="button" class="btn bgGray close">취소</a>
+                <a href="javascript:;" role="button" class="btn bgYellow">조회</a>
+            </div>
+        </div>              
+    </div>
+    <!--// 비밀번호 입력 레이어 -->
+</body>
+</html>

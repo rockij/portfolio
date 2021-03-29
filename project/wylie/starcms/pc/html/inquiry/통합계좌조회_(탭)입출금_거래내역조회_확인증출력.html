@@ -1,0 +1,513 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/jquery-ui-1.8.16.css" />
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/osite/cms_base.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.common.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.style.css" />
+    
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-1.6.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-ui-1.8.16.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery_bgiframe_min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery.validity.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mCustomScrollbar.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/ui.common.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="navSkip"><a href="#containerWrap">본문으로 바로가기</a></div>
+        <!-- header -->
+        <div class="headerWrap">            
+			<script type="text/javascript" src="../../assets/js2.0/ui.header.js" charset="utf-8"></script>
+        </div>
+        <!--// header -->
+
+        <!-- containerWrap -->
+        <div id="containerWrap" role="main" class="inquiry">
+            <div id="container">
+                <!-- 컨텐츠 내용 -->
+
+                <div class="location">
+                    <span class="blind">페이지 위치</span>
+                    <ul>
+                        <li><a href="javascript:;">Star CMS</a></li>
+                        <li><a href="javascript:;">조회/자금모으기</a></li>
+                        <li><a href="javascript:;">통합계좌조회</a></li>
+                        <li class="curr">입출금</li>
+                    </ul>
+                </div>
+                
+                <div class="pageTop">
+                    <h2 class="pageTit">통합계좌조회</h2>
+                    <!-- <a href="javascript:;" title="기관/계좌 추가 등록 페이지로 이동" class="btnBankAdd">기관/계좌 추가등록</a> -->
+                </div>
+
+                <!-- page tab -->
+                <ul class="pageTab" role="tablist">
+                    <li><a href="javascript:;" class="on">입출금</a></li>
+                    <li><a href="javascript:;">예적금</a></li>
+                    <li><a href="javascript:;">대출</a></li>
+                    <li><a href="javascript:;">B2B</a></li>
+                    <li><a href="javascript:;">외환</a></li>
+                    <li><a href="javascript:;">펀드/신탁/보험</a></li>
+                    <li><a href="javsacript:;">퇴직연금</a></li>
+                    <li><a href="javsacript:;">증권/캐피탈/저축은행</a></li>
+                </ul>
+				<!-- view area 개발자 분들은 이부분 부터 쓰시면 됩니다. -->
+				<div class="viewArea inquiryAccount">
+
+					<a href="javascript:;" title="기관/계좌 추가 등록 페이지로 이동" class="btnBankAdd">기관/계좌 추가등록</a> <!-- 2021-02-03 viewArea 안으로 위치변경 -->
+					
+					<!-- sub tab -->
+					<ul class="subTab" role="tablist"> 
+						<li><a href="javascript:;" class="on" title="현재 탭" aria-selected="true">거래내역</a></li>
+						<li><a href="javascript:;" title="" aria-selected="false">계좌정보</a></li>
+					</ul>
+					<!-- notiBox -->
+					<div class="notiBox">
+						<!-- accordionWrap -->
+						<dl class="accordionWrap">
+							<dt><a href="javascript:;">유의사항</a></dt>
+							<dd>
+								<div>
+									<!-- notiList -->
+									<ul class="notiList">
+										<li>조회일 이전 10년 이하 거래내역을 조회하실 수 있습니다.</li>
+										<li>입금내역만 또는 출금내역만 조회시 계좌잔액은 거래 당시이 잔액이며, 현재 잔액은 [총잔액]에서 확인가능합니다.</li>
+									</ul>
+									<!--// notiList -->
+								</div>
+							</dd>
+						</dl>
+						<!--// accordionWrap -->
+					</div>
+					<!--// notiBox -->
+					<!-- 조회 옵션 -->
+					<div class="tableWrap mt50">
+						<table summary="">
+							<caption></caption>
+							<colgroup>
+								<col width="200px;">
+								<col width="auto;">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">계좌선택</th>
+									<td>
+										<div class="accountSelect">
+											<select class="selbox">
+												<option value="" selected="selected">(주)국민상사</option>
+												<option value="">(주)국민상사</option>
+											</select>
+											<select class="selbox">
+												<option value="" selected="selected">국민은행</option>
+												<option value="">국민은행</option>
+											</select>
+											<select class="selbox">
+												<option value="" selected="selected">KB기업종합통장 - 보통예금(급여이체...</option>
+												<option value="">KB기업종합통장 - 보통예금(급여이체...</option>
+											</select>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">조회기간</th>
+									<td>
+										<!-- periodArea -->
+										<div class="periodArea">
+											<a href="javascript:;" role="button" class="sbtn small active" title="선택됨">당일</a>
+											<a href="javascript:;" role="button" class="sbtn small">3일</a>
+											<a href="javascript:;" role="button" class="sbtn small">1주일</a>
+											<a href="javascript:;" role="button" class="sbtn small">1개월</a>
+											<a href="javascript:;" role="button" class="sbtn small">3개월</a>
+											<a href="javascript:;" role="button" class="sbtn small">6개월</a>
+										</div>
+										<!-- periodArea -->
+										<div class="dateInput">
+											<div class="inpArea">
+												<input type="text" value="2020.12.11" data-placeholder="입력해주세요" class="isValue">
+												<button type="button" class="btnIcon calendar"><span class="blind">날짜 선택</span></button> 
+											</div>
+											<span>~</span>
+											<div class="inpArea">
+												<input type="text" value="2020.12.11" data-placeholder="입력해주세요" class="isValue">
+												<button type="button" class="btnIcon calendar"><span class="blind">날짜 선택</span></button> 
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">조회내용</th>
+									<td>
+										<ul class="formList">
+											<li>
+												<input type="radio" id="inquiry01" name="inquiry">
+												<label for="inquiry01">전체</label>
+											</li>
+											<li>
+												<input type="radio" id="inquiry02" name="inquiry">
+												<label for="inquiry02">입금내용만</label>
+											</li>
+											<li>
+												<input type="radio" id="inquiry03" name="inquiry">
+												<label for="inquiry03">출금내용만</label>
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">조회결과순서</th>
+									<td>
+										<ul class="formList">
+											<li>
+												<input type="radio" id="inquiry04" name="inquiry2">
+												<label for="inquiry04">최신순</label>
+											</li>
+											<li>
+												<input type="radio" id="inquiry05" name="inquiry2">
+												<label for="inquiry05">과거순</label>
+											</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="btnWrap small mt30">
+							<a href="javascript:;" role="button" class="btn bgWhite">조회</a>
+						</div>
+					</div>
+					<!--// 조회 옵션 -->
+
+					<div class="inqBtn mt80">
+						<div class="floatL">
+							<p class="date">
+								업데이트 일시  : 2020.12.12 22:11:12
+								<a href="javascript:;" role="button" title="오류팝업 열기" class="btnText error">오류</a> <!--// 오류 -->
+								<a href="javascript:;" role="button" class="btnUpdate"><span class="blind">업데이트</span></a>
+							</p>
+						</div>
+						<div class="floatR">
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon memo"></i>메모장</a>
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon excel"></i>엑셀</a>
+							<a href="javascript:uiCommon.layer.open('dealConfirmLayer');" role="button" class="sbtn small"><i class="icon print"></i>인쇄</a>
+						</div>
+					</div>
+
+					<!-- 거래내역 --->
+					<div class="tableWrap type02">
+						<table summary="">
+							<caption></caption>
+							<colgroup>
+								<col width="56px;">
+								<col width="65px;">
+								<col width="114px;">
+								<col width="71px;">
+								<col width="117px;">
+								<col width="129px;">
+								<col width="129px;">
+								<col width="129px;">
+								<col width="117px;">
+								<col width="89px;">
+								<col width="64px;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">No <button type="button" class="btnSort"><span class="blind">출금계좌 오름차순 정렬</span></button></th>
+									<th scope="col"><input type="checkbox" id="" title="거래내역 전체선택" /></th>
+									<th scope="col">거래일시</th>
+									<th scope="col">적요</th>
+									<th scope="col">의뢰인/수취인</th>
+									<th scope="col">출금액(원)</th>
+									<th scope="col">입금금액(원)</th>
+									<th scope="col">잔액(원)</th>
+									<th scope="col">출금계좌메모</th>
+									<th scope="col">처리점</th>
+									<th scope="col">구분</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="11">
+										<!-- 데이터 없을 경우 -->
+										<div class="dataNone">
+											<i class="icon"></i>
+											<p>조회하실 내역이 없습니다.</p>
+										</div>
+										<!--// 데이터 없을 경우 -->
+									</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td><input type="checkbox" id="" title="1번재 거래 내역 선택" /></td>
+									<td>2020.02.07 10.06.44</td>
+									<td>전자금융</td>
+									<td>홍길동</td>
+									<td class="price">-300,000</td>
+									<td class="price">-</td>
+									<td class="price">330,000</td>
+									<td></td>
+									<td>여의도</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td><input type="checkbox" id="" title="2번재 거래 내역 선택" /></td>
+									<td>2020.02.07 10.06.44</td>
+									<td>전자금융</td>
+									<td>홍길동</td>
+									<td class="price">-300,000</td>
+									<td class="price">-</td>
+									<td class="price">330,000</td>
+									<td></td>
+									<td>여의도</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td><input type="checkbox" id="" title="3번재 거래 내역 선택" /></td>
+									<td>2020.02.07 10.06.44</td>
+									<td>전자금융</td>
+									<td>홍길동</td>
+									<td class="price">-</td>
+									<td class="price">+300,000</td>
+									<td class="price">-</td>
+									<td></td>
+									<td>여의도</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>                        
+					</div>
+					<!--// 거래내역 -->
+
+					<div class="tblBottom">
+						<div class="floatL">
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon filter"></i>필터</a>
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon search"></i>검색</a>
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon edit"></i>편집</a>
+						</div>
+						<div class="floatR">
+							<span class="pageIdx">11/52</span>
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon more"></i>더불러오기</a>
+						</div>
+					</div>
+					
+					<div class="btnWrap mt60">
+						<a href="javascript:;" role="button" class="btn bgYellow" title="목록 페이지로 이동">목록</a>
+					</div>				
+				</div>
+				<!--// view area -->
+
+                <!--// 컨텐츠 내용 -->
+            </div>
+            <!--// container -->
+        </div>
+        <!--// containerWrap -->
+
+        <!-- footer -->
+        <div class="footerWrap">
+			<script type="text/javascript" src="../../assets/js2.0/ui.footer.js" charset="utf-8"></script>
+        </div>
+        <!-- footer -->
+    </div>
+
+    <!-- layer popup : 거래내역 확인증 인쇄 레이어 (860x995) -->
+	<!-- 2021-02-26 레이아웃 수정 -->
+	<div class="layer dealConfirmLayer">
+        <a href="javascript: uiCommon.layer.close('dealConfirmLayer');" class="popClose"><span class="blind">팝업 닫기</span></a>
+        <h4 class="popTitle">거래내역 확인증</h4>
+        <!-- popContent -->
+        <div class="popCont">
+			<div class="roundGrayBox">
+                <p class="txt tal">고객님은 2건의 확인증 출력을 선택하셨습니다.</p>
+            </div>
+
+            <div class="tableWrap mt30">
+                <table summary="">
+                    <caption></caption>
+                    <colgroup>
+                        <col width="200px;">
+                        <col width="600px;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">페이지 당 출력 건</th>
+                            <td>
+                                <ul class="formList">
+                                    <li>
+                                        <input type="radio" id="printIdx01" name="printIdx">
+                                        <label for="printIdx01">1개</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="printIdx02" name="printIdx">
+                                        <label for="printIdx02">2개</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="printIdx03" name="printIdx" checked="">
+                                        <label for="printIdx03">4개</label>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">마스킹 처리</th>
+                            <td>
+                                <div class="inpArea">
+                                    <input type="checkbox" id="chk1">
+                                    <label for="chk1">계좌번호 뒤 3자리</label>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+			<div class="btnWrap small">
+				<a href="javascript:;" role="button" class="btn bgYellow" title="인쇄하기">인쇄</a>
+			</div>
+            <div class="printSection">
+            	<!-- 확인증 반복구간 -->
+	            <div class="confirmPrintBox">
+	                <dl>
+	                    <dt>확인증</dt>
+	                    <dd>
+	                        <div class="tableWrap">
+	                            <table summary="">
+	                                <caption></caption>
+	                                <colgroup>
+	                                    <col width="100px;">
+	                                    <col width="auto;">
+	                                </colgroup>
+	                                <tbody>
+										<tr>
+	                                        <th scope="row">거래일자</th>
+	                                        <td>2020.01.02</td>
+	                                    </tr>
+	                                    <tr>
+	                                        <th scope="row">거래시각</th>
+	                                        <td>17:48:02</td>
+	                                    </tr>
+	                                    <tr>
+	                                        <th scope="row">출금계좌번호</th>
+	                                        <td>123456-12-123456  </td>
+	                                    </tr>
+	                                    <tr>
+	                                        <th scope="row">예금주</th>
+	                                        <td></td>
+	                                    </tr>
+	                                    <tr>
+	                                        <th scope="row">출금금액</th>
+	                                        <td></td>
+	                                    </tr>
+	                                    <tr>
+	                                        <th scope="row">입금금액</th>
+	                                        <td></td>
+	                                    </tr>
+	                                    <tr>
+	                                        <th scope="row">적요</th>
+	                                        <td></td>
+	                                    </tr>
+										<tr>
+	                                        <th scope="row">의뢰인/수취인</th>
+	                                        <td></td>
+	                                    </tr>
+										<tr>
+	                                        <th scope="row">처리점</th>
+	                                        <td></td>
+	                                    </tr>
+	                                </tbody>
+	                            </table>
+	                        </div>
+	
+	                        <ul class="notiList sm mt10">
+	                            <li>거래내역 상세 명세는 고객 편의를 위하여 제공되는 것으로 거래의 참고용으로만 사용될 수 있습니다.</li>
+	                        </ul>
+		                    <p>(주)국민은행</p>
+	                        <div class="sign">2021.12.3</div>
+	                    </dd>
+	                </dl>
+	            </div>
+			    <!--// 확인증 반복구간 -->	            
+            	<!-- 확인증 반복구간 -->
+	            <div class="confirmPrintBox">
+	                <dl>
+	                    <dt>확인증</dt>
+	                    <dd>
+	                        <div class="tableWrap">
+	                            <table summary="">
+	                                <caption></caption>
+	                                <colgroup>
+	                                    <col width="100px;">
+	                                    <col width="auto;">
+	                                </colgroup>
+	                                <tbody>
+										<tr>
+	                                        <th scope="row">거래일자</th>
+	                                        <td>2020.01.02</td>
+	                                    </tr>
+	                                    <tr>
+	                                        <th scope="row">거래시각</th>
+	                                        <td>17:48:02</td>
+	                                    </tr>
+	                                    <tr>
+	                                        <th scope="row">출금계좌번호</th>
+	                                        <td>123456-12-123456  </td>
+	                                    </tr>
+	                                    <tr>
+	                                        <th scope="row">예금주</th>
+	                                        <td></td>
+	                                    </tr>
+	                                    <tr>
+	                                        <th scope="row">출금금액</th>
+	                                        <td></td>
+	                                    </tr>
+	                                    <tr>
+	                                        <th scope="row">입금금액</th>
+	                                        <td></td>
+	                                    </tr>
+	                                    <tr>
+	                                        <th scope="row">적요</th>
+	                                        <td></td>
+	                                    </tr>
+										<tr>
+	                                        <th scope="row">의뢰인/수취인</th>
+	                                        <td></td>
+	                                    </tr>
+										<tr>
+	                                        <th scope="row">처리점</th>
+	                                        <td></td>
+	                                    </tr>
+	                                </tbody>
+	                            </table>
+	                        </div>
+	
+	                        <ul class="notiList sm mt10">
+	                            <li>거래내역 상세 명세는 고객 편의를 위하여 제공되는 것으로 거래의 참고용으로만 사용될 수 있습니다.</li>
+	                        </ul>
+		                    <p>(주)국민은행</p>
+	                        <div class="sign">2021.12.3</div>
+	                    </dd>
+	                </dl>
+	            </div>
+			    <!--// 확인증 반복구간 -->	            
+	         </div>
+		</div>
+        <!--// popCont -->
+    </div>
+	<!--// 2021-02-26 레이아웃 수정 -->
+    <!--// layer popup -->
+
+	<script>
+	$(document).ready(function(){
+		uiCommon.layer.open('dealConfirmLayer')
+	})
+	</script>
+
+</body>
+</html>

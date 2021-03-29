@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/content.css" />
+    <script type="text/javascript" src="../../js/cms2.0/library/jquery_lib.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/cms2.0/common_ui.js" charset="utf-8"></script>
+
+    <!-- cms2.0 추가 -->
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/ui.style.css" />
+    <script type="text/javascript" src="../../js/cms2.0/swiper.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/cms2.0/ui.style.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content">
+            <!-- contInnerWrap -->
+            <div class="contInnerWrap">
+                <!-- stepProcess -->
+                <div class="stepProcess">
+                    <ol>
+                        <li class="on">
+                            <i>1</i>
+                            <span class="blind">기관선택</span>
+                        </li>
+                        <li>
+                            <i>2</i>
+                            <span class="blind">게좌선택</span>
+                        </li>
+                        <li>
+                            <i>3</i>
+                            <span class="blind">등록완료</span>
+                        </li>
+                    </ol>
+
+                    <h3 class="contTit">기관선택</h3>
+                    <p class="contTxt">등록을 원하는 기관을 선택해 주세요.</p>
+                </div>
+                <!--// stepProcess -->
+
+                <!-- registerOz -->
+                <div class="registerOz">
+                    <!-- 은행 -->
+                    <ul class="ozList">
+                        <!-- 선택한 기관명의 a 태그에 on 클래스 넣어주세요 -->
+                        <li>
+                            <a href="javascript:;" title="산업은행 선택" class="on">
+                                <img src="../../img/cms2.0/logo/BK0002.png" alt="산업은행">
+                                산업은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="기업은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0003.png" alt="기업은행">
+                                기업은행
+                            </a>
+                        </li>
+                        <!--퍼블수정2021-02-08 삭제 
+                        <li>
+                            <a href="javascript:;" title="국민은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0004.png" alt="국민은행">
+                                국민은행
+                            </a>
+                        </li> -->
+                        <li>
+                            <a href="javascript:;" title="수협 선택">
+                                <img src="../../img/cms2.0/logo/BK0007.png" alt="수협">
+                                수협
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="농협 선택">
+                                <img src="../../img/cms2.0/logo/BK0011.png" alt="농협">
+                                농협
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="우리은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0020.png" alt="우리은행">
+                                우리은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="sc제일은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0023.png" alt="sc제일은행">
+                                sc제일은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="시티은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0027.png" alt="시티은행">
+                                시티은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="대구은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0031.png" alt="대구은행">
+                                대구은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="부산은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0032.png" alt="부산은행">
+                                부산은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="광주은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0034.png" alt="광주은행">
+                                광주은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="제주은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0035.png" alt="제주은행">
+                                제주은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="전북은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0037.png" alt="전북은행">
+                                전북은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="경남은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0039.png" alt="경남은행">
+                                경남은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="새마을금고 선택">
+                                <img src="../../img/cms2.0/logo/BK0045.png" alt="새마을금고">
+                                새마을금고
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="신협 선택">
+                                <img src="../../img/cms2.0/logo/BK0048.png" alt="신협">
+                                신협
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="우체국 선택">
+                                <img src="../../img/cms2.0/logo/BK0071.png" alt="우체국">
+                                우체국
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="하나은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0081.png" alt="하나은행">
+                                하나은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="신한은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0088.png" alt="신한은행">
+                                신한은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="K뱅크 선택">
+                                <img src="../../img/cms2.0/logo/BK0089.png" alt="K뱅크">
+                                K뱅크
+                            </a>
+                        </li>					
+                    </ul>
+                    <!--// 은행 -->
+                    <!-- 카드사 -->
+                    <ul class="ozList">
+                        <li>
+                            <a href="javascript:;" title="국민카드 선택">
+                                <img src="../../img/cms2.0/logo/CD0301.png" alt="국민카드">
+                                국민카드
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="현대카드 선택">
+                                <img src="../../img/cms2.0/logo/CD0302.png" alt="현대카드">
+                                현대카드
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="삼성카드 선택">
+                                <img src="../../img/cms2.0/logo/CD0303.png" alt="삼성카드">
+                                삼성카드
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="NH카드 선택">
+                                <img src="../../img/cms2.0/logo/CD0304.png" alt="NH카드">
+                                NH카드
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="BC카드 선택">
+                                <img src="../../img/cms2.0/logo/CD0305.png" alt="BC카드">
+                                BC카드
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="신한카드 선택">
+                                <img src="../../img/cms2.0/logo/CD0306.png" alt="신한카드">
+                                신한카드
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="시티카드 선택">
+                                <img src="../../img/cms2.0/logo/CD0307.png" alt="시티카드">
+                                시티카드
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="우리카드 선택">
+                                <img src="../../img/cms2.0/logo/CD0309.png" alt="우리카드">
+                                우리카드
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="롯데카드 선택">
+                                <img src="../../img/cms2.0/logo/CD0311.png" alt="롯데카드">
+                                롯데카드
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="하나카드 선택">
+                                <img src="../../img/cms2.0/logo/CD0313.png" alt="하나카드">
+                                하나카드
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="전북카드 선택">
+                                <img src="../../img/cms2.0/logo/CD0315.png" alt="전북카드">
+                                전북카드
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="광주카드 선택">
+                                <img src="../../img/cms2.0/logo/CD0316.png" alt="광주카드">
+                                광주카드
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="수협카드 선택">
+                                <img src="../../img/cms2.0/logo/CD0320.png" alt="수협카드">
+                                수협카드
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="제주카드 선택">
+                                <img src="../../img/cms2.0/logo/CD0321.png" alt="제주카드">
+                                제주카드
+                            </a>
+                        </li>					
+                    </ul>
+                    <!--// 카드사 -->
+                    <!-- 증권사 -->
+                    <ul class="ozList">
+                        <li>
+                            <a href="javascript:;" title="유안타증권 선택">
+                                <img src="../../img/cms2.0/logo/ST0209.png" alt="유안타증권">
+                                유안타증권
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="KB증권 선택">
+                                <img src="../../img/cms2.0/logo/ST0218.png" alt="KB증권">
+                                KB증권
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="골든브릿지 선택">
+                                <img src="../../img/cms2.0/logo/ST0221.png" alt="골든브릿지">
+                                골든브릿지
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="한양증권 선택">
+                                <img src="../../img/cms2.0/logo/ST0222.png" alt="한양증권">
+                                한양증권
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="리딩투자증권 선택">
+                                <img src="../../img/cms2.0/logo/ST0223.png" alt="리딩투자증권">
+                                리딩투자증권
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="BNK투자증권 선택">
+                                <img src="../../img/cms2.0/logo/ST0224.png" alt="BNK투자증권">
+                                BNK투자증권
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="IBK투자증권 선택">
+                                <img src="../../img/cms2.0/logo/ST0225.png" alt="IBK투자증권">
+                                IBK투자증권
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="KTB투자증권 선택">
+                                <img src="../../img/cms2.0/logo/ST0227.png" alt="KTB투자증권">
+                                KTB투자증권
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="미래에셋 선택">
+                                <img src="../../img/cms2.0/logo/ST0238.png" alt="미래에셋">
+                                미래에셋
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="삼성증권 선택">
+                                <img src="../../img/cms2.0/logo/ST0240.png" alt="삼성증권">
+                                삼성증권
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="한국투자증권 선택">
+                                <img src="../../img/cms2.0/logo/ST0243.png" alt="한국투자증권">
+                                한국투자증권
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="NH투자증권 선택">
+                                <img src="../../img/cms2.0/logo/ST0247.png" alt="NH투자증권">
+                                NH투자증권
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="모바일증권나무 선택">
+                                <img src="../../img/cms2.0/logo/ST1247.png" alt="모바일증권나무">
+                                모바일증권나무
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="교보증권 선택">
+                                <img src="../../img/cms2.0/logo/ST0261.png" alt="교보증권">
+                                교보증권
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="하이투자증권 선택">
+                                <img src="../../img/cms2.0/logo/ST0262.png" alt="하이투자증권">
+                                하이투자증권
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="HMC투자증권 선택">
+                                <img src="../../img/cms2.0/logo/ST0263.png" alt="HMC투자증권">
+                                HMC투자증권
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="키움증권 선택">
+                                <img src="../../img/cms2.0/logo/ST0264.png" alt="키움증권">
+                                키움증권
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="이베스트 선택">
+                                <img src="../../img/cms2.0/logo/ST0265.png" alt="이베스트">
+                                이베스트
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="SK증권 선택">
+                                <img src="../../img/cms2.0/logo/ST0266.png" alt="SK증권">
+                                SK증권
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="대신증권 선택">
+                                <img src="../../img/cms2.0/logo/ST0267.png" alt="대신증권">
+                                대신증권
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="크레온 선택">
+                                <img src="../../img/cms2.0/logo/ST1267.png" alt="크레온">
+                                크레온
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="한화투자증권 선택">
+                                <img src="../../img/cms2.0/logo/ST0269.png" alt="한화투자증권">
+                                한화투자증권
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="하나금융투자 선택">
+                                <img src="../../img/cms2.0/logo/ST0270.png" alt="하나금융투자">
+                                하나금융투자
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="신한금융투자 선택">
+                                <img src="../../img/cms2.0/logo/ST0278.png" alt="신한금융투자">
+                                신한금융투자
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="DB금융투자 선택">
+                                <img src="../../img/cms2.0/logo/ST0279.png" alt="DB금융투자">
+                                DB금융투자
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="유진투자증권 선택">
+                                <img src="../../img/cms2.0/logo/ST0280.png" alt="유진투자증권">
+                                유진투자증권
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="메리츠종합금융 선택">
+                                <img src="../../img/cms2.0/logo/ST0287.png" alt="메리츠종합금융">
+                                메리츠종합금융
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="부국증권 선택">
+                                <img src="../../img/cms2.0/logo/ST0290.png" alt="부국증권">
+                                부국증권
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="신영증권 선택">
+                                <img src="../../img/cms2.0/logo/ST0291.png" alt="신영증권">
+                                신영증권
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="엘아이지투자증권 선택">
+                                <img src="../../img/cms2.0/logo/ST0292.png" alt="엘아이지투자증권">
+                                엘아이지투자증권
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="우리종합금융 선택">
+                                <img src="../../img/cms2.0/logo/ST0295.png" alt="우리종합금융">
+                                우리종합금융
+                            </a>
+                        </li>					
+                    </ul>
+                    <!--// 증권사 -->
+                    <!--퍼블수정2021-02-25 보험사 수정 -->
+                    <ul class="ozList">
+                        <li>
+                            <a href="javascript:;" title="MG손보 선택">
+                                <img src="../../img/cms2.0/logo/IS0104.png" alt="MG손보">
+                                MG손보
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="삼성화재 선택">
+                                <img src="../../img/cms2.0/logo/IS0108.png" alt="삼성화재">
+                                삼성화재
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="현대해상 선택">
+                                <img src="../../img/cms2.0/logo/IS0109.png" alt="현대해상">
+                                현대해상
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="KB손해보험 선택">
+                                <img src="../../img/cms2.0/logo/IS0110.png" alt="KB손해보험">
+                                KB손해보험
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="javascript:;" title="DB손보 선택">
+                                <img src="../../img/cms2.0/logo/IS0111.png" alt="DB손보">
+                                DB손보
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="메리츠화재 선택">
+                                <img src="../../img/cms2.0/logo/IS0101.png" alt="메리츠화재">
+                                메리츠화재
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="한화손보 선택">
+                                <img src="../../img/cms2.0/logo/IS0102.png" alt="한화손보">
+                                한화손보
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="javascript:;" title="롯데손보 선택">
+                                <img src="../../img/cms2.0/logo/IS0103.png" alt="롯데손보">
+                                롯데손보
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="흥국화재 선택">
+                                <img src="../../img/cms2.0/logo/IS0105.png" alt="흥국화재">
+                                흥국화재
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="AXA손보 선택">
+                                <img src="../../img/cms2.0/logo/IS0112.png" alt="AXA손보">
+                                AXA손보
+                            </a>
+                        </li> -->
+                        <li>
+                            <a href="javascript:;" title="AIG손보 선택">
+                                <img src="../../img/cms2.0/logo/IS0151.png" alt="AIG손보">
+                                AIG손보
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="하나손보 선택">
+                                <img src="../../img/cms2.0/logo/IS0152.png" alt="하나손보">
+                                하나손보
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="NH농협손해보험 선택">
+                                <img src="../../img/cms2.0/logo/IS0171.png" alt="NH농협손해보험">
+                                NH농협손해보험
+                            </a>
+                        </li>					
+                        <li>
+                            <a href="javascript:;" title="캐롯손해보험 선택">
+                                <img src="../../img/cms2.0/logo/IS0195.png" alt="캐롯손해보험">
+                                캐롯손해보험
+                            </a>
+                        </li>
+                    </ul>
+                    <!--// 2021-02-25 보험사 -->
+                    <!-- 캐피탈 -->
+                    <ul class="ozList">
+                        <li>
+                            <a href="javascript:;" title="신한캐피탈 선택">
+                                <img src="../../img/cms2.0/logo/CP0501.png" alt="신한캐피탈">
+                                신한캐피탈
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="산은캐피탈 선택">
+                                <img src="../../img/cms2.0/logo/CP0502.png" alt="산은캐피탈">
+                                산은캐피탈
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="하나캐피탈 선택">
+                                <img src="../../img/cms2.0/logo/CP0503.png" alt="하나캐피탈">
+                                하나캐피탈
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="IBK캐피탈 선택">
+                                <img src="../../img/cms2.0/logo/CP0504.png" alt="IBK캐피탈">
+                                IBK캐피탈
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="롯데캐피탈 선택">
+                                <img src="../../img/cms2.0/logo/CP0505.png" alt="롯데캐피탈">
+                                롯데캐피탈
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="아주캐피탈 선택">
+                                <img src="../../img/cms2.0/logo/CP0506.png" alt="아주캐피탈">
+                                아주캐피탈
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="NH농협캐피탈 선택">
+                                <img src="../../img/cms2.0/logo/CP0507.png" alt="NH농협캐피탈">
+                                NH농협캐피탈
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="메리츠캐피탈 선택">
+                                <img src="../../img/cms2.0/logo/CP0508.png" alt="메리츠캐피탈">
+                                메리츠캐피탈
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="애큐온캐피탈 선택">
+                                <img src="../../img/cms2.0/logo/CP0509.png" alt="애큐온캐피탈">
+                                애큐온캐피탈
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="현대캐피탈 선택">
+                                <img src="../../img/cms2.0/logo/CP0510.png" alt="현대캐피탈">
+                                현대캐피탈
+                            </a>
+                        </li>	
+                        <li><!--2021-03-17 kb캐피탈 기관추가-->
+                            <a href="javascript:;" title="KB캐피탈 선택">
+                                <img src="../../img/cms2.0/logo/CP0511.png" alt="KB캐피탈">
+                                KB캐피탈
+                            </a>
+                        </li>	                        				
+                    </ul>
+                    <!--// 캐피탈 -->
+                    <!-- 저축은행 -->
+                    <ul class="ozList">
+
+
+                        <li>
+                            <a href="javascript:;" title="SBI저축은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0103.png" alt="SBI저축은행">
+                                SBI저축은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="OK저축은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0101.png" alt="OK저축은행">
+                                OK저축은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="웰컴저축은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0105.png" alt="웰컴저축은행">
+                                웰컴저축은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="애큐온저축은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0104.png" alt="애큐온저축은행">
+                                애큐온저축은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="유진저축은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0101.png" alt="유진저축은행">
+                                유진저축은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="OSB저축은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0111.png" alt="OSB저축은행">
+                                OSB저축은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="JT친애저축은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0101.png" alt="JT친애저축은행">
+                                JT친애저축은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="신한저축은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0113.png" alt="신한저축은행">
+                                신한저축은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="하나저축은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0108.png" alt="하나저축은행">
+                                하나저축은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="NH저축은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0110.png" alt="NH저축은행">
+                                NH저축은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="대신저축은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0102.png" alt="대신저축은행">
+                                대신저축은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="바로저축은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0101.png" alt="바로저축은행">
+                                바로저축은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="DB저축은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0109.png" alt="DB저축은행">
+                                DB저축은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="예가람저축은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0101.png" alt="예가람저축은행">
+                                예가람저축은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="키움예스저축은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0101.png" alt="키움예스저축은행">
+                                키움예스저축은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="푸른저축은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0107.png" alt="푸른저축은행">
+                                푸른저축은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="유안타저축은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0101.png" alt="유안타저축은행">
+                                유안타저축은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="더케이저축은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0101.png" alt="더케이저축은행">
+                                더케이저축은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="스카이저축은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0101.png" alt="스카이저축은행">
+                                스카이저축은행
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="조은저축은행 선택">
+                                <img src="../../img/cms2.0/logo/BK0101.png" alt="조은저축은행">
+                                조은저축은행
+                            </a>
+                        </li>					
+                    </ul>
+                    <!--// 저축은행 -->
+                    <!-- 매출기관 -->
+                    <ul class="ozList">
+                        <li>
+                            <a href="javascript:;" title="매출기관 선택">
+                                <img src="../../img/cms2.0/logo/oz_sa.png" alt="매출기관">
+                                매출기관
+                            </a>
+                        </li>
+                    </ul>
+                    <!--// 매출기관 -->
+                </div>
+                <!--// registerOz -->
+            </div>
+            <!--// contInnerWrap -->
+
+            <div class="btnWrap full fixed"> <!--// 2021-02-23 class="fixed" 추가 -->
+                <a href="javascript:;" role="button" class="btn bgGray">취소</a> <!--// 2021-02-23 버튼명 수정 -->
+                <a href="javascript:;" role="button" class="btn bgYellow">다음</a>
+            </div>
+            <!--// 컨텐츠 내용 -->
+        </div>
+    </div>    
+</body>
+</html>

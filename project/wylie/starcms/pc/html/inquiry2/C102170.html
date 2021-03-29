@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/jquery-ui-1.8.16.css" />
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/osite/cms_base.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.common.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.style.css" />
+    
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-1.6.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-ui-1.8.16.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery_bgiframe_min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery.validity.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mCustomScrollbar.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/ui.common.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="navSkip"><a href="#containerWrap">본문으로 바로가기</a></div>
+        <!-- header -->
+        <div class="headerWrap">            
+			<script type="text/javascript" src="../../assets/js2.0/ui.header.js" charset="utf-8"></script>
+        </div>
+        <!--// header -->
+
+        <!-- containerWrap -->
+        <div id="containerWrap" role="main" class="inquiry">
+            <div id="container">
+                <!-- 컨텐츠 내용 -->
+
+                <div class="location">
+                    <span class="blind">페이지 위치</span>
+                    <ul>
+                        <li><a href="javascript:;">Star CMS</a></li>
+                        <li><a href="javascript:;">조회/자금모으기</a></li>
+                        <li><a href="javascript:;">통합자금관리</a></li>
+                        <li class="curr">자금모으기</li>
+                    </ul>
+                </div>
+                
+                <div class="pageTop">
+                    <h2 class="pageTit">자금모으기</h2>
+				</div>
+
+                <!-- page tab -->
+                <ul class="pageTab" role="tablist">
+                    <li><a href="javascript:;">자금모으기</a></li>
+                    <li><a href="javascript:;">처리결과 조회</a></li>
+                    <li><a href="javascript:;" class="on">자금모으기 그룹</a></li>
+                </ul>
+
+				<!-- view area 개발자 분들은 이부분 부터 쓰시면 됩니다. -->
+				<div class="viewArea inquiryAccount">
+
+					<!-- notiBox -->
+					<div class="notiBox">
+						<!-- accordionWrap -->
+						<dl class="accordionWrap">
+							<dt><a href="javascript:;">유의사항</a></dt>
+							<dd>
+								<div>
+									<!-- notiList -->
+									<ul class="notiList">
+										<li>[자금모으기그룹 등록]버튼을 눌러 자금모으기시 입금받을 KB국민은행 계좌 및 출금계좌를 선택하여 그룹으로 등록하십시오. (KB국민은행 계좌로만 입금계좌 지정가능)</a></li>
+										<li>자금모으기그룹 등록 후 자금모으기 메뉴에서 이체실행하시기 바랍니다.</li>
+										<li>보안카드를 이용하시는 고객님은 자금모으기를 하실 수 없습니다. (OTP 이용고객만 가능)</li>
+									</ul>
+									<!--// notiList -->
+								</div>
+							</dd>
+						</dl>
+						<!--// accordionWrap -->
+					</div>					
+                    <!--// notiBox -->
+					
+
+                    <div class="inqBtn mt30">
+						<div class="floatL">
+							<p class="total">
+								총 10건
+							</p>
+						</div>
+                    </div>
+
+                    <div class="tableWrap type02" scrollTabley data-height="650">
+                        <table summary="">
+                            <caption></caption>
+                            <colgroup>
+                                <col width="64px;">
+                                <col width="250px;">
+                                <col width="370px;">
+                                <col width="396px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col"><input type="checkbox" id="" title="계좌 전체 선택" /></th>
+                                    <th scope="col">자금모으기그룹명</th>
+                                    <th scope="col">입금계좌</th>
+                                    <th scope="col">출금계좌</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="4">
+                                        <!-- 데이터 없을 경우 -->
+                                        <div class="dataNone">
+                                            <i class="icon"></i>
+                                            <p>조회하실 내역이 없습니다.</p>
+                                        </div>
+                                        <!--// 데이터 없을 경우 -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="" title="계좌 전체 선택" /></td>
+                                    <td>외화</td>
+                                    <td>123456-12-123456(사업자명)</td>                                    
+                                    <td><a href="javascript:uiCommon.layer.open('accDeatilLayer');" class="underline" title="해당 출금계좌 상세팝업 열림">총 1건 (KB국민은행 : 1건, 다른은행 : 0건)</a></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="" title="계좌 전체 선택" /></td>
+                                    <td>외화</td>
+                                    <td><a href="#" title="등록하기 페이지로 이동" class="btnText error">등록필요</a></td>
+                                    <td><a href="javascript:uiCommon.layer.open('accDeatilLayer');" class="underline" title="해당 출금계좌 상세팝업 열림">총 1건 (KB국민은행 : 1건, 다른은행 : 0건)</a></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="" title="계좌 전체 선택" /></td>
+                                    <td>외화</td>
+                                    <td>123456-12-123456(사업자명)</td>
+                                    <td><a href="javascript:uiCommon.layer.open('accDeatilLayer');" class="underline" title="해당 출금계좌 상세팝업 열림">총 1건 (KB국민은행 : 1건, 다른은행 : 0건)</a></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="" title="계좌 전체 선택" /></td>
+                                    <td>외화</td>
+                                    <td><a href="#" title="등록하기 페이지로 이동" class="btnText error">등록필요</a></td>
+                                    <td><a href="javascript:uiCommon.layer.open('accDeatilLayer');" class="underline" title="해당 출금계좌 상세팝업 열림">총 1건 (KB국민은행 : 1건, 다른은행 : 0건)</a></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="" title="계좌 전체 선택" /></td>
+                                    <td>외화</td>
+                                    <td>123456-12-123456(사업자명)</td>
+                                    <td><a href="javascript:uiCommon.layer.open('accDeatilLayer');" class="underline" title="해당 출금계좌 상세팝업 열림">총 1건 (KB국민은행 : 1건, 다른은행 : 0건)</a></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="" title="계좌 전체 선택" /></td>
+                                    <td>외화</td>
+                                    <td><a href="#" title="등록하기 페이지로 이동" class="btnText error">등록필요</a></td>
+                                    <td><a href="javascript:uiCommon.layer.open('accDeatilLayer');" class="underline" title="해당 출금계좌 상세팝업 열림">총 1건 (KB국민은행 : 1건, 다른은행 : 0건)</a></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="" title="계좌 전체 선택" /></td>
+                                    <td>외화</td>
+                                    <td>123456-12-123456(사업자명)</td>
+                                    <td><a href="javascript:uiCommon.layer.open('accDeatilLayer');" class="underline" title="해당 출금계좌 상세팝업 열림">총 1건 (KB국민은행 : 1건, 다른은행 : 0건)</a></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="" title="계좌 전체 선택" /></td>
+                                    <td>외화</td>
+                                    <td><a href="#" title="등록하기 페이지로 이동" class="btnText error">등록필요</a></td>
+                                    <td><a href="javascript:uiCommon.layer.open('accDeatilLayer');" class="underline" title="해당 출금계좌 상세팝업 열림">총 1건 (KB국민은행 : 1건, 다른은행 : 0건)</a></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="" title="계좌 전체 선택" /></td>
+                                    <td>외화</td>
+                                    <td>123456-12-123456(사업자명)</td>
+                                    <td><a href="javascript:uiCommon.layer.open('accDeatilLayer');" class="underline" title="해당 출금계좌 상세팝업 열림">총 1건 (KB국민은행 : 1건, 다른은행 : 0건)</a></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="" title="계좌 전체 선택" /></td>
+                                    <td>외화</td>
+                                    <td><a href="#" title="등록하기 페이지로 이동" class="btnText error">등록필요</a></td>
+                                    <td><a href="javascript:uiCommon.layer.open('accDeatilLayer');" class="underline" title="해당 출금계좌 상세팝업 열림">총 1건 (KB국민은행 : 1건, 다른은행 : 0건)</a></td>
+                                </tr>
+                            </tbody>
+                        </table>                        
+                    </div>
+
+					<div class="btnWrap mt60">
+                        <a href="javascript:;" role="button" class="btn bgYellow" title="자금모으기 실행">자금모으기 실행</a>
+                        <a href="javascript:;" role="button" class="btn bgYellow" title="자금모으기 그룹 등록">자금모으기 그룹 등록</a>
+                        <a href="javascript:;" role="button" class="btn bgYellow" title="자금모으기 그룹 수정">자금모으기 그룹 수정</a>
+                        <a href="javascript:;" role="button" class="btn bgGray" title="삭제">삭제</a>
+					</div>
+				</div>
+                <!--// view area -->
+                
+                <!--// 컨텐츠 내용 -->
+            </div>
+            <!--// container -->
+        </div>
+        <!--// containerWrap -->
+
+        <!-- footer -->
+        <div class="footerWrap">
+			<script type="text/javascript" src="../../assets/js2.0/ui.footer.js" charset="utf-8"></script>
+        </div>
+        <!-- footer -->
+    </div>
+
+	<!-- layer popup : 출금계좌 상세 (1000x691)  -->
+	 <div class="layer accDeatilLayer">
+        <a href="javascript: uiCommon.layer.close('accDeatilLayer');" class="popClose"><span class="blind">팝업 닫기</span></a>
+        <h4 class="popTitle">출금계좌 상세</h4>
+        <!-- popContent -->
+        <div class="popCont">
+
+
+			<div class="tableWrap">
+				<table summary="">
+					<caption></caption>
+					<colgroup>
+						<col width="200px;">
+						<col width="740px;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">자금모으기그룹명</th>
+							<td>외화1</td>
+						</tr>
+						<tr>
+							<th scope="row">입금계좌</th>
+							<td>00000-00-00000(사업자명)</td>
+						</tr>
+						<tr>
+							<th scope="row">출금계좌</th>
+							<td>총 1건 (KB국민은행 : 1건, 다른은행 : 0건)</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<h5 class="mt50">출금계좌목록</h5>
+			<div class="tableWrap type02 mt20">
+				<table summary="">
+					<caption></caption>
+					<colgroup>
+						<col width="300px;">
+						<col width="300px;">
+						<col width="340px;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">사업자명</th>
+							<th scope="col">은행</th>
+							<th scope="col">계좌번호</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>김국민</td>
+							<td>국민은행</td>
+							<td>000000-00-000000</td>
+						</tr>
+						<tr>
+							<td>김국민</td>
+							<td>국민은행</td>
+							<td>000000-00-000000</td>
+						</tr>
+						<tr>
+							<td>김국민</td>
+							<td>국민은행</td>
+							<td>000000-00-000000</td>
+						</tr>
+					</tbody>
+				</table>                        
+			</div>
+
+			<div class="btnWrap small">
+				<a href="javascript:;" role="button" class="btn bgYellow" title="인쇄">인쇄</a>
+			</div>
+		</div>
+        <!--// popCont -->
+    </div>
+    <!--// layer popup : 출금계좌 상세 -->
+
+
+</body>
+</html>

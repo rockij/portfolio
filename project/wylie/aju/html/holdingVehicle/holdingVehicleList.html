@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+	2020-07-02 	등록된 차량 없을 경우 추가
+-->
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<!--target-densitydpi=medium-dpi-->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<!-- 아이폰 전체화면 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<title>딜러라운지</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../assets/css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick-theme.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/swiper.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/ui.common.css" type="text/css" /> <!-- 공통 요소 -->
+
+	<!-- JS -->
+	<script type="text/javascript" src="../../assets/js/jquery.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/slick.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/ui.common.js"></script><!-- 공통 요소 -->
+</head>
+
+<body>
+	<section id="wrap">
+		<div id="skipNavi">
+			<a href="#container">본문 바로가기</a>
+		</div>
+		<main id="holdingVehicleList" class="holdingVehicle">
+			<link rel="stylesheet" href="../../assets/css/ui.holdingVehicle.css" type="text/css" />
+			<section id="container" class="holdingVehicleList">
+
+				<div class="formInput search">
+                    <input type="text" placeholder="차량명 또는 차량번호를 입력해 주세요.">
+					<a href="javascript:;" class="btnSearch">검색</a>
+				</div>
+
+				<!-- 2020-07-02 추가 -->
+				<div class="dataNone">
+					<div class="shape"></div>
+					<p>등록된 보유차량이 없습니다.</p>
+				</div>
+				<!--// 2020-07-02 -->
+
+				<div class="searchIdx">
+					<p class="idx">총 <em>00</em>건<p>
+					<div class="dropBox sort">
+						<a href="javascript:;" class="dropBtn">최신순</a>
+						<ul class="dropList">
+							<li class="selected"><a href="javascript:;">최신순</a></li>
+							<li><a href="javascript:;">낮은 가격순</a></li>
+							<li><a href="javascript:;">높은 가격순</a></li>
+							<li><a href="javascript:;">등록일순</a></li>
+							<li><a href="javascript:;">좋아요순</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="holdingCarList">
+					<ul>
+						<li>
+							<a href="#">
+								<!-- 2020-05-18 수정 -->
+								<p class="date">2020.01.21 <em>97일 경과</em></p>
+								<strong class="tit">현대 투싼 ix 디젤 2WD LX 프리미어 프리프리프리프리</strong>
+								<!--// 2020-05-18 수정 -->
+								<div class="info">
+									<span>65오 3245</span>
+									<span>2015년형</span>
+									<span>160,480km</span>
+								</div>
+								<dl class="price">
+									<dt>매입금액</dt>
+									<dd>1,500만원</dd>
+									<dt>비용합계</dt>
+									<dd>0원</dd>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<!-- 2020-05-18 수정 : 알선차량일 경우 -->
+								<span class="iconAgent">알선</span>
+								<strong class="tit">현대 투싼 ix 디젤 2WD LX 프리미어 프리프리프리프리</strong>
+								<!--// 2020-05-18 수정 : 알선차량일 경우 -->
+								<div class="info">
+									<span>65오 3245</span>
+									<span>2015년형</span>
+									<span>160,480km</span>
+								</div>
+								<dl class="price">
+									<dt>매입금액</dt>
+									<dd>1,500만원</dd>
+									<dt>비용합계</dt>
+									<dd>0원</dd>
+								</dl>
+							</a>
+						</li>
+					</ul>
+
+					<div class="btnArea">
+						<a href="#" class="white">더보기</a>
+					</div>
+				</div>
+
+			</section>
+		</main>
+	</section>
+</body>
+
+</html>

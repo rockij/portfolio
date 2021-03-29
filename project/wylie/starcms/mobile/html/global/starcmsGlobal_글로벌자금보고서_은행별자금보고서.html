@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/content.css" />
+    <script type="text/javascript" src="../../js/cms2.0/library/jquery_lib.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/cms2.0/common_ui.js" charset="utf-8"></script>
+
+    <!-- cms2.0 추가 -->
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/ui.style.css" />
+    <script type="text/javascript" src="../../js/cms2.0/swiper.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/cms2.0/ui.style.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content">
+
+            <!-- contInnerWrap -->
+            <div class="contInnerWrap cmsGlobal">
+                <h3 class="contTit mt0">은행별 자금보고서</h3>
+
+                <dl class="fieldset">
+                    <dt class="mt16">
+                        <strong>은행소재 국가 선택</strong>
+                    </dt>
+                    <dd>
+                        <div class="formBox">
+                            <select name="" id="">
+                                <option value="">전체</option>
+                            </select>
+                        </div>                   
+                    </dd>
+                    <dt>
+                        <strong>은행선택</strong>
+                    </dt>
+                    <dd>
+                        <div class="formBox">
+                            <select name="" id="">
+                                <option value="">전체</option>
+                            </select>
+                        </div>                   
+                    </dd>
+                    <dt>
+                        <strong>조회기간</strong>
+                    </dt>
+                    <dd>
+                        <ul class="tabRadio">
+                            <li>
+                                <input type="radio" name="periodRadio" id="period01" checked="">
+                                <label for="period01">월별</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="periodRadio" id="period02">
+                                <label for="period02">분기별</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="periodRadio" id="period03">
+                                <label for="period03">연도별</label>
+                            </li>
+                        </ul>
+                        <!-- 월별 -->
+                        <div class="formWrap date mt16">
+                            <div class="formBox">
+                                <select name="" id="">
+                                    <option value="">2020</option>
+                                </select>
+                                <span class="unit">년</span>
+                            </div>
+                            <div class="formBox">
+                                <select name="" id="">
+                                    <option value="">11</option>
+                                </select>
+                                <span class="unit">월</span>
+                            </div>                            
+                        </div>
+                        <!--// 월별 -->
+                        <!-- 분기별 -->
+                        <div class="formWrap date mt16">
+                            <div class="formBox">
+                                <select name="" id="">
+                                    <option value="">2020</option>
+                                </select>
+                                <span class="unit">년</span>
+                            </div>
+                            <div class="formBox">
+                                <select name="" id="">
+                                    <option value="">1분기</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--// 분기별 -->
+                        <!-- 연도별 -->
+                        <div class="formWrap date mt16">
+                            <div class="formBox">
+                                <select name="" id="">
+                                    <option value="">2020</option>
+                                </select>
+                                <span class="unit">년</span>
+                            </div>                     
+                        </div>
+                        <!--// 연도별 -->
+                    </dd>
+                </dl>
+
+                <div class="btnWrap small2 mt16">
+                    <a href="javascript:;" role="button" class="btn bgYellow">조회</a>
+                </div>
+
+
+                <!-- 조회 내역 엾을 경우 -->
+                <div class="dataNone">
+                    <p class="txt">조회 내역이 없습니다.</p> <!--퍼블수정2021-03-12 문구수정--> <!--퍼블수정2021-03-12 문구수정-->
+                </div>
+                <!--// 조회 내역 없을 경우 -->
+
+                <div class="inquiryDate mt40">
+                    <p>조회기준일 2020.11.15</p>
+                    <span>고시기준회차 2021.01.22 09:05:55</span>
+                    <span class="idx">1회차</span>
+                </div>
+
+                <div class="totalAccountBox">
+                    <div class="head">
+                        <span>총 계좌 수</span>
+                        <em>18</em>
+                    </div>
+                    <div class="bankInfoList boxType">
+                        <ul>
+                            <li>
+                                <span>예금 <em class="numRound">10</em></span>
+                                <em>총 잔액 KRW 17,600,000<br/> USD 16,000.00</em>
+                            </li>
+                            <li>
+                                <span>대출 <em class="numRound">8</em></span>
+                                <em>총 잔액 KRW 17,600,000<br/> USD 16,000.00</em>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="fundsReportArea">
+                    <h4 class="contTit">은행별 집계</h4>
+                    <div class="graphArea">
+                        <!-- 그래프 영역 -->
+                        <img src="../../img/cms2.0/temp/img_graph05.png" alt="">
+                        <!--// 그래프 영역 -->
+                    </div>
+                </div>
+
+                <div class="btnWrap mt24">
+                    <a href="javascript:;" role="button" class="btn bgYellow" title="상세내역 팝업 열기">상세내역조회</a>
+                </div>
+            </div>
+            <!--// contInnerWrap -->
+
+            <!-- grayNotiBox -->
+            <dl class="grayNotiBox">
+                <dt>유의사항</dt>
+                <dd>
+                    <div class="bulletWrap typeGrayRound">
+                        <ul>
+                            <li>해외지사서비스에서 등록 및 조회한 기준으로 보여지는 내역으로 현재 최종잔액과 상이할 수 있습니다.</li>
+                            <li>총 잔액(금액)은 원화(KRW)와 미국달러(USD)의 해당 고시기준회차를 적용한 금액으로 조회시점에 따라 잔액이 달라질 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </dd>
+            </dl>
+            <!--// grayNotiBox -->
+
+        </div>
+    </div>    
+</body>
+</html>

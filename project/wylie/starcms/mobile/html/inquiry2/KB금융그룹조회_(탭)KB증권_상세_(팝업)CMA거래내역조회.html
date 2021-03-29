@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/content.css" />
+    <script type="text/javascript" src="../../js/cms2.0/library/jquery_lib.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/cms2.0/common_ui.js" charset="utf-8"></script>
+
+    <!-- cms2.0 추가 -->
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/ui.style.css" />
+    <script type="text/javascript" src="../../js/cms2.0/swiper.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/cms2.0/ui.style.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content" class="pagePopup">
+
+            <!-- contInnerWrap -->
+            <div class="contInnerWrap cmsGlobal">
+
+                <!--퍼블수정2021-03-10 라디오에서 a태그로 마크업교체 
+                <ul class="tabRadio">
+                    <li>
+                        <input type="radio" name="periodRadio" id="period01" checked="">
+                        <label for="period01">당일</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="periodRadio" id="period02">
+                        <label for="period02">3일</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="periodRadio" id="period03">
+                        <label for="period03">1주일</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="periodRadio" id="period04">
+                        <label for="period04">1개월</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="periodRadio" id="period05">
+                        <label for="period05">3개월</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="periodRadio" id="period06">
+                        <label for="period06">6개월</label>
+                    </li>
+                </ul>
+                -->
+
+                <!--퍼블수정2021-03-10 라디오에서 a태그로 마크업교체 -->
+                <ul class="tabRadio">
+                    <li>
+                        <a href="javascript:;" class="active">당일</a> <!-- 선택된 태그에 클래스명 .active 추가 -->
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="">3일</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="">1주일</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="">1개월</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="">3개월</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="">6개월</a>
+                    </li>
+                </ul>
+                <!--퍼블수정2021-03-10 라디오에서 a태그로 마크업교체 -->
+
+
+                <!--퍼블수정2021-03-04 마크업 추가 -->
+                <div class="searchInqArea moreToggle mt8">
+                    <div class="btnWrap small">
+                        <a href="javascript:;" role="button" class="btn bgWhite02 btnToggle" title="영역 펼치기">조건검색<i class="icon upDown"></i></a>
+                    </div>
+
+                    <div class="toggleCont">
+                        <div class="formWrap date">
+                            <div class="formBox dateInput">
+                                <input type="text" value="2020.12.11">
+                                <button type="button" class="btnCalendar"><span class="blind">날짜 선택</span></button>
+                            </div>
+                            <span class="dash">~</span>
+                            <div class="formBox dateInput">
+                                <input type="text" value="2020.12.11">
+                                <button type="button" class="btnCalendar"><span class="blind">날짜 선택</span></button>
+                            </div>
+                        </div>
+                        <div class="btnWrap small2 mt16">
+                            <a href="javascript:;" role="button" class="btn bgYellow">조회</a>
+                        </div>
+                    </div>
+                </div>
+                <!--// 2021-03-04 마크업 추가 -->
+
+                <div class="accTradeList mt16"><!--퍼블수정2021-03-04 클래스명 .bdNone 제거 / .mt16 추가 -->
+                    <ul>
+                        <li>
+                            <div class="topArea">
+                                <div class="floatL">
+                                    <span>2020.02.07</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <strong>삼선전자(우)</strong>
+                                <span>적요명</span>
+                            </div>
+                            <div class="dealInfo">
+                                <p class="price"><span>평가금액</span><em>1,000,000</em></p>
+                                <p class="charge">펀드간매수 1,000,000</p>
+                            </div>
+                            
+                            <div class="moreToggle">
+                                <a href="javascript:;" role="botton" class="btnToggle" title="영역 펼치기"><span class="blind">추가 내용</span></a>
+                                <div class="bankInfoList boxType toggleCont">
+                                    <ul>
+                                        <li>
+                                            <span>수량</span>
+                                            <em>123,000</em>
+                                        </li>
+                                        <li>
+                                            <span>예수금잔고</span>
+                                            <em>2,000,000.00</em>
+                                        </li>
+                                        <li>
+                                            <span>대출금액</span>
+                                            <em>1,000,000,000</em>
+                                        </li>
+                                        <li>
+                                            <span>수수료</span>
+                                            <em>100,000</em>
+                                        </li>
+                                        <li>
+                                            <span>연체료</span>
+                                            <em>100,000</em>
+                                        </li>
+                                        <li>
+                                            <span>단가</span>
+                                            <em>100,000</em>
+                                        </li>
+                                        <li>
+                                            <span>정산금액</span>
+                                            <em>1,000,000</em>
+                                        </li>
+                                        <li>
+                                            <span>유가증권잔고수량</span>
+                                            <em>100,000</em>
+                                        </li>
+                                        <li>
+                                            <span>부점명</span>
+                                            <em>여의도</em>
+                                        </li>
+                                        <li>
+                                            <span>세금</span>
+                                            <em>100,000</em>
+                                        </li>
+                                        <li>
+                                            <span>표준종목코드</span>
+                                            <em>00000</em>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="topArea">
+                                <div class="floatL">
+                                    <span>2020.02.07</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <strong></strong>
+                                <span>적요명</span>
+                            </div>
+                            <div class="dealInfo">
+                                <p class="price"><span>평가금액</span><em>1,000,000</em></p>
+                                <p class="charge">펀드간매수 1,000,000</p>
+                            </div>
+                            
+                            <div class="moreToggle">
+                                <a href="javascript:;" role="botton" class="btnToggle" title="영역 펼치기"><span class="blind">추가 내용</span></a>
+                                <div class="bankInfoList boxType toggleCont">
+                                    <ul>
+                                        <li>
+                                            <span>수량</span>
+                                            <em>123,000</em>
+                                        </li>
+                                        <li>
+                                            <span>예수금잔고</span>
+                                            <em>2,000,000.00</em>
+                                        </li>
+                                        <li>
+                                            <span>대출금액</span>
+                                            <em>1,000,000,000</em>
+                                        </li>
+                                        <li>
+                                            <span>수수료</span>
+                                            <em>100,000</em>
+                                        </li>
+                                        <li>
+                                            <span>연체료</span>
+                                            <em>100,000</em>
+                                        </li>
+                                        <li>
+                                            <span>단가</span>
+                                            <em>100,000</em>
+                                        </li>
+                                        <li>
+                                            <span>정산금액</span>
+                                            <em>1,000,000</em>
+                                        </li>
+                                        <li>
+                                            <span>유가증권잔고수량</span>
+                                            <em>100,000</em>
+                                        </li>
+                                        <li>
+                                            <span>부점명</span>
+                                            <em>여의도</em>
+                                        </li>
+                                        <li>
+                                            <span>세금</span>
+                                            <em>100,000</em>
+                                        </li>
+                                        <li>
+                                            <span>표준종목코드</span>
+                                            <em>00000</em>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="topArea">
+                                <div class="floatL">
+                                    <span>2020.02.07</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <strong>광동제약</strong>
+                                <span>적요명</span>
+                            </div>
+                            <div class="dealInfo">
+                                <p class="price"><span>평가금액</span><em>1,000,000</em></p>
+                                <p class="charge">매수 1,000,000</p>
+                            </div>
+                            
+                            <div class="moreToggle">
+                                <a href="javascript:;" role="botton" class="btnToggle" title="영역 펼치기"><span class="blind">추가 내용</span></a>
+                                <div class="bankInfoList boxType toggleCont">
+                                    <ul>
+                                        <li>
+                                            <span>수량</span>
+                                            <em>123,000</em>
+                                        </li>
+                                        <li>
+                                            <span>예수금잔고</span>
+                                            <em>2,000,000.00</em>
+                                        </li>
+                                        <li>
+                                            <span>대출금액</span>
+                                            <em>1,000,000,000</em>
+                                        </li>
+                                        <li>
+                                            <span>수수료</span>
+                                            <em>100,000</em>
+                                        </li>
+                                        <li>
+                                            <span>연체료</span>
+                                            <em>100,000</em>
+                                        </li>
+                                        <li>
+                                            <span>단가</span>
+                                            <em>100,000</em>
+                                        </li>
+                                        <li>
+                                            <span>정산금액</span>
+                                            <em>1,000,000</em>
+                                        </li>
+                                        <li>
+                                            <span>유가증권잔고수량</span>
+                                            <em>100,000</em>
+                                        </li>
+                                        <li>
+                                            <span>부점명</span>
+                                            <em>여의도</em>
+                                        </li>
+                                        <li>
+                                            <span>세금</span>
+                                            <em>100,000</em>
+                                        </li>
+                                        <li>
+                                            <span>표준종목코드</span>
+                                            <em>00000</em>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!--퍼블수정2021-03-04 마크업 삭제
+                    <div class="btnWrap mt24">
+                        <a href="javascript:;" role="button" class="sbtn round">더 불러오기<i class="icon more"></i></a>
+                    </div>
+                    -->
+                </div>
+            </div>
+            <!--// contInnerWrap -->
+
+            <div class="btnWrap">
+                <a href="javascript:;" role="button" class="btn bgYellow">확인</a>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

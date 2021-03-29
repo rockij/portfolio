@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/jquery-ui-1.8.16.css" />
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/osite/cms_base.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.common.css" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.style.css" />
+    
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-1.6.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-ui-1.8.16.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery_bgiframe_min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery.validity.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mCustomScrollbar.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/ui.common.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="navSkip"><a href="#containerWrap">본문으로 바로가기</a></div>
+        <!-- header -->
+        <div class="headerWrap">            
+			<script type="text/javascript" src="../../assets/js2.0/ui.header.js" charset="utf-8"></script>
+        </div>
+        <!--// header -->
+
+        <!-- containerWrap -->
+        <div id="containerWrap" role="main" class="inquiry">
+            <div id="container">
+                <!-- 컨텐츠 내용 -->
+
+                <div class="location">
+                    <span class="blind">페이지 위치</span>
+                    <ul>
+                        <li><a href="javascript:;">Star CMS</a></li>
+                        <li><a href="javascript:;">이체/수납</a></li>
+                        <li><a href="javascript:;">퇴직연금입금</a></li>
+                        <li class="curr">DB부담금 입금</li>
+                    </ul>
+                </div>
+                
+                <div class="pageTop">
+                    <h2 class="pageTit">DB부담금 입금</h2>
+                    <ol class="stepProcess">
+						<!--// 활성화시 li에 on 클래스 추가 - 완료된 스탭에는 li에 compleate 클래스 추가 -->
+						<li class="on">
+							<i>01</i>
+							<span>정보입력</span>
+						</li>
+						<li>
+							<i>02</i>
+							<span>입력확인</span>
+						</li>
+						<li>
+							<i>03</i>
+							<span>입금완료</span>
+						</li>
+					</ol>
+                </div>
+
+				<!-- view area 개발자 분들은 이부분 부터 쓰시면 됩니다. -->
+				<div class="viewArea inquiryAccount">
+					<!-- notiBox -->
+					<div class="notiBox">
+						<!-- accordionWrap -->
+						<dl class="accordionWrap">
+							<dt><a href="javascript:;">유의사항</a></dt>
+							<dd>
+								<div>
+									<!-- notiList -->
+									<ul class="notiList">
+										<li>입금정보 및 출금정보를 입력한 후 [확인] 버튼을 눌러 주십시오.</li>
+										<li>퇴직연금 계좌에는 수수료를 제외한 순수 부담금만 입금됩니다.</li>
+										<li>인터넷뱅킹을 이용한 퇴직연금 입금거래는 평일 09:00 ~ 19:00까지 가능합니다.</li>
+									</ul>
+									<!--// notiList -->
+								</div>
+							</dd>
+						</dl>
+						<!--// accordionWrap -->
+					</div>
+					<!--// notiBox -->
+
+                    <div class="updateBtnArea">
+						<a href="javascript:;" role="button" class="sbtn small"><i class="icon retireCc"></i>퇴직연금 기업고객 바로가기</a>
+                    </div>
+                    
+                    <h3 class="contTit mt50">출금계좌정보</h3>
+                    <div class="tableWrap mt20">
+                        <table summary="">
+                            <caption></caption>
+                            <colgroup>
+                                <col width="200px;">
+                                <col width="auto;">
+                            </colgroup>
+                            <tbody>
+								<tr>
+                                    <th scope="row">출금계좌번호</th>
+									<td>
+										<!-- 2021-03-02 추가 -->
+										<ul class="formList mb10">
+											<li>
+												<input type="radio" id="radio1" name="inpRadio01">
+												<label for="radio1">KB국민은행</label>
+											</li>
+											<li>
+												<input type="radio" id="radio2" name="inpRadio01" checked="">
+												<label for="radio2">다른은행</label>
+											</li>
+										</ul>
+										<!--// 2021-03-02 추가 -->
+										<div class="accountSelect">
+											<select class="selbox w300">
+												<option value="" selected="selected">계좌를 선택해 주세요.</option>
+												<option value="">계좌를 선택해 주세요.</option>
+                                            </select>
+                                            <a href="javascript:uiCommon.layer.open('withdrawPossiLayer');" role="button" class="sbtn bgWhite" title="출금가능금액 확인 팝업 열기">출금가능금액</a>
+                                        </div>
+                                        <ul class="limitPay">
+                                            <li>
+                                                <span>출금가능액</span>
+                                                <em>1,000,000원</em>
+                                            </li>
+                                            <li>
+                                                <span>1일이체잔여한도</span>
+                                                <em class="point">300,000원</em>
+                                            </li>
+                                        </ul>
+									</td>
+								</tr>
+                                <tr>
+                                    <th scope="row">출금계좌 비밀번호</th>
+                                    <td>
+                                        <div class="formWrap">
+                                            <input type="password" value="" class="w300" data-placeholder="입력해주세요"><!--2021-02-08 input type password로 수정-->
+                                            <div class="inpArea">
+                                                <input type="checkbox" id="chk1" checked="">
+                                                <label for="chk1">마우스로 입력</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="contTit mt50">입금계좌번호</h3>
+                    <div class="tableWrap mt20">
+                        <table summary="">
+                            <caption></caption>
+                            <colgroup>
+                                <col width="200px;">
+                                <col width="auto;">
+                            </colgroup>
+                            <tbody>
+								<tr>
+                                    <th scope="row">입금계좌번호</th>
+									<td>
+										<select class="selbox w300">
+                                            <option value="" selected="selected">계좌를 선택해 주세요.</option>
+                                            <option value="">계좌를 선택해 주세요.</option>
+                                        </select>
+									</td>
+								</tr>
+                                <tr>
+                                    <th scope="row">부담금입력</th>
+                                    <td>
+                                        <div class="inpArea">
+                                            <input type="text" class="w300" data-placeholder="금액을 입력하세요.">
+                                            <span class="unit">원</span>
+                                        </div> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">수취인 통장 표시내용</th>
+                                    <td>
+                                        <div class="inpArea">
+                                            <input type="text" value="" class="w300" data-placeholder="입력해주세요">
+                                        </div> 
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <ul class="notiList sm mt10">
+                        <li>받는 분 통장에 표시할 내용 (10자 이내) 입력하지 않을 경우 출금계좌 예금주로 표시됩니다. </li>
+                    </ul>
+
+                    <div class="btnWrap mt60">
+						<a href="javascript:;" role="button" class="btn bgYellow" title="다음페이지로 이동">확인</a>
+					</div>
+				</div>
+				<!--// view area -->
+
+                
+                <!--// 컨텐츠 내용 -->
+            </div>
+            <!--// container -->
+        </div>
+        <!--// containerWrap -->
+
+        <!-- footer -->
+        <div class="footerWrap">
+			<script type="text/javascript" src="../../assets/js2.0/ui.footer.js" charset="utf-8"></script>
+        </div>
+        <!-- footer -->
+    </div>
+
+    <!-- layer popup : 출금가능금액 (720x519) -->
+	 <div class="layer withdrawPossiLayer">
+        <a href="javascript: uiCommon.layer.close('withdrawPossiLayer');" class="popClose"><span class="blind">팝업 닫기</span></a>
+        <h4 class="popTitle">출금가능금액</h4>
+        <!-- popContent -->
+        <div class="popCont">
+			<div class="tableWrap mt20">
+                <table summary="">
+                    <caption></caption>
+                    <colgroup>
+                        <col width="200px;">
+                        <col width="460px">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">출금가능금액</th>
+                            <td>1,000,000,000원</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">계좌잔액</th>
+                            <td>1,000,000,000원</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1일이체한도</th>
+                            <td>1,000,000,000원</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1일이체잔여한도</th>
+                            <td>50,000,000원</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1회이체한도</th>
+                            <td>1,000,000원</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+			<div class="btnWrap small">
+				<a href="javascript:;" role="button" class="btn bgYellow" title="확인">확인</a>
+			</div>
+		</div>
+        <!--// popCont -->
+    </div>
+    <!--// layer popup -->
+</body>
+</html>

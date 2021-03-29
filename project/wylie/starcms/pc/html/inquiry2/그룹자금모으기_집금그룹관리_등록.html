@@ -1,0 +1,471 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/jquery-ui-1.8.16.css" />
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/osite/cms_base.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.common.css" />    
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.style.css" />
+    
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-1.6.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-ui-1.8.16.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery_bgiframe_min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery.validity.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mCustomScrollbar.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/ui.common.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="navSkip"><a href="#containerWrap">본문으로 바로가기</a></div>
+        <!-- header -->
+        <div class="headerWrap">            
+			<script type="text/javascript" src="../../assets/js2.0/ui.header.js" charset="utf-8"></script>
+        </div>
+        <!--// header -->
+
+        <!-- containerWrap -->
+        <div id="containerWrap" role="main">
+            <div id="container">
+                <!-- 컨텐츠 내용 -->
+
+                <div class="location">
+                    <span class="blind">페이지 위치</span>
+                    <ul>
+                        <li><a href="javascript:;">Star CMS</a></li>
+                        <li><a href="javascript:;">조회/자금모으기</a></li>
+                        <li><a href="javascript:;">통합자금관리</a></li>
+                        <li><a href="javascript:;">그룹자금모으기</a></li>
+                        <li class="curr">자금모으기그룹관리</li>
+                    </ul>
+                </div>
+                
+                <div class="pageTop">
+                    <h2 class="pageTit">그룹자금모으기</h2>
+                    <ol class="stepProcess">
+						<!--// 활성화시 li에 on 클래스 추가 - 완료된 스탭에는 li에 compleate 클래스 추가 -->
+						<li class="on compleate">
+							<i>01</i>
+							<span>정보입력</span>
+						</li>
+						<li class="">
+							<i>02</i>
+							<span>등록완료</span>
+						</li>
+					</ol>
+                </div>
+
+                <!-- page tab -->
+                <ul class="pageTab" role="tablist">
+                    <li><a href="javascript:;" class="on">자금모으기그룹관리</a></li>
+                    <li><a href="javascript:;">자금모으기</a></li>
+                    <li><a href="javascript:;">처리결과조회</a></li>
+                </ul>
+                <!--// page tab -->
+
+				<!-- view area 개발자 분들은 이부분 부터 쓰시면 됩니다. -->
+				<div class="viewArea inquiryAccount">
+
+					<!-- notiBox -->
+					<div class="notiBox">
+						<!-- accordionWrap -->
+						<dl class="accordionWrap">
+							<dt><a href="javascript:;">유의사항</a></dt>
+							<dd>
+								<div>
+									<!-- notiList -->
+									<ul class="notiList">
+                                        <li>고객님께서 원하시는 자금모으기 방식을 선택하여 등록 및 수정이 가능합니다.</li>
+                                        <li>다른은행 중간계좌 사용시 각 금융기관별 대표계좌를 선택하여 중간 자금모으기을 한 후 국민은행 입금계좌로 최종자금모으기가 실행됩니다.</li>
+                                        <li>다른은행 중간계좌 미사용 시 선택하신 출금계좌에서 국민은행 입금계좌로 바로 자금모으기가 실행됩니다.</li>
+                                        <li>입금계좌 메모 시 "자금모으기_" 뒤에 입력하신 내용이 표시됩니다.</li>
+									</ul>
+									<!--// notiList -->
+								</div>
+							</dd>
+						</dl>
+						<!--// accordionWrap -->
+					</div>
+                    <!--// notiBox -->
+
+                    <div class="accountInfoList typeBold mt50">
+						<dl class="list">
+							<dt>자금모으기 그룹코드</dt>
+							<dd class="full">08720004</dd>
+						</dl>
+                    </div>
+                    
+                    <div class="tableWrap mt50">
+                        <table summary="">
+                            <caption></caption>
+                            <colgroup>
+                                <col width="200px;">
+                                <col width="340px;">
+                                <col width="200px;">
+                                <col width="340px;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">자금모으기 그룹명</th>
+                                    <td>
+                                        <div class="inpArea">
+                                            <input type="text" class="w300" value="" data-placeholder="자금모으기그룹명을 입력하세요.">
+                                        </div>
+                                    </td>
+                                    <th scope="row">입금계좌</th>
+                                    <td>
+                                        <select class="selbox w300">
+                                            <option value="" selected="selected">선택하세요.</option>
+                                            <option value="">텍스트</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">입금계좌메모</th>
+                                    <td colspan="3">
+										<div class="formWrap">
+											<input type="password" class="w300" id="form03" value="" placeholder="메모를 입력해 주세요.">
+										</div>
+										<p class="infoTxt">입금계좌메모 미입력시 "자금모으기_출금계좌 예금주명"으로 표기됩니다.</p>
+									</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">다른은행 중간계좌</th>
+                                    <td colspan="3">
+                                        <ul class="formList inlineB">
+                                            <li>
+                                                <input type="radio" id="inquiry01" name="inquiry">
+                                                <label for="inquiry01">미사용</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="inquiry02" name="inquiry">
+                                                <label for="inquiry02">사용</label>
+                                            </li>
+                                        </ul>
+                                        <a href="javascript:uiCommon.layer.open('groupCollectionAccount');" role="button" class="sbtn">다른은행 중간계좌선택</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="inqBtn mt80">
+                        <div class="floatL">
+                            <p class="idx">총 2건 (KB국민은행 1, 다른은행 1)</p>
+                        </div>
+						<div class="floatR">
+							<a href="javascript:uiCommon.layer.open('groupWithdrawAccountSelect');" role="button" class="sbtn small"><i class="icon withdrawalAccountSelect"></i>출금계좌선택</a>
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon del"></i>삭제</a>
+						</div>
+                    </div>
+                    
+                    <div class="tableWrap type02">
+						<table summary="">
+							<caption></caption>
+							<colgroup>
+								<col width="64px;">
+								<col width="136px;">
+								<col width="90px;">
+								<col width="190px;"> <!--// 2021-02-25 수정 -->
+                                <col width="130px;">
+                                <col width="170px;"> <!--// 2021-02-25 수정 -->
+								<col width="190px;">
+								<col width="110px;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col"><input type="checkbox" id="" title="전체선택"></th>
+									<th scope="col">사업자명</th>
+									<th scope="col">금융기관</th>
+									<th scope="col">출금계좌</th>
+                                    <th scope="col">자금모으기방식</th>
+                                    <th scope="col">금액(원)</th>
+                                    <th scope="col">출금계좌메모</th>
+                                    <th scope="col">중간계좌</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="8">
+										<!-- 데이터 없을 경우 -->
+										<div class="dataNone">
+											<i class="icon"></i>
+											<p>조회하실 내역이 없습니다.</p>
+										</div>
+										<!--// 데이터 없을 경우 -->
+									</td>
+                                </tr>
+								<tr  class="pdLR10">
+									<td><input type="checkbox" id="" title="1번재 거래 내역 선택"></td>
+									<td>(주)국민산업2</td>
+                                    <td>국민</td>
+                                    <td>000-00-000000</td>
+                                    <td>
+                                        <select class="selbox">
+                                            <option value="" selected="selected">정액식</option>
+                                            <option value="">전액출금</option>
+                                            <option value="">비율</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input type="text" value="" data-placeholder="금액입력">
+                                    </td>
+                                    <td>
+                                        <input type="text" value="" data-placeholder="메모입력">
+                                    </td>
+                                    <td>설정</td>
+                                </tr>
+                                <tr  class="pdLR10">
+									<td><input type="checkbox" id="" title="2번재 거래 내역 선택"></td>
+									<td>(주)국민산업2</td>
+                                    <td>하나</td>
+                                    <td>000-00-000000</td>
+                                    <td>
+                                        <select class="selbox">
+                                            <option value="">정액식</option>
+                                            <option value="" selected="selected">전액출금</option>
+                                            <option value="">비율</option>
+                                        </select>
+                                    </td>
+                                    <td>전액</td>
+                                    <td>
+                                        <input type="text" value="" data-placeholder="메모입력">
+                                    </td>
+                                    <td>설정</td>
+								</tr>
+                                <tr  class="pdLR10">
+									<td><input type="checkbox" id="" title="2번재 거래 내역 선택"></td>
+									<td>(주)국민산업2</td>
+                                    <td>하나</td>
+                                    <td>000-00-000000</td>
+                                    <td>
+                                        <select class="selbox">
+                                            <option value="">정액식</option>
+                                            <option value="">전액출금</option>
+                                            <option value="" selected="selected">비율</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <!-- 2021-02-25 추가 : 비율 일 떄 -->
+                                        <div class="formUnitBox">
+                                            <select class="selbox">
+                                                <option>선택하세요.</option>
+                                                <option></option>
+                                                <option></option>
+                                            </select>
+                                            <span class="unit">%</span>
+                                        </div>
+                                        <!--// 2021-02-25 추가 : 비율 일 떄 -->
+                                    </td>
+                                    <td>
+                                        <input type="text" value="" data-placeholder="메모입력">
+                                    </td>
+                                    <td>설정</td>
+								</tr>
+							</tbody>
+						</table>                        
+					</div>
+
+                    <ul class="notiList sm mt10">
+                        <li>자금모으기 방식 - 전액출금 : 전액 전체 출금 / 정액식 : 입력 금액 출금 / 잔액식 : 입력 금액을 제외한 잔액 출금 / 비율 : 잔액의 입력 비율만   출금</li>
+                    </ul>
+                    
+                    <div class="btnWrap mt60">
+                        <a href="javascript:;" role="button" class="btn bgYellow" title="확인">확인</a>
+                        <a href="javascript:;" role="button" class="btn bgGray" title="취소">취소</a>
+					</div>
+				</div>
+				<!--// view area -->
+                
+                <!--// 컨텐츠 내용 -->
+            </div>
+            <!--// container -->
+        </div>
+        <!--// containerWrap -->
+
+        <!-- footer -->
+        <div class="footerWrap">
+			<script type="text/javascript" src="../../assets/js2.0/ui.footer.js" charset="utf-8"></script>
+        </div>
+        <!-- footer -->
+	</div>
+	
+	<!-- 집단그룹 출금계좌계좌 팝업 (720x883) -->
+	<div class="layer groupWithdrawAccountSelect" >
+		<a href="javascript: uiCommon.layer.close('groupWithdrawAccountSelect');" class="popClose"><span class="blind">팝업 닫기</span></a>
+        <h4 class="popTitle">출금계좌상세</h4>
+		<!-- popContent -->
+		<div class="popCont">
+
+            <div class="tableWrap">
+                <table summary="">
+                    <caption></caption>
+                    <colgroup>
+                        <col width="200px;">
+                        <col width="auto;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">사업자명</th>
+                            <td>
+                                <select class="selbox w300">
+                                    <option value="" selected="selected">전체</option>
+                                    <option value="">홍길동</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="btnWrap small">
+                <a href="javascript:;" role="button" class="btn bgWhite">조회</a>
+            </div>
+
+            <div class="inqBtn mt50">
+                <div class="floatL">
+                    <p class="idx">총 4건</p>
+                </div>
+            </div>
+
+            <div class="tableWrap type02">
+                <table summary="">
+                    <caption></caption>
+                    <colgroup>
+                        <col width="64px;">
+                        <col width="200px;">
+                        <col width="150px;">
+                        <col width="246px;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col"><input type="checkbox" id="" title="전체선택"></th>
+                            <th scope="col">사업자명</th>
+                            <th scope="col">은행</th>
+                            <th scope="col">계좌번호</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="4">
+                                <!-- 데이터 없을 경우 -->
+                                <div class="dataNone">
+                                    <i class="icon"></i>
+                                    <p>조회하실 내역이 없습니다.</p>
+                                </div>
+                                <!--// 데이터 없을 경우 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" id="" title="1번재 거래 내역 선택"></td>
+                            <td>(주)국민산업</td>
+                            <td>국민은행</td>
+                            <td>000-00-000000</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" id="" title="2번재 거래 내역 선택"></td>
+                            <td>(주)국민산업</td>
+                            <td>국민은행</td>
+                            <td>000-00-000000</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" id="" title="3번재 거래 내역 선택"></td>
+                            <td>(주)국민산업</td>
+                            <td>국민은행</td>
+                            <td>000-00-000000</td>
+                        </tr>
+
+                    </tbody>
+                </table>                        
+            </div>
+
+            <div class="btnWrap small">
+				<a href="javascript:;" role="button" class="btn bgYellow">등록</a>			
+			</div>
+		</div>
+		<!--// popCont -->
+	</div>
+	<!--// 집단그룹 출금계좌계좌 팝업 -->
+    
+    <!-- 집단그룹 중간계좌선택 팝업 (720x830) -->
+	<div class="layer groupCollectionAccount" >
+		<a href="javascript: uiCommon.layer.close('groupCollectionAccount');" class="popClose"><span class="blind">팝업 닫기</span></a>
+        <h4 class="popTitle">다른은행 중간계좌선택</h4>
+		<!-- popContent -->
+		<div class="popCont">
+
+            <div class="compleateBox">
+                <div class="notiBox">
+                    <ul class="notiList">
+                        <li>다른은행 중간계좌로 사용할 각 금융기관별 대표계좌를 선택하여 등록합니다.</li>
+                        <li>사업자별로 금융기관 1개씩 중간계좌를 선택할 수 있습니다.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="inqBtn mt50">
+                <div class="floatL">
+                    <p class="idx">총 4건</p>
+                </div>
+            </div>
+
+            <div class="tableWrap type02">
+                <table summary="">
+                    <caption></caption>
+                    <colgroup>
+                        <col width="64px;">
+                        <col width="290px;">
+                        <col width="306px;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col"><input type="checkbox" id="" title="전체선택"></th>
+                            <th scope="col">은행</th>
+                            <th scope="col">계좌번호</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="4">
+                                <!-- 데이터 없을 경우 -->
+                                <div class="dataNone">
+                                    <i class="icon"></i>
+                                    <p>조회하실 내역이 없습니다.</p>
+                                </div>
+                                <!--// 데이터 없을 경우 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" id="" title="1번째 항목 선택"></td>
+                            <td>국민은행</td>
+                            <td>000-00-000000</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" id="" title="2번째 항목 선택"></td>
+                            <td>국민은행</td>
+                            <td>000-00-000000</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" id="" title="3번째 항목 선택"></td>
+                            <td>국민은행</td>
+                            <td>000-00-000000</td>
+                        </tr>
+
+                    </tbody>
+                </table>                        
+            </div>
+
+            <div class="btnWrap small">
+				<a href="javascript:;" role="button" class="btn bgYellow">확인</a>			
+			</div>
+		</div>
+		<!--// popCont -->
+	</div>
+	<!--// 집단그룹 중간계좌선택 팝업 -->
+
+</body>
+</html>

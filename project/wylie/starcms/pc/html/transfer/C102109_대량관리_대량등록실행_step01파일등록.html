@@ -1,0 +1,817 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/jquery-ui-1.8.16.css" />
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/osite/cms_base.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.common.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.style.css" />
+    
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-1.6.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-ui-1.8.16.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery_bgiframe_min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery.validity.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mCustomScrollbar.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/ui.common.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="navSkip"><a href="#containerWrap">본문으로 바로가기</a></div>
+        <!-- header -->
+        <div class="headerWrap">            
+			<script type="text/javascript" src="../../assets/js2.0/ui.header.js" charset="utf-8"></script>
+        </div>
+        <!--// header -->
+
+        <!-- containerWrap -->
+        <div id="containerWrap" role="main" class="inquiry">
+            <div id="container">
+                <!-- 컨텐츠 내용 -->
+
+                <div class="location">
+                    <span class="blind">페이지 위치</span>
+                    <ul>
+                        <li><a href="javascript:;">Star CMS</a></li>
+                        <li><a href="javascript:;">이체/수납</a></li>
+                        <li><a href="javascript:;">외화가상계좌</a></li>
+                        <li><a href="javascript:;">계좌정보관리</a></li>
+                        <li><a href="javascript:;">대량관리</a></li>
+                        <li class="curr">대량등록실행</li>
+                    </ul>
+                </div>
+                
+                <div class="pageTop">
+                    <h2 class="pageTit">계좌정보관리</h2>
+                    <ol class="stepProcess">
+						<!--// 활성화시 li에 on 클래스 추가 - 완료된 스탭에는 li에 compleate 클래스 추가 -->
+						<li class="on">
+							<i>01</i>
+							<span>파일등록</span>
+						</li>
+						<li class="">
+							<i>02</i>
+							<span>등록완료</span>
+						</li>
+						<li>
+							<i>03</i>
+							<span>등록파일실행</span>
+                        </li>
+                        <li>
+							<i>04</i>
+							<span>등록파일실행완료</span>
+						</li>
+					</ol>
+				</div>
+
+                <!-- page tab -->
+                <ul class="pageTab" role="tablist">
+                    <li><a href="javascript:;">건별관리</a></li>
+                    <li><a href="javascript:;" class="on">대량관리</a></li>
+                </ul>
+
+				<!-- view area 개발자 분들은 이부분 부터 쓰시면 됩니다. -->
+				<div class="viewArea inquiryAccount">
+
+					<ul class="subTab" role="tablist"> 
+                        <li><a href="javascript:;" title="" aria-selected="false">대량등록안내</a></li>
+                        <li><a href="javascript:;" class="on" title="현재 탭" aria-selected="true">대량등록실행</a></li>
+                        <li><a href="javascript:;" title="" aria-selected="false">처리결과조회</a></li>
+                    </ul>
+
+					<!-- noti box -->
+					<div class="notiBox">
+                        <!-- accordionWrap -->
+                        <dl class="accordionWrap">
+                            <dt role="presentation"><a href="javascript:;" class="trigger" title="상세내용 열림" role="button">유의사항</a></dt>
+                            <dd>
+                                <div>
+                                    <!-- notiList -->
+                                    <ul class="notiList">
+                                        <li>가상계좌별 정보를 대량으로 등록/변경/초기화 하실 수 있습니다.</li>
+                                        <li>[샘플파일 다운로드]를 클릭해 파일을 다운로드 하신 후, 등록할 정보를 편집하십시오.</li>
+                                        <li>[파일열기]로 등록할 엑셀파일을 선택합니다.</li>
+                                        <li>[처리구분]에서 업무를 선택한 후 [파일등록]을 클릭하시기 바랍니다.</li>
+                                        <li>[계좌정보 초기화]를 하시는 경우, 기존 가상계좌번호에 입력하신 정보는 삭제되므로 유의하시기 바랍니다.</li>
+                                        <li>회원사ID와 고객명 정보가 등록된 정보와 일치하지 않을 경우, 계좌정보 등록이 실행되지 않습니다.</li>
+                                        <li>착오송금을 방지하기 위하여 가상계좌의 고객명(입금 시 보여지는 가상계좌 수취인명)은 가상계좌 발급업체명이 반드시 포함되어야하며, <br>
+                                            업체명이 미포함된 가상계좌 고객명으로 계속 거래 시 가상계좌 서비스 이용이 중지될 수 있습니다.</li>
+                                    </ul>
+                                    <!--// notiList -->
+                                </div>
+                            </dd>
+                        </dl>
+						<!--// accordionWrap -->
+					</div>
+					<!--// noti box -->
+
+                    <!--grayBorderBoxList-->
+                    <div class="grayBorderBoxList mt20">
+                        <div class="listHeader">
+                            <h5 class="tit">파일작성 방법</h5>
+                        </div>
+                        <div class="listContainer">
+                            <ul class="notiList">
+                                <li>
+                                    고객명 (파일 작성 시 본인의 고객명)
+                                    <div class="cellWrap">
+                                        <h5>- 업체명만 표시</h5>
+                                        <div class="cellForm">
+                                            <input type="text" id="item01" class="w300" data-placeholder="사업자명" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="cellWrap">
+                                        <h5>- 업체명 + 추가입력</h5>
+                                        <div class="cellForm">
+                                            <input type="text" id="item01" class="w300" data-placeholder="사업자명" disabled>
+                                            <span class="unit">-</span>
+                                            <input type="text" id="item01" class="w300" data-placeholder=" 추가입력" disabled>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    가상계좌로 입금시 보여지는 가상계좌 수취인명 등록을 위한 고객명이며 업체명만 표시 또는 업체명+추가입력 선택이 가능합니다. <br>
+                                    (추가입력을 포함한 전체 고객명은 한글 15자, 영문/숫자 30자 이내 가능)
+                                </li>
+                                <li>
+                                    파일 등록 시 고객명은 자동 생선된 고객명과 반드시 일치하여야 하며, 기 등록된 고객명이 업체명을 포함하지 않았을 경우에는 자동생성된 고객명을 포함하여 <br> 변경등록 하여야 합니다.
+                                </li>
+                            </ul>
+                            <div class="tar mt10">
+                                <a href="javascript:;" role="button" class="sbtn small"><i class="icon userlookup"></i>회원사 ID 조회 바로가기</a>
+                                <a href="javascript:;" role="button" class="sbtn small"><i class="icon download"></i>샘플파일 다운로드</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//grayBorderBoxList-->
+                    
+                    <div class="inqBtn mt50">
+                        <div class="floatL">
+                            <select class="selbox round">
+                                <option value="" selected="selected">계좌정보 신규등록</option>
+                                <option value="">텍스트</option>
+                            </select>
+                        </div>
+                        <div class="floatR mt10">
+                            <a href="javascript:;" role="button" class="sbtn small"><i class="icon payDetail"></i>파일열기</a>
+                            <a href="javascript:uiCommon.layer.open('recentHistoryGet');" role="button" class="sbtn small"><i class="icon history"></i>최근내역 열기</a>
+                        </div>
+                    </div>
+
+                    <div class="tableWrap">
+                        <table summary="">
+                            <caption></caption>
+                            <colgroup>
+                                <col width="200px;">
+                                <col width="auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">파일열기</th>
+                                    <td>
+                                        <div class="fileAttach">
+                                            <div class="fileUpload">
+                                                <input type="text" class="upload_name w300" value="" disabled="disabled">
+                                                <label for="inpfile" class="sbtn bgWhite">찾아보기</label> 
+                                                <input type="file" id="inpfile"> 
+                                            </div>
+                                            <a href="javascript:;" role="button" class="sbtn">열기</a>
+                                            <a href="javascript:;" role="button" class="sbtn">취소</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="tableWrap mt20">
+                        <table summary="">
+                            <caption></caption>
+                            <colgroup>
+                                <col width="200px;">
+                                <col width="340px;">
+                                <col width="200px;">
+                                <col width="340px;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">총 건수</th>
+                                    <td>0 건</td>
+                                    <th scope="row">0 건</th>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="inqBtn mt50">
+                        <div class="floatR mt10">
+                            <a href="javascript:uiCommon.layer.open('inputLayer');" role="button" class="sbtn small"><i class="icon companyEnroll"></i>입력</a>
+                            <a href="javascript:;" role="button" class="sbtn small"><i class="icon fixed"></i>수정</a>
+                            <a href="javascript:;" role="button" class="sbtn small"><i class="icon search"></i>찾기</a>
+                            <a href="javascript:;" role="button" class="sbtn small"><i class="icon del"></i>삭제</a>
+                        </div>
+                    </div>
+
+                    <div class="tableWrap">
+                        <table summary="">
+                            <caption></caption>
+                            <colgroup>
+                                <col width="200px;">
+                                <col width="auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">검색어</th>
+                                    <td>
+                                        <div class="fileAttach">
+                                            <div class="fileUpload">
+                                                <input type="text" class="upload_name w300" value="" >
+                                                <label for="inpfile" class="sbtn bgWhite">검색</label> 
+                                                <input type="file" id="inpfile"> 
+                                            </div>
+                                            <a href="javascript:;" role="button" class="sbtn">닫기</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="inqBtn mt50">
+                        <div class="floatR">
+                            <a href="javascript:;" role="button" class="sbtn small"><i class="icon memo"></i>메모장</a>
+                            <a href="javascript:;" role="button" class="sbtn small"><i class="icon print"></i>인쇄</a>
+                            <a href="javascript:;" role="button" class="sbtn small"><i class="icon excel"></i>엑셀</a>
+                        </div>
+                    </div>
+
+                    <div class="tableWrap type02" scrolltablexy="">
+                        <table summary="" class="scrollTable">
+                            <caption></caption>
+                            <colgroup>
+                                <col width="60px;">
+                                <col width="64px;">
+                                <col width="240px;">
+                                <col width="200px;">
+                                <col width="150px;">
+                                <col width="200px;">
+                                <col width="200px;">
+                                <col width="180px;">
+                                <col width="180px;">
+                                <col width="180px;">
+                                <col width="200px;">
+                                <col width="200px;">
+                                <col width="200px;">
+                                <col width="200px;">
+                                <col width="180px;">
+                                <col width="150px;">
+                                <col width="230px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">No </th>
+                                    <th scope="col">선택</th>
+                                    <th scope="col">가상계좌번호</th>
+                                    <th scope="col">회원사ID</th>
+                                    <th scope="col">고객명</th>
+                                    <th scope="col">고객명추가입력</th>
+                                    <th scope="col">등록고유번호</th>
+                                    <th scope="col">입금가능여부</th>
+                                    <th scope="col">입금가능기간</th>
+                                    <th scope="col">입금가능시작일</th>
+                                    <th scope="col">입금가능종료일</th>
+                                    <th scope="col">입금가능시간</th>
+                                    <th scope="col">입금가능시작시간</th>
+                                    <th scope="col">입금가능종료시간</th>
+                                    <th scope="col">입금가능횟수</th>
+                                    <th scope="col">입금구분</th>
+                                    <th scope="col">입금금액</th>
+                                </tr> 
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="7">
+                                        <!-- 데이터 없을 경우 -->
+                                        <div class="dataNone">
+                                            <i class="icon"></i>
+                                            <p>조회하실 내역이 없습니다.</p>
+                                        </div>
+                                        <!--// 데이터 없을 경우 -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <input type="checkbox" id="" title="1번째 파일 선택">
+                                    </td>
+                                    <td><input type="text" class="w200" data-placeholder="가상계좌번호"></td>
+                                    <td><input type="text" class="w170" data-placeholder="회원사"></td>
+                                    <td><input type="text" class="w100" data-placeholder="고객명"></td>
+                                    <td><input type="text" class="w170" data-placeholder="고객명추가입력"></td>
+                                    <td><input type="text" class="w170" data-placeholder="등록고유번호"></td>
+                                    <td><input type="text" class="w170" data-placeholder="입금가능여부"></td>
+                                    <td><input type="text" class="w170" data-placeholder="입금가능기간"></td>
+                                    <td><input type="text" class="w170" data-placeholder="입금가능시작인"></td>
+                                    <td><input type="text" class="w170" data-placeholder="입금가능종료일"></td>
+                                    <td><input type="text" class="w170" data-placeholder="입금가능시간"></td>
+                                    <td><input type="text" class="w170" data-placeholder="입금가능시작시간"></td>
+                                    <td><input type="text" class="w170" data-placeholder="입금가능종료시간"></td>
+                                    <td><input type="text" class="w170" data-placeholder="입금가능횟수"></td>
+                                    <td><input type="text" class="w100" data-placeholder="입금구분"></td>
+                                    <td><input type="text" class="w200" data-placeholder="입금금액"></td>
+                                </tr>
+                            </tbody>
+                        </table>                        
+                    </div>
+
+
+					<div class="btnWrap mt60">
+                        <a href="javascript:;" role="button" class="btn bgYellow" title="파일등록">파일등록</a>
+                        <a href="javascript:;" role="button" class="btn bgGray" title="등록파일조회">등록파일조회</a>
+					</div>
+				</div>
+
+                <!--// view area -->
+                
+                <!--// 컨텐츠 내용 -->
+            </div>
+            <!--// container -->
+        </div>
+        <!--// containerWrap -->
+
+        <!-- footer -->
+        <div class="footerWrap">
+			<script type="text/javascript" src="../../assets/js2.0/ui.footer.js" charset="utf-8"></script>
+        </div>
+        <!-- footer -->
+    </div>
+
+    <!--항목 편집 layer popup (480x519) -->
+	<div class="layer itemSelectLayer">
+		<a href="javascript: uiCommon.layer.close('itemSelectLayer');" class="popClose"><span class="blind">팝업 닫기</span></a>
+		<h4 class="popTitle">편집</h4>
+		<p class="popDesc">
+			원하는 항목 열만 선택하여 조회하실 수 있습니다.<br />
+			편집한 설정값은 저장되지 않습니다.		
+		</p>
+		<!-- popContent -->
+		<div class="popCont">
+			<ul class="itemSelectList">
+				<li>
+					<input type="checkbox" id="checkbox01" checked />
+					<label for="checkbox01">No</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox02" checked />
+					<label for="checkbox02">부서번호</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox03" checked />
+					<label for="checkbox03">부서명<label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox04" checked />
+					<label for="checkbox04">카드번호</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox05" checked />
+					<label for="checkbox05">결제일</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox06" checked />
+					<label for="checkbox06">원금</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox07" checked />
+					<label for="checkbox07">수수료</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox08" checked />
+					<label for="checkbox08">연체금액</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox09" checked />
+					<label for="checkbox09">결제예정금액</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox10" checked />
+					<label for="checkbox10">잔여금액</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox01" checked />
+					<label for="checkbox01">전체</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox02" checked />
+					<label for="checkbox02">부서번호</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox03" checked />
+					<label for="checkbox03">부서명<label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox04" checked />
+					<label for="checkbox04">카드번호</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox05" checked />
+					<label for="checkbox05">결제일</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox06" checked />
+					<label for="checkbox06">원금</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox07" checked />
+					<label for="checkbox07">수수료</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox08" checked />
+					<label for="checkbox08">연체금액</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox09" checked />
+					<label for="checkbox09">결제예정금액</label>
+				</li>
+				<li>
+					<input type="checkbox" id="checkbox10" checked />
+					<label for="checkbox10">잔여금액</label>
+				</li>
+			</ul>
+			<ul class="notiList sm">
+				<li>전체 항목 선택 시, 일부 인쇄항목이 표시되지 않을 수 있습니다.</li>
+			</ul>
+
+			<div class="btnWrap small">
+				<a href="javascript:;" role="button" class="btn bgYellow">확인</a>			
+				<a href="javascript:;" role="button" class="btn bgGray">초기화</a>			
+			</div>
+		</div>
+		<!--// popCont -->
+	</div>
+	<!--// 항목 편집 layer popup -->
+
+	<!-- 검색 layer popup (480x251) -->
+	<div class="layer inquirySearchLayer">
+		<a href="javascript: uiCommon.layer.close('inquirySearchLayer');" class="popClose"><span class="blind">팝업 닫기</span></a>
+		<h4 class="popTitle">검색</h4>
+		<p class="popDesc">
+			입력하신 키워드가 포함된 행을 찾아드립니다.
+		</p>
+		<!-- popContent -->
+		<div class="popCont">
+			<div class="inputField">
+				<input type="text" value="" data-placeholder="찾을 내용 입력">
+				<a href="javascript:;" role="button" class="sbtn">검색</a>
+			</div>
+			<div class="iconBtn">
+				<a href="javascript:;" role="button" class="sbtn small"><i class="icon prev"></i>이전</a>
+				<a href="javascript:;" role="button" class="sbtn small">다음<i class="icon next"></i></a>
+			</div>
+		</div>
+		<!--// popCont -->
+	</div>
+	<!--// 검색 layer popup -->
+
+	<!-- 필터 layer popup (480x237) -->
+	<div class="layer inquiryFilter">
+		<a href="javascript: uiCommon.layer.close('inquiryFilter');" class="popClose"><span class="blind">팝업 닫기</span></a>
+		<h4 class="popTitle">필터</h4>
+		<p class="popDesc">
+			입력하신 키워드가 포함된 행만 추출하여<br />
+			확인하실 수 있습니다.
+		</p>
+		<!-- popContent -->
+		<div class="popCont">
+			<div class="inputField">
+				<input type="text" value="" data-placeholder="찾을 내용 입력">
+				<a href="javascript:;" role="button" class="sbtn">필터</a>
+			</div>
+		</div>
+		<!--// popCont -->
+	</div>
+	<!--// 필터 layer popup -->
+
+    <!-- 최신내역 가져오기 팝업 (1001x753) -->
+	<div class="layer recentHistoryGet">
+		<a href="javascript: uiCommon.layer.close('recentHistoryGet');" class="popClose"><span class="blind">팝업 닫기</span></a>
+        <h4 class="popTitle">최근내역 가져오기</h4>
+		<!-- popContent -->
+		<div class="popCont">
+
+            <div class="compleateBox">
+                <div class="notiBox">
+                    <ul class="notiList">
+                        <li>파일 편집기를 통해 작성하여 전송하신 최근의 파일이 다음과 같습니다.</li>
+                        <li>편집을 원하시는 파일을 선택한 후 아래의 [확인] 버튼을 클릭해 주십시오.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="inqBtn mt30">
+                <div class="floatR">
+                    <a href="javascript:;" role="button" class="sbtn small"><i class="icon memo"></i>메모장</a>
+                    <a href="javascript:;" role="button" class="sbtn small"><i class="icon print"></i>인쇄</a>
+                    <a href="javascript:;" role="button" class="sbtn small"><i class="icon excel"></i>엑셀</a>
+                </div>
+            </div>
+            <div class="tableWrap type02" >
+                <table summary="" class="scrollTable">
+                    <caption></caption>
+                    <colgroup>
+                        <col width="90px;">
+                        <col width="90px;">
+                        <col width="192px;">
+                        <col width="193px;">
+                        <col width="188px;">
+                        <col width="188px;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">선택</th>
+                            <th scope="col">처리완료일</th>
+                            <th scope="col">파일명</th>
+                            <th scope="col">등록요청건수</th>
+                            <th scope="col">정산건수</th>
+                        </tr> 
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="6">
+                                <!-- 데이터 없을 경우 -->
+                                <div class="dataNone">
+                                    <i class="icon"></i>
+                                    <p>조회하실 내역이 없습니다.</p>
+                                </div>
+                                <!--// 데이터 없을 경우 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <input type="checkbox" id="" title="1번째 파일 선택">
+                            </td>
+                            <td>2020.12.31</td>
+                            <td>파일명1</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>                        
+            </div>
+            <div class="tblBottom">
+                <div class="floatL">
+                    <a href="javascript:uiCommon.layer.close('recentHistoryGet'); uiCommon.layer.open('inquiryFilter');" role="button" class="sbtn small"><i class="icon filter"></i>필터</a>
+                    <a href="javascript:uiCommon.layer.close('recentHistoryGet'); uiCommon.layer.open('inquirySearchLayer');" role="button" class="sbtn small"><i class="icon search"></i>검색</a>
+                    <a href="javascript:uiCommon.layer.close('recentHistoryGet'); uiCommon.layer.open('itemSelectLayer');" role="button" class="sbtn small"><i class="icon edit"></i>편집</a>
+                </div>
+                <div class="floatR">
+                    <span class="pageIdx">10/100</span>
+                    <a href="javascript:;" role="button" class="sbtn small"><i class="icon more"></i>더불러오기</a>
+                </div>
+            </div>
+
+            <div class="btnWrap small">
+                <a href="javascript:;" role="button" class="btn bgYellow">확인</a>
+                <a href="javascript:;" role="button" class="btn bgGray">취소</a>
+			</div>
+		</div>
+		<!--// popCont -->
+	</div>
+    <!--// 최신내역 가져오기 팝업 -->
+    
+    <!-- 입력사항 팝업 (1017x720) -->
+	<div class="layer inputLayer mh" >
+		<a href="javascript: uiCommon.layer.close('inputLayer');" class="popClose"><span class="blind">팝업 닫기</span></a>
+        <h4 class="popTitle">입력사항</h4>
+		<!-- popContent -->
+		<div class="popCont">
+
+            <div class="tableWrap">
+                <table summary="">
+                    <caption></caption>
+                    <colgroup>
+                        <col width="200px;">
+                        <col width="740px;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">회원사</th>
+                            <td>
+                                회원사ID
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">고객명</th>
+                            <td>
+                                <div class="formOtherType01">
+                                    <ul class="formList">
+                                        <li>
+                                            <input type="radio" id="inquiry01" name="inquiry" checked="checked">
+                                            <label for="inquiry01">업체명만 표시</label>
+                                        </li>
+                                    </ul>
+                                    <input type="text" class="w200" data-placeholder="사업자명">
+                                </div>
+                                <div class="formOtherType01 mt20">
+                                    <ul class="formList">
+                                        <li>
+                                            <input type="radio" id="inquiry02" name="inquiry">
+                                            <label for="inquiry02">업체명 + 추가입력</label>
+                                        </li>
+                                    </ul>
+                                    <input type="text" class="w200" data-placeholder="사업자명" disabled="true">
+                                    <span>-</span>
+                                    <input type="text" class="w200" data-placeholder="추가입력" disabled="true">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">등록고유번호</th>
+                            <td>
+                                <input type="text" class="w300" data-placeholder="등록고유번호를 입력하세요.">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tableWrap mt30">
+                <table summary="">
+                    <caption></caption>
+                    <colgroup>
+                        <col width="200px;">
+                        <col width="740px;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">입금가능여부</th>
+                            <td>
+                                <ul class="formList">
+                                    <li>
+                                        <input type="radio" id="inquiry03" name="inquiry2" checked="">
+                                        <label for="inquiry03">입금가능</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="inquiry04" name="inquiry2">
+                                        <label for="inquiry04">입금불가</label>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">입금가능기간</th>
+                            <td>
+                                <ul class="formList">
+                                    <li>
+                                        <input type="radio" id="inquiry05" name="inquiry3" checked="">
+                                        <label for="inquiry05">미설정</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="inquiry06" name="inquiry3">
+                                        <label for="inquiry06">설정</label>
+                                    </li>
+                                </ul>
+                                <div class="dateInput mt20">
+                                    <div class="inpArea">
+                                        <input type="text" value="2020.12.11" data-placeholder="입력해주세요" class="isValue" disabled="">
+                                        <button type="button" class="btnIcon calendar"><span class="blind">날짜 선택</span></button> 
+                                    </div>
+                                    <span>~</span>
+                                    <div class="inpArea">
+                                        <input type="text" value="2020.12.11" data-placeholder="입력해주세요" class="isValue">
+                                        <button type="button" class="btnIcon calendar"><span class="blind">날짜 선택</span></button> 
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">입금가능시간</th>
+                            <td>
+                                <ul class="formList">
+                                    <li>
+                                        <input type="radio" id="inquiry07" name="inquiry4" checked="">
+                                        <label for="inquiry07">미설정</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="inquiry08" name="inquiry4">
+                                        <label for="inquiry08">설정</label>
+                                    </li>
+                                </ul>
+                                <div class="formOtherType02 mt20">
+                                    <select class="selbox" disabled="disabled">
+                                        <option value="" selected="selected">09</option>
+                                    </select>											
+                                    <em>시</em>
+                                    <select class="selbox" disabled="disabled">
+                                        <option value="" selected="selected">09</option>
+                                    </select>											
+                                    <em>분</em>
+                                    <span>~</span>
+                                    <select class="selbox" disabled="disabled">
+                                        <option value="" selected="selected">09</option>
+                                    </select>											
+                                    <em>시</em>
+                                    <select class="selbox" disabled="disabled">
+                                        <option value="" selected="selected">09</option>
+                                    </select>											
+                                    <em>분</em>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">입금가능횟수</th>
+                            <td>
+                                <div class="formOtherType03">
+                                    <ul class="formList">
+                                        <li>
+                                            <input type="radio" id="inquiry09" name="inquiry5" checked="">
+                                            <label for="inquiry09">미설정</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="inquiry10" name="inquiry5">
+                                            <label for="inquiry10">설정</label>
+                                        </li>
+                                    </ul>
+                                    <label for="input01" class="blind">입금가능횟수</label><input type="text" id="input01" class="w300" disabled="true">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">입금가능금액</th>
+                            <td>
+                                <div class="formOtherType03">
+                                    <ul class="formList">
+                                        <li>
+                                            <input type="radio" id="inquiry11" name="inquiry6" checked="">
+                                            <label for="inquiry11">미설정(자유입금)</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="inquiry12" name="inquiry6">
+                                            <label for="inquiry12">설정(정액입금)</label>
+                                        </li>
+                                    </ul>
+                                    <label for="input01" class="blind">설정(정액입금)</label><input type="text" id="input01" class="w300" disabled="true">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="btnWrap small">
+                <a href="javascript:;" role="button" class="btn bgYellow">확인</a>
+			</div>
+		</div>
+		<!--// popCont -->
+	</div>
+    <!--// 입력사항 팝업 -->
+    
+    <!-- 입력사항오류 팝업 (588x557) -->
+	<div class="layer fileInputError" >
+		<a href="javascript: uiCommon.layer.close('fileInputError');" class="popClose"><span class="blind">팝업 닫기</span></a>
+        <h4 class="popTitle">입력사항</h4>
+		<!-- popContent -->
+		<div class="popCont">
+            <div class="compleateBox">
+                <div class="notiBox">
+                    <!--처리구분이 계좌정보신규등록시 오류표시-->
+                    <ul class="notiList">
+                        <li>행의 처리구분이 계좌정보신규등록일 경우 가상계좌를 입력할 수 없습니다.</li>
+                        <li>행의 회원사ID가 없습니다. 회원사ID를 입력해주십시오.</li>
+                        <li>행의 회원사ID에는 특수문자를 입력할 수 없습니다. 회원사ID를 확인해 주십시오.</li>
+                        <li>행의 회원사ID는 5자리입니다. 회원사ID를 확인해 주세요.</li>
+                    </ul>
+                    <!--// 처리구분이 계좌정보신규등록시 오류표시-->
+
+                    <!--처리구분이 고객정보 수정/초기화 시 오류표시-->
+                    <ul class="notiList">
+                        <li>
+                            고객정보와 입금조건설정 모두 수정을 원하시는 경우 <br>
+                            처리구분 [고객정보수정+입금조건설정]을 선택하세요.
+                        </li>
+                        <li>처리구분이 [계좌정보초기화]인 경우 가상계좌번호, 정액금액 0를 입력하세요.</li>
+                    </ul>
+                    <!--//처리구분이 고객정보 수정/초기화 시 오류표시-->
+
+                    <!--처리구분이 고객정보수정+입금조건설정 시 오류표시-->
+                    <ul class="notiList">
+                        <li>행의 고객명에 업체명+추가입력인 경우, [(한)빈수빈반배] 입력해 주십시오.</li>
+                        <li>행의 고객명에 업체명만 표시할 경우, [(한)빈수빈반배] 입력해 주십시오.</li>
+                    </ul>
+                    <!--// 처리구분이 고객정보수정+입금조건설정 시 오류표시-->
+                </div>
+            </div>
+		</div>
+		<!--// popCont -->
+	</div>
+	<!--// 입력사항오류 팝업 -->
+
+</body>
+</html>
