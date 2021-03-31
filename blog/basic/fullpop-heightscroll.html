@@ -5,9 +5,14 @@
 <meta http-equiv="Content-Language" content="ko-KR">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="format-detection" content="telephone=no">
-<link href="../resources/style.css" media="screen" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <title>전체화면 팝업시 세로 스크롤 생기게</title>
 </head>
+<style>
+.ly_full{position:fixed;top:0;left:0;width:100%;height:100%;z-index:999}
+.scroll_wrap, .scroll{width:100%;height:100%}
+.scroll{overflow-y:scroll;-webkit-overflow-scrolling:touch}
+</style>
 <body>
 
 <div class="ly_full">
