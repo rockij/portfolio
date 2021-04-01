@@ -17,19 +17,40 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.2.3/ionicons.min.js"></script>
 <title></title>
 <style>
-/*
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Anonymous Pro', sans-serif;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Courier Prime', monospace;
-    font-family: 'Oleo Script', cursive;
+body{
     font-family: 'Open Sans', sans-serif;
-*/
+    display:flex;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    background-color:#3498db;
+    color:#fff;
+    padding:10px 20px;
+    font-size:80px;
+    font-weight:900;
+    animation: hinge 2s ease-in-out forwards;
+    transform-origin: top left;
+}
+@keyframes hinge{
+    20%, 60%{
+        transform: rotate(70deg);
+    }
+    40%, 80%{
+        transform: rotate(55deg);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(600px);
+        opacity: 0;
+    }
+}
 </style>
 </head>
 <body>
 
-<div class=""></div>
+<div class="box">Hinge Animation</div>
 
 <script>
 </script>
