@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.2.3/ionicons.min.js"></script>
+<title></title>
+<style>
+/*
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Anonymous Pro', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Courier Prime', monospace;
+    font-family: 'Oleo Script', cursive;
+    font-family: 'Open Sans', sans-serif;
+*/
+body{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#fff
+}
+.toggle-button{
+    position: relative;
+}
+.toggle-button input{
+    position: absolute;
+    width:0;height:0;opacity:0;
+}
+.toggle-button label{
+    display: inline-block;
+    padding:3px;
+    width:48px;
+    border-radius: 15px;
+    background-color:#eee;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+.toggle-button input:checked + label{
+    background-color:#2bcbba
+}
+.toggle-button .knobs{
+    display:block;
+    width:24px;
+    height:24px;
+    border-radius: 12px;
+    background-color:#fff;
+    transform: translateX(0);
+    transition: .3s ease-in-out;
+}
+.toggle-button input:checked + label > .knobs{
+    transform: translateX(24px);
+}
+.toggle-button input + label > .knobs::before,
+.toggle-button input + label > .knobs::after{
+    content:'';
+    position: absolute;
+    left:50%;
+    top:50%;
+    width:14px;
+    height:2px;
+    border-radius: 2px;
+    background-color:#2bcbba;
+    transition: .3s ease-in-out;
+}
+.toggle-button input + label > .knobs::before{
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.toggle-button input + label > .knobs::after{
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.toggle-button input:checked + label > .knobs::before{
+    width:10px;
+    transform: translate(-90%, -10%) rotate(225deg);
+}
+.toggle-button input:checked + label > .knobs::after{
+    width:12px;
+    transform: translate(-30%, -50%) rotate(-225deg);
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="toggle-button">
+        <input type="checkbox" id="checkbox-a">
+        <label for="checkbox-a"><span class="knobs"></span></label>
+    </div>
+</div>
+
+<script>
+</script>
+
+</body>
+</html>       
