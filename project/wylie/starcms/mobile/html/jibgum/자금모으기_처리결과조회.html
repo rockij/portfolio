@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/content.css" />
+    <script type="text/javascript" src="../../js/cms2.0/library/jquery_lib.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/cms2.0/common_ui.js" charset="utf-8"></script>
+
+    <!-- cms2.0 추가 -->
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/ui.style.css" />
+    <script type="text/javascript" src="../../js/cms2.0/swiper.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/cms2.0/ui.style.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content">
+            <!-- contInnerWrap -->
+            <div class="contInnerWrap spacePdt0"> <!--// 20212-03-11 spacePdt0 클래스 추가 --> <!--퍼블수정2021-03-11 클래스명 .spacePdb0 제거 -->
+
+                <!--퍼블수정2021-02-25 레이아웃 수정 -->
+                <div class="jibgeumForm">
+
+                    <!-- searchInqArea -->
+                    <!--퍼블수정2021-03-11 조회기간 설정 ui 수정 -->
+                    <div class="searchInqArea moreToggle typeFillter">
+                        <div class="btnWrap small">
+                            <div class="fillterData">
+                                <span>당일</span>
+                                <span>전체</span>
+                            </div>
+                            <a href="javascript:;" role="button" class="btn bgWhite02 btnToggle" title="영역 펼치기">검색필터<i class="icon upDown"></i></a>
+                        </div>
+
+                        <div class="toggleCont">
+                            <!-- tabRadio -->
+                            <ul class="tabRadio">
+                                <li>
+                                    <a href="javascript:;" class="active">당일</a> <!-- 선택된 태그에 클래스명 .active 추가 -->
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="">3일</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="">1주일</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="">1개월</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="">3개월</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="">6개월</a>
+                                </li>
+                            </ul>
+                            <!--// tabRadio -->
+
+                            <div class="formWrap date mt8">
+                                <div class="formBox dateInput">
+                                    <input type="text" value="2020.12.11">
+                                    <button type="button" class="btnCalendar"><span class="blind">날짜 선택</span></button>
+                                </div>
+                                <span class="dash">~</span>
+                                <div class="formBox dateInput">
+                                    <input type="text" value="2020.12.11">
+                                    <button type="button" class="btnCalendar"><span class="blind">날짜 선택</span></button>
+                                </div>
+                            </div>
+                            <div class="inpWrap type03">
+                                <!-- id와 for의 값은 꼭 동일하게 연결 요청 -->
+                                <ul>
+                                    <li>
+                                        <div class="inpBox">
+                                            <input type="radio" name="radio" id="radio04_1" checked>
+                                            <label for="radio04_1">
+                                                <span class="tit gray">전체</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inpBox">
+                                            <input type="radio" name="radio" id="radio04_2">
+                                            <label for="radio04_2">
+                                                <span class="tit gray">정상</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inpBox">
+                                            <input type="radio" name="radio" id="radio04_3">
+                                            <label for="radio04_3">
+                                                <span class="tit gray">오류</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inpBox">
+                                            <input type="radio" name="radio" id="radio04_4">
+                                            <label for="radio04_4">
+                                                <span class="tit gray">확인요망</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="btnWrap small2 mt16">
+                                <a href="javascript:;" role="button" class="btn bgYellow">조회</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 2021-03-11 조회기간 설정 ui 수정 -->
+                    <!--// searchInqArea -->
+
+                    <div class="bankInfoList boxType2">
+                        <p class="topDate">조회기간 : 2020.12.11 ~ 2021.12.11</p>
+                        <ul>
+                            <li>
+                                <span>총 건수</span>
+                                <em>2건</em>
+                            </li>
+                            <li>
+                                <span>총 이체금액</span>
+                                <em>200,000원</em>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //조회기간 -->
+                    <div class="checkListWrap">
+                        <!--퍼블수정2021-03-11 마크업삭제 
+                        <p class="listTopDate">2021.01.25</p>
+                        -->
+
+                        <ul>
+                            <li>
+                                <div class="banklst type">
+                                    <ul>
+                                        <li>
+                                            <p class="date">2020.01.25 09:36:47</p>
+                                            <div class="bInfo">
+                                                <img src="../../img/cms2.0/logo/BK0020.png" class="logo" alt="우리은행">
+                                                <!--퍼블수정2021-03-03 div.txt 영역 감싸기 -->
+                                                <div class="txt">
+                                                    <h6 class="sectTit">123-45-6789 국민</h6>
+                                                    <!--퍼블수정2021-03-03 삭제 
+                                                    <p>
+                                                        <span>(주)국민상사</span>
+                                                        <span>기업보통예금</span>
+                                                    </p> -->
+                                                </div>
+                                                <!--// 2021-03-03 div.txt 영역 감싸기 -->
+                                            </div>
+                                            <span class="accountStatus">정상</span> <!--퍼블수정2021-03-11 위치변경으로 인한 태그 추가 /  오류일 때 클래스명 .error 추가-->
+                                        </li>
+                                        <li class="price">이체금액<strong class="wo">100,000</strong>원</li>
+                                        <li class="infoset">
+                                            <ul class="accordionList">
+                                                <li>
+                                                    <a href="javascript:;" class="acc_title"> <!-- 디폴트 open일 경우 class="acc_open" 추가, span "메뉴숨기기"로 변경 필요  -->
+                                                        <b class="tit">이체정보</b>
+                                                        <!-- <b class="txt">실행완료</b> 2021-03-11 마크업위치수정으로 인한 삭제 -->
+                                                        <span class="blind">메뉴숨기기</span>
+                                                    </a>
+                                                    <div class="accContent msslstSet">
+                                                        <ul class="mlst">
+                                                            <li>
+                                                                <span>입금계좌</span>
+                                                                <strong>국민은행<br/>000000-00-000000</strong> <!--// 2021-03-12 br 태그 추가 -->
+                                                            </li>
+                                                            <li>
+                                                                <span>자금모으기 그룹명</span>
+                                                                <strong>원자재 자금모으기그룹01</strong>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- //copy -->
+                            <li>
+                                <div class="banklst type">
+                                    <ul>
+                                        <li>
+                                            <p class="date">2020.01.25 09:36:47</p>
+                                            <div class="bInfo">
+                                                <img src="../../img/cms2.0/logo/CD0301.png" class="logo" alt="우리은행">
+                                                <!--퍼블수정2021-03-03 div.txt 영역 감싸기 -->
+                                                <div class="txt">
+                                                    <h6 class="sectTit">123-45-6789 국민</h6>
+                                                    <!--퍼블수정2021-03-03 삭제 
+                                                    <p>
+                                                        <span>(주)국민상사</span>
+                                                        <span>기업보통예금</span>
+                                                    </p> -->
+                                                </div>
+                                                <!--// 2021-03-03 div.txt 영역 감싸기 -->                                            
+                                            </div>
+                                            <span class="accountStatus">정상</span> <!--퍼블수정2021-03-11 위치변경으로 인한 태그 추가 /  오류일 때 클래스명 .error 추가-->
+                                        </li>
+                                        <li class="price">이체금액<strong class="wo">100,000</strong>원</li>
+                                        <li class="infoset">
+                                            <ul class="accordionList">
+                                                <li>
+                                                    <a href="javascript:;" class="acc_title"> <!-- 디폴트 open일 경우 class="acc_open" 추가, span "메뉴숨기기"로 변경 필요  -->
+                                                        <b class="tit">이체정보</b>
+                                                        <!-- <b class="txt">실행완료</b> 2021-03-11 마크업위치수정으로 인한 삭제 -->
+                                                        <span class="blind">메뉴숨기기</span>
+                                                    </a>
+                                                    <div class="accContent msslstSet">
+                                                        <ul class="mlst">
+                                                            <li>
+                                                                <span>입금계좌</span>
+                                                                <strong>국민은행<br/>000000-00-000000</strong> <!--// 2021-03-12 br 태그 추가 -->
+                                                            </li>
+                                                            <li>
+                                                                <span>자금모으기 그룹명</span>
+                                                                <strong>원자재 자금모으기그룹01</strong>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- //copy -->
+                            <li>
+                                <div class="banklst type">
+                                    <ul>
+                                        <li>
+                                            <p class="date">2020.01.25 09:36:47</p>
+                                            <div class="bInfo">
+                                                <img src="../../img/cms2.0/logo/CD0301.png" class="logo" alt="우리은행">
+                                                <!--퍼블수정2021-03-03 div.txt 영역 감싸기 -->
+                                                <div class="txt">
+                                                    <h6 class="sectTit">123-45-6789 국민</h6>
+                                                    <!--퍼블수정2021-03-03 삭제 
+                                                    <p>
+                                                        <span>(주)국민상사</span>
+                                                        <span>기업보통예금</span>
+                                                    </p> -->
+                                                </div>
+                                                <!--// 2021-03-03 div.txt 영역 감싸기 -->
+                                            </div>
+                                            <span class="accountStatus error">오류</span> <!--퍼블수정2021-03-11 위치변경으로 인한 태그 추가 /  오류일 때 클래스명 .error 추가-->
+                                        </li>
+                                        <li class="price">이체금액<strong class="wo">100,000</strong>원</li>
+                                        <li class="infoset">
+                                            <ul class="accordionList">
+                                                <li>
+                                                    <a href="javascript:;" class="acc_title"> <!-- 디폴트 open일 경우 class="acc_open" 추가, span "메뉴숨기기"로 변경 필요  -->
+                                                        <b class="tit">이체정보</b>
+                                                        <!-- <b class="txt eor">오류</b> 2021-03-11 마크업위치수정으로 인한 삭제 -->
+                                                        <span class="blind">메뉴숨기기</span>
+                                                    </a>
+                                                    <div class="accContent msslstSet">
+                                                        <ul class="mlst">
+                                                            <li>
+                                                                <span>입금계좌</span>
+                                                                <strong>국민은행 : 000-00-0000</strong>
+                                                            </li>
+                                                            <li>
+                                                                <span>자금모으기 그룹명</span>
+                                                                <strong>원자재 자금모으기그룹01</strong>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="caubx">
+                                                            <p class="tit">이용에 불편을 드려 죄송합니다</p>
+                                                            <p class="eor">오류발생코드(UKFK0993)</p>
+                                                            <p class="txt">대표전화 1599-9999, 1588-9999, 1644-999</p> <!--퍼블수정2021-03-03 수정 -->
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- //copy -->
+                            <li>
+                                <div class="banklst type">
+                                    <ul>
+                                        <li>
+                                            <p class="date">2020.01.27 09:36:47</p>
+                                            <div class="bInfo">
+                                                <img src="../../img/cms2.0/logo/CD0301.png" class="logo" alt="우리은행">
+                                                <!--퍼블수정2021-03-04 div.txt 영역 감싸기 -->
+                                                <div class="txt">
+                                                    <h6 class="sectTit">123-45-6789 국민</h6>
+                                                    <!--퍼블수정2021-03-04 삭제 
+                                                    <p>
+                                                        <span>(주)국민상사</span>
+                                                        <span>기업보통예금</span>
+                                                    </p> -->
+                                                </div>
+                                                <!--// 2021-03-04 div.txt 영역 감싸기 -->
+                                            </div>
+                                            <span class="accountStatus error">오류</span> <!--퍼블수정2021-03-11 위치변경으로 인한 태그 추가 /  오류일 때 클래스명 .error 추가-->
+                                        </li>
+                                        <li class="price">이체금액<strong class="wo">100,000</strong>원</li>
+                                        <li class="infoset">
+                                            <ul class="accordionList">
+                                                <li>
+                                                    <a href="javascript:;" class="acc_title"> <!-- 디폴트 open일 경우 class="acc_open" 추가, span "메뉴숨기기"로 변경 필요  -->
+                                                        <b class="tit">이체정보</b>
+                                                        <!-- <b class="txt eor">오류</b> 2021-03-11 마크업위치수정으로 인한 삭제 -->
+                                                        <span class="blind">메뉴숨기기</span>
+                                                    </a>
+                                                    <div class="accContent msslstSet">
+                                                        <ul class="mlst">
+                                                            <li>
+                                                                <span>입금계좌</span>
+                                                                <strong>국민은행<br/>000000-00-000000</strong> <!--// 2021-03-12 br 태그 추가 -->
+                                                            </li>
+                                                            <li>
+                                                                <span>자금모으기 그룹명</span>
+                                                                <strong>원자재 자금모으기그룹01</strong>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="caubx">
+                                                            <p class="tit">이용에 불편을 드려 죄송합니다</p>
+                                                            <p class="eor">오류발생코드(UKFK0993)</p>
+                                                            <p class="txt">대표전화 1599-9999, 1588-9999, 1644-999</p> <!--퍼블수정2021-03-03 수정 -->
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- //copy -->
+                        </ul>
+                        <div class="btnWrap mt24"> <!--퍼블수정2021-03-11 마크업 추가 -->
+                            <a href="javascript:;" role="button" class="sbtn round">더 불러오기<i class="icon more"></i></a>
+                        </div>
+                    </div>
+                    <!-- //이체정보리스트 -->
+                </div>
+                <!--// 2021-02-25 레이아웃 수정 -->
+                
+                <!--퍼블수정2021-03-11 아코디언형태의 유의사항 삭제, 하단고정 유의사항으로 추가 및 위치 수정  
+                <ul class="accordionList notiList topLine">
+                </ul>
+                -->
+
+            </div>
+            <!--// contInnerWrap -->
+
+            <!--퍼블수정2021-03-11 아코디언형태의 유의사항 삭제, 하단고정 유의사항으로 추가 및 위치 수정 -->
+            <dl class="grayNotiBox">
+                <dt>유의사항</dt>
+                <dd>
+                    <div class="bulletWrap typeGrayRound">
+                        <ul>
+                            <li>자금모으기를 실행한 결과를 기간 및 실행 결과 별 조회가 가능합니다.</li>
+                        </ul>
+                    </div>
+                </dd>
+            </dl>
+            <!--// 2021-03-11 아코디언형태의 유의사항 삭제, 하단고정 유의사항으로 추가 및 위치 수정 -->
+
+        </div>
+    </div>    
+</body>
+</html>

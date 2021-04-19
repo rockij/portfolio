@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/content.css" />
+    <script type="text/javascript" src="../../js/cms2.0/library/jquery_lib.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/cms2.0/common_ui.js" charset="utf-8"></script>
+
+    <!-- cms2.0 추가 -->
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/ui.style.css" />
+    <script type="text/javascript" src="../../js/cms2.0/swiper.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/cms2.0/ui.style.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content">
+            <!-- contInnerWrap -->
+            <div class="contInnerWrap">
+                
+                <!-- totalAccountDetailTop -->
+                <div class="totalAccountDetailTop">
+                    <div class="cardInfo">
+                        <div class="imgWrap">
+                            <img src="../../img/cms2.0/logo/bk0004.png" alt="국민은행">
+                        </div>
+                        <strong>(주)국민상사</strong>
+                        <p>KB DB 퇴직연금</p>
+                        <div class="formBox typeSelect02">
+                            <select name="" id="">
+                                <option value="">123456-12-123456 (KB국민은행)</option>
+                                <option value="">123456-12-123456 (KB국민은행)</option>
+                                <option value="">123456-12-123456 (KB국민은행)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="cardData">
+                        <div class="balance"> <!--// 2021-03-11 통화구분 삭제, 원 추가 -->
+                            <span>평가액</span>
+                            <strong>5,000,000,000</strong>원
+                        </div>
+
+                        <div class="balance sm">
+                            <span>잔액</span>
+                            <strong>5,000,000,000</strong>원
+                        </div>
+
+                        <div class="cardUpdate">
+                            <p class="">잔액 : 2020.12.09 16:06:49</p><!--오류일경우 클래스명 .error 추가 -->
+                            <p class="">거래내역 : 2020.12.09 16:06:49</p><!--오류일경우 클래스명 .error 추가 -->
+
+                            <a href="#" role="button" class="btnIcon update">업데이트</a>
+                        </div>
+                    </div>
+                </div>
+                <!--// totalAccountDetailTop -->
+                
+                <!--pageTab-->
+                <div class="pageTab mt0">  
+                    <ul>
+                        <li class="on"><a href="javascript:;" title="선택됨">거래내역</a></li>
+                        <li class=""><a href="javascript:;" title="">계좌정보</a></li>
+                    </ul>
+                </div>
+                <!--// pageTab-->
+
+                <!-- searchInqArea -->
+                <div class="searchInqArea moreToggle typeFillter">
+                    <div class="btnWrap small">
+                        <div class="fillterData">
+                            <span>당일</span>
+                        </div>
+                        <a href="javascript:;" role="button" class="btn bgWhite02 btnToggle" title="영역 펼치기">검색필터<i class="icon upDown"></i></a>
+                    </div>
+
+                    <div class="toggleCont">
+                        <!-- tabRadio -->
+                        <ul class="tabRadio">
+                            <li>
+                                <a href="javascript:;" class="active">당일</a> <!-- 선택된 태그에 클래스명 .active 추가 -->
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="">3일</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="">1주일</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="">1개월</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="">3개월</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="">6개월</a>
+                            </li>
+                        </ul>
+                        <!--// tabRadio -->
+
+                        <div class="formWrap date mt8">
+                            <div class="formBox dateInput">
+                                <input type="text" value="2020.12.11">
+                                <button type="button" class="btnCalendar"><span class="blind">날짜 선택</span></button>
+                            </div>
+                            <span class="dash">~</span>
+                            <div class="formBox dateInput">
+                                <input type="text" value="2020.12.11">
+                                <button type="button" class="btnCalendar"><span class="blind">날짜 선택</span></button>
+                            </div>
+                        </div>
+
+                        <div class="btnWrap small2 mt16 mb16">
+                            <a href="javascript:;" role="button" class="btn bgYellow">조회</a>
+                        </div>
+                    </div>
+                </div>
+                <!--// searchInqArea -->
+
+                <div class="accTradeList type02"><!--퍼블수정2021-03-08 클래스명 .type02 추가 .mt16 제거-->
+                    <ul>
+                        <li>
+                            <div class="topArea">
+                                <div class="floatL">
+                                    <span>2020.02.07 12:12:00</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <strong>국민산업</strong>
+                                <span>부담금입금</span>
+                            </div>
+                            <div class="dealInfo">
+                                <p class="price plus"><span>입금</span><em>300,000</em>원</p> <!-- 입금 class="plus",  출금 class="minus" -->
+                                <p class="charge"><span>잔액</span><em>330,000</em>원</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="topArea">
+                                <div class="floatL">
+                                    <span>2020.02.07 12:12:00</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <strong>국민산업</strong>
+                                <span>보험금지급</span>
+                            </div>
+                            <div class="dealInfo">
+                                <p class="price plus"><span>입금</span><em>300,000</em>원</p> <!-- 입금 class="plus",  출금 class="minus" -->
+                                <p class="charge"><span>잔액</span><em>330,000</em>원</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="btnWrap mt24">
+                        <a href="javascript:;" role="button" class="sbtn round">더 불러오기<i class="icon more"></i></a>
+                    </div>
+                </div>
+
+                <!-- 데이터 없을시 노출 -->
+                <div class="dataNone mb56">
+                    <p class="txt">조회 내역이 없습니다.</p> <!--퍼블수정2021-03-12 문구수정-->
+                </div>
+                <!--// 데이터 없을시 노출 -->
+
+                <div class="btnWrap small mt24"><!--퍼블수정2021-03-08 클래스명 .small 추가-->
+                    <a href="javascript:;" role="button" class="btn bgWhite">목록</a>
+                </div>
+
+
+            </div>
+            <!--// contInnerWrap -->
+
+            <dl class="grayNotiBox">
+                <dt>유의사항</dt>
+                <dd>
+                    <div class="bulletWrap typeGrayRound">
+                        <ul>
+                            <li>거래후 잔액은 거래 당신의 잔액이며, 현재 잔액은 통합계좌조회에서 확인 가능합니다.</li>
+                        </ul>
+                    </div>
+                </dd>
+            </dl>
+            
+        </div>
+    </div>    
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--
+	2020-06-16		수정 : 상단 차량번호 위치 이동
+	2020-07-01 		최초등록일로 문구수정
+-------------------------------------------------------------->
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<!--target-densitydpi=medium-dpi-->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<!-- 아이폰 전체화면 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<title>딜러라운지</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../assets/css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/jquery-ui.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick-theme.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/swiper.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/ui.common.css" type="text/css" /> <!-- 공통 요소 -->
+
+	<!-- JS -->
+	<script type="text/javascript" src="../../assets/js/jquery.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/slick.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/Chart.min.js"></script><!-- 공통 요소 -->
+	<script type="text/javascript" src="../../assets/js/ui.common.js"></script><!-- 공통 요소 -->
+</head>
+
+<body>
+	<section id="wrap">
+		<div id="skipNavi">
+			<a href="#container">본문 바로가기</a>
+		</div>
+		<main id="holdingVehicleEdit" class="holdingVehicle">
+			<link rel="stylesheet" href="../../assets/css/ui.holdingVehicle.css" type="text/css" />
+			<section id="container" class="holdingVehicleEdit">
+
+				<div class="carInfoHeader">
+					<strong>현대 투싼 ix 디젤 2WD LX 프리미어</strong>
+					<em>34오 0000</em> <!--// 2020-06-16 차량번호 위치이동 -->
+				</div>
+
+				<div class="carInfoList">
+					<dl class="accordionList">
+						<dt class="trigger on"><a href="javascript:;">차량정보</a></dt>
+						<dd>
+							<div class="carReponseData">
+								<ul class="defalutList">
+									<li>
+										<span>모델연형</span>
+										<em>2012</em>
+									</li>
+									<li>
+										<span>주행거리</span>
+										<em>50,000km</em>
+									</li>
+									<li>
+										<span>최초등록일</span> <!--// 2020-07-01 최초등록일로 문구수정 -->
+										<em>2012.04.01</em>
+									</li>
+									<li>
+										<span>연료</span>
+										<em>가솔린</em>
+									</li>
+									<li>
+										<span>배기량</span>
+										<em>2,980cc</em>
+									</li>
+									<li>
+										<span>용도</span>
+										<em>자가용</em>
+									</li>
+									<li>
+										<span>색상</span>
+										<em>검정</em>
+									</li>
+									<li>
+										<span>차종</span>
+										<em>중형차</em>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<fieldset class="holdingWrite">
+					<legend>차량정보 등록</legend>
+					<dl class="fieldList">
+						<dt>성능점검일</dt>
+						<dd>
+							<div class="formInput datepicker">
+								<input type="text" placeholder="2020.04.28"> <!-- 현재 날짜가 placeholder의 default 값 -->
+							</div>
+						</dd>
+						<dt>매입일</dt>
+						<dd>
+							<div class="formInput datepicker">
+								<input type="text" placeholder="2020.04.28"> <!-- 현재 날짜가 placeholder의 default 값 -->
+							</div>
+						</dd>
+						<dt>매입금액</dt>
+						<dd>
+							<div class="formInput">
+								<input type="text" placeholder="입력해 주세요.">
+								<span class="unit">만원</span>
+							</div>
+						</dd>
+					</dl>
+					<dl class="fieldList dealer">
+						<dt class="">판매자정보</dt>
+						<dd>
+							<div class="formInput">
+								<input type="text" value="" placeholder="이름 또는 상호를 입력해 주세요.">
+							</div>
+							<div class="formInput">
+								<input type="tel" value="" placeholder="연락처를 입력해 주세요.">
+							</div>
+						</dd>
+					</dl>
+				</fieldset>
+
+				<div class="costAdd">
+					<a href="javascript:;">
+						<strong>비용추가</strong>
+						<em class="costOn">200,000원</em> <!-- 비용 추가된 경우 class="costOn" 추가 -->
+					</a>
+				</div>
+			</section>
+			<div class="btnArea full">
+				<a href="#" class="blue disabled">확인</a>
+			</div>
+		</main>
+	</section>
+</body>
+
+</html>

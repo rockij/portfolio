@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/content.css" />
+    <script type="text/javascript" src="../../js/cms2.0/library/jquery_lib.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/cms2.0/common_ui.js" charset="utf-8"></script>
+
+    <!-- cms2.0 추가 -->
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/ui.style.css" />
+    <script type="text/javascript" src="../../js/cms2.0/swiper.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/cms2.0/ui.style.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content">
+            <!-- contInnerWrap -->
+            <div class="contInnerWrap totalAccountList">
+                
+                <div class="tar">
+                    <!--퍼블수정2021-03-05 버튼 교체-->
+                    <!--<a href="javascript:;" role="button" class="btnMoreAdd">기관/계좌 추가 등록</a> -->
+                    <a href="javascript:;" class="sbtn xs round bgGray layerpop"><i class="icon direct"></i>기관/계좌 추가 등록</a>
+                    <!--//2021-03-05 버튼 교체-->
+                </div>
+
+                <div class="inpWrap mt24">
+                    <ul>
+                        <li>
+                            <div class="formBox">
+                                <select name="" id="">
+                                    <option value="">사업자전체</option>
+                                    <option value="">옵션2</option>
+                                    <option value="">옵션3</option>
+                                </select>
+                                <a href="javascript:;" role="button" class="btn sm w56 bgWhite">조회</a><!--퍼블수정2021-03-05 마크업 추가-->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- accordionList -->
+                <ul class="accordionList accoTotal">
+
+                    <li>
+                        <a href="javascript:;" class="acc_title"> <!-- 디폴트 open일 경우 class="acc_open" 추가, span "메뉴숨기기"로 변경 필요  -->
+                            입출금
+                            <span class="blind">메뉴펼쳐보기</span>
+                        </a>
+                        <div class="accContent">
+                            
+                            <!-- 데이터 없을 경우 노출 -->
+                            <div class="dataNone">
+                                <p class="txt">조회 내역이 없습니다.</p> <!--퍼블수정2021-03-12 문구수정-->
+                            </div>
+                            <!--// 데이터 없을 경우 노출 -->
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="javascript:;" class="acc_title"> <!-- 디폴트 open일 경우 class="acc_open" 추가, span "메뉴숨기기"로 변경 필요  -->
+                            예적금
+                            <span class="blind">메뉴숨기기</span>
+                        </a>
+                        <div class="accContent">
+                            
+                            <!-- 데이터 없을 경우 노출 -->
+                            <div class="dataNone">
+                                <p class="txt">조회 내역이 없습니다.</p> <!--퍼블수정2021-03-12 문구수정-->
+                            </div>
+                            <!--// 데이터 없을 경우 노출 -->
+                            
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <a href="javascript:;" class="acc_title"> <!-- 디폴트 open일 경우 class="acc_open" 추가, span "메뉴숨기기"로 변경 필요  -->
+                            대출
+                            <span class="blind">메뉴펼쳐보기</span>
+                        </a>
+                        <div class="accContent">
+
+                            <!-- 데이터 없을 경우 노출 -->
+                            <div class="dataNone">
+                                <p class="txt">조회 내역이 없습니다.</p> <!--퍼블수정2021-03-12 문구수정-->
+                            </div>
+                            <!--// 데이터 없을 경우 노출 -->
+
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="acc_title acc_open"> <!-- 디폴트 open일 경우 class="acc_open" 추가, span "메뉴숨기기"로 변경 필요  -->
+                            B2B 판매기업
+                            <span class="blind">메뉴펼쳐보기</span>
+                        </a>
+                        <div class="accContent">
+                            
+                            <div class="tar mb8"> <!--퍼블수정2021-03-12 마크업 위치변경-->
+                                <a href="javascript:;" class="sbtn xs round bgDark"><i class="icon updateWhite"></i>전체업데이트</a>
+                            </div>
+
+                            <!-- 계좌 목록 -->
+                            <div class="totalCardLinkWrap">
+                                <div class="totalCardTit">
+                                    <h4 class="tit">(주)국민상사</h4>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="info">
+                                            <a href="javascript:;" class="linkWrap maxFull">
+                                                <div class="imgWrap">
+                                                    <img src="../../img/cms2.0/logo/bk0004.png" alt="국민은행">
+                                                    <strong>KB국민</strong>
+                                                </div>
+                                                <div class="elecBill"> <!--퍼블수정2021-03-12 마크업 수정-->
+                                                    외상매출채권전자대출(순) <div class="billBox"><span class="numRound">3</span>건</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="data">
+                                            <a href="javascript:;" class="linkWrap">
+                                                <div class="price"> <!--퍼블수정2021-03-12 엔터값 & 문구수정-->
+                                                    <span>채권금액</span><strong>5,000,000,000</strong>원
+                                                </div>
+                                                <div class="txtBox">
+                                                    <span>업데이트 : 2020.12.09 16:06:49</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="info">
+                                            <a href="javascript:;" class="linkWrap maxFull">
+                                                <div class="imgWrap">
+                                                    <img src="../../img/cms2.0/logo/bk0004.png" alt="국민은행">
+                                                    <strong>KB국민</strong>
+                                                </div>
+                                                <div class="elecBill"> <!--퍼블수정2021-03-12 마크업수정-->
+                                                    전자어음 (<div class="billBox">발행 <span class="numRound">3</span>건</div><div class="billBox">수취 <span class="numRound">3</span>건</div>)
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="data">
+                                            <a href="javascript:;" class="linkWrap">
+                                                <div class="price"> <!--퍼블수정2021-03-12 엔터값 & 문구수정-->
+                                                    <span>총 금액</span><strong>5,000,000,000</strong>원
+                                                </div>
+                                                <div class="txtBox">
+                                                    <span class="colorRed">업데이트 오류</span> <!-- 업데이트 오류시 클래스명 .colorRed 추가 -->
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--// 계좌 목록 -->
+
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="acc_title"> <!-- 디폴트 open일 경우 class="acc_open" 추가, span "메뉴숨기기"로 변경 필요  -->
+                            B2B 구매기업
+                            <span class="blind">메뉴펼쳐보기</span>
+                        </a>
+                        <div class="accContent">
+                            <!-- 데이터 없을 경우 노출 -->
+                            <div class="dataNone">
+                                <p class="txt">조회 내역이 없습니다.</p> <!--퍼블수정2021-03-12 문구수정-->
+                            </div>
+                            <!--// 데이터 없을 경우 노출 -->
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="acc_title"> <!-- 디폴트 open일 경우 class="acc_open" 추가, span "메뉴숨기기"로 변경 필요  -->
+                            외환
+                            <span class="blind">메뉴펼쳐보기</span>
+                        </a>
+                        <div class="accContent">
+                            <!-- 데이터 없을 경우 노출 -->
+                            <div class="dataNone">
+                                <p class="txt">조회 내역이 없습니다.</p> <!--퍼블수정2021-03-12 문구수정-->
+                            </div>
+                            <!--// 데이터 없을 경우 노출 -->
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="acc_title"> <!-- 디폴트 open일 경우 class="acc_open" 추가, span "메뉴숨기기"로 변경 필요  -->
+                            펀드
+                            <span class="blind">메뉴펼쳐보기</span>
+                        </a>
+                        <div class="accContent">
+                            <!-- 데이터 없을 경우 노출 -->
+                            <div class="dataNone">
+                                <p class="txt">조회 내역이 없습니다.</p> <!--퍼블수정2021-03-12 문구수정-->
+                            </div>
+                            <!--// 데이터 없을 경우 노출 -->
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="acc_title"> <!-- 디폴트 open일 경우 class="acc_open" 추가, span "메뉴숨기기"로 변경 필요  -->
+                            신탁
+                            <span class="blind">메뉴펼쳐보기</span>
+                        </a>
+                        <div class="accContent">
+                            <!-- 데이터 없을 경우 노출 -->
+                            <div class="dataNone">
+                                <p class="txt">조회 내역이 없습니다.</p> <!--퍼블수정2021-03-12 문구수정-->
+                            </div>
+                            <!--// 데이터 없을 경우 노출 -->
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="acc_title"> <!-- 디폴트 open일 경우 class="acc_open" 추가, span "메뉴숨기기"로 변경 필요  -->
+                            보험
+                            <span class="blind">메뉴펼쳐보기</span>
+                        </a>
+                        <div class="accContent">
+                            <!-- 데이터 없을 경우 노출 -->
+                            <div class="dataNone">
+                                <p class="txt">조회 내역이 없습니다.</p> <!--퍼블수정2021-03-12 문구수정-->
+                            </div>
+                            <!--// 데이터 없을 경우 노출 -->
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="acc_title"> <!-- 디폴트 open일 경우 class="acc_open" 추가, span "메뉴숨기기"로 변경 필요  -->
+                            퇴직연금
+                            <span class="blind">메뉴펼쳐보기</span>
+                        </a>
+                        <div class="accContent">
+                            <!-- 데이터 없을 경우 노출 -->
+                            <div class="dataNone">
+                                <p class="txt">조회 내역이 없습니다.</p> <!--퍼블수정2021-03-12 문구수정-->
+                            </div>
+                            <!--// 데이터 없을 경우 노출 -->
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="acc_title"> <!-- 디폴트 open일 경우 class="acc_open" 추가, span "메뉴숨기기"로 변경 필요  -->
+                            증권
+                            <span class="blind">메뉴펼쳐보기</span>
+                        </a>
+                        <div class="accContent">
+                            <!-- 데이터 없을 경우 노출 -->
+                            <div class="dataNone">
+                                <p class="txt">조회 내역이 없습니다.</p> <!--퍼블수정2021-03-12 문구수정-->
+                            </div>
+                            <!--// 데이터 없을 경우 노출 -->
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="acc_title"> <!-- 디폴트 open일 경우 class="acc_open" 추가, span "메뉴숨기기"로 변경 필요  -->
+                            캐피탈
+                            <span class="blind">메뉴펼쳐보기</span>
+                        </a>
+                        <div class="accContent">
+                            <!-- 데이터 없을 경우 노출 -->
+                            <div class="dataNone">
+                                <p class="txt">조회 내역이 없습니다.</p> <!--퍼블수정2021-03-12 문구수정-->
+                            </div>
+                            <!--// 데이터 없을 경우 노출 -->
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="acc_title"> <!-- 디폴트 open일 경우 class="acc_open" 추가, span "메뉴숨기기"로 변경 필요  -->
+                            저축은행
+                            <span class="blind">메뉴펼쳐보기</span>
+                        </a>
+                        <div class="accContent">
+                            <!-- 데이터 없을 경우 노출 -->
+                            <div class="dataNone">
+                                <p class="txt">조회 내역이 없습니다.</p> <!--퍼블수정2021-03-12 문구수정-->
+                            </div>
+                            <!--// 데이터 없을 경우 노출 -->
+                        </div>
+                    </li>
+
+                </ul>
+                <!--// accordionList -->
+
+            </div>
+            <!--// contInnerWrap -->
+
+            <dl class="grayNotiBox">
+                <dt>유의사항</dt>
+                <dd>
+                    <div class="bulletWrap typeGrayRound">
+                        <ul>
+                            <li>권한부여를 받은 계좌만 조회 가능합니다.</li>
+                            <li>
+                                <em>[전체업데이트]</em> 버튼을 클릭하시면 잔액과 거래내역을 한번에 조회하실 수 있습니다. 거래건수가 많을 경우 시간이 소요될 수 있습니다.(단, <em>조회정보가 등록되어 있는 경우</em> / 인증서를 보유한 고객만 실행가능 / 마지막 조회일자로부터 입데이트 시점까지 전체내역 업데이트)
+                            </li>
+                            <li>'뱅킹관리 > 등록기관관리 > Star CMS관리'에서 조회정보변경과 신규기관을 등록하실 수 있습니다.</li> <!--// 2021-03-12 문구수정 -->
+                            <li>외화신탁의 잔액은 총예금신탁잔액 및 총예금신탁에 포함되지 않습니다.</li> <!--// 2021-03-12 em태그 삭제 -->
+                            <li>대출금액은 최초 신규 시의 대출금액 또는 한도약정금액이며, 총대출잔액은 대출계좌별 잔액의 합계입니다.</li>
+                        </ul>
+                    </div>
+                </dd>
+            </dl>
+
+        </div>
+    </div>    
+</body>
+</html>

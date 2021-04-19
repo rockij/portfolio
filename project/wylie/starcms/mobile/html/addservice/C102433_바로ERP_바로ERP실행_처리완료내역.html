@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/content.css" />
+    <script type="text/javascript" src="../../js/cms2.0/library/jquery_lib.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/cms2.0/common_ui.js" charset="utf-8"></script>
+
+    <!-- cms2.0 추가 -->
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/ui.style.css" />
+    <script type="text/javascript" src="../../js/cms2.0/swiper.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/cms2.0/ui.style.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content">
+
+            <!-- contInnerWrap -->
+            <div class="contInnerWrap spacePdt0">
+
+                <!-- searchInqArea -->
+                <div class="searchInqArea moreToggle typeFillter"> <!--퍼블수정2021-03-12 마크업 전체수정-->
+                    <div class="btnWrap small">
+                        <div class="fillterData">
+                            <span>1개월</span>
+                            <span>입출금전체</span>
+                            <span>최신순</span>
+                        </div>
+                        <a href="javascript:;" role="button" class="btn bgWhite02 btnToggle" title="영역 펼치기">검색필터<i class="icon upDown"></i></a>
+                    </div>
+
+                    <div class="toggleCont">
+                        <!-- tabRadio -->
+                        <ul class="tabRadio">
+                            <li>
+                                <a href="javascript:;" class="active">당일</a> <!-- 선택된 태그에 클래스명 .active 추가 -->
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="">3일</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="">1주일</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="">1개월</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="">3개월</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="">6개월</a>
+                            </li>
+                        </ul>
+                        <!--// tabRadio -->
+
+                        <div class="formWrap date mt8">
+                            <div class="formBox dateInput">
+                                <input type="text" value="2020.12.11">
+                                <button type="button" class="btnCalendar"><span class="blind">날짜 선택</span></button>
+                            </div>
+                            <span class="dash">~</span>
+                            <div class="formBox dateInput">
+                                <input type="text" value="2020.12.11">
+                                <button type="button" class="btnCalendar"><span class="blind">날짜 선택</span></button>
+                            </div>
+                        </div>
+
+                        <div class="inpWrap type02 mt8">
+                            <!-- id와 for의 값은 꼭 동일하게 연결 요청 -->
+                            <ul>
+                                <li>
+                                    <div class="inpBox">
+                                        <input type="radio" name="accountType" id="accountType01" checked="">
+                                        <label for="accountType01">
+                                            <span class="tit gray">전체</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inpBox">
+                                        <input type="radio" name="accountType" id="accountType02">
+                                        <label for="accountType02">
+                                            <span class="tit gray">10건이하이체(즉시)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inpBox">
+                                        <input type="radio" name="accountType" id="accountType03">
+                                        <label for="accountType03">
+                                            <span class="tit gray">급여이체</span>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="inpWrap type03">
+                            <!-- id와 for의 값은 꼭 동일하게 연결 요청 -->
+                            <ul>
+                                <li>
+                                    <div class="inpBox">
+                                        <input type="radio" name="typeDate" id="typeDate01" checked="">
+                                        <label for="typeDate01">
+                                            <span class="tit gray">최신순</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inpBox">
+                                        <input type="radio" name="typeDate" id="typeDate02">
+                                        <label for="typeDate02">
+                                            <span class="tit gray">과거순</span>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="btnWrap small2 mt16 mb16">
+                            <a href="javascript:;" role="button" class="btn bgYellow">조회</a>
+                        </div>
+                    </div>
+                </div>
+                <!--// searchInqArea -->
+
+                <div class="bankInfoList type03"> <!--퍼블수정2021-03-12 클래스명 수정 .mb16 제거-->
+                    <div class="inquiryDate">
+                        <span>2020.12.31</span>
+                    </div>
+                    <ul>
+                        <li>
+                            <span>거래종류</span>
+                            <em>10건이하이체(즉시)</em>
+                        </li>
+                        <li>
+                            <span>금액</span>
+                            <em>1,000원</em>
+                        </li>
+                        <li>
+                            <span>출금계좌번호</span>
+                            <em>000000-00-000000</em>
+                        </li>
+                        <li>
+                            <span>등록자</span>
+                            <em>test</em>
+                        </li>
+                        <li>
+                            <span>결제완료일시</span><!--퍼블수정2021-03-12 문구수정-->
+                            <em>2020.00.00 00:00</em>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 조회 내역 엾을 경우 -->
+                <div class="dataNone">
+                    <p class="txt">조회 내역이 없습니다.</p> <!--퍼블수정2021-03-12 문구수정-->
+                </div>
+                <!--// 조회 내역 없을 경우 -->
+            </div>
+            <!--// contInnerWrap -->
+
+            <dl class="grayNotiBox">
+                <dt>유의사항</dt>
+                <dd>
+                    <div class="bulletWrap typeGrayRound">
+                        <ul>
+                            <li>바로 ERP 서비스를 통해 처리한 10건이하이체(즉시), 급여이체 거래내역을 조회할 수 있는 화면입니다.</li>
+                            <li>
+                                본인이 등록한 내역만 조회가 가능합니다. <br>
+                                단, 관리자(Master)는 모든 사용자가 등록한 내역을 조회하실 수 있습니다.
+                            </li>
+                            <li>먼저 조회조건을 선택하십시오.</li>
+                            <li>조회결과의 상세 내용은 거래종류별 해당 메뉴의 처리결과 메뉴에서 확인하셔야 합니다.</li>
+                        </ul>
+                    </div>
+                </dd>
+            </dl>
+
+        </div>
+    </div>    
+</body>
+</html>

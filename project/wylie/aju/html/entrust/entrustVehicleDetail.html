@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<!--
+	2020-06-16 수정 : salesInfo 정렬스타일 변경으로 태그수정
+	2020-06-19 타이틀 추가 및 순서 변경
+	2020-07-01 최초등록일로 문구수정
+	2020-07-02 프로필영역 텍스트 수정
+	2020-07-02 이름 아래쪽으로 댓글 내림(css 수정)
+	2020-07-03 옵션정보 삭제
+-------------------------------------------------------------->
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<!--target-densitydpi=medium-dpi-->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<!-- 아이폰 전체화면 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<title>딜러라운지</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../assets/css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick-theme.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/swiper.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/ui.common.css" type="text/css" /> <!-- 공통 요소 -->
+
+	<!-- JS -->
+	<script type="text/javascript" src="../../assets/js/jquery.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/slick.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/ui.common.js"></script><!-- 공통 요소 -->
+</head>
+
+<body>
+	<section id="wrap">
+		<div id="skipNavi">
+			<a href="#container">본문 바로가기</a>
+		</div>
+		<main id="entrustVehicleDetail" class="entrust">
+			<link rel="stylesheet" href="../../assets/css/ui.entrust.css" type="text/css" />
+			<section id="container" class="entrustVehicleDetail">
+
+				<div class="carVisual swiper-container">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide"><img src="../../assets/img/temp/temp_auction_visual.jpg" alt=""></li>
+						<li class="swiper-slide"><img src="../../assets/img/temp/temp_auction_visual.jpg" alt=""></li>
+						<li class="swiper-slide"><img src="../../assets/img/temp/temp_auction_visual.jpg" alt=""></li>
+					</ul>
+					<div class="swiper-pagination"></div>
+				</div>
+
+				<!-- carDetailHeader -->
+				<div class="carDetailHeader">
+					<div class="topArea">
+						<span class="iconEntrust">팔아주세요</span>
+						<!--
+							<span class="iconEntrust">팔아주세요</span>
+							<span class="iconFind">구합니다</span>
+							<span class="iconSell">팝니다</span>
+						-->
+						<ul class="utillArea">
+							<li><a href="javascript:;" class="shareBtn">공유하기</a></li>
+							<!-- 2020-06-15 찜 하기 숫자 삿제 -->
+							<li><a href="javascript:;" class="likeyBtn"></a></li>
+						</ul>
+					</div>
+					<strong>현대 그랜저 HG<br /> 2019 Hyundai</strong>
+					<!-- 2020-06-15 주행거리 위치 이동 -->
+					<div class="info">
+						<span>2015년형</span>
+						<span>160,480km</span>
+						<span>자동</span>
+						<span>흰색</span>
+						<span>2020.03.31</span>
+					</div>
+					<!-- 2020-05-15 수정 -->
+					<div class="dealPrice">
+						<p>판매가격: <span class="price"><em>3,000</em> 만원</span></p>
+						<div class="cmmTooltip">
+							<span>(50%이상)</span>
+							<a href="javascript:;">거래확률 툴팁</a>
+							<div class="toolCont">
+								<em>거래확률이란?</em><br>
+								판매자가 거래조건에<br>
+								동의하여 실제 매물로 나와 <br>
+								거래가 성사될 가능성을 <br>
+								의미합니다.
+							</div>
+						</div>
+					</div>
+					<!--// 2020-05-15 수정 -->
+				</div>
+				<!--// carDetailHeader -->
+
+				<div class="carInfoList">
+					<dl class="accordionList">
+						<dt class="trigger on"><a href="javascript:;">차량정보</a></dt>
+						<dd>
+							<div class="carReponseData">
+								<ul class="defalutList">
+									<li>
+										<span>모델연형</span>
+										<em>2012</em>
+									</li>
+									<li>
+										<span>주행거리</span>
+										<em>50,000km</em>
+									</li>
+									<li>
+										<span>최초등록일</span> <!--// 2020-07-01 최초등록일로 문구수정 -->
+										<em>2012.04.01</em>
+									</li>
+									<li>
+										<span>연료</span>
+										<em>가솔린</em>
+									</li>
+									<li>
+										<span>배기량</span>
+										<em>2,980cc</em>
+									</li>
+									<li>
+										<span>용도</span>
+										<em>자가용</em>
+									</li>
+									<li>
+										<span>색상</span>
+										<em>검정</em>
+									</li>
+									<li>
+										<span>차종</span>
+										<em>중형차</em>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<!-- 다른딜러차량-->
+				<!--2020-06-19 타이틀 추가 -->
+				<div class="titArea">
+					<h3>판매자정보</h3>
+				</div>
+				<!--// 2020-06-19 타이틀 추가 -->
+				<div class="dealerDiff">
+					<div class="profileArea">
+						<div class="pic"><img src="" alt=""></div>
+						<div class="iconArea">
+							<span class="iconCerti">인증</span>
+						</div>
+						<p>
+							<strong>김아주님</strong>
+							<!-- 2020-07-02 텍스트 수정 -->
+							<span>
+								<em>DY카랜드</em>
+								<em>모터스상사</em>
+							</span>
+						</p>
+					</div>
+				</div>
+				<!--// 다른딜러차량 -->
+
+				<!-- 2020-06-19 타이틀 추가 및 순서 변경 -->
+				<!-- 2020-07-03 옵션정보 삭제
+				<div class="titArea">
+					<h3>옵션정보</h3>
+				</div>
+				<ul class="carOption">
+					<li class="sunroof active">파노라마<br />선루프</li>
+					<li class="heat">열선시트</li>
+					<li class="navigation active">내비게이션</li>
+					<li class="airbag">에어백</li>
+				</ul>
+				<ul class="salesInfo">
+					<li>
+						<span>현소유자</span>
+						개인
+					</li>
+					<li>
+						<span>사고유무</span>
+						완전무사고
+						<a href="javascript:;">유사고</a>
+					</li>
+					<li>
+						<span>외판수리</span>
+						수리불필요
+					</li>
+					<li>
+						<span>실차확인</span>
+						확인완료
+					</li>
+				</ul>
+				<div class="dealerSelf">
+					<ul>
+						<li class="onlineEst"><a href="#">온라인견적</a></li>
+						<li class="sellDeal"><a href="#">판매처리</a></li>
+					</ul>
+				</div> -->
+				<div class="dealerComent">
+					<p>절대 허위 매물 아님.<br />방문이 힘든 경우 탁송 출고 가능.<br />주말, 공휴일 없이 당일 출고 가능.</p>
+				</div>
+				<!--// 2020-06-19 타이틀 추가 및 순서 변경 -->
+
+				<!-- replyWrap -->
+				<div class="replyWrap">
+					<p class="idx">댓글 3</p>
+					<div class="replyInput">
+						<div class="profile"></div>
+						<div class="formInput bdcolor">
+							<input type="text" placeholder="댓글을 입력해 주세요.">
+							<a href="javascript:;" class="btnPost">게시</a>
+						</div>
+					</div>
+					<ul class="replyList">
+						<li>
+							<div class="profile"></div>
+							<strong class="name">오딜러</strong>
+							<span class="txt">굿굿 좋습니다.</span>
+							<div class="btArea">
+								<span class="date">2020.04.02 16:31</span>
+							</div>
+							<div class="myBtn">
+								<a href="#">답글 달기</a>
+								<a href="#">수정</a>
+								<a href="javascript:;">삭제</a>
+							</div>
+						</li>
+						<li>
+							<div class="profile"></div>
+							<strong class="name">오딜러</strong>
+							<span class="txt">굿굿 좋습니다.</span>
+							<div class="btArea">
+								<span class="date">2020.04.02 16:31</span>
+								<a href="#">답글 달기</a>
+							</div>
+
+							<!--// 대댓글 -->
+							<ul class="comentList">
+								<li>
+									<div class="profile"></div>
+									<strong class="name">강딜러</strong>
+									<span class="txt">인정합니다</span>
+									<div class="btArea">
+										<span class="date">2020.04.02 16:31</span>
+									</div>
+									<div class="myBtn">
+										<a href="#">답글 달기</a>
+										<a href="#">수정</a>
+										<a href="javascript:;">삭제</a>
+									</div>
+								</li>
+							</ul>
+							<!--// 대댓글 -->
+						</li>
+						<li>
+							<div class="profile"></div>
+							<strong class="name">오딜러</strong>
+							<span class="txt">굿굿 좋습니다.</span>
+							<div class="btArea">
+								<span class="date">2020.04.02 16:31</span>
+								<a href="#">답글 달기</a>
+							</div>
+
+							<ul class="comentList">
+								<li>
+									<div class="profile"></div>
+									<strong class="name">강딜러</strong>
+									<span class="txt">인정합니다</span>
+									<div class="btArea">
+										<span class="date">2020.04.02 16:31</span>
+										<a href="#">답글 달기</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!--// replyWrap -->
+			</section>
+
+			<!-- 본인등록차량인 경우 -->
+			<div class="btnArea full">
+				<a href="#" class="lightGray">삭제</a>
+				<a href="#" class="blue">수정</a>
+			</div>
+			<!--// 본인등록차량인 경우 -->
+
+			<!-- 2020-05-20 추가 : 본인차량 아닐경우 Utill 버튼 -->
+			<div class="footMenu">
+				<a href="javascript:;" class="iconFootCall">통화하기</a>
+				<a href="javascript:;" class="iconFootMessage">메시지 전송</a>
+				<a href="javascript:;" class="iconFootChatting">채팅하기</a>
+			</div>
+			<!--// 2020-05-20 추가 : 본인차량 아닐경우 Utill 버튼 -->
+		</main>
+	</section>
+	<!-- 공유하기 레이어 -->
+	<div class="shareLayer">
+		<strong>공유하기</strong>
+		<ul class="shareList">
+			<li>
+				<a href="javascript:;" class="kakao">
+					카카오톡
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="band">
+					BAND
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="facebook">
+					페이스북
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="urlCopy">
+					URL복사
+				</a>
+			</li>
+		</ul>
+		<a href="javascript:;" class="btnLayerClose">공유하기 팝업 닫기</a>
+	</div>
+	<!--// 공유하기 레이어 -->
+</body>
+
+</html>

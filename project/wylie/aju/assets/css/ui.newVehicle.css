@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/* newVehicleSearch */
+.newVehicle .newVehicleSearch .lineTab { padding-top:1.4667vw; }
+.newVehicle .newVehicleSearch .carSearch { margin-left:-8.00vw; width:100vw; border-top:2.6667vw solid #f5f5f5;}
+.newVehicle .newVehicleSearch .carSearch ul { overflow-y:auto; height:calc(100vh - 30.1667vw - env(safe-area-inset-bottom));}
+.newVehicle .newVehicleSearch .carSearch > ul { position:relative;}
+.newVehicle .newVehicleSearch .carSearch > ul li { height:15.7333vw; border-bottom:0.2667vw solid #eee;}
+.newVehicle .newVehicleSearch .carSearch > ul .brand a { display:block; height:100%;}
+.newVehicle .newVehicleSearch .carSearch > ul .brand .logo { display:inline-block; width:24.0000vw; height:100%; text-align:center; vertical-align:middle;}
+.newVehicle .newVehicleSearch .carSearch > ul .brand .logo img { position:relative; width:8.00vw; height:8.00vw; top:50%; transform:translateY(-50%); }
+.newVehicle .newVehicleSearch .carSearch > ul .brand .name { font-size:4.2667vw; color:#333; font-weight:500;}
+.newVehicle .newVehicleSearch .carSearch > ul .brand ul { display:none; position:fixed; top:calc(27.6667vw + env(safe-area-inset-top)); right:-100%; border-left:0.2667vw solid #eeeeee; background:#fff; transition:0.4s right;}
+.newVehicle .newVehicleSearch .carSearch > ul .brand .model { width:75.7333vw; z-index:2;}
+.newVehicle .newVehicleSearch .carSearch > ul .brand .model > li > a { display:block; padding:0 4.0000vw; line-height:15.7333vw; font-size:4.2667vw; color:#333; font-weight:500;}
+.newVehicle .newVehicleSearch .carSearch > ul .brand .subModel { width:49.8667vw; z-index:3;}
+.newVehicle .newVehicleSearch .carSearch > ul .brand .subModel li a { display:block; padding:2.6667vw 4.00vw 0;}
+.newVehicle .newVehicleSearch .carSearch > ul .brand .subModel li p { overflow:hidden; margin-bottom:1.3333vw; color:#333; font-weight:300; text-overflow:ellipsis; white-space:nowrap;}
+.newVehicle .newVehicleSearch .carSearch > ul .brand .subModel li .date { color:#888888; font-weight:300;}
+.newVehicle .newVehicleSearch .carSearch > ul.action .brand.active { background:#eeeeee;}
+.newVehicle .newVehicleSearch .carSearch > ul.action .brand.active .model.open { right:0;}
+.newVehicle .newVehicleSearch .carSearch > ul.action .brand.active .model > li.active { background:#f5f5f5;}
+.newVehicle .newVehicleSearch .carSearch > ul.action .brand.active .model > li.active > a { overflow:hidden; width:25.8667vw; text-overflow:ellipsis; white-space:nowrap; }
+.newVehicle .newVehicleSearch .carSearch > ul.action .brand .subModel.open { right:0;}
+.newVehicle .newVehicleSearch .carSearch > ul.action .brand .name { display:none;}
+.newVehicle .newVehicleSearch .carSearch > ul.action .logo,
+.newVehicle .newVehicleSearch .carSearch > ul.action .model > li > a { opacity:0.5;}
+.newVehicle .newVehicleSearch .carSearch > ul.action .brand.active .logo,
+.newVehicle .newVehicleSearch .carSearch > ul.action .model > li.active > a { opacity:1;}
+
+/* newVehiclePrice */
+.newVehiclePrice{padding-top: 35.2vw;}
+.newVehiclePrice .newVehiclePriceHeader{position: fixed; left: 0; top:calc(12.00vw + env(safe-area-inset-top)); z-index: 10; width: 100vw; height: 22.1333vw; padding: 1.8667vw 8vw 0 8vw; background: #fff;}
+.newVehiclePrice .newVehiclePriceHeader .selectBtn a{color: #333; font-size: 4.2667vw; font-weight: 500;}
+.newVehiclePrice .newVehiclePriceHeader .selectBox{display: none;}
+.newVehiclePrice .newVehiclePriceHeader .selectBox select{color: #333; font-size: 4.2667vw; font-weight: 500;}
+.newVehiclePrice .lineTab{position: fixed; left: 0; top:calc(27.1333vw + env(safe-area-inset-top)); z-index: 10; width: 100vw; margin-left: 0; border-top: 2.6667vw solid #f5f5f5;}
+.newVehiclePrice .tabWrapJs .tabContArea .tabCont { padding-top:calc(29.1333vw + env(safe-area-inset-top));}
+.newVehiclePrice .tabWrapJs .tabContArea .tabCont.tab02 { padding-top:calc(37.1333vw + env(safe-area-inset-top));}
+.newVehiclePrice .tab01 h3{width: 100vw; height: 9.8667vw; margin-left: -8vw; padding: 0 8vw; border: 0.2667vw solid #d9d9d9; border-width: 0.2667vw 0; color: #333; font-size: 4.2667vw; font-weight: 500; line-height: 9.8667vw;}
+.newVehiclePrice .tab01 h3:first-child{border-top: 0;}
+.newVehiclePrice .tab01 ul{padding: 2vw 0;}
+.newVehiclePrice .tab01 ul li a{display: block;}
+.newVehiclePrice .tab01 ul li a dl{overflow: hidden;}
+.newVehiclePrice .tab01 ul li a dl dt{float: left; font-weight: 300; line-height: 9.8667vw;}
+.newVehiclePrice .tab01 ul li a dl dd{float: right; line-height: 9.8667vw; color: #2962c2; font-size: 4.2667vw; font-weight: 300;}
+.newVehiclePrice .tab02{padding: 10.6667vw 0;}
+.newVehiclePrice .tab03 .imgArea{width: 100vw; margin-left: -8vw;}
+.newVehiclePrice .tab03 h3{width: 100vw; height: 12.2667vw; padding: 0 8vw; margin-left: -8vw; border: 0.2667vw solid #d9d9d9; border-width: 0.2667vw 0; color: #333; font-size: 4.2667vw; font-weight: 500; line-height: 11.7333vw;}
+.newVehiclePrice .tab03 dl{padding: 2vw 0; overflow: hidden;}
+.newVehiclePrice .tab03 dl dt{clear: left; float: left; color: #888; font-weight: 300; line-height: 10.6667vw;}
+.newVehiclePrice .tab03 dl dd{float: right; color: #333; font-weight: 300;  line-height: 10.6667vw;}
+.newVehiclePrice .tempNewVehiclePrice{width: 100%;}
+
+/* newVehicleList */
+.newVehicleList{padding-top: 14vw;}
+.newVehicleList > dl{ overflow:hidden; margin: 5.3333vw 0 0 -8.00vw; width:100vw; background:#fff; border-top: 2.6667vw solid #f5f5f5; overflow: hidden;}
+.newVehicleList > dl dt{float: left; width: 24vw; border: 0.2667vw solid #eee; border-width: 0 0.2667vw 0.2667vw 0; line-height: 10.6667vw; text-align: center; vertical-align: middle;}
+.newVehicleList > dl dt img{width: 8vw; height: 8vw; vertical-align: middle;}
+.newVehicleList > dl dd:nth-child(2){float: left; width: 26vw; padding: 0 4.0000vw; border: 0.2667vw solid #eee; border-width: 0 0.2667vw 0.2667vw 0; color:#888; font-size:4.2667vw; font-weight:500; line-height:10.6667vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.newVehicleList > dl dd:nth-child(3){float: left; width: 50vw; padding: 0 4vw; border-bottom: 0.2667vw solid #eee; color: #333; font-weight: 300; line-height: 10.6667vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.newVehicleList .list{width: 100vw; margin-left: -8vw;}
+.newVehicleList .list h3{padding: 0 8vw; border-bottom: 0.2667vw solid #aeaeae; font-weight: 600; line-height: 9.8667vw;}
+.newVehicleList .list ul{border-bottom: 0.2667vw solid #eee;}
+.newVehicleList .list ul li a{display: block;}
+.newVehicleList .list ul li dl{padding: 0 8vw; overflow: hidden;}
+.newVehicleList .list ul li dl dt{clear: left; float: left; width: 17.6000vw; padding: 2.6667vw 0; color: #888; font-weight: 300; line-height: 5.0667vw;}
+.newVehicleList .list ul li dl dd{float: left; width: 66.4000vw; padding: 2.6667vw 0; font-weight: 300; line-height: 5.0667vw;}
+
+/* newVehicleDetail */
+.newVehicle .newVehicleDetail .selectBox{padding: 1.8667vw 0 2.6667vw 0;}
+.newVehicle .newVehicleDetail .selectBox select{color: #333; font-size: 4.2667vw; font-weight: 500;}
+.newVehicle .newVehicleDetail .carSearchCon{width: 100vw; margin-left: -8vw; padding: 0 8vw; border-top: 2.6667vw solid #f5f5f5;}
+.newVehicle .newVehicleDetail .carSearchCon dl.price{padding: 2.6667vw 0 5.3333vw 0; overflow: hidden;}
+.newVehicle .newVehicleDetail .carSearchCon dl.price dt{float: left; color: #333; font-size: 4.2667vw; font-weight: 500;}
+.newVehicle .newVehicleDetail .carSearchCon dl.price dt span{color: inherit}
+.newVehicle .newVehicleDetail .carSearchCon dl.price dd{float: right; color: #2962c2; font-size: 4.2667vw; font-weight: 500;}
+.newVehicle .newVehicleDetail .carSearchCon ul.basic{padding-top: 2.6667vw;}
+.newVehicle .newVehicleDetail .carSearchCon ul.basic li{position: relative; padding-left: 2.4000vw; margin-top: 2.6667vw; font-size: 4.0000vw;}
+.newVehicle .newVehicleDetail .carSearchCon ul.basic li:before{content: ''; position: absolute; left: 0; top: 2.4000vw; width: 0.5333vw; height: 0.5333vw; background: #555; border-radius: 0.2667vw;}
+.newVehicle .newVehicleDetail .carSearchCon dl.info{padding-top: 2.6667vw; overflow: hidden;}
+.newVehicle .newVehicleDetail .carSearchCon dl.info dt{clear: left; float: left; margin-top: 2.6667vw;}
+.newVehicle .newVehicleDetail .carSearchCon dl.info dt .formChkbox .icon{top: 0;}
+.newVehicle .newVehicleDetail .carSearchCon dl.info dd{float: right; margin-top: 2.6667vw; font-size: 4.2667vw; font-weight: 500;}
+.newVehicle .newVehicleDetail .carSearchCon .bulletList{padding: 2.6667vw 5.3333vw 5.3333vw 5.3333vw; margin-top: 5.3333vw; background: #f5f5f5; border-radius: 2.1333vw;}
+.newVehicle .newVehicleDetail .carSearchCon .bulletList li{margin-top: 2.1333vw; color: #888; font-size: 3.7333vw;}
+.newVehicle .newVehicleDetail .carSearchCon .bulletList li:first-child{margin-top: 0;}

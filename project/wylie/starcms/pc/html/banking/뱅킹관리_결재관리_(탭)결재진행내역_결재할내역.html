@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/jquery-ui-1.8.16.css" />
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/osite/cms_base.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.common.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.style.css" />
+    
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-1.6.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-ui-1.8.16.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery_bgiframe_min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery.validity.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mCustomScrollbar.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/ui.common.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="navSkip"><a href="#containerWrap">본문으로 바로가기</a></div>
+        <!-- header -->
+        <div class="headerWrap">            
+			<script type="text/javascript" src="../../assets/js2.0/ui.header.js" charset="utf-8"></script>
+        </div>
+        <!--// header -->
+
+        <!-- containerWrap -->
+        <div id="containerWrap" role="main" class="">
+            <div id="container">
+                <!-- 컨텐츠 내용 -->
+
+                <div class="location">
+                    <span class="blind">페이지 위치</span>
+                    <ul>
+                        <li><a href="javascript:;">Star CMS</a></li>
+                        <li><a href="javascript:;">뱅킹관리</a></li>
+						<li><a href="javascript:;">결재관리</a></li>
+						<li><a href="javascript:;">결재진행내역</a></li>
+                        <li class="curr">결제할 내역</li>
+                    </ul>
+                </div>
+                
+                <div class="pageTop">
+                    <h2 class="pageTit">결재진행 내역</h2>
+                </div>
+
+                <!-- page tab -->
+                <ul class="pageTab" role="tablist">
+                    <li><a href="javascript:;" class="on">결제할 내역</a></li>
+                    <li><a href="javascript:;">등록한 내역</a></li>
+                    <li><a href="javascript:;">중간결재 내역</a></li>
+                </ul>
+				<!-- view area 개발자 분들은 이부분 부터 쓰시면 됩니다. -->
+				<div class="viewArea inquiryAccount">
+					<!-- notiBox -->
+					<div class="notiBox">
+						<!-- accordionWrap -->
+						<dl class="accordionWrap">
+							<dt><a href="javascript:;">유의사항</a></dt>
+							<dd>
+								<div>
+									<!-- notiList -->
+									<ul class="notiList">
+										<li>거래종류명 선택 시 상세 결재요청 내역을 확인하실 수 있습니다.</li>
+										<li>거래종류에 따라 결재방법이 상이하므로 결재 시 체크박스가 비활성화 되어있는 경우, 거래종류명을 선택하여 결재하시기 바랍니다. </li>
+										<li>오후 10시까지 미결재된 거래는 자동 취소됩니다.</li>
+										<li>결재는 거래별로 당일 서비스 이용시간 이내까지 가능합니다.</li>
+									</ul>
+									<!--// notiList -->
+								</div>
+							</dd>
+						</dl>
+						<!--// accordionWrap -->
+					</div>
+					<!--// notiBox -->
+
+					<!-- 데이터 없을 경우 -->
+					<div class="dataNone">
+						<i class="icon"></i>
+						<p>조회 내역이 없습니다.</p>
+					</div>
+					<!--// 데이터 없을 경우 -->
+
+					<!-- 내역 정보 -->
+					<div class="accountInfoList mt50">
+						<dl class="list">
+							<dt>결재대상 건 수</dt>
+							<dd>2건</dd>
+
+							<dt>총 원화금액</dt>
+							<dd>150원</dd>
+
+							<dt>USD (달러)</dt>
+							<dd>0.00</dd>
+
+							<dt>EUR (유로화)</dt>
+							<dd>0.00</dd>
+
+							<dt>JPY (엔화)</dt>
+							<dd>0</dd>
+
+							<dt>CNY (위안화)</dt>
+							<dd>0</dd>
+						</dl>
+					</div>
+                    <!--// 내역 정보 -->
+				
+					<!-- 거래내역 --->
+					<div class="tableWrap type02 mt50">
+						<table summary="">
+							<caption></caption>
+							<colgroup>
+								<col width="70px;">
+								<col width="190px;">
+								<col width="70px;">
+								<col width="150px;">
+								<col width="120px;">
+								<col width="150px;">
+								<col width="90px;">
+								<col width="150px;">
+								<col width="90px;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col"><input type="checkbox" id="" title="거래내역 전체선택" /></th>
+									<th scope="col">거래종류</th>
+									<th scope="col">건수</th>
+									<th scope="col">금액</th>
+									<th scope="col">실행일자</th>
+									<th scope="col">입금 계좌번호</th>
+									<th scope="col">받는 분</th>
+									<th scope="col">출금 계좌번호</th>
+									<th scope="col">등록자</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="9">
+										<!-- 데이터 없을 경우 -->
+										<div class="dataNone">
+											<i class="icon"></i>
+											<p>조회하실 내역이 없습니다.</p>
+										</div>
+										<!--// 데이터 없을 경우 -->
+									</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" id="" title="1번재 거래 내역 선택" /></td>
+									<td>Star 급여이체</td>
+									<td>1</td>
+									<td class="price">100원</td>
+									<td>2020.00.00</td>
+									<td>110-43-6420-159</td>
+									<td>김국민</td>
+									<td>849-25-0001-450</td>
+									<td>홍길동</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" id="" title="1번재 거래 내역 선택" /></td>
+									<td>
+										<a href="javascript:;" class="underline" title="해당거래 결재화면으로 이동">부가세 즉시결재</a>
+									</td>
+									<td>1</td>
+									<td class="price">100원</td>
+									<td>2020.00.00</td>
+									<td>110-43-6420-159</td>
+									<td>김국민</td>
+									<td>849-25-0001-450</td>
+									<td>홍길동</td>
+								</tr>
+							</tbody>
+						</table>                        
+					</div>
+					<!--// 거래내역 -->
+
+					<!-- paging -->
+                    <div class="paging">
+                        <a href="javascript:;" class="arr first"><span class="blind">첫번째 페이지로 이동</span></a>
+                        <a href="javascript:;" class="arr prev"><span class="blind">이전 페이지로 이동</span></a>
+                        <a href="javascript:;" class="page active" title="현재 선택페이지"><span>1</span></a> <!--// 현재페이지 class="active" 추가 -->
+                        <a href="javascript:;" class="page"><span>2</span></a>
+                        <a href="javascript:;" class="page"><span>3</span></a>
+                        <a href="javascript:;" class="page"><span>4</span></a>
+                        <a href="javascript:;" class="page"><span>5</span></a>
+                        <a href="javascript:;" class="page"><span>6</span></a>
+                        <a href="javascript:;" class="page"><span>7</span></a>
+                        <a href="javascript:;" class="page"><span>8</span></a>
+                        <a href="javascript:;" class="page"><span>9</span></a>
+                        <a href="javascript:;" class="page"><span>10</span></a>
+                        <a href="javascript:;" class="arr next"><span class="blind">다음 페이지로 이동</span></a>
+                        <a href="javascript:;" class="arr last"><span class="blind">마지막 페이지로 이동</span></a>
+                    </div>
+					 <!--// paging -->
+					 
+					 <!-- btn height 60px -->
+					 <div class="btnWrap mt60">
+                        <a href="javascript:;" role="button" class="btn bgYellow">결재</a>
+                        <a href="javascript:;" role="button" class="btn bgGray">출금가능 금액조회</a>
+                        <a href="javascript:;" role="button" class="btn disabled">비활성화</a>
+                    </div>
+
+				</div>
+				<!--// view area -->
+
+                
+                <!--// 컨텐츠 내용 -->
+            </div>
+            <!--// container -->
+        </div>
+        <!--// containerWrap -->
+
+        <!-- footer -->
+        <div class="footerWrap">
+			<script type="text/javascript" src="../../assets/js2.0/ui.footer.js" charset="utf-8"></script>
+        </div>
+        <!-- footer -->
+    </div>
+
+</body>
+</html>

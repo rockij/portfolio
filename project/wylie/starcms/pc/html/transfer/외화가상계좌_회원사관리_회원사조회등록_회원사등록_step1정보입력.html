@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/jquery-ui-1.8.16.css" />
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/osite/cms_base.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.common.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.style.css" />
+    
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-1.6.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-ui-1.8.16.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery_bgiframe_min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery.validity.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mCustomScrollbar.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/ui.common.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="navSkip"><a href="#containerWrap">본문으로 바로가기</a></div>
+        <!-- header -->
+        <div class="headerWrap">            
+			<script type="text/javascript" src="../../assets/js2.0/ui.header.js" charset="utf-8"></script>
+        </div>
+        <!--// header -->
+
+        <!-- containerWrap -->
+        <div id="containerWrap" role="main" class="inquiry">
+            <div id="container">
+                <!-- 컨텐츠 내용 -->
+
+                <div class="location">
+                    <span class="blind">페이지 위치</span>
+                    <ul>
+                        <li><a href="javascript:;">Star CMS</a></li>
+                        <li><a href="javascript:;">이체/수납</a></li>
+                        <li><a href="javascript:;">외화가상계좌</a></li>
+                        <li><a href="javascript:;">회원사관리</a></li>
+                        <li class="curr">회원사조회/등록</li>
+                    </ul>
+                </div>
+                
+                <div class="pageTop">
+                    <h2 class="pageTit">회원사관리</h2>
+
+					<ol class="stepProcess">
+						<!--// 활성화시 li에 on 클래스 추가 - 완료된 스탭에는 li에 compleate 클래스 추가 -->
+						<li class="on">
+							<i>01</i>
+							<span>정보입력</span>
+						</li>
+						<li>
+							<i>02</i>
+							<span>등록완료</span>
+						</li>
+					</ol>				
+
+				</div>
+
+                <!-- page tab -->
+                <ul class="pageTab" role="tablist">
+                    <li><a href="javascript:;" class="on">회원사조회/등록</a></li>
+                    <li><a href="javascript:;">회원사별 계좌배분/회수</a></li>
+                </ul>
+
+				<!-- view area 개발자 분들은 이부분 부터 쓰시면 됩니다. -->
+				<div class="viewArea inquiryAccount">
+					<h3 class="contTit">회원사등록</h3>
+					<!-- notiBox -->
+					<div class="notiBox mt20">
+						<!-- accordionWrap -->
+						<dl class="accordionWrap">
+							<dt><a href="javascript:;">유의사항</a></dt>
+							<dd>
+								<div>
+									<!-- notiList -->
+									<ul class="notiList">
+										<li>회원사 추가를 원하시면 [등록], 회원사 정보 수집을 원하시면 [수정]을 클릭하십시오.</li>
+										<li>회원사 삭제를 원하실 경우, 회원사에 배분한 계좌 회수 후 [삭제]를 클릭하십시오.</li>
+									</ul>
+									<!--// notiList -->
+								</div>
+							</dd>
+						</dl>
+						<!--// accordionWrap -->
+					</div>					
+                    <!--// notiBox -->
+
+					<div class="accountInfoList mt50">
+						<div class="listHeader">
+							<dl class="orgCode">
+								<dt>기관코드</dt>
+								<dd>00000000</dd>
+							</dl>
+						</div>
+						<ul class="notiList">
+							<li>가상계좌 회원사 로그인 시 필요한 코드입니다.</li>
+							<li>회원사 최초 로그인 시 비밀번호는 회원사 ID와 동일합니다.</li>
+						</ul>
+
+					</div>
+
+					<div class="tableWrap mt50">
+                        <table summary="">
+                            <caption></caption>
+                            <colgroup>
+                                <col width="200px;">
+                                <col width="auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">회원사ID</th>
+                                    <td>00002</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="item01" class="notNull">회원사명</label></th>
+                                    <td><input type="text" id="item01" class="w300" data-placeholder="회원사명을 입력해주세요." /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="item02" class="notNull">사업자번호</label></th>
+                                    <td><input type="text" id="item02" class="w300" data-placeholder="사업자번호를 입력해주세요." /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="item03" class="notNull">담당자명</label></th>
+                                    <td><input type="text" id="item03" class="w300" data-placeholder="담당자명을 입력해주세요." /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="item04">부서</label></th>
+                                    <td><input type="text" id="item04" class="w300" data-placeholder="부서명을 입력해주세요." /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="item05">직위</label></th>
+                                    <td><input type="text" id="item05" class="w300" data-placeholder="직위를 입력해주세요." /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><span class="notNull">전화번호</span></th>
+                                    <td>
+										<div class="phone">
+											<input type="text" title="전화번호 국번" id="" />
+											<span>-</span>
+											<input type="text" title="전화번호 두번째 자리" id="" />
+											<span>-</span>
+											<input type="text" title="전화번호 세번째 자리" id="" />
+											<label for="item06">내선</label>
+											<input type="text" title="내선번호" id="item06" />
+										</div>
+									</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><span class="notNull">휴대폰번호</span></th>
+                                    <td>
+										<div class="phone">
+											<input type="text" title="휴대폰번호 첫번째 자리" id="" />
+											<span>-</span>
+											<input type="text" title="전화번호 두번째 자리" id="" />
+											<span>-</span>
+											<input type="text" title="전화번호 세번째 자리" id="" />
+										</div>									
+									</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="item07">이메일주소</label></th>
+                                    <td><input type="text" id="item07" class="w300" data-placeholder="이메일을 입력해주세요." /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+					<div class="memAgree">
+						<h5>[필수] 개인(신용)정보 수집이용 동의서(회원사 관리)</h5>
+						<p>
+							[회원사 관리] 서비스의 휴대폰번호 정보 입력을 위해서는 ⌜신용정보의 이용 및 보호에 관한 법률⌟ 제 15조 제 2항, 제 32조 제 1항, 제 33조 및 제 34조 및 <br />
+							⌜개인정보 보호법⌟ 제 15조 제 1항 제 1호, ⌜정보통신망 이용촉진 및 정보보호 등에 관한 법률⌟ 제 22조 제 1항에 따라 아해 사항에 대한 고객의 동의가 필요합니다.
+						</p>
+						<h6>[수집이용에 관한 사항]</h6>
+						<ul class="notiList">
+							<li>개인(신용)정보의 수집이용 목적 : 회원사의 정보 등록, 수정 시 휴대폰을 수집 및 이용, 저장 처리합니다.</li>
+							<li>수집하려는 개인(신용)정보의 항목 : 휴대폰번호</li>
+							<li>개인(신용)정보의 보유 및 이용 기간 : 회원사 정보 등록,수정을 위해서만 보유이용되며, 휴대폰번호 삭제 전까지 보유 이용됩니다.</li>
+							<li>
+								개인(신용)정보 수집이용 동의 거부 권리 미치 권리행사 시 불이익<br />
+								위 개인(신용)정보 수집이용에 관한 동의는 [회원사 관리] 서비스 이용을 위하여 필수이므로,<br />
+								위 사항에 동의하셔야만 [회원사 관리] 서비스 설정 및 유지가 가능합니다.
+							</li>
+						</ul>
+					</div>
+					<div class="memAgreeForm">
+						<label for="agree01">[필수] 개인(신용)정보 수집이용 동의서(회원사관리)</label>
+						<div>
+							<input type="checkbox" id="agree01" checked="checked" />
+							<span>동의함</span>
+						</div>
+					</div>
+
+					<div class="btnWrap mt60">
+                        <a href="javascript:;" role="button" class="btn bgYellow" title="확인">확인</a>
+                        <a href="javascript:;" role="button" class="btn bgGray" title="취소">취소</a>
+					</div>
+				</div>
+                <!--// view area -->
+                
+                <!--// 컨텐츠 내용 -->
+            </div>
+            <!--// container -->
+        </div>
+        <!--// containerWrap -->
+
+        <!-- footer -->
+        <div class="footerWrap">
+			<script type="text/javascript" src="../../assets/js2.0/ui.footer.js" charset="utf-8"></script>
+        </div>
+        <!-- footer -->
+    </div>
+</body>
+</html>

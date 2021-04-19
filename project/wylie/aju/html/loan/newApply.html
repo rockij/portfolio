@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<!--target-densitydpi=medium-dpi-->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<!-- 아이폰 전체화면 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<title>딜러라운지</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../assets/css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick-theme.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/swiper.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/ui.common.css" type="text/css" /> <!-- 공통 요소 -->
+
+	<!-- JS -->
+	<script type="text/javascript" src="../../assets/js/jquery.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/slick.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/Chart.min.js"></script><!-- 공통 요소 -->
+	<script type="text/javascript" src="../../assets/js/ui.common.js"></script><!-- 공통 요소 -->
+</head>
+
+<body>
+	<section id="wrap">
+		<div id="skipNavi">
+			<a href="#container">본문 바로가기</a>
+		</div>
+		<main id="newApply" class="loan">
+			<link rel="stylesheet" href="../../assets/css/ui.loan.css" type="text/css" />
+			<section id="container" class="newApply">
+
+				<div class="currStep">
+					<ul>
+						<li class="curr">신청정보입력</li> <!-- 완료시 class="end", 현재단계 class="curr" -->
+						<li>2</li>
+						<li>3</li>
+					</ul>
+				</div>
+
+				<div class="loanInfo">
+					<ul class="accordionList">
+						<li>
+							<dl>
+								<dt class="trigger on">1. 신청인정보</dt>
+								<dd>
+									<dl class="dataList">
+										<dt>사업자번호</dt>
+										<dd>123차1234</dd>
+										<dt>대표자</dt>
+										<dd>김●범</dd>
+										<dt>상호명</dt>
+										<dd>수성모터스</dd>
+										<dt>대출한도</dt>
+										<dd>8,088만원</dd>
+										<dt>대출계좌</dt>
+										<dd>(기업은행)243123255●●●●●</dd>
+										<dt>상환계좌</dt>
+										<dd>(기업은행)243123255●●●●●</dd>
+									</dl>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt class="trigger on">2. 대출신청 정보</dt>
+								<dd>
+									<dl class="dataList">
+										<dt>대출상품</dt>
+										<dd>5개월 무연장 딜러론</dd>
+										<dt>대출기간</dt>
+										<dd>5개월</dd>
+										<dt>이자율</dt>
+										<dd>3.60%</dd>
+										<dt>지연배상금<span>(연체이자율)</span></dt>
+										<dd>6.6%</dd>
+										<dt>차량설정율</dt>
+										<dd>차량당 100만원</dd>
+										<!-- 신청 금액 입력 시 출력 됨 -->
+										<dt>인지세부담</dt>
+										<dd>
+											비과세
+											<label class="formChkbox bgCheck">
+												<input type="checkbox">
+												<i class="icon"></i>
+												<span class="txt">동의</span>
+											</label>
+										</dd>
+										<!--// 신청 금액 입력 시 출력 됨 -->
+									</dl>
+									<ul class="notiList">
+										<li>(약정금리+최대3%, 법정최고금리 연24%이내)</li>
+										<li>대출원금 5천만원 이하 비과세, 인지세는 계약자와 회사가 각 부담합니다.</li> <!--// 신청 금액 입력 시 출력 됨 -->
+									</ul>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+
+				<!-- 대출차량 정보 -->
+				<div class="loanCarInfo">
+					<h3>3. 대출차량 정보</h3>
+					<!-- carApply -->
+					<div class="carApply">
+						<div class="top">
+							<strong>차량정보</strong>
+							<a href="javascript:;" class="carDel">삭제</a>
+						</div>
+						<dl class="dataList">
+							<dt>차량번호</dt>
+							<dd>23나8265</dd>
+							<dt>제조사</dt>
+							<dd>현대</dd>
+							<dt>모델</dt>
+							<dd>그랜저</dd>
+							<dt>상세모델</dt>
+							<dd>그랜저HG</dd>
+							<dt>등급</dt>
+							<dd>HG300 EXCLUSEIVE</dd>
+							<dt>세부등급</dt>
+							<dd>기본형</dd>
+							<dt>연식</dt>
+							<dd>2014</dd>
+							<dt>미션</dt>
+							<dd>자동</dd>
+						</dl>
+						<dl class="fieldList">
+							<dt>대출가능한도</dt>
+							<dd>
+								<div class="formInput">
+									<input type="text" value="1,100" placeholder="입력해 주세요." disabled>
+									<span class="unit">만원</span>
+								</div>
+							</dd>
+							<dt>대출신청금액</dt>
+							<dd>
+								<div class="formInput">
+									<input type="text" value="1,000" placeholder="입력해 주세요.">
+									<span class="unit">만원</span>
+								</div>
+							</dd>
+							<dt class="block">결제일</dt>
+							<dd>
+								<div class="radioArea">
+                                    <span class="roundRadio type2">
+                                        <input type="radio" name="payday" id="payday01">
+                                        <label for="payday01">2일</label>
+                                    </span>
+
+                                    <span class="roundRadio type2">
+                                        <input type="radio" name="payday" id="payday02">
+                                        <label for="payday02">8일</label>
+                                    </span>
+
+                                    <span class="roundRadio type2">
+                                        <input type="radio" name="payday" id="payday03">
+                                        <label for="payday03">14일</label>
+                                    </span>
+
+                                    <span class="roundRadio type2">
+                                        <input type="radio" name="payday" id="payday04" checked="">
+                                        <label for="payday04">20일</label>
+                                    </span>
+                                </div>
+							</dd>
+							<dt>초회납입일</dt>
+							<dd>
+								<div class="formInput">
+									<input type="text" value="2020.07.02" placeholder="입력해 주세요." disabled>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<!--// carApply -->
+				</div>
+				<!--// 대출차량 정보 -->
+
+				<!-- 대출차량 추가 입력폼 carApply -->
+				<div class="carApply">
+					<div class="top">
+						<strong>차량정보</strong>
+						<a href="javascript:;" class="carDel">삭제</a>
+					</div>
+					<dl class="fieldList">
+						<dt class="block">차량번호</dt>
+						<dd>
+							<div class="formArea">
+                                <span class="formInput">
+                                    <input type="text" placeholder="입력해 주세요.">
+								</span>
+                                <div class="btnArea">
+                                    <a href="#" class="darkGray disabled">심사</a>
+                                </div>
+                            </div>
+							<ul class="notiList">
+								<li>차량번호를 입력 후 심사버튼을 눌러주세요.</li>
+							</ul>
+						</dd>
+						<dt>대출가능한도</dt>
+						<dd>
+							<div class="formInput">
+								<input type="text" placeholder="입력해 주세요.">
+								<span class="unit">만원</span>
+							</div>
+						</dd>
+						<dt>대출신청금액</dt>
+						<dd>
+							<div class="formInput">
+								<input type="text" placeholder="입력해 주세요.">
+								<span class="unit">만원</span>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<!--// 대출차량 추가 입력폼 carApply -->
+
+				<div class="btnArea">
+                    <a href="#" class="white">대출차량 추가</a>
+                </div>
+
+				<dl class="priceBox">
+					<dt>총 대출금액</dt>
+					<dd>1,000만원</dd>
+				</dl>
+
+				<fieldset class="agreeList">
+                    <legend>약관 동의 체크박스</legend>
+                    <label class="formChkbox allChk">
+                        <input type="checkbox">
+                        <i class="icon"></i>
+                        <span class="txt">근정당 설정 동의</span>
+                    </label>
+                    <ul>
+                        <li>
+                            <label class="formChkbox bgnone">
+                                <input type="checkbox">
+                                <i class="icon"></i>
+                                <span class="txt">[자동차 등 특정동산 저당법]에 따른 자동차 저당권 설정 등록에 되의 합니다. </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="formChkbox bgnone">
+                                <input type="checkbox">
+                                <i class="icon"></i>
+                                <span class="txt">자동차 소유는 저당권자인 아주캐피탈㈜가 자동차 저당권 설정 시 필요한 사무 일체를 저당권자에게 위임입니다. </span>
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+
+			</section>
+			<div class="btnArea full">
+                <a href="#" class="blue">확인</a>
+            </div>
+		</main>
+	</section>
+</body>
+</html>

@@ -1,0 +1,527 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/jquery-ui-1.8.16.css" />
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/osite/cms_base.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.common.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.style.css" />
+    
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-1.6.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-ui-1.8.16.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery_bgiframe_min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery.validity.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mCustomScrollbar.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/ui.common.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="navSkip"><a href="#containerWrap">본문으로 바로가기</a></div>
+        <!-- header -->
+        <div class="headerWrap">            
+			<script type="text/javascript" src="../../assets/js2.0/ui.header.js" charset="utf-8"></script>
+        </div>
+        <!--// header -->
+
+        <!-- containerWrap -->
+        <div id="containerWrap" role="main" class="inquiry">
+            <div id="container">
+                <!-- 컨텐츠 내용 -->
+
+                <div class="location">
+                    <span class="blind">페이지 위치</span>
+                    <ul>
+                        <li><a href="javascript:;">Star CMS</a></li>
+                        <li><a href="javascript:;">조회/자금모으기</a></li>
+                        <li class="curr">KB금융그룹 조회</li>
+                    </ul>
+                </div>
+                
+                <div class="pageTop">
+                    <h2 class="pageTit">KB금융그룹 조회</h2>
+                </div>
+
+                <!-- page tab -->
+                <ul class="pageTab" role="tablist">
+                    <li><a href="javascript:;">KB국민카드</a></li>
+                    <li><a href="javascript:;" class="on">KB증권</a></li>
+                    <li><a href="javascript:;">KB손해보험</a></li>
+                    <li><a href="javascript:;">KB저축은행</a></li>
+                    <li><a href="javascript:;">KB캐피탈</a></li>
+                </ul>
+				<!-- view area 개발자 분들은 이부분 부터 쓰시면 됩니다. -->
+				<div class="viewArea inquiryAccount">
+                    
+					<!-- 2021-02-25 전체 수정 -->
+                    <!-- 증권 상세 정보 -->
+					<div class="accountInfoList">
+						<dl class="list">
+							<dt>고객등급</dt>
+                            <dd>고객등급</dd>
+                            <dt>고객투자성향</dt>
+                            <dd>위험중립형</dd>
+						</dl>
+					</div>
+                    <!--// 증권 상세 정보 -->
+
+					<div class="inqBtn mt50">
+						<div class="floatR">
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon memo"></i>메모장</a>
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon excel"></i>엑셀</a>
+							<a href="javascript:uiCommon.layer.open('accountSearchLayer');" role="button" class="sbtn small"><i class="icon print"></i>인쇄</a>
+						</div>
+					</div>
+					<div class="tableWrap type02" scrollTablexy>
+						<table summary="">
+							<caption></caption>
+							<colgroup>
+								<col width="60px;" >
+								<col width="160px;">
+								<col width="140px;">
+								<col width="120px;" >
+								<col width="120px;">
+								<col width="100px;">
+								<col width="70px;">
+								<col width="150px;">
+								<col width="120px;">
+								<col width="120px;">
+								<col width="120px;">
+								<col width="120px;">
+								<col width="120px;">
+								<col width="120px;">
+								<col width="100px;">
+								<col width="160px;">
+								<col width="100px;">
+								<col width="150px;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">No <button type="button" class="btnSort"><span class="blind">No 오름차순 정렬</span></button></th>
+									<th scope="col">상품유형 <button type="button" class="btnSort"><span class="blind">상품유형 오름차순 정렬</span></button></th>
+									<th scope="col">종류 <button type="button" class="btnSort"><span class="blind">종류 오름차순 정렬</span></button></th>
+									<th scope="col">거래내역 <button type="button" class="btnSort"><span class="blind">거래내역 오름차순 정렬</span></button></th>
+									<th scope="col">종목명 <button type="button" class="btnSort"><span class="blind">종목명 오름차순 정렬</span></button></th>
+									<th scope="col">종목코드 <button type="button" class="btnSort"><span class="blind">종목코드 오름차순 정렬</span></button></th>
+									<th scope="col">구분 <button type="button" class="btnSort"><span class="blind">구분 오름차순 정렬</span></button></th>
+									<th scope="col">평가손익 <button type="button" class="btnSort"><span class="blind">평가손익 오름차순 정렬</span></button></th>
+									<th scope="col">평가수익률 <button type="button" class="btnSort"><span class="blind">평가수익률 오름차순 정렬</span></button></th>
+									<th scope="col">잔고수량 <button type="button" class="btnSort"><span class="blind">잔고수량 오름차순 정렬</span></button></th>
+									<th scope="col">매입평균가 <button type="button" class="btnSort"><span class="blind">매입평균가 오름차순 정렬</span></button></th>
+									<th scope="col">매입금액 <button type="button" class="btnSort"><span class="blind">매입금액 오름차순 정렬</span></button></th>
+									<th scope="col">평가금액 <button type="button" class="btnSort"><span class="blind">평가금액 오름차순 정렬</span></button></th>
+									<th scope="col">현재가 <button type="button" class="btnSort"><span class="blind">현재가 오름차순 정렬</span></button></th>
+									<th scope="col">평가비중 <button type="button" class="btnSort"><span class="blind">평가비중 오름차순 정렬</span></button></th>
+									<th scope="col">계좌번호 <button type="button" class="btnSort"><span class="blind">계좌번호 오름차순 정렬</span></button></th>
+									<th scope="col">계좌별명 <button type="button" class="btnSort"><span class="blind">계좌별명 오름차순 정렬</span></button></th>
+									<th scope="col">출금가능금액 <button type="button" class="btnSort"><span class="blind">출금가능금액 오름차순 정렬</span></button></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="18">
+										<!-- 데이터 없을 경우 -->
+										<div class="dataNone">
+											<i class="icon"></i>
+											<p>조회하실 내역이 없습니다.</p>
+										</div>
+										<!--// 데이터 없을 경우 -->
+									</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>01 종합위탁</td>
+									<td>주식</td>
+									<td></td>
+									<td>광동제약</td>
+									<td>A009290</td>
+									<td>구분</td>
+									<td class="price">1,000,000</td>
+									<td>1.00%</td>
+									<td class="price">50.00</td>
+									<td class="price">900,000</td>
+									<td class="price">1,000,000</td>									
+									<td class="price">1,000,000</td>
+									<td class="price">1,000,000</td>
+									<td class="price">50.00%</td>
+									<td>00000-000-00000</td>
+									<td>계좌별명</td>
+									<td class="price">9,000,000</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>01 종합위탁</td>
+									<td>선물옵션</td>
+									<td></td>
+									<td>KB금융지주</td>
+									<td>A009290</td>
+									<td>구분</td>
+									<td class="price">1,000,000</td>
+									<td>1.00%</td>
+									<td class="price">50.00</td>
+									<td class="price">900,000</td>
+									<td class="price">1,000,000</td>									
+									<td class="price">1,000,000</td>
+									<td class="price">1,000,000</td>
+									<td class="price">50.00%</td>
+									<td>00000-000-00000</td>
+									<td>계좌별명</td>
+									<td class="price">9,000,000</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>01 종합위탁</td>
+									<td>펀드</td>
+									<td></td>
+									<td>KB금융지주</td>
+									<td>A009290</td>
+									<td>구분</td>
+									<td class="price">1,000,000</td>
+									<td>1.00%</td>
+									<td class="price">50.00</td>
+									<td class="price">900,000</td>
+									<td class="price">1,000,000</td>									
+									<td class="price">1,000,000</td>
+									<td class="price">1,000,000</td>
+									<td class="price">50.00%</td>
+									<td>00000-000-00000</td>
+									<td>계좌별명</td>
+									<td class="price">9,000,000</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>01 종합위탁</td>
+									<td>CMA</td>
+									<td><a href="javascript:uiCommon.layer.open('cmaAccountInqLayer');" role="button" class="sbtn bgWhite round" title="팝업 새창열기">거래내역</a></td>
+									<td>KB금융지주</td>
+									<td>A009290</td>
+									<td>구분</td>
+									<td class="price">-1,000,000</td>
+									<td>1.00%</td>
+									<td class="price">50.00</td>
+									<td class="price">900,000</td>
+									<td class="price">1,000,000</td>									
+									<td class="price">1,000,000</td>
+									<td class="price">1,000,000</td>
+									<td class="price">50.00%</td>
+									<td>00000-000-00000</td>
+									<td>계좌별명</td>
+									<td class="price">9,000,000</td>
+								</tr>
+							</tbody>
+						</table>                        
+					</div>
+					<!--// 2021-02-25 전체 수정 -->
+                    
+                    <div class="dataNone">
+						<i class="icon"></i>
+						<p>조회 내역이 없습니다.</p>
+                    </div>
+
+					<div class="btnWrap mt60">
+						<a href="javascript:;" role="button" class="btn bgYellow" title="목록 페이지로 이동">목록</a>
+					</div>
+				
+				</div>
+				<!--// view area -->
+
+                
+                <!--// 컨텐츠 내용 -->
+            </div>
+            <!--// container -->
+        </div>
+        <!--// containerWrap -->
+
+        <!-- footer -->
+        <div class="footerWrap">
+			<script type="text/javascript" src="../../assets/js2.0/ui.footer.js" charset="utf-8"></script>
+        </div>
+        <!-- footer -->
+    </div>
+
+    <!-- layer popup (1000x775) -->
+	 <div class="layer accountSearchLayer">
+        <a href="javascript: uiCommon.layer.close('accountSearchLayer');" class="popClose"><span class="blind">팝업 닫기</span></a>
+        <h4 class="popTitle">상세내역</h4>
+        <!-- popContent -->
+        <div class="popCont">
+			<!-- 증권 상세 정보 -->
+            <!-- 2021-02-25 전체 수정 -->
+			<div class="accountInfoList sm">
+				<dl class="list">
+					<dt>고객등급</dt>
+					<dd>고객등급</dd>
+					<dt>고객투자성향</dt>
+					<dd>위험중립형</dd>
+				</dl>
+			</div>
+			<!--// 증권 상세 정보 -->
+
+			<div class="tableWrap type02 mt50" scrollTablexy>
+				<table summary="">
+					<caption></caption>
+					<colgroup>
+						<col width="60px;" >
+						<col width="160px;">
+						<col width="140px;">
+						<col width="120px;" >
+						<col width="120px;">
+						<col width="100px;">
+						<col width="70px;">
+						<col width="150px;">
+						<col width="120px;">
+						<col width="120px;">
+						<col width="120px;">
+						<col width="120px;">
+						<col width="120px;">
+						<col width="120px;">
+						<col width="100px;">
+						<col width="160px;">
+						<col width="100px;">
+						<col width="150px;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">No</th>
+							<th scope="col">상품유형</th>
+							<th scope="col">종류</th>
+							<th scope="col">거래내역</th>
+							<th scope="col">종목명</th>
+							<th scope="col">종목코드</th>
+							<th scope="col">구분</th>
+							<th scope="col">평가손익</th>
+							<th scope="col">평가수익률</th>
+							<th scope="col">잔고수량</th>
+							<th scope="col">매입평균가</th>
+							<th scope="col">매입금액</th>
+							<th scope="col">평가금액</th>
+							<th scope="col">현재가</th>
+							<th scope="col">평가비중</th>
+							<th scope="col">계좌번호</th>
+							<th scope="col">계좌별명</th>
+							<th scope="col">출금가능금액</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="18">
+								<!-- 데이터 없을 경우 -->
+								<div class="dataNone">
+									<i class="icon"></i>
+									<p>조회하실 내역이 없습니다.</p>
+								</div>
+								<!--// 데이터 없을 경우 -->
+							</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>01 종합위탁</td>
+							<td>주식</td>
+							<td></td>
+							<td>광동제약</td>
+							<td>A009290</td>
+							<td>구분</td>
+							<td class="price">1,000,000</td>
+							<td>1.00%</td>
+							<td class="price">50.00</td>
+							<td class="price">900,000</td>
+							<td class="price">1,000,000</td>									
+							<td class="price">1,000,000</td>
+							<td class="price">1,000,000</td>
+							<td class="price">50.00%</td>
+							<td>00000-000-00000</td>
+							<td>계좌별명</td>
+							<td class="price">9,000,000</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>01 종합위탁</td>
+							<td>선물옵션</td>
+							<td></td>
+							<td>KB금융지주</td>
+							<td>A009290</td>
+							<td>구분</td>
+							<td class="price">-1,000,000</td>
+							<td>1.00%</td>
+							<td class="price">50.00</td>
+							<td class="price">900,000</td>
+							<td class="price">1,000,000</td>									
+							<td class="price">1,000,000</td>
+							<td class="price">1,000,000</td>
+							<td class="price">50.00%</td>
+							<td>00000-000-00000</td>
+							<td>계좌별명</td>
+							<td class="price">9,000,000</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>01 종합위탁</td>
+							<td>펀드</td>
+							<td></td>
+							<td>KB금융지주</td>
+							<td>A009290</td>
+							<td>구분</td>
+							<td class="price">1,000,000</td>
+							<td>1.00%</td>
+							<td class="price">50.00</td>
+							<td class="price">900,000</td>
+							<td class="price">1,000,000</td>									
+							<td class="price">1,000,000</td>
+							<td class="price">1,000,000</td>
+							<td class="price">50.00%</td>
+							<td>00000-000-00000</td>
+							<td>계좌별명</td>
+							<td class="price">9,000,000</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>01 종합위탁</td>
+							<td>CMA</td>
+							<td><a href="javascript:;" role="button" class="sbtn bgWhite round" title="팝업 새창열기">거래내역</a></td>
+							<td>KB금융지주</td>
+							<td>A009290</td>
+							<td>구분</td>
+							<td class="price">1,000,000</td>
+							<td>1.00%</td>
+							<td class="price">50.00</td>
+							<td class="price">900,000</td>
+							<td class="price">1,000,000</td>									
+							<td class="price">1,000,000</td>
+							<td class="price">1,000,000</td>
+							<td class="price">50.00%</td>
+							<td>00000-000-00000</td>
+							<td>계좌별명</td>
+							<td class="price">9,000,000</td>
+						</tr>
+					</tbody>
+				</table>                        
+			</div>
+			<!--// 2021-02-25 전체 수정 -->            
+			<div class="btnWrap small">
+				<a href="javascript:;" role="button" class="btn bgYellow" title="인쇄하기">인쇄</a>
+			</div>
+		</div>
+        <!--// popCont -->
+    </div>
+    <!--// layer popup -->
+
+	<!-- 2021-02-25 : CMA 거래내역 조회 -->
+	<div class="layer cmaAccountInqLayer">
+        <a href="javascript: uiCommon.layer.close('cmaAccountInqLayer');" class="popClose"><span class="blind">팝업 닫기</span></a>
+        <h4 class="popTitle">CMA 거래내역 조회</h4>
+        <!-- popContent -->
+        <div class="popCont">
+			<div class="tableWrap type02" scrollTablexy>
+				<table summary="">
+					<caption></caption>
+					<colgroup>
+						<col width="60px;" >
+						<col width="160px;">
+						<col width="140px;">
+						<col width="120px;" >
+						<col width="120px;">
+						<col width="100px;">
+						<col width="70px;">
+						<col width="150px;">
+						<col width="120px;">
+						<col width="120px;">
+						<col width="120px;">
+						<col width="120px;">
+						<col width="120px;">
+						<col width="120px;">
+						<col width="100px;">
+						<col width="160px;">
+						<col width="100px;">
+						<col width="150px;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">No</th>
+							<th scope="col">거래일자</th>
+							<th scope="col">거래유형</th>
+							<th scope="col">수량</th>
+							<th scope="col">예수금잔고</th>
+							<th scope="col">융자금액</th>
+							<th scope="col">수수료</th>
+							<th scope="col">연체료</th>
+							<th scope="col">적요명</th>
+							<th scope="col">단가</th>
+							<th scope="col">정산금액</th>
+							<th scope="col">유가증권잔고수량</th>
+							<th scope="col">종목명</th>
+							<th scope="col">거래금액</th>
+							<th scope="col">평가금액</th>
+							<th scope="col">부점명</th>
+							<th scope="col">세금</th>
+							<th scope="col">표준종목코드</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="18">
+								<!-- 데이터 없을 경우 -->
+								<div class="dataNone">
+									<i class="icon"></i>
+									<p>조회하실 내역이 없습니다.</p>
+								</div>
+								<!--// 데이터 없을 경우 -->
+							</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>2021.02.01</td>
+							<td>입금</td>
+							<td>123,000</td>
+							<td class="price">1,000,000,000</td>
+							<td class="price">1,000,000,000</td>
+							<td class="price">100,000</td>
+							<td class="price">100,000</td>									
+							<td>적요명</td>
+							<td class="price">100,000</td>
+							<td class="price">1,000,000</td>
+							<td>100,000</td>
+							<td></td>
+							<td class="price">1,000,000</td>
+							<td class="price">1,000,000</td>
+							<td>본점</td>
+							<td class="price">1,000,000</td>
+							<td>0000</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>2021.02.01</td>
+							<td>입금</td>
+							<td>123,000</td>
+							<td class="price">1,000,000,000</td>
+							<td class="price">1,000,000,000</td>
+							<td class="price">100,000</td>
+							<td class="price">100,000</td>									
+							<td>적요명</td>
+							<td class="price">100,000</td>
+							<td class="price">1,000,000</td>
+							<td>100,000</td>
+							<td>삼성전자(우)</td>
+							<td class="price">1,000,000</td>
+							<td class="price">1,000,000</td>
+							<td>본점</td>
+							<td class="price">1,000,000</td>
+							<td>0000</td>
+						</tr>
+					</tbody>
+				</table>                        
+			</div>
+
+			<div class="btnWrap small">
+				<a href="javascript:;" role="button" class="btn bgYellow" title="인쇄하기">인쇄</a>
+			</div>
+		</div>
+		<!--// popContent -->
+	</div>
+	<!--// 2021-02-25 :CMA 거래내역 조회 -->
+
+</body>
+</html>

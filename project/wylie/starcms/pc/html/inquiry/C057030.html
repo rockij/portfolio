@@ -1,0 +1,486 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/jquery-ui-1.8.16.css" />
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/osite/cms_base.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.common.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.style.css" />
+    
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-1.6.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-ui-1.8.16.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery_bgiframe_min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery.validity.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mCustomScrollbar.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/ui.common.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="navSkip"><a href="#containerWrap">본문으로 바로가기</a></div>
+        <!-- header -->
+        <div class="headerWrap">            
+			<script type="text/javascript" src="../../assets/js2.0/ui.header.js" charset="utf-8"></script>
+        </div>
+        <!--// header -->
+
+        <!-- containerWrap -->
+        <div id="containerWrap" role="main" class="inquiry">
+            <div id="container">
+                <!-- 컨텐츠 내용 -->
+
+                <div class="location">
+                    <span class="blind">페이지 위치</span>
+                    <ul>
+                        <li><a href="javascript:;">Star CMS</a></li>
+                        <li><a href="javascript:;">조회/자금모으기</a></li>
+                        <li><a href="javascript:;">통합계좌조회</a></li>
+                        <li class="curr">입출금</li>
+                    </ul>
+                </div>
+                
+                <div class="pageTop">
+                    <h2 class="pageTit">통합계좌조회</h2>
+                    <!-- <a href="javascript:;" title="기관/계좌 추가 등록 페이지로 이동" class="btnBankAdd">기관/계좌 추가등록</a> -->
+                </div>
+
+                <!-- page tab -->
+                <ul class="pageTab" role="tablist">
+                    <li><a href="javascript:;" class="on">입출금</a></li>
+                    <li><a href="javascript:;">예적금</a></li>
+                    <li><a href="javascript:;">대출</a></li>
+                    <li><a href="javascript:;">B2B</a></li>
+                    <li><a href="javascript:;">외환</a></li>
+                    <li><a href="javascript:;">펀드/신탁/보험</a></li>
+                    <li><a href="javsacript:;">퇴직연금</a></li>
+                    <li><a href="javsacript:;">증권/캐피탈/저축은행</a></li>
+                </ul>
+				<!-- view area 개발자 분들은 이부분 부터 쓰시면 됩니다. -->
+				<div class="viewArea inquiryAccount">
+
+					<a href="javascript:;" title="기관/계좌 추가 등록 페이지로 이동" class="btnBankAdd">기관/계좌 추가등록</a> <!-- 2021-02-03 viewArea 안으로 위치변경 -->
+					
+					<!-- notiBox -->
+					<div class="notiBox">
+						<!-- accordionWrap -->
+						<dl class="accordionWrap">
+							<dt><a href="javascript:;">유의사항</a></dt>
+							<dd>
+								<div>
+									<!-- notiList -->
+									<ul class="notiList">
+										<li>[최신잔액조회] 버튼을 클릭하시면 다른은행 계좌의 최신 잔액을 조회하실 수 있습니다. (단, 조회정보가 등록되어 있는 경우 / 인증서를 보유한 고객만 실행 가능)</li>
+										<li>[최신거래내역조회] 버튼을 클릭하시면 거래내역을 불러올 기간을 설정하는 화면으로 이동합니다.</li>
+										<li>이용 PC 변경이나 인터넷 옵션에서 캐시 삭제를 할 경우, 인증서 정보가 초기화 되어 인증서 및 자금모으기정보를 재등록하여야 합니다.</li>
+										<li>'통합자금관리 > 통합은행 / 자금모으기 환경설정 > 계좌등록관리'에서 조회정보를 등록하실 수 있습니다.</li>
+									</ul>
+									<!--// notiList -->
+								</div>
+							</dd>
+						</dl>
+						<!--// accordionWrap -->
+					</div>
+					<!--// notiBox -->
+
+					<!-- 데이터 없을 경우 -->
+					<div class="dataNone">
+						<i class="icon"></i>
+						<p>조회 내역이 없습니다.</p>
+					</div>
+					<!--// 데이터 없을 경우 -->
+
+					<div class="updateBtnArea">
+						<a href="javascript:;" role="button" class="sbtn small bgGray" title="전 계좌의 잔액만 업데이트"><i class="icon update"></i>잔액 업데이트</a>
+						<a href="javascript:;" role="button" class="sbtn small bgGray" title=""><i class="icon update"></i>전체 내역 업데이트</a>
+					</div>
+
+					<!-- 계좌 요약 -->
+					<div class="bankSummaryBox">
+						<ul>
+							<li>
+								<span>사업자 수</span>
+								<i>1</i>
+							</li>
+							<li>
+							   <span>계좌</span>
+							   <i>3</i>
+							</li>
+						</ul>
+						<div class="balance">
+							<p>총잔액<em>10,000,000,000원</em></p>
+							<span>(자동대출 50,000,000)</span>
+						</div>
+					</div>
+					 <!--// 계좌 요약-->
+
+					<div class="inquiryArea">
+						<div class="inpArea">
+							<select class="selbox round">
+								<option value="">사업자 전체</option>
+								<option value="">사업자 전체</option>
+							</select>
+							<a href="javascript:;" role="button" class="sbtn round">조회</a>
+						</div>
+					</div>
+
+					<div class="inqBtn">
+						<div class="floatL">
+							<p class="total">총 10건</p>
+						</div>
+						<div class="floatR">
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon memo"></i>메모장</a>
+							<a href="javascript:;" role="button" class="sbtn small"><i class="icon excel"></i>엑셀</a>
+							<a href="javascript:uiCommon.layer.open('accountSearchLayer');" role="button" class="sbtn small"><i class="icon print"></i>인쇄</a>
+							<a href="javascript:;" role="button" class="sbtn small" title="뱅킹관리 > 등록기관관리 화면으로 이동"><i class="icon edit"></i>계좌설정</a> <!--// 2021-03-02 추가 -->
+						</div>
+					</div>
+
+					<!-- bankAccountList --->
+					<div class="bankAccountList">
+						<!-- list set -->
+						<dl>
+							<dt>(주)와일리상사</dt>
+							<dd>
+								<!-- 2021-03-02 삭제 <div class="etc">
+									<a href="javascript:;" class="btnToggle" target-tooltip="tooltipLayer"><span class="blind">바로가기 메뉴 리스트 보기</span></a>
+									<div class="tooltipLayer">
+										<ul>
+											<li><a href="javascript:;" title="해당 계좌리스트 삭제">삭제</a></li>
+										</ul>
+									</div>
+								</div> -->
+								<ul>
+									<li>
+										<div class="innerArea">
+											<div class="info">
+												<div class="bank">
+													<img src="../../assets/images/logo/bk0004.png" alt="국민은행 로고" class="logo">
+													<em>국민은행</em>
+													<span class="date">신규 : 2020.12.24</span>
+												</div>
+												<div class="account">
+													<div class="num">
+														<span class="blind">계좌번호</span>
+														<a href="javascript:;" class="btnText" title="해당 계좌 거래내역 상세화면으로 이동">012-35-5678-901</a>
+														<a href="javascript:;" class="sbtn small round bgLightgray" title="해당 계좌 거래내역 상세화면으로 이동">조회</a>
+													</div>
+													<p class="name">KB기업종합통장 - 보통예금 (급여이체통장)</p>                                    
+												</div>
+											</div>
+											<div class="rightArea">
+												<div class="refresh">
+													<span><a href="javascript:uiCommon.layer.open('loginUnregisteredLayer');" role="button" title="오류팝업 열기" class="btnText error">잔액 업데이트 오류</a></span> <!--// 오류 -->
+													<span>거래내역 2020.12.09 16:06:49</span>
+													<a href="javascript:;" role="button" class="btnUpdate"><span class="blind">업데이트</span></a>
+												</div>
+												<div class="balance">
+													<p>
+														<i class="iconError">오류</i>
+														잔액<em>5,000,000원</em>
+														<a href="javascript:;" role="button" class="sbtn bgWhite round" title="자금모으기(바로자금모으기) 화면으로 이동">자금모으기</a> <!--// 2021-03-02 버튼 위치 이동 -->
+													</p>
+												</div>
+												<!-- <div class="btnArea">
+													<a href="javascript:;" role="button" class="sbtn bgWhite round" title="자금모으기(바로자금모으기) 화면으로 이동">자금모으기</a>
+													<a href="javascript:;" role="button" class="sbtn bgWhite round" title="이체화면으로 이동">이체</a>
+												</div> -->
+											</div>
+										</div>									                     
+									</li>
+									<li>
+										<div class="innerArea">
+											<div class="info">
+												<div class="bank">
+													<img src="../../assets/images/logo/bk0004.png" alt="국민은행 로고" class="logo">
+													<em>국민은행</em>
+													<span class="date">신규 : 2020.12.24</span>
+												</div>
+												<div class="account">
+													<div class="num">
+														<span class="blind">계좌번호</span>
+														<a href="javascript:;" class="btnText" title="해당 계좌 거래내역 상세화면으로 이동">012-35-5678-901</a>
+														<a href="javascript:;" class="sbtn small round bgLightgray" title="해당 계좌 거래내역 상세화면으로 이동">조회</a>
+													</div>
+													<p class="name">KB기업종합통장 - 보통예금 (급여이체통장)</p>                                    
+												</div>
+											</div>
+											<div class="rightArea">
+												<div class="refresh">
+													<span>잔액 2020.12.09 16:06:49</span>
+													<span>거래내역 2020.12.09 16:06:49</span>
+													<a href="javascript:;" role="button" class="btnUpdate"><span class="blind">업데이트</span></a>
+												</div>
+												<div class="balance">
+													<p>
+														잔액<em>5,000,000원</em>
+														<a href="javascript:;" role="button" class="sbtn bgWhite round" title="이체화면으로 이동">이체</a> <!--// 2021-03-02 버튼 위치 이동 -->
+													</p>
+												</div>
+												<!-- <div class="btnArea">
+													<a href="javascript:;" role="button" class="sbtn bgWhite round" title="자금모으기(바로자금모으기) 화면으로 이동">자금모으기</a>
+													<a href="javascript:;" role="button" class="sbtn bgWhite round" title="이체화면으로 이동">이체</a>
+												</div> -->
+											</div>
+										</div>
+										<!-- 2021-03-02 삭제 <div class="etc">
+											<a href="javascript:;" class="btnToggle" target-tooltip="tooltipLayer"><span class="blind">바로가기 메뉴 리스트 보기</span></a>
+											<div class="tooltipLayer">
+												<ul>
+													<li><a href="javascript:;" title="해당 계좌리스트 삭제">삭제</a></li>
+												</ul>
+											</div>
+										</div>	-->									                     
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<!--// list set -->
+
+						<dl>
+							<dt>(주)국민상사</dt>
+							<dd>
+								<!-- 2021-03-02 삭제 <div class="etc">
+									<a href="javascript:;" class="btnToggle" target-tooltip="tooltipLayer"><span class="blind">바로가기 메뉴 리스트 보기</span></a>
+									<div class="tooltipLayer">
+										<ul>
+											<li><a href="javascript:;" title="해당 계좌리스트 삭제">삭제</a></li>
+										</ul>
+									</div>
+								</div> -->
+								<ul>
+									<li>
+										<div class="innerArea">
+											<div class="info">
+												<div class="bank">
+													<img src="../../assets/images/logo/bk0004.png" alt="국민은행 로고" class="logo">
+													<em>국민은행</em>
+													<span class="date">신규 : 2020.12.24</span>
+												</div>
+												<div class="account">
+													<div class="num">
+														<span class="blind">계좌번호</span>
+														<a href="javascript:;" class="btnText" title="해당 계좌 거래내역 상세화면으로 이동">012-35-5678-901</a>
+														<a href="javascript:;" class="sbtn small round bgLightgray" title="해당 계좌 거래내역 상세화면으로 이동">조회</a>
+													</div>
+													<p class="name">KB기업종합통장 - 보통예금 (급여이체통장)</p>                                    
+												</div>
+											</div>
+											<div class="rightArea">
+												<div class="refresh">
+													<span>잔액 2020.12.09 16:06:49</span>
+													<span><a href="javascript:uiCommon.layer.open('loginUnregisteredLayer');" role="button" title="오류팝업 열기" class="btnText error">거래내역 업데이트 오류</a></span> <!--// 오류 -->
+													<a href="javascript:;" role="button" class="btnUpdate"><span class="blind">업데이트</span></a>
+												</div>
+												<div class="balance">
+													<p>
+														<i class="iconError">오류</i>
+														잔액<em>5,000,000원</em>
+														<a href="javascript:;" role="button" class="sbtn bgWhite round" title="자금모으기(바로자금모으기) 화면으로 이동">자금모으기</a> <!--// 2021-03-02 버튼 위치 이동 -->
+													</p>
+												</div>
+												<!-- <div class="btnArea">
+													<a href="javascript:;" role="button" class="sbtn bgWhite round" title="자금모으기(바로자금모으기) 화면으로 이동">자금모으기</a>
+													<a href="javascript:;" role="button" class="sbtn bgWhite round" title="이체화면으로 이동">이체</a>
+												</div> -->
+											</div>
+										</div>
+										<!-- 2021-03-02 삭제 
+										<div class="etc">
+											<a href="javascript:;" class="btnToggle" target-tooltip="tooltipLayer"><span class="blind">바로가기 메뉴 리스트 보기</span></a>
+											<div class="tooltipLayer">
+												<ul>
+													<li><a href="javascript:;" title="해당 계좌리스트 삭제">삭제</a></li>
+												</ul>
+											</div>
+										</div> -->							                     
+									</li>
+									<li>
+										<div class="innerArea">
+											<div class="info">
+												<div class="bank">
+													<img src="../../assets/images/logo/bk0004.png" alt="국민은행 로고" class="logo">
+													<em>국민은행</em>
+													<span class="date">신규 : 2020.12.24</span>
+												</div>
+												<div class="account">
+													<div class="num">
+														<span class="blind">계좌번호</span>
+														<a href="javascript:;" class="btnText" title="해당 계좌 거래내역 상세화면으로 이동">012-35-5678-901</a>
+														<a href="javascript:;" class="sbtn small round bgLightgray" title="해당 계좌 거래내역 상세화면으로 이동">조회</a>
+													</div>
+													<p class="name">KB기업종합통장 - 보통예금 (급여이체통장)</p>                                    
+												</div>
+											</div>
+											<div class="rightArea">
+												<div class="refresh">
+													<span>잔액 2020.12.09 16:06:49</span>
+													<span>거래내역 2020.12.09 16:06:49</span>
+													<a href="javascript:;" role="button" class="btnUpdate"><span class="blind">업데이트</span></a>
+												</div>
+												<div class="balance">
+													<p>
+														잔액<em>5,000,000원</em>
+														<a href="javascript:;" role="button" class="sbtn bgWhite round" title="이체화면으로 이동">이체</a> <!--// 2021-03-02 버튼 위치 이동 -->
+													</p>
+												</div>
+												<!-- <div class="btnArea">
+													<a href="javascript:;" role="button" class="sbtn bgWhite round" title="자금모으기(바로자금모으기) 화면으로 이동">자금모으기</a>
+													<a href="javascript:;" role="button" class="sbtn bgWhite round" title="이체화면으로 이동">이체</a>
+												</div> -->
+											</div>
+										</div>										                     
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					<!--// bankAccountList -->
+				
+				</div>
+				<!--// view area -->
+
+                
+                <!--// 컨텐츠 내용 -->
+            </div>
+            <!--// container -->
+        </div>
+        <!--// containerWrap -->
+
+        <!-- footer -->
+        <div class="footerWrap">
+			<script type="text/javascript" src="../../assets/js2.0/ui.footer.js" charset="utf-8"></script>
+        </div>
+        <!-- footer -->
+    </div>
+
+    <!-- window popup : 입출금 계좌조회 팝업 (1000x629) -->
+	 <div class="layer accountSearchLayer">
+        <a href="javascript: uiCommon.layer.close('accountSearchLayer');" class="popClose"><span class="blind">팝업 닫기</span></a>
+        <h4 class="popTitle">입출금 계좌조회</h4>
+        <!-- popContent -->
+        <div class="popCont">
+			<p class="tblDesc">업데이트 일시 : 2020.12.14 22:11:12</p>
+			<div class="tableWrap type02">
+				<table summary="">
+					<caption></caption>
+					<colgroup>
+						<col width="80px;">
+						<col width="70px;">
+						<col width="150px;">
+						<col width="180px;">
+						<col width="140px;">
+						<col width="100px;">
+						<col width="100px;">
+						<col width="120px;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">사업자명</th>
+							<th scope="col">금융기관</th>
+							<th scope="col">계좌번호</th>
+							<th scope="col">상품명(별명)</th>
+							<th scope="col">현재잔액(원)</th>
+							<th scope="col">신규일</th>
+							<th scope="col">잔액조회일시</th>
+							<th scope="col">거래내역조회일시</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- 데이터 없을 경우
+						<tr>
+							<td colspan="8">
+								<div class="dataNone">
+									<i class="icon"></i>
+									<p>조회하실 내역이 없습니다.</p>
+								</div>
+							</td>
+						</tr>
+						데이터 없을 경우 -->
+						<tr>
+							<td>국민상사</td>
+							<td>국민은행</td>
+							<td>00000-00-000000</td>
+							<td>KB기업종합통장-보통예금<br/>계좌별명 계좌별명</td>
+							<td class="price">1,123,000,000</td>
+							<td>2020.12.21</td>
+							<td>-</td>
+							<td>2020.12.14 22:11:12</td>
+						</tr>
+						<tr>
+							<td>국민상사</td>
+							<td>국민은행</td>
+							<td>00000-00-000000</td>
+							<td>KB기업종합통장-보통예금 계좌별명 계좌</td>
+							<td class="price">1,123,000,000</td>
+							<td>2020.12.21</td>
+							<td class="error">오류</td>
+							<td>2020.12.14 22:11:12</td>
+						</tr>
+						<tr>
+							<td>국민상사</td>
+							<td>국민은행</td>
+							<td>00000-00-000000</td>
+							<td>KB기업종합통장-보통예금 계좌별명 계좌</td>
+							<td class="price">1,123,000,000</td>
+							<td>2020.12.21</td>
+							<td>2020.12.14 22:11:12</td>
+							<td>2020.12.14 22:11:12</td>
+						</tr>
+						<tr>
+							<td>국민상사</td>
+							<td>국민은행</td>
+							<td>00000-00-000000</td>
+							<td>KB기업종합통장-보통예금 계좌별명 계좌</td>
+							<td class="price">1,123,000,000</td>
+							<td>2020.12.21</td>
+							<td class="error">오류</td>
+							<td>2020.12.14 22:11:12</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="btnWrap small">
+				<a href="javascript:;" role="button" class="btn bgYellow" title="인쇄하기">인쇄</a>
+			</div>
+		</div>
+        <!--// popCont -->
+    </div>
+    <!--// 입출금 계좌조회 팝업 -->
+
+	<!-- 로그인정보 미등록 안내 layer popup (720x597) -->
+	<div class="layer loginUnregisteredLayer">
+		<a href="javascript: uiCommon.layer.close('loginUnregisteredLayer');" class="popClose"><span class="blind">팝업 닫기</span></a>
+		<h4 class="popTitle">로그인정보(인증서/ID) 미등록 안내</h4>
+		<!-- popContent -->
+		<div class="popCont">
+			<div class="notiBox">
+				<ul class="notiList">
+					<li>일부 금융기관에 로그인정보 (인증서/ID)가 없습니다.</li>
+					<li>해당기관은 제외하고 조회됩니다.</li>
+					<li>로그인 정보를 등록하시려면 '뱅킹관리 > 계좌(카드)관리 > 인증정보관리' 에서 등록해주세요.</li>
+				</ul>				
+			</div>
+			<dl class="fieldBox">
+				<dt>사업자 : (주)홍길동 무역</dt>
+				<dd>
+					<ul class="notiList">
+                        <li>기업은행</li>
+                        <li>신한은행</li>
+                        <li>농협</li>
+                    </ul>				
+				</dd>
+			</dl>
+			<div class="btnWrap small">
+				<a href="javascript:;" role="button" class="btn bgYellow">확인</a>			
+			</div>
+		</div>
+		<!--// popCont -->
+	</div>
+	<!--// 로그인정보 미등록 안내 layer popup -->
+
+</body>
+</html>

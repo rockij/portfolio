@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<!--target-densitydpi=medium-dpi-->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<!-- 아이폰 전체화면 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<title>딜러라운지</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../assets/css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick-theme.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/swiper.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/ui.common.css" type="text/css" /> <!-- 공통 요소 -->
+
+	<!-- JS -->
+	<script type="text/javascript" src="../../assets/js/jquery.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/slick.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/Chart.min.js"></script><!-- 공통 요소 -->
+	<script type="text/javascript" src="../../assets/js/ui.common.js"></script><!-- 공통 요소 -->
+
+	<style>
+		li span{display: none; width: 10px; height: 10px; background: red;}
+	</style>
+</head>
+
+<body>
+	<section id="wrap">
+		<div id="skipNavi">
+			<a href="#container">본문 바로가기</a>
+		</div>
+		<main id="priceCarmart" class="search">
+			<link rel="stylesheet" href="../../assets/css/ui.search.css" type="text/css" />
+			<section id="container" class="priceCarmart">
+
+
+				<div class="carmartCon">
+					<h3>꺽은선, 막대 혼용</h3>
+
+					<!-- 그래프 -->
+					<div class="priceGraph">
+						<canvas id="canvasGraph"></canvas>
+					</div>
+					<!--// 그래프 -->
+
+					<!-- 그래프 -->
+					<div class="priceGraph">
+						<canvas id="canvasGraph2"></canvas>
+					</div>
+					<!--// 그래프 -->
+				
+				</div>
+
+			</section>
+
+		</main>
+	</section>
+	<script>
+
+	var config = {
+		data: {
+			labels: ['10월', '11월', '12월', '1월', '2월'],
+			datasets: [{
+				type: 'bar',
+				label: '거래완료',
+				backgroundColor: '#2962c2',
+				borderColor: '#94b0e0',
+				barPercentage: 0.5,
+				fill: false,
+				data: [6, 5, 7, 8, 3]
+			}, {
+				type: 'line',
+				label: '보유대수',
+				backgroundColor: '#333333',
+				borderColor: '#aaaaaa',
+				borderWidth: 1,
+				fill: false,
+				data: [6, 5, 7, 8, 3]
+			}]
+		},
+		options: {
+			responsive: true,
+			maintainAspectRatio: true,
+			devicePixelRatio: 1,
+			title: {
+				display: false
+			},
+			legend: {
+				display: true,
+				position: 'top',
+				labels: {
+					usePointStyle : false,
+					boxWidth : 15,
+					fontSize : 15,
+					fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif'
+				}
+
+			},
+			layout: {
+				padding:{
+					top: 0,
+					right: 0,
+					bottom: 0,
+					left: 0
+				}
+			},
+			scales: {
+				xAxes: [{
+					display: true,
+					offset: true,
+					ticks: {
+						fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif'
+					}
+				}],
+				yAxes: [{
+					display: false,
+					ticks: {
+						beginAtZero: true,
+						fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif',
+						min: 0,
+						max: 10,
+						stepSize: 5
+					}
+				}]
+			}
+		}
+	};
+
+	var config2 = {
+		data: {
+			labels: ['10월', '11월', '12월', '1월', '2월'],
+			datasets: [{
+				type: 'bar',
+				label: '거래완료',
+				backgroundColor: '#2962c2',
+				borderColor: '#94b0e0',
+				barPercentage: 0.5,
+				fill: false,
+				data: [6, 5, 7, 8, 3]
+			}, {
+				type: 'bar',
+				label: '보유대수',
+				backgroundColor: '#333333',
+				borderColor: '#aaaaaa',
+				barPercentage: 0.5,
+				fill: false,
+				data: [3, 2, 5, 4, 1]
+			}]
+		},
+		options: {
+			responsive: true,
+			maintainAspectRatio: true,
+			devicePixelRatio: 1,
+			title: {
+				display: false
+			},
+			legend: {
+				display: true,
+				position: 'top',
+				labels: {
+					usePointStyle : false,
+					boxWidth : 15,
+					fontSize : 15,
+					fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif'
+				}
+
+			},
+			layout: {
+				padding:{
+					top: 0,
+					right: 0,
+					bottom: 0,
+					left: 0
+				}
+			},
+			scales: {
+				xAxes: [{
+					stacked: true,
+					display: true,
+					offset: true,
+					ticks: {
+						fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif'
+					}
+				}],
+				yAxes: [{
+					stacked: true,
+					display: false,
+					ticks: {
+						beginAtZero: true,
+						fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif',
+						min: 0,
+						max: 10,
+						stepSize: 5
+					}
+				}]
+			}
+		}
+	};
+
+
+
+	window.onload = function() {
+		var cv = document.getElementById('canvasGraph').getContext('2d');
+		var cv2 = document.getElementById('canvasGraph2').getContext('2d');
+		var mixedChart = new Chart(cv, config);
+		var mixedChart2= new Chart(cv2, config2);
+	};
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>가입 완료 후 다른은행 등록 > step01 계좌선택</title>
+
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/jquery-ui-1.8.16.css" />
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/osite/cms_base.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.common.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.style.css" />
+    
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-1.6.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-ui-1.8.16.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery_bgiframe_min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery.validity.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mCustomScrollbar.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/ui.common.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="navSkip"><a href="#containerWrap">본문으로 바로가기</a></div>
+        <!-- header -->
+        <div class="headerWrap">            
+			<script type="text/javascript" src="../../assets/js2.0/ui.header.js" charset="utf-8"></script>
+        </div>
+        <!--// header -->
+
+        <!-- containerWrap -->
+        <div id="containerWrap" role="main" class="service">
+            <div id="container" class="">
+                <!-- 컨텐츠 내용 -->
+                
+                <div class="location">
+                    <span class="blind">페이지 위치</span>
+                    <ul>
+                        <li><a href="javascript:;">홈</a></li>
+                        <li><a href="javascript:;">뱅킹관리</a></li>
+                        <li><a href="javascript:;">등록기관관리</a></li>
+                        <li><a href="javascript:;">기관등록</a></li>
+                        <li class="curr">카드등록</li>
+                    </ul>
+                </div>
+
+                <div class="pageTop">
+                    <h2 class="pageTit">카드등록</h2>
+					<ol class="stepProcess">
+						<!--// 활성화시 li에 on 클래스 추가 - 완료된 스탭에는 li에 compleate 클래스 추가 -->
+						<li class="on compleate">
+							<i>01</i>
+							<span>등록방법 선택</span>
+						</li>
+                        <li class="on">
+							<i>02</i>
+							<span>기관/계좌선택</span>
+                        </li>
+                        <li class="">
+							<i>03</i>
+							<span>등록완료</span>
+						</li>
+					</ol>
+                </div>
+
+                <!-- view area 개발자 분들은 이부분 부터 쓰시면 됩니다. -->
+                <div class="viewArea inquiryAccount anotherAccount"><!--2021-02-15 감싸는태그 추가-->
+                    <div class="ingBox">
+                        <div class="box">
+                            <strong>계좌를 조회하고 있습니다.</strong><!--// 2021-02-18 텍스트 변경 -->
+                            <p>잠시만 기다려주세요.</p>
+                            <div class="iconArea">
+                                <span class="blind">계좌 등록 진행중인 아이콘 영역</span>
+                                <i class="ico"></i>
+                                <i class="ico"></i>
+                                <i class="ico"></i>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="myAccountSet">
+                        <h3 class="contTit">연동 가능 기관 <i class="num">3</i></h3>
+                        <p class="txt">연동을 원하지 않은 계좌는 해제해 주시기 바랍니다.</p>
+    
+                        <dl class="fieldBox myAccount">
+                            <dt>
+                                <div class="bname">
+                                    <div class="logo">
+                                        <img src="../../assets/images/logo/BK0088.png" alt="신한은행 로고">
+                                    </div>
+                                    <span>신한은행</span>
+                                    <i>3</i>
+                                </div>
+                                <!-- 2021-02-08 합계금액삭제
+                                <p class="price">10,000,000원</p>
+                                -->
+                            </dt>
+                            <dd>
+                                <!--// ***** input id 와 label for값 매칭 시켜주세요 ***** -->
+                                <input type="checkbox" value="" name="" id="checkbox01" />
+                                <label for="checkbox01">
+                                    <p class="name">
+                                        012-34-5678-901
+                                        <span>신한 기업종합통장 - 보통예금</span>
+                                    </p>
+                                    <p class="price">잔액 5,000,000원</p><!--2021-02-08 문구수정-->
+                                </label>
+                            </dd>
+                            <dd>
+                                <!--// ***** input id 와 label for값 매칭 시켜주세요 ***** -->
+                                <input type="checkbox" value="" name="" id="checkbox02" />
+                                <label for="checkbox02">
+                                    <p class="name">
+                                        012-34-5678-901
+                                        <span>신한 기업종합통장 - 보통예금</span>
+                                    </p>
+                                    <p class="price">잔액 5,000,000원</p><!--2021-02-08 문구수정-->
+                                </label>
+                            </dd>
+                        </dl>
+                        
+                        <dl class="fieldBox myAccount">
+                            <dt>
+                                <div class="bname">
+                                    <div class="logo">
+                                        <img src="../../assets/images/logo/BK0020.png" alt="우리은행 로고">
+                                    </div>
+                                    <span>우리은행</span>
+                                    <i>1</i>
+                                </div>
+                                <!-- 2021-02-08 합계금액삭제
+                                <p class="price">10,000,000원</p>
+                                -->
+                            </dt>
+                            <dd>
+                                <!--// ***** input id 와 label for값 매칭 시켜주세요 ***** -->
+                                <input type="checkbox" value="" name="" id="checkbox02_1" />
+                                <label for="checkbox02_1">
+                                    <p class="name">
+                                        012-34-5678-901
+                                        <span>우리 기업종합통장 - 보통예금</span>
+                                    </p>
+                                    <p class="price">잔액 5,000,000원</p><!--2021-02-08 문구수정-->
+                                </label>
+                            </dd>
+                        </dl>
+                        
+                        <dl class="fieldBox myAccount">
+                            <dt>
+                                <div class="bname">
+                                    <div class="logo">
+                                        <img src="../../assets/images/logo/oz_sa.png" alt="국세청 로고">
+                                    </div>
+                                    <span>국세청</span>
+                                    <i>1</i>
+                                </div>
+                            </dt>
+                            <dd>
+                                <!--// ***** input id 와 label for값 매칭 시켜주세요 ***** -->
+                                <input type="checkbox" value="" name="" id="checkbox03" />
+                                <label for="checkbox03">
+                                    <p class="name">국세청(전자세금계산서)</p>
+                                </label>
+                            </dd>
+                        </dl>
+                    </div>
+    
+                    <!-- 연동 불가 기관 -->
+                    <div class="myAccountSet disabled">                    
+                        <h3 class="contTit">연동 불가 기관 <i class="num">2</i></h3>
+                        <dl class="fieldBox myAccount">
+                            <dt>
+                                <div class="bname">
+                                    <div class="logo">
+                                        <img src="../../assets/images/logo/BK0071.png" alt="우체국 로고">
+                                    </div>
+                                    <span>우체국</span>
+                                </div>
+                            </dt>
+                            <dd>
+                                <span class="blind">연동불가</span>
+                            </dd>
+                        </dl>
+                        <dl class="fieldBox myAccount">
+                            <dt>
+                                <div class="bname">
+                                    <div class="logo">
+                                        <img src="../../assets/images/logo/BK0035.png" alt="제주은행 로고">
+                                    </div>
+                                    <span>제주은행</span>
+                                </div>
+                            </dt>
+                            <dd>
+                                <span class="blind">연동불가</span>
+                            </dd>
+                        </dl>
+                    </div>
+                    <!--// 연동 불가 기관 -->
+                    
+                    <div class="btnWrap">
+                        <a href="javascript:;" role="button" class="btn bgYellow" title="계좌연결 완료">계좌연결</a> <!--// 비활성화 class="disabled" 추가 --><!--// 2021-02-18 텍스트 변경 -->
+                    </div>
+                </div>
+                <!--// 컨텐츠 내용 -->
+            </div>
+            <!--// container -->
+        </div>
+        <!--// containerWrap -->
+
+        <!-- footer -->
+        <div class="footerWrap">
+			<script type="text/javascript" src="../../assets/js2.0/ui.footer.js" charset="utf-8"></script>
+        </div>
+        <!-- footer -->
+    </div>
+</body>
+</html>

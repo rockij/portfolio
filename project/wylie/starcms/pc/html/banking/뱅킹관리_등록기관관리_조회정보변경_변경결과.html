@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/jquery-ui-1.8.16.css" />
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/osite/cms_base.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.common.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.style.css" />
+    
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-1.6.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-ui-1.8.16.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery_bgiframe_min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery.validity.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mCustomScrollbar.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/ui.common.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="navSkip"><a href="#containerWrap">본문으로 바로가기</a></div>
+        <!-- header -->
+        <div class="headerWrap">            
+			<script type="text/javascript" src="../../assets/js2.0/ui.header.js" charset="utf-8"></script>
+        </div>
+        <!--// header -->
+
+        <!-- containerWrap -->
+        <div id="containerWrap" role="main" class="">
+            <div id="container">
+                <!-- 컨텐츠 내용 -->
+
+                <div class="location">
+                    <span class="blind">페이지 위치</span>
+                    <ul>
+                        <li><a href="javascript:;">Star CMS</a></li>
+                        <li><a href="javascript:;">뱅킹관리</a></li>
+						<li><a href="javascript:;">등록기관관리</a></li>
+                        <li class="curr">조회정보 변경</li>
+                    </ul>
+                </div>
+                
+                <div class="pageTop">
+                    <h2 class="pageTit">등록기관관리</h2>
+                </div>
+
+                <!-- page tab -->
+                <ul class="pageTab" role="tablist">
+                    <li><a href="javascript:;" class="on">조회정보 변경</a></li>
+                    <li><a href="javascript:;">KB국민은행 관리</a></li>
+                    <li><a href="javascript:;">다른기관 관리</a></li>
+                </ul>
+				<!-- view area 개발자 분들은 이부분 부터 쓰시면 됩니다. -->
+				<div class="viewArea inquiryAccount">
+
+                    <div class="anotherAccount">
+                        <div class="ingBox">
+                            <div class="box">
+                                <strong>조회정보를 변경하고 있습니다.</strong>
+                                <p>잠시만 기다려주세요.</p>
+                                <div class="iconArea">
+                                    <span class="blind">계좌 등록 진행중인 아이콘 영역</span>
+                                    <i class="ico"></i>
+                                    <i class="ico"></i>
+                                    <i class="ico"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="contTit">조회정보 변경결과</h3>
+
+					<!-- 내역 정보 -->
+					<div class="accountInfoList mt20">
+						<dl class="list">
+							<dt>성공</dt>
+                            <dd>00건</dd>
+
+                            <dt>실패</dt>
+                            <dd>00건</dd>
+						</dl>
+					</div>
+                    <!--// 내역 정보 -->
+				
+					<!-- 거래내역 --->
+					<div class="tableWrap type02 mt50">
+						<table summary="">
+							<caption></caption>
+							<colgroup>
+								<col width="90px;">
+								<col width="400px;">
+								<col width="400px;">
+								<col width="190px;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">선택</th>
+									<th scope="col">사업자명(사업자번호)</th>
+									<th scope="col">금융기관</th>
+									<th scope="col">변경결과</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="4">
+										<!-- 데이터 없을 경우 -->
+										<div class="dataNone">
+											<i class="icon"></i>
+											<p>조회하실 내역이 없습니다.</p>
+										</div>
+										<!--// 데이터 없을 경우 -->
+									</td>
+								</tr>
+								<tr>
+                                    <td><input type="checkbox" id="" title="1번재 거래 내역 선택" /></td>
+                                    <td>100-00-00000</td>
+                                    <td>국세청(전자세금계산서)</td>
+                                    <td>
+                                        <a href="javascript:;" class="btnNoline">text btn</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="" title="1번재 거래 내역 선택" /></td>
+                                    <td>100-00-00000</td>
+                                    <td>국세청(전자세금계산서)</td>
+                                    <td>
+                                        <a href="javascript:;" class="btnNoilne error">실패</a>
+                                    </td>
+								</tr>
+							</tbody>
+						</table>                        
+					</div>
+					<!--// 거래내역 -->
+
+					 <!-- btn height 60px -->
+					 <div class="btnWrap mt60">
+                        <a href="javascript:;" role="button" class="btn bgYellow">확인</a>
+                        <a href="javascript:;" role="button" class="btn bgGray">조회정보 재변경</a>
+                    </div>
+
+				</div>
+				<!--// view area -->
+
+                
+                <!--// 컨텐츠 내용 -->
+            </div>
+            <!--// container -->
+        </div>
+        <!--// containerWrap -->
+
+        <!-- footer -->
+        <div class="footerWrap">
+			<script type="text/javascript" src="../../assets/js2.0/ui.footer.js" charset="utf-8"></script>
+        </div>
+        <!-- footer -->
+    </div>
+
+</body>
+</html>

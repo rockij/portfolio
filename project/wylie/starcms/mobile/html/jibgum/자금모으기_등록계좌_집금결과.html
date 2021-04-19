@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/content.css" />
+    <script type="text/javascript" src="../../js/cms2.0/library/jquery_lib.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/cms2.0/common_ui.js" charset="utf-8"></script>
+
+    <!-- cms2.0 추가 -->
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/cms2.0/ui.style.css" />
+    <script type="text/javascript" src="../../js/cms2.0/swiper.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/cms2.0/ui.style.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content">
+            <!-- contInnerWrap -->
+            <div class="contInnerWrap"> <!--퍼블수정2021-03-11 .spacePdb0 삭제 -->
+                <!--퍼블수정2021-02-25 레이아웃 수정 -->
+                <div class="jibgeumForm">
+                    <h3 class="contTit mt0">자금모으기 결과</h3>
+                    <!--퍼블수정2021-03-11 교체삭제
+                    <div class="tableWrap">
+                        <table>
+                            <caption>입금계좌, 자금모으기실행, 자금모으기미실행 으로 구성</caption>
+                            <colgroup>
+                                <col width="108px;">
+                                <col width="auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">입금계좌</th>
+                                    <td>국민은행<br>000000-00-000000<br>: 사업자명</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">자금모으기<br>실행</th>
+                                    <td>출금계좌 17건(200,000원)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">자금모으기<br>미실행</th>
+                                    <td>출금계좌 5건(100,000원)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    -->
+
+                    <!--퍼블수정2021-03-11 교체추가 -->
+                    <div class="bankInfoList boxType">
+                        <ul>
+                            <li>
+                                <span>입금계좌</span>
+                                <em>
+                                    <b class="blk">홍길동</b>
+                                    <b class="blk">000-0000-0000</b>
+                                </em>
+                            </li>
+                            <li>
+                                <span>자금모으기 실행</span>
+                                <em>
+                                    <b class="blk">2건</b>
+                                    <b class="blk">200,000원</b>
+                                </em>
+                            </li>
+                            <li>
+                                <span>가입신청일</span>
+                                <em>
+                                    <b class="blk">1건</b>
+                                    <b class="blk">200,000원</b>
+                                </em>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--// 2021-03-11 교체추가 -->
+
+                    <h3 class="contTit mt32">출금계좌</h3>
+                    <div class="checkListWrap">
+                        <ul>
+                            <li>
+                                <div class="banklst type">
+                                    <ul>
+                                        <li>
+                                            <div class="bInfo">
+                                                <img src="../../img/cms2.0/logo/BK0020.png" class="logo" alt="우리은행">
+                                                <!--퍼블수정2021-03-03 div.txt 영역 감싸기 -->
+                                                <div class="txt">
+                                                    <h6 class="sectTit">123-45-6789 국민</h6>
+                                                    <p>
+                                                        <span>(주)국민상사</span>
+                                                        <span>기업보통예금</span>
+                                                    </p>
+                                                </div>
+                                                <!--// 2021-03-03 div.txt 영역 감싸기 -->
+                                            </div>
+                                            <span class="accountStatus">실행완료</span> <!--퍼블수정2021-03-11 위치변경으로 인한 태그 추가 /  오류일 때 클래스명 .error 추가-->
+                                        </li>
+                                        <li class="price">이체금액<strong class="wo">100,000</strong>원</li> <!--퍼블수정 2021-03-12 문구수정-->
+                                        <li class="infoset">
+                                            <ul class="accordionList">
+                                                <li>
+                                                    <a href="javascript:;" class="acc_title"> <!-- 디폴트 open일 경우 class="acc_open" 추가, span "메뉴숨기기"로 변경 필요  -->
+                                                        <b class="tit">이체정보</b>
+                                                        <!-- <b class="txt">실행완료</b> 202103-11 위치변경으로 인한 태그삭제 -->
+                                                        <span class="blind">메뉴숨기기</span>
+                                                    </a>
+                                                    <div class="accContent msslstSet">
+                                                        <ul class="mlst">
+                                                            <li>
+                                                                <span>입금계좌메모</span>
+                                                                <strong>입금메모 노출 영역</strong>
+                                                            </li>
+                                                            <li>
+                                                                <span>출금계좌메모</span>
+                                                                <strong>출금메모 노출 영역</strong>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- //copy -->
+                            <li>
+                                <div class="banklst type">
+                                    <ul>
+                                        <li>
+                                            <div class="bInfo">
+                                                <img src="../../img/cms2.0/logo/CD0301.png" class="logo" alt="우리은행">
+                                                <!--퍼블수정2021-03-03 div.txt 영역 감싸기 -->
+                                                <div class="txt">
+                                                    <h6 class="sectTit">123-45-6789 국민</h6>
+                                                    <p>
+                                                        <span>(주)국민상사</span>
+                                                        <span>기업보통예금</span>
+                                                    </p>
+                                                </div>
+                                                <!--// 2021-03-03 div.txt 영역 감싸기 -->
+                                            </div>
+                                            <span class="accountStatus">실행완료</span> <!--퍼블수정2021-03-11 위치변경으로 인한 태그 추가 /  오류일 때 클래스명 .error 추가-->
+                                        </li>
+                                        <li class="price">이체금액<strong class="wo">100,000</strong>원</li> <!--퍼블수정 2021-03-12 문구수정-->
+                                        <li class="infoset">
+                                            <ul class="accordionList">
+                                                <li>
+                                                    <a href="javascript:;" class="acc_title"> <!-- 디폴트 open일 경우 class="acc_open" 추가, span "메뉴숨기기"로 변경 필요  -->
+                                                        <b class="tit">이체정보</b>
+                                                        <!-- <b class="txt">실행완료</b> 202103-11 위치변경으로 인한 태그삭제 -->
+                                                        <span class="blind">메뉴숨기기</span>
+                                                    </a>
+                                                    <div class="accContent msslstSet">
+                                                        <ul class="mlst">
+                                                            <li>
+                                                                <span>입금계좌메모</span>
+                                                                <strong>입금메모 노출 영역</strong>
+                                                            </li>
+                                                            <li>
+                                                                <span>출금계좌메모</span>
+                                                                <strong>출금메모 노출 영역</strong>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- //copy -->
+                            <li>
+                                <div class="banklst type">
+                                    <ul>
+                                        <li>
+                                            <div class="bInfo">
+                                                <img src="../../img/cms2.0/logo/CD0301.png" class="logo" alt="우리은행">
+                                                <!--퍼블수정2021-03-03 div.txt 영역 감싸기 -->
+                                                <div class="txt">
+                                                    <h6 class="sectTit">123-45-6789 국민</h6>
+                                                    <p>
+                                                        <span>(주)국민상사</span>
+                                                        <span>기업보통예금</span>
+                                                    </p>
+                                                </div>
+                                                <!--// 2021-03-03 div.txt 영역 감싸기 -->
+                                            </div>
+                                            <span class="accountStatus error">오류</span> <!--퍼블수정2021-03-11 위치변경으로 인한 태그 추가 /  오류일 때 클래스명 .error 추가-->
+                                        </li>
+                                        <li class="price">이체금액<strong class="wo">100,000</strong>원</li> <!--퍼블수정 2021-03-12 문구수정-->
+                                        <li class="infoset">
+                                            <ul class="accordionList">
+                                                <li>
+                                                    <a href="javascript:;" class="acc_title"> <!-- 디폴트 open일 경우 class="acc_open" 추가, span "메뉴숨기기"로 변경 필요  -->
+                                                        <b class="tit">이체정보</b>
+                                                        <!-- <b class="txt eor">오류</b> 202103-11 위치변경으로 인한 태그삭제 -->
+                                                        <span class="blind">메뉴숨기기</span>
+                                                    </a>
+                                                    <div class="accContent msslstSet">
+                                                        <ul class="mlst">
+                                                            <li>
+                                                                <span>입금계좌메모</span>
+                                                                <strong>입금메모 노출 영역</strong>
+                                                            </li>
+                                                            <li>
+                                                                <span>출금계좌메모</span>
+                                                                <strong>출금메모 노출 영역</strong>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="caubx">
+                                                            <p class="tit">이용에 불편을 드려 죄송합니다</p>
+                                                            <p class="eor">오류발생코드(UKFK0993)</p>
+                                                            <!--퍼블수정2021-03-04 마크업 삭제 
+                                                            <div class="bulletWrap typeGrayRound">
+                                                                <ul>
+                                                                    <li>대표전화 1599-9999, 1588-9999, 1644-9999</li>
+                                                                </ul>
+                                                            </div>
+                                                            -->
+                                                            <p class="txt">대표전화 1599-9999, 1588-9999, 1644-999</p> <!--퍼블수정2021-03-04 마크업 추가 -->
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- //copy -->
+                        </ul>
+                    </div>
+                </div>
+                <!--// 2021-02-25 레이아웃 수정 -->
+                
+                <!--퍼블수정2021-03-11 아코디언형태의 유의사항 삭제, 하단고정 유의사항으로 추가 및 위치 수정  
+                <ul class="accordionList notiList topLine">
+                </ul>
+                -->
+                
+            </div>
+            <!--// contInnerWrap -->
+
+            <!--퍼블수정2021-03-11 아코디언형태의 유의사항 삭제, 하단고정 유의사항으로 추가 및 위치 수정   -->
+            <dl class="grayNotiBox">
+                <dt>유의사항</dt>
+                <dd>
+                    <div class="bulletWrap typeGrayRound">
+                        <ul>
+                            <li>자금모으기 실행 처리결과를 [처리결과조회]에서 꼭 확인하시기 바랍니다.</li>
+                        </ul>
+                    </div>
+                </dd>
+            </dl>
+            <!--// 2021-03-11 아코디언형태의 유의사항 삭제, 하단고정 유의사항으로 추가 및 위치 수정   -->
+
+            <div class="btnWrap full">
+                <a href="javascript:;" role="button" class="btn bgYellow">처리결과조회</a>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<!--
+	2020-06-25 		판매관련 항목 라벨텍스트 수정, 영업관련 항목 수정
+-->
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<!--target-densitydpi=medium-dpi-->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<!-- 아이폰 전체화면 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<title>딜러라운지</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../assets/css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick-theme.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/swiper.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/ui.common.css" type="text/css" /> <!-- 공통 요소 -->
+
+	<!-- JS -->
+	<script type="text/javascript" src="../../assets/js/jquery.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/slick.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/Chart.min.js"></script><!-- 공통 요소 -->
+	<script type="text/javascript" src="../../assets/js/ui.common.js"></script><!-- 공통 요소 -->
+</head>
+
+<body>
+	<section id="wrap">
+		<div id="skipNavi">
+			<a href="#container">본문 바로가기</a>
+		</div>
+		<main id="dealershipFilter" class="partner">
+			<link rel="stylesheet" href="../../assets/css/ui.partner.css" type="text/css" />
+			<section id="container" class="dealershipFilter">
+
+				<div class="filterSeleted show"> <!-- 필드 한개라도 선택됐을때 class="show" 추가 -->
+					<ul>
+						<li>
+							파트너
+							<a href="javascript:;" class="btnDelete">삭제</a>
+						</li>
+						<li>
+							카옥션
+							<a href="javascript:;" class="btnDelete">삭제</a>
+						</li>
+						<li>
+							11-30P
+							<a href="javascript:;" class="btnDelete">삭제</a>
+						</li>
+						<li>
+							파트너
+							<a href="javascript:;" class="btnDelete">삭제</a>
+						</li>
+						<li>
+							카옥션
+							<a href="javascript:;" class="btnDelete">삭제</a>
+						</li>
+					</ul>
+					<a href="javascript:;" class="btnToggle">열기</a>
+				</div>
+
+				<div class="filterArea">
+					<dl class="fieldList">
+						<dt class="block tit">단지</dt>
+						<dd>
+							<a href="javascript:;" class="btnMore">더보기</a>
+							<div class="radioArea col3"> <!-- 더보기 클릭시 class="open" 추가 -->
+								<span class="roundRadio">
+									<input type="radio" name="filter01" id="filter01_01">
+									<label for="filter01_01">A 단지</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter01" id="filter01_02" checked="">
+									<label for="filter01_02">B 단지</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter01" id="filter01_03">
+									<label for="filter01_03">C 단지</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter01" id="filter01_04">
+									<label for="filter01_04">D 단지</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter01" id="filter01_05">
+									<label for="filter01_05">E 단지</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter01" id="filter01_06">
+									<label for="filter01_06">F 단지</label>
+								</span>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="filterArea">
+					<h4 class="tit">제휴</h4>
+					<dl class="fieldList">
+						<dt class="block subTit">제휴상태</dt>
+						<dd>
+							<div class="radioArea col3">
+								<span class="roundRadio">
+									<input type="radio" name="filter02" id="filter02_01_1">
+									<label for="filter02_01_1">파트너</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter02" id="filter02_01_2">
+									<label for="filter02_01_2">일반</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter02" id="filter02_01_3">
+									<label for="filter02_01_3">비제휴</label>
+								</span>
+							</div>
+						</dd>
+						<dt class="block subTit">재고약정여부</dt>
+						<dd>
+							<div class="radioArea col2">
+								<span class="roundRadio">
+									<input type="radio" name="filter02_02" id="filter02_02_1">
+									<label for="filter02_02_1">Yes</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter02_02" id="filter02_02_2">
+									<label for="filter02_02_2">No</label>
+								</span>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="filterArea">
+					<h4 class="tit">재고금융</h4>
+					<dl class="fieldList">
+						<dt class="block subTit">사용한도</dt>
+						<dd>
+							<div class="radioArea">
+								<span class="roundRadio">
+									<input type="radio" name="filter03_01" id="filter03_01_1">
+									<label for="filter03_01_1">1억</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter03_01" id="filter03_01_2">
+									<label for="filter03_01_2">1억~3억</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter03_01" id="filter03_01_3">
+									<label for="filter03_01_3">3억~5억</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter03_01" id="filter03_01_4">
+									<label for="filter03_01_4">5억 초과</label>
+								</span>
+							</div>
+						</dd>
+						<dt class="block subTit">이용상품</dt>
+						<dd>
+							<div class="radioArea">
+								<span class="roundRadio">
+									<input type="radio" name="filter03_02" id="filter03_02_1">
+									<label for="filter03_02_1">F702</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter03_02" id="filter03_02_2">
+									<label for="filter03_02_2">F817</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter03_02" id="filter03_02_3">
+									<label for="filter03_02_3">F804</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter03_02" id="filter03_02_4">
+									<label for="filter03_02_4">기타</label>
+								</span>
+							</div>
+						</dd>
+						<dt class="block subTit">금리</dt>
+						<dd>
+							<div class="radioArea col3">
+								<span class="roundRadio">
+									<input type="radio" name="filter03_03" id="filter03_03_1">
+									<label for="filter03_03_1">5.9% 이하</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter03_03" id="filter03_03_2">
+									<label for="filter03_03_2">5.9~7.9% 이하</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter03_03" id="filter03_03_3">
+									<label for="filter03_03_3">7.9% 이상</label>
+								</span>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="filterArea">
+					<h4 class="tit">판매관련</h4>
+
+					<dl class="fieldList">
+						<dt class="block subTit">소속 딜러 수</dt>
+						<dd>
+							<div class="radioArea">
+								<span class="roundRadio">
+									<input type="radio" name="filter05_01" id="filter05_01_1">
+									<label for="filter05_01_1">3명 이하</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter05_01" id="filter05_01_2">
+									<label for="filter05_01_2">3-5명</label> <!--// 2020-06-25 수정 -->
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter05_01" id="filter05_01_3">
+									<label for="filter05_01_3">6-10명</label> <!--// 2020-06-25 수정 -->
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter05_01" id="filter05_01_4">
+									<label for="filter05_01_4">10명 이상</label>
+								</span>
+							</div>
+						</dd>
+						<dt class="block subTit">월 평균 매입 대수</dt>
+						<dd>
+							<div class="radioArea col3">
+								<span class="roundRadio">
+									<input type="radio" name="filter05_02" id="filter05_02_1">
+									<label for="filter05_02_1">10대 이하</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter05_02" id="filter05_02_2">
+									<label for="filter05_02_2">11-20대</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter05_02" id="filter05_02_3">
+									<label for="filter05_02_3">21대-30대</label> <!--// 2020-06-25 수정 -->
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter05_02" id="filter05_02_4">
+									<label for="filter05_02_4">31대-50대</label> <!--// 2020-06-25 수정 -->
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter05_02" id="filter05_02_5">
+									<label for="filter05_02_5">50대 이상</label>
+								</span>
+							</div>
+						</dd>
+						<dt class="block subTit">월 평균 판매 대수</dt>
+						<dd>
+							<div class="radioArea col3">
+								<span class="roundRadio">
+									<input type="radio" name="filter05_03" id="filter05_03_1">
+									<label for="filter05_03_1">10대 이하</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter05_03" id="filter05_03_2">
+									<label for="filter05_03_2">11-20대</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter05_03" id="filter05_03_3">
+									<label for="filter05_03_3">21대-30대</label> <!--// 2020-06-25 수정 -->
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter05_03" id="filter05_03_4">
+									<label for="filter05_03_4">31대-50대</label> <!--// 2020-06-25 수정 -->
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter05_03" id="filter05_03_5">
+									<label for="filter05_03_5">50대 이상</label>
+								</span>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="filterArea">
+					<h4 class="tit">영업관련</h4>
+					<dl class="fieldList">
+						<dt class="block subTit">영업금액(최근 2개월)</dt>
+						<dd>
+							<div class="radioArea col3">
+								<span class="roundRadio">
+									<input type="radio" name="filter06_01" id="filter06_01_1">
+									<label for="filter06_01_1">무실적</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter06_01" id="filter06_01_2">
+									<label for="filter06_01_2">5천만원 이하</label> <!-- 2020-06-25 수정 -->
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter06_01" id="filter06_01_3">
+									<label for="filter06_01_3">5천-1억 이하</label>  <!-- 2020-06-25 수정 -->
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter06_01" id="filter06_01_4">
+									<label for="filter06_01_4">1억-3억 이하</label>  <!-- 2020-06-25 수정 -->
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter06_01" id="filter06_01_5">
+									<label for="filter06_01_5">3억 이상</label> <!-- 2020-06-25 수정 -->
+								</span>
+							</div>
+						</dd>
+						<dt class="block subTit">대출건수(최근 2개월)</dt>
+						<dd>
+							<!-- 2020-06-25 항목 추가 및 수정 -->
+							<div class="radioArea col3">
+								<span class="roundRadio">
+									<input type="radio" name="filter06_02" id="filter06_02_5">
+									<label for="filter06_02_5">무실적</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter06_02" id="filter06_02_1">
+									<label for="filter06_02_1">1-5건</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter06_02" id="filter06_02_2">
+									<label for="filter06_02_2">6-10건</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter06_02" id="filter06_02_3">
+									<label for="filter06_02_3">11-20건</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter06_02" id="filter06_02_4">
+									<label for="filter06_02_4">20건 이상</label>
+								</span>
+							</div>
+							<!--// 2020-06-25 항목 추가 및 수정 -->
+						</dd>
+						<dt class="block subTit">상담건수(최근 2개월)</dt>
+						<dd>
+							<div class="radioArea col3">
+								<span class="roundRadio">
+									<input type="radio" name="filter07" id="filter07_01">
+									<label for="filter07_01">무실적</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter07" id="filter07_02">
+									<label for="filter07_02">1-5건</label> <!-- 2020-06-25 수정 -->
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter07" id="filter07_03">
+									<label for="filter07_03">6-10건</label> <!-- 2020-06-25 수정 -->
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter07" id="filter07_04">
+									<label for="filter07_04">11-20건</label>  <!-- 2020-06-25 수정 -->
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter07" id="filter07_05">
+									<label for="filter07_05">20건 이상</label>  <!-- 2020-06-25 수정 -->
+								</span>
+							</div>
+						</dd>
+						<dt class="block subTit">품질</dt>
+						<dd>
+							<div class="radioArea col3">
+								<span class="roundRadio">
+									<input type="radio" name="filter08" id="filter08_01">
+									<label for="filter08_01">부실</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter08" id="filter08_02">
+									<label for="filter08_02">주의요망</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter08" id="filter08_03">
+									<label for="filter08_03">보통</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter08" id="filter08_04">
+									<label for="filter08_04">우량</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter08" id="filter08_05">
+									<label for="filter08_05">초우량</label>
+								</span>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="filterArea">
+					<h4 class="tit">기간</h4>
+
+					<dl class="fieldList">
+						<dt class="block subTit">제휴기간</dt>
+						<dd>
+							<div class="radioArea col3">
+								<span class="roundRadio">
+									<input type="radio" name="filter09_01" id="filter09_01_1">
+									<label for="filter09_01_1">2개월 이하</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter09_01" id="filter09_01_2">
+									<label for="filter09_01_2">6개월 이하</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter09_01" id="filter09_01_3">
+									<label for="filter09_01_3">1년 이하</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter09_01" id="filter09_01_4">
+									<label for="filter09_01_4">3년 이하</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter09_01" id="filter09_01_5">
+									<label for="filter09_01_5">3년 이상</label>
+								</span>
+							</div>
+						</dd>
+						<dt class="block subTit">최근 활동일</dt>
+						<dd>
+							<div class="radioArea">
+								<span class="roundRadio">
+									<input type="radio" name="filter09_02" id="filter09_02_1">
+									<label for="filter09_02_1">3일 경과</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter09_02" id="filter09_02_2">
+									<label for="filter09_02_2">7일 경과</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter09_02" id="filter09_02_3">
+									<label for="filter09_02_3">14일 경과</label>
+								</span>
+								<span class="roundRadio">
+									<input type="radio" name="filter09_02" id="filter09_02_4">
+									<label for="filter09_02_4">30일 경과</label>
+								</span>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+			</section>
+			<div class="btnArea full">
+                <a href="#" class="lightGray">초기화</a>
+                <a href="#" class="blue">검색</a>
+            </div>
+		</main>
+	</section>
+</body>
+</html>

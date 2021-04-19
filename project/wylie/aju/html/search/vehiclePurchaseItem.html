@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!---
+	2020-06-22 		단위 %로 수정
+	2020-07-07 		input disabled 삭제
+-->
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<!--target-densitydpi=medium-dpi-->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<!-- 아이폰 전체화면 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<title>딜러라운지</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../assets/css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick-theme.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/swiper.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/ui.common.css" type="text/css" /> <!-- 공통 요소 -->
+
+	<!-- JS -->
+	<script type="text/javascript" src="../../assets/js/jquery.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/slick.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/ui.common.js"></script><!-- 공통 요소 -->
+</head>
+
+<body>
+	<section id="wrap">
+		<div id="skipNavi">
+			<a href="#container">본문 바로가기</a>
+		</div>
+		<main id="vehiclePurchaseItem" class="search">
+			<link rel="stylesheet" href="../../assets/css/ui.search.css" type="text/css" />
+			<section id="container" class="vehiclePurchaseItem">
+				<ul class="notiList">
+                    <li>
+						매입적정가격 계산에 사용되는 비용항목을 수정 할 수<br>
+						있습니다.
+					</li>
+                </ul>
+				<dl class="fieldList">
+					<dt>
+						① 상사이전비용
+						<label class="formChkbox bgCheck">
+							<input type="checkbox" checked>
+							<i class="icon"></i>
+						</label>
+					</dt>
+					<dd>
+						<div class="formInput">
+							<input type="text" placeholder="입력해 주세요.">
+							<span class="unit">만원</span>
+							<a href="javascript:;" class="btnDel">삭제</a>
+						</div>
+					</dd>
+					<dt>
+						② 고가 차량취등록세 <span>(2,850만원 이상)</span>
+						<label class="formChkbox bgCheck">
+							<input type="checkbox" checked>
+							<i class="icon"></i>
+						</label>
+					</dt>
+					<dd>
+						<div class="formInput">
+							<input type="text" value="1.05" placeholder="입력해 주세요."> <!--// 2020-07-07 disabled 삭제 -->
+							<span class="unit">%</span>  <!--// 2020-06-22 단위 %로 수정-->
+						</div>
+					</dd>
+					<dt>
+						③ 상품화 비용
+						<label class="formChkbox bgCheck">
+							<input type="checkbox" checked>
+							<i class="icon"></i>
+						</label>
+					</dt>
+					<dd>
+						<div class="formInput">
+							<input type="text" placeholder="입력해 주세요.">
+							<span class="unit">만원</span>
+							<a href="javascript:;" class="btnDel">삭제</a>
+						</div>
+					</dd>
+					<dt>
+						④ 판매마진
+						<label class="formChkbox bgCheck">
+							<input type="checkbox" checked>
+							<i class="icon"></i>
+						</label>
+					</dt>
+					<dd>
+						<div class="formInput">
+							<input type="text" placeholder="입력해 주세요.">
+							<span class="unit">만원</span>
+							<a href="javascript:;" class="btnDel">삭제</a>
+						</div>
+					</dd>
+					<dt>
+						⑤ 세율(소득세+부가세)
+						<label class="formChkbox bgCheck">
+							<input type="checkbox" checked>
+							<i class="icon"></i>
+						</label>
+					</dt>
+					<dd>
+						<div class="formInput">
+							<input type="text" value="13.3" placeholder="입력해 주세요."> <!--// 2020-07-07 disabled 삭제 -->
+							<span class="unit">%</span>  <!--// 2020-06-22 단위 %로 수정-->
+						</div>
+					</dd>
+				</dl>
+			</section>
+			<div class="btnArea full">
+                <a href="#" class="lightGray">닫기</a>
+                <a href="#" class="blue">저장</a>
+            </div>
+		</main>
+	</section>
+</body>
+
+</html>

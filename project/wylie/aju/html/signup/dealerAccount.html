@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--
+	2020-06-15 전체 필드 순서 병경
+	2020-06-17 사업자번호 신관리번호 필드 텍스트 및 마크업 수정
+	2020-06-17 종사원 사진등록 텍스트 수정
+	2020-06-17 주민등록번호 필드 텍스트 및 마크업 수정
+    2020-06-19 하단고정버튼 텍스트 수정
+    2020-07-01 주민등록번호 아래 문구 스타일 수정
+    2020-07-02 사업자번호,신관리번호 분리, 종사원번호 검색 아이콘 삭제
+    2020-07-03 은행선택 셀렉트 search 클래스 삭제
+	2020-07-06 주민등록번호 필드 교체
+-->
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <!--target-densitydpi=medium-dpi-->
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <!-- 아이폰 전체화면 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>딜러라운지</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/reset.css" type="text/css" />
+    <link rel="stylesheet" href="../../assets/css/slick.css" type="text/css" />
+    <link rel="stylesheet" href="../../assets/css/slick-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../assets/css/swiper.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../assets/css/ui.common.css" type="text/css" /> <!-- 공통 요소 -->
+
+    <!-- JS -->
+    <script type="text/javascript" src="../../assets/js/jquery.js"></script>
+    <script type="text/javascript" src="../../assets/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/slick.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/ui.common.js"></script><!-- 공통 요소 -->
+</head>
+
+<body>
+    <section id="wrap">
+        <div id="skipNavi">
+            <a href="#container">본문 바로가기</a>
+        </div>
+        <main id="dealerAccount" class="signup">
+
+            <link rel="stylesheet" href="../../assets/css/ui.signup.css" type="text/css" />
+
+            <section id="container" class="dealerAccount">
+
+                <form>
+                    <fieldset>
+                        <legend>회원가입 기본정보 입력폼</legend>
+						<!-- 2020-06-15 필드 순서 변경 -->
+                        <div class="fieldRowArea">
+                            <dl class="fieldList">
+                                <dt class="block">시도</dt>
+                                <dd>
+                                    <div class="selectBox">
+                                        <select>
+                                            <option>선택해 주세요.</option>
+                                        </select>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="fieldList">
+                                <dt class="block">지역</dt>
+                                <dd>
+                                    <div class="selectBox">
+                                        <select>
+                                            <option>선택해 주세요.</option>
+                                        </select>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+						<dl class="fieldList">
+                            <dt>단지</dt>
+                            <dd>
+                                <div class="selectBox">
+                                    <select>
+                                        <option>선택해 주세요.</option>
+                                    </select>
+                                </div>
+                            </dd>
+                            <dt>상사명</dt>
+                            <dd>
+                                <div class="formInput">
+                                    <input type="text" placeholder="입력해 주세요.">
+                                </div>
+                            </dd>
+                            <dt>대표자명</dt>
+                            <dd>
+                                <div class="formInput">
+                                    <input type="text" placeholder="입력해 주세요.">
+                                </div>
+                            </dd>
+							<!-- 2020-07-02 사업자번호, 신관리사업번호 분리 -->
+                            <dt>사업자번호</dt>
+                            <dd>
+								<div class="formInput">
+									<input type="text" placeholder="입력해 주세요.">
+								</div>
+                            </dd>
+                            <dt>신관리사업번호</dt>
+                            <dd>
+								<div class="formInput">
+									<input type="text" placeholder="입력해 주세요.">
+								</div>
+                            </dd>
+                            <!--// 2020-07-02 사업자번호, 신관리사업번호 분리 -->
+                            <dt class="block">사업자등록증사진등록</dt>
+                            <dd>
+                                <!-- fileAddBox -->
+                                <label class="fileAddBox">
+                                    <input type="file">
+                                    <!-- 첨부이미지 -->
+                                    <div class="img">
+                                        <img src="../../assets/img/temp/temp_idcard.png" alt="">
+                                    </div>
+                                    <!--// 첨부이미지 -->
+                                </label>
+                                <!--// fileAddBox -->
+                            </dd>
+							<dt>종사원번호</dt>
+                            <dd>
+                                <!-- 2020-07-02 검색 아이콘 삭제 -->
+								<div class="formInput">
+									<input type="text" placeholder="입력해 주세요.">
+								</div>
+                                <!--// 2020-07-02 검색 아이콘 삭제 -->
+                                <!-- <p class="correct">종사원 번호가 확인되었습니다.</p> -->
+                            </dd>
+							<!-- 2020-06-17 텍스트 수정 -->
+                            <dt class="block">종사원증 사진 등록</dt>
+							<!--// 2020-06-17 텍스트 수정 -->
+                            <dd>
+                                <!-- fileAddBox -->
+                                <label class="fileAddBox">
+                                    <input type="file">
+                                    <!-- 첨부이미지 -->
+                                    <div class="img">
+                                        <img src="../../assets/img/temp/temp_idcard.png" alt="">
+                                    </div>
+                                    <!--// 첨부이미지 -->
+                                </label>
+                                <!--// fileAddBox -->
+                            </dd>
+							<dt>이름</dt>
+                            <dd>
+                                <div class="formInput">
+                                    <input type="text" value="김아주" placeholder="입력해 주세요." disabled>
+                                </div>
+                            </dd>
+                            <dt>휴대폰번호</dt>
+                            <dd>
+                                <div class="formInput">
+                                    <input type="text" value="0123456789" placeholder="입력해 주세요." disabled>
+                                </div>
+                            </dd>
+                            <dt class="block">주민등록번호</dt> <!-- 2020-06-05 dt,dd 두줄처리시 dt class="block" 추가 -->
+							<!-- 2020-06-17 마크업 수정 -->
+                            <dd>
+								<div class="idNumArea">
+									<span class="formInput">
+										<input type="tel" placeholder="YYMMDD">
+									</span>
+									<em>-</em>
+									<!-- 2020-07-06 필드 교체 -->
+									<input type="password" id="pw01" maxlength="7" value="" placeholder="입력해 주세요.">
+								</div>
+                                <!-- 2020-07-01 문구 스타일 수정 -->
+								<ul class="notiList">
+                                    <li>아주캐피탈의 금융거래 중개를 위한 중개 수수료지급 목적으로 주민번호를 수집합니다.</li>
+                                </ul>
+                                <!--// 2020-07-01 문구 스타일 수정 -->
+                            </dd>
+							<!--// 2020-06-17 마크업 수정 -->
+							<dt class="block">수수료 지급 계좌</dt>
+                            <dd>
+                                <!-- selectBtn -->
+                                <div class="selectBtn"> <!--// 2020-07-03 search 클래스 삭제 -->
+                                    <a href="#">선택해 주세요.</a>
+                                </div>
+                                <!--// selectBtn -->
+                                <div class="formArea">
+                                    <span class="formInput">
+                                        <input type="text" placeholder="입력해 주세요.">
+                                    </span>
+                                    <div class="btnArea">
+                                        <a href="#" class="darkGray disabled">계좌검증</a> <!-- 2020-05-25 수정 -->
+                                    </div>
+                                </div>
+                                <p class="error">입력하신 계좌정보가 정확하지 않습니다.<br /> 확인 후 다시 입력해 주세요.</p>
+                            </dd>
+                            <dt>가입경로</dt>
+                            <dd>
+                                <div class="selectBox">
+                                    <select>
+                                        <option>선택해 주세요.</option>
+                                    </select>
+                                </div>
+                            </dd>
+                        </dl>
+
+                    </fieldset>
+                </form>
+
+            </section>
+
+            <div class="btnArea full">
+                <a href="#" class="blue disabled">다음</a> <!--// 2020-06-19 텍스트 수정 -->
+            </div>
+
+        </main>
+    </section>
+</body>
+
+</html>

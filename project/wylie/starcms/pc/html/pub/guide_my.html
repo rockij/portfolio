@@ -1,0 +1,653 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/jquery-ui-1.8.16.css" />
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/osite/cms_base.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.common.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.style.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.style_my.css" />
+      
+    
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-1.6.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-ui-1.8.16.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery_bgiframe_min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery.validity.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mCustomScrollbar.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/ui.common.js" charset="utf-8"></script>
+
+    <style>
+        h2.guideTit { margin:15px 0; font-size:24px; color:#222; font-weight:normal;}
+        .guide_box {position: relative; margin-bottom:30px; padding-bottom:30px; border-bottom:1px solid #ddd;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="navSkip"><a href="#containerWrap">본문으로 바로가기</a></div>
+
+        <!-- containerWrap -->
+        <div id="containerWrap" role="main" class="1depth 클래스">
+            <div id="container" class="페이지ID">
+                <!-- 컨텐츠 내용 -->
+                
+                <div class="accountInfoList typeBold mt50">
+                    <dl class="list">
+                        <dt>자금모으기그룹코드</dt>
+                        <dd class="full">08720004</dd>
+                    </dl>
+                </div>
+
+                <br>
+
+                <div class="roundGrayBox mt30">
+                    <p class="txt">귀 행이 마케팅목적으로 기업고객 정보를 활용하는 것에 동의합니다.</p>
+                </div>
+
+                <br>
+
+                <div class="tableWrap mt50">
+                    <table summary="">
+                        <caption></caption>
+                        <colgroup>
+                            <col width="200px;">
+                            <col width="880px;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">입금계좌메모</th>
+                                <td >
+                                    <div class="formWrap">
+                                        <input type="password" class="w300" id="form03" value="" placeholder="메모를 입력해 주세요.">
+                                    </div>
+                                    <p class="infoTxt">입금계좌메모 미입력시 "자금모으기_출금계좌 예금주명"으로 표기됩니다.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">다른은행계좌 중간자금모으기</th>
+                                <td colspan="3">
+                                    <ul class="formList inlineB">
+                                        <li>
+                                            <input type="radio" id="inquiry01" name="inquiry">
+                                            <label for="inquiry01">미사용</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="inquiry02" name="inquiry">
+                                            <label for="inquiry02">사용</label>
+                                        </li>
+                                    </ul>
+                                    <a href="javascript:;" role="button" class="sbtn">다른은행중간자금모으기계좌선택</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">입금가능여부</th>
+                                <td>
+                                    <ul class="formList">
+                                        <li>
+                                            <input type="radio" id="popupRadio01_1" name="popupRadio01">
+                                            <label for="popupRadio01_1">미설정</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="popupRadio01_2" name="popupRadio01">
+                                            <label for="popupRadio01_2">설정</label>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">입금가능기간</th>
+                                <td>
+                                    <ul class="formList">
+                                        <li>
+                                            <input type="radio" id="popupRadio02_1" name="popupRadio02">
+                                            <label for="popupRadio02_1">입금가능</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="popupRadio02_2" name="popupRadio02">
+                                            <label for="popupRadio02_2">입금불가</label>
+                                        </li>
+                                    </ul>
+                                    <div class="dateInput mt20">
+                                        <div class="inpArea">
+                                            <input type="text" value="2020.12.11" data-placeholder="입력해주세요" class="isValue">
+                                            <button type="button" class="btnIcon calendar"><span class="blind">날짜 선택</span></button> 
+                                        </div>
+                                        <span>~</span>
+                                        <div class="inpArea">
+                                            <input type="text" value="2020.12.11" data-placeholder="입력해주세요" class="isValue">
+                                            <button type="button" class="btnIcon calendar"><span class="blind">날짜 선택</span></button> 
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">회원사구분</th>
+                                <td>
+                                    <select class="selbox w300">
+                                        <option value="" selected="selected">회원사를 선택하세요.</option>
+                                        <option value="">회원사를 선택하세요.</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">고객명</th>
+                                <td>
+                                    <div class="formOtherType01">
+                                        <ul class="formList">
+                                            <li>
+                                                <input type="radio" id="inquiry01" name="inquiry" checked="checked">
+                                                <label for="inquiry01">업체명만 표시</label>
+                                            </li>
+                                        </ul>
+                                        <input type="text" class="w300" data-placeholder="(주)국민산업">
+                                    </div>
+                                    <div class="formOtherType01 mt20">
+                                        <ul class="formList">
+                                            <li>
+                                                <input type="radio" id="inquiry02" name="inquiry">
+                                                <label for="inquiry02">업체명 + 추가입력</label>
+                                            </li>
+                                        </ul>
+                                        <input type="text" class="w300" data-placeholder="(주)국민산업" disabled="true">
+                                        <span>-</span>
+                                        <input type="text" class="w300" data-placeholder="(주)국민산업" disabled="true">
+                                    </div>
+                                    <p class="infoTxt">
+                                        입금 시 보여지는 가상계좌 수취인명<br/>
+                                        추가입력을 포함한 전체 고객명 - 한글 15자, 영문/숫자 30자 이내 입력
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">등록고유번호</th>
+                                <td>
+                                    <input type="text" class="w300" data-placeholder="등록고유번호를 입력하세요.">
+                                    <p class="infoTxt">
+                                        가상계좌 입금내역 조회 시 등록고유번호에 입력한 내용으로 입금자 확인 가능(주민등록번호 입력 불가)<br />
+                                        한글 8자, 영문/숫자 16자 이내 입력 가능
+                                    </p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">입금가능여부</th>
+                                <td>
+                                    <ul class="formList">
+                                        <li>
+                                            <input type="radio" id="inquiry03" name="inquiry2" checked />
+                                            <label for="inquiry03">입금가능</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="inquiry04" name="inquiry2" />
+                                            <label for="inquiry04">입금불가</label>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">입금가능기간</th>
+                                <td>
+                                    <ul class="formList">
+                                        <li>
+                                            <input type="radio" id="inquiry05" name="inquiry3" checked />
+                                            <label for="inquiry05">미설정</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="inquiry06" name="inquiry3" />
+                                            <label for="inquiry06">설정</label>
+                                        </li>
+                                    </ul>
+                                    <div class="dateInput mt20">
+                                        <div class="inpArea">
+                                            <input type="text" value="2020.12.11" data-placeholder="입력해주세요" class="isValue" disabled>
+                                            <button type="button" class="btnIcon calendar"><span class="blind">날짜 선택</span></button> 
+                                        </div>
+                                        <span>~</span>
+                                        <div class="inpArea">
+                                            <input type="text" value="2020.12.11" data-placeholder="입력해주세요" class="isValue">
+                                            <button type="button" class="btnIcon calendar"><span class="blind">날짜 선택</span></button> 
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">입금가능시간</th>
+                                <td>
+                                    <ul class="formList">
+                                        <li>
+                                            <input type="radio" id="inquiry07" name="inquiry4" checked />
+                                            <label for="inquiry07">미설정</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="inquiry08" name="inquiry4" />
+                                            <label for="inquiry08">설정</label>
+                                        </li>
+                                    </ul>
+                                    <div class="formOtherType02 mt20">
+                                        <select class="selbox" disabled="disabled">
+                                            <option value="" selected="selected">09</option>
+                                        </select>											
+                                        <em>시</em>
+                                        <select class="selbox" disabled="disabled">
+                                            <option value="" selected="selected">09</option>
+                                        </select>											
+                                        <em>분</em>
+                                        <span>~</span>
+                                        <select class="selbox" disabled="disabled">
+                                            <option value="" selected="selected">09</option>
+                                        </select>											
+                                        <em>시</em>
+                                        <select class="selbox" disabled="disabled">
+                                            <option value="" selected="selected">09</option>
+                                        </select>											
+                                        <em>분</em>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">입금가능횟수</th>
+                                <td>
+                                    <div class="formOtherType03">
+                                        <ul class="formList">
+                                            <li>
+                                                <input type="radio" id="inquiry09" name="inquiry5" checked />
+                                                <label for="inquiry09">미설정</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="inquiry10" name="inquiry5" />
+                                                <label for="inquiry10">설정</label>
+                                            </li>
+                                        </ul>
+                                        <label for="input01" class="blind">입금가능횟수</label><input type="text" id="input01" class="w300" disabled="true">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">입금가능금액</th>
+                                <td>
+                                    <div class="formOtherType03">
+                                        <ul class="formList">
+                                            <li>
+                                                <input type="radio" id="inquiry11" name="inquiry6" checked />
+                                                <label for="inquiry11">미설정(자유입금)</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="inquiry12" name="inquiry6" />
+                                                <label for="inquiry12">설정(정액입금)</label>
+                                            </li>
+                                        </ul>
+                                        <label for="input01" class="blind">설정(정액입금)</label><input type="text" id="input01" class="w300" disabled="true">
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <br>
+
+                <div class="tableWrap type02">
+                    <table summary="">
+                        <caption></caption>
+                        <colgroup>
+                            <col width="64px;">
+                            <col width="228px;">
+                            <col width="208px;">
+                            <col width="240px;">
+                            <col width="340px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col"><input type="checkbox" id="" title="전체선택"></th>
+                                <th scope="col">자금모으기그룹명</th>
+                                <th scope="col">상품명</th>
+                                <th scope="col">입금계좌</th>
+                                <th scope="col">출금계좌</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" id="" title="1번재 거래 내역 선택"></td>
+                                <td>원자재 납부그룹01</td>
+                                <td>KB기업보통예금</td>
+                                <td>000-00-000000</td>
+                                <td>
+                                <td>
+                                    <a href="javascript:;" class="underline" title="해당 계좌구성확인 팝업으로 이동">총 10건 (KB국민은행 : 6건, 다른은행 : 4건)</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="" title="1번재 거래 내역 선택"></td>
+                                <td>원자재 납부그룹01</td>
+                                <td>KB기업보통예금</td>
+                                <td>000-00-000000</td>
+                                <td>
+                                    <a href="javascript:;" class="underline red" title="해당 계좌구성확인 팝업으로 이동">총 10건 (KB국민은행 : 6건, 다른은행 : 4건)</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>                        
+                </div>
+
+                <br>
+
+                <a href="javascript:;" role="button" class="sbtn small"><i class="icon fixed"></i>수정</a>
+                <a href="javascript:;" role="button" class="sbtn small"><i class="icon withdrawalAccountSelect"></i>출금계좌선택</a>
+
+                <br>
+
+                <div class="accountInfoList typeAddBtn mt40">
+                    <div class="listHeader sm">
+                        <strong class="listTit">나의 정보</strong>
+                    </div>
+
+                    <dl class="list">
+                        <dt>사용자</dt>
+                        <dd class="full">
+                            <div class="lineBox">
+                                <ul class="inlineWrap">
+                                    <li>
+                                        <div class="unit">홍길동(hong)</div>
+                                        <div class="unit">부서명</div>
+                                        <div class="unit">직위</div>
+                                    </li>
+                                </ul>
+                                <div class="btnRightArea">
+                                    <a href="javascript:;" role="button" class="sbtn bgWhite round">거래내역</a>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    
+                    <dl class="list">
+                        <dt>연락처</dt>
+                        <dd class="full">
+                            <div class="lineBox">
+                                <ul class="inlineWrap">
+                                    <li>
+                                        <div class="unit">010-1111-1111</div>
+                                        <div class="unit">070-0000-0000</div>
+                                        <div class="unit">abcd@naver.com</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </dd>
+                    </dl>
+
+                    <dl class="list">
+                        <dt>인증서</dt>
+                        <dd class="full">
+                            <div class="lineBox">
+                                <ul class="inlineWrap">
+                                    <li>
+                                        <div class="unit">총 3개 등록</div>
+                                    </li>
+                                </ul>
+                                <div class="btnRightArea">
+                                    <a href="javascript:;" role="button" class="sbtn bgWhite round">등록현황</a>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+
+                    <dl class="list">
+                        <dt>최근접속</dt>
+                        <dd class="full">
+                            <div class="lineBox">
+                                <ul class="inlineWrap">
+                                    <li>
+                                        <div class="unit">2018.02.06</div>
+                                        <div class="unit">15:42:22 (IP:100.100.100.100)</div>
+                                    </li>
+                                </ul>
+                                <div class="btnRightArea">
+                                    <a href="javascript:;" role="button" class="sbtn bgWhite round">등록관리</a>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+
+                    <dl class="list">
+                        <dt>인증서</dt>
+                        <dd class="full">
+                            <div class="lineBox">
+                                <ul class="inlineWrap">
+                                    <li>
+                                        <div class="unit">마케팅 정보 활용 동의 (2020.12.31)</div>
+                                    </li>
+                                </ul>
+                                <div class="btnRightArea">
+                                    <a href="javascript:;" role="button" class="sbtn bgWhite round">변경</a>
+                                </div>
+                            </div>
+                            <div class="lineBox">
+                                <ul class="inlineWrap">
+                                    <li>
+                                        <div class="unit">KB금융그룹 상품・서비스 제공<span class="error">미동의</span> </div>
+                                    </li>
+                                </ul>
+                                <div class="btnRightArea">
+                                    <a href="javascript:;" role="button" class="sbtn bgWhite round">변경</a>
+                                </div>
+                            </div>
+                            <div class="lineBox">
+                                <ul class="inlineWrap">
+                                    <li>
+                                        <div class="unit">KB금융 오픈API 서비스 <span class="error">미동의</span></div>
+                                    </li>
+                                </ul>
+                                <div class="btnRightArea">
+                                    <a href="javascript:;" role="button" class="sbtn bgWhite round">변경</a>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+
+                    <dl class="list">
+                        <dt>업무권한</dt>
+                        <dd class="full">
+                            <div class="lineBox">
+                                <ul class="inlineWrap">
+                                    <li>
+                                        <div class="unit">일반서비스</div>
+                                        <div class="unit">대량이체</div>
+                                        <div class="unit">급여이체</div>
+                                        <div class="unit">타행거액자금이체</div>
+                                        <div class="unit">본지사관리</div>
+                                        <div class="unit">가상계좌</div>
+                                        <div class="unit">예금주 조회</div>
+                                        <div class="unit">특정금전신탁</div>
+                                        <div class="unit">B2B결재</div>
+                                        <div class="unit">외환</div>
+                                        <div class="unit">퇴직연금</div>
+                                        <div class="unit">Star 타행거액자금이체</div>
+                                        <div class="unit">Star 통합자금관리관리</div>
+                                        <div class="unit">Star 대량이체</div>
+                                        <div class="unit">Star 급여이체</div>
+                                    </li>
+                                </ul>
+                                <div class="btnRightArea">
+                                    <a href="javascript:;" role="button" class="sbtn bgWhite round">상세보기</a>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+
+                    <dl class="list">
+                        <dt>계좌권한</dt>
+                        <dd class="full">
+                            <div class="lineBox">
+                                <ul class="inlineWrap">
+                                    <li>
+                                        <div class="unit">지정출금계좌 <div class="numRound"> <span class="num">20</span> </div></div>
+                                        <div class="unit">지정입금계좌 <div class="numRound"> <span class="num">1</span> </div></div>
+                                        <div class="unit">자금모으기가능계좌 <div class="numRound"> <span class="num">1</span> </div></div>
+                                        <div class="unit">자사/ID 이체계좌 <div class="numRound"> <span class="num">1</span> </div></div>
+                                        <div class="unit">조회계좌 <div class="numRound"> <span class="num">5</span><span class="txt">전계좌</span></div></div>
+                                    </li>
+                                </ul>
+                                <div class="btnRightArea">
+                                    <a href="javascript:;" role="button" class="sbtn bgWhite round">상세보기</a>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    
+                </div>
+            
+                <div class="listRLWrap mt30">
+                    <div class="listLeftWrap">
+                        <div class="listRoundGrayWrap type01">
+                            <h5>이체 한도</h5>
+                            <div class="listRoundGrayContents">
+                                <dl>
+                                    <dt>1일 이체한도</dt>
+                                    <dd>5,000,000,000원</dd>
+                                </dl>
+                                <dl>
+                                    <dt>1회 이체한도</dt>
+                                    <dd>5,000,000,000원</dd>
+                                </dl>
+                                <dl>
+                                    <dt>1일 누적금액</dt>
+                                    <dd>5,000원</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="listRightWrap">
+                        <div class="listRoundGrayWrap type02">
+                            <h5>결재관리</h5>
+                            <div class="listRoundGrayContents">
+                                <dl>
+                                    <dt>등록한 내역</dt>
+                                    <dd><a href="javascript:;" class="underline">1건</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>결제할 내역</dt>
+                                    <dd><a href="javascript:;" class="underline">1건</a></dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="listRoundGrayWrap type02">
+                            <h5>서비스 가입 현황 <a href="javascript:;" class="sbtn small round bgLightgray" title="star cms서비스가입이나 서비스관리 화면으로 이동">변경/해지</a></h5>
+                            <div class="listRoundGrayContents">
+                                <dl>
+                                    <dt>Star CMS</dt>
+                                    <dd>1개</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Star CMS Global</dt>
+                                    <dd>1개</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="tableWrap type02 tdBorder mt30">
+                    <table summary="">
+                        <caption></caption>
+                        <colgroup>
+                            <col width="250px;">
+                            <col width="415px;">
+                            <col width="415px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th scope="col">변경전</th>
+                                <th scope="col">변경후</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">통보대상 계좌번호</th>
+                                <td>000000-00-000000</td>
+                                <td>
+                                    <select class="selbox w300">
+                                        <option value="" selected="selected">선택하세요.</option>
+                                        <option value="">-</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">수신은행명</th>
+                                <td>GOLDMAN SACHS</td>
+                                <td>
+                                    <div class="inpArea">
+                                        <input type="text" class="w300" data-placeholder="수신은행명을 입력하세요.">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">수신은행 SWIFT CODE(BIC)</th>
+                                <td>GSIBKRSE</td>
+                                <td>
+                                    <div class="inpArea">
+                                        <input type="text" class="w170 mr10" data-placeholder="">
+                                        <a href="javascript:;" role="button" class="sbtn" title="BIC코드조회 팝업 열기">BIC코드조회</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>                        
+                </div>
+
+                <br>
+
+                <!--grayBorderBoxList-->
+                <div class="grayBorderBoxList">
+                    <div class="listHeader">
+                        <h5 class="tit">파일작성 방법</h5>
+                    </div>
+                    <div class="listContainer">
+                        <ul class="notiList">
+                            <li>
+                                고객명 (파일 작성 시 본인의 고객명)
+                                <div class="cellWrap">
+                                    <h5>- 업체명만 표시</h5>
+                                    <div class="cellForm">
+                                        <input type="text" id="item01" class="w300" data-placeholder="사업자명" disabled>
+                                    </div>
+                                </div>
+                                <div class="cellWrap">
+                                    <h5>- 업체명 + 추가입력</h5>
+                                    <div class="cellForm">
+                                        <input type="text" id="item01" class="w300" data-placeholder="사업자명" disabled>
+                                        <span class="unit">-</span>
+                                        <input type="text" id="item01" class="w300" data-placeholder=" 추가입력" disabled>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                가상계좌로 입금시 보여지는 가상계좌 수취인명 등록을 위한 고객명이며 업체명만 표시 또는 업체명+추가입력 선택이 가능합니다. <br>
+                                (추가입력을 포함한 전체 고객명은 한글 15자, 영문/숫자 30자 이내 가능)
+                            </li>
+                            <li>
+                                파일 등록 시 고객명은 자동 생선된 고객명과 반드시 일치하여야 하며, 기 등록된 고객명이 업체명을 포함하지 않았을 경우에는 자동생성된 고객명을 포함하여 <br> 변경등록 하여야 합니다.
+                            </li>
+                        </ul>
+                        <div class="tar mt10">
+                            <a href="javascript:;" role="button" class="sbtn small"><i class="icon userlookup"></i>회원사 ID 조회 바로가기</a>
+                            <a href="javascript:;" role="button" class="sbtn small"><i class="icon download"></i>샘플파일 다운로드</a>
+                        </div>
+                    </div>
+                </div>
+                <!--//grayBorderBoxList-->
+
+                <!--// 컨텐츠 내용 -->
+            </div>
+        </div>
+        <!--// containerWrap -->
+    </div>
+</body>
+</html>

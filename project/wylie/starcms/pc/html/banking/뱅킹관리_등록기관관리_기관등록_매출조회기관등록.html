@@ -1,0 +1,439 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>다른은행 등록 (star CMS | 서비스가입 | 다른은행 계좌등록 )</title>
+
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/jquery-ui-1.8.16.css" />
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/osite/cms_base.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.common.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.style.css" />
+    
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-1.6.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-ui-1.8.16.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery_bgiframe_min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery.validity.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mCustomScrollbar.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/ui.common.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="navSkip"><a href="#containerWrap">본문으로 바로가기</a></div>
+        <!-- header -->
+        <div class="headerWrap">            
+			<script type="text/javascript" src="../../assets/js2.0/ui.header.js" charset="utf-8"></script>
+        </div>
+        <!--// header -->
+
+        <!-- containerWrap -->
+        <div id="containerWrap" role="main" class="service">
+            <div id="container" class="">
+                <!-- 컨텐츠 내용 -->
+                
+                <div class="location">
+                    <span class="blind">페이지 위치</span>
+                    <ul>
+                        <li><a href="javascript:;">홈</a></li>
+                        <li><a href="javascript:;">뱅킹관리</a></li>
+                        <li><a href="javascript:;">등록기관관리</a></li>
+                        <li><a href="javascript:;">기관등록</a></li>
+                        <li class="curr">매출조회 기관등록</li>
+                    </ul>
+                </div>
+
+                <div class="pageTop">
+                    <h2 class="pageTit">매출조회 기관등록</h2>
+					<ol class="stepProcess">
+						<!--// 활성화시 li에 on 클래스 추가 - 완료된 스탭에는 li에 compleate 클래스 추가 -->
+						<li class="on compleate">
+							<i>01</i>
+							<span>등록방법 선택</span>
+						</li>
+                        <li class="on">
+							<i>02</i>
+							<span>기관/계좌선택</span>
+                        </li>
+                        <li class="">
+							<i>03</i>
+							<span>등록완료</span>
+						</li>
+					</ol>
+                </div>
+
+                <!-- view area 개발자 분들은 이부분 부터 쓰시면 됩니다. -->
+                <div class="viewArea inquiryAccount joinCompleted"><!--2021-02-15감싸는 태그 추가-->
+                    <!--여신금융협회 선택시-->
+                <div class="tableWrap mt50">
+                    <table summary="">
+                        <caption></caption>
+                        <colgroup>
+                            <col width="200px;">
+                            <col width="270px;">
+                            <col width="200px;">
+                            <col width="270px;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">기관 선택</th>
+                                <td colspan="3">
+                                    <ul class="formList">
+                                        <li>
+                                            <input type="radio" id="inquiry01" name="inquiry">
+                                            <label for="inquiry01">여신금융협회</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="inquiry02" name="inquiry">
+                                            <label for="inquiry02">국세청(전자세금계산서)</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="inquiry03" name="inquiry">
+                                            <label for="inquiry03">국세청(현금영수증)</label>
+                                        </li>
+                                    </ul>
+                                    <div class="accountSelect mt20">
+                                        <input type="text" class="w300" data-placeholder="아이디를 입력하세요.">
+                                    </div>
+                                    <div class="accountSelect mt20">
+                                        <input type="password" class="w300" placeholder="비밀번호를 입력하세요.">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--// 여신금융협회 선택시-->
+
+                <!--국세청 전자세금계산서 선택시-->
+                <div class="tableWrap mt50">
+                    <table summary="">
+                        <caption></caption>
+                        <colgroup>
+                            <col width="200px;">
+                            <col width="270px;">
+                            <col width="200px;">
+                            <col width="270px;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">기관 선택</th>
+                                <td colspan="3">
+                                    <ul class="formList">
+                                        <li>
+                                            <input type="radio" id="inquiry01" name="inquiry">
+                                            <label for="inquiry01">여신금융협회</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="inquiry02" name="inquiry">
+                                            <label for="inquiry02">국세청(전자세금계산서)</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="inquiry03" name="inquiry">
+                                            <label for="inquiry03">국세청(현금영수증)</label>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">로그인 수단</th>
+                                <td colspan="3">
+                                    <ul class="formList">
+                                        <li>
+                                            <input type="radio" id="inquiry04" name="inquiry02">
+                                            <label for="inquiry04">인증서</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="inquiry05" name="inquiry02">
+                                            <label for="inquiry05">로그인 아이디</label>
+                                        </li>
+                                    </ul>
+                                    <div class="accountSelect mt20">
+                                        <input type="text" class="w300" placeholder="인증서를 선택하여 주십시오.">
+                                        <a href="javascript:;" role="button" class="sbtn bgWhite" title="사업자번호 추가">등록</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">사업자번호</th>
+                                <td colspan="3">
+                                    <div class="accountSelect">
+                                        <input type="text" class="w300" placeholder="'-'를 제외한 숫자를 입력하세요.">
+                                        <a href="javascript:;" role="button" class="sbtn bgWhite" title="사업자번호 추가">추가</a>
+                                        <span class="infoTxt sm">최대 5개까지 등록 가능</span>
+                                    </div>
+                                    <div class="btnTagArea mt20">
+                                        <ul>
+                                            <li>
+                                                <span class="text">000-00-00000</span>
+                                                <a href="javascript:;" class="btnClose">
+                                                    <i class="icon close"></i>
+                                                    <span class="blind">사업자번호 리스트 삭제</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <span class="text">000-00-00000</span>
+                                                <a href="javascript:;" class="btnClose">
+                                                    <i class="icon close"></i>
+                                                    <span class="blind">사업자번호 리스트 삭제</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <span class="text">000-00-00000</span>
+                                                <a href="javascript:;" class="btnClose">
+                                                    <i class="icon close"></i>
+                                                    <span class="blind">사업자번호 리스트 삭제</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <span class="text">000-00-00000</span>
+                                                <a href="javascript:;" class="btnClose">
+                                                    <i class="icon close"></i>
+                                                    <span class="blind">사업자번호 리스트 삭제</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <span class="text">000-00-00000</span>
+                                                <a href="javascript:;" class="btnClose">
+                                                    <i class="icon close"></i>
+                                                    <span class="blind">사업자번호 리스트 삭제</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--// 국세청 전자세금계산서 선택시-->
+
+                <!--국세청 현금영수증-인증서 선택시-->
+                <div class="tableWrap mt50">
+                    <table summary="">
+                        <caption></caption>
+                        <colgroup>
+                            <col width="200px;">
+                            <col width="270px;">
+                            <col width="200px;">
+                            <col width="270px;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">기관 선택</th>
+                                <td colspan="3">
+                                    <ul class="formList">
+                                        <li>
+                                            <input type="radio" id="inquiry01" name="inquiry">
+                                            <label for="inquiry01">여신금융협회</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="inquiry02" name="inquiry">
+                                            <label for="inquiry02">국세청(전자세금계산서)</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="inquiry03" name="inquiry">
+                                            <label for="inquiry03">국세청(현금영수증)</label>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">로그인 수단</th>
+                                <td colspan="3">
+                                    <ul class="formList">
+                                        <li>
+                                            <input type="radio" id="inquiry04" name="inquiry02">
+                                            <label for="inquiry04">인증서</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="inquiry05" name="inquiry02">
+                                            <label for="inquiry05">로그인 아이디</label>
+                                        </li>
+                                    </ul>
+                                    <div class="accountSelect mt20">
+                                        <input type="text" class="w300" placeholder="인증서를 선택하여 주십시오.">
+                                        <a href="javascript:;" role="button" class="sbtn bgWhite" title="사업자번호 추가">등록</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">사업자번호</th>
+                                <td colspan="3">
+                                    <div class="accountSelect">
+                                        <input type="text" class="w300" placeholder="'-'를 제외한 숫자를 입력하세요.">
+                                        <a href="javascript:;" role="button" class="sbtn bgWhite" title="사업자번호 추가">추가</a>
+                                        <span class="infoTxt sm">최대 5개까지 등록 가능</span>
+                                    </div>
+                                    <div class="btnTagArea mt20">
+                                        <ul>
+                                            <li>
+                                                <span class="text">000-00-00000</span>
+                                                <a href="javascript:;" class="btnClose">
+                                                    <i class="icon close"></i>
+                                                    <span class="blind">사업자번호 리스트 삭제</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <span class="text">000-00-00000</span>
+                                                <a href="javascript:;" class="btnClose">
+                                                    <i class="icon close"></i>
+                                                    <span class="blind">사업자번호 리스트 삭제</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <span class="text">000-00-00000</span>
+                                                <a href="javascript:;" class="btnClose">
+                                                    <i class="icon close"></i>
+                                                    <span class="blind">사업자번호 리스트 삭제</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <span class="text">000-00-00000</span>
+                                                <a href="javascript:;" class="btnClose">
+                                                    <i class="icon close"></i>
+                                                    <span class="blind">사업자번호 리스트 삭제</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <span class="text">000-00-00000</span>
+                                                <a href="javascript:;" class="btnClose">
+                                                    <i class="icon close"></i>
+                                                    <span class="blind">사업자번호 리스트 삭제</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--// 국세청 현금영수증-인증서 선택시-->
+
+                <!--// 국세청 현금영수증-로그인 아이디 선택시-->
+                <div class="tableWrap mt50">
+                    <table summary="">
+                        <caption></caption>
+                        <colgroup>
+                            <col width="200px;">
+                            <col width="270px;">
+                            <col width="200px;">
+                            <col width="270px;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">기관 선택</th>
+                                <td colspan="3">
+                                    <ul class="formList">
+                                        <li>
+                                            <input type="radio" id="inquiry01" name="inquiry">
+                                            <label for="inquiry01">여신금융협회</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="inquiry02" name="inquiry">
+                                            <label for="inquiry02">국세청(전자세금계산서)</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="inquiry03" name="inquiry">
+                                            <label for="inquiry03">국세청(현금영수증)</label>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">로그인 수단</th>
+                                <td colspan="3">
+                                    <ul class="formList">
+                                        <li>
+                                            <input type="radio" id="inquiry04" name="inquiry02">
+                                            <label for="inquiry04">인증서</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="inquiry05" name="inquiry02">
+                                            <label for="inquiry05">로그인 아이디</label>
+                                        </li>
+                                    </ul>
+                                    <div class="accountSelect mt20">
+                                        <input type="text" class="w300" data-placeholder="아이디를 입력하세요.">
+                                    </div>
+                                    <div class="accountSelect mt20">
+                                        <input type="password" class="w300" placeholder="비밀번호를 입력하세요.">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">사업자번호</th>
+                                <td colspan="3">
+                                    <div class="accountSelect">
+                                        <input type="text" class="w300" placeholder="'-'를 제외한 숫자를 입력하세요.">
+                                        <a href="javascript:;" role="button" class="sbtn bgWhite" title="사업자번호 추가">추가</a>
+                                        <span class="infoTxt sm">최대 5개까지 등록 가능</span>
+                                    </div>
+                                    <div class="btnTagArea mt20">
+                                        <ul>
+                                            <li>
+                                                <span class="text">000-00-00000</span>
+                                                <a href="javascript:;" class="btnClose">
+                                                    <i class="icon close"></i>
+                                                    <span class="blind">사업자번호 리스트 삭제</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <span class="text">000-00-00000</span>
+                                                <a href="javascript:;" class="btnClose">
+                                                    <i class="icon close"></i>
+                                                    <span class="blind">사업자번호 리스트 삭제</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <span class="text">000-00-00000</span>
+                                                <a href="javascript:;" class="btnClose">
+                                                    <i class="icon close"></i>
+                                                    <span class="blind">사업자번호 리스트 삭제</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <span class="text">000-00-00000</span>
+                                                <a href="javascript:;" class="btnClose">
+                                                    <i class="icon close"></i>
+                                                    <span class="blind">사업자번호 리스트 삭제</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <span class="text">000-00-00000</span>
+                                                <a href="javascript:;" class="btnClose">
+                                                    <i class="icon close"></i>
+                                                    <span class="blind">사업자번호 리스트 삭제</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--// 국세청 현금영수증-로그인 아이디 선택시-->
+
+                <div class="btnWrap mt60">
+                    <a href="javascript:;" role="button" class="btn bgGray" title="이전페이지로 이동">이전</a>
+                    <a href="javascript:;" role="button" class="btn bgYellow" title="확인">확인</a>
+                </div>
+                </div>
+
+                <!--// 컨텐츠 내용 -->
+            </div>
+            <!--// container -->
+        </div>
+        <!--// containerWrap -->
+
+        <!-- footer -->
+        <div class="footerWrap">
+			<script type="text/javascript" src="../../assets/js2.0/ui.footer.js" charset="utf-8"></script>
+        </div>
+        <!-- footer -->
+    </div>
+</body>
+</html>

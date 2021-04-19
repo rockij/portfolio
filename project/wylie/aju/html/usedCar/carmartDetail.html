@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<!--target-densitydpi=medium-dpi-->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<!-- 아이폰 전체화면 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<title>딜러라운지</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../assets/css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick-theme.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/swiper.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/ui.common.css" type="text/css" /> <!-- 공통 요소 -->
+
+	<!-- JS -->
+	<script type="text/javascript" src="../../assets/js/jquery.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/slick.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/Chart.min.js"></script><!-- 공통 요소 -->
+	<script type="text/javascript" src="../../assets/js/ui.common.js"></script><!-- 공통 요소 -->
+</head>
+
+<body>
+	<section id="wrap">
+		<div id="skipNavi">
+			<a href="#container">본문 바로가기</a>
+		</div>
+		<main id="carmartDetail" class="usedCar">
+			<link rel="stylesheet" href="../../assets/css/ui.usedCar.css" type="text/css" />
+			<section id="container" class="carmartDetail">
+
+				<div class="selectBox">
+					<div class="img"><img src="../../assets/img/temp/temp_car_thumb.png" alt=""></div>
+                    <select>
+                        <option>현대 i30 1.6 VVT 프리미어</option>
+                        <option>현대 i30 1.6 VVT 프리미어</option>
+                        <option>현대 i30 1.6 VVT 프리미어</option>
+                    </select>
+                </div>
+
+				<!-- yearCarDetail -->
+				<div class="yearCarDetail">
+					<!-- 2020-05-21 수정 -->
+					<div class="yearTab swiper-container">
+						<ul class="lineTab swiper-wrapper">
+							<li class="swiper-slide on"><a href="javascript:;">2016</a></li>
+							<li class="swiper-slide"><a href="javascript:;">2015</a></li>
+							<li class="swiper-slide"><a href="javascript:;">2014</a></li>
+							<li class="swiper-slide"><a href="javascript:;">2013</a></li>
+							<li class="swiper-slide"><a href="javascript:;">2012</a></li>
+						</ul>
+					</div>
+					<!--// 2020-05-21 수정 -->
+
+					<!-- detailCon -->
+					<div class="detailCon swiper-container">
+						<ul class="swiper-wrapper">
+							<!-- swiper-slide set -->
+							<li class="swiper-slide">
+								<div class="priceTooltip">
+									<h3>카마트 2016년식 중고차 시세 <span>(단위: 만원)</span></h3>
+									<dl>
+										<dt><a href="javascript:;" data-tooltip-class="high">상</a></dt>
+										<dd>2,400만원</dd>
+										<dt><a href="javascript:;" data-tooltip-class="mid">중</a></dt>
+										<dd>1,000만원</dd>
+									</dl>
+									<!-- 2020-05-26 문구수정 -->
+									<div class="tooltip high">
+										<strong>상</strong> 가격은 주행거리 1년 2만km미만 무사고 차량으로 상태가 아주 우수한 차량의 경우에 해당됩니다.
+									</div>
+									<div class="tooltip mid">
+										<span>중</span> 가격은 주행거리 1년 2만km 미만 고체부위가 일부 있는 차량으로 상태가 아주 우수한 차량의 경우에 해당됩니다.
+									</div>
+									<!--// 2020-05-26 문구수정 -->
+								</div>
+								<div class="priceGraph">
+									<h3>최근 6개월간의 시세변동</h3>
+									<canvas id="canvasGraph"></canvas>
+								</div>
+							</li>
+							<!--// swiper-slide set -->
+							<li class="swiper-slide">
+								<div class="priceTooltip">
+									<h3>카마트 2015년식 중고차 시세 <span>(단위: 만원)</span></h3>
+									<dl>
+										<dt><a href="javascript:;" data-tooltip-class="high">상</a></dt>
+										<dd>2,400만원</dd>
+										<dt><a href="javascript:;" data-tooltip-class="mid">중</a></dt>
+										<dd>1,000만원</dd>
+									</dl>
+									<!-- 2020-05-26 문구수정 -->
+									<div class="tooltip high">
+										<strong>상</strong> 가격은 주행거리 1년 2만km미만 무사고 차량으로 상태가 아주 우수한 차량의 경우에 해당됩니다.
+									</div>
+									<div class="tooltip mid">
+										<span>중</span> 가격은 주행거리 1년 2만km 미만 고체부위가 일부 있는 차량으로 상태가 아주 우수한 차량의 경우에 해당됩니다.
+									</div>
+									<!--// 2020-05-26 문구수정 -->
+								</div>
+								<div class="priceGraph">
+									<h3>최근 6개월간의 시세변동</h3>
+									<canvas id="canvasGraph"></canvas>
+								</div>
+							</li>
+							<li class="swiper-slide">
+								<div class="priceTooltip">
+									<h3>카마트 2014년식 중고차 시세 <span>(단위: 만원)</span></h3>
+									<dl>
+										<dt><a href="javascript:;" data-tooltip-class="high">상</a></dt>
+										<dd>2,400만원</dd>
+										<dt><a href="javascript:;" data-tooltip-class="mid">중</a></dt>
+										<dd>1,000만원</dd>
+									</dl>
+									<!-- 2020-05-26 문구수정 -->
+									<div class="tooltip high">
+										<strong>상</strong> 가격은 주행거리 1년 2만km미만 무사고 차량으로 상태가 아주 우수한 차량의 경우에 해당됩니다.
+									</div>
+									<div class="tooltip mid">
+										<span>중</span> 가격은 주행거리 1년 2만km 미만 고체부위가 일부 있는 차량으로 상태가 아주 우수한 차량의 경우에 해당됩니다.
+									</div>
+									<!--// 2020-05-26 문구수정 -->
+								</div>
+								<div class="priceGraph">
+									<h3>최근 6개월간의 시세변동</h3>
+									<canvas id="canvasGraph"></canvas>
+								</div>
+							</li>
+							<li class="swiper-slide">
+								<div class="priceTooltip">
+									<h3>카마트 2013년식 중고차 시세 <span>(단위: 만원)</span></h3>
+									<dl>
+										<dt><a href="javascript:;" data-tooltip-class="high">상</a></dt>
+										<dd>2,400만원</dd>
+										<dt><a href="javascript:;" data-tooltip-class="mid">중</a></dt>
+										<dd>1,000만원</dd>
+									</dl>
+									<!-- 2020-05-26 문구수정 -->
+									<div class="tooltip high">
+										<strong>상</strong> 가격은 주행거리 1년 2만km미만 무사고 차량으로 상태가 아주 우수한 차량의 경우에 해당됩니다.
+									</div>
+									<div class="tooltip mid">
+										<span>중</span> 가격은 주행거리 1년 2만km 미만 고체부위가 일부 있는 차량으로 상태가 아주 우수한 차량의 경우에 해당됩니다.
+									</div>
+									<!--// 2020-05-26 문구수정 -->
+								</div>
+								<div class="priceGraph">
+									<h3>최근 6개월간의 시세변동</h3>
+									<canvas id="canvasGraph"></canvas>
+								</div>
+							</li>
+							<li class="swiper-slide">
+								<div class="priceTooltip">
+									<h3>카마트 2012년식 중고차 시세 <span>(단위: 만원)</span></h3>
+									<dl>
+										<dt><a href="javascript:;" data-tooltip-class="high">상</a></dt>
+										<dd>2,400만원</dd>
+										<dt><a href="javascript:;" data-tooltip-class="mid">중</a></dt>
+										<dd>1,000만원</dd>
+									</dl>
+									<!-- 2020-05-26 문구수정 -->
+									<div class="tooltip high">
+										<strong>상</strong> 가격은 주행거리 1년 2만km미만 무사고 차량으로 상태가 아주 우수한 차량의 경우에 해당됩니다.
+									</div>
+									<div class="tooltip mid">
+										<span>중</span> 가격은 주행거리 1년 2만km 미만 고체부위가 일부 있는 차량으로 상태가 아주 우수한 차량의 경우에 해당됩니다.
+									</div>
+									<!--// 2020-05-26 문구수정 -->
+								</div>
+								<div class="priceGraph">
+									<h3>최근 6개월간의 시세변동</h3>
+									<canvas id="canvasGraph"></canvas>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!--// detailCon -->
+				</div>
+				<!--// yearCarDetail -->
+			</section>
+
+			<div class="btnArea full">
+                <a href="#" class="blue">신차출고가 조회</a>
+            </div>
+		</main>
+	</section>
+	<script>
+
+	var config = {
+		type: 'line',
+		data: {
+			labels: ['10월', '11월', '12월', '1월', '2월', '3월'],
+			datasets: [{
+				label: '상',
+				backgroundColor: '#2962c2',
+				borderColor: '#94b0e0',
+				borderWidth: '1',
+				fill: false,
+				data: [2200, 2100, 2250, 2000, 2050, 2100]
+			}, {
+				label: '중',
+				backgroundColor: '#333333',
+				borderColor: '#aaaaaa',
+				borderWidth: '1',
+				fill: false,
+				data: [1800, 1600, 1900, 1750, 1800, 1900]
+			}]
+		},
+		options: {
+			responsive: true,
+			maintainAspectRatio: true,
+			devicePixelRatio: 1,
+			title: {
+				display: false
+			},
+			legend: {
+				display: false
+			},
+			layout: {
+				padding:{
+					top: 0,
+					right: 0,
+					bottom: 0,
+					left: 0
+				}
+			},
+			scales: {
+				xAxes: [{
+					display: true,
+					ticks: {
+						fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif'
+					}
+				}],
+				yAxes: [{
+					display: false, //2020-05-19 수정
+					ticks: {
+						beginAtZero: true,
+						fontFamily: '"Noto Sans CJK KR", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif'
+					}
+				}]
+			}
+		}
+	};
+
+
+	window.onload = function() {
+		var cv = document.getElementById('canvasGraph').getContext('2d');
+		var priceCarmart = new Chart(cv, config);
+	};
+
+	</script>
+</body>
+
+</html>

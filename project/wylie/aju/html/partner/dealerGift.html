@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--
+	2020-06-18 			개월선택 radioArea class='line' 추가
+	2020-06-19 			경기부천 텍스트 삭제
+	2020-06-19 			하단 풋메뉴 추가, 메시지 팝업 추가
+	2020-06-21 			선물내역 리스트 마크업 수정
+	2020-07-06 			뱃지 추가 및 프로필 텍스트 수정
+-->
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<!--target-densitydpi=medium-dpi-->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<!-- 아이폰 전체화면 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<title>딜러라운지</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../assets/css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/slick-theme.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/swiper.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/ui.common.css" type="text/css" /> <!-- 공통 요소 -->
+
+	<!-- JS -->
+	<script type="text/javascript" src="../../assets/js/jquery.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/slick.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/ui.common.js"></script><!-- 공통 요소 -->
+</head>
+
+<body>
+	<section id="wrap">
+		<div id="skipNavi">
+			<a href="#container">본문 바로가기</a>
+		</div>
+		<main id="dealerGift" class="partner">
+			<link rel="stylesheet" href="../../assets/css/ui.partner.css" type="text/css" />
+			<section id="container" class="dealerGift">
+				<div class="profileArea">
+					<!-- 2020-07-06 뱃지 추가 및 프로필 텍스트 수정  -->
+					<div class="iconArea">
+						<span class="iconMedium">Medium</span>
+						<span class="iconRetention">리텐션대상</span>
+						<span class="iconNewAssign">신규배정</span>
+						<!-- <span class="iconKcar">K Car</span> -->
+						<span class="iconCarAuction">Car Auction</span>
+					</div>
+					<p>
+						<strong>홍길동</strong>
+						<span>
+							<em>Welcome</em>
+							<em>Champion</em>
+						</span>
+						<span>
+							<em>DY카랜드</em>
+							<em>모터스상사</em>
+						</span>
+					</p>
+					<!--// 2020-07-06 뱃지 추가 및 프로필 텍스트 수정  -->
+					<label class="icon_favorite">
+						<input type="checkbox" />
+						<i></i>
+					</label>
+				</div>
+				<ul class="myUtillPage">
+					<li>
+						<a href="#">
+							<em>5100P</em>
+							라운지 포인트
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<!-- 마이너스 일때 em에 minus class 추가 -->
+							<em><!--▼--> ▲ 123,456</em>
+							영업실적
+						</a>
+					</li>
+				</ul>
+				<div class="wideArea">
+					<ul class="lineTab">
+						<li><a href="javascript:;">프로필</a></li>
+						<li><a href="javascript:;">실적정보</a></li>
+						<li><a href="javascript:;">활동정보</a></li>
+						<li class="on"><a href="javascript:;">선물내역</a></li>
+					</ul>
+					<div class="periodSet">
+						<p>2020.03.01 - 03.31</p>
+						<div class="radioArea flex line"> <!-- 2020-06-18 class='line' 추가 -->
+							<span class="tabRadio on">
+								<input type="radio" id="radio1" name="tabRadio" checked="">
+								<label for="radio1">
+									당월
+								</label>
+							</span>
+							<span class="tabRadio">
+								<input type="radio" id="radio2" name="tabRadio">
+								<label for="radio2">
+									1개월
+								</label>
+							</span>
+							<span class="tabRadio">
+								<input type="radio" id="radio3" name="tabRadio">
+								<label for="radio3">
+									2개월
+								</label>
+							</span>
+							<span class="tabRadio">
+								<input type="radio" id="radio4" name="tabRadio">
+								<label for="radio4">
+									3개월
+								</label>
+							</span>
+						</div>
+					</div>
+					<!-- 2020-06-21 마크업 수정 -->
+					<div class="giftList">
+						<div class="date">
+							<span>2020년 4월 24일</span>
+						</div>
+						<ul>
+							<li>
+								<em>포인트 지급</em>
+								<strong>- 5P</strong>
+							</li>
+							<li>
+								<em>포인트 차감</em>
+								<strong>+ 5P</strong>
+							</li>
+							<li>
+								<em>기프티콘</em>
+								<strong>스타벅스 아메리카노(4,500 P)</strong>
+							</li>
+						</ul>
+					</div>
+					<!--// 2020-06-21 마크업 수정 -->
+					<div class="giftList">
+						<div class="date">
+							<span>2020년 4월 24일</span>
+						</div>
+						<ul>
+							<li>
+								<em>포인트 지급</em>
+								<strong>- 5P</strong>
+							</li>
+							<li>
+								<em>포인트 차감</em>
+								<strong>+ 5P</strong>
+							</li>
+							<li>
+								<em>기프티콘</em>
+								<strong>스타벅스 아메리카노(4,500 P)</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="btnArea">
+					<a href="javascript:;" class="white">더보기</a>
+				</div>
+			</section>
+			<!-- 2020-06-19 하단 풋메뉴 추가 -->
+			<div class="footMenu">
+				<a href="javascript:;" class="iconFootSchedule">일정등록</a>
+				<a href="javascript:;" class="iconFootCall">통화하기</a>
+				<a href="#messagePopup" class="iconFootMessage openLayer">메시지</a>
+				<a href="javascript:;" class="iconFootPoint">포인트</a>
+				<a href="javascript:;" class="iconFootGiftcon">기프티콘</a>
+			</div>
+			<!--// 2020-06-19 하단 풋메뉴 추가 -->
+		</main>
+	</section>
+	<!-- 2020-06-19 messagePopup -->
+	<div id="messagePopup" class="messagePopup">
+		<strong>메시지</strong>
+		<ul>
+			<li><a href="javascript:;">SMS 발송</a></li>
+			<li><a href="javascript:;">PUSH 발송</a></li>
+		</ul>
+		<a href="javascript:;" class="btnPopClose btnLayerClose">닫기</a>
+	</div>
+	<!--// 2020-06-18 messagePopup -->
+</body>
+
+</html>

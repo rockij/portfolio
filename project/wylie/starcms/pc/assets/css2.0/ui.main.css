@@ -1,0 +1,646 @@
+@charset "utf-8";
+#wrap{min-width: 1440px;}
+#containerWrap #container { width:100%; padding-bottom:249px; padding-top: 140px;}
+
+/* 로그인전 */
+.cmsMainLogout { }
+.cmsMainLogout .visual { position:relative; height:850px; background:url('../images/main/img_main_visual.png') no-repeat; background-size:cover;}
+.cmsMainLogout .visual:after { content:''; position:absolute; left:0; top:0; width:100%; height:100%; background:#000; opacity:0.3;}
+.cmsMainLogout .visual .inner { position:relative; margin:0 auto; width:1080px; height:100%; z-index:1;  }
+.cmsMainLogout .visual .txtArea { position:relative; padding-top:235px; text-align:center;}
+.cmsMainLogout .visual .txtArea strong { display:block; font-size:50px; font-weight:700; color:#fff}
+.cmsMainLogout .visual .txtArea > p { margin-top:15px; font-size:20px; font-weight:700; color:#fff; }
+.cmsMainLogout .visual .btnWrap { position:relative; margin-top:60px;}
+.cmsMainLogout .visual .btnWrap .btn { min-width:220px; color:#fff; border:1px solid #fff; background:rgba(255, 255, 255, 0.2);}
+.cmsMainLogout .visual .serviceMenu { position:absolute; left:0; bottom:41px; width:100%; height:120px; border-radius:10px; background:#fff;}
+.cmsMainLogout .visual .serviceMenu ul li { float:left; width:16.7%; height:100%; text-align:center;}
+.cmsMainLogout .visual .serviceMenu ul li a {  display:inline-block; position:relative; padding-top:26px; height:100%;}
+.cmsMainLogout .visual .serviceMenu ul li a:before { content:''; display:inline-block; text-align:center; margin-bottom:10px; width:40px; height:40px; background-image:url('../images/common/iconset_40.png'); background-repeat:no-repeat;}
+.cmsMainLogout .visual .serviceMenu ul li:first-child a:before { background-position:-350px 0;}
+.cmsMainLogout .visual .serviceMenu ul li:nth-child(2) a:before { background-position:-400px 0;}
+.cmsMainLogout .visual .serviceMenu ul li:nth-child(3) a:before { background-position:-450px 0;}
+.cmsMainLogout .visual .serviceMenu ul li:nth-child(4) a:before { background-position:-500px 0;}
+.cmsMainLogout .visual .serviceMenu ul li:nth-child(5) a:before { background-position:-550px 0;}
+.cmsMainLogout .visual .serviceMenu ul li:nth-child(6) a:before { background-position:-600px 0;}
+.cmsMainLogout .visual .serviceMenu ul li:last-child{float:none;width:auto}
+.cmsMainLogout .visual .serviceMenu ul li span { display:block; font-weight:500;}
+
+.cmsMainLogout .section { height:850px;}
+.cmsMainLogout .section .inner { position:relative; margin:0 auto; width:1440px; height:100%;}
+.cmsMainLogout .section .txtArea { position:absolute; left:180px; top:50%; transform:translateY(-50%);}
+.cmsMainLogout .section .txtArea > strong { display:block; font-size:44px; font-weight:700; line-height:60px; color:#000;}
+.cmsMainLogout .section .txtArea p { margin-top:30px; font-size:18px; line-height:26px; font-weight:600; color:#000;}
+.cmsMainLogout .section.sec01 .inner { background:url('../images/main/img_main_cont01.png') 641px 50% no-repeat;}
+.cmsMainLogout .section.sec02 { background:#f8f8f8;}
+.cmsMainLogout .section.sec02 .inner { background:url('../images/main/img_main_cont02.png') 50% 100% no-repeat;}
+.cmsMainLogout .section.sec02 .txtArea { top:140px; left:0; width:100%; transform:translateY(0); text-align:center;}
+.cmsMainLogout .section.sec03 .inner { background:url('../images/main/img_main_cont03.png') 619px 50% no-repeat;}
+.cmsMainLogout .section.sec03 .txtArea{margin-top:-30px}
+.cmsMainLogout .section.sec04 { background:#f8f8f8;}
+.cmsMainLogout .section.sec04 .inner { background:url('../images/main/img_main_cont04.png') 121px 50% no-repeat;}
+.cmsMainLogout .section.sec04 .txtArea { left:821px; }
+.cmsMainLogout .section.sec05 .inner { background:url('../images/main/img_main_cont05.png') 596px 50% no-repeat;}
+
+/* section animation 추가 (21-02-25) */
+@keyframes fingerPrint{
+    0%{ opacity:0 }
+    65%{ opacity:1 }
+    100%{ opacity:0 }
+}
+@keyframes fingerPrintDot{
+    0%{ transform:rotate(-28deg) scale(0) }
+    25%{ transform:rotate(-28deg) scale(1) }
+    100%{ transform:rotate(-28deg) scale(0); }
+}
+@keyframes keyBounce{
+    0%{ opacity:0; transform:translateY(30px) scale(0) }
+    50%{ opacity:1; transform:translateY(-20px) scale(1) }
+    85%,100%{ opacity:1; transform:translateY(0) scale(1) }
+}
+@keyframes bankOpen{
+    to{ transform:translate(0,0) scale(1); opacity:1 }
+}
+@keyframes loopBounce{
+    0%{ transform:translate(0,0) scale(1) }
+    25%{ transform:translate(-10px,10px) scale(1) }
+    55%{ transform:translate(10px,-10px) scale(1) }
+    75%{ transform:translate(10px,10px) scale(1) }
+    100%{ transform:translate(0,0) scale(1) }
+}
+@keyframes loopBounce2{
+    0%{ transform:translate(0,0) scale(1) }
+    25%{ transform:translate(10px,10px) scale(1) }
+    55%{ transform:translate(-10px,10px) scale(1) }
+    75%{ transform:translate(10px,-10px) scale(1) }
+    100%{ transform:translate(0,0) scale(1) }
+}
+@keyframes loopBounce3{
+    0%{ transform:translate(0,0) scale(1) }
+    25%{ transform:translate(13px,10px) scale(1) }
+    45%{ transform:translate(-10px,15px) scale(1) }
+    65%{ transform:translate(15px,-10px) scale(1) }
+    85%{ transform:translate(5px,-5px) scale(1) }
+    100%{ transform:translate(0,0) scale(1) }
+}
+@keyframes cardBounce5{
+    0%{ transform:translateY(0) }
+    25%{ transform:translateY(10px) }
+    55%{ transform:translateY(-10px) }
+    75%{ transform:translateY(10px) }
+    100%{ transform:translateY(0) }
+}
+@keyframes cardLine5{
+    to{ transform:rotate(0deg) scaleX(1) }
+}
+@keyframes cardBounceLine5{
+    0%{ transform:rotate(0deg) }
+    25%{ transform:rotate(-4deg) }
+    55%{ transform:rotate(4deg) }
+    75%{ transform:rotate(-4deg) }
+    100%{ transform:rotate(0deg) }
+}
+@keyframes cardBounce1{
+    0%{ transform:translate(0,0) }
+    25%{ transform:translate(-10px,10px) }
+    55%{ transform:translate(20px,-20px) }
+    75%{ transform:translate(-10px,10px) }
+    100%{ transform:translate(0,0) }
+}
+@keyframes cardLine1{
+    to{ transform:rotate(47deg) scaleX(1) }
+}
+@keyframes cardBounceLine1{
+    0%{ transform:rotate(47deg) }
+    25%{ transform:rotate(38deg) }
+    55%{ transform:rotate(55deg) }
+    75%{ transform:rotate(38deg) }
+    100%{ transform:rotate(47deg) }
+}
+@keyframes cardBounce2{
+    0%{ transform:translate(0,0) }
+    25%{ transform:translate(-15px,-15px) }
+    55%{ transform:translate(10px,10px) }
+    75%{ transform:translate(-10px,-10px) }
+    100%{ transform:translate(0,0) }
+}
+@keyframes cardLine2{
+    to{ transform:rotate(-54deg) scaleX(1) }
+}
+@keyframes cardBounceLine2{
+    0%{ transform:rotate(-54deg) }
+    25%{ transform:rotate(-62deg) }
+    55%{ transform:rotate(-47deg) }
+    75%{ transform:rotate(-60deg) }
+    100%{ transform:rotate(-54deg) }
+}
+@keyframes cardBounce3{
+    0%{ transform:translate(0,0) }
+    25%{ transform:translate(5px,15px) }
+    55%{ transform:translate(-5px,-5px) }
+    75%{ transform:translate(5px,10px) }
+    100%{ transform:translate(0,0) }
+}
+@keyframes cardLine3{
+    to{ transform:rotate(-24deg) scaleX(1) }
+}
+@keyframes cardBounceLine3{
+    0%{ transform:rotate(-24deg) }
+    25%{ transform:rotate(-19deg) }
+    55%{ transform:rotate(-26deg) }
+    75%{ transform:rotate(-20deg) }
+    100%{ transform:rotate(-24deg) }
+}
+@keyframes cardBounce4{
+    0%{ transform:translate(0,0) }
+    25%{ transform:translate(-3px,10px) }
+    55%{ transform:translate(0px,-10px) }
+    75%{ transform:translate(-3px,5px) }
+    100%{ transform:translate(0,0) }
+}
+@keyframes cardLine4{
+    to{ transform:rotate(11deg) scaleX(1) }
+}
+@keyframes cardBounceLine4{
+    0%{ transform:rotate(11deg) }
+    25%{ transform:rotate(16deg) }
+    55%{ transform:rotate(8deg) }
+    75%{ transform:rotate(16deg) }
+    100%{ transform:rotate(11deg) }
+}
+@keyframes pigJump{
+    0%{ opacity:0; transform:translateY(15px) scale(0) }
+    50%{ opacity:1; transform:translateY(-20px) scale(1) }
+    85%,100%{ opacity:1; transform:translateY(0) scale(1) }
+}
+@keyframes pigBounce{
+    0% { transform:translate(0, 0) scale(1, 1); }
+    5% { transform:translate(0, -15%) scale(.9, 1); }
+    20% { transform:translate(0, -20%) scale(1, .9); }
+    35% { transform:translate(0, 0) scale(1, 1); }
+    95%,100% { transform:translate(0, 0) scale(1, 1); }
+}
+@keyframes pigCoinShow{
+    to{ opacity:1 }
+}
+@keyframes pigCoin{
+    0%{ transform:translateY(60px); opacity:1 }
+    20%{ transform:translateY(60px); opacity:1 }
+    45%{ transform:translateY(-60px); opacity:1 }
+    60%{ transform:translateY(60px); opacity:1 }
+    100%{ transform:translateY(60px); opacity:1 }
+}
+
+.cmsMainLogout .scene, .cmsMainLogout .scene .ele{position:absolute}
+.cmsMainLogout .scene .ele{
+    background-repeat:no-repeat;background-size:100%;
+    transition-duration:.25s;
+}
+.cmsMainLogout .animate .inner{background:none !important}
+
+.cmsMainLogout .sec01 .scene{top:134px;right:100px;width:700px;height:580px}
+.cmsMainLogout .sec01 .back{top:0;right:0;width:700px;height:580px;background-image:url('../images/main/mov_sec01_back.png')}
+.cmsMainLogout .sec01 .key{
+    top:155px;left:301px;width:103px;height:157px;z-index:1;opacity:0;
+    background-image:url('../images/main/mov_sec01_key.png');transform-origin:bottom
+}
+.cmsMainLogout .sec01 .print{
+    top:367px;left:172px;width:89px;height:52px;opacity:0;
+    background-image:url('../images/main/mov_sec01_print.png');
+}
+.cmsMainLogout .sec01 .print-dot{
+    width:87px;height:1px;background:#ffcf10;top:371px;left:256px;
+    transform:rotate(-28deg) scale(0);transform-origin:left
+}
+.cmsMainLogout .sec01 .shw{
+    top:286px;left:294px;width:111px;height:66px;border-radius:50%;
+    background:#385454;opacity:.1;transform:scale(0)
+}
+.cmsMainLogout .sec01 [class*="bank"]{opacity:1}
+.cmsMainLogout .sec01 .bank1{
+    top:108px;left:220px;width:56px;height:59px;
+    background-image:url('../images/main/mov_sec01_bank1.png');
+    transform:translate(123px,167px) scale(0)
+}
+.cmsMainLogout .sec01 .bank2{
+    top:197px;left:153px;width:36px;height:38px;
+    background-image:url('../images/main/mov_sec01_bank2.png');
+    transform:translate(202px,76px) scale(0)
+}
+.cmsMainLogout .sec01 .bank3{
+    top:384px;left:484px;width:46px;height:49px;
+    background-image:url('../images/main/mov_sec01_bank3.png');
+    transform:translate(-148px,-120px) scale(0)
+}
+.cmsMainLogout .sec01 .bank4{
+    top:98px;left:405px;width:74px;height:78px;
+    background-image:url('../images/main/mov_sec01_bank4.png');
+    transform:translate(-136px,156px) scale(0)
+}
+.cmsMainLogout .sec01 .bank5{
+    top:226px;left:518px;width:61px;height:64px;
+    background-image:url('../images/main/mov_sec01_bank5.png');
+    transform:translate(-234px,18px) scale(0)
+}
+.cmsMainLogout .sec01.active .print{animation:fingerPrint 1s ease 0s forwards}
+.cmsMainLogout .sec01.active .print-dot{animation:fingerPrintDot 1.25s ease .6s forwards}
+.cmsMainLogout .sec01.active .key{animation:keyBounce .75s ease 1s backwards;opacity:1}
+.cmsMainLogout .sec01.active .shw{transition-delay:1s;transform:scale(1)}
+.cmsMainLogout .sec01.active .bank1{animation:bankOpen .5s ease 1.5s forwards, loopBounce 14s ease 2.25s infinite}
+.cmsMainLogout .sec01.active .bank2{animation:bankOpen .5s ease 1.5s forwards, loopBounce3 13s ease 2.25s infinite}
+.cmsMainLogout .sec01.active .bank3{animation:bankOpen .5s ease 1.5s forwards, loopBounce3 12s ease 2.25s infinite}
+.cmsMainLogout .sec01.active .bank4{animation:bankOpen .5s ease 1.5s forwards, loopBounce3 10s ease 2.25s infinite}
+.cmsMainLogout .sec01.active .bank5{animation:bankOpen .5s ease 1.5s forwards, loopBounce 10s ease 2.25s infinite}
+
+.cmsMainLogout .sec02 .scene{top:177px;left:69px;width:1300px;height:672px;overflow:hidden}
+.cmsMainLogout .sec02 .back{
+    bottom:0;left:299px;width:702px;height:399px;
+    background:url('../images/main/mov_sec02_back.png') no-repeat;
+    background-size:auto;transform:translateY(399px)
+}
+.cmsMainLogout .sec02 [class*="o"]{z-index:1;opacity:0}
+.cmsMainLogout .sec02 [class*="line"]{height:1px;z-index:0;border-top:2px dashed #ccc}
+.cmsMainLogout .sec02 .o1{
+    top:46px;left:68px;width:206px;height:206px;
+    background-image:url('../images/main/mov_sec02_card1.png');transform:translate(240px,240px)
+}
+.cmsMainLogout .sec02 .line1{
+    top:270px;left:178px;width:116px;
+    transform:rotate(47deg) scaleX(0);transform-origin:right
+}
+.cmsMainLogout .sec02 .o2{
+    top:38px;left:981px;width:178px;height:178px;
+    background-image:url('../images/main/mov_sec02_card2.png');transform:translate(-160px,240px)
+}
+.cmsMainLogout .sec02 .line2{
+    top:254px;left:978px;width:128px;
+    transform:rotate(-54deg) scaleX(0);transform-origin:left
+}
+.cmsMainLogout .sec02 .o3{
+    top:130px;left:1133px;width:152px;height:153px;
+    background-image:url('../images/main/mov_sec02_card3.png');transform:translate(-280px,160px)
+}
+.cmsMainLogout .sec02 .line3{
+    top:284px;left:1022px;width:179px;
+    transform:rotate(-24deg) scaleX(0);transform-origin:left
+}
+.cmsMainLogout .sec02 .o4{
+    top:352px;left:1106px;width:206px;height:206px;
+    background-image:url('../images/main/mov_sec02_card4.png');transform:translate(-340px,-80px)
+}
+.cmsMainLogout .sec02 .line4{
+    top:413px;left:1025px;width:179px;
+    transform:rotate(11deg) scaleX(0);transform-origin:left
+}
+.cmsMainLogout .sec02 .o5{
+    top:320px;left:-12px;width:166px;height:166px;
+    background-image:url('../images/main/mov_sec02_card5.png');
+    transform:translate(300px,0)
+}
+.cmsMainLogout .sec02 .line5{
+    top:395px;left:71px;width:202px;
+    transform:rotate(0deg) scaleX(0);transform-origin:right
+}
+.cmsMainLogout .sec02.active .back{transition-duration:.5s;transition-timing-function:ease;transform:translateY(0)}
+.cmsMainLogout .sec02.active .o5{animation:bankOpen .7s cubic-bezier(1.000, 0.000, 0.000, 1.000) .2s forwards, cardBounce5 14s ease 2s infinite}
+.cmsMainLogout .sec02.active .o1{animation:bankOpen .7s cubic-bezier(1.000, 0.000, 0.000, 1.000) .35s forwards, cardBounce1 14s ease 2s infinite}
+.cmsMainLogout .sec02.active .o2{animation:bankOpen .7s cubic-bezier(1.000, 0.000, 0.000, 1.000) .65s forwards, cardBounce2 14s ease 2s infinite}
+.cmsMainLogout .sec02.active .o3{animation:bankOpen .7s cubic-bezier(1.000, 0.000, 0.000, 1.000) .9s forwards, cardBounce3 14s ease 2s infinite}
+.cmsMainLogout .sec02.active .o4{animation:bankOpen .7s cubic-bezier(1.000, 0.000, 0.000, 1.000) 1.25s forwards, cardBounce4 14s ease 2s infinite}
+.cmsMainLogout .sec02.active .line5{animation:cardLine5 .25s ease .55s forwards, cardBounceLine5 14s ease 2s infinite}
+.cmsMainLogout .sec02.active .line1{animation:cardLine1 .25s ease .65s forwards, cardBounceLine1 14s ease 2s infinite}
+.cmsMainLogout .sec02.active .line2{animation:cardLine2 .25s ease .95s forwards, cardBounceLine2 14s ease 2s infinite}
+.cmsMainLogout .sec02.active .line3{animation:cardLine3 .25s ease 1.15s forwards, cardBounceLine3 14s ease 2s infinite}
+.cmsMainLogout .sec02.active .line4{animation:cardLine4 .25s ease 1.55s forwards, cardBounceLine4 14s ease 2s infinite}
+
+.cmsMainLogout .sec03 .scene{top:134px;right:122px;width:700px;height:580px}
+.cmsMainLogout .sec03 .back{top:0;left:0;width:700px;height:580px;background-image:url('../images/main/mov_sec03_back.png')}
+.cmsMainLogout .sec03 .count, .cmsMainLogout .sec03 .count strong{font-weight:700}
+.cmsMainLogout .sec03 .count{top:84px;right:140px;font-size:18px}
+.cmsMainLogout .sec03 .count strong{display:inline-block;vertical-align:middle;height:34px;font-size:24px;margin:-6px 5px 0 0}
+.cmsMainLogout .sec03 .pig{top:362px;left:531px;transform-origin:bottom}
+.cmsMainLogout .sec03 .pig-shw{
+    width:120px;height:8px;border-radius:50%;top:489px;left:563px;
+    background:linear-gradient(90deg, rgba(217,217,217,0) 0%, rgba(217,217,217,.9) 50%, rgba(217,217,217,0) 100%);
+    transform:scale(0);
+}
+.cmsMainLogout .sec03 .coin{
+    top:-40px;left:62px;width:50px;height:50px;opacity:0;
+    background-image:url('../images/main/mov_sec03_coin.png');
+}
+.cmsMainLogout .sec03.active .pig{animation:pigJump .5s 1.25s backwards, pigBounce 2s ease 2s infinite}
+.cmsMainLogout .sec03.active .pig:after{
+    content:'';display:inline-block;width:162px;height:136px;position:relative;z-index:2;
+    background-image:url('../images/main/mov_sec03_pig.png');
+}
+.cmsMainLogout .sec03.active .pig-door{
+    top:9px;left:59px;width:58px;height:12px;
+    background-image:url('../images/main/mov_sec03_pig_door.png');
+}
+.cmsMainLogout .sec03.active .pig-shw{transition-delay:1s;transform:scale(1)}
+.cmsMainLogout .sec03.active .coin{animation:pigCoinShow .1s ease 1.5s, pigCoin 2s ease 1.5s infinite}
+
+.cmsMainLogout .sec04 .scene{top:134px;left:120px;width:700px;height:580px;background:url('../images/main/mov_sec04_back.png') no-repeat}
+.cmsMainLogout .sec04 .box{
+    top:32px;left:62px;width:200px;height:200px;background-image:url('../images/main/mov_sec04_box.png');
+    transform-origin:right bottom;transform:rotate(-90deg) scale(0);
+}
+.cmsMainLogout .sec04 .box strong{position:absolute;color:#000}
+.cmsMainLogout .sec04 .box strong:nth-child(1){top:31px;left:62px;width:80px;font-size:30px}
+/* =count */
+.cmsMainLogout .sec04 .box strong:nth-child(2){
+    position:relative;overflow:hidden;display:block;width:58px;height:117px;
+    top:51px;left:52px;font-size:100px
+}
+.cmsMainLogout .sec04 .box strong:nth-child(2) b{right:0;top:0}
+/* //=count */
+.cmsMainLogout .sec04 .box strong:nth-child(3){top:113px;left:111px;font-size:40px}
+.cmsMainLogout .sec04.active .box{transition-delay:.25s;transform:rotate(0deg) scale(1)}
+
+.cmsMainLogout .sec05 .scene{overflow:hidden;top:134px;right:146px;width:700px;height:580px}
+.cmsMainLogout .sec05 .back{top:0px;left:0px;width:700px;height:580px;background-image:url('../images/main/mov_sec05_back.png')}
+.cmsMainLogout .sec05 .phone{top:204px;left:71px;width:164px;height:99px;background-image:url('../images/main/mov_sec05_phone.png')}
+.cmsMainLogout .sec05 .phone[class*="g"]{top:auto;height:0px}
+.cmsMainLogout .sec05 .phone[class*="g"],
+.cmsMainLogout .sec05 .phone[class*="g"]::before,
+.cmsMainLogout .sec05 .phone[class*="g"]::after{width:19px}
+.cmsMainLogout .sec05 .phone[class*="g"]::before,
+.cmsMainLogout .sec05 .phone[class*="g"]::after{content:'';display:inline-block;height:11px;position:absolute;left:0;border-radius:50%;}
+.cmsMainLogout .sec05 .phone[class*="g"]::before{top:-5px}
+.cmsMainLogout .sec05 .phone[class*="g"]::after{bottom:-5px}
+.cmsMainLogout .sec05 .phone.g1{bottom:322px;left:109px;background:rgba(115,162,255,.7)}
+.cmsMainLogout .sec05 .phone.g1::before,
+.cmsMainLogout .sec05 .phone.g1::after{background:rgba(115,162,255,1)}
+.cmsMainLogout .sec05 .phone.g2{bottom:333px;left:128px;background:rgba(103,200,249,.5)}
+.cmsMainLogout .sec05 .phone.g2::before,
+.cmsMainLogout .sec05 .phone.g2::after{background:rgba(103,200,249,1)}
+.cmsMainLogout .sec05 .phone.g3{bottom:344px;left:147px;background:rgba(240,102,103,.7)}
+.cmsMainLogout .sec05 .phone.g3::before,
+.cmsMainLogout .sec05 .phone.g3::after{background:rgba(240,102,103,1)}
+.cmsMainLogout .sec05 .chart{width:35px}
+.cmsMainLogout .sec05 .chart.g1{
+    bottom:84px;left:37px;height:109px;background-image:url('../images/main/mov_sec05_chart_g1.png');
+    transform:translateY(70px)
+}
+.cmsMainLogout .sec05 .chart.g2{
+    top:420px;left:66px;height:91px;background-image:url('../images/main/mov_sec05_chart_g2.png');
+    transform:translateY(50px)
+}
+.cmsMainLogout .sec05 .chart.g3{
+    top:453px;left:94px;height:75px;background-image:url('../images/main/mov_sec05_chart_g3.png');
+    transform:translateY(40px)
+}
+.cmsMainLogout .sec05 .chart.g4{
+    top:481px;left:123px;height:63px;background-image:url('../images/main/mov_sec05_chart_g4.png');
+    transform:translateY(20px)
+}
+.cmsMainLogout .sec05 .chart.g5{
+    top:521px;left:152px;height:40px;background-image:url('../images/main/mov_sec05_chart_g5.png');
+    transform:translateY(5px)
+}
+.cmsMainLogout .sec05 .chart.all{
+    top:363px;left:42px;height:124px;width:0;
+    background-image:url('../images/main/mov_sec05_chart_a.png');background-size:157px auto
+}
+.cmsMainLogout .sec05 .chart[class*="f"]{width:20px;height:20px;background:#fff;z-index:1;opacity:1;transform:skewY(152deg)}
+.cmsMainLogout .sec05 .chart.f0{bottom:-38px;left:-65px;width:300px;height:100px;transform:rotate(-150deg)}
+.cmsMainLogout .sec05 .chart.f1{top:491px;left:47px}
+.cmsMainLogout .sec05 .chart.f2{top:508px;left:76px}
+.cmsMainLogout .sec05 .chart.f3{top:525px;left:104px}
+.cmsMainLogout .sec05 .chart.f4{top:542px;left:133px}
+.cmsMainLogout .sec05 .chart.f5{top:553px;left:169px}
+
+.cmsMainLogout .sec05 .chart2.box{
+    top:225px;right:63px;opacity:0;overflow:hidden;width:60px;height:67px;
+    background:rgba(145,218,255,.4);border-radius:4px;transform:skewY(31deg) translateX(-20px);
+}
+.cmsMainLogout .sec05 .chart2.box [class*="g"]{
+    width:9px;height:65px;background:#73a2ff;
+    border-radius:16px 16px 0 0;transform:translateY(20px)
+}
+.cmsMainLogout .sec05 .chart2 .g1{top:25px;left:6px}
+.cmsMainLogout .sec05 .chart2 .g2{top:9px;left:18px}
+.cmsMainLogout .sec05 .chart2 .g3{top:42px;left:30px}
+.cmsMainLogout .sec05 .chart2 .g4{top:29px;left:43px}
+
+.cmsMainLogout .sec05.active .phone[class*="g"]{transition-duration:.5s}
+.cmsMainLogout .sec05.active .phone.g1{height:50px;transition-delay:.25s}
+.cmsMainLogout .sec05.active .phone.g2{height:56px;transition-delay:.45s;transition-timing-function:ease}
+.cmsMainLogout .sec05.active .phone.g3{height:20px;transition-delay:.35s;transition-timing-function:linear}
+.cmsMainLogout .sec05.active .chart[class*="g"]{transform:translateY(0);transition-duration:.5s;transition-timing-function:ease}
+.cmsMainLogout .sec05.active .chart.g1{transition-delay:.5s}
+.cmsMainLogout .sec05.active .chart.g2{transition-delay:.55s}
+.cmsMainLogout .sec05.active .chart.g3{transition-delay:.65s}
+.cmsMainLogout .sec05.active .chart.g4{transition-delay:.85s}
+.cmsMainLogout .sec05.active .chart.g5{transition-delay:.95s}
+.cmsMainLogout .sec05.active .chart.all{
+    width:157px;transition-timing-function:ease-in;
+    transition-duration:.75s;transition-delay:1.05s;
+}
+.cmsMainLogout .sec05.active .chart2.box{opacity:1;transform:skewY(31deg) translateX(0);transition-delay:.5s}
+.cmsMainLogout .sec05.active .chart2.box [class*="g"]{transform:translateY(0);transition-duration:.6s}
+.cmsMainLogout .sec05.active .chart2 .g1{transition-delay:.65s}
+.cmsMainLogout .sec05.active .chart2 .g2{transition-delay:.75s}
+.cmsMainLogout .sec05.active .chart2 .g3{transition-delay:.8s}
+.cmsMainLogout .sec05.active .chart2 .g4{transition-delay:.85s}
+.ie9 .cmsMainLogout .scene .ele,
+.ie9 .cmsMainLogout .sec04 .scene{display:none}
+
+/* 로그인 후 */
+.mainTopArea { padding:30px 0; background:#f8f8f8;}
+.mainTopArea .inner { position:relative; margin:0 auto; width:1080px;}
+.mainTopArea .topHead { overflow:hidden;}
+.mainTopArea .topHead > strong { float:left; margin-right:20px; font-size:36px; line-height:46px; font-weight:700; }
+.mainTopArea .topHead .message { float:left; padding-top:11px; width:870px;}
+.mainTopArea .topHead .message p {}
+.mainTopArea .topHead .message p > a { position:relative; display:inline-block; padding-left:34px; font-size:16px; color:#000; font-weight:500; }
+.mainTopArea .topHead .message p strong{overflow:hidden; position:absolute; width:1px; height:1px; margin:-1px; clip:rect(0,0,0,0);}
+.mainTopArea .topHead .message p > a:before { content:''; position:absolute; left:0; width:24px; height:24px; background:url('../images/common/iconset_24.png') -578px 0 no-repeat;}
+.mainTopArea .topCont:after { content:''; clear:both; display:block; }
+.mainTopArea .topCont > div { float:left; margin:20px 0 0 30px; width:520px;}
+.mainTopArea .topCont > div:nth-child(odd) { margin-left:0;}
+.mainTopArea .topCont .bannerSlide {overflow:hidden;position:relative;border-radius:10px; box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.04);}
+.mainTopArea .topCont .bannerSlide .slideArea { overflow:hidden; width:100%; border-radius:10px; }
+.mainTopArea .topCont .bannerSlide .item { position:relative; height:190px;}
+.mainTopArea .topCont .bannerSlide .item .img { position:absolute; bottom:0; right:30px; width:180px; height:180px;}
+.mainTopArea .topCont .bannerSlide .item .img img { width:100%;}
+.mainTopArea .topCont .bannerSlide .item .txt { padding:38px 210px 0 30px; }
+.mainTopArea .topCont .bannerSlide .item .txt > strong { display:block; margin-bottom:10px; font-size:24px; font-weight:700; color:#fff; }
+.mainTopArea .topCont .bannerSlide .item .txt > span { font-size:18px; font-weight:600; color:#fff;}
+.mainTopArea .topCont .bannerSlide .slick-dots { position:absolute; padding-right:20px; bottom:30px; left:30px;}
+.mainTopArea .topCont .bannerSlide .slick-dots ul li { display:inline-block;}
+.mainTopArea .topCont .bannerSlide .slick-dots ul li + li { margin-left:10px;}
+.mainTopArea .topCont .bannerSlide .slick-dots ul li button { width:8px; height:8px; font-size:0; border-radius:50%; background:#fff; opacity:0.5;}
+.mainTopArea .topCont .bannerSlide .slick-dots ul li.slick-active button { width:20px; border-radius:4px; opacity:1;}
+.mainTopArea .topCont .bannerSlide .slick-dots .control { position:absolute; right:0; top:-1px; width:11px; height:10px; background-color:transparent; background-image:url('../images/main/icon_banner_play.png'); background-repeat:no-repeat;}
+.mainTopArea .topCont .bannerSlide .slick-dots .control.stop { background-image:url('../images/main/icon_banner_pause.png');}
+.mainTopArea .topCont .bannerSlide .slick-dots .control > span { font-size:0;}
+
+.mainTopArea .topCont .bannerSlide .flex-control-paging,
+.mainTopArea .topCont .bannerSlide .flex-pauseplay{position:absolute;font-size:0}
+.mainTopArea .topCont .bannerSlide .flex-control-paging{bottom:20px;left:30px}
+.mainTopArea .topCont .bannerSlide .flex-control-paging li{float:left;margin-right:10px}
+.mainTopArea .topCont .bannerSlide .flex-control-paging a{display:inline-block;width:8px;height:8px;font-size:0;border-radius:50%;background:#fff;opacity:.5}
+.mainTopArea .topCont .bannerSlide .flex-control-paging a.flex-active{width:20px;border-radius:4px;opacity:1}
+.mainTopArea .topCont .bannerSlide .flex-pauseplay{bottom:19px}
+.mainTopArea .topCont .bannerSlide .flex-pauseplay a{display:block;width:10px;height:10px;text-indent:-3000px}
+.mainTopArea .topCont .bannerSlide .flex-pauseplay .flex-pause{background-image:url('../images/main/icon_banner_pause.png')}
+.mainTopArea .topCont .bannerSlide .flex-pauseplay .flex-play{background-image:url('../images/main/icon_banner_play.png')}
+
+.mainTopArea .topCont .manageArea { border-radius:10px; box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.04);}
+.mainTopArea .topCont .manageArea ul { padding:10px 30px; height:190px; border-radius:10px; background:#fff;}
+.mainTopArea .topCont .manageArea ul li { overflow:hidden; padding:15px 0; border-top:1px solid #e8e8e8;}
+.mainTopArea .topCont .manageArea ul li:first-child { border-top:none;}
+.mainTopArea .topCont .manageArea ul li > strong { float:left; position:relative; margin-right:50px; font-size:18px; font-weight:700;}
+.mainTopArea .topCont .manageArea ul li > strong > span { position:absolute; right:-9px; top:-1px; width:6px; height:6px; border-radius:50%; font-size:0; background:#60584d;}
+.mainTopArea .topCont .manageArea ul li .item { overflow:hidden; float:left;}
+.mainTopArea .topCont .manageArea ul li .item > span { float:left; width:116px; line-height:26px; color:#919191; font-weight:500;}
+.mainTopArea .topCont .manageArea ul li .item > span .idx { display:inline-block; margin-left:10px; font-size:16px; font-weight:500; color:#000}
+
+.mainTopArea .topCont .manageArea2{float:right;padding:30px;width:530px;height:300px;border-radius:10px;box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.04);background:#fff}
+.mainTopArea .topCont .manageArea2 .list{overflow: hidden;}
+.mainTopArea .topCont .manageArea2 .list dt, .mainTopArea .topCont .manageArea2 .list dd{height:38px;font-weight:500}
+.mainTopArea .topCont .manageArea2 .list dt{float:left;font-size:14px;color:#555}
+.mainTopArea .topCont .manageArea2 .list dd{overflow:hidden;text-align:right;font-size:16px;color:#222}
+.mainTopArea .topCont .manageArea2 .list2 dt, .mainTopArea .topCont .manageArea2 .list2 dd{float:left}
+.mainTopArea .topCont .manageArea2 .list2 dt, .mainTopArea .topCont .manageArea2 .list2 dd a{font-weight:500}
+.mainTopArea .topCont .manageArea2 .list2 dt{width:30px;margin-left:54px;font-size:14px;color:#555}
+.mainTopArea .topCont .manageArea2 .list2 dt:first-child{margin-left:0}
+.mainTopArea .topCont .manageArea2 .list2 dd a{display:inline-block;border-bottom:1px solid #222;line-height:20px;font-size:16px;color:#222}
+.mainTopArea .topCont .manageArea2 .list2, .mainTopArea .topCont .manageArea2 h3{height:45px}
+.mainTopArea .topCont .manageArea2 h3{float:left;margin-top:-2px;width:120px;font-weight:700;font-size:16px;color:#222;clear:both}
+.mainTopArea .topCont .manageArea2 h3.new{position:relative}
+.mainTopArea .topCont .manageArea2 h3.new:after{
+    content:'';display:inline-block;width:6px;height:6px;background-color:#60584d;
+    border-radius:50%;position:absolute;top:0;margin:-2px 0 0 9px
+}
+.mainTopArea .topCont .manageArea2 > .area{border-top:1px solid #e8e8e8;margin-top:14px;padding-top:35px}
+.mainTopArea .topCont .manageArea2 > .area:after{display:block;clear:both;content:''}
+.mainTopArea .topCont .manageArea2 > .area.top{border-top:0;margin-top:0;padding-top:0}
+.mainTopArea .topCont .manageArea2 > .area.top h3{font-size:18px;clear:none}
+
+.mainTopArea .quickMenu { overflow:hidden;}
+.mainTopArea .quickMenu ul li { float:left; position:relative; width:160px; height:160px; border-radius:10px; box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.04); background:#fff;}
+.mainTopArea .quickMenu ul li + li { margin-left:20px;}
+.mainTopArea .quickMenu ul li > a { display:block; position:relative; height:100%; font-size:16px; font-weight:500; text-align:center;}
+.mainTopArea .quickMenu ul li a:before { content:''; display:block; margin-bottom:2px; height:120px; background-position:50% 0; background-repeat:no-repeat;}
+.mainTopArea .quickMenu ul li.menu1 a:before { background-image:url('../images/main/icon_main_majormenu01.png');}
+.mainTopArea .quickMenu ul li.menu2 a:before { background-image:url('../images/main/icon_main_majormenu02.png');}
+.mainTopArea .quickMenu ul li.menu3 a:before { background-image:url('../images/main/icon_main_majormenu03.png');}
+
+.mainTopArea .quickMenu2{}
+.mainTopArea .quickMenu2 ul:after{display:block;clear:both;content:''}
+.mainTopArea .quickMenu2 ul li { float:left; position:relative; width:160px; height:90px; font-size:0; border-radius:10px; box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.04); background:#fff;}
+.mainTopArea .quickMenu2 ul li + li { margin-left:20px;}
+.mainTopArea .quickMenu2 ul li > a { display:block; position:relative; height:100%; font-size:14px; font-weight:500; text-align:center;color:#222}
+.mainTopArea .quickMenu2 ul li a:before { content:''; display:block; margin-bottom:2px; height:60px; background-position:50% 19px; background-repeat:no-repeat;}
+.mainTopArea .quickMenu2 ul li.menu1 a:before { background-image:url('../images/main/icon_main_majormenu01.png');}
+.mainTopArea .quickMenu2 ul li.menu2 a:before { background-image:url('../images/main/icon_main_majormenu02.png');}
+.mainTopArea .quickMenu2 ul li.menu3 a:before { background-image:url('../images/main/icon_main_majormenu03.png');}
+
+.mainTopArea .salesManage { padding:30px; height:160px; border-radius:10px; box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.04); background:#fff;}
+.mainTopArea .salesManage:after { content:''; clear:both; display:block;}
+.mainTopArea .salesManage > strong { float:left; font-size:18px; font-weight:700;}
+.mainTopArea .salesManage ul { float:right; width:350px;}
+.mainTopArea .salesManage ul li { overflow:hidden; margin-top:14px;}
+.mainTopArea .salesManage ul li:first-child { margin-top:0;}
+.mainTopArea .salesManage ul li > span { float:left; color:#919191; line-height:24px; font-weight:500; }
+.mainTopArea .salesManage ul li > em { float:right; font-size:16px; font-weight:500; }
+
+.mainContArea { position:relative; margin:30px auto 100px; width:1080px;}
+.mainContArea .unsetBox { margin-bottom:30px; padding:30px 0; text-align:center; border-radius:10px; border:1px solid #e8e8e8; }
+.mainContArea .unsetBox > strong { font-size:24px; font-weight:700;}
+.mainContArea .unsetBox p { margin:10px 0 20px; font-size:18px; font-weight:600; color:#555 }
+.mainContArea .unsetBox .btnText { font-size:16px;}
+.mainContArea .pageTit { position:relative; margin-bottom:20px;font-size:24px}
+.mainContArea .pageTit .btnText { position:absolute; right:0; bottom:0; font-size:16px;}
+
+.mainTopArea .bannerSet{float:left}
+.mainTopArea .bannerSet .quickMenu2{margin-top:20px}
+
+/*  */
+.bankAccountList { border-top:2px solid #60584d; border-bottom:1px solid #ccc; }
+.bankAccountList > ul > li { position:relative; padding:30px 20px; border-top:1px solid #e8e8e8;}
+.bankAccountList > ul > li:first-child { border-top:0;}
+.bankAccountList > ul > li > strong { font-size:20px; font-weight:700; }
+.bankAccountList > ul > li .info { overflow:hidden; margin-top:20px;}
+.bankAccountList > ul > li .info > div { float:left;}
+.bankAccountList > ul > li .info .bank { position:relative; width:220px; padding-left:40px; }
+.bankAccountList > ul > li .info .bank .logo { position:absolute; left:0; top:0; width:30px; height:30px;}
+.bankAccountList > ul > li .info .bank > em { display:block; font-size:18px; color:#000; line-height:30px; font-weight:700;}
+.bankAccountList > ul > li .info .bank .date { display:block; color:#555}
+.bankAccountList > ul > li .info .account { width:416px;}
+.bankAccountList > ul > li .info .account .num { font-size:0;}
+.bankAccountList > ul > li .info .account .num .btnText { font-size:18px; font-weight:700; line-height:26px; vertical-align:middle;}
+.bankAccountList > ul > li .info .account .num .sbtn.round { margin-left:10px; padding:0; min-width:38px; height:20px; vertical-align:middle; font-weight:500; line-height:20px;}
+.bankAccountList > ul > li .info .account .name { margin-top:6px; color:#555}
+.bankAccountList > ul > li .info .type { position:relative; min-height:54px;}
+.bankAccountList > ul > li .info .type > p { position:absolute; top:50%; transform:translateY(-50%); font-size:16px; font-weight:500; line-height:24px; text-align:center;}
+.bankAccountList > ul > li .info .balance { float:right; width:300px; text-align:right;}
+.bankAccountList > ul > li .info .balance .iconError { display:inline-block; margin:-2px 6px 0 0; width:16px; height:16px; font-size:0; vertical-align:middle; background:url('../images/common/iconset_16.png') -26px -52px no-repeat; }
+.bankAccountList > ul > li .info .balance p { font-size:18px; font-weight:600;}
+.bankAccountList > ul > li .info .balance p > em { margin-left:10px; font-size:20px; font-weight:700;}
+.bankAccountList > ul > li .info .balance p:nth-last-child(n+2) { margin-bottom:6px; font-size:16px; color:#555}
+.bankAccountList > ul > li .info .balance p:nth-last-child(n+2) > em { font-size:18px }
+
+.bankAccountList > ul > li .info .balance2{text-align:right}
+.bankAccountList > ul > li .info .balance2 .iconError { display:inline-block; margin:-2px 6px 0 0; width:16px; height:16px; font-size:0; vertical-align:middle; background:url('../images/common/iconset_16.png') -26px -52px no-repeat; }
+.bankAccountList > ul > li .info .balance2 p { font-size:18px; font-weight:600;}
+.bankAccountList > ul > li .info .balance2 p > em { margin-left:10px; font-size:20px; font-weight:700;}
+.bankAccountList > ul > li .info .balance2 p:nth-last-child(n+2) { margin-bottom:6px; font-size:16px; color:#555}
+.bankAccountList > ul > li .info .balance2 p:nth-last-child(n+2) > em { font-size:18px }
+.bankAccountList > ul > li .info .balance2 a{margin:-2px 0 0 5px}
+
+.bankAccountList > ul > li .utill { position:absolute; top:35px; right:20px; font-size:0;}
+.bankAccountList > ul > li .utill .refresh,
+.bankAccountList > ul > li .utill .refresh2{line-height:21px; font-weight:500; color:#919191; }
+.bankAccountList > ul > li .utill .refresh{display:inline-block}
+.bankAccountList > ul > li .utill .refresh2{text-align:right}
+.bankAccountList > ul > li .utill .refresh2 ~ .balance2{margin-top:8px}
+.bankAccountList > ul > li .utill .etc { position:relative; display:inline-block; margin-left:10px; margin-right:-4px; }
+.bankAccountList > ul > li .utill .etc .btnToggle { display:inline-block; width:24px; height:24px; vertical-align:middle; background:url('../images/common/iconset_24.png') -442px 0 no-repeat;}
+
+.mainContArea .bankAccountList > ul > li > strong { font-size:20px;}
+.mainContArea .bankAccountList > ul > li .info { margin-top:16px;}
+.mainContArea .bankAccountList > ul > li .info .account { width:auto; font-size:0;}
+.mainContArea .bankAccountList > ul > li .info .account .bname { display:inline-block; margin-right:10px; font-size:16px; line-height:26px; font-weight:500; color:#000; vertical-align:middle;}
+.mainContArea .bankAccountList > ul > li .info .account .num { display:inline-block; vertical-align:middle;}
+.mainContArea .bankAccountList > ul > li .utill { position:relative; top:0; right:0;}
+.mainContArea .bankAccountList > ul > li .absArea { position:absolute; top:50%; right:0; transform:translateY(-50%);}
+.mainContArea .bankAccountList > ul > li .absArea .balance{ float:none; width:auto;}
+.mainContArea .bankAccountList > ul > li .absArea .utill { margin-top:10px;}
+.mainContArea .bankAccountList > ul > li .absArea .utill .refresh,
+.mainContArea .bankAccountList > ul > li .absArea .utill .refresh2{ line-height:30px; vertical-align:middle;}
+.mainContArea .bankAccountList > ul > li .absArea .utill .etc { font-size:0; margin-right:0;}
+.mainContArea .bankAccountList > ul > li .absArea .utill .etc .sbtn { min-width:auto;}
+.mainContArea .bankAccountList > ul > li .absArea .utill .etc .sbtn + .sbtn { margin-left:10px;}
+
+/* 자주 사용하는 계좌 설정 */
+.layerOftenAccount .popCont > .formList { margin-top:20px; }
+.layerOftenAccount .popCont > .formList li .selbox { margin-left:30px;}
+.layerOftenAccount .tableWrap {max-width:940px; overflow: hidden;}
+.layerOftenAccount .popCont .tableWrap.type02 { margin-top:20px;}
+.layerOftenAccount .popCont .tableWrap.type02 table { width:940px; table-layout:fixed;}
+.layerOftenAccount .popCont .tableWrap.type02 table thead th { padding:20px 18px;}
+.layerOftenAccount .popCont .notiList.sm { margin:10px 0 30px;}
+.layerOftenAccount .popCont .txt { margin-top:10px; font-size:16px; color:#555}
+.layerOftenAccount .popCont .btnWrap.small:last-child { margin-top:50px;}
+
+/* 정보제공동의 팝업 */
+.infoOfferAgreementPopup .popTitle { text-align:center; }
+.infoOfferAgreementPopup .popDesc { margin-top:20px; text-align:center; }
+.infoOfferAgreementPopup .popCont dl.fieldBox.agreeForm dt input[type="checkbox"]{float: left; margin:24px 20px 0 20px;}
+.infoOfferAgreementPopup .popCont dl.fieldBox.agreeForm dt label{float: left; width:auto; height: 64px; color: #000;}
+.infoOfferAgreementPopup .popCont dl.fieldBox.agreeForm dt label span{float: left; margin-top:20px; font-size: 16px; font-weight: 500; color:#000}
+.infoOfferAgreementPopup .popCont dl.fieldBox.agreeForm dd { padding:0;}
+.infoOfferAgreementPopup .popCont dl.fieldBox.agreeForm dd input[type="checkbox"]{ position:absolute; top:50%; left:20px; transform:translateY(-50%); }
+.infoOfferAgreementPopup .popCont dl.fieldBox.agreeForm dd label{ width: auto; padding: 14px 0 14px 68px; }
+.infoOfferAgreementPopup .popCont dl.fieldBox.agreeForm dd label p { font-size:16px; color:#555; }
+.infoOfferAgreementPopup .popCont dl.fieldBox.agreeForm dd .btnText { position:absolute; top:50%; right:20px; transform:translateY(-50%);}
+.infoOfferAgreementPopup .popCont dl.fieldBox.agreeForm dd.pdLeft { padding-left:68px; }
+.infoOfferAgreementPopup .popCont dl.fieldBox.agreeForm dd.pdLeft input[type="checkbox"] { left:68px;}
+.infoOfferAgreementPopup .popCont dl.fieldBox.agreeForm dd.pdLeft label { padding-left:54px;}
+
+/* 정보제공동의_약관내용 팝업 */
+.InfoAgreementPopup .popCont > h5 { font-size:18px; }
+.InfoAgreementPopup .popCont .agreeContBox { margin-top:10px; overflow-y:auto; padding:20px; width:660px; height:280px; border:1px solid #ccc; border-radius:10px; }
+.InfoAgreementPopup .popCont p.sign { margin-top:10px; font-size:14px; }

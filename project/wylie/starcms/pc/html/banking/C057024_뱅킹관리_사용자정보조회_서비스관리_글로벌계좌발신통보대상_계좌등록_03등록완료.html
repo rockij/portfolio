@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Star CMS ( Star CMS )</title>
+
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/jquery-ui-1.8.16.css" />
+    <link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/osite/cms_base.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.common.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/css2.0/ui.style.css" />
+    
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-1.6.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-ui-1.8.16.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery_bgiframe_min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery.validity.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mCustomScrollbar.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../assets/js2.0/ui.common.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="navSkip"><a href="#containerWrap">본문으로 바로가기</a></div>
+        <!-- header -->
+        <div class="headerWrap">            
+			<script type="text/javascript" src="../../assets/js2.0/ui.header.js" charset="utf-8"></script>
+        </div>
+        <!--// header -->
+
+        <!-- containerWrap -->
+        <div id="containerWrap" role="main" class="">
+            <div id="container">
+                <!-- 컨텐츠 내용 -->
+
+                <div class="location">
+                    <span class="blind">페이지 위치</span>
+                    <ul>
+                        <li><a href="javascript:;">Star CMS</a></li>
+                        <li><a href="javascript:;">뱅킹관리</a></li>
+						<li><a href="javascript:;">사용자 정보 조회</a></li>
+                        <li class="curr">서비스 관리</li>
+                    </ul>
+                </div>
+                
+                <div class="pageTop">
+                    <h2 class="pageTit">사용자 정보 조회</h2>
+                    <ol class="stepProcess">
+						<!--// 활성화시 li에 on 클래스 추가 - 완료된 스탭에는 li에 compleate 클래스 추가 -->
+						<li class="compleate on">
+							<i>01</i>
+							<span>정보입력</span>
+						</li>
+						<li class="compleate on">
+							<i>02</i>
+							<span>입력확인</span>
+						</li>
+						<li class="on">
+							<i>03</i>
+							<span>등록완료</span>
+						</li>
+					</ol>
+                </div>
+
+                <!-- page tab -->
+                <ul class="pageTab" role="tablist">
+                    <li><a href="javascript:;">사용자 정보</a></li>
+                    <li><a href="javascript:;" class="on">서비스 관리</a></li>
+                </ul>
+				<!-- view area 개발자 분들은 이부분 부터 쓰시면 됩니다. -->
+				<div class="viewArea inquiryAccount addService">
+
+                    <h3 class="contTit">글로벌 계좌발신 통보대상 계좌등록</h3>
+
+                    <div class="compleateBox mt20">
+						<div class="notiBox">
+							<ul class="notiList">
+                                <li>‘오류’인 경우 해당건은 정상등록이 되지 않았으니, 오류내용을 확인하시고 재등록을 해 주시기 바랍니다.</li>
+                                <li>상세정보는 “뱅킹관리 > 사용자 정보 조회 > 서비스 관리” 에서 조회하실 수 있습니다.</li>
+							</ul>
+						</div>
+                    </div>
+
+                    <div class="tableWrap mt50">
+                        <table summary="">
+                            <caption></caption>
+                            <colgroup>
+                                <col width="250px;">
+                                <col width="290px;">
+                                <col width="250px;">
+                                <col width="290px;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">고객명</th>
+                                    <td>홍길동</td>
+                                    <th scope="row">사업자번호</th>
+                                    <td>000-00-000000</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">거래일</th>
+                                    <td colspan="3">2020.12.31</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="tableWrap type02 mt30">
+						<table summary="">
+							<caption></caption>
+							<colgroup>
+								<col width="300px;">
+								<col width="280px;">
+                                <col width="300px;">
+                                <col width="200px;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">통보대상 계좌번호</th>
+									<th scope="col">수신은행명</th>
+                                    <th scope="col">수신은행 SWIFT CODE(BIC)</th>
+                                    <th scope="col">비고</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="4">
+										<!-- 데이터 없을 경우 -->
+										<div class="dataNone">
+											<i class="icon"></i>
+											<p>조회하실 내역이 없습니다.</p>
+										</div>
+										<!--// 데이터 없을 경우 -->
+									</td>
+								</tr>
+								<tr>
+									<td>00000000000000000</td>
+                                    <td>GSIBKRSE</td>
+                                    <td>GOLDMAN SACHS</td>
+                                    <td>정상</td>
+                                </tr>
+                                <tr>
+									<td>00000000000000000</td>
+                                    <td>GSIBKRSE</td>
+                                    <td>GOLDMAN SACHS</td>
+                                    <td>정상</td>
+                                </tr>
+                                <tr>
+									<td>00000000000000000</td>
+                                    <td>GSIBKRSE</td>
+                                    <td>GOLDMAN SACHS</td>
+                                    <td>
+                                        <a href="javascript:uiCommon.layer.open('errorLayer');" class="underline red" title="오류 팝업으로 이동">오류</a>
+                                    </td>
+								</tr>
+							</tbody>
+						</table>                        
+                    </div>
+
+                    <div class="btnWrap mt60">
+                        <a href="javascript:;" role="button" class="btn bgYellow">확인</a>
+                    </div>
+                    
+				</div>
+				<!--// view area -->
+
+                
+                <!--// 컨텐츠 내용 -->
+            </div>
+            <!--// container -->
+        </div>
+        <!--// containerWrap -->
+
+        <!-- footer -->
+        <div class="footerWrap">
+			<script type="text/javascript" src="../../assets/js2.0/ui.footer.js" charset="utf-8"></script>
+        </div>
+        <!-- footer -->
+    </div>
+
+    <!--오류팝업 (480x474)-->
+    <div class="layer errorLayer" >
+		<a href="javascript: uiCommon.layer.close('errorLayer');" class="popClose"><span class="blind">팝업 닫기</span></a>
+		<h4 class="popTitle">오류</h4>
+		<!-- popContent -->
+		<div class="popCont">
+			<div class="errorArea">
+				<i class="icon"></i>
+				<p>이용에 불편을 드려 죄송합니다.</p>
+				<!-- <p class="subtxt">최신정보 조회 시 모듈 오류가 발생하였습니다.<br>업무 담당자에게 문의하시기 바랍니다.</p> -->
+				<em>오류발생코드(UKFK3224)</em>
+			</div>
+			<ul class="notiList mt50">
+				<li>대표전화 : 1588-9999, 1599-9999, 1644-9999</li>
+			</ul>
+		</div>
+		<!--// popCont -->
+	</div>
+    <!--// 오류팝업-->
+</body>
+</html>
