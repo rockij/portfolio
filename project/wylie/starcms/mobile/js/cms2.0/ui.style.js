@@ -376,6 +376,7 @@ $(function(){
         },
         getScrollTop: function(){ // scroll top 값 가져오기
             this.ST = $(window).scrollTop();
+            console.log(this.ST);
         },
         setScrollTop: function(){ // scroll top 위치로 보내기
             $(window).scrollTop(this.ST);
