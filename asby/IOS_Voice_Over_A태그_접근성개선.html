@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="../resource/css/page.css">
+<title>Kim.I.J Portfolio</title>
+</head>
+<body>
+
+<header>
+    <h1><img src="../resource/image/logo-ijung.png" alt="logo"></h1>
+    <button type="button" title="페이지 뒤로가기" class="menu-btn" onclick="window.history.back()">
+        <ion-icon name="chevron-back"></ion-icon>
+    </button>
+</header>
+<!-- //header -->
+
+<section class="work-box">
+    <div class="container">
+        <div class="col box-list">
+
+            <div class="box-item type">
+                <h2 class="text">
+                    <span class="p">IOS Voice Over에서 A태그의 접근성 개선하기</span>
+                    <a href="https://www.youtube.com/watch?v=D9JrOBiy0bc&list=PLNr4czfSPUxUmO9ZnT8Clbd2i0vIBFvQo&index=45" target="_blank" title="새창열기" class="exlink">동영상</a>
+                </h2>
+                <pre class="cmt">
+                    링크영역 안에 div 태그가 들어가면 voice over 에서는 한번에 읽는것이 아니라 여러번에 나누어 읽어 주게되는 <b>초점분리 현상</b>이 일어난다.
+                    초점분리 현상이 일어나는 이유는 IOS의 자체적인 이슈 a태그 안에 블록요소를 사용하게 되면 발생하는 이슈이다.
+                    이 현상을 막기 위해선 <b>div 태그 대신에 span 태그같은 인라인 요소의 태그를 이용</b>하거나 <b>div role="text"</b> 를 이용한다.
+                </pre>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+<script>
+</script>
+
+</body>
+</html>
