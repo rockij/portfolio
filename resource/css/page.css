@@ -7,7 +7,7 @@ body{
     background-color:#101010;
     font-family: 'Noto Sans KR', sans-serif;
 }
-
+.container{padding-bottom:50px}
 button{
     background: transparent;
     border:0
@@ -40,20 +40,27 @@ img{
     width:100%;
     object-fit:cover;
 }
-.box-item h2.text{
-    font-size:1.6rem
-}
-.box-item h2.text a, .box-item h2.text .p{
-    font-size:16px;
-    color:#999
-}
+.box-item h2.text{font-size:16px}
+.box-item h2.text a, .box-item h2.text .p{font-size:16px;color:#999}
 .box-item h2 .exlink{text-decoration:underline;margin-left:10px}
+.box-item h3.text{margin-top:30px;font-size:16px;color:#999}
 .box-item .cmt{
     color:#777;
     word-break: break-all; white-space: pre-line
 }
 .box-item .cmt b{color:darkolivegreen}
+.box-item code{
+    -webkit-user-select: all;
+    user-select: all;
+    display: block;
+    padding:10px 20px;
+    border: 1px dashed #c9baa7;
+    color: #31808c;
+    overflow: auto;
+}
 .box-item.type h2{margin:30px 0}
+.box-item.type h2.text,
+.box-item.type h2.text a, .box-item.type h2.text .p{font-size:18px}
 .box-menu ul{
     padding:0;
     list-style: none;
