@@ -39,7 +39,9 @@ body{
 </head>
 <body>
 
-<button type="button" onclick="popupOpen('dialog');" class="mwa" aria-label="대화상자">고객센터</button>
+<button type="button" onclick="popupOpen('dialog');" class="mwa" aria-label="대화상자열기">고객센터</button>
+<br><br>
+<button type="button" onclick="popupOpen('dialog2');" class="mwa" aria-label="대화상자2열기">고객센터2</button>
 
 <div id="mw-dialog" class="layer-popup" role="dialog" aria-labelledby="modalChoice" aria-modal="true">
     <div class="dialog" role="dialog" aria-label="문의메일작성" aria-modal="true">
@@ -48,6 +50,16 @@ body{
             접근성 모달창 내용
         </div>
         <button type="button" onclick="popupClose('dialog');" aria-label="대화상자닫기">팝업닫기</button>
+    </div>
+</div>
+
+<div id="mw-dialog2" class="layer-popup" role="dialog" aria-labelledby="modalChoice" aria-modal="true">
+    <div class="dialog" role="dialog" aria-label="문의메일작성2" aria-modal="true">
+        <div id="modalChoice" class="dialog-header">모달창2</div>
+        <div class="dialog-body">
+            접근성 모달창 내용2222
+        </div>
+        <button type="button" onclick="popupClose('dialog2');" aria-label="대화상자닫기">팝업닫기</button>
     </div>
 </div>
 
