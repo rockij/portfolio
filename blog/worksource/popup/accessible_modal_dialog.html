@@ -39,7 +39,7 @@ body{
 </head>
 <body>
 
-<button type="button" onclick="popupOpen('dialog','mwf');" aria-label="대화상자">고객센터</button>
+<button type="button" onclick="popupOpen('dialog');" class="mwa" aria-label="대화상자">고객센터</button>
 
 <div id="mw-dialog" class="layer-popup" role="dialog" aria-labelledby="modalChoice" aria-modal="true">
     <div class="dialog" role="dialog" aria-label="문의메일작성" aria-modal="true">
@@ -47,17 +47,14 @@ body{
         <div class="dialog-body">
             접근성 모달창 내용
         </div>
-        <button type="button" onclick="popupClose('dialog','mwf');" aria-haspopup="dialog" title="대화상자">팝업닫기</button>
+        <button type="button" onclick="popupClose('dialog');" aria-label="대화상자닫기">팝업닫기</button>
     </div>
 </div>
 
 <script>
-var scrollHeight = 0;
-scrollHeight = $(document).scrollTop();
 function popupOpen(obj){
     var el = $('#mw-'+obj);        
     el.show();
-    el.attr('data-focus', 'on');
 
     window.setTimeout(function(){
         var target = $('.layer-popup');
@@ -65,9 +62,17 @@ function popupOpen(obj){
         target.focus();
     }, 500);
 }
+$('.mwa').click(function(){
+    $(this).attr('data-focus', 'on');
+});
 function popupClose(obj){
     var el = $('#mw-'+obj);
     el.hide();
+    $('[data-focus~=on]').focus();
+    window.setTimeout(function(){
+        $('[data-focus~=on]').removeAttr('data-focus');
+        console.log(1);
+    }, 500)
 }
 
 </script>
