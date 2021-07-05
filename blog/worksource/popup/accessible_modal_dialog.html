@@ -39,28 +39,39 @@ body{
 </head>
 <body>
 
-<button type="button" onclick="popupOpen('dialog','mwf');" aria-haspopup="dialog" title="대화상자">고객센터</button>
+<button type="button" onclick="popupOpen('dialog','mwf');" aria-label="대화상자">고객센터</button>
 
 <div id="mw-dialog" class="layer-popup" role="dialog" aria-labelledby="modalChoice" aria-modal="true">
-    <button type="button" onclick="popupClose('dialog','mwf');" aria-haspopup="dialog" title="대화상자">팝업닫기</button>
     <div class="dialog" role="dialog" aria-label="문의메일작성" aria-modal="true">
         <div id="modalChoice" class="dialog-header">모달창</div>
         <div class="dialog-body">
             접근성 모달창 내용
         </div>
+        <button type="button" onclick="popupClose('dialog','mwf');" aria-haspopup="dialog" title="대화상자">팝업닫기</button>
     </div>
 </div>
 
 <script>
 var scrollHeight = 0;
 scrollHeight = $(document).scrollTop();
-function popupOpen(obj,ty,timer){
-    var tar = $('#mw-'+obj);        
-    tar.show();
+function popupOpen(obj){
+    var el = $('#mw-'+obj);        
+    el.show();
+    el.attr('data-focus', 'on');
+
+    window.setTimeout(function(){
+        var target = $('#layer-popup');
+        var win_height = $(window).height();
+        var pop_height = target.height();
+        var top_value = $(window).scrollTop() + (win_height - pop_height) / 2;
+        target.attr('tabindex','0');
+        target.show().css('top', top_value);
+        target.focus();
+    }, 500);
 }
-function popupClose(obj,ty){
-    var tar = $('#mw-'+obj);
-    tar.hide();
+function popupClose(obj){
+    var el = $('#mw-'+obj);
+    el.hide();
 }
 
 </script>
