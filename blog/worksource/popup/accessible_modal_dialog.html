@@ -30,10 +30,13 @@ body{
     margin:0;
 }
 .layer-popup{
-    display:none;
-    position:fixed;left:50%;top:50%;
-    transform: translate(-50%,-50%);
-    width:300px;height:300px;background:rgba(0,0,0,.25)
+    /* display:none; */
+    position:fixed;left:50%;top:50%;transform: translate(-50%,-50%);
+    width:300px;height:300px;background:rgba(0,0,0,.25);
+    visibility: hidden;opacity:0;transition-duration: .3s;
+}
+.layer-popup.on{
+    visibility: visible;opacity:1;
 }
 </style>
 </head>
@@ -66,7 +69,7 @@ body{
 <script>
 function popupOpen(obj){
     var el = $('#mw-'+obj);        
-    el.show();
+    el.addClass('on');
 
     window.setTimeout(function(){
         var target = $('.layer-popup');
@@ -79,7 +82,7 @@ $('.mwa').click(function(){
 });
 function popupClose(obj){
     var el = $('#mw-'+obj);
-    el.hide();
+    el.removeClass('on');
     $('[data-focus~=on]').focus();
     window.setTimeout(function(){
         $('[data-focus~=on]').removeAttr('data-focus');
