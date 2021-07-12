@@ -83,10 +83,11 @@ $('.mwa').click(function(){
 function popupClose(obj){
     var el = $('#mw-'+obj);
     el.removeClass('on');
-    $('[data-focus~=on]').focus();
+    window.setTimeout(function(){
+        $('[data-focus~=on]').focus();
+    }, 500);
     window.setTimeout(function(){
         $('[data-focus~=on]').removeAttr('data-focus');
-        console.log(1);
     }, 1000)
 }
 
