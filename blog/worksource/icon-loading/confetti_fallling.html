@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.2.3/ionicons.min.js"></script>
+<title></title>
+<style>
+/*
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Anonymous Pro', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Courier Prime', monospace;
+    font-family: 'Oleo Script', cursive;
+    font-family: 'Open Sans', sans-serif;
+*/
+*{
+    box-sizing: border-box;
+}
+section{
+    position:relative;
+    padding:60px
+}
+section h2{
+    font-size:2em;
+    margin-bottom:10px
+}
+section p{
+    font-size:1.1em
+}
+section button{
+    position:relative;
+    padding:15px 25px;
+    margin-top:20px;
+    font-size:1.1em;
+    cursor: pointer;
+}
+.popup{
+    position:fixed;
+    top:50%;left:50%;
+    transform: translate(-50%,-50%);
+    background:#fff;
+    width:450px;
+    height:300px;
+    box-shadow: 0 25px 50px rgba(0,0,0,.1),
+                0 0 0 1000px rgba(255,255,255,.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:40px;
+    visibility: hidden;
+}
+.popup.active{
+    visibility: visible;
+}
+.close{
+    position:absolute;top:0;right:0;
+    padding:10px 20px;background:#f00;
+    color:#fff;cursor: pointer;    
+}
+#my-canvas{
+    position: fixed;z-index:10;visibility: hidden;
+    top:0;left:0;width:100%;height:100vh;
+    pointer-events: none;
+}
+#my-canvas.active{
+    visibility: visible;
+}
+</style>
+</head>
+<body>
+
+<section>
+    <h2>Requested Video</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum explicabo nisi in quia vero quisquam, eum ipsum, possimus blanditiis sapiente voluptatum deleniti eveniet voluptatem consequuntur! Amet provident, repudiandae quae inventore dolor voluptate? Dicta, quod at dolorum eius ipsum illum commodi nesciunt possimus dolores ea pariatur. Nihil, architecto! Numquam asperiores labore sed, pariatur inventore doloremque at quod veritatis aliquam, nemo soluta nulla omnis architecto quo earum adipisci? Quaerat tempore obcaecati necessitatibus consequatur laudantium voluptas quasi officiis aliquam, saepe eveniet porro, enim deleniti! Aliquam voluptas porro hic sunt eius dolorum, voluptates illum voluptatum perferendis ullam sequi corrupti, cumque saepe sed reprehenderit vitae!</p>
+    <button class="btn">Click Here</button>
+    <div class="popup">
+        <h2>Your content goes here...</h2>
+        <p class="close">X</p>
+    </div>
+</section>
+
+<canvas id="my-canvas"></canvas>
+
+<script src="../../resources/js/agezao-confetti.js"></script>
+<script>
+let btn = document.querySelector('.btn');
+let popup = document.querySelector('.popup');
+let close = document.querySelector('.close');
+let confe = document.querySelector('#my-canvas');
+btn.onclick = function(){
+    popup.classList.add('active');
+    confe.classList.add('active');
+}
+close.onclick = function(){
+    popup.classList.remove('active');
+    confe.classList.remove('active');
+}
+
+var confettiSettings = { target: 'my-canvas' };
+var confetti = new ConfettiGenerator(confettiSettings);
+confetti.render();
+
+</script>
+
+</body>
+</html>       
