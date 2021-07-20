@@ -31,6 +31,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height:100vh;
+    background:#06181f
 }
 .container{
     position:relative;
@@ -42,6 +43,80 @@ body{
 .container .icon{
     width:200px
 }
+.container .icon path{
+    fill:transparent;
+    stroke-width:10;
+    stroke:#31e8ff
+}
+.container .icon.heart path{
+    stroke-dasharray: 1580;
+    stroke-dashoffset: 0;
+}
+.container .icon.heart:hover path{
+    animation: animate-heart 2s linear forwards;
+}
+@keyframes animate-heart{
+    0%{
+        stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 1580;
+    }
+    80%{
+        stroke-dashoffset: 3160;
+        fill:transparent
+    }
+    100%{
+        stroke-dashoffset: 3160;
+        fill:#31e8ff
+    }
+}
+.container .icon.star path{
+    stroke-dasharray: 1810;
+    stroke-dashoffset: 0;
+}
+.container .icon.star:hover path{
+    animation: animate-star 2s linear forwards;
+}
+@keyframes animate-star{
+    0%{
+        stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 1810;
+    }
+    80%{
+        stroke-dashoffset: 3620;
+        fill:transparent
+    }
+    100%{
+        stroke-dashoffset: 3620;
+        fill:#31e8ff
+    }
+}
+.container .icon.moon path{
+    stroke-dasharray: 1100;
+    stroke-dashoffset: 0;
+}
+.container .icon.moon:hover path{
+    animation: animate-moon 2s linear forwards;
+}
+@keyframes animate-moon{
+    0%{
+        stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 1100;
+    }
+    80%{
+        stroke-dashoffset: 2200;
+        fill:transparent
+    }
+    100%{
+        stroke-dashoffset: 2200;
+        fill:#31e8ff
+    }
+}
 </style>
 </head>
 <body>
@@ -49,7 +124,7 @@ body{
 <div class="container">
     <div class="icon heart">
         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+            x="0px" y="0px" viewBox="-5 0 521.00002 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
             <g>
                 <g>
                     <path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
@@ -63,7 +138,7 @@ body{
     </div>
     <div class="icon star">
         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px" y="0px" viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002;"
+            x="0px" y="0px" viewBox="-5 0 521.00002 512" style="enable-background:new 0 0 512.002 512.002;"
             xml:space="preserve">
             <g>
                 <g>
@@ -79,7 +154,7 @@ body{
     </div>
     <div class="icon moon">
         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px" y="0px" viewBox="0 0 312.812 312.812" style="enable-background:new 0 0 312.812 312.812;"
+            x="0px" y="0px" viewBox="-5 -10 342.812 342.812" style="enable-background:new 0 0 312.812 312.812;"
             xml:space="preserve">
             <g>
                 <g>
