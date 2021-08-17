@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.2.3/ionicons.min.js"></script>
+<title></title>
+<style>
+body {
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	background-image: linear-gradient(to top, #3c578a 0%, #9db5dd 100%);
+}
+h1 span {
+	color: #20345a;
+}
+#nav-container {
+	position: relative;
+	width: 500px;
+	height: 80px;
+}
+svg {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 0;
+}
+svg circle {
+	fill: #20345a;
+}
+nav {
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	top: 0;
+	width: 500px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+nav a {
+	display: block;
+	width: 20%;
+	height: 100%;
+	font-size: 30px;
+	line-height: 100px;
+	color: #fff;
+	text-align: center;
+}
+
+.youtube-link {
+	position: fixed;
+	left: 20px;
+	bottom: 20px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 12px;
+}
+</style>
+</head>
+<body>
+
+<h1>Sliding <span>Gooey</span> Nav</h1>
+
+<div id="nav-container">
+    <svg xmlns="http://www.w3.org/2000/svg" width="500" height="100" viewBox="0 0 500 100">
+        <defs>
+            <filter id="gooFilter">
+                <fegaussianblur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -8"
+                    result="goo" />
+                <feblend in="SourceGraphic" in2="goo" operator="atop" />
+            </filter>
+        </defs>
+        <g filter="url(#gooFilter)">
+            <circle class="goop" cx="50" cy="50" r="40" />
+            <circle class="goop" cx="50" cy="50" r="40" />
+        </g>
+    </svg>
+    <nav>
+        <a href="#"><i class="fas fa-home"></i></a>
+        <a href="#"><i class="fas fa-building"></i></a>
+        <a href="#"><i class="fas fa-network-wired"></i></a>
+        <a href="#"><i class="fas fa-id-card"></i></a>
+        <a href="#"><i class="fas fa-coffee"></i></a>
+    </nav>
+</div>
+
+<a class="youtube-link" href="https://youtu.be/SIL6x1LDGOg" target="_blank">https://youtu.be/SIL6x1LDGOg</a>
+
+<script>
+const container = document.getElementById("nav-container");
+const svg = container.querySelector("svg");
+const circle1 = svg.querySelectorAll("circle")[0];
+const circle2 = svg.querySelectorAll("circle")[1];
+const navlinks = container.querySelectorAll("nav a");
+
+gsap.set(circle1, {transformOrigin: '50%' });
+gsap.set(circle2, {transformOrigin: '50%' });
+
+navlinks.forEach((link, index) => {
+	link.addEventListener("click", (e) => {
+		
+		let tl1 = gsap.timeline({paused: true});
+		let tl2 = gsap.timeline({paused: true, delay: .1});
+
+		tl1.to(circle1, {
+			x: 100 * index,
+			duration: 0.5,
+			ease: Sine.easeInOut
+		});
+		tl1.to(circle1, {
+			scaleX: 1.2,
+			scaleY: 0.8,
+			duration: 0.25,
+			ease: Sine.easeInOut
+		}, 0);
+		tl1.to(circle1, {
+			scaleX: 1,
+			scaleY: 1,
+			duration: 0.25,
+			ease: Sine.easeInOut
+		}, 0.25);
+
+		tl2.to(circle2, {
+			x: 100 * index,
+			duration: 0.5,
+			ease: Sine.easeInOut
+		});
+		tl2.to(circle2, {
+			scaleX: 1.2,
+			scaleY: 0.8,
+			duration: 0.25,
+			ease: Sine.easeInOut
+		}, 0);
+		tl2.to(circle2, {
+			scaleX: 1,
+			scaleY: 1,
+			duration: 0.25,
+			ease: Sine.easeInOut
+		}, 0.25);
+
+		tl1.play();
+		tl2.play();
+
+		e.preventDefault();
+
+	});
+});
+</script>
+
+</body>
+</html>       
