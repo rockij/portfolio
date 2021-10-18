@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>font-family: 'Montserrat', sans-serif;
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.2.3/ionicons.min.js"></script>
 <title></title>
 <style>
@@ -27,15 +27,53 @@
     font-family: 'Oleo Script', cursive;
     font-family: 'Open Sans', sans-serif;
 */
-body{
+html, body{
+    height:100%;
+    width:100%;
+    font-family: 'Poppins', sans-serif;
+    background-color:#000
+}
+.wrapper{
+    width:100%;
+    height:100%;
+    position: relative;
+    padding: 64px;
+    filter:contrast(15);
+    background-color:#000
+}
+.wrapper h2{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    color:#fff;
     margin:0;
+    font-size:128px;
+    font-weight:600;
+    text-transform: uppercase;
+    filter:blur(8px);
+    display: block;
+    animation: animate 10s infinite alternate;
+}
+@keyframes animate{
+    0%{
+        letter-spacing: -80px;
+        filter:blur(8px)
+    }
+    50%{
+        filter: blur(8px);
+    }
+    100%{
+        letter-spacing: 10px;
+        filter: blur(8px);
+    }
 }
 </style>
 </head>
 <body>
 
-<div class="">
-    
+<div class="wrapper">
+    <h2>Animation</h2>
 </div>
 
 <script>

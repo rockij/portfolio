@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>font-family: 'Montserrat', sans-serif;
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.2.3/ionicons.min.js"></script>
 <title></title>
 <style>
@@ -28,14 +28,35 @@
     font-family: 'Open Sans', sans-serif;
 */
 body{
-    margin:0;
+    font-family: 'Montserrat', sans-serif;
+    background:linear-gradient(125deg, #2c3e50, #27ae60, #2980b9, #e74c3c, #8e44ad);
+    background-size:400%;
+    animation: bganimation 15s infinite;
+}
+.text{
+    color:#fff;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 350px 0; 
+    font-size: 22px;
+}
+@keyframes bganimation {
+    0%{
+        background-position: 0% 50%
+    }
+    50%{
+        background-position: 100% 50%
+    }
+    100%{
+        background-position: 0% 50%
+    }
 }
 </style>
 </head>
 <body>
 
-<div class="">
-    
+<div class="text">
+    Gradien Background Animation
 </div>
 
 <script>
