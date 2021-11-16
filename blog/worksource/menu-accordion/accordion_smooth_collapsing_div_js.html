@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.2.3/ionicons.min.js"></script>
+<title></title>
+<style>
+.container .section {
+  overflow: hidden;
+  transition: height .3s ease-out;
+  height: auto;
+}
+* {
+  box-sizing: border-box;
+}
+p {
+  margin: 10px;
+}
+.container {
+  border: 3px solid #FFEB3B;
+  margin: 0 auto;
+  max-width: 300px;
+  border-radius: 3px;
+}
+.container .section {
+  border: 3px solid #4CAF50;
+}
+
+button {
+  display: block;
+  --webkit-appearance:none;
+  font-size: 18px;
+  border: none;
+  border-radius: 3px;
+  background: #2196F3;
+  color: white;
+  margin: 15px auto;
+  padding: 15px;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-out;
+}
+button:focus {
+  outline: none;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="section">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat.</p>
+    </div>
+    <div class="section collapsible">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+    </div>
+    <div class="section">
+        <p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.</p>
+    </div>
+</div>
+
+<button id="toggle-button">Toggle collapse</button>
+
+<script>
+function collapseSection(element) {
+  // 실제 크기에 관계없이 요소 내부 콘텐츠의 높이를 가져옵니다.
+  var sectionHeight = element.scrollHeight;
+
+  // 모든 CSS 전환을 일시적으로 비활성화
+  var elementTransition = element.style.transition;
+  element.style.transition = '';
+
+  // 다음 프레임에서(이전 스타일 변경이 적용되는 즉시),
+  // 요소의 높이를 현재 픽셀 높이로 명시적으로 설정하므로
+  // 'auto'에서 전환되지 않음
+  requestAnimationFrame(function() {
+    element.style.height = sectionHeight + 'px';
+    element.style.transition = elementTransition;
+
+    // 다음 프레임에서(이전 스타일 변경이 적용되자마자),
+    // 요소가 height: 0으로 전환되도록 합니다.
+    requestAnimationFrame(function() {
+      element.style.height = 0 + 'px';
+    });
+  });
+
+  // 섹션을 "collapsed"으로 표시
+  element.setAttribute('data-collapsed', 'true');
+}
+
+function expandSection(element) {
+  // 실제 크기에 관계없이 요소 내부 콘텐츠의 높이를 가져옵니다.
+  var sectionHeight = element.scrollHeight;
+
+  // 요소가 내부 콘텐츠의 높이로 전환되도록 합니다.
+  element.style.height = sectionHeight + 'px';
+
+  // 다음 CSS 전환이 완료될 때(방금 트리거한 전환이어야 함)
+  element.addEventListener('transitionend', function(e) {
+    // 이 이벤트 리스너를 제거하여 한 번만 트리거되도록 합니다.
+    element.removeEventListener('transitionend', arguments.callee);
+
+    // 요소의 인라인 스타일에서 "높이"를 제거하여 초기 값으로 돌아갈 수 있도록 합니다.
+    element.style.height = null;
+  });
+
+  // 섹션을 "collapsed"으로 표시 삭제
+  element.setAttribute('data-collapsed', 'false');
+}
+
+document.querySelector('#toggle-button').addEventListener('click', function(e) {
+  var section = document.querySelector('.section.collapsible');
+  var isCollapsed = section.getAttribute('data-collapsed') === 'true';
+
+  if(isCollapsed) {
+    expandSection(section)
+    section.setAttribute('data-collapsed', 'false')
+  } else {
+    collapseSection(section)
+  }
+});
+</script>
+
+</body>
+</html>
