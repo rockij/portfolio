@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.2.3/ionicons.min.js"></script>
+<title></title>
+<style>
+/*
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Anonymous Pro', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Courier Prime', monospace;
+    font-family: 'Oleo Script', cursive;
+    font-family: 'Open Sans', sans-serif;
+*/
+.btn {
+  font-family: serif;
+  padding: 0.5em 1.25em;
+  border: 0;
+  border-radius: 0.5em;
+  font-size:1.8rem
+}
+
+.btn:hover,
+.btn:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -0.25em;
+}
+
+.btn--primary {
+  background: var(--clr-primary-400);
+  color: white;
+}
+
+.btn--accent {
+  background: var(--clr-accent-400);
+  color: white;
+}
+
+.btn--very-different {
+  all: initial;
+  all: unset;
+  all: revert;
+}
+
+p {
+  font-size: 1.25rem;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+:root {
+  --clr-primary-400: #23589b;
+  --clr-secondary-400: #8c1ab1;
+  --clr-accent-400: #ff0f47;
+  --gradient-400: var(--clr-primary-400), var(--clr-secondary-400),
+    var(--clr-accent-400);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul[class],
+li[class] {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1em);
+}
+
+.container {
+  width: min(90%, 75ch);
+  margin-inline: auto;
+}
+
+header {
+  padding-block: max(15vh, 10rem);
+  background-image: linear-gradient(120deg, var(--gradient-400));
+  color: white;
+  text-align: center;
+  font-size: 1.75rem;
+}
+
+section {
+  padding-block: max(7vh, 6rem);
+}
+
+section {
+  background-color: var(--clr-primary-400);
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="container flow">
+        <h1><code>initial</code> does what now?!</h1>
+        <p>I always thought <code>initial</code> was a useful value, but there are better options out there!</p>
+        <button class="btn btn--primary">Click me!</button>
+        <button class="btn btn--accent">No, click me!</button>
+        <button class="btn btn--very-different">What about me?!</button>
+    </div>
+</header>
+
+<main>
+    <section>
+        <div class="container flow">
+            <h2>A section title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus veritatis autem unde laborum cum
+                delectus corrupti recusandae rerum voluptatem! Voluptatem illo corrupti, inventore quibusdam libero
+                alias adipisci, necessitatibus quaerat totam pariatur soluta consequatur deserunt sit quia doloribus
+                harum molestias itaque numquam ad hic rerum laudantium.</p>
+            <p>Placeat illum quidem incidunt autem facere, totam quae distinctio quasi cumque sequi voluptas
+                corporis vero eaque recusandae nostrum ipsum illo sunt quis voluptatum, ad aliquam! Nam, delectus
+                debitis accusamus, ea harum neque, nisi obcaecati labore minus dicta veniam earum quisquam
+                cupiditate. Deserunt facilis harum ut.</p>
+            <p>Aperiam distinctio nisi necessitatibus perspiciatis, accusantium eveniet eius non, quas ea voluptatem
+                quisquam molestias quod, aut deleniti magnam odio ipsum adipisci consequuntur fuga facere dolorum
+                culpa! Non soluta quibusdam inventore, ducimus itaque eius eum, iste delectus reprehenderit dicta
+                aspernatur nulla quia exercitationem excepturi dignissimos vero!</p>
+        </div>
+    </section>
+    <section class="very-different">
+        <div class="container flow">
+            <h2>A different section</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quaerat veritatis nisi sint in ab id
+                et aperiam asperiores velit impedit ipsum, accusantium quas doloremque quibusdam quis nihil, est
+                illo eius commodi omnis at sunt! Quibusdam sapiente necessitatibus optio est odio nam corporis
+                laborum iste.</p>
+            <p>Consequatur, beatae natus tempore architecto, cumque asperiores inventore rerum repudiandae
+                necessitatibus assumenda, quo accusantium id dolorem praesentium perspiciatis sit veritatis nulla
+                recusandae distinctio eligendi culpa officiis consectetur. Natus in inventore, laboriosam accusamus
+                excepturi voluptate iste atque dolores, vero harum quia consequatur id soluta voluptatum dolor.</p>
+            <p>Eaque laborum eius incidunt. Fuga incidunt facere voluptatem perferendis eius tempora sint corporis
+                libero adipisci velit voluptate debitis culpa esse ex rem molestias, animi sunt, laboriosam earum,
+                dolores amet officiis aliquam doloremque beatae! Inventore sed nobis minima perferendis saepe?
+                Libero adipisci voluptatibus aperiam obcaecati nihil.</p>
+        </div>
+    </section>
+    <section>
+        <div class="container flow">
+            <h2>And yet another section</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A aspernatur inventore quia ab
+                consequuntur. Incidunt perspiciatis exercitationem temporibus rerum? Accusantium accusamus excepturi
+                ut porro, pariatur officiis delectus eligendi eveniet in asperiores at voluptas iure, vel quas
+                laudantium unde repellendus aliquam. Quibusdam error expedita quos molestiae.</p>
+            <p>Maxime molestias vitae odit! Reprehenderit ratione dolorem, error sequi maxime magnam iure eligendi
+                soluta quod voluptatem eos voluptates assumenda architecto quas, beatae officia ab ea molestias
+                velit? Expedita ut laudantium repellat eligendi porro maxime inventore animi? Obcaecati incidunt
+                debitis deleniti! Possimus tempora eum reiciendis qui!</p>
+            <p>Ducimus tempore tempora veritatis, doloremque corrupti pariatur ipsa? Architecto non nemo, quibusdam
+                repellat cum vero cumque vel illum aut animi, autem facilis assumenda numquam magnam error, esse
+                dolorum. Doloremque reprehenderit libero corporis nisi, nam impedit nostrum expedita maxime quisquam
+                nulla voluptate rem deleniti. Velit, deleniti?</p>
+        </div>
+    </section>
+</main>
+
+<script>
+</script>
+
+</body>
+</html>       
