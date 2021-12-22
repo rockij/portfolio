@@ -78,7 +78,6 @@
                     <button class="text" onclick="$(this).parent().toggleClass('open')">한줄팁 전체보기 <ion-icon name="folder-open-outline"></ion-icon></button>
                     <div class="text">
                         <ul>
-                            <li>반응형 팝업 가장 좋은 여백 크기는 margin:10vw; padding:10vw;</li>
                             <li>font-size: clamp(min, preferred(기본), max)</li>
                             <li>이미지 위에 투명박스 블렌드모드 효과를 주려면 background-blend-mode 사용</li>
                             <li>브라우저 지원 여부 체크 @supports, @supports not </li>
@@ -86,13 +85,37 @@
                             <li>정해진 비율 유지 aspect-radio:16/9</li>
                             <li>가상요소 선택자(before,after)는 이중콜론 ::을 쓰는게 맞다 <a href="https://css-tricks.com/to-double-colon-or-not-do-double-colon/" target="_blank">참고</a></li>
                             <li>텍스트 컬러값 전체로 적용하고자 할때는 currentColor <a href="https://css-tricks.com/currentcolor/" target="_blank">참고</a></li>
-                            <li>접근성 향상위해 :focus > :focus-visible <a href="basic/css_focus-visible(instead-focus).html" target="_blank">참고</a></li>
+                            <li>비-레티나 화면 = 전체 크기에서 1x 이미지, 레티나 화면 = 절반 크기에서 2x 이미지 <a href="https://css-tricks.com/snippets/css/retina-display-media-query/" target="_blank">참고</a></li>
+                            <li>텍스트가 작을수록 대비를 높이기 위해 윤곽선이 더 두껍게 하기 위해 font-optical-sizing:none <a href="https://css-tricks.com/almanac/properties/f/font-optical-sizing/" target="_blank">참고</a></li>
+                            <li>이미지 렌더링 속성정의 image-rendering:auto │ crisp-edges │ pixelated <a href="https://css-tricks.com/almanac/properties/i/image-rendering/" target="_blank">참고</a></li>
+                            <li>Webp, AVIF 지원이 가능 확인 후 이미지 최적화</li>
+                            <li>CSS 리소스(글꼴, 배경 이미지)는 CSS가 요청하는 것이 아니라 이를 필요로 하는 DOM 노드에서 요청</li>
                             <!-- <li> <a href="" target="_blank">참고</a></li> -->
                         </ul>
                     </div>
                 </div>
             </div>
             <!-- /한줄팁 -->
+            
+            <!-- 자주볼것 -->
+            <div>
+                <div class="mix box-item one-line-tip">
+                    <button class="text" onclick="$(this).parent().toggleClass('open')">자주볼것 전체보기 <ion-icon name="folder-open-outline"></ion-icon></button>
+                    <div class="text">
+                        <ul>
+                            <li>ct.css - 삽입된 스타일시트로만을 통한 성능 힌트 <a href="https://css-tricks.com/ct-css-performance-hints-via-injected-stylesheet-alone/" target="_blank">연결</a></li>
+                            <li>WebPageTest를 사용한 성능 테스트 <a href="https://webpagetest.org/" target="_blank">참고</a></li>
+                            <li>웹사이트에서 LCP 손쉽게 개선(길다) <a href="https://css-tricks.com/improve-largest-contentful-paint-lcp-on-your-website-with-ease/" target="_blank">연결</a></li>
+                            <li>2021 Scroll Survey Report <a href="https://css-tricks.com/2021-scroll-survey-report/" target="_blank">연결</a></li>
+                            <li>CSS 아름다운 그림자 <a href="https://www.joshwcomeau.com/css/designing-shadows/" target="_blank">연결</a></li>
+                            <li>Git에서 완벽한 커밋 만들기(길다) <a href="https://css-tricks.com/creating-the-perfect-commit-in-git/" target="_blank">연결</a></li>
+                            <li>CSS gap속성(길다) <a href="https://css-tricks.com/minding-the-gap/" target="_blank">연결</a></li>
+                            <!-- <li> <a href="" target="_blank">연결</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /자주볼것 -->
 
             <!-- jquery-plugin -->
             <div>
@@ -141,6 +164,16 @@
 
             <!-- etc -->
             <div>
+                <div class="mix box-item etc">
+                    <h2 class="text">
+                        <a href="https://css-tricks.com/grainy-gradients/" target="_blank" title="새창열기">거친 그라디언트 <ion-icon name="arrow-redo-outline"></ion-icon></a>
+                    </h2>
+                </div>
+                <div class="mix box-item etc">
+                    <h2 class="text">
+                        <a href="https://cleanup.pictures/" target="_blank" title="새창열기">이미지에서 개체 제거 <ion-icon name="arrow-redo-outline"></ion-icon></a>
+                    </h2>
+                </div>
                 <div class="mix box-item etc">
                     <h2 class="text">
                         <a href="worksource/etc/print_contents_div_element.html" target="_blank" title="새창열기">Div 요소의 내용 인쇄</a>
@@ -482,6 +515,11 @@
 
             <!-- scroll-parallax -->
             <div>
+                <div class="mix box-item scroll-parallax">
+                    <h2 class="text">
+                        <a href="worksource/scroll-parallax/gradient_scroll_shadow.html" target="_blank" title="새창열기">js 그림자 스크롤하기</a>
+                    </h2>
+                </div>
                 <div class="mix box-item scroll-parallax">
                     <h2 class="text">
                         <a href="https://codepen.io/letsbleachthis/pen/zewKYE" target="_blank" title="새창열기">AOS 애니메이션 codepen 예제 <ion-icon name="arrow-redo-outline"></ion-icon></a>
@@ -844,6 +882,11 @@
             <div>
                 <div class="mix box-item menu-accordion">
                     <h2 class="text">
+                        <a href="worksource/menu-accordion/menu_navbar_layout_flex.html" target="_blank" title="새창열기">menu - css flex을 이용한 레이아웃</a>
+                    </h2>
+                </div>
+                <div class="mix box-item menu-accordion">
+                    <h2 class="text">
                         <a href="worksource/menu-accordion/accordion_smooth_collapsing_div_js.html" target="_blank" title="새창열기">accordion - 최대 높이의 부드러운 축소 div</a>
                     </h2>
                 </div>
@@ -1112,6 +1155,31 @@
 
             <!-- form -->
             <div>
+                <div class="mix box-item form">
+                    <h2 class="text">
+                        <a href="worksource/form/options_password_revealing_inputs.html" target="_blank" title="새창열기">비밀번호 공개 입력 옵션</a>
+                    </h2>
+                </div>
+                <div class="mix box-item form">
+                    <h2 class="text">
+                        <a href="worksource/form/checkbox_box-shadow.html" target="_blank" title="새창열기">box-shadow을 이용한 체크박스 animation</a>
+                    </h2>
+                </div>
+                <div class="mix box-item form">
+                    <h2 class="text">
+                        <a href="worksource/form/checkbox_border-radius.html" target="_blank" title="새창열기">경계 반경 변경하는 체크박스</a>
+                    </h2>
+                </div>
+                <div class="mix box-item form">
+                    <h2 class="text">
+                        <a href="worksource/form/checkbox_3d_rotation.html" target="_blank" title="새창열기">box 3D 회전하는 체크박스</a>
+                    </h2>
+                </div>
+                <div class="mix box-item form">
+                    <h2 class="text">
+                        <a href="worksource/form/No-JS_typing_suggestions.html" target="_blank" title="새창열기">js필요할거 같지만 필요없는 입력요소</a>
+                    </h2>
+                </div>
                 <div class="mix box-item form">
                     <h2 class="text">
                         <a href="worksource/form/google_search_engine.html" target="_blank" title="새창열기">검색입력 Google 검색 엔진 적용</a>

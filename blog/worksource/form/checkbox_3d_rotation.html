@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.2.3/ionicons.min.js"></script>
+<title></title>
+<style>
+/*
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Anonymous Pro', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Courier Prime', monospace;
+    font-family: 'Oleo Script', cursive;
+    font-family: 'Open Sans', sans-serif;
+*/
+.c-checkbox > input[type=checkbox]{
+	width: 40px; height: 40px;
+	cursor: pointer;
+	opacity: 0;
+	margin: 0;
+	appearance: none; -webkit-appearance: none;
+}
+.c-checkbox > div{
+	display: grid;
+	pointer-events: none;
+	transition: transform .6s cubic-bezier(.8, .5, .2, 1.4);
+	transform-style: preserve-3d;
+}
+.c-checkbox > div > *{
+	grid-area: 1/1;
+}
+.c-checkbox > div > i:first-child{
+	background: blue;
+	transform:  translatez( -10px );
+}
+.c-checkbox > div > i:last-child{
+	background: #ddd;
+	transform:  translatez( 10px );
+}
+.c-checkbox > div > i:nth-of-type(2),
+.c-checkbox > div > i:nth-of-type(3){
+	height: 20px;
+	transform: rotatex(90deg)rotatey(90deg) ;
+	position: relative;
+	top: 10px;
+}
+.c-checkbox > div > i:nth-of-type(2){
+	background: navy;
+	right: 20px;
+}
+.c-checkbox > div > i:nth-of-type(3){
+	background: darkslategray;
+	left: 20px;
+}
+input:checked + div{ 
+	transform: rotatey( 180deg ); 
+}
+.c-checkbox{
+	display: grid;
+	width: 40px; height: 40px;
+}
+.c-checkbox > *{
+	grid-area: 1/1;
+}
+label{
+	font: 60px Girassol;
+	color: lime;
+	text-shadow: 2px 2px 0 blue;
+	cursor: pointer;
+}
+main{
+	display: grid;
+	grid:  repeat(5, 70px) / 90px 1fr;
+	align-items: center;
+	width: max-content;
+}
+body{
+	display: grid;
+	height: 100vh;
+	align-items: center;
+	justify-items: center;
+	user-select: none; -webkit-user-select:  none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+/* This code is for heuristic purposes only. For coding alternatives, you can use peudo-elements instead of elements to show the box faces. The <i> elements, which are inline by nature, were automatically blockified, with full width and height, when they became grid items. If you decide to use inline elements, like I did, to show the box faces, make sure they are blockfied or they won't take dimensions (or just use block elements like <div>). You can also try rotating the boxes in other directions. You will then also need to relcote the side faces accordingly, if needed. */
+</style>
+</head>
+<body>
+
+<main>
+    <div class=c-checkbox>
+        <input type=checkbox id=un>
+        <!-- cube design ↴ -->
+        <div><i></i><i></i><i></i><i></i></div>
+    </div>
+    <label for=un>un</label>
+
+    <div class=c-checkbox>
+        <input type=checkbox id=deux checked>
+        <!-- cube design ↴ -->
+        <div><i></i><i></i><i></i><i></i></div>
+    </div>
+    <label for=deux>deux</label>
+
+    <div class=c-checkbox>
+        <input type=checkbox id=trois checked>
+        <!-- cube design ↴ -->
+        <div><i></i><i></i><i></i><i></i></div>
+    </div>
+    <label for=trois>trois</label>
+
+    <div class=c-checkbox>
+        <input type=checkbox id=quatre>
+        <!-- cube design ↴ -->
+        <div><i></i><i></i><i></i><i></i></div>
+    </div>
+    <label for=quatre>quatre</label>
+</main>
+
+<script>
+</script>
+
+</body>
+</html>       

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.2.3/ionicons.min.js"></script>
+<title></title>
+<style>
+/*
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Anonymous Pro', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Courier Prime', monospace;
+    font-family: 'Oleo Script', cursive;
+    font-family: 'Open Sans', sans-serif;
+*/
+input{
+	width: 40px; height: 40px;
+	border-radius: 50%;
+	transition: box-shadow .3s;
+	background: lightgrey;
+	cursor: pointer;
+	border: 0;
+	appearance: none; -webkit-appearance: none; 
+ }
+
+input:checked{ box-shadow: inset 0 0 0 20px blue; }
+
+main{
+	display: grid;
+	grid:  repeat(4, 100px) / 90px 1fr;
+	align-items: center;
+	width: max-content;
+}
+label{
+	font: 60px Girassol;
+	color: lime;
+	text-shadow: 2px 2px 0 blue;
+	cursor: pointer;
+}
+body{
+	display: grid;
+	height: 100vh;
+	align-items: center; 
+	justify-items: center;
+	user-select: none; -webkit-user-select:  none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+/* You can also try multiple shadow values if there's some level of transparency between the shadow colors. You can get that transparency with rgba() color values. */
+</style>
+</head>
+<body>
+
+<main>
+    <input id=un type=checkbox> <label for=un>un</label>
+    <input id=deux type=checkbox checked> <label for=deux>deux</label>
+    <input id=trois type=checkbox> <label for=trois>trois</label>
+    <input id=quatre type=checkbox> <label for=quatre>quatre</label>
+</main>
+
+<script>
+</script>
+
+</body>
+</html>       
