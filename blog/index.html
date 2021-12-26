@@ -522,6 +522,11 @@
             <div>
                 <div class="mix box-item scroll-parallax">
                     <h2 class="text">
+                        <a href="worksource/scroll-parallax/reveal_nav_on_scroll.html" target="_blank" title="새창열기">스크롤시 헤더 탐색 위로 올리면 다시 노출</a>
+                    </h2>
+                </div>
+                <div class="mix box-item scroll-parallax">
+                    <h2 class="text">
                         <a href="worksource/scroll-parallax/gradient_scroll_shadow.html" target="_blank" title="새창열기">js 그림자 스크롤하기</a>
                     </h2>
                 </div>
@@ -1556,12 +1561,16 @@ $(document).ready(function() {
     var mixer = mixitup('.box-list');
     gnbMenu();
     $('.box-menu ul li:eq(0)').trigger('click');
-})
+});
 $('.box-item h2 a').each(function(){
     if($(this).find('ion-icon').length > 0){
         $(this).parent().parent().addClass('outlink')
     }
-})
+});
+$('.box-item h2 a').click(function(){
+    $('.box-item h2 a').removeClass('act');
+    $(this).addClass('act');
+});
 </script>
 
 </body>
