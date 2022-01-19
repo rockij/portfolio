@@ -58,7 +58,6 @@ console.log('message)
 ```
 
 <!-- Task Lists -->
-- [x] checklist1
-- [x] checklist2
+- [] checklist1
+- [] checklist2
 - [] checklist3
-- 
