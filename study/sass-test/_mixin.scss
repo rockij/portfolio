@@ -1,0 +1,50 @@
+
+// 가변하는 인수 ...
+@mixin var($w, $h, $bg...){
+    width:$w;
+    height:$h;
+    background:$bg;
+}
+
+@mixin font(
+    $style: normal,
+    $weight: normal,
+    $size: 16px,
+    $family: sans-serif
+){
+    font: {
+        style: $style;
+        weight: $weight;
+        size: $size;
+        family: $family;
+    }
+}
+
+// @content
+@mixin icon ($url){
+    &::after{
+        content:$url;
+        @content;
+    }
+}
+ 
+/*
+if조건
+ㄴunitless($w) : 단위가 있는지 없는지 체크
+*/
+@mixin positionCenter($w, $h, $p:absolute){
+    @if($p == absolute
+        or $p == fixed
+        or not $p == relative
+    ) {
+        width:if(unitless($w), #{$w}px, $w);
+        height:$h;
+        position:$p;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        margin:auto;
+        background:red;
+    }
+}

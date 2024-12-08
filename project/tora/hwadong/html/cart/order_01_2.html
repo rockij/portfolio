@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="preload" href="../../resources/font/NotoSansKR-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link href="../../resources/css/font.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/base.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/site.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/yjh.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/swiper.min.css" media="screen" rel="stylesheet">
+<script src="../../resources/js/swiper.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<title>주문/결제 | 화동양행</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header" class="fix top">
+        <button type="button" onclick="" class="btn_prev"><i>뒤로가기</i></button>
+        <button type="button" onclick="" class="btn_home"><i>처음으로가기</i></button>
+        <h1>주문/결제</h1>
+        <button type="button" onclick="" class="btn_srch"><i>검색으로가기</i></button>
+        <button type="button" onclick="" class="btn_gnb"><i>메인메뉴열기</i></button>
+    </header>
+    <!-- //header -->
+
+    <div id="ct" class="order-container">
+		<div class="content">
+			<div class="order-box">
+				<h4 class="title_type3 mb0">주문자 정보 <span class="infotxt">표시는 필수 입력 값 입니다.</span></h4>
+				<fieldset class="form_type">
+					<ul class="iplist">
+						<li>
+							<div class="ipbox del">
+								<input type="text" id="" value="홍길동">
+								<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+							</div>
+						</li>
+						<li>
+							<ul class="ipbox hp">
+								<li><input type="tel" id="" value="010" maxlength="3"></li>
+								<li><input type="tel" id="" maxlength="4"></li>
+								<li><input type="tel" id="" maxlength="4"></li>
+							</ul>
+						</li>
+						<li>
+							<div class="ipbox email">
+								<input type="text" id="" value="emailidin">
+								<span class="addr">
+									<input type="text" id="">
+									<div class="select">
+										<select name="" id="">
+											<option value="">선택</option>
+											<option value="naver.com">naver.com</option>
+											<option value="nate.com">nate.com</option>
+											<option value="direct">직접입력</option>
+										</select>
+									</div>
+								</span>
+							</div>
+						</li>
+					</ul>
+				</fieldset>
+			</div>
+
+			<div class="order-box">
+				<h4 class="title_type3 mb16">배송지 정보</h4>
+				<fieldset class="form_type">
+					<ul class="list_ip_check type2 t2">
+						<li>
+							<div class="checkbox" onclick="$('.ipbox.num').parent().hide(); $('#userNum').show()"><input type="radio" name="adsend" id="adsend-user" checked=""><label for="adsend-user">주문자 정보와 동일</label></div>
+						</li>
+						<li>
+							<div class="checkbox" onclick="$('.ipbox.num').parent().hide(); $('#userLaw').show()"><input type="radio" name="adsend" id="adsend-law"><label for="adsend-law">새로 입력</label></div>
+						</li>
+					</ul>
+					<ul class="iplist">
+						<li>
+							<div class="ipbox del">
+								<input type="text" id="" placeholder="받으시는 분을 입력하세요.">
+								<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+							</div>
+						</li>
+						<li>
+							<ul class="ipbox hp">
+								<li><input type="tel" id="" value="010" maxlength="3"></li>
+								<li><input type="tel" id="" maxlength="4"></li>
+								<li><input type="tel" id="" maxlength="4"></li>
+							</ul>
+						</li>
+						<li>
+							<ul class="ipbox hp">
+								<li><input type="tel" id="" value="010" maxlength="3"></li>
+								<li><input type="tel" id="" maxlength="4"></li>
+								<li><input type="tel" id="" maxlength="4"></li>
+							</ul>
+						</li>
+						<li>
+							<div class="ipbox address">
+								<input type="text" id="" value="" readonly="">
+								<button type="button" onclick="" class="btn_s btn_type ip_addr">우편번호 찾기</button>
+							</div>
+						</li>
+							<li>
+							<div class="ipbox del">
+								<input type="text" id="" placeholder="도로명 주소">
+								<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+							</div>
+						</li>
+						<li>
+							<div class="ipbox">
+								<input type="text" id="" placeholder="지번 주소">
+							</div>
+						</li>
+						<li>
+							<div class="ipbox">
+								<input type="text" id="" placeholder="상세 주소">
+							</div>
+						</li>
+					</ul>
+				</fieldset>
+
+				<ul class="lst-info mt20">
+					<li>
+						<a href="#none" class="btn-arrow btn-right">
+							<dl>
+								<dt>배송 메시지</dt>
+								<dd>
+									<span>경비실에 맡겨 주세요.</span>
+								</dd>
+							</dl>
+						</a>
+					</li>
+				</ul>
+
+				<dl class="info-box">
+					<dt class="btn-info btn-arrow btn-down">※ 배송안내</dt>
+					<dd style="display: none;">
+						<ul class="lst-bullet02">
+							<li>기본 배송비는 2,500원 이며, 우체국 택배로 발송 됩니다.</li>
+							<li>해외배송은 불가합니다.</li>
+							<li>무료배송은 수량과 상관없이 실제 결제 금액 기준 5만원 이상만 해당 됩니다.</li>
+							<li>배송지 불분명 및 수신불가 연락처 기입으로 반송되는 왕복  택배 비용은 구매자 부담으로 정확한 주소 및 통화 가능한 연락처를 기입하세요.</li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+
+			<div class="order-prd">
+				<h4 class="title_type3">주문 상품 정보 (총 <span class="fc-blue">2</span>건)</h4>
+				<ul class="lst-order">
+					<li>
+						<a href="#none" class="cart-con">
+							<div class="pro-img"><span><img src="../../resources/image/cart/prd01.jpg" alt=""/></span></div>
+							<div class="prd-info">
+								<span class="clamp-2 pro-title">‘한국의 문화유산’ 기념 은화(2차) 남한산성 상품명이 출력되는 영역입니다.‘한국의 문화유산’ 기념 은화(2차) 남한산성 상품명이 출력되는 영역입니다.</span>
+							</div>
+							<div class="prd-sum">
+								<p class="oder-amt">수량 : 9999개</p>
+								<p class="oder-sum">주문금액 <strong>9,999,999</strong>원</p>
+								<p class="oder-sale">판매가  9,999,999 원</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="total-info">
+				<div class="sumBox">
+					<dl>
+						<dt>총 주문 금액</dt>
+						<dd>
+							<span>총 주문 금액 9,999,999 원</span>
+							<span>배송비 9,999,999 원</span>
+						</dd>
+					</dl>
+				</div>
+			</div>
+
+			<div class="discount-box">
+				<h4 class="title_type3">할인수단 선택</h4>
+				<div class="input-sum">
+					<h4 class="title_type4">적립금</h4>
+					<p>회원 전용 혜택 입니다.</p>
+					<p class="mt15">
+						<button class="btn_m btn_type2">로그인</button>
+						<button class="btn_m btn_type ml10">회원가입</button>
+					</p>
+				</div>
+			</div> 
+
+			<div class="order-way">
+				<h4 class="title_type3">결제 수단 선택</h4>
+
+				<ul class="list_ip_check type2 t3 mb20">
+					<li>
+						<div class="checkbox">
+							<input type="radio" name="payment" id="payment1" onclick="$('#deposit').hide(); $('#creditcard').show()" checked="">
+							<label for="payment1">신용카드</label>
+						</div>
+					</li>
+					<li>
+						<div class="checkbox">
+							<input type="radio" name="payment" id="payment2">
+							<label for="payment2">실시간 계좌이체</label>
+						</div>
+					</li>
+					<li>
+						<div class="checkbox">
+							<input type="radio" name="payment" id="payment3" onclick="$('#creditcard').hide(); $('#deposit').show()">
+							<label for="payment3">무통장 입금</label>
+						</div>
+					</li>
+				</ul>
+
+				<div class="payment " id="creditcard" style="display:block;">
+					<div class="discount-box">
+						<div class="input-sum">
+							<h4 class="title_type4">예치금</h4>
+							<p>회원 전용 혜택 입니다.</p>
+							<p class="mt15">
+								<button class="btn_m btn_type2">로그인</button>
+								<button class="btn_m btn_type ml10">회원가입</button>
+							</p>
+						</div>
+					</div>
+					<div class="discount-box">
+						<h4 class="title_type3">결제정보</h4>
+						<div class="sumBox">
+							<dl>
+								<dt>총 상품 금액</dt>
+								<dd>
+									<span>상품금액 합계 9,999,999 원</span>
+									<span>배송비 9,999,999 원</span>
+								</dd>
+							</dl>
+							<p class="total"><strong>9,999,999</strong> 원</p>
+						</div>
+						<div class="sumBox final">
+							<dl>
+								<dt>최종 결제 금액</dt>
+								<dd>
+									<span>신용카드 9,999,999 원</span>
+								</dd>
+							</dl>
+							<p class="total"><strong>9,999,999</strong> 원</p>
+						</div>
+					</div>
+					
+					<div class="agree-box">
+						<h4 class="title_type3">약관 동의</h4>
+						<div class="lst-agree">
+							<span class="checkbox check3">
+								<input type="checkbox" id="check22">
+								<label for="check22">구매조건 확인 및 결진행 동의(전체동의)</label>
+							</span>
+							<button class="btn-info btn-arrow btn-down">보기</button>
+							<div style="display: none;">
+								<span class="checkbox check3">
+									<input type="checkbox" id="check33">
+									<label for="check33">아래 내용에 동의합니다.</label>
+								</span>
+								<p class="lst-bullet02">물품을 수령한 후 7일 이내에 반품할 수 있습니다. 다만, 구매자의 귀책사유로 물품이 훼손된 경우, 사용이나 일부 소비로 인하여 물품의 가치가 현저히 감소한 경우, 재판매가 곤란할 정도로 물품의 가치가 현저히 감소한 경우, 복제 가능한 물품의 포장을 훼손한 경우와 기타 법령에 의하여 반품이 제한되어 있는 경우에는 반품할 수 없습니다.</p>
+								<span class="checkbox check3">
+									<input type="checkbox" id="check44">
+									<label for="check44">아래 내용에 동의합니다.</label>
+								</span>
+								<p class="lst-bullet02">주문할 상품설명에 명시된 내용과 사용조건을 확인하였으며, 취소. 환불규정에 동의합니다.</p>
+								<span class="checkbox check3">
+									<input type="checkbox" id="check55">
+									<label for="check55">아래 내용에 동의합니다.</label>
+								</span>
+								<p class="lst-bullet02">일부 상품의 경우 취소가 불가함을 동의 합니다.</p>
+							</div>
+						</div>
+					</div>
+					<div class="btn-box ty2 mt0">
+						<ul class="btn_btm_half">
+							<li><button class="btn_r btn_type3">취소</button></li>
+							<li><button class="btn_r btn_type">결제하기</button></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="payment" id="account" style="display:none;"></div> 
+
+				<div class="payment" id="deposit" style="display:none;">
+					<div class="discount-box">
+						<div class="input-sum">
+							<h4 class="title_type4">예치금</h4>
+							<p>회원 전용 혜택 입니다.</p>
+							<p class="mt15">
+								<button class="btn_m btn_type2">로그인</button>
+								<button class="btn_m btn_type ml10">회원가입</button>
+							</p>
+						</div>
+						<h4 class="title_type4">예금주</h4>
+						<p class="m0">㈜풍산화동양행</p>
+						<h4 class="title_type4">무통장 입금 계좌 정보</h4>
+						<div class="table_type v2">
+							<table>
+								<colgroup>
+									<col style="width:33.3%;">
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">은행정보</th>
+										<th scope="col" class="tl">계좌번호</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>국민은행</td>
+										<td class="tl">
+											<span class="checkbox circle">
+												<input type="radio" name="radio1" id="radio1-1" checked="checked">
+												<label for="radio1-1">484201-01-121839</label>
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<td>우리은행</td>
+										<td class="tl">
+											<span class="checkbox circle">
+												<input type="radio" name="radio1" id="radio1-2">
+												<label for="radio1-2">414-316066-13-001</label>
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<td>농협</td>
+										<td class="tl">
+											<span class="checkbox circle">
+												<input type="radio" name="radio1" id="radio1-3">
+												<label for="radio1-3">087-01-16716</label>
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<td>우체국</td>
+										<td class="tl">
+											<span class="checkbox circle">
+												<input type="radio" name="radio1" id="radio1-4">
+												<label for="radio1-4">013227-01-00456</label>
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<td>KEB 하나은행</td>
+										<td class="tl">
+											<span class="checkbox circle">
+												<input type="radio" name="radio1" id="radio1-5">
+												<label for="radio1-5">101-890045-15104</label>
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<td>기업은행</td>
+										<td class="tl">
+											<span class="checkbox circle">
+												<input type="radio" name="radio1" id="radio1-6">
+												<label for="radio1-6">327-024342-01-015</label>
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<td>신한은행</td>
+										<td class="tl">
+											<span class="checkbox circle">
+												<input type="radio" name="radio1" id="radio1-7">
+												<label for="radio1-7">140-007-759016</label>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<h4 class="title_type4">입금자 정보</h4>
+						<div class="table_type">
+							<table>
+								<colgroup>
+									<col style="width:104px;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">입금자명</th>
+										<td>
+											<div class="ipbox sub certify">
+												<input type="text" id="" placeholder="제목을 입력하세요." value="강다니엘">
+												<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">입금예정일</th>
+										<td>
+											<div class="box-date">
+												<label for="datepicker01">달력보기</label>
+												<input type="date" id="datepicker01" value="2019-06-05">
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<ul class="lst-bullet fc-blue mt10 fs12">
+							<li>입금 예정일 7일 후 미 입금 시 자동 취소 됩니다.</li>
+						</ul>
+
+						<ul class="lst-info mt20">
+							<li>
+								<a href="#none" class="btn-arrow btn-right">
+									<dl>
+										<dt>현금영수증/세금계산서 요청</dt>
+										<dd>현금영수증 / 010-1234-5678(소득공제)</dd>
+									</dl>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="discount-box">
+							<h4 class="title_type3">결제정보</h4>
+						<div class="sumBox">
+							<dl>
+								<dt>총 상품 금액</dt>
+								<dd>
+									<span>상품금액 합계 9,999,999 원</span>
+									<span>배송비 9,999,999 원</span>
+								</dd>
+							</dl>
+							<p class="total"><strong>9,999,999</strong> 원</p>
+						</div>
+						<div class="sumBox final">
+							<dl>
+								<dt>최종 결제 금액</dt>
+								<dd>
+									<span>무통장 입금 9,999,999 원</span>
+								</dd>
+							</dl>
+							<p class="total"><strong>9,999,999</strong> 원</p>
+						</div>
+					</div>
+					<div class="agree-box">
+						<h4 class="title_type3">약관 동의</h4>
+						<div class="lst-agree">
+							<span class="checkbox check3">
+								<input type="checkbox" id="check22">
+								<label for="check22">구매조건 확인 및 결진행 동의(전체동의)</label>
+							</span>
+							<button class="btn-info btn-arrow btn-down">보기</button>
+							<div>
+								<span class="checkbox check3">
+									<input type="checkbox" id="check33">
+									<label for="check33">아래 내용에 동의합니다.</label>
+								</span>
+								<p class="lst-bullet02">물품을 수령한 후 7일 이내에 반품할 수 있습니다. 다만, 구매자의 귀책사유로 물품이 훼손된 경우, 사용이나 일부 소비로 인하여 물품의 가치가 현저히 감소한 경우, 재판매가 곤란할 정도로 물품의 가치가 현저히 감소한 경우, 복제 가능한 물품의 포장을 훼손한 경우와 기타 법령에 의하여 반품이 제한되어 있는 경우에는 반품할 수 없습니다.</p>
+								<span class="checkbox check3">
+									<input type="checkbox" id="check44">
+									<label for="check44">아래 내용에 동의합니다.</label>
+								</span>
+								<p class="lst-bullet02">주문할 상품설명에 명시된 내용과 사용조건을 확인하였으며, 취소. 환불규정에 동의합니다.</p>
+								<span class="checkbox check3">
+									<input type="checkbox" id="check55">
+									<label for="check55">아래 내용에 동의합니다.</label>
+								</span>
+								<p class="lst-bullet02">일부 상품의 경우 취소가 불가함을 동의 합니다.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //content -->
+	
+	<footer id="footer">
+		<div class="navPrimary nf">
+			<span class="btn_o_s btn_type7 checkbox floating">
+				<input type="checkbox" id="floating_btn">
+				<label for="floating_btn">플로딩메뉴컨트롤</label>
+				<a href="#;" class="btn_o_s btn_type7 btn_qna"><i>Q&amp;A로이동</i></a>
+				<a href="#;" class="btn_o_s btn_type7 btn_like3"><i>위시리스트로이동</i></a>
+				<a href="#;" class="btn_o_s btn_type7 btn_lately"><i>최근본상품으로이동</i></a>
+			</span>
+			<button class="btn_o_s btn_type7 topGo"><i>TOP</i></button>
+		</div>
+		<!-- //nav -->
+		<ul class="menu">
+			<li><a href="#;">회사소개</a></li>
+			<li><a href="#;">개인정보처리방침</a></li>
+			<li><a href="#;">이용약관</a></li>
+		</ul>        
+		<div class="inner">
+			<strong class="lg">㈜풍산화동양행</strong>
+			<p class="cp">Copyright©Hwadong Co.,Ltd. All rights reserved.</p>
+			<button type="button" class="csControl"><i>고객센터열고닫기</i></button>
+			<div class="csarea" style="display: none;">
+				<strong class="tit">고객센터</strong>
+				고객센터 : 02-3491-4586~7(월~금 9시~18시 토/일 공휴일 휴무)<br>
+				FAX : 02-597-8741<br>
+				E-Mail : service@hwadong.com
+				<address>
+					대표이사 : 이제철 │ 개인정보관리책임자 : 김용호<br>
+					주소 : 서울시 서초구 효령로 351(서초동) 2F<br>
+					사업자등록번호 : 214-87-46644<br>
+					통신판매업신고 : 서울서초 제2004-03722호
+				</address>
+				<strong class="tit">소비자피해보상 보상보험<img src="../../resources/image/footer/logo_cm.gif" alt=""></strong>
+				고객님은 안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서<br>가입한 구매안전 서비스로 소비자 피해 보상보험 서비스를<br>이용하실 수 있습니다.
+			</div>
+			<a href="#;" class="pcVer">PC버전</a>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<script src="../../resources/js/jquery-1.12.4.js"></script>
+<script src="../../resources/js/design.js"></script>
+</body>
+</html>

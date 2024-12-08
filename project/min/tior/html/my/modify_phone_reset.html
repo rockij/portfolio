@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="TIOR, 모든 시승은 티오르에서">
+    <meta name="keywords" content="티오르, tior, 시승예약, 시승, 시승플랫폼">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="언택트! 시승예약은 간편하게! 실시간 시승예약 서비스">
+    <meta property="og:description" content="차량 구매 전 시승은 필수, 모든시승은 티오르에서">
+    <meta property="og:image" content="https://m.tior.co.kr/resources/images/tior_favicon.png">
+    <meta property="og:url" content="https://m.tior.co.kr/">
+    <link href="../../resources/css/common.min.css" media="screen" rel="stylesheet">
+    <link href="../../resources/css/my.min.css" media="screen" rel="stylesheet">
+    <title>TIOR, 모든 시승은 티오르에서</title>
+</head>
+<body>
+
+<div id="wrap" class="type">
+
+    <header id="header" class="fix top">
+        <div class="headWrap">
+            <a href="#n" class="ico ico_back"><span class="hide">뒤로가기</span></a>
+            <h1>휴대폰번호 재설정</h1>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <div id="content">
+        <div class="myPage">
+            <section class="mpMenu">
+                <section class="ipWrap phoneReset">
+                    <div class="ipJoin">
+                        <strong class="ipTit">휴대폰번호</strong>
+                        <span class="ipLine ip_del ipTel">
+                            <input type="tel" id="tel" class="ip" required>
+                            <label for="tel">휴대폰번호</label>
+                            <button type="button" class="send">재전송</button>
+                            <button type="button" class="del"><i>입력삭제</i></button>
+                        </span>
+                    </div>
+                    <div class="ipJoin">
+                        <strong class="ipTit">인증번호</strong>
+                        <span class="ipLine ip_del ipConfirm">
+                            <input type="number" id="confirm" class="ip" required>
+                            <label for="confirm">인증번호</label>
+                            <i class="limit">03:00</i>
+                            <button type="button" class="del"><i>입력삭제</i></button>
+                        </span>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </div>
+    <!-- //content -->
+    <div class="btn_area_float fix btm">
+        <button type="button" class="btn_xr skip" disabled>재설정</button>
+    </div>
+</div>
+
+<script src="../../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../../resources/js/design.js"></script>
+<script>
+    $(function () {
+        fixValueOver();
+        focusipLine();
+    });
+</script>
+
+</body>
+</html>

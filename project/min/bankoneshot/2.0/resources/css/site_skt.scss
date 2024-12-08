@@ -1,0 +1,768 @@
+@charset "utf-8";
+// @import './mixin.scss';
+/* updown */
+$urlImg: '../images/';
+.upDown {
+    &.up {color:#f13939}
+    &.down {color:#006cff}
+}
+body {
+    &.bgGray {
+        background-color: #f4f4f4;
+    }
+}
+@mixin bgAni { // 해외주식 추천종목 슬라이드 배경색
+    @keyframes bgaAni {
+        0% {background-color: rgba(105,86,239,0.1);margin-top: -20%}
+        30% {background-color: rgba(105,86,239,0.3);margin-top: -15%}
+        50% {background-color: rgba(105,86,239,0.5);margin-top: -10%}
+        70% {background-color: rgba(105,86,239,0.7);margin-top: -5%}
+        100% {background-color: rgba(105,86,239,1.000);margin-top: 0}
+    }
+    @-webkit-keyframes bgaAni {
+        0% {background-color: rgba(105,86,239,0.1);margin-top: -20%}
+        30% {background-color: rgba(105,86,239,0.3);margin-top: -15%}
+        50% {background-color: rgba(105,86,239,0.5);margin-top: -10%}
+        70% {background-color: rgba(105,86,239,0.7);margin-top: -5%}
+        100% {background-color: rgba(105,86,239,1.000);margin-top: 0}
+    }
+    animation-name: bgaAni;
+    animation-duration: 1s;
+    animation-timing-function:linear;
+    -webkit-animation-name: bgaAni;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function:linear;
+}
+@mixin sbType1 {
+    color: #575757;
+    border-color: #7b7b7b;
+    background-color: #fff;
+    
+}
+@mixin sbType2 {
+    color: #fff;
+    border-color: #222;
+    background-color: #222;
+}
+@mixin sbType3 {
+    color: #fff;
+    border-color: #d3d3d3;
+    background-color: #d3d3d3;
+}
+@mixin sbType8 {
+    color: #bbb;
+    border-color: #f1f1f1;
+    background-color: #f1f1f1;
+}
+/* 말풍선 */
+.balloon {
+    border-color: #7053f8;
+    &:before {
+        background-image: url($urlImg + 'skt_ballon_arrow.png');
+    }
+}
+/* header */
+#header {
+    background-color: #fff;
+    &.leftTit {
+        h1 {
+            color: #222;
+        }
+    }
+}
+.subTit {
+    color: #b1b1b1;
+}
+.agreeList {
+    li {
+        color: #222;
+        .layBtn {
+            &:after {
+                background-color: #222;
+            }
+        }
+    }
+}
+
+/* 전체주식 보기 */
+.stockAll {
+    a {
+        @include sbType2;
+    }
+}
+/* footer */
+#footer {
+    background-color: #fff;
+    .explain {color: #646464}
+    .submitList {
+        button {
+            &.sbType1 {@include sbType1}
+            &.sbType2 {@include sbType2}
+            &.sbType3 {@include sbType3}
+            &.nextBtn {color: #7a7a7a;}
+        }
+    }
+}
+/* container */
+.colorH {color: #7053f8;}
+.underLine {border-bottom: 1px solid #b4b4b4}
+
+/* 투자 */
+.invest {
+    background-color: #f4f4f4;
+    .investWrap,
+    .sec1,
+    .sec4 {
+        background-color: #fff;
+    }
+    .accountMe,
+    .investWrap {
+    .tit,
+    .right {
+        color: #222;
+    }
+    }
+    .accountMe {
+    a {
+    background-color: #fff;
+    }
+    }
+    .accountState {
+        .desc {
+            border-color: rgba(34,34,34,0.1);
+        }
+    }
+    .invSec {
+        .swiper-pagination-bullet {
+            background-color: #ccc;
+        }
+    }
+    .sec1 {
+        box-shadow: 0 0.45rem 0.5rem rgba(0,0,0,0.05);
+        .submitList {
+            border-color: #dbdbdb;
+        }
+        .submitBtn {
+            color: #222;
+            &:after {
+                border-color: #222;
+            }
+        }
+        .toptxt {
+            color: #222;
+            small {
+                color: rgba(34,34,34,0.38);
+            }
+        }
+     }
+     .sec3 {
+         &:before {
+             background-color: #fff;
+         }
+         .mainTit {
+             span {
+                 color: #909090;
+             }
+         }
+         .themeSlide {
+            .swiper-slide {
+                a {
+                    .img {
+                       background-color: #000;
+                    }
+                }
+                .themeDesc {
+                   color: #000;
+               }
+                
+            }
+         }
+     }
+     .effect4 {
+        background-color: #fff;
+         h4 {
+             color: #000;
+         }
+         .ttSlide {
+             border-color: #ebebeb;
+         }
+         a {
+             color: #222;
+         }
+         .submitBtn {
+             color: #585858;
+             &:after {
+                 border-color: #6f6f6d;
+             }
+         }
+         .insiteList {
+             border-color: #ebebeb;
+             li {
+                border-color: #ebebeb;
+             }
+             .iiDesc {
+                 .tit {
+                     color: #000;
+                 }
+                 .elip2 {
+                     color: #808080; 
+                 }
+             }
+         }
+     }
+     .sec4 {
+        .insiteSlide {
+            .swiper-slide {
+                border-color: #e3e3e3;
+            }
+            a {
+                color: #222;
+            }
+        }
+    }
+    .sec5 {
+        background-color: #6956ef;
+        a {
+            color: #fff;
+        }
+    }
+}
+.themeTopic,
+.insite {
+    .sec1 {
+        .tit {
+            color: #111;
+        }
+    }
+    .sec2 {
+        .detailList {
+            a {
+                color: #fff;
+                background-color: #000;
+            }
+        }
+    }
+    &.detail {
+        .detailTop {
+            color: #fff;
+        }
+        .ctWrap {
+            background-color: #f4f4f4;
+        }
+    }
+    .stockDesc {
+        .stxt {color: #a7a7a7;}
+    }
+}
+/* 테마토픽 리스트 */
+.themeTopic {
+    .ti_top {
+        background-color: #f4f4f4;
+        .desc {
+            background-color: #fff;
+        }
+        h2 {
+            color: #222;
+        }
+        .date {
+            color: #818181;
+        }
+        .field {
+            border-color: rgba(0,0,0,0.65);
+        }
+    }
+    .sec2 {
+        .detailList {
+            span {
+                &:before {color: rgba(255,255,255,0.65)}
+            }
+        }
+    }
+    .detailSec {
+        .date {
+            color: #929292;
+        }
+        .income {color: #333;}
+        article {color: #555;}
+    }
+    .relateSec {
+        .swiper-slide {
+            a {
+                .img {
+                    background-color: #000;
+                }
+            }
+        }
+    }
+}
+.addSec {
+    .secTop {
+        .smaller {
+            color: rgba(0,0,0,0.75);
+        }
+    }
+    .secBtm {
+        h5 {color: #333;}
+    }
+    &.sec3 {
+        h5 {
+            color: #4e4e4e;
+        }
+        .alertList {
+            color: rgba(0,0,0,0.64);
+        }
+    }
+}
+.myAccount {
+    background-color: #6956ef;  
+    .account,
+    .name {
+        color: #fff;
+    } 
+}
+.accountList {
+    li {
+        span {
+            color: #656565;
+            &:before {background-color: #656565;}
+        }
+    }
+}
+.submitSec {
+    &.sec1 {
+        h3 {
+            small {
+                color: #646464;
+            }
+        }
+    }
+    &.sec3 {
+        &.cma {
+            h4 {
+                color: #222;
+            }
+            .smaller {
+                color: #d6d6d6;
+            }
+        }
+    }
+}
+.certific {
+    span {color: #707070;}
+    .certificNum {color: #000;}
+    .numWrap {
+        border: 1.5px solid #222;
+    }
+    .arsBtn {
+        @include sbType2;
+    }
+}
+.accountInfo {
+    background-color: #f3f3f3;
+    &.bgWhite {
+        background-color: #fff;
+    }
+    .connect {
+        color: #000;
+        &.none {
+            color: #545454;
+        }
+    }
+    .desc {
+        color: #606060;
+    }
+    li {
+        .accountNum {color: #000;}
+    }
+    .infoWrap {
+        color: #545454;
+        .chgBtn {
+            color: #333;
+            border-color: #a8a8a8;
+        }
+    }
+}
+.fillInfo {color: #7a7a7a}
+
+/* 팝업 */
+.lyPop {
+    &.full {
+        .inspection {
+            p {
+                color: #7a7a7a;
+            }
+            .time {
+                background-color: #f7f5ff;
+            }
+        }
+    }
+    .bg {
+        background-color: rgba(0,0,0,0.6);
+    }
+    .popSec {
+        background-color: #fff;
+        h4 {color: #222;}
+        .popBtn {
+            &.sbType2 {@include sbType2}
+            &.sbType1 {color: #7a7a7a;}
+        }
+        .subTit {
+            color: #b1b1b1;
+        }
+        p {
+            color: #676767;
+        }
+    }
+}
+/* 출금동의 팝업 */
+.ly_withdraw {
+    .popSec {
+        p {
+            color: #676767;
+            .stress {
+                color: #222;
+            }
+        }
+    }
+}
+/* 중복가입 팝업 */
+.lyHasinfo {
+    .popSec {
+        p {
+            color: #676767;
+        }
+        em {
+            color: #222;
+        }
+    }
+}
+/* pass 퀴즈 이벤트 팝업 */
+.ly_quiz {
+    &.win {
+        .popSec {
+            h4 {
+                em {
+                    color: #a2a2a2;
+                }
+            }
+            p {
+                color: #222;
+                em {
+                    color: #575757;
+                }
+            }
+            .boldline {
+                &:after {
+                    background-color: #dbe4fd;
+                }
+            }
+            small {
+                color: rgba(27,27,27,0.45);
+            }
+            .evtNotice {
+                color: rgba(76,76,76,0.85);
+            }
+        }
+    }
+}
+/* 191016 투자금 옮기기 팝업 */
+.carryPop {
+    .mvCase {
+        .mvDesc {
+            h5 {
+                color: #222;
+            }
+            .add {
+                color: #7a7a7a;
+            }
+        }
+    }
+}
+/* 191016 투자금 옮기기 가능은행 팝업 */
+#bank_list {
+    .popSec {
+        color: #222;
+        p {
+            color: #7a7a7a;
+            strong {
+                color: #222;
+            }
+        }
+    }
+}
+.giftBox {
+    .icon {
+        background-color: #215af2;
+        i {
+            &:before {
+                background-image: url($urlImg + 'giftbox.png');
+            }
+        }
+    }
+}
+/* 해외주식 추천종목 */
+.recommand {
+    .swiper-slide {
+        &.swiper-slide-active {
+            .slideWrap {
+                background-color: rgba(105,86,239,1.000);
+                @include bgAni;
+                color: rgba(255, 255, 255, 1);
+                p {
+                    color: rgba(255, 255, 255, 1);
+                    opacity: 0.7;
+                }
+                // div {
+                //     color: rgba(255,255,255,1);
+                //     p {
+                //         color: rgba(255,255,255,1);
+                //         opacity: 0.7;
+                //     }
+                // }
+            }
+        }
+        .slideWrap {
+            background-color: rgba(255,255,255,1.000);
+            div {
+                p {
+                    color: #787878;
+                }
+            }
+        }
+    }
+    .swiper-pagination {
+        .swiper-pagination-bullet-active {
+            background-color: #6956ef;
+        }
+    }
+    .resDesc {
+        .descBtm {
+            color: #7a7a7a;
+        }
+    }
+}
+/* 해외주식 추천종목 상세 */
+.company {
+    background-color: #f4f4f4;
+    > div {
+        background-color: #fff;
+        .subTit,
+        .date {
+            color: #7a7a7a;
+        }
+    }
+}
+.srDetail {
+    .srdWrap {
+        .srdList {
+            color: #7a7a7a;
+            // .txt {
+            //     color: #7a7a7a;
+            // }
+        }
+    }
+}
+/*해외주식 리서치 기업보고서 */
+.srReport {
+    .detail_type {
+        color: #7a7a7a;
+        .resTit,
+        strong {
+            color: #000;
+        }
+        .pointList {
+            strong {
+                color: #000;
+                &:before {
+                    background-color: #000;
+                }
+            }
+            span {
+                color: #a2a2a2;
+                &:before {
+                    background-color: #a2a2a2;
+                }
+            }
+        }
+        .fc222 {
+            color: #222;
+        }
+        .opinion {
+            background-color: #f6f6f6;
+            span {
+                color: #000;
+            }
+        }
+    }
+}
+
+/* 본인인증 팝업 */
+.ly_citation {
+    .private {
+        li {
+            &.agreeAll {
+                .chk {
+                    label {
+                        color: #000;
+                        background-color:#f1f1f1;
+                        &:before {
+                            background-image: url($urlImg + 'chkbox_circle.png');
+                        }
+                    }
+                    input {
+                        &:checked {
+                            &+label{
+                                color: #fff;
+                                background-color: #623ff7;
+                                &:before {
+                                    background-image: url($urlImg + 'chkbox_circle_on.png');
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+            .chk {
+                input {
+                    &:checked {
+                        &+label{
+                            &:before {
+                                background-image: url($urlImg + 'chkicon_case1_on.png');
+                            }
+                        }
+                    }
+                }
+                label {
+                    color: #7d7d7d;
+                    &:before {
+                        background-image: url($urlImg + 'chkicon_case1.png');
+                    }
+                }
+                .layBtn {
+                    i {
+                        background-image: url($urlImg + 'private_arrow.png');
+                    }
+                }
+            }
+        }
+    }
+    .btn_skip_area {
+        .btn_type8 {
+            @include sbType8;
+            &.on {
+                @include sbType2;
+            }
+        }
+    }
+}
+
+/* 오류화면 */
+.errorSec {
+    h2 {
+        color: rgba(0,0,0,1.000);
+    }
+    .subTit {
+        color: rgba(0,0,0,0.73);
+    }
+    p {
+        color: rgba(0,0,0,0.49);
+    }
+}
+
+/* 191111 매수활성화 팝업 */
+.ly_buy {
+    .evtBtn {
+        button {
+            @include sbType2;
+        }
+    }
+}
+/* 서비스 이용안내 가능시간 팝업 */
+.timePop {
+    .popSec {
+        > p {
+            color: rgba(34, 34, 34, 0.5);
+        }
+        .guideTime {
+            border-top: 1px solid #707070;
+            border-bottom: 1px solid #707070;
+            tr + tr {
+                border-top: 1px solid rgba(112,112,112,0.35);
+            }
+            th {
+                color: rgba(34,34,34,0.85);
+                background-color: #f7f7f7;
+            }
+            td {
+                * {
+                    color: #222;
+                }
+            }
+        }
+    }
+}
+/* 서비스 이용안내 점검 팝업 */
+#service_inspect{
+    .scroll {
+        > p {
+            color: rgba(34, 34, 34, 0.5);
+        }
+    }
+    .inspectDesc {
+        color: #6c6c6c;
+        // li {
+        //     .tcRed {
+        //         color: #ff4747;
+        //     }
+        // }
+        > p {
+            color: rgba(34,34,34,0.5);
+        }
+        span {
+            color: #222;
+        }
+    }
+    .popBtn {
+        &.sbType2 {
+            @include sbType2;
+        }
+        &.sbType1 {
+            color: #7a7a7a;
+        }
+    }
+}
+
+/* 수익률 노출 영역 191218 */
+.earnSec {
+    .earnTit {
+        color: rgba(34, 34, 34, 0.7);
+    }
+    .submitBtn {
+        &.sbType2 {
+            @include sbType2;
+        }
+    }
+    .earnSlide {
+        .date {
+            color: rgba(34,34,34,0.5);
+        }
+        .average {
+            small {
+                color:rgba(34,34,34,0.3);
+            }
+        }
+    }
+    .earnDesc {
+        .th {
+            i {
+                color: #fff;
+            }
+        }
+        .td {
+            .earn {
+                color: rgba(0,0,0,0.35);
+            }
+        }
+    }
+}

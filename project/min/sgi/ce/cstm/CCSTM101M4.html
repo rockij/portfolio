@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title>SGI서울보증</title>
+    <link rel="stylesheet" type="text/css" href="../../inc/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../inc/css/common-ui.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../inc/css/style-cust.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../inc/css/style-mark.css">
+    <link rel="stylesheet" type="text/css" href="../../inc/css/jquery.mobile-1.4.5.css">
+    <script type="text/javascript" src="../../inc/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="../../inc/js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../inc/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
+    <!-- 퍼블 테스트 페이지. 반영 X -->
+</head>
+
+<body>
+    <!-- 페이지 유형 제작시 wrapper에 고유 클레스 추가 -->
+    <div class="wrapper ps-sub-page cstmp1014">
+        <header class="header">
+            <button type="button" class="prev-page" title="이전페이지 이동"></button>
+            <h1 class="header-tit">내고객관리</h1>
+            <button type="button" class="sidenav-btn srch" title="고객검색 페이지 이동"></button>
+            <button type="button" class="sidenav-btn" title="전체메뉴"></button>
+        </header>
+        <!-- 페이지 하단에 플로팅 버튼이 있을시 class = btm-fixed 추가 -->
+        <section class="container">
+            <!-- 사이드 여백설정 공통 class = inner -->
+            <!-- 페이지 하단에 플로팅 버튼이 있을시 class = acco-fixed 추가 -->
+            <div class="content">
+                <div class="cont-wrap" style="padding-bottom:0;">
+                    <!-- 명함 이미지  -->
+                    <div class="card-img-wrap">
+                        <div class="card-img">
+                            <button class="btn-photo" type="button" title="명함 촬영 앱 실행">
+                                <!-- 명함 이미지 -->
+                                <!-- <img src="../../inc/images/@temp/card-img.png" alt=""> -->
+                            </button>
+                        </div>
+                        <div class="rollup-fix-wrap">
+                            <div class="rollup-fix-data">
+                                <p class="card-img-txt">
+                                    <span class="name"><em class="txt">김서울</em><em>팀장</em><br/>종로지점 전략기획팀</span>
+                                </p>
+                            </div>
+                        </div>
+                        <button class="inline-btn gray btn-share" type="button" title="명함 공유하기 팝업 열기">공유</button>
+                    </div>
+                    <!-- //명함 이미지  -->
+                    <div class="rollup-fix-wrap">
+                        <div class="rollup-fix-data">
+                            <ul class="tab-01">
+                                <li><button type="button">대리점 고객정보</button></li>
+                                <li><button type="button" class="on" title="선택됨">내 고객정보</button></li>
+                            </ul>
+                            <div class="sort-btn-wrap">
+                                <!-- 버튼 클래스 정의
+                                    내림차순 : class = item desc
+                                    오름차순 : class = item asc
+                                    -->
+                                <div class="item desc">
+                                    <button type="button">등록일순</button>
+                                </div>
+                                <div class="item">
+                                    <button type="button">이름순</button>
+                                </div>
+                                <div class="item">
+                                    <button type="button">회사명순</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-conts-01">
+                        <div class="tab-cont">내용1</div>
+                        <div class="tab-cont on">
+                            <div class="cstm-wrap">
+                                <!-- list -->
+                                <ul class="cstm-list-wrap">
+                                    <li class="item">
+                                        <a href="#" class="link">
+                                            <div class="img-wrap">
+                                                <!-- 명함 이미지 -->
+                                                <!-- <img src="../../inc/images/@temp/card-img.png" alt=""> -->
+                                            </div>
+                                            <ul class="txt-wrap">
+                                                <li class="icon-name">김서울</li>
+                                                <li class="icon-company">서울보증보험 주식회사</li>
+                                                <li class="icon-phone">010-1234-1234</li>
+                                            </ul>
+                                        </a>
+                                        <button class="btn-book-mark on" type="button" title="즐겨찾기 등록"></button>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#" class="link">
+                                            <div class="img-wrap">
+                                                <!-- 명함 이미지 -->
+                                                <!-- <img src="../../inc/images/@temp/card-img.png" alt=""> -->
+                                            </div>
+                                            <ul class="txt-wrap">
+                                                <li class="icon-name">김서울</li>
+                                                <li class="icon-company">서울보증보험 주식회사</li>
+                                                <li class="icon-phone">010-1234-1234</li>
+                                            </ul>
+                                        </a>
+                                        <button class="btn-book-mark on" type="button" title="즐겨찾기 등록"></button>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#" class="link">
+                                            <div class="img-wrap">
+                                                <!-- 명함 이미지 -->
+                                                <!-- <img src="../../inc/images/@temp/card-img.png" alt=""> -->
+                                            </div>
+                                            <ul class="txt-wrap">
+                                                <li class="icon-name">김서울</li>
+                                                <li class="icon-company">서울보증보험 주식회사</li>
+                                                <li class="icon-phone">010-1234-1234</li>
+                                            </ul>
+                                        </a>
+                                        <button class="btn-book-mark on" type="button" title="즐겨찾기 등록"></button>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#" class="link">
+                                            <div class="img-wrap">
+                                                <!-- 명함 이미지 -->
+                                                <!-- <img src="../../inc/images/@temp/card-img.png" alt=""> -->
+                                            </div>
+                                            <ul class="txt-wrap">
+                                                <li class="icon-name">김서울</li>
+                                                <li class="icon-company">서울보증보험 주식회사</li>
+                                                <li class="icon-phone">010-1234-1234</li>
+                                            </ul>
+                                        </a>
+                                        <button class="btn-book-mark on" type="button" title="즐겨찾기 등록"></button>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#" class="link">
+                                            <div class="img-wrap">
+                                                <!-- 명함 이미지 -->
+                                                <!-- <img src="../../inc/images/@temp/card-img.png" alt=""> -->
+                                            </div>
+                                            <ul class="txt-wrap">
+                                                <li class="icon-name">김서울</li>
+                                                <li class="icon-company">서울보증보험 주식회사</li>
+                                                <li class="icon-phone">010-1234-1234</li>
+                                            </ul>
+                                        </a>
+                                        <button class="btn-book-mark on" type="button" title="즐겨찾기 등록"></button>
+                                    </li>
+                                    
+                                </ul>
+                                <!-- //list -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- cont-wrap -->
+            </div>
+            <!-- content -->
+            <div class="fix-btn-wrap">
+                <button type="button" title="명함 촬영 앱 실행" class="btn-photo"></button>
+            </div>
+        </section>
+        <footer class="footer"></footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko" class="app">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../resources/css/content.css" media="screen" rel="stylesheet">
+<link href="../resources/css/site_app.css" media="screen" rel="stylesheet">
+<title>내정보지키미</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header" class="header_cont">
+        <button type="button" onclick="" class="btn_close"><i class="bg_icon">닫기</i></button>
+        <h1 class="inner title_type6">내정보지키미 가입</h1>
+    </header>
+    <!-- //header -->
+    <div id="ct">
+        <section class="inner frmview_normal frmview_appjoin">
+            <fieldset>
+                <legend>본인인증 정보입력</legend>
+                <ul class="list_frm">
+                    <li>
+                        <div class="ipbx ip_line ip_hp ip_del">
+                            <select id="hpSelect" class="pos_a">
+                                <option value="KT">KT</option>
+                                <option value="SKT">SKT</option>
+                                <option value="LGU">LGU</option>
+                            </select>
+                            <input type="tel" id="hp" value="" class="ip" maxlength="11" class="wfos" placeholder="‘-’제외하고 입력">
+                            <label for="hp">휴대폰번호</label>
+                            <button type="button" class="btn_s_o btn_type btn_re pos_a" onclick="$('#nextdep').show()">인증요청</button>
+                            <button type="button" class="del"><i class="bg_icon">삭제</i></button>
+                        </div>
+                    </li>
+                    <!-- <li>
+                        <div class="ipbx ip_line">
+                            <input type="text" id="name" value="홍길동" class="ip"  maxlength="">
+                            <label for="name">이름</label>
+                        </div>
+                        <p class="error">이름을 입력해주세요.</p>
+                    </li>
+                    <li>
+                        <div class="ipbx ip_line">
+                            <input type="text" id="birth" value="" class="ip"  maxlength="" placeholder="생년월일">
+                            <label for="birth">생년월일</label>
+                        </div>
+                    </li> -->
+                </ul>
+                <ul class="list_frm" id="nextdep">
+                    <li>
+                        <div class="ipbx ip_line ip_num">
+                            <input type="tel" id="cnum" value="" class="ip" maxlength="6" class="wfos">
+                            <label for="cnum">인증번호</label>
+                            <span class="time_set pos_a"><code class="timer">03:00</code><button type="button" class="btn_re" onclick="alert('전송')">재전송</button></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ipbx ip_line ip_chapcha">
+                            <span class="chapcha">
+                                <img src="../resources/image/sample/captcha.png" alt="">
+                                <button type="button" class="spkr" onclick="alert('소리듣기')"><i class="bg_icon"></i></button>
+                                <button type="button" class="ref" onclick="alert('새로고침')"><i class="bg_icon"></i></button>
+                            </span>
+                            <input type="tel" id="cnum" value="" class="ip" maxlength="6" class="wfos" placeholder="숫자 6자리입력">
+                            <label for="cnum">보안숫자</label>
+                            <span class="time_set pos_a"><button type="button" class="btn_re" onclick="alert('전송')">확인</button></span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="app_chkagr">
+                    <span class="checkbox all">
+                        <input type="checkbox" name="agree" id="agreeAll" value="">
+                        <label for="agreeAll"></label>
+                        <span class="docBtn">전체동의</span>
+                    </span>
+                    <ul class="">
+                        <li>
+                            <span class="checkbox">
+                                <input type="checkbox" name="agree" id="agree1" value="">
+                                <label for="agree1"></label>
+                                <button type="button" class="docBtn">서비스 약관</button>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="checkbox">
+                                <input type="checkbox" name="agree" id="agree2" value="">
+                                <label for="agree2"></label>
+                                <button type="button" class="docBtn">개인정보수집 및 이용</button>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="checkbox">
+                                <input type="checkbox" name="agree" id="agree3" value="">
+                                <label for="agree3"></label>
+                                <button type="button" class="docBtn">제3자제공</button>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="checkbox">
+                                <input type="checkbox" name="agree" id="agree4" value="">
+                                <label for="agree4"></label>
+                                <button type="button" class="docBtn">개인정보 취급위탁</button>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="checkbox">
+                                <input type="checkbox" name="agree" id="agree5" value="">
+                                <label for="agree5"></label>
+                                <button type="button" class="docBtn">KT제3자제공</button>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="checkbox">
+                                <input type="checkbox" name="agree" id="agree6" value="">
+                                <label for="agree6"></label>
+                                <button type="button" class="docBtn">광고수신동의(선택)</button>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="checkbox">
+                                <input type="checkbox" name="agree" id="agree7" value="">
+                                <label for="agree7"></label>
+                                <button type="button" class="docBtn">마케팅활용동의(선택)</button>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="checkbox">
+                                <input type="checkbox" name="agree" id="agree8" value="">
+                                <label for="agree8"></label>
+                                <button type="button" class="docBtn">무료약관</button>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="appJoin btn_area_sigle">
+                    <button type="button" class="btn_xr btn_type2">내정보지키미 유료서비스가입</button>
+                    <small>매월 부가세포함 월 3,300원<br>내정보지키미는 매월 통신요금에 부가세포함 월 3,300원이 부과됩니다.</small>
+                </div>
+                <ul class="notification">
+                    <li>본 서비스는 ㈜ 민앤지에서 운영합니다.</li>
+                    <li>고객센터 1599-7052 (이용 및 해지 안내)</li>
+                    <li>회사명 : ㈜민앤지, 대표이사 : 이현철</li>
+                    <li>주소 : 서울시 강남구 테헤란로 34길 6 태광타워 12F, 13F</li>
+                    <li>홈페이지 주소 : https://safemyinfo.kr</li>
+                    <li>전화번호 : 1599-7052, 이메일 : minwise.help@minwise.co.kr</li>
+                    <li>사업자등록번호 : 214-88-39117,<br>통신판매업신고 : 제2015-서울강남-00012호</li>
+                </ul>
+            </fieldset>
+        </section>
+    </div>
+    <!-- //content -->
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../resources/js/jquery-3.3.1.min.js"></script>
+<script src="../resources/js/design.js"></script>
+
+</body>
+</html>

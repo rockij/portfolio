@@ -1,0 +1,1316 @@
+@charset "utf-8";
+
+/*** All Device ***/
+
+/* 검색 바 */
+.org_bar {height:55px; background-color:#ff6010}
+.org_bar .inner {width:100%; display:table; padding:12px 0 0 10px; position:relative}
+.org_bar .inner div.cell3 {width:33.3%; display:table-cell; padding-right:10px}
+.org_bar .inner div select {width:100%; border:1px solid #d44e0a}
+
+/* 상세검색 버튼 */
+.bg_list {background:url('http://image.findall.co.kr/FACache/cgs/cont/bg_list.png') no-repeat; display:inline-block; vertical-align:top; background-size:250px auto; background:url('http://image.findall.co.kr/FACache/cgs/cont/bg_list_f.png') no-repeat\9}
+.bg_list span {width:0; height:0; line-height:0; visibility:hidden; overflow:hidden}
+.detail_box {height:60px; padding-top:10px; text-align:center}
+.detail_box .bt_type1 {width:80%}
+.detail_box .detail_bt {background-position:0 0; width:25px; height:25px; margin:6px 10px 0 0}
+
+/* 상세검색 Layer */
+.navi2 nav .top {height:50px; border-bottom:1px solid #ccc}
+.navi2 nav .detail_ico {background-position:-30px 0; width:25px; height:25px; float:left; margin:12px 7px 0 20px}
+.navi2 nav h3 {font-size:1.25em; color:#333; margin-top:15px; float:left}
+.navi2 nav ul.step1 li {position:relative}
+.navi2 nav ul.step1 li a {height:50px; line-height:50px; padding-left:20px; display:block; border-bottom:1px solid #ccc; font-size:1.1em}
+.navi2 nav ul.step1 li a .select {width:80px; font-size:0.9em; color:#666; text-align:right; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; position:absolute; right:45px; top:0}
+.navi2 nav ul.step1 li a span {background-position:-85px 0; width:12px; height:19px; position:absolute; right:20px; top:15px}
+.navi2 nav ul.step1 li.on a span {background-position:-60px 0; width:19px; height:12px; position:absolute; right:20px; top:19px}
+.navi2 nav ul.step1 li div.step2 {max-height:255px; overflow-y:auto; background-color:#f4f4f4; display:none}
+.navi2 nav ul.step1 li div.step2 ul li {border-bottom:1px solid #ddd; padding:5px 0; margin:0 10px}
+.navi2 nav ul.step1 li div.step2 ul li a {height:40px; line-height:40px; border-bottom:0; display:block}
+.navi2 nav ul.step1 li div.step2 ul li.active a {background-color:#666; color:#fff}
+.navi2 nav ul.step1 li div.step2 ul li.active span {background-position:-100px 0; width:19px; height:14px; position:absolute; right:10px; top:17px}
+.navi2 nav ul.step1 li.else a {height:40px; border-bottom:0}
+.navi2 nav ul.step1 li.else .tbl {width:100%; display:table; padding:10px 20px; border-bottom:1px solid #eaeaea}
+.navi2 nav ul.step1 li.else .tbl .cell1 {width:48%; display:table-cell}
+.navi2 nav ul.step1 li.else .tbl .cell2 {width:2%; display:table-cell; text-align:center}
+.navi2 nav ul.step1 li.else .tbl .cell3 {width:40%; display:table-cell; padding-right:10px}
+.navi2 nav ul.step1 li.else .tbl .cell4 {width:60%; display:table-cell}
+.navi2 nav ul.step1 li.else .tbl input {width:100%; height:36px; border-radius:3px; font-size:1.3em}
+.navi2 nav ul.step1 li.else .tbl input:focus {border:2px solid #72c51f}
+.navi2 nav ul.step1 li.else .tbl em {display:inline-block; position:relative; height:0; line-height:0; vertical-align:top}
+.navi2 nav ul.step1 li.else .tbl em:after {content:'만원'; width:30px; position:absolute; top:20px; right:0}
+.navi2 nav ul.step1 li.else .tbl em.won:after {content:'원'; width:20px; position:absolute; top:20px; right:0}
+
+/* 서브 Layout */
+#SubWrap .sub_l {display:none}
+.navi2 {width:240px; height:100%; position:absolute; left:-240px; top:0; z-index:999; display:none}
+.navi2 nav {width:240px; position:absolute; background-color:#fff; z-index:9999}
+.navi2 .back {display:none; position:fixed; _position:absolute; top:0; left:0; width:100%; height:100%}
+.navi2 .back .bg {position:absolute; top:0; left:0; width:100%; height:100%; background-color:#000; opacity:0.5; filter:alpha(opacity=50)}
+.navi2 .back .bg2 {position:absolute; top:0; left:-240px; width:240px; height:100%; z-index:9}
+.navi2 .close {width:51px; height:51px; position:absolute; left:240px; top:0; z-index:9}
+.navi2 .close .close_x {width:51px; height:51px; line-height:51px; text-align:center; font-family:Arial; font-size:3.3em; color:#fff; position:relative; z-index:8}
+.navi2 .close .close_bg {width:51px; height:51px; background-color:#000; opacity:0.5; filter:alpha(opacity=50); display:inline-block; position:absolute; left:0; top:0; z-index:7}
+
+/* Premium Photo */
+.premium_pt_wrap {background-color:#f4f4f4; padding:10px 0 0 10px; margin-bottom:70px; position:relative}
+
+/* Premium List */
+.premium_ls_wrap {position:relative}
+.premium_ls_wrap .temp_list {height:301px}
+
+/* 전문차량매입 상담 */
+.buy_car_wrap {padding:40px 0 0 10px; display:none}
+.buy_car_wrap .el {position:relative}
+.buy_car_tit {margin-bottom:5px}
+.buy_car_tit h2 {line-height:30px}
+.buy_car_list {width:100%; height:110px; position:relative; overflow:hidden}
+.buy_car_list ul li {height:110px; padding-right:10px}
+.buy_car_list ul li .buy_car_box {width:100%; height:110px}
+.buy_car_list ul li .buy_car_box .tit {height:40px; line-height:40px; background-color:#4091c9; border-bottom:1px solid #35729e; padding:0 5px; text-align:center; text-overflow:ellipsis; overflow:hidden; white-space:nowrap}
+.buy_car_list ul li .buy_car_box .tit a {color:#fff}
+.buy_car_list ul li .buy_car_box .cont {width:100%; height:70px; border:1px solid #ccc; border-top:0; float:left; position:relative}
+.buy_car_list ul li .buy_car_box .cont img {width:60px; height:60px; border:1px solid #ccc; position:absolute; left:5px; top:5px}
+.buy_car_list ul li .buy_car_box .cont .txt {height:33px; line-height:1.4em; margin:8px 5px 7px 70px; overflow:hidden}
+.buy_car_list ul li .buy_car_box .cont strong {display:block; margin:0 5px 0 70px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap}
+
+/* Detail */
+.back_bar {background-color:#f4f4f4}
+.back_bar .inner {height:40px; padding:5px 10px 0 10px}
+.back_bar .inner .arrow_ico {background-position:-125px 0; width:8px; height:12px; margin:7px 5px 0 0}
+.back_bar .inner .back_bt {width:70px}
+.back_bar .inner .reg_bt,
+.back_bar .inner .share_bt {width:35px; float:right; margin-left:7px}
+.back_bar .inner .share_ico {background-position:-20px -30px; width:15px; height:16px; margin-top:6px}
+.back_bar .inner .reg_ico {background-position:0 -30px; width:15px; height:14px; margin-top:6px}
+.back_bar .inner .day_area {float:right; display:none}
+.back_bar .inner .day_area .ad,
+.back_bar .inner .day_area .posted {line-height:30px}
+.back_bar .inner .day_area .line:after {content:''; width:1px; height:8px; background-color:#ccc; display:inline-block; margin:0 8px}
+.back_bar .inner .day_area .reg_bt {width:110px}
+.back_bar .inner .day_area .reg_bt .reg_ico {margin-right:5px}
+
+.detail_info_area .detail_tit {height:85px; padding:20px 10px 0 10px; position:relative}
+.detail_info_area .detail_tit h2 {width:100%; height:22px; line-height:22px; overflow:hidden}
+.detail_info_area .detail_tit .pay {font-size:1.1em; color:#666}
+.detail_info_area .detail_tit .pay strong {font-family:Tahoma; font-size:1.7em; letter-spacing:-1px; color:#e43000}
+.detail_info_area .detail_tit .pay.else_pay strong {font-family:NanumBarunGothic}
+.detail_info_area .detail_tit .posted {color:#666; position:absolute; right:10px; top:50px}
+
+.detail_photo {width:100%; padding:0 10px 10px 10px}
+.detail_photo .detail_tab ul li {width:30%; height:40px; margin-right:10px; float:left; position:relative}
+.detail_photo .detail_tab ul li button {width:100%; height:42px; background-color:#eaeaea; border:2px solid #ccc; border-bottom:0; border-top-left-radius:5px; border-top-right-radius:5px; position:absolute; left:0; top:0; z-index:9}
+.detail_photo .detail_tab ul li button.on {background-color:#fff}
+.detail_photo .detail_tab ul li button .tab_ico1 {background-position:-220px -30px; width:21px; height:16px; margin:-2px 5px 0 0}
+.detail_photo .detail_tab ul li button .tab_ico2 {background-position:-160px -30px; width:15px; height:18px; margin:-3px 5px 0 0}
+.detail_photo .detail_tab:after {content:''; display:block; float:none; clear:both}
+
+.detail_photo .detail_cont {height:250px; position:relative}
+.detail_photo .detail_cont .cont {width:100%; position:absolute; left:0; top:0}
+
+.detail_photo .img_area {position:relative; background-color:#fff}
+.detail_photo .img_area .img {width:100%; height:250px; border:2px solid #ccc; overflow:hidden; position:relative}
+.detail_photo .img_area .img ul {width:9999999px; height:250px; position:absolute; top:0; left:0; overflow:hidden}
+.detail_photo .img_area .img ul li {width:100%; height:250px; background-color:#fff; text-align:center; float:left}
+.detail_photo .img_area .img ul li img {width:100%; height:100%}
+.detail_photo .img_area .btn {height:0}
+.detail_photo .img_area .btn .detail_btn {background-position:-40px -30px; width:15px; height:24px; position:absolute; left:6px; top:50%; margin-top:-12px; z-index:9}
+.detail_photo .img_area .btn .btn_next .detail_btn {background-position:-60px -30px; right:6px; left:inherit}
+.detail_photo .img_area .btn .bg {width:25px; height:60px; background-color:#000; opacity:0.7; filter:alpha(opacity=70)}
+.detail_photo .img_area .btn .btn_prev .bg {position:absolute; left:2px; top:50%; margin-top:-30px}
+.detail_photo .img_area .btn .btn_next .bg {position:absolute; right:2px; top:50%; margin-top:-30px}
+.detail_photo .img_area .btn #count {width:83px; height:30px; text-align:center; padding-top:8px; position:absolute; left:2px; bottom:2px}
+.detail_photo .img_area .btn #count .detail_photo_ico {background-position:-80px -30px; width:21px; height:15px; margin-right:5px}
+.detail_photo .img_area .btn #count .txt {font-size:1.1em; font-weight:700; color:#fff; position:relative; z-index:9}
+.detail_photo .img_area .btn #count .bg {width:83px; height:30px; background-color:#000; opacity:0.7; filter:alpha(opacity=70); position:absolute; left:0; top:0}
+.detail_photo .map_area {width:100%; height:250px; background-color:#fff; border:2px solid #ccc; padding:10px; overflow:hidden; text-align:center; position:relative}
+.detail_photo .map_area img {max-width:100%; max-height:100%; position:absolute; left:50%; top:50%; -ms-transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); transform:translate(-50%,-50%); display:block}
+
+.detail_tbl {padding:10px}
+.detail_tbl .top {margin-bottom:5px; position:relative}
+.detail_tbl .top h2 {line-height:30px}
+.detail_tbl .top .share_bt {width:35px; position:absolute; right:40px; top:0}
+.detail_tbl .top .reg_bt {width:35px; position:absolute; right:0; top:0}
+.detail_tbl .top .share_bt .txt,
+.detail_tbl .top .reg_bt .txt {display:none}
+.detail_tbl .top .share_ico {background-position:-105px -30px; width:26px; height:20px; margin-top:3px}
+.detail_tbl .top .reg_ico {background-position:-135px -30px; width:19px; height:19px; margin-top:4px}
+.detail_tbl ul {background-color:#fff; overflow:hidden}
+.detail_tbl ul li {height:40px; line-height:40px; border-bottom:1px solid #ccc; overflow:hidden; position:relative}
+.detail_tbl ul li .q {width:70px; font-size:1.1em; color:#666; position:absolute; left:15px; top:0}
+.detail_tbl ul li .a {width:100%; font-size:1.1em; color:#222; word-break:break-all; text-align:right; padding:0 15px 0 85px}
+.detail_tbl .top .name {line-height:30px; font-size:1.3em; color:#666; position:absolute; right:0; top:0}
+.detail_tbl .top .name strong {font-size:1.3em}
+.detail_tbl ul li .card_bt {width:40px; margin:5px 0 0 5px}
+.detail_tbl ul li .tel_bt {width:80px; margin:5px 0 0 5px}
+.detail_tbl ul li .position_bt {width:35px; margin:5px 0 0 5px}
+.detail_tbl ul li .position_ico {background-position:-160px -30px; width:15px; height:18px; margin-top:5px}
+.detail_tbl.detail_exp .top {border-bottom:1px solid #ccc}
+.detail_tbl.detail_exp .top .safe_bt {width:120px; position:absolute; right:0; top:-3px}
+.detail_tbl.detail_exp .top .safe_bt .safe_ico {background-position:-65px -145px; width:22px; height:20px; margin:4px 5px 0 0}
+.detail_tbl .exp {line-height:1.3em; font-size:1.25em; color:#222; padding:10px 0}
+
+.detail_area {width:100%; margin-bottom:25px; padding:0 10px; display:table}
+.detail_area .cell {width:50%; display:table-cell}
+.detail_area .cell:first-child {padding-right:10px}
+.detail_area .fav_bt,
+.detail_area .call_bt,
+.detail_area .sms_bt {width:100%}
+.detail_area .sms_bt {display:none}
+.detail_area .fav_ico {background-position:-180px -30px; width:16px; height:15px; margin:10px 5px 0 0}
+.detail_area .call_ico {background-position:-200px -30px; width:16px; height:16px; margin:10px 5px 0 0}
+
+.detail_nb {border-top:1px solid #ccc; border-bottom:1px solid #ccc; padding:10px}
+.detail_nb .subj {line-height:16px; color:#999; position:relative}
+.detail_nb .subj .mark_ico {background-position:0 -55px; width:16px; height:16px; margin-right:7px}
+.detail_nb .subj .plus_ico {background-position:-20px -55px; width:17px; height:17px; position:absolute; right:0; top:0; cursor:pointer}
+.detail_nb .subj .minus_ico {background-position:-145px -55px; width:17px; height:17px; position:absolute; right:0; top:0; cursor:pointer}
+.detail_nb .cont {display:none; line-height:1.25em; color:#999; padding-top:10px}
+
+.sub_banner img {vertical-align:top}
+
+.today_wrap {background-color:#f4f4f4; padding:20px 0 10px 10px; position:relative}
+.more_bt {width:69px; position:absolute; right:10px; top:0}
+.more_bt .arrow_ico {background-position:-40px -55px; width:8px; height:8px; margin:9px 0 0 5px}
+.today_wrap .temp_photo {height:400px}
+.today_wrap .temp_photo ul li ul.step2 {width:100%; overflow:hidden; position:static}
+.today_wrap .temp_photo ul li ul.step2 li {width:50%; height:200px; position:relative; float:left}
+.today_wrap .temp_photo_tit h2 span {font-size:0.8em; color:#333; padding-left:5px}
+
+.result_wrap {padding:10px 0 0 10px; position:relative}
+.sns_area {display:none}
+
+/* 댓글 */
+.reply_tit {height:45px; font-size:1.25em; font-weight:700; padding:15px 10px 0 10px; position:relative}
+.reply_tit .reply_ico {margin-top:6px}
+.reply_tit strong {font-family:Tahoma; letter-spacing:-1px; font-size:1.25em; vertical-align:bottom}
+.reply_tit .more {width:90px; font-size:0.8em; font-weight:400; position:absolute; right:10px; top:8px}
+.reply_tit .more .arrow_ico {background-position:-135px 0; width:8px; height:12px; margin:8px 0 0 5px}
+
+.reply_town {display:none}
+.reply_write_area {height:112px; border-top:1px solid #ccc; border-bottom:1px solid #ccc; background-color:#f4f4f4; padding:10px; position:relative}
+.reply_write_area .writing .txt {color:#999; padding-top:20px}
+.reply_write_area .writing .txt strong {color:#000}
+.reply_write_area .writing .reply_bt {width:75px; position:absolute; right:10px; top:70px}
+
+.reply_area .reply_root {padding:10px; position:relative; border-bottom:1px solid #ccc}
+.reply_area .name {font-size:1.25em; font-weight:700; color:#4091c9; margin-bottom:20px; display:inline-block}
+.reply_area .cont {font-size:1.25em; color:#333; margin-bottom:15px}
+.reply_area .func,
+.reply_area .dec {color:#999; display:inline-block}
+.reply_area .dec:before {content:''; width:1px; height:10px; background-color:#ccc; display:inline-block; margin:0 7px 0 5px}
+.reply_area .answer_bt {padding:0 25px 0 10px; position:absolute; right:10px; top:10px}
+.reply_area .answer_bt .arrow {width:0; height:0; border-left:5px solid transparent; border-right:5px solid transparent; border-top:5px solid #ff7200; position:absolute; right:10px; top:11px}
+.reply_area .answer_bt.active .arrow {border-bottom:5px solid #ff7200; border-top:0}
+
+.reply_area .reply_list,
+.reply_area .reply_list2 {display:none}
+.reply_area .reply_list li,
+.reply_area .reply_list2 li {border-bottom:1px solid #ccc; padding:15px 10px 10px 10px; position:relative}
+.lft_bg {background-position:-65px -55px; width:18px; height:20px; float:left; margin:-5px 10px 0 0}
+.reply_del_bt {background-position:-145px 0; width:17px; height:17px; margin-left:5px}
+
+.reply_area .reply_list .reply_write_area {height:95px; border:0; padding:0; background:none}
+.reply_area .reply_list .reply_write_area .writing .txt {padding-left:30px}
+.reply_area .reply_list .reply_write_area .writing .reply_bt {right:0; top:60px}
+.reply_area .reply_list2 li .func,
+.reply_area .reply_list2 li .cont {padding:0 10px 0 28px}
+
+.reply_bott_btb {height:60px; padding-top:10px; text-align:center}
+.reply_bott_btb .reply_bott_bt {width:80%}
+
+.reply_page .reply_tit .more {display:none}
+.reply_page .reply_town {display:block}
+
+/* Banner */
+.sub_banner.b768 {display:block}
+.sub_banner.b1024 {display:none}
+
+/* 허위정보 신고하기 */
+.reg_rep_ico {background-position:-150px -120px; width:24px; height:21px; margin-right:5px}
+
+/* 마이페이지 */
+.org_bar .inner .route {line-height:35px; color:#fff}
+.org_bar .inner .biz_info_bt {width:120px; position:absolute; right:10px; top:12px}
+.org_bar .inner .tax_bt {width:120px; position:absolute; right:20px; top:12px; display:none}
+
+.mypage_tab ul {width:100%; display:table}
+.mypage_tab ul li {width:20%; height:50px; display:table-cell; text-align:center; vertical-align:middle; border-bottom:1px solid #ccc; border-right:1px solid #ccc; cursor:pointer}
+.mypage_tab ul li:first-child {border-left:1px solid #ccc}
+.mypage_tab ul li span {white-space:nowrap}
+.mypage_tab ul li span.new {width:18px; height:18px; line-height:16px; background-color:#fe5500; border:1px solid #f42706; border-radius:3px; font-family:Tahoma; font-size:0.9em; color:#fff; font-weight:700; margin-left:5px; display:inline-block; text-align:center}
+.mypage_tab ul li.active {background-color:#777; color:#fff}
+
+.mypage_cont .top {padding:30px 10px 10px 10px}
+.mypage_cont .nodata {line-height:2em; text-align:center; padding:50px 0; font-size:1.25em; font-weight:700; color:#333}
+
+.mypage01_tab {height:45px; border-bottom:1px solid #ccc; margin-bottom:10px; position:relative}
+.mypage01_tab ul li {width:25%; float:left; padding-left:5px; position:relative}
+.mypage01_tab ul li:first-child {padding-left:0}
+.mypage01_tab ul li a {height:44px; line-height:44px; display:block; text-align:center; background-color:#f4f4f4; border:1px solid #ccc; border-bottom:0; border-top-left-radius:3px; border-top-right-radius:3px; font-size:1.1em; font-weight:700}
+.mypage01_tab ul li a.on span {background-color:#fff; color:#ff6010; border:1px solid #ccc; border-bottom:0; border-top-left-radius:3px; border-top-right-radius:3px; position:absolute; left:5px; top:0; right:0; bottom:-1px}
+.mypage01_tab ul li:first-child a.on span {left:0}
+
+.mypage01_top {padding:0 10px}
+.mp_sc_bar {border:3px solid #f4f4f4; margin-bottom:10px; padding:15px 10px}
+.mp_sc_bar .cate {padding-top:5px; margin-bottom:10px}
+.mp_sc_bar .form .tbl {width:100%; display:table}
+.mp_sc_bar .form .tbl .cell {width:50%; display:table-cell; padding:0 0 5px 5px; vertical-align:top}
+.mp_sc_bar .form .tbl .cell:first-child {padding:0 0 5px 0}
+.mp_sc_bar .form .tbl .cell.celll {width:70%}
+.mp_sc_bar .form .tbl .cell.cellr {width:30%}
+.mp_sc_bar .form .tbl .cell.cellc {width:100%}
+.mp_sc_bar .form .tbl .cell.cellr .form_sc_bt,
+.mp_sc_bar .form .tbl .cell.cellc .form_sc_bt {width:100%}
+
+.mp_sr_bar {height:50px; background-color:#f4f4f4; border:1px solid #ccc; padding:0 10px}
+.mp_sr_bar .left {float:left; padding-top:9px}
+.mp_sr_bar .right {float:right; position:relative}
+.mp_sr_bar .right .label_check {white-space:nowrap; position:absolute; right:0; top:11px}
+.mp_sr_bar .right .mp_excel_bt {width:132px; position:absolute; right:122px; top:9px; display:none}
+.mp_sr_bar .right .mp_up_bt {width:117px; position:absolute; right:0; top:9px; display:none}
+.mp_sr_bar .right .mp_many_bt {width:117px; position:absolute; right:0; top:9px}
+
+.mypage01_tbl {padding:0 10px}
+.mypage01_tbl ul li {border:1px solid #ccc; border-top:0; padding:15px}
+.mypage01_tbl ul li .num {text-align:right}
+.mypage01_tbl ul li .info1 {position:relative; margin-bottom:20px}
+.mypage01_tbl ul li .info1 .txt {min-height:83px; margin-right:118px}
+.mypage01_tbl ul li .info1 .txt .name {font-size:1.25em; font-weight:700; color:#222; margin-bottom:5px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.mypage01_tbl ul li .info1 .txt .state {line-height:1.3em; color:#666; padding-left:55px}
+.mypage01_tbl ul li .info1 .txt .state span {width:50px; display:block; float:left; position:relative; margin:0 5px 0 -55px}
+.mypage01_tbl ul li .info1 .thum {width:110px; height:83px; border:1px solid #ccc; position:absolute; right:0; top:0}
+.mypage01_tbl ul li .info1 .thum img {width:100%; height:100%}
+.mypage01_tbl ul li .info2 .mp_pay_area {width:100%; height:65px; border:1px solid #ccc; margin-bottom:5px; display:table}
+.mypage01_tbl ul li .info2 .mp_pay_area .state {width:100%; text-align:center; display:table-cell; vertical-align:middle}
+.mypage01_tbl ul li .info2 .mp_pay_area .state .kind {font-size:1.25em; font-weight:700; margin-bottom:3px; display:inline-block}
+.mypage01_tbl ul li .info2 .mp_pay_area .state .pay {font-size:1.25em; margin-bottom:3px; display:inline-block}
+.mypage01_tbl ul li .info2 .mp_pay_area .state .state_b {border-radius:3px; margin-right:7px; padding:3px 5px 2px 5px; color:#fff; display:inline-block; cursor:pointer}
+.mypage01_tbl ul li .info2 .mp_pay_area .state .canc {background-color:#ff6b50; cursor:default}
+.mypage01_tbl ul li .info2 .mp_pay_area .state .stan {background-color:#faa701}
+.mypage01_tbl ul li .info2 .mp_pay_area .state .paye {background-color:#6fa9de}
+.mypage01_tbl ul li .info2 .mp_pay_area .state .day {font-size:1.1em; display:inline-block}
+.mypage01_tbl ul li .info2 .mp_pay_bt {width:100%; display:table}
+.mypage01_tbl ul li .info2 .mp_pay_bt .cell {width:33.3%; display:table-cell; padding-left:5px}
+.mypage01_tbl ul li .info2 .mp_pay_bt .cell:first-child {width:33.4%; padding-left:0}
+.mypage01_tbl ul li .info2 .mp_pay_bt .cell button {width:100%}
+
+.mypage02_tbl {padding:0 10px}
+.mypage02_tbl ul li {border:1px solid #ccc; border-top:0; padding:20px 15px}
+.mypage02_tbl ul li .info1 {position:relative; margin-bottom:20px}
+.mypage02_tbl ul li .info1 .txt {min-height:83px; margin-right:118px}
+.mypage02_tbl ul li .info1 .txt .cate {font-size:1.1em; font-weight:700; color:#222; margin-bottom:11px}
+.mypage02_tbl ul li .info1 .txt .name {font-size:1.75em; font-weight:700; color:#222; margin-bottom:5px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.mypage02_tbl ul li .info1 .txt .state {line-height:1.3em; color:#666; padding-left:55px}
+.mypage02_tbl ul li .info1 .txt .state span {width:50px; display:block; float:left; position:relative; margin:0 5px 0 -55px}
+.mypage02_tbl ul li .info1 .txt .state span:after {content:''; width:1px; height:9px; background-color:#666; display:inline-block; position:absolute; right:0; top:2px}
+.mypage02_tbl ul li .info1 .thum {width:110px; height:83px; border:1px solid #ccc; position:absolute; right:0; top:0}
+.mypage02_tbl ul li .info2 {width:100%; display:table; padding-bottom:50px; position:relative}
+.mypage02_tbl ul li .info2 .mp_using_area {width:50%; height:62px; border:1px solid #ccc; margin-bottom:10px; text-align:center; display:table-cell; vertical-align:middle}
+.mypage02_tbl ul li .info2 .mp_using_area:first-child {border-right:0}
+.mypage02_tbl ul li .info2 .mp_using_area .kind {font-size:1.25em; font-weight:700}
+.mypage02_tbl ul li .info2 .mp_using_area .use {line-height:25px; font-size:1.1em; color:#666}
+.mypage02_tbl ul li .info2 .mp_using_area .use strong {font-family:Tahoma; font-size:1.75em; color:#777; padding-left:5px; vertical-align:middle; display:inline-block}
+.mypage02_tbl ul li .info2 .mp_using_area .use strong.txt_red {color:#e43000}
+.mypage02_tbl ul li .info2 .mp_using_area .pay {font-size:1.25em; margin-bottom:3px; display:inline-block}
+.mypage02_tbl ul li .info2 .mp_using_area .state_b {border-radius:3px; margin-right:7px; padding:3px 5px 2px 5px; color:#fff; display:inline-block; cursor:pointer}
+.mypage02_tbl ul li .info2 .mp_using_area .canc {background-color:#ff6b50; cursor:default}
+.mypage02_tbl ul li .info2 .mp_using_area .stan {background-color:#faa701}
+.mypage02_tbl ul li .info2 .mp_using_area .paye {background-color:#6fa9de}
+.mypage02_tbl ul li .info2 .mp_using_area .day {font-size:1.1em; display:inline-block}
+.mypage02_tbl ul li .info2 .bt_area {width:100%; text-align:center; position:absolute; left:0; bottom:0}
+.mypage02_tbl ul li .info2 .bt_area .mp_using_bt {width:50%}
+.mp_many_ico {background-position:-110px -55px; width:12px; height:13px; margin:7px 0 0 5px}
+
+.top .exp {color:#666; display:inline-block; padding-top:6px}
+.mp_sr_bar .right .count {line-height:30px; font-size:1.25em; position:absolute; right:0; top:9px; white-space:nowrap}
+.mp_sr_bar .right .count strong {color:#e43000}
+.jjim_ls_wrap {margin:0 10px; border:1px solid #ccc; border-top:0}
+
+.txt_ls_wrap {border-left:1px solid #ccc; border-right:1px solid #ccc; margin:0 10px}
+.txt_ls_wrap ul li {width:100%; border-bottom:1px solid #ccc; padding:15px 10px; display:table}
+.txt_ls_wrap ul li .checkb {width:40px; display:table-cell; vertical-align:middle}
+.txt_ls_wrap ul li .contb {display:table-cell}
+.txt_ls_wrap ul li .contb .tit {font-size:1.1em; font-weight:700; color:#222; margin-bottom:10px}
+.txt_ls_wrap ul li .contb .cont {position:relative}
+.txt_ls_wrap ul li .contb .cont .lft_bg {margin:0; position:absolute; left:0; top:-8px}
+.txt_ls_wrap ul li .contb .cont .txt {line-height:1.3em; color:#666; padding-left:25px}
+.txt_ls_wrap ul li .info {width:100px; text-align:right; display:table-cell; vertical-align:middle}
+.txt_ls_wrap ul li .info strong {font-weight:700; color:#4091c9; margin-bottom:5px; display:block}
+.txt_ls_wrap ul li .info .day {color:#999}
+.txt_del_bt {width:70px}
+
+.mypage01_tab ul li.bli {width:33%}
+.mypage_bcont {padding:0 10px}
+.mypage_bcont .switch {line-height:2em; text-align:center; padding:50px 40px; font-size:1.25em; font-weight:700; color:#333}
+.mypage_bcont .btb .switch_bt {width:200px}
+.info_modi_bt {width:90px; position:absolute; right:10px; top:7px}
+.nec_ico {background-position:-135px -55px; width:5px; height:5px; margin-left:5px; vertical-align:middle}
+.mypage_bcont .biz_ip {width:100%}
+.mypage_bcont .biz_file {width:100%; margin-bottom:5px}
+.file_exp {clear:both}
+
+/* 결제완료 Tooltip */
+.bg_tt {background:url('http://image.findall.co.kr/FACache/cgs/cont/bg_tooltip.png') no-repeat; display:inline-block; vertical-align:top; background-size:50px auto; background:url('http://image.findall.co.kr/FACache/cgs/cont/bg_tooltip_f.png') no-repeat\9}
+.bg_tt span {width:0; height:0; line-height:0; visibility:hidden; overflow:hidden}
+.payed_tt_box {display:inline-block; position:relative}
+.payed_tt {width:250px; line-height:18px; border:1px solid #ccc; background-color:#fff; margin-left:-128px; padding:15px 10px; text-align:left; font-size:1.1em; color:#555; position:absolute; left:50%; top:30px; z-index:9; display:none}
+.payed_tt strong {margin-bottom:5px; color:#333; display:block}
+.payed_tt .ico_tt_arrow {background-position:0 0; width:16px; height:9px; margin-left:-8px; position:absolute; top:-9px; left:50%}
+.payed_tt .bt_tt_close {background-position:-20px 0; width:32px; height:32px; position:absolute; top:0; right:0}
+
+/* 비즈니스 회원전환 */
+.switch_ico {background-position:0 -120px; width:24px; height:21px; margin-right:5px; float:left}
+.switch_pop .terms textarea {margin-bottom:10px}
+.switch_pop .certi {margin-bottom:30px}
+.switch_pop .certi .sub_tit {border-bottom:2px solid #ff7200; margin-bottom:5px}
+.switch_pop .certi ul li {font-size:1.1em; color:#333; padding:5px 0 5px 10px}
+.switch_pop .certi ul li .certi_ico {background-position:-125px -55px; width:4px; height:4px; float:left; margin:5px 5px 0 -10px}
+.reg_chk_ico {background-position:-85px -55px; width:19px; height:13px; float:left; margin:0 5px 0 -25px}
+
+/* 등록하기 */
+.bg_reg {background:url('http://image.findall.co.kr/FACache/cgs/cont/bg_register.png') no-repeat; display:inline-block; vertical-align:top; background-size:250px auto; background:url('http://image.findall.co.kr/FACache/cgs/cont/bg_register_f.png') no-repeat\9}
+.bg_reg span {width:0; height:0; line-height:0; visibility:hidden; overflow:hidden}
+.org_bar.no_mobile {display:none}
+.reg_wrap {background-color:#eaebee; margin-bottom:-50px}
+.reg_wrap .inner .step {padding:15px 10px 10px 10px; border-top:1px solid #ccc; overflow:hidden}
+.reg_wrap .inner .step ul {width:100%; display:table; padding-top:10px; margin-bottom:10px}
+.reg_wrap .inner .step ul li {width:25%; height:45px; display:table-cell; vertical-align:middle; background-color:#fff; border:1px solid #ccc; border-left:0; color:#000; text-align:center; position:relative}
+.reg_wrap .inner .step ul li:first-child {border-left:1px solid #ccc}
+.reg_wrap .inner .step ul li span.num {font-family:Tahoma; font-size:1.25em; font-weight:bold; margin-right:3px; vertical-align:bottom}
+.reg_wrap .inner .step ul li.active {background-color:#777; color:#fff}
+.reg_wrap .inner .step ul li .step_ico {display:none}
+.reg_wrap .inner .step .call_back_box {text-align:right}
+.reg_wrap .inner .step .call_back_box .call_back_bt {width:150px}
+.reg_wrap .inner .step_el {background-color:#fff}
+.reg_wrap .inner .step_el .top {height:43px; line-height:43px; background-color:#f4f4f4; border-top:1px solid #ccc; border-bottom:1px solid #ccc; padding:0 10px; font-size:1.3em; font-weight:700; color:#333}
+.reg_wrap .inner .step_el .step_el1 {overflow:hidden}
+.reg_wrap .inner .step_el .step_el1 li button {width:100%; min-height:45px; line-height:45px; padding:0 10px; border-bottom:1px solid #ccc; text-align:left; font-size:1.25em; font-weight:700; color:#222; position:relative}
+.reg_wrap .inner .step_el .step_el1 li .reg_step_el1_ico1 {background-position:0 0; width:23px; height:19px; margin:13px 15px 0 0}
+.reg_wrap .inner .step_el .step_el1 li .reg_step_el1_ico2 {background-position:-25px 0; width:22px; height:20px; margin:12px 15px 0 0}
+.reg_wrap .inner .step_el .step_el1 li .reg_step_el1_ico3 {background-position:-50px 0; width:18px; height:23px; margin:11px 15px 0 0}
+.reg_wrap .inner .step_el .step_el1 li .reg_step_el1_plus {background-position:-140px 0; width:16px; height:16px; position:absolute; right:20px; top:16px}
+.reg_wrap .inner .step_el .step_el1 li.active1 button.step_el1_bt {background-color:#777; color:#fff}
+.reg_wrap .inner .step_el .step_el1 li.active1 .reg_step_el1_ico1 {background-position:-70px 0; width:23px; height:19px; margin:13px 15px 0 0}
+.reg_wrap .inner .step_el .step_el1 li.active1 .reg_step_el1_ico2 {background-position:-95px 0; width:22px; height:20px; margin:12px 15px 0 0}
+.reg_wrap .inner .step_el .step_el1 li.active1 .reg_step_el1_ico3 {background-position:-120px 0; width:18px; height:23px; margin:11px 15px 0 0}
+.reg_wrap .inner .step_el .step_el1 li.active1 .reg_step_el1_plus {background-position:-160px 0; width:16px; height:3px; position:absolute; right:20px; top:21px}
+.reg_wrap .inner .step_el .step_el1 li .step_el2 {display:none}
+.reg_wrap .inner .step_el .step_el1 li.active1 .step_el2 {display:block}
+.reg_wrap .inner .step_el .step_el1 li .step_el2 li button {color:#666; padding-left:60px}
+.reg_wrap .inner .step_el .step_el1 li .step_el2 li.active2 button {background-color:#f4f4f4; color:#222}
+.reg_wrap .inner .step_el .step_el1 li .step_el2 li button .reg_arrow1 {background-position:-180px 0; width:12px; height:19px; position:absolute; right:22px; top:13px}
+.reg_wrap .inner .step_el .step_el1 li .step_el2 li.active2 button .reg_arrow1 {background-position:-195px 0; width:12px; height:19px}
+.reg_wrap .inner .step_el .step_el1 li .step_el2 li .step_el3 {display:none}
+.reg_wrap .inner .step_el .step_el1 li.active1 .step_el2 li.active2 .step_el3 {display:block}
+.reg_wrap .inner .step_el .step_el1 li.active1 .step_el2 li.active2 .step_el3 li button {background-color:#fff; color:#666; padding-left:70px}
+.reg_wrap .inner .step_el .step_el1 li.active1 .step_el2 li.active2 .step_el3 li.active3 button {background-color:#f4f4f4; color:#222}
+.reg_wrap .inner .step_el .step_el1 li.active1 .step_el2 li.active2 .step_el3 li button .reg_arrow2 {background-position:-180px 0; width:12px; height:19px; position:absolute; right:22px; top:13px}
+.reg_wrap .inner .step_el .step_el1 li.active1 .step_el2 li.active2 .step_el3 li.active3 button .reg_arrow2 {background-position:-195px 0; width:12px; height:19px}
+.reg_wrap .inner .step_el .step_el1 li .step_el2 li .step_el3 li .step_el4 {display:none}
+.reg_wrap .inner .step_el .step_el1 li.active1 .step_el2 li.active2 .step_el3 li.active3 .step_el4 {display:block}
+.reg_wrap .inner .step_el .step_el1 li.active1 .step_el2 li.active2 .step_el3 li.active3 .step_el4 li button {background-color:#fff; color:#666; padding-left:80px}
+.reg_wrap .inner .step_el .step_el1 li.active1 .step_el2 li.active2 .step_el3 li.active3 .step_el4 li.active4 button {background-color:#eee; color:#222}
+.reg_wrap .inner .step_el .step_el1 li.active1 .step_el2 li.active2 .step_el3 li.active3 .step_el4 li.active4 button.step_el4_bt {background-color:#f4f4f4; color:#222}
+.reg_wrap .inner .step_el .step_el1 li.active1 .step_el2 li.active2 .step_el3 li.active3 .step_el4 li .reg_selected {background-position:-220px 0; width:27px; height:27px; position:absolute; right:20px; top:10px; display:none}
+.reg_wrap .inner .step_el .step_el1 li.active1 .step_el2 li.active2 .step_el3 li.active3 .step_el4 li.active4 .reg_selected {display:block}
+.reg_bt_arrow {background-position:-210px 0; width:7px; height:12px; margin:13px 0 0 5px}
+.reg_wrap .inner .step_el .btb {padding:20px 10px}
+
+.reg_el {padding:0 10px}
+.reg_el .section_tit .modify_bt1,
+.reg_el .section_tit .modify_bt2 {width:74px; position:absolute; right:10px; top:5px}
+.reg_el .temp_tbl {margin-top:20px}
+.reg_el .temp_tbl ul {background-color:#fff; border-left:1px solid #ccc; border-right:1px solid #ccc; position:relative; overflow:hidden}
+.reg_el .temp_tbl ul li.mg {padding-left:100px}
+.reg_el .temp_tbl ul li.mg .q {width:75px}
+.reg_el .temp_tbl ul li.route div {padding:5px 10px; font-size:1.25em; color:#222}
+.reg_el .temp_tbl .pic {border:10px solid #fff; position:absolute; left:1px; top:45px; z-index:9}
+.reg_el .temp_tbl .pic .inner {width:90px; height:110px; border:4px solid #e9e9e9; text-align:center; padding:35px 0 0 0; background-color:#fff; color:#c1c1c1}
+.reg_el .temp_tbl .pic .inner img {width:82px; height:102px; margin-top:-35px}
+.reg_el .temp_tbl .care {background-color:#f4f4f4; border:1px solid #ccc; border-bottom:0; padding:20px 15px 20px 35px; color:#666}
+.reg_el .temp_tbl .care .care_ico {background-position:0 -75px; width:16px; height:16px; margin:0 5px 0 -20px}
+.reg_el .temp_tbl .care a {font-weight:700; color:#4091c9}
+.reg_el .temp_tbl .care ul {border:1px solid #ccc; padding:10px 20px 5px 20px; margin-left:-20px}
+.reg_el .temp_tbl .care ul.mgt10 {margin-top:10px}
+.reg_el .temp_tbl .care ul li {min-height:inherit; border:0; display:block; padding:0 0 5px 10px}
+.care_blue_ico {background-position:-35px -75px; width:3px; height:3px; margin:4px 5px 0 -8px}
+.reg_el .temp_tbl ul li .a .cell.mycar {width:100%; padding:0 105px 5px 0}
+.reg_el .temp_tbl ul li .a .cell.mycar .border {height:30px; border:2px solid #000; border-radius:3px; padding:3px 20px; position:relative}
+.reg_el .temp_tbl ul li .a .cell.mycar .border input {height:20px; border:0; text-align:center}
+.reg_el .temp_tbl ul li .a .cell.mycarbt {width:100px; position:absolute; right:10px; top:10px}
+.mycar_ico1 {background-position:-20px -75px; width:9px; height:7px; position:absolute; left:6px; top:9px}
+.mycar_ico2 {background-position:-20px -75px; width:9px; height:7px; position:absolute; right:6px; top:9px}
+.reg_el .temp_tbl ul li .a .cell.cell30 {width:30%}
+.reg_el .temp_tbl ul li .a .cell.cell33 {width:33.3%}
+.reg_el .temp_tbl ul li .a .cell.cell33:first-child {width:33.4%}
+.reg_el .temp_tbl ul li .a .cell.cell50 {width:50%}
+.reg_el .temp_tbl ul li .a .cell.cell70 {width:70%}
+.reg_el .temp_tbl ul li .a .cell.cell100 {width:100%}
+.reg_el .temp_tbl ul li .a .cell.cellpb5 {padding-bottom:5px}
+.reg_el .temp_tbl ul li .a .cell.cellpl0 {padding-left:0}
+.reg_el .temp_tbl ul li .a .cell.oil1,
+.reg_el .temp_tbl ul li .a .cell.oil2,
+.reg_el .temp_tbl ul li .a .cell.cas,
+.reg_el .temp_tbl ul li .a .cell.mile,
+.reg_el .temp_tbl ul li .a .cell.price,
+.reg_el .temp_tbl ul li .a .cell.price2 {padding-right:30px; position:relative}
+.reg_el .temp_tbl ul li .a .cell.oil1:after {content:'년'; width:30px; line-height:30px; text-align:center; position:absolute; top:0; right:0}
+.reg_el .temp_tbl ul li .a .cell.oil2:after {content:'월'; width:30px; line-height:30px; text-align:center; position:absolute; top:0; right:0}
+.reg_el .temp_tbl ul li .a .cell.cas:after {content:'cc'; width:30px; line-height:30px; text-align:center; position:absolute; top:0; right:0}
+.reg_el .temp_tbl ul li .a .cell.mile:after {content:'km'; width:30px; line-height:30px; text-align:center; position:absolute; top:0; right:0}
+.reg_el .temp_tbl ul li .a .cell.price:after {content:'만원'; width:30px; line-height:30px; text-align:center; position:absolute; top:0; right:0}
+.reg_el .temp_tbl ul li .a .cell.price2:after {content:'원'; width:30px; line-height:30px; text-align:center; position:absolute; top:0; right:0}
+.reg_el .temp_tbl ul li .a .addr_add {margin-top:10px; overflow:hidden}
+.reg_el .temp_tbl ul li .a .addr_add:first-child {margin-top:0}
+.reg_el .temp_tbl ul li .a .addr_add .cell.addr2 {padding-right:32px; position:relative}
+.reg_el .temp_tbl ul li .a .addr_add:first-child .cell.addr2 {padding-right:0}
+.reg_addr_del {background-position:-220px -75px; width:27px; height:27px; position:absolute; right:0; top:2px}
+.reg_el .section_tit .num {padding-left:3px}
+.reg_el .section_tit .num strong {color:#2a5db0}
+.reg_el .temp_tbl .thum ul {overflow:hidden; padding:10px 0 0 10px; border-top:1px solid #ccc}
+.reg_el .temp_tbl .thum ul .bt {padding:5px 0 15px 0}
+.reg_el .temp_tbl .thum ul li {width:25%; border:0; padding:0 10px 15px 0; float:left; display:inline-block}
+.reg_el .temp_tbl .thum ul li .thum_img {height:95px; border:1px solid #ccc; overflow:hidden; position:relative}
+.reg_el .temp_tbl .thum ul li .thum_img .bt {position:absolute; left:50%; top:50%; margin:-22px 0 0 -22px}
+.reg_el .temp_tbl .thum ul li .thum_img img {width:100%; height:100%}
+.reg_thum_bt {background-position:-3px -95px; width:44px; height:44px; color:#ff600f; padding-top:30px}
+.reg_thum_bt input {width:44px; height:44px; margin:0; padding:0; opacity:0; filter:alpha(opacity=0); -moz-transform:translate(-300px, 0) scale(4); direction:ltr; cursor:pointer; position:absolute; top:0; left:0}
+.reg_thum_del_bt {background-position:-55px -95px; width:15px; height:15px; position:absolute; right:0; top:0}
+.reg_el .temp_tbl ul li.route div.bit {text-align:right; padding:0 10px; color:#999}
+.reg_el .temp_tbl ul li.route div.bit strong {color:#2a5db0}
+.temp_save {margin-top:20px; text-align:center}
+.temp_save .txt {margin-bottom:10px}
+.temp_save_ico {background-position:-45px -75px; width:19px; height:18px; margin:-2px 5px 0 0}
+.temp_save .temp_save_bt {width:50%}
+.temp_tbl .section_tit .explan {font-size:0.8em; font-weight:400; color:#666; padding-top:5px}
+.temp_tbl ul li .pay {min-height:45px; padding:0 10px; position:relative}
+.temp_tbl ul li .pay .label_radio {font-size:1.3em; font-weight:700; color:#333; padding-top:3px}
+.temp_tbl ul li .pay strong {font-family:Tahoma; font-size:1.25em; color:#e43000; letter-spacing:-1px; position:absolute; right:50px; top:0; z-index:9}
+.temp_tbl ul li .pay strong span {font-family:NanumBarunGothic; font-weight:400; font-size:0.9em; color:#555; vertical-align:middle; padding-left:3px}
+.temp_tbl ul li .pay strong.free {font-family:NanumBarunGothic}
+.temp_tbl ul li .pay .pay_txt {padding-left:30px; margin-bottom:5px; color:#666; position:relative; z-index:9}
+.temp_tbl ul li .pay .pay_day {padding-left:30px}
+.temp_tbl ul li .pay .reg_prev_bt {width:27px; position:absolute; right:10px; top:0; z-index:9}
+.temp_tbl ul li .pay .reg_prev_bt .txt {display:none}
+.reg_prev_ico {background-position:-70px -75px; width:21px; height:14px; margin-top:2px}
+.reg_pay_bg {background-position:-95px -75px; width:100px; height:65px; position:absolute; right:0; top:-10px; z-index:8}
+.reg_el .temp_tbl ul li .payed {font-family:Tahoma; letter-spacing:-1px; font-size:1.25em; color:#e43000; vertical-align:bottom; padding-right:3px}
+.reg_el .temp_tbl ul li .a .cell.ea {padding-right:30px; position:relative}
+.reg_el .temp_tbl ul li .a .cell.ea:after {content:'개'; width:30px; line-height:30px; text-align:center; position:absolute; top:0; right:0}
+.reg_before_ico {background-position:-200px -75px; width:17px; height:15px; margin:11px 5px 0 0}
+.reg_el .temp_tbl ul li.inform {padding:20px 10px}
+.reg_el .temp_tbl ul li.inform .txt_red {margin-bottom:10px}
+.reg_el .temp_tbl ul li.inform .temp_tbl .section_tit {font-size:1.1em; font-weight:400}
+.reg_el .temp_tbl ul li.inform .temp_tbl ul {background-color:#f4f4f4}
+.reg_el .finished {border:1px solid #ccc; background-color:#fff; margin-bottom:20px; padding:25px; text-align:center}
+.reg_el .finished .txt_blue {margin-bottom:10px}
+.reg_bank_bt {display:none}
+.reg_el .btb .cell.bills {width:50%}
+.reg_el .btb .cell.bills2 {display:none}
+
+.temp_tbl.reg_prev {display:none}
+.temp_tbl.reg_prev .reg_prev_close {width:42px; height:42px; line-height:42px; font-family:Arial; font-size:2.5em; color:#7c7c7c; position:absolute; right:0; top:0}
+.temp_tbl.reg_prev .temp_tbl2 table {border:1px solid #ccc}
+.temp_tbl.reg_prev .temp_tbl2 table thead tr th {height:40px; background-color:#f5f5f5; border-bottom:1px solid #ccc; text-align:center; font-size:1.1em; color:#666}
+.temp_tbl.reg_prev .temp_tbl2 table tbody tr {cursor:pointer}
+.temp_tbl.reg_prev .temp_tbl2 table tbody tr td {padding:10px; border-bottom:1px solid #ccc; font-size:1.1em}
+.temp_tbl.reg_prev .temp_tbl2 table tbody tr td.date {text-align:center}
+.temp_tbl.reg_prev .temp_tbl2 table tbody tr td .kind {margin-bottom:5px; color:#666}
+.temp_tbl.reg_prev .temp_tbl2 table tbody tr td strong {font-size:1.1em}
+
+.temp_tbl ul.form li .a ul.plist {border:0; padding-top:5px; overflow:hidden}
+.temp_tbl ul.form li .a ul.plist li {width:87px; height:66px; border:1px solid #ccc; margin-right:5px; padding:0; float:left; display:block; position:relative}
+.temp_tbl ul.form li .a ul.plist li img {width:100%; height:100%}
+
+/* 판매자 정보 수정하기 */
+.buyer_ico {background-position:-60px -120px; width:24px; height:21px; margin-right:5px}
+.buyer_pop .label_check {margin-top:4px}
+
+/* 차량 번호 검색 */
+.car_num_pop .conts {background-color:#f4f4f4; padding:20px 25px; margin-bottom:20px}
+.car_num_pop .conts .txt_a {background-color:#fff; padding:20px; text-align:center; margin-bottom:20px}
+.car_num_pop .conts .txt_a strong {font-size:1.3em; color:#666; margin-bottom:5px; display:block}
+.car_num_pop .conts .form_a {width:100%; display:table}
+.car_num_pop .conts .form_a .cell {display:table-cell; padding-left:10px}
+.car_num_pop .conts .form_a .cell:first-child {padding:0}
+
+/* 딜러사원증 */
+.dealer_pop .conts {width:100%; display:table; margin-bottom:20px}
+.dealer_pop .conts .half {width:50%; height:1px; display:table-cell; padding-left:5px; vertical-align:top}
+.dealer_pop .conts .half:first-child {padding:0 5px 0 0}
+.dealer_pop .conts .half .inner {height:100%; border:1px solid #ccc; position:relative}
+.dealer_pop .conts .half .inner img {width:100%}
+.no_dealer_ico {background-position:0 -145px; width:60px; height:60px; position:absolute; top:50%; left:50%; margin:-30px 0 0 -30px}
+
+/* 문자 보내기 */
+.sms_pop_ico {background-position:-90px -120px; width:24px; height:18px; margin:2px 5px 0 0}
+.sms_pop .conts .txtarea {position:relative; padding-right:104px; margin-bottom:10px}
+.sms_pop .conts .txtarea textarea {float:left}
+.sms_pop .conts .txtarea .sms_send_bt {width:94px; height:107px; position:absolute; right:0; top:0}
+.sms_pop .conts .txtarea:after {content:''; display:block; float:none; clear:both}
+.sms_pop .conts .sms_num {margin-bottom:30px}
+.sms_pop .conts .to_area {background-color:#f4f4f4; padding:15px 10px; margin-bottom:30px; overflow:hidden; font-size:1.1em}
+.sms_pop .conts .to_area .to_send {width:80px; color:#777; display:inline-block; float:left}
+.sms_pop .conts .to_area .to_numb {float:left; color:#b7b7b7}
+.sms_pop .conts .to_area .to_numb strong {color:#333; margin-bottom:5px; display:block}
+
+/* 안전 구매를 위한 TIP */
+.safe_pop_ico {background-position:-120px -120px; width:24px; height:21px; margin-right:5px}
+.safe_list ul li {font-size:1.1em; font-weight:700; color:#2a5db0; padding:10px 0 0 25px}
+.safe_list ul li .safe_list_el {background-color:#f4f4f4; margin:7px 0 7px -25px; padding-bottom:10px}
+.safe_list ul li .safe_list_el ul li {font-size:1em; font-weight:400; color:#333; padding:10px 10px 0 40px}
+.safe_list ul li .safe_list_el ul li span {margin:0 5px 0 -17px}
+
+/* (모바일)공유하기, 연락하기 */
+.ly_list ul {margin:-20px 0}
+.ly_list ul li {height:50px; line-height:50px; border-top:1px solid #ddd; padding:0 15px; font-size:1.3em; font-weight:700; color:#333; cursor:pointer}
+.ly_list ul li:first-child {border-top:0}
+
+/* 다량등록권 */
+.reg_wrap.many_wrap .inner .step ul li {width:33.3%}
+.reg_wrap.many_wrap .temp_tbl ul li .pay strong {right:10px}
+
+/* 검색결과 */
+.search_tab {height:45px; border-bottom:1px solid #ccc; margin:5px 0 10px 0; position:relative}
+.search_tab ul li {width:33.3%; float:left; padding-left:5px; position:relative}
+.search_tab ul li:first-child {width:33.4%; padding-left:0}
+.search_tab ul li a {height:44px; line-height:44px; display:block; text-align:center; background-color:#f4f4f4; border:1px solid #ccc; border-bottom:0; border-top-left-radius:3px; border-top-right-radius:3px; font-size:1.1em; font-weight:700}
+.search_tab ul li a.on span {background-color:#fff; color:#ff6010; border:1px solid #ccc; border-bottom:0; border-top-left-radius:3px; border-top-right-radius:3px; position:absolute; left:5px; top:0; right:0; bottom:-1px}
+.search_tab ul li:first-child a.on span {left:0}
+.search_tit {padding:20px 10px; font-size:1.25em; font-weight:700; color:#333}
+.search_tit strong {margin-right:5px}
+.temp_list_cont ul li .temp_list_info .course {display:none}
+.navi2 nav .group {display:none}
+
+.temp_list_cont .nodata {border-top:1px solid #ccc; border-bottom:1px solid #ccc; padding:30px; text-align:center}
+.nodata_ico {background-position:-150px -145px; width:75px; height:75px; margin-bottom:20px}
+.temp_list_cont .nodata .txt_b strong {font-size:1.25em; display:block}
+.temp_list_cont .nodata .txt_b strong.txt_red {margin-bottom:3px}
+.temp_list_cont .nodata .txt_b .txt {line-height:1.5em; padding-top:20px}
+.nodata_ico2 {display:none}
+
+/* 중고차 가이드 */
+.bg_ucar {background:url('http://image.findall.co.kr/FACache/cgs/cont/bg_usedcar.png') no-repeat; display:inline-block; vertical-align:top; background-size:250px auto; background:url('http://image.findall.co.kr/FACache/cgs/cont/bg_usedcar_f.png') no-repeat\9}
+.bg_ucar span {width:0; height:0; line-height:0; visibility:hidden; overflow:hidden}
+.ucar_main {padding:15px 10px 5px 10px; margin-bottom:-50px}
+.ucar_main .section {background-color:#fff; border:1px solid #ccc; margin-bottom:10px}
+.ucar_main .section .tit {background-color:#f4f4f4; border-bottom:1px solid #ccc; padding:11px 10px; font-size:1.3em; font-weight:700; color:#333}
+.ucar_main .section .explan {display:none}
+.ucar_main .section ul {border-top:1px solid #ccc; padding:0 15px}
+.ucar_main .section ul li {border-bottom:1px solid #ccc; padding:17px 0; position:relative}
+.ucar_main .section ul li a {height:15px; line-height:15px; padding:0 40px 0 20px; font-size:1.1em; overflow:hidden; display:block}
+.ucar_arrow_ico {background-position:0 0; width:12px; height:19px; position:absolute; right:20px; top:50%; margin-top:-10px}
+.ucar_main .section .btn {padding:10px 15px}
+.ucar_main .section .btn .ucar_bt {width:100%}
+.ucar_wrap {padding:0 10px}
+.ucar_wrap .top {padding:30px 0 10px 0; position:relative}
+.ucar_tab {height:45px; border-bottom:1px solid #ccc; margin:5px 0 10px 0; position:relative}
+.ucar_tab ul li {width:33.3%; float:left; padding-left:5px; position:relative}
+.ucar_tab ul li:first-child {width:33.4%; padding-left:0}
+.ucar_tab ul li a {height:44px; line-height:44px; display:block; text-align:center; background-color:#f4f4f4; border:1px solid #ccc; border-bottom:0; border-top-left-radius:3px; border-top-right-radius:3px; font-size:1.1em; font-weight:700}
+.ucar_tab ul li a.on span {background-color:#fff; color:#ff6010; border:1px solid #ccc; border-bottom:0; border-top-left-radius:3px; border-top-right-radius:3px; position:absolute; left:5px; top:0; right:0; bottom:-1px}
+.ucar_tab ul li:first-child a.on span {left:0}
+
+.ucar_form {background-color:#f4f4f4; border:1px solid #ccc; padding:10px; overflow:hidden; position:relative}
+.ucar_form .condi {width:100%; display:table}
+.ucar_form .condi .condi_cell {padding-right:110px; margin-bottom:10px}
+.ucar_form .price {position:absolute; right:10px; top:10px}
+.ucar_form .price .price_bt {width:100px; height:70px}
+.ucar_tbl .txt_green {text-align:right; padding:30px 0 5px 0}
+.ucar_tbl table {border-left:1px solid #ccc; border-right:1px solid #ccc; position:relative; table-layout:fixed}
+.ucar_tbl table thead tr th {height:45px; text-align:center; background-color:#fcfcfc; border-top:1px solid #ccc; border-bottom:1px solid #ccc; font-size:1.1em; color:#666}
+.ucar_tbl table tbody tr td {text-align:center; border-bottom:1px solid #ccc; padding:15px 5px; font-size:1.1em; font-weight:700; color:#222}
+.ucar_tbl table .col_tit {width:25%}
+.ucar_tbl table .col_h {display:none}
+.ucar_tbl table .col_v,
+.ucar_tbl table .col_price {width:25%}
+.ucar_main_bt {display:none}
+
+.ucar_form .condi .condi_cell_w {padding-right:110px; display:table-cell}
+.ucar_form .condi .condi_cell_w:first-child {width:100px; padding-right:10px}
+.ucar_form .search {position:absolute; right:10px; top:10px}
+.ucar_form .search .search_bt {width:100px}
+
+.ucar_tbl.ucar_tip table .col_b,
+.ucar_tbl.ucar_tip table .col_h {width:15%}
+.ucar_tbl.ucar_tip table thead tr th.col_s {display:none}
+.ucar_tbl.ucar_tip table tbody tr td.col_s {width:85%; text-align:left; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.ucar_tbl.ucar_tip table tbody tr td.col_s a:hover {text-decoration:underline}
+.ucar_tbl.ucar_tip table tbody tr td.col_s a:after {content:''; display:block; float:none; clear:both; margin-bottom:5px}
+.ucar_tbl.ucar_tip table tbody tr td.col_s .day {color:#999; float:left}
+.ucar_tbl.ucar_tip table tbody tr td.col_s .hit {color:#ff6010; float:left}
+.ucar_tbl.ucar_tip table tbody tr td.col_s .hit span {color:#999}
+.ucar_tbl.ucar_tip table tbody tr td.col_s .hit:before {content:''; width:1px; height:10px; background-color:#ccc; display:inline-block; margin:0 10px}
+
+.ucar_body .titb {border-bottom:1px solid #ccc; padding:20px 10px 10px 10px; position:relative}
+.ucar_body .titb .tit {margin-bottom:5px; font-size:1.25em; font-weight:700}
+.ucar_body .titb .tit h3 {font-size:1.071em; display:inline-block}
+.ucar_body .titb .right div {color:#999; display:inline-block}
+.ucar_body .titb .right .hit:before {content:''; width:1px; height:10px; background-color:#999; display:inline-block; margin:0 10px}
+.ucar_body .titb .bt_area {text-align:right; padding-top:10px}
+.ucar_body .titb .bt_area button {width:50px; margin-left:5px}
+.ucar_body .contb {line-height:1.6em; padding:30px 10px; border-bottom:1px solid #ccc; color:#222}
+.ucar_body .btb .cell {width:34%; display:table-cell}
+.ucar_body .btb .cell:first-child {width:32%}
+
+.free_bt {width:100px; position:absolute; right:0; top:25px}
+.free_bt2 {display:none}
+.ucar_tbl.ucar_tip table tbody tr td.col_s.cusmer .reply_num {color:#ff6010; float:left}
+.ucar_tbl.ucar_tip table tbody tr td.col_s.cusmer .nic {color:#999; float:left; color:#4091c9}
+.ucar_tbl.ucar_tip table tbody tr td.col_s.cusmer .reply_num:before,
+.ucar_tbl.ucar_tip table tbody tr td.col_s.cusmer .nic:after {content:''; width:1px; height:10px; background-color:#ccc; display:inline-block; margin:0 10px}
+.ucar_body .titb .right div.nic {font-weight:700; color:#4091c9}
+.ucar_body .titb .right div.nic:after {content:''; width:1px; height:10px; background-color:#999; display:inline-block; margin:0 10px}
+.ucar_wrap .reply_tit .more {display:none}
+.ucar_wrap .reply_town {display:block}
+.ucar_wrap .temp_tbl ul {border-left:1px solid #ccc; border-right:1px solid #ccc}
+.ucar_wrap .temp_tbl ul li.tarea .q {padding-bottom:10px; display:block}
+.ucar_wrap .temp_tbl ul li.tarea .a {padding-left:10px; display:block}
+
+/* 파인드올 중고차 시세 */
+.price_ico {background-position:0 -145px; width:16px; height:14px; margin:2px 5px 0 0}
+
+/* 지도 위치 확인 및 수정 */
+.map_ico {background-position:-20px -145px; width:19px; height:26px; margin:-3px 5px 0 0}
+.ly_pop .cont .element .info .add {padding-top:15px; font-size:1.1em}
+.map_pop .map {width:100%; height:270px; background-color:#ccc; border:1px solid #ccc; position:relative; overflow:hidden}
+.map_reset_bt {width:55px; position:absolute; right:10px; top:10px}
+.map_reset_ico {background-position:-45px -145px; width:15px; height:15px; margin:6px 5px 0 0}
+
+/* 파인드올 이용가이드 */
+.guide_tab {height:45px; border-bottom:1px solid #ccc; margin-bottom:10px; position:relative}
+.guide_tab ul li {width:33.3%; float:left; padding-left:5px; position:relative}
+.guide_tab ul li:first-child {width:33.4%; padding-left:0}
+.guide_tab ul li a {height:44px; line-height:44px; display:block; text-align:center; background-color:#f4f4f4; border:1px solid #ccc; border-bottom:0; border-top-left-radius:3px; border-top-right-radius:3px; font-size:1.1em; font-weight:700}
+.guide_tab ul li a.on span {background-color:#fff; color:#ff6010; border:1px solid #ccc; border-bottom:0; border-top-left-radius:3px; border-top-right-radius:3px; position:absolute; left:5px; top:0; right:0; bottom:-1px}
+.guide_tab ul li:first-child a.on span {left:0}
+
+.guide_wrap .top {padding:30px 10px 10px 10px}
+.guide_wrap .guide_cont {border:1px solid #ccc; margin:20px 10px; padding:0 10px 10px 10px}
+.guide_wrap .guide_cont .type_m {display:block}
+.guide_wrap .guide_cont .type_m ul li .group {width:100%; display:table; border-bottom:1px solid #ccc; border-top:1px solid #ccc; padding:11px 0}
+.guide_wrap .guide_cont .type_m ul li:first-child .group {border-top:0}
+.guide_wrap .guide_cont .type_m ul li .group .left {width:85px; display:table-cell}
+.guide_wrap .guide_cont .type_m ul li .group .num {font-family:Arial; font-size:1.9em; font-weight:bold; position:relative}
+.guide_wrap .guide_cont .type_m ul li .group .num .bar {width:34px; height:3px; background-color:#ff6010; position:absolute; left:30px; top:11px}
+.guide_wrap .guide_cont .type_m ul li .group .sort {font-size:1.6em; font-weight:700; color:#333}
+.guide_wrap .guide_cont .type_m ul li .group .txt {padding-top:5px; display:table-cell; color:#333}
+.guide_wrap .guide_cont .type_p {display:none}
+
+/* 유료 상품 선택 - 미리보기 */
+.prev_prod_ico {background-position:-30px -120px; width:24px; height:19px; margin:2px 5px 0 0}
+.prev_prod_pop .conts {padding:20px 0 10px 0; text-align:center}
+
+/* 신고하기 */
+.dec_pop .report {background-color:#f4f4f4; overflow:hidden}
+.dec_pop .report ul li {line-height:18px; padding:10px 10px 0 60px; position:relative}
+.dec_pop .report ul li.else {background-color:#fff; margin-top:10px; padding:20px 10px 10px 60px; color:#999}
+.dec_pop .report ul li strong {width:60px; font-weight:700; color:#333; display:inline-block; position:absolute; left:10px; top:10px}
+.dec_pop .report ul li.else strong {top:20px}
+.dec_pop .reason {border-top:1px solid #d4d5d7; border-bottom:1px solid #d4d5d7; padding:15px 10px}
+.dec_pop .reason ul li {padding-bottom:7px}
+.dec_pop .reason ul li .label_radio {padding:4px 0 5px 28px; font-size:1.1em}
+.ly_pop .cont .element .dec_pop .reason .exp {padding:0; color:#999}
+
+
+/*** Tablet Device ***/
+@media all and (min-width:769px) {
+	
+	/* 검색 바 */
+	.org_bar .inner {width:auto; max-width:1024px; padding:10px 20px 0 20px; margin:0 auto; display:block}
+    .org_bar .inner div select {min-width:150px; height:36px; font-size:1.25em}
+
+	/* 상세검색 버튼 */
+	.bg_list {background:url('http://image.findall.co.kr/FACache/cgs/cont/bg_list_f.png') no-repeat; background-size:inherit}
+	.bg_list span {width:0; height:0; line-height:0; visibility:hidden; overflow:hidden}
+
+	/* 서브 Layout */
+	#SubWrap {max-width:1024px; padding:0 20px; margin:0 auto}
+
+	/* Premium Photo */
+	.premium_pt_wrap {background-color:#fff; padding:0}
+	.premium_pt_wrap .inner .el {position:relative}
+
+	/* Premium List */
+	.premium_ls_wrap {margin-bottom:70px}
+	.premium_ls_wrap .temp_list {height:auto; position:static}
+	.premium_ls_wrap .temp_list ul li {position:static !important}
+	.premium_ls_wrap .temp_photo_bt_area {display:none}
+
+	/* Normal List */
+	.normal_ls_wrap .temp_list_tit .sel {right:0}
+
+    /* 전문차량매입 상담 */
+    .buy_car_wrap {padding:40px 0 0 0; display:block}
+    .buy_car_list ul li .buy_car_box .tit {height:30px; line-height:30px; padding:0 15px; font-size:1.1em}
+    .buy_car_list ul li .buy_car_box .cont img {left:15px}
+    .buy_car_list ul li .buy_car_box .cont .txt {font-size:1.1em; margin:10px 15px 5px 85px}
+    .buy_car_list ul li .buy_car_box .cont strong {font-size:1.1em; margin:0 15px 0 85px}
+
+	/* Detail */
+	.back_bar {background-color:#fff}
+	.back_bar .inner {max-width:1024px; height:50px; padding:13px 20px 0 20px; border-bottom:1px solid #ccc; margin:0 auto}
+	.back_bar .inner .reg_bt,
+	.back_bar .inner .share_bt {display:none}
+	.back_bar .inner .day_area,
+	.back_bar .inner .day_area .reg_bt {display:block}
+
+	.detail_info_area .detail_tit {height:100px; padding:20px 20px 0 20px}
+	.detail_info_area .detail_tit h2 {height:27px; line-height:27px; font-size:2em}
+	.detail_info_area .detail_tit .pay {font-size:1.3em}
+	.detail_info_area .detail_tit .pay strong {font-size:2em}
+	.detail_info_area .detail_tit .posted {display:none}
+	.detail_info_area .detail_photo {width:100%; padding:0 20px 20px 20px}
+	.detail_photo .detail_cont {height:530px}
+	.detail_info_area .img_area .img,
+	.detail_info_area .img_area .img ul,
+	.detail_info_area .img_area .img ul li,
+	.detail_info_area .map_area {height:530px}
+	.detail_info_area .img_area .btn .bg {width:40px; height:90px}
+	.detail_info_area .img_area .btn .btn_prev .bg,
+	.detail_info_area .img_area .btn .btn_next .bg {margin-top:-45px}
+	.detail_info_area .img_area .btn .detail_btn {left:13px}
+	.detail_info_area .img_area .btn .btn_next .detail_btn {right:13px}
+
+	.detail_tbl.detail_ins {position:relative; padding-bottom:57px; margin-bottom:20px}
+	.detail_tbl ul {border-top:1px solid #ccc}
+    .detail_tbl ul li {width:50%; float:left}
+    .detail_tbl ul li.odd {border-right:1px solid #ccc}
+    .detail_tbl ul li.all {width:100%; border-right:0}
+    .detail_tbl ul li .a {text-align:left}
+	.detail_tbl .top {margin:0}
+	.detail_tbl .top h2 {line-height:40px; padding-left:15px}
+	.detail_tbl .top .name {line-height:40px; position:static}
+	.detail_tbl .top .share_bt {width:120px; top:4px; right:125px}
+	.detail_tbl .top .reg_bt {width:120px; top:4px}
+    .detail_tbl .top .share_bt .txt,
+    .detail_tbl .top .reg_bt .txt {display:inline-block}
+    .detail_tbl .top .share_ico,
+    .detail_tbl .top .reg_ico {margin-right:5px}
+
+	.detail_ins {width:60%; float:left; padding:0 50px 10px 20px}
+	.detail_ins .top {height:40px; margin:0}
+
+	.detail_buy {width:40%; float:left; padding:0 20px 0 0; margin-bottom:50px}
+	.detail_buy ul {background-color:#f4f4f4}
+	.detail_buy ul li .a {text-align:left}
+	.detail_area {width:40%; float:right; padding:0 20px 0 0; margin-bottom:50px}
+	.detail_area .fav_bt,
+	.detail_area .call_bt,
+	.detail_area .sms_bt {height:65px; font-size:1.3em}
+	.detail_area .call_bt {display:none}
+	.detail_area .sms_bt {display:inline-block}
+
+	.sns_area {width:185px; height:37px; display:block; position:absolute; right:50px; bottom:0}
+	.sns_area .tit {line-height:37px; font-size:1.25em; font-weight:700; float:left}
+	.detail_tbl.detail_ins .sns_area ul {border:0; float:right}
+	.detail_tbl.detail_ins .sns_area ul li {width:37px; height:37px; border:0; padding:0; margin-left:5px}
+	.sns_area .sns_ico1 {background-position:0 -80px; width:37px; height:37px}
+	.sns_area .sns_ico2 {background-position:-40px -80px; width:37px; height:37px}
+	.sns_area .sns_ico3 {background-position:-80px -80px; width:37px; height:37px}
+
+	.detail_tbl.detail_exp {clear:both; padding:0 0 20px 0}
+	.detail_tbl.detail_exp .top {border-top:1px solid #ccc; border-bottom:0}
+	.detail_tbl.detail_exp .top h2 {font-size:2em; padding:20px 0 0 0}
+    .detail_tbl.detail_exp .top .safe_bt {top:20px}
+    .detail_tbl.detail_exp .top .safe_bt .safe_ico {background-position:-65px -145px; width:22px; height:20px}
+
+	.detail_all {width:100%; display:table}
+	.detail_left {display:table-cell; padding:0 0 0 20px; vertical-align:top}
+	.detail_nb .subj .plus_ico {display:none}
+	.detail_nb .cont {display:block}
+	
+	.detail_right {width:360px; display:table-cell; vertical-align:top; border-top:1px solid #ccc; padding:25px 20px 0 40px}
+	.sub_banner.b1024 {margin-bottom:20px}
+	.today_wrap {width:300px; background-color:#fff; border:1px solid #ccc; padding:15px 0 15px 10px}
+	.today_wrap .temp_photo_tit h2 {font-size:1.3em}
+	.today_wrap .temp_photo_bt_area {width:100%; position:static; padding-right:10px}
+	.today_wrap .temp_photo_bt_area .count {width:60px; display:inline-block; font-size:1.25em}
+	.today_wrap .temp_photo_bt_area .bt_prev,
+	.today_wrap .temp_photo_bt_area .bt_next {width:30px; height:30px; background-color:#fff; border:1px solid #ccc; border-bottom:2px solid #ccc; float:none}
+	.today_wrap .more_bt {display:none}
+	.today_wrap .temp_photo {height:200px}
+	.today_wrap .temp_photo ul li {padding:0}
+	.today_wrap .temp_photo ul li ul.step2 {padding:0 20px}
+	.today_wrap .temp_photo ul li ul.step2 li {height:100px; padding-right:10px}
+    .today_wrap .temp_photo ul li ul.step2 li .temp_photo_img {height:84px}
+    .today_wrap .temp_photo ul li ul.step2 li .over {display:none !important}
+	.today_wrap .temp_photo_info,
+	.today_wrap .fav_img {display:none}
+
+	.result_wrap {padding:30px 10px 0 20px}
+	.result_wrap .more_bt {display:none}
+	.result_wrap .temp_photo_bt_area {right:20px; top:32px}
+
+	/* 댓글 */
+	.reply_tit {height:55px; font-size:2em}
+    .reply_tit .reply_ico {display:none}
+	.reply_tit strong {font-size:1.25em}
+	.reply_tit .more {display:none}
+
+	.reply_town {display:block}
+	.lft_bg {background-position:-65px -55px; width:18px; height:20px; float:left; margin:-5px 10px 0 0}
+    .reply_del_bt {background-position:-150px 0; width:14px; height:14px; margin-left:5px}
+
+	.reply_page .back_bar {background-color:#f4f4f4}
+	.reply_page .back_bar .inner {padding:10px 10px 0 10px; border:0}
+	.reply_page .reply_bott_btb {display:none}
+
+	/* Banner */
+	.sub_banner.b768 {display:none}
+	.sub_banner.b1024 {display:inline-block}
+
+	/* 허위정보 신고하기 */
+	.reg_rep_ico {background-position:-150px -120px; width:24px; height:21px}
+
+	/* 마이페이지 */
+	.org_bar .inner .route {font-size:1.3em}
+	.org_bar .inner .tax_bt {display:block}
+	.org_bar .inner .biz_info_bt {right:145px}
+	.mypage_tab {padding:0 20px}
+	.mypage_tab ul li {font-size:1.3em}
+	.mypage_cont {padding:0 20px}
+	.mypage_cont .top {padding:50px 0 25px 0; border-bottom:1px solid #ccc; margin-bottom:35px}
+    .mypage_cont .nodata {font-size:2em; padding:100px 0}
+	.mypage01_tab {height:46px; border-bottom:2px solid #ccc}
+	.mypage01_tab ul li {width:20%; padding-left:10px}
+	.mypage01_tab ul li a {border:2px solid #ccc; border-bottom:0; font-size:1.25em}
+	.mypage01_tab ul li a.on span {border:2px solid #ccc; border-bottom:1px solid #fff; left:10px; bottom:-2px}
+	.mypage01_top {padding:10px 0 0 0}
+	.mp_sc_bar {border:7px solid #f4f4f4; padding:25px 30px}
+	.mp_sc_bar .form {overflow:hidden}
+	.mp_sc_bar .form .tbl {width:50%; float:left}
+	.mp_sc_bar .form .tbl .cell:first-child {padding:0 0 5px 0}
+	.mp_sc_bar .form .tbl .cell.celll,
+    .mp_sc_bar .form .tbl .cell.cellc {padding:0 0 5px 5px}
+    .mp_sc_bar .form .tbl .cell.cellc .form_sc_bt {width:150px}
+
+	.mypage01_tbl {padding:0}
+	.mypage01_tbl ul li {min-height:204px; padding:20px 37px}
+    .mypage01_tbl ul li .num {margin-bottom:10px; font-size:1.1em}
+	.mypage01_tbl ul li .info1 {width:70%; float:left; padding-right:30px; margin:0}
+	.mypage01_tbl ul li .info1 .txt {min-height:120px; margin-right:170px}
+	.mypage01_tbl ul li .info1 .txt .name {font-size:1.3em; margin-bottom:12px}
+	.mypage01_tbl ul li .info1 .txt .state {line-height:1.6em; font-size:1.1em; padding-left:65px}
+	.mypage01_tbl ul li .info1 .txt .state span {width:60px; margin:0 10px 0 -65px}
+	.mypage01_tbl ul li .info1 .txt .state span:after {top:5px}
+	.mypage01_tbl ul li .info1 .thum {width:160px; height:120px; right:30px}
+	.mypage01_tbl ul li .info2 {width:30%; float:left}
+    .mypage01_tbl ul li .info2 .mp_pay_area .state .kind {font-size:1.3em; margin-bottom:5px}
+    .mypage01_tbl ul li .info2 .mp_pay_area .state .pay {font-size:1.3em; margin-bottom:5px}
+    .mypage01_tbl ul li .info2 .mp_pay_area .state .state_b {padding:3px 7px; font-size:1.1em}
+	.mypage01_tbl ul li .info2 .mp_pay_area {height:85px}
+	.mp_sr_bar {padding:0 37px}
+	.mp_sr_bar .right .label_check {right:116px}
+	.mp_sr_bar .right .mp_excel_bt,
+	.mp_sr_bar .right .mp_up_bt {display:block}
+	.mp_excel_ico {background-position:-130px -80px; width:16px; height:12px; margin:7px 0 0 5px}
+	.mp_up_ico {background-position:-150px -80px; width:16px; height:16px; margin:5px 0 0 5px}
+
+	.mypage02_tbl {padding:0}
+	.mypage02_tbl ul li {min-height:161px; padding:20px 37px}
+	.mypage02_tbl ul li .info1 {width:70%; float:left; padding-right:30px; margin:0}
+	.mypage02_tbl ul li .info1 .txt {min-height:120px; margin-right:170px}
+	.mypage02_tbl ul li .info1 .txt .cate {font-size:1.3em}
+	.mypage02_tbl ul li .info1 .txt .name {font-size:2em}
+	.mypage02_tbl ul li .info1 .txt .state {line-height:1.6em; font-size:1.1em; padding-left:65px}
+	.mypage02_tbl ul li .info1 .txt .state span {width:60px; margin:0 10px 0 -65px}
+	.mypage02_tbl ul li .info1 .txt .state span:after {top:5px}
+	.mypage02_tbl ul li .info1 .thum {width:160px; height:120px; right:30px}
+	.mypage02_tbl ul li .info2 {width:30%; float:left}
+	.mp_many_ico {background-position:-110px -55px; width:12px; height:13px; margin:7px 0 0 5px}
+
+	.top .exp {font-size:1.25em}
+	.jjim_ls_wrap {margin:0}
+	.jjim_ls_wrap .temp_list_cont ul li {padding:13px 37px 0 37px}
+	.jjim_ls_wrap .temp_list_cont ul li .temp_list_info .pay {right:37px}
+	.jjim_ls_wrap .temp_list_cont ul li .temp_list_fav {right:37px}
+	.jjim_ls_wrap .temp_list_cont ul li .temp_list_img {right:147px}
+
+	.txt_ls_wrap {margin:0}
+	.txt_ls_wrap ul li {padding:30px 37px}
+	.txt_ls_wrap ul li .checkb {width:65px}
+	.txt_ls_wrap ul li .contb .tit {font-size:1.3em}
+	.txt_ls_wrap ul li .contb .cont .lft_bg {top:-3px}
+	.txt_ls_wrap ul li .contb .cont .txt {line-height:1.6em; font-size:1.25em}
+
+	.mypage01_tab ul li.bli {width:20%}
+	.mypage_bcont .switch {font-size:2.3em; padding:150px 40px 0 40px}
+	.mypage_bcont .btb .switch_bt {width:250px; margin-bottom:150px}
+	
+	.mypage_bcont {padding:0}
+	.bul_ico {background-position:-170px -80px; width:23px; height:23px; margin:-2px 5px 0 0; vertical-align:middle}
+	.nec_ico {background-position:-135px -55px; width:5px; height:5px}
+	.mypage_bcont .temp_tbl ul {border-left:1px solid #ccc; border-right:1px solid #ccc}
+	.mypage_bcont .temp_tbl ul li .a .cell.addr {width:350px; padding:0 5px 5px 5px}
+    .mypage_bcont .temp_tbl ul li .a .cell.map {width:180px}
+	.mypage_bcont .biz_ip {width:180px}
+	.mypage_bcont .biz_file {width:297px; float:left; margin-right:5px}
+
+	/* 비즈니스 회원전환 */
+	.switch_ico {background-position:0 -120px; width:24px; height:21px}
+    .reg_chk_ico {background-position:-85px -55px; width:19px; height:13px}
+
+	/* 등록하기 */
+    .bg_reg {background:url('http://image.findall.co.kr/FACache/cgs/cont/bg_register_f.png') no-repeat; background-size:inherit}
+	.bg_reg span {width:0; height:0; line-height:0; visibility:hidden; overflow:hidden}
+	.org_bar.no_mobile {display:block}
+    .reg_wrap {padding-bottom:50px}
+	.reg_wrap .inner {padding:0 20px}
+	.reg_wrap .inner .step {padding:50px 0 25px 0; border:0; position:relative}
+	.reg_wrap .inner .step ul {width:600px; padding:0; margin:0; position:absolute; right:0; top:43px}
+	.reg_wrap .inner .step ul li {height:41px; position:relative; font-size:1.1em}
+	.reg_wrap .inner .step ul li .step_ico {background-position:-40px -30px; width:30px; height:41px; position:absolute; right:-20px; top:-1px; z-index:9; display:block}
+	.reg_wrap .inner .step ul li.active .step_ico {background-position:0 -30px; width:30px; height:41px}
+	.reg_wrap .inner .step ul li span.num {font-size:1.25em}
+    .reg_wrap .inner .step .call_back_box {border-top:1px solid #ccc; margin:30px 0 -25px 0; padding:5px 0}
+	.reg_wrap .inner .step_el {border:1px solid #ccc; border-top:0}
+	.reg_wrap .inner .step_el .top {padding:0 0 0 15px}
+	.reg_wrap .inner .step_el .step_el1 ul {width:100%; display:table; position:relative; margin-bottom:322px; border-bottom:2px solid #ccc}	
+	.reg_wrap .inner .step_el .step_el1 ul li {width:33.4%; display:table-cell}
+    .reg_wrap .inner .step_el .step_el1 ul li:first-child {width:33.2%}
+	.reg_wrap .inner .step_el .step_el1 ul li button.step_el1_bt {height:70px; text-align:center; border-left:1px solid #ccc; border-bottom:0; font-size:1.3em}
+	.reg_wrap .inner .step_el .step_el1 ul li:first-child button.step_el1_bt {border-left:0}
+	.reg_wrap .inner .step_el .step_el1 ul li .reg_step_el1_plus {display:none}
+	.reg_wrap .inner .step_el .step_el1 ul li .step_el2 {width:100%; height:322px; background-color:#fff; border:3px solid #777; position:absolute; left:0; top:70px}
+	.reg_wrap .inner .step_el .step_el1 ul li .step_el2 ul {width:33.3%; height:316px; border-bottom:0; overflow-y:scroll; overflow-x:hidden; position:static; margin:0; display:inline-block}
+	.reg_wrap .inner .step_el .step_el1 ul li .step_el2 ul::-webkit-scrollbar {width:6px}
+	.reg_wrap .inner .step_el .step_el1 ul li .step_el2 ul::-webkit-scrollbar-track {background-color:#eee}
+	.reg_wrap .inner .step_el .step_el1 ul li .step_el2 ul::-webkit-scrollbar-thumb {background-color:#777; border-radius:10px}
+	.reg_wrap .inner .step_el .step_el1 ul li .step_el2 ul li {width:100%; display:block}
+    .reg_wrap .inner .step_el .step_el1 ul li .step_el2 li button {padding:0 25px}
+	.reg_wrap .inner .step_el .step_el1 ul li .step_el2 ul li .step_el3 {width:66.6%; height:322px; position:absolute; left:33.3%; top:0}
+	.reg_wrap .inner .step_el .step_el1 ul li .step_el2 ul li .step_el3 ul {width:50%; height:316px; overflow-y:scroll; overflow-x:hidden; position:static; margin:0; display:inline-block; border-left:1px solid #ccc}
+	.reg_wrap .inner .step_el .step_el1 ul li .step_el2 ul li .step_el3 ul li {width:100%; display:block}
+    .reg_wrap .inner .step_el .step_el1 ul li.active1 .step_el2 ul li.active2 .step_el3 ul li button {padding:0 25px}
+	.reg_wrap .inner .step_el .step_el1 ul li .step_el2 ul li .step_el3 ul li .step_el4 {width:100%; height:322px; position:absolute; left:50%; top:0}
+	.reg_wrap .inner .step_el .step_el1 ul li .step_el2 ul li .step_el3 ul li .step_el4 ul {width:50%; height:316px; overflow-y:scroll; overflow-x:hidden; position:static; margin:0; display:inline-block; border-left:1px solid #ccc}
+	.reg_wrap .inner .step_el .step_el1 ul li .step_el2 ul li .step_el3 ul li .step_el4 ul li {width:100%; display:block}
+    .reg_wrap .inner .step_el .step_el1 li.active1 .step_el2 li.active2 .step_el3 li.active3 .step_el4 li button {padding:0 25px}
+	.reg_bt_arrow {background-position:-210px 0; width:7px; height:12px; margin:13px 0 0 5px}
+    .reg_wrap .inner .btb.half {width:25%}
+    .reg_wrap .inner .btb.bills {width:75%}
+    .reg_wrap .inner .step_el .btb {padding:20px 0}
+    .reg_wrap .inner .step_el .btb .reg_next_bt {width:250px !important}
+
+    .reg_el {padding:0}
+    .reg_el .section_tit .modify_bt1,
+    .reg_el .section_tit .modify_bt2 {right:40px}
+    .reg_el .temp_tbl .pic {border:15px solid #fff; border-left:40px solid #fff; top:46px}
+    .reg_el .temp_tbl .pic .inner {width:143px; height:176px; border:6px solid #e9e9e9; padding-top:60px}
+    .reg_el .temp_tbl .pic .inner img {width:131px; height:164px; margin-top:-60px}
+    .reg_el .temp_tbl ul li.mg {padding-left:190px}
+    .reg_el .temp_tbl ul li.mg .q {width:100px}
+    .reg_el .temp_tbl .care {padding:20px 40px 20px 60px; font-size:1.1em; line-height:1.75em}
+    .reg_el .temp_tbl .care .care_ico {margin:3px 5px 0 -20px}
+    .mycar_ico1 {background-position:-20px -75px; width:9px; height:7px; position:absolute; left:6px; top:9px}
+    .mycar_ico2 {background-position:-20px -75px; width:9px; height:7px; position:absolute; right:6px; top:9px}
+    .care_blue_ico {background-position:-35px -75px; width:3px; height:3px; margin:10px 5px 0 -8px}
+    .reg_el .temp_tbl .thum ul {padding:10px 30px 0 40px}
+    .reg_el .temp_tbl .thum ul li {width:14.2%}
+    .reg_thum_bt {background-position:0 -95px; width:50px; height:46px}
+    .reg_thum_del_bt {background-position:-55px -95px; width:15px; height:15px}
+    .temp_save_ico {background-position:-45px -75px; width:19px; height:18px}
+    .temp_save {margin:50px 0}
+    .temp_save .temp_save_bt {width:100px; vertical-align:middle; margin-left:20px}
+    .temp_save .txt {display:inline-block; vertical-align:middle; margin:0; font-size:1.1em}
+    .reg_pay_bg {background-position:-95px -75px; width:100px; height:65px; top:-10px; right:0}
+    .reg_prev_ico {background-position:-70px -75px; width:21px; height:14px}
+    .reg_el .temp_tbl ul.form li.left {width:100%}
+    .reg_el .temp_tbl ul li .a .cell.mycar {width:200px; padding:0}
+    .reg_el .temp_tbl ul li .a .cell.mycarbt {position:static}
+    .reg_el .temp_tbl ul li .a .cell.cell30 {width:100px}
+    .reg_el .temp_tbl ul li .a .cell.cell33,
+    .reg_el .temp_tbl ul li .a .cell.cell33:first-child {width:100px}
+    .reg_el .temp_tbl ul li .a .cell.cell50 {width:100px}
+    .reg_el .temp_tbl ul li .a .cell.cell100 {width:300px}
+    .reg_el .temp_tbl ul li .a .cell.acident .label_check {margin:3px 20px 0 5px}
+    .reg_el .temp_tbl ul li .a .cell.price {width:200px}
+    .reg_el .temp_tbl ul li .a .cell.level,
+    .reg_el .temp_tbl ul li .a .cell.map {padding-left:5px}
+    .reg_el .temp_tbl ul li .a .addr_add .cell.addr2 {width:382px; clear:both}
+    .reg_el .temp_tbl ul li .a .addr_add:first-child .cell.addr2 {width:350px}
+    .reg_addr_del {background-position:-220px -75px; width:27px; height:27px}
+    .reg_before_ico {background-position:-200px -75px; width:17px; height:15px; margin:11px 5px 0 0}
+    .temp_tbl.reg_prev .reg_prev_close {right:30px}
+    .reg_el .temp_tbl ul li {padding:10px 30px}
+    .reg_el .temp_tbl ul li.inform {padding:20px 40px}    
+
+    .reg_el .finished {font-size:2em; font-weight:700}
+    .reg_bank_bt {width:125px; display:inline-block; vertical-align:middle; margin-left:10px}
+    .reg_el .btb .cell.bills {width:33.3%}
+    .reg_el .btb .cell.bills2 {display:block}
+
+    .temp_tbl.reg_prev .page_full ul {border:0}
+    .temp_tbl.reg_prev .page_full ul li {width:auto; min-height:initial; border:0; display:inline-block; padding:0; vertical-align:top}
+    .temp_tbl.reg_prev .page_full ul li.currentPage a {border:1px solid #ccc; font-weight:700; color:#ff6010}
+
+    /* 판매자 정보 수정하기 */
+    .buyer_ico {background-position:-60px -120px; width:24px; height:21px; margin:2px 5px 0 0}
+
+    /* 딜러사원증 */
+    .no_dealer_ico {background-position:0 -145px; width:60px; height:60px}
+    .dealer_pop .temp_tbl ul li {padding:10px 10px 10px 0}
+
+    /* 문자 보내기 */
+    .sms_pop_ico {background-position:-90px -120px; width:24px; height:18px}
+
+    /* 안전 구매를 위한 TIP */
+    .safe_pop_ico {background-position:-120px -120px; width:24px; height:21px}
+
+    /* 다량등록권 */
+    .reg_wrap.many_wrap .inner .step ul {width:500px}
+
+    /* 검색결과 */
+    .search_tit {font-size:1.3em}
+    .search_ls_wrap .temp_list_tit .sel {display:none}
+    .temp_list_cont ul li .temp_list_info .course {font-size:1.25em; padding:5px 0; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; display:block}
+
+    .search_tab {height:46px; border-bottom:2px solid #ccc; margin:35px 0 10px 0}
+	.search_tab ul li a {border:2px solid #ccc; border-bottom:0; font-size:1.3em}
+	.search_tab ul li a.on span {border:2px solid #ccc; border-bottom:1px solid #fff; bottom:-2px}
+    
+    .temp_list_cont .nodata {text-align:left}
+    .temp_list_cont .nodata .ico_b {display:none}
+    .temp_list_cont .nodata .txt_b strong {font-size:1.6em}
+    .temp_list_cont .nodata .txt_b .txt {font-size:1.1em}
+    .nodata_ico2 {background-position:-130px -145px; width:4px; height:3px; margin:7px 5px 0 0; display:inline-block}
+
+    /* 중고차 가이드 */
+    .bg_ucar {background:url('http://image.findall.co.kr/FACache/cgs/cont/bg_usedcar_f.png') no-repeat; background-size:inherit}
+	.bg_ucar span {width:0; height:0; line-height:0; visibility:hidden; overflow:hidden}
+    .ucar_main {width:100%; padding:80px 20px; margin:0; display:table}
+    .ucar_main .section {width:34%; border:0; padding-left:10px; display:table-cell}
+    .ucar_main .section:first-child {width:32%; padding-left:0}
+    .ucar_main .section .tit {background-color:#fff; border:0; text-align:center; font-size:2.3em}
+    .ucar_main .section .explan {width:500px; height:105px; line-height:1.6em; background-color:#f4f4f4; border:1px solid #ccc; border-bottom:0; padding:20px; font-size:1.1em; letter-spacing:-1px; display:table-cell; vertical-align:middle}
+    .ucar_main .section ul {height:220px; border-left:1px solid #ccc; border-right:1px solid #ccc; padding:30px 15px}
+    .ucar_main .section ul li a {height:18px; line-height:18px; padding:0 20px 0 0; font-size:1.25em; font-weight:700}
+    .ucar_arrow_ico {background-position:0 0; width:12px; height:19px; right:0}
+    .ucar_main .section .btn {border:1px solid #ccc; border-top:0}
+    .back_bar.ucar_bar {display:none}
+    .ucar_wrap {padding:0 20px}
+    .ucar_wrap .top {border-bottom:1px solid #ccc; padding:50px 0 25px 0; margin-bottom:35px}
+    .ucar_tab {height:46px; border-bottom:2px solid #ccc}
+	.ucar_tab ul li {width:20%; padding-left:10px}
+    .ucar_tab ul li:first-child {width:20%}
+	.ucar_tab ul li a {border:2px solid #ccc; border-bottom:0; font-size:1.3em}
+	.ucar_tab ul li a.on span {border:2px solid #ccc; border-bottom:1px solid #fff; left:10px; bottom:-2px}
+
+    .ucar_form {background-color:#fff; border:7px solid #f4f4f4; padding:20px 30px; margin-bottom:30px}
+    .ucar_form .condi {width:auto; float:left}
+    .ucar_form .condi .condi_cell {width:200px; display:inline-block; padding-right:10px}
+    .ucar_form .price {position:static}
+    .ucar_form .price .price_bt {width:135px; height:30px; line-height:30px}
+    .ucar_form .price:after {content:''; display:block; float:none; clear:both}
+    .ucar_form .txt_blue {font-size:1.25em}
+    .ucar_tbl .txt_green {padding:0 0 5px 0; font-size:1.25em}
+    .ucar_tbl table .col_tit {width:15%}
+    .ucar_tbl table .col_h {width:10%; display:table-cell}
+    .ucar_tbl table .col_v {width:10%}
+    .ucar_tbl table .col_price {width:15%}
+    .ucar_main_bt {width:175px; height:39px; background:url('http://image.findall.co.kr/FACache/cgs/cont/bt_usedcar_guide.png') no-repeat; position:absolute; right:20px; top:8px; display:block}
+    .ucar_main_bt span {width:0; height:0; line-height:0; visibility:hidden; overflow:hidden}
+     
+    .ucar_form .condi .condi_cell_w {width:200px; padding-right:10px}
+    .ucar_form .condi .condi_cell_w:first-child {width:200px}
+    .ucar_form .search {position:static}
+    
+    .ucar_tbl.ucar_tip table .col_b {position:relative}
+    .ucar_tbl.ucar_tip table .col_b:before {content:''; width:1px; height:10px; background-color:#ccc; display:inline-block; position:absolute; left:0; top:17px}
+    .ucar_tbl.ucar_tip table thead tr th.col_s {display:table-cell}
+    .ucar_tbl.ucar_tip table tbody tr td.col_s {width:70%; padding-right:31%}
+    .ucar_tbl.ucar_tip table tbody tr td.col_s a {position:relative; padding-left:20px}
+    .ucar_tbl.ucar_tip table tbody tr td.col_s a:before {content:''; width:1px; height:10px; background-color:#ccc; display:inline-block; position:absolute; left:0; top:2px}
+    .ucar_tbl.ucar_tip table tbody tr td.col_s a:after {display:none}
+    .ucar_tbl.ucar_tip table tbody tr td.col_s .day {width:15%; text-align:center; color:#555; display:inline-block; position:absolute; right:15%}
+    .ucar_tbl.ucar_tip table tbody tr td.col_s .day:before {content:''; width:1px; height:10px; background-color:#ccc; display:inline-block; position:absolute; left:0; top:2px}
+    .ucar_tbl.ucar_tip table tbody tr td.col_s .hit {width:15%; text-align:center; display:inline-block; position:absolute; right:0}
+    .ucar_tbl.ucar_tip table tbody tr td.col_s .hit:before {content:''; width:1px; height:10px; background-color:#ccc; display:inline-block; position:absolute; left:0; top:2px; margin:0}
+    .ucar_tbl.ucar_tip table tbody tr td.col_s .hit span {display:none}
+    
+    .ucar_body .titb .tit {font-size:1.8em}
+    .ucar_body .titb .bt_area {position:absolute; right:0; bottom:10px}
+    .ucar_body .titb .bt_area button {width:75px}
+    .ucar_body .contb {font-size:1.1em}
+    .ucar_wrap .ucar_body .btb {width:100%; position:relative}
+    .ucar_body .btb .cell,
+    .ucar_body .btb .cell:first-child {width:170px; display:inline-block; padding:0 10px}
+    .ucar_body .btb .cell.board_list {position:absolute; right:0; top:20px}
+
+    .free_bt {display:none}
+    .free_bt2 {width:130px; position:absolute; right:30px; top:20px; display:block}
+    .ucar_tbl.ucar_tip table tbody tr td.col_s.cusmer {padding-right:45%}
+    .ucar_tbl.ucar_tip table tbody tr td.col_s.cusmer a {max-width:70%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; display:inline-block}
+    .ucar_tbl.ucar_tip table tbody tr td.col_s.cusmer .reply_num {float:none; display:inline-block; vertical-align:top; margin-top:1px}
+    .ucar_tbl.ucar_tip table tbody tr td.col_s.cusmer .reply_num:before {display:none}
+    .ucar_tbl.ucar_tip table tbody tr td.col_s.cusmer .nic {width:15%; text-align:center; display:inline-block; position:absolute; right:30%}
+    .ucar_tbl.ucar_tip table tbody tr td.col_s.cusmer .nic:before {content:''; width:1px; height:10px; background-color:#ccc; display:inline-block; position:absolute; left:0; top:2px}
+    .ucar_tbl.ucar_tip table tbody tr td.col_s.cusmer .nic:after {display:none}
+    .ucar_wrap .temp_tbl ul li .q {padding:0 0 0 10px; display:table-cell}
+    .ucar_wrap .temp_tbl ul li .a {padding:0 10px 0 0; display:table-cell}
+    .ucar_wrap .btb {width:40%; margin:0 auto}
+    
+     /* 파인드올 중고차 시세 */
+    .price_ico {background-position:0 -145px; width:16px; height:14px; margin:4px 5px 0 0}
+    .price_sc_pop .ucar_form {padding:15px}
+    .price_sc_pop .ucar_form .condi .condi_cell {width:169px}
+
+    /* 지도 위치 확인 및 수정 */
+    .map_ico {background-position:-20px -145px; width:19px; height:26px; margin:0 5px 0 0}
+    .map_reset_ico {background-position:-45px -145px; width:15px; height:15px; margin:6px 5px 0 0}
+
+    /* 파인드올 이용가이드 */
+    .guide_tab {height:46px; border-bottom:2px solid #ccc}
+	.guide_tab ul li {width:20%; padding-left:10px}
+    .guide_tab ul li:first-child {width:20%}
+	.guide_tab ul li a {border:2px solid #ccc; border-bottom:0; font-size:1.25em}
+	.guide_tab ul li a.on span {border:2px solid #ccc; border-bottom:1px solid #fff; left:10px; bottom:-2px}
+
+    .guide_wrap {padding:0 20px}
+    .guide_wrap .top {padding:50px 0 25px 0; border-bottom:1px solid #ccc; margin-bottom:35px}
+    .guide_wrap .guide_cont {padding:0 40px; margin:30px 0 0 0}
+    .guide_wrap .guide_cont .type_m {display:none}
+    .guide_wrap .guide_cont .type_p {display:block}
+    .guide_wrap .guide_cont .type_p ul li {overflow:hidden; border-top:1px solid #ddd; padding:40px 0}
+    .guide_wrap .guide_cont .type_p ul li:first-child {border-top:0}
+    .guide_wrap .guide_cont .type_p ul li .group {width:30%; float:left; padding-right:10px}
+    .guide_wrap .guide_cont .type_p ul li .group .num {font-family:Arial; font-size:6.3em; font-weight:bold; margin:-15px 0 15px -3px}
+    .guide_wrap .guide_cont .type_p ul li .group .bar {width:71px; height:5px; background-color:#ff6010; margin-bottom:27px}
+    .guide_wrap .guide_cont .type_p ul li .group .sort {font-size:2.6em; font-weight:bold; color:#333; margin-bottom:12px}
+    .guide_wrap .guide_cont .type_p ul li .group .txt {font-size:1.3em; line-height:1.5em; color:#333}
+    .guide_wrap .guide_cont .type_p ul li .img {width:70%; float:left; text-align:right}
+
+    /* 유료 상품 선택 - 미리보기 */
+    .prev_prod_ico {background-position:-30px -120px; width:24px; height:19px}
+
+    /* 신고하기 */
+    .dec_pop .report ul li {font-size:1.1em}
+    .dec_pop .reason ul li .label_radio {font-size:1.25em; padding:3px 0 5px 28px}
+}
+
+
+/*** Desktop Device ***/
+@media all and (min-width:1025px) {
+
+	/* 검색 바 */
+	.org_bar .inner {max-width:1280px; padding:10px 45px 0 45px}
+
+	/* 상세검색 버튼 */
+	.detail_box {display:none}
+
+    /* 상세검색 Layer */
+    .navi2 nav .top {height:68px}
+    .navi2 nav .detail_ico {margin:22px 7px 0 20px}
+    .navi2 nav h3 {margin-top:23px; font-size:1.8em}
+
+	/* 서브 Layout */
+	#SubWrap {max-width:1280px; padding:0 45px; position:relative}
+	#SubWrap .sub_l {width:232px; background-color:#f4f4f4; border-left:1px solid #ccc; border-right:1px solid #ccc; position:absolute; left:45px; display:block}
+	.navi2 {width:232px; position:absolute; left:46px !important; display:block !important}
+	.navi2 nav {width:230px; height:auto; background-color:#fff}
+	.navi2 .back,
+	.navi2 .back .bg,
+	.navi2 .back .bg2,
+	.navi2 .close {display:none !important}
+	#SubWrap .sub_r {max-width:1280px; min-height:800px; height:auto !important; height:800px; padding:40px 0 0 262px}
+	#SubWrap:after {content:''; display:block; float:none; clear:both}
+
+	/* Detail */
+	.back_bar .inner {max-width:1280px; padding:15px 45px 0 45px}
+    
+    .detail_info_area {max-width:1280px; padding:15px 45px 0 45px; margin:0 auto}
+	.detail_info_area .detail_top_cont {width:100%; display:table}
+    .detail_info_area .detail_tit {padding:10px 0 20px}
+	.detail_info_area .detail_photo {display:table-cell; padding:0 50px 77px 0; vertical-align:top}
+	.detail_tbl.detail_ins {width:480px; display:table-cell; padding:0; margin-bottom:50px; float:left}
+	.detail_tbl.detail_buy {width:480px; display:table-cell; padding:0; float:right}
+	.detail_tbl.detail_ins .sns_area {right:530px; top:590px}
+	.detail_area {width:480px; padding:0}
+	.detail_all {max-width:1280px; padding:0 45px; margin:0 auto}
+	.detail_left {padding:0}
+	.detail_right {width:420px; padding:25px 0 0 100px}
+	.result_wrap {max-width:1280px; padding:50px 35px 0 45px; margin:0 auto}
+	.result_wrap .temp_photo_bt_area {right:45px}
+
+	/* 마이페이지 */
+	.mypage_tab {max-width:1280px; margin:0 auto; padding:0 45px}
+	.org_bar .inner .tax_bt {right:45px}
+	.org_bar .inner .biz_info_bt {right:170px}
+	.mypage_cont {max-width:1280px; margin:0 auto; padding:0 45px}
+
+	/* 등록하기 */
+    .reg_pay_bg {top:0}
+	.reg_wrap .inner {max-width:1280px; margin:0 auto; padding:0 45px}
+    .reg_el .temp_tbl .pic .inner {height:212px; padding-top:85px}
+    .reg_el .temp_tbl .pic .inner img {width:131px; height:200px; margin-top:-85px}
+    .reg_el .temp_tbl ul li.mg2,
+    .reg_el .temp_tbl ul li.mg3 {padding-left:190px}
+    .reg_el .temp_tbl ul li.dleft {width:55%; float:left}
+    .reg_el .temp_tbl ul li.dright {width:45%; padding:10px 0}
+    .reg_el .temp_tbl ul li.mg3.dleft {width:100%}
+    .reg_el .temp_tbl ul li .a .addr_add {margin-top:0}
+    .reg_el .temp_tbl ul li .a .addr_add .cell.addr2 {width:282px; margin-left:5px; clear:inherit}
+    .reg_el .temp_tbl ul li .a .addr_add:first-child .cell.addr2 {width:250px}
+    .temp_tbl .section_tit .explan {display:inline-block; padding-left:10px; font-size:0.9em}
+    .temp_tbl ul.pay_ul {padding:30px 40px 20px 40px}
+    .temp_tbl ul.pay_ul li {border:0; padding:0}
+    .temp_tbl ul li .pay {height:80px; border:1px solid #ccc; border-radius:3px; margin-bottom:10px; padding:25px 10px 0 10px}
+    .temp_tbl ul li .pay .reg_prev_bt {width:60px; right:50px; top:29px}
+    .temp_tbl ul li .pay .reg_prev_bt .txt {display:block}
+    .reg_prev_ico {display:none}
+    .temp_tbl ul li .pay strong {font-size:1.8em; right:120px; top:23px}
+    .temp_tbl ul li .pay .label_radio {width:270px; font-size:1.8em; padding-top:0; margin-right:-20px; vertical-align:middle}
+    .temp_tbl ul li .pay .pay_txt {font-size:1.1em; display:inline-block; vertical-align:middle}
+    .temp_tbl ul li .pay .pay_day {position:absolute; right:190px; top:24px; z-index:9}
+    .reg_el .temp_tbl ul.form li.left {width:50%}
+    .reg_el .temp_tbl ul li .name,
+    .reg_el .temp_tbl ul li .payed {font-size:1.4em}
+
+    /* 다량등록권 */
+    .reg_wrap.many_wrap .temp_tbl ul li .pay strong {right:50px}
+
+    /* 검색결과 */
+    .search_tab {display:none}
+    .search_tit {border-bottom:1px solid #ccc; padding:0 10px 10px 10px; margin-bottom:50px; font-size:1.6em}
+
+    .navi2 nav .group {display:block; border-bottom:1px solid #eaeaea}
+    .group_ico {background-position:-90px -145px; width:23px; height:20px; float:left; margin:23px 7px 0 20px}
+    .navi2 nav .group ul {padding:10px 0}
+    .navi2 nav .group ul li {padding:10px 20px}
+    .navi2 nav .group ul li a {font-size:1.25em}
+    .navi2 nav .group ul li.active a {font-weight:700; color:#4091c9}
+    .navi2 nav .group ul li .list_ico {background-position:-120px -145px; width:5px; height:5px; margin:6px 5px 0 0}
+
+    /* 중고차 가이드 */
+    .ucar_wrap {max-width:1280px; margin:0 auto; padding:0 45px}
+    .ucar_main {padding:80px 45px}
+    .ucar_main_bt {right:45px}
+
+    /* 파인드올 이용가이드 */
+    .guide_wrap {max-width:1280px; margin:0 auto; padding:0 45px}
+}
+
+
+/*** Desktop Device ***/
+@media all and (min-width:1280px) {
+	.back_bar .inner {max-width:1190px; padding:13px 0 0 0}
+	.reply_page .reply_tit {max-width:1190px; margin:0 auto}
+	.reply_page .reply_town {max-width:1190px; margin:0 auto}
+}
+
+
+/*** IE8을 위한 Hack ***/
+@media \0screen {
+    .org_bar .inner,
+    #SubWrap,
+    .mypage_tab,
+    .mypage_cont,
+    .reg_wrap .inner,
+    .detail_info_area,
+    .result_wrap {max-width:1190px !important}
+	.detail_info .img_area .img ul li img,
+	.detail_photo .img_area .img ul li img,
+	.detail_photo .map_area img {position:static}
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko" class="selvas lgu">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="../../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/selvas.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/site_lgu.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/device.css" media="screen" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../../resources/js/jquery-1.11.1.min.js"></script>
+<script src="../../resources/js/design.js"></script>
+<title>LGU+셀바스</title>
+</head>
+<body>
+
+<div id="wrap">
+
+	<header id="head" class="fix">
+        <button type="button" onclick="" class="btn_prev"><i class="ico_com">뒤로가기</i></button>
+		<h1><a href="/">건강지키미</a></h1>
+		<span class="btn_switch" onclick="switchHov();"><button type="button"><i class="dot"></i><i class="dot"></i><i class="dot"></i></button></span>
+        <div class="gnb_menu">
+			<ul>
+				<li><a href="#n">알림설정</a></li>
+				<li><a href="#n">이용약관 및 정책</a></li>
+				<li><a href="#n">부가서비스 설정/해지</a></li>
+				<li><a href="#n">문의하기</a></li>
+				<li><a href="#n">나가기</a></li>
+			</ul>
+		</div>
+	</header>
+    <!-- //header -->
+    
+	<div id="ct">
+        <section class="nodata_page" data-type="설문조사">
+            <h2>딱! 1분이면 되요.</h2>
+            <p>건강정보 분석을 위해<br>간단한 설문조사를 진행해주세요.</p>
+            <figure></figure>
+            <div class="txt">
+                본 서비스는 의료서비스가 아니므로<br>질병의 유무를 판단 할 수 없으며,
+                <p>질병의 유무를 판단하기 위해서는 의사의 검진이 필요합니다.</p>
+            </div>
+            <div class="fixbtm skip"><button type="button" onclick="layer_btm_open('mw-alert');swiper.slideTo(0);">설문조사 진행하기</button></div>
+        </section>
+	</div>
+    <!-- //content -->
+    
+</div>
+
+<!-- 진행전 -->
+<div class="ly_pop btm ly_alert2">
+    <div class="bg"></div>
+    <div class="cont">
+        <article id="mw-alert" class="elm">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-no-swiping">
+                        <h2 class="mtxt"><p>진행 전 꼭 읽어주세요.</p><strong>01.</strong></h2>
+                        <p>건강정보 분석은 최근 건강검진내역을<br>기반으로 1회 제공됩니다.<br>꼭!<br>정확한 분석을 위해,<br>신중하게 설문조사를 진행해주세요.</p>
+                        <button type="button" onclick="swiper.slideNext();" class="skip">넵, 알겠습니다.</button>
+                    </div>
+                    <div class="swiper-slide swiper-no-swiping">
+                        <h2 class="mtxt"><p>진행 전 꼭 읽어주세요.</p><strong>02.</strong></h2>
+                        <p>고객님이 건강검진을 받으셨던<br>과거 시점을 기준으로 설문조사를 진행해주세요.<br><br>(현재를 기준으로 진행 시,<br>부정확한 결과가 안내될 수 있어요.)</p>
+                        <button type="button" onclick="layer_btm_close()" class="skip">넵, 시작할게요.</button>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </article>
+    </div>
+</div>
+<!-- //진행전 -->
+
+<script src="../../resources/js/swiper.min.js"></script>
+<script>
+var swiper = new Swiper('.swiper-container', {
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    noSwiping:true
+});
+</script>
+
+</body>
+</html>

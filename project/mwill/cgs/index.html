@@ -1,0 +1,517 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset= utf-8">
+<title>워크시트 - 자동차, 중고거래/업소홍보</title>
+<!-- style -->
+<style type="text/css">
+	* {	margin:0;padding:0;}
+	body {padding:20px;	font-family:Tahoma, Sans-Serif; color:#333; font-size:11px; background-color:#fff;}
+	/* title */
+	h1 {color:#000; letter-spacing:-2px;}
+	.currentsite {display:block; position:absolute; right:40px; top:20px;}
+	#mwork fieldset {border:none;}
+	#mwork legend {display:none;}
+	/* table */
+	#mwork table {width:100%; border-collapse:collapse; border:1px solid #666;}
+	#mwork caption {text-align:left; font-size:200%; color:#999;}
+	#mwork .index td {background:#ccc;}
+	#mwork .indexred td {background:#fdd;}
+	#mwork .indexgreen td {background:#dfd;}
+	#mwork .indexblue td {background:#ddf;}
+	#mwork .indexyellow td {background:#fff1c7;}
+	#mwork .line td {border-top:3px solid #666;}
+	#mwork .line2 td {border-top:2px solid #666;}
+	#mwork th {padding:6px; border:1px solid #666; color:#ccc; font-size:110%; background-color:#000;}
+	#mwork td {padding:4px; padding-left:10px; border:1px solid #666; background-color:#eee;}
+	#mwork td.type,
+	#mwork .filename {padding-left:0; text-align:center;}
+	#mwork .memo {color:#000;}
+	/* task */
+	#mwork .done {padding:0; font-weight:bold;	text-align:center; color:#090;}
+	#mwork .undone {padding:0; font-weight:bold; text-align:center; color:#900;}
+	/* effect */
+	#mwork a,
+	#mwork a:link, #mwork a:visited {color:#009; text-decoration:none;}
+	#mwork a:hover, #mwork a:active {color:#00f; text-decoration:underline;}
+	#mwork td:hover {background-color:#ddd !important;}
+	/* memo */
+	#mwork del {color:#900;}
+	#mwork .add {color:#900;}
+	/* note */
+	#note {margin:10px 0 10px 0; padding:10px; border:2px dotted #000; background:#eee; letter-spacing:0;}
+	#note p {padding-left:10px;}
+	#note pre {margin-top:10px; margin-bottom:10px; font-family:Tahoma, Sans-Serif; color:#333; font-size:small;}
+	#note h2 {margin:0px 0 10px 0;}
+	#note .notice{color:red;}
+	#note .comment {display:block; margin:5px 0 10px 0; color:#666;}
+	#note .issue {color:#900;}
+	#note .add {color:#900; font-weight:bold;}
+	#note ul li {margin-left:20px;}
+	td em {color:#f00; font-style:normal;}
+	td strong {color:red; font-weight:normal;}
+	tr.orange td{background-color:#FFE4CA !important;}
+	tr.purple td{background-color:#F1E6FF !important;}
+	tr.green td{background-color:#DEEED5 !important;}
+	tr.yellow td{background-color:#FCFBDC !important;}
+	tr.blue td{background-color:#E1F5FD !important;}
+	tr.red td{background-color:#FFE6E7 !important;}
+	tr.white td{background-color:#FFF !important;}
+	tr.brown td{background-color:#E6DCD2 !important;}
+	.redfont {color:#f00;}
+	.modify {margin-top:5px; padding:5px; border:1px dotted #000; font-size:13px; background-color:#ccc;}
+	.modify h2 {margin-bottom:3px;}
+	.date{text-align:left}
+	.space{background-color:#ccc !important}
+</style>
+<!-- //style -->
+<!-- html body -->
+</head>
+<body>
+<!-- sheet -->
+<!-- note -->
+<h1>Publishing Work Sheet</h1>
+<div id="note">
+	<ul>
+		<li>브라우저체크: ie8, 9, 10, 11, chrome</li>
+		<li>Update는 가장 최신에 수정한 날짜 표시</li>
+		<li>History는 각 날짜별로 수정사항 정리</li>
+	</ul>
+</div>
+<div id="mwork">
+	<fieldset>
+	<legend>Start Date : 2015-03-12</legend>
+	<table class="mwork" summary="WebPublisher Procedure Sheet" border="1">
+		<caption>
+		Project Package Publishing ProcedureSheet
+		</caption>
+		<colgroup>
+		<col width="8%">
+		<col width="8%">
+		<col width="8%">
+		<col width="4.5%">
+		<col width="8%">
+		<col width="*">
+		<col width="4%">
+		<col width="10%">
+		<col width="25%">
+		</colgroup>
+		<thead>
+		<tr>
+			<th>1Depth</th>
+			<th>2Depth</th>
+			<th>3Depth</th>
+			<th>Type</th>
+			<th>Directory</th>
+			<th>FileName/Link</th>
+			<th><abbr title="CROS BROWSING">CROS</abbr></th>
+			<th>Updadte</th>
+			<th>History</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td class="depth1">메인</td>
+			<td class="depth2"></td>
+			<td class="depth3"></td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="main.html" target="_blank">main.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-03-18</td>
+			<td class="date">
+                ※MY FindAll(Slide) 포함<br>
+                ※로그인(Popup) 포함
+            </td>
+		</tr>
+		<tr>
+			<td class="depth1">리스트</td>
+			<td class="depth2"></td>
+			<td class="depth3"></td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="list.html" target="_blank">list.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-03-25</td>
+			<td class="date">
+				※상세검색(Slide) 포함<br>
+				※업소홍보 리스트 일 경우 별도 처리<br>
+				ㄴ업소홍보 리스트 일 경우(주석)<br>
+				※중고거래 리스트 일 경우 별도 처리<br>
+				ㄴ중고거래 리스트 일 경우(주석)<br>
+                ※자동차 리스트일 경우 추가<br>
+				ㄴ자동차 리스트일 경우, 전문차량매입 상담(주석)
+			</td>
+		</tr>
+        <tr>
+			<td class="depth1">리스트</td>
+			<td class="depth2">데이터가 없을때</td>
+			<td class="depth3"></td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="list_nodata.html" target="_blank">list_nodata.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-08-13</td>
+			<td class="date"></td>
+		</tr>
+		<tr>
+			<td class="depth1">상세</td>
+			<td class="depth2"></td>
+			<td class="depth3"></td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="detail.html" target="_blank">detail.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-04-06</td>
+			<td class="date">
+                ※허위정보신고(Popup) 포함<br>
+                ※딜러사원증(Popup) 포함<br>
+                ※문자 보내기(Popup) 포함<br>
+                ※안전 구매 TIP(Popup) 포함
+            </td>
+		</tr>
+		<tr>
+			<td class="depth1">댓글 더보기</td>
+			<td class="depth2"></td>
+			<td class="depth3"></td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="reply.html" target="_blank">reply.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-04-03</td>
+			<td class="date"></td>
+		</tr>
+		<tr>
+			<td class="depth1">My Page</td>
+			<td class="depth2">중고거래 관리</td>
+			<td class="depth3"></td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="mypage01.html" target="_blank">mypage01.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-04-08</td>
+			<td class="date"></td>
+		</tr>
+		<tr>
+			<td class="depth1">My Page</td>
+			<td class="depth2">다량등록권 관리</td>
+			<td class="depth3"></td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="mypage02.html" target="_blank">mypage02.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-04-09</td>
+			<td class="date"></td>
+		</tr>
+		<tr>
+			<td class="depth1">My Page</td>
+			<td class="depth2">찜목록</td>
+			<td class="depth3"></td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="mypage03.html" target="_blank">mypage03.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-04-13</td>
+			<td class="date"></td>
+		</tr>
+		<tr>
+			<td class="depth1">My Page</td>
+			<td class="depth2">댓글관리</td>
+			<td class="depth3"></td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="mypage04.html" target="_blank">mypage04.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-04-13</td>
+			<td class="date"></td>
+		</tr>
+		<tr>
+			<td class="depth1">My Page</td>
+			<td class="depth2">문자함</td>
+			<td class="depth3"></td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="mypage05.html" target="_blank">mypage05.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-04-13</td>
+			<td class="date"></td>
+		</tr>
+		<tr>
+			<td class="depth1">My Page</td>
+			<td class="depth2">비즈니스 정보관리</td>
+			<td class="depth3">비즈니스 회원전환</td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="mypage06.html" target="_blank">mypage06.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-04-15</td>
+			<td class="date">※비즈니스 회원전환(Popup) 포함</td>
+		</tr>
+		<tr>
+			<td class="depth1">My Page</td>
+			<td class="depth2">비즈니스 정보관리</td>
+			<td class="depth3"></td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="mypage07.html" target="_blank">mypage07.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-04-15</td>
+			<td class="date"></td>
+		</tr>
+		<tr>
+			<td class="depth1">등록하기</td>
+			<td class="depth2">01 분류선택</td>
+			<td class="depth3"></td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="register01.html" target="_blank">register01.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-04-21</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">등록하기</td>
+			<td class="depth2">02 분류선택</td>
+			<td class="depth3">자동차</td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="register02.html" target="_blank">register02.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-04-27</td>
+			<td class="date">
+                ※이전 등록내역 불러오기 포함<br>
+                ※딜러 정보 수정하기(pop) 포함<br>
+                ※차량 번호 검색(pop) 포함<br>
+                ※지도확인(pop) 포함<br>
+                ※시세검색(pop) 포함
+            </td>
+		</tr>
+        <tr>
+			<td class="depth1">등록하기</td>
+			<td class="depth2">02 분류선택</td>
+			<td class="depth3">중고거래</td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="register02_2.html" target="_blank">register02_2.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-04-27</td>
+			<td class="date">※판매자 정보 수정하기(pop) 포함</td>
+		</tr>
+        <tr>
+			<td class="depth1">등록하기</td>
+			<td class="depth2">03 결제선택</td>
+			<td class="depth3">비즈니스회원</td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="register03.html" target="_blank">register03.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-04-28</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">등록하기</td>
+			<td class="depth2">03 결제선택</td>
+			<td class="depth3">일반회원</td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="register03_2.html" target="_blank">register03_2.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-04-28</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">등록하기</td>
+			<td class="depth2">04 등록완료</td>
+			<td class="depth3"></td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="register04.html" target="_blank">register04.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-04-29</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">등록하기</td>
+			<td class="depth2">다량등록권 선택</td>
+			<td class="depth3"></td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="many01.html" target="_blank">many01.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-05-07</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">등록하기</td>
+			<td class="depth2">다량등록권 결제수단 선택</td>
+			<td class="depth3"></td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="many02.html" target="_blank">many02.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-05-07</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">등록하기</td>
+			<td class="depth2">다량등록권 결제완료</td>
+			<td class="depth3"></td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="many03.html" target="_blank">many03.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-05-07</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">검색결과</td>
+			<td class="depth2"></td>
+			<td class="depth3"></td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="search.html" target="_blank">search.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-05-08</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">검색결과가 없을 경우</td>
+			<td class="depth2"></td>
+			<td class="depth3"></td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="search_nodata.html" target="_blank">search_nodata.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-06-17</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">중고차 가이드</td>
+			<td class="depth2"></td>
+			<td class="depth3"></td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="usedcar.html" target="_blank">usedcar.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-05-13</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">중고차 가이드</td>
+			<td class="depth2">중고차 시세 조회</td>
+			<td class="depth3"></td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="usedcar01.html" target="_blank">usedcar01.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-05-14</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">중고차 가이드</td>
+			<td class="depth2">중고차 TIP</td>
+			<td class="depth3">리스트</td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="usedcar02_list.html" target="_blank">usedcar02_list.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-05-18</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">중고차 가이드</td>
+			<td class="depth2">중고차 TIP</td>
+			<td class="depth3">본문</td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="usedcar02_article.html" target="_blank">usedcar02_article.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-05-18</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">중고차 가이드</td>
+			<td class="depth2">중고차 상담</td>
+			<td class="depth3">리스트</td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="usedcar03_list.html" target="_blank">usedcar03_list.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-05-18</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">중고차 가이드</td>
+			<td class="depth2">중고차 상담</td>
+			<td class="depth3">본문</td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="usedcar03_article.html" target="_blank">usedcar03_article.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-05-18</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">중고차 가이드</td>
+			<td class="depth2">중고차 상담</td>
+			<td class="depth3">글쓰기</td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="usedcar03_form.html" target="_blank">usedcar03_form.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-05-18</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">파인드올 이용가이드</td>
+			<td class="depth2">등록하기</td>
+			<td class="depth3"></td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="guide01.html" target="_blank">guide01.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-06-10</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">파인드올 이용가이드</td>
+			<td class="depth2">상품찾기</td>
+			<td class="depth3"></td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="guide02.html" target="_blank">guide02.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-06-10</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">파인드올 이용가이드</td>
+			<td class="depth2">연락하기</td>
+			<td class="depth3"></td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="guide03.html" target="_blank">guide03.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-06-10</td>
+			<td class="date"></td>
+		</tr>
+        <tr>
+			<td class="depth1">My Page</td>
+			<td class="depth2">중고거래 관리</td>
+			<td class="depth3">데이터가 없을때</td>
+			<td class="type">html</td>
+			<td class="directory"></td>
+			<td class="filename"><a href="mypage01_nodata.html" target="_blank">mypage01_nodata.html</a></td>
+			<td class="done">O</td>
+			<td class="date">2015-06-29</td>
+			<td class="date"></td>
+		</tr>
+		</tbody>
+	</table>
+	</fieldset>
+</div>
+<!-- //sheet -->
+
+<!-- //html body -->
+</body>
+</html>

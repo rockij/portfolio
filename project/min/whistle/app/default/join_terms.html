@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link href="../resources/css/font.local.css" media="screen" rel="stylesheet"> <!-- 폐쇄망 -->
+<link href="../resources/css/font.cdn.css" media="screen" rel="stylesheet"> <!-- 인터넷망 -->
+<link href="../resources/css/common.min.css" media="screen" rel="stylesheet">
+<link href="../resources/css/content.min.css" media="screen" rel="stylesheet">
+<title>010휘슬</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header" class="fix top">
+        <h1 class="blind">가입약관동의</h1>
+        <button type="button" onclick="" class="btn_close"><i>닫기</i></button>
+    </header>
+    <!-- //header -->
+
+    <div id="content" class="member">
+        <fieldset class="section join_forms">
+            <legend>약관동의</legend>
+            <p class="mtxt" icon="car">010휘슬 이용을 위한<br>약관에 동의해주세요.</p>
+            <div id="termsCheck" class="terms_list">
+                <ul>
+                    <li class="all">
+                        <span class="checkbox i_all">
+                            <input type="checkbox" name="allCheck" id="allCheck" value="">
+                            <label for="allCheck">전체동의</label>
+                        </span>
+                    </li>
+                </ul>
+                <span class="checkbox i_sub">
+                    <input type="checkbox" name="serviceAll" id="serviceAll" value="" checked="">
+                    <label for="serviceAll">010휘슬 서비스 약관</label>
+                </span>
+                <ul class="clst">
+                    <li>
+                        <span class="checkbox i_chk">
+                            <input type="checkbox" name="service" id="service1" value="" checked>
+                            <label for="service1">이용약관(필수)</label>
+                        </span>
+                        <button type="button" class="doc"><s>이용약관 보기</s></button>
+                    </li>
+                    <li>
+                        <span class="checkbox i_chk">
+                            <input type="checkbox" name="service" id="service2" value="">
+                            <label for="service2">개인정보 수집 및 이용(필수)</label>
+                        </span>
+                        <button type="button" class="doc"><s>개인정보 수집 및 이용 보기</s></button>
+                    </li>
+                    <li>
+                        <span class="checkbox i_chk">
+                            <input type="checkbox" name="service" id="service3" value="">
+                            <label for="service3">개인정보 제3자 제공(필수)</label>
+                        </span>
+                        <button type="button" class="doc"><s>개인정보 제3자 제공 보기</s></button>
+                    </li>
+                    <li>
+                        <span class="checkbox i_chk">
+                            <input type="checkbox" name="service" id="service4" value="">
+                            <label for="service4">마케팅 활용동의(선택)</label>
+                        </span>
+                        <button type="button" class="doc"><s>마케팅 활용동의 보기</s></button>
+                    </li>
+                </ul>
+                <!-- //010휘슬 서비스 약관 -->
+                <span class="checkbox i_sub">
+                    <input type="checkbox" name="pay010All" id="pay010All" value="" checked="">
+                    <label for="pay010All">010Pay 약관</label>
+                </span>
+                <ul class="clst">
+                    <li>
+                        <span class="checkbox i_chk">
+                            <input type="checkbox" name="pay010" id="pay0101" value="" checked="">
+                            <label for="pay0101">서비스 이용약관(필수)</label>
+                        </span>
+                        <button type="button" class="doc"><s>서비스 이용약관 보기</s></button>
+                    </li>
+                    <li>
+                        <span class="checkbox i_chk">
+                            <input type="checkbox" name="pay010" id="pay0102" value="" checked="">
+                            <label for="pay0102">전자금융거래 이용약관(필수)</label>
+                        </span>
+                        <button type="button" class="doc"><s>전자금융거래 이용약관 보기</s></button>
+                    </li>
+                    <li>
+                        <span class="checkbox i_chk">
+                            <input type="checkbox" name="pay010" id="pay0103" value="">
+                            <label for="pay0103">오픈뱅킹 출금 및 조회 약관(필수)</label>
+                        </span>
+                        <button type="button" class="doc"><s>오픈뱅킹 출금 및 조회 보기</s></button>
+                    </li>
+                </ul>
+                <!-- //010Pay 약관 -->
+            </div>
+        </fieldset>
+    </div>
+    <!-- //content -->
+
+    <div class="btn_area_wide fix btm more goOut"><button type="button" class="skip" onclick="">확인</button></div>
+    <!-- //확인 -->
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../../../../../global/resources/js/global.js"></script>
+<script src="../resources/js/gsap.min.js"></script>
+<script src="../resources/js/design.js" defer></script>
+<script>
+$(function() {
+    chkinglst('termsCheck','slide'); //전체동의
+    scrollbtmOn(); //스크롤시 하단 버튼 활성화
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="TIOR, 모든 시승은 티오르에서">
+    <meta name="keywords" content="티오르, tior, 시승예약, 시승, 시승플랫폼">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="언택트! 시승예약은 간편하게! 실시간 시승예약 서비스">
+    <meta property="og:description" content="차량 구매 전 시승은 필수, 모든시승은 티오르에서">
+    <meta property="og:image" content="https://m.tior.co.kr/resources/images/tior_favicon.png">
+    <meta property="og:url" content="https://m.tior.co.kr/">
+    <link href="../../resources/css/common.min.css" media="screen" rel="stylesheet">
+    <link href="../../resources/css/drive.min.css" media="screen" rel="stylesheet">
+    <title>TIOR, 모든 시승은 티오르에서</title>
+</head>
+<body>
+
+<div id="wrap">
+    <div id="headerFix" class="headerTabs fix top">
+        <header id="header" class="">
+            <div class="headWrap">
+                <a href="#n" class="ico ico_back"><span class="hide">뒤로가기</span></a>
+                <h1>결제내역</h1>
+                <a href="#n" class="ico ico_home"><span class="hide">처음으로</span></a>
+            </div>
+        </header>
+        <!-- 탭 -->
+        <ul class="tabType">
+            <li><a href="#;" data-tab="payment" onclick="onChgTabHandler(this)" class="active">결제내역</a></li>
+            <li><a href="#;" data-tab="cancel" onclick="onChgTabHandler(this)" class="">취소내역</a></li>
+        </ul>
+        <!-- //탭 -->
+    </div>
+    <!-- //header -->
+
+    <div id="content">
+        <div class="filterReserve">
+            <!-- 결제내역 -->
+            <ul class="tabDesc payment active">
+                <!-- 내역없을때 -->
+                <!-- <li class="nodata">예약 내역이 없습니다.</li> -->
+                <!-- //내역없을때 -->
+                <li>
+                    <div class="reserve">
+                        <a href="#n">
+                            <div class="desc">
+                                <i class="state c4">결제완료</i>
+                                <!-- //추후반영내역 -->
+                                <strong class="name">아우디 A6 40 TDI</strong>
+                                <span class="time"><code>100,000</code>원</span>
+                                <p class="place">2020년 5월 09일 (토) 11:00</p>
+                            </div>
+                            <span class="thum"><img src="https://cdn.ad-zip.com/tior/dev/promotion/1000/audi_black.png" alt=""></span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="reserve">
+                        <a href="#n">
+                            <div class="desc">
+                                <i class="state c4">결제완료</i>
+                                <!-- //추후반영내역 -->
+                                <strong class="name">아우디 A6 40 TDI</strong>
+                                <span class="time"><code>100,000</code>원</span>
+                                <p class="place">2020년 5월 09일 (토) 11:00</p>
+                            </div>
+                            <span class="thum"><img src="https://cdn.ad-zip.com/tior/dev/promotion/1000/audi_white.png" alt=""></span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="reserve">
+                        <a href="#n">
+                            <div class="desc">
+                                <i class="state c4">결제완료</i>
+                                <!-- //추후반영내역 -->
+                                <strong class="name">아우디 A6 40 TDI</strong>
+                                <span class="time"><code>100,000</code>원</span>
+                                <p class="place">2020년 5월 09일 (토) 11:00</p>
+                            </div>
+                            <span class="thum"><img src="https://cdn.ad-zip.com/tior/dev/promotion/1000/audi_silver.png" alt=""></span>
+                        </a>
+                    </div>
+                </li>
+                
+            </ul>
+            <!-- //결제내역 -->
+            <!-- 취소내역 -->
+            <ul class="tabDesc cancel">
+                <!-- 내역없을때 -->
+                <!-- <li class="nodata">취소 내역이 없습니다.</li> -->
+                <!-- //내역없을때 -->
+                <li>
+                    <div class="reserve">
+                        <a href="#n">
+                            <div class="desc">
+                                <i class="state c8">취소처리중</i>
+                                <strong class="name">아우디 A6 40 TDI</strong>
+                                <span class="time"><code>100,000</code>원</span>
+                                <p class="place">2020년 5월 09일 (토) 11:00</p>
+                            </div>
+                            <span class="thum"><img src="https://cdn.ad-zip.com/tior/dev/promotion/1000/audi_blue.png" alt=""></span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="reserve">
+                        <a href="#n">
+                            <div class="desc">
+                                <i class="state c6">취소완료</i>
+                                <!-- //추후반영내역 -->
+                                <strong class="name">아우디 A6 40 TDI</strong>
+                                <span class="time"><code>100,000</code>원</span>
+                                <p class="place">2020년 5월 09일 (토) 11:00</p>
+                            </div>
+                            <span class="thum"><img src="https://cdn.ad-zip.com/tior/dev/promotion/1000/audi_gray.png" alt=""></span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <!-- //취소내역 -->
+        </div>
+    </div>
+    <!-- //content -->
+
+</div>
+
+<script src="../../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../../resources/js/design.js"></script>
+<script>
+$(function() {
+    
+});
+</script>
+
+</body>
+</html>

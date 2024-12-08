@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko" class="golf lgu">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="../../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/golf.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/site_lgu.css" media="screen" rel="stylesheet">
+<script src="../../resources/js/jquery-1.11.1.min.js"></script>
+<script src="../../resources/js/golf.js"></script>
+<title>LGU+골프보험</title>
+</head>
+<body>
+    <div class="" id="wrap">
+        <header id="head" class="fix sub">
+            <button type="button" onclick="" class="btn_prev"><i class="ico_com">뒤로가기</i></button>
+            <h1 class="hide">보험가입정보</h1>
+        </header>
+        <!-- //header -->
+        <div id="ct">
+            <div class="productWrap">
+                <span class="result explain">상해, 배상책임을 기본으로<br><strong>골프용품 손해, 홀인원 축하 비용</strong>까지<br>보장하는 종합상품입니다.</span>
+                <section class="productInfo">
+                    <h4>가입정보</h4>
+                    <div class="viewAll"><a href="#n">모든 보장 보러가기</a></div>
+                    <div class="tgWrap">
+                        <section class="tgSec">
+                            <button type="button" class="tgBtn" onclick="tgCheck(this)">
+                                <div class="desc">
+                                    <span class="name">상해사망 · 후유장애 (골프시설 내)</span>
+                                    <span class="price"><i class="num">5,000</i>만원 한도</span>
+                                </div>
+                            </button>
+                            <div class="tgDesc">
+                                <div class="tgList">
+                                    <pre>
+                                        골프시설 구내에서 골프 연습, 경기 또는 지도 (탈의, 휴식 포함) 중 급격하고도 우연한 외래의 사고로 생긴 상해사망 · 후유장애손해
+                                    </pre>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="tgSec">
+                            <button type="button" class="tgBtn" onclick="tgCheck(this)">
+                                <div class="desc">
+                                    <span class="name">일괄배상 (골프시설 내)</span>
+                                    <span class="price"><i class="num">500</i>만원 한도</span>
+                                </div>
+                            </button>
+                            <div class="tgDesc">
+                                <div class="tgList">
+                                    <pre>
+                                        골프시설 구내에서 골프연습, 경기 또는 지도 (탈의, 휴식포함) 중 제 3자에게 법률적인 배상책임을 부담함으로써 입은 손해
+                                    </pre>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="tgSec">
+                            <button type="button" class="tgBtn" onclick="tgCheck(this)">
+                                <div class="desc">
+                                    <span class="name">홀인원 비용</span>
+                                    <span class="price"><i class="num">50</i>만원 한도</span>
+                                </div>
+                            </button>
+                            <div class="tgDesc">
+                                <div class="tgList">
+                                    <pre>
+                                        골프경기 중 홀인원을 행한 경우에 아래에 열거하는 비용
+
+                                        1. 증정용 기념품 구입비용
+                                        2. 축하회 비용
+                                        3. 골프장에 대한 기념식수 비용
+                                        4. 동반캐디에 대한 축하금
+                                    </pre>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="tgSec note descOn">
+                            <button type="button" class="tgBtn">
+                                <div class="desc">
+                                    <span class="name">유의사항</span>
+                                </div>
+                            </button>
+                            <div class="tgDesc">
+                                <div class="tgList">
+                                    <ul class="list">
+                                        <li>개인에 따라 가입금액의 차이가 있습니다.</li>
+                                        <li>보험료는 가입시점에 매번 재산정 됩니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- //content -->
+        <div id="foot" class="fix">
+            <div class="footBtn">
+                <button type="button" onclick="popOn('need_first')">보험가입</button>
+            </div>
+        </div>
+        <!-- //footer button -->
+    </div>
+
+    <!-- 가입전 알림1 -->
+    <div id="need_first" class="ly_pop underPop">
+        <div class="bg"></div>
+        <div class="cont">
+            <article class="elm">
+                <section class="popHead">
+                    <strong>가입 전 필요한 질문에 답변해 주세요.</strong>
+                    <button type="button" onclick="popOff('need_first')" class="pop_cls"><i class="ico_com">닫기</i></button>
+                </section>
+                <section class="desc">
+                    <div class="checkWrap">
+                        <div class="checkTxt">
+                            <p>골프선수 또는 골프용품, 골프연습장 관련업체 종사하시나요?</p>
+                        </div>
+                        <div class="checkBtn">
+                            <ul class="checkList">
+                                <li onclick="popOff('need_first');popOn('need_second')"><span class="chk"><input type="checkbox" id="chkbox1" class="ipChk blind"/><label for="chkbox1"></label>예</span></li>
+                                <li onclick="popOff('need_first');popOn('need_second')"><span class="chk"><input type="checkbox" id="chkbox2" class="ipChk blind"/><label for="chkbox2"></label>아니오</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="prAlert">
+                    질문에 대하여 만일 사실대로 알리지 않았거나 사실과 다르게 알린 경우에는 보험 가입이 거절될 수 있으며, 특히 그 내용이 <strong>중요한 사항</strong>에 해당하는 경우에는 회사는 보험약관에 따라 이 보험을 일방적으로 해지할 수 있고, 이미 보험사고가 발생한 경우라도 보험금을 지급받지 못하거나 일부만 지급받게 될 수 있음을 유의해 주세요.
+                </section>
+            </article>
+        </div>
+    </div>
+    <!-- //가입전 알림1 -->
+
+    <!-- 가입전 알림2 -->
+    <div id="need_second" class="ly_pop underPop">
+        <div class="bg"></div>
+        <div class="cont">
+            <article class="elm">
+                <section class="popHead">
+                    <strong>가입 전 필요한 질문에 답변해 주세요.</strong>
+                    <button type="button" onclick="popOff('need_second');" class="pop_cls"><i class="ico_com">닫기</i></button>
+                </section>
+                <section class="desc">
+                    <div class="checkWrap">
+                        <div class="checkTxt">
+                            <p>현재 교통사고로 치료 중이거나 최근 5년 이내 디스크 등 척추 관련 치료를 받은 적이 있으세요?</p>
+                        </div>
+                        <div class="checkBtn">
+                            <ul class="checkList">
+                                <li onclick="popOff('need_second');"><span class="chk"><input type="checkbox" id="chkbox3" class="ipChk blind" /><label for="chkbox3"></label>예</span></li>
+                                <li onclick="popOff('need_second');"><span class="chk"><input type="checkbox" id="chkbox4" class="ipChk blind" /><label for="chkbox4"></label>아니오</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="prAlert">
+                    질문에 대하여 만일 사실대로 알리지 않았거나 사실과 다르게 알린 경우에는 보험 가입이 거절될 수 있으며, 특히 그 내용이 <strong>중요한 사항</strong>에 해당하는 경우에는
+                    회사는 보험약관에 따라 이 보험을 일방적으로 해지할 수 있고, 이미 보험사고가 발생한 경우라도 보험금을 지급받지 못하거나 일부만 지급받게 될 수 있음을 유의해 주세요.
+                </section>
+            </article>
+        </div>
+    </div>
+    <!-- //가입전 알림2 -->
+    <script>
+        $(document).ready(function() {
+            $('.result strong').addClass('line');
+        });
+    </script>
+</body>
+</html>

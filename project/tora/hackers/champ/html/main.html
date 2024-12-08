@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=1050">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/sub.css">
+	<link rel="shortcut icon" href="http://www.champstudy.com/favicon.ico">
+	<script src="../js/jquery-1.11.2.min.js"></script>
+	<script src="../js/jquery.flexslider.js"></script>
+	<script src="../js/hackers_ui.js"></script>
+	<title>해커스 교육그룹</title>
+</head>
+<body>
+	<div id="wrap">
+
+		<!-- family site -->
+		<div class="family_site_box">
+			<div class="family_site_open_btn">
+				<!-- 로그인전 -->
+				<a href="#none"><img src="../img/common/family/family_site_open.png" alt="" /></a>
+
+				<!-- 로그인후 -->
+				<!-- <a href="/html/myclass/index.html?iframe_su=1"><img src="../img/common/family/family_myclass.png" alt="" /></a> -->
+				<!-- //로그인후 -->
+			</div>
+
+			<div class="close_area">
+				<a href="#;"  class="family_site_close_btn">
+					<img src="../img/common/family/bg_family_site.png" alt="접기" />
+				</a>
+				
+
+				<!-- 로그인전 -->
+				<strong class="family_site_tit">Hackers Family site</strong>
+				<div class="login_line2">
+					<a href="/contents/event/?evtName=join_event"><img src="http://image.hackers.ac/images/common/bul150514.gif" alt="회원가입 배너" /></a><br />
+					<a href="https://<?=$_SERVER['HTTP_HOST']?>/login_page.html?s_url=<?=$s_url?>" class="login_txt">로그인</a> l
+					<a href="https://<?=$_SERVER['HTTP_HOST']?>/html/kita/member_agree.html">회원가입</a>
+				</div>
+				<!--로그인전 -->
+
+				<!-- 로그인후 
+				<div class="login_after_line">
+					<span class="login_name">해커스님</span>목표달성을 기원합니다!
+					<div class="select_box js-show-area on" id="ajaxMyClass">
+						<a href="http://<?=$_SERVER['HTTP_HOST']?>/html/myclass/index.html" class="select_btn js-show-btn">수강중인 강의</a>
+						<ul class="select_list js-show-box" id="left_myclass">
+							<li><a href="#">내강의실</a></li>
+							<li><a href="#">내강의실</a></li>
+							<li><a href="#">내강의실</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="myclass_desc">
+					<a href="http://<?=$_SERVER['HTTP_HOST']?>/html/myclass/index.html?iframe_su=1">마이클래스</a>
+				</div>
+				<div class="login_line">
+					<a href="<?=$__config['isHttp']?>://<?=$__config['site_name']?>.champstudy.com/html/kita/member_modiframe.html" class="login_txt">정보수정</a> l
+					<a href="/bbs/logout.php?gohome=home">로그아웃</a>
+				</div>
+				<!-- //로그인후  -->
+
+				<ul class="family_list">
+					<li class="on active" id="language">
+						<strong><a href="#none;" >어학</a></strong>
+						<ul class="family_site_sub">
+							<li>
+								<a href="http://www.hackers.ac/?_C_=18577" target="_blank">해커스어학원 </a>
+							</li>
+							<li class="active">
+								<a href="http://<?=$_SERVER['HTTP_HOST']?>">해커스인강</a>
+							</li>
+							<li>
+								<a href="http://www.HackersTalk.co.kr/?_C_=30833" target="_blank">기초영어 <img src="../img/common/family/gnb_new.png" alt="" /></a>
+							</li>
+							<li>
+								<a href="http://www.hackerschina.co.kr/?_C_=18579" target="_blank">중국어</a>
+							</li>
+							<li>
+								<a href="http://www.hackersuhak.com/?_C_=18580" target="_blank">유학원</a>
+							</li>
+						</ul>
+					</li>
+					<li id="job">
+						<strong><a href="#;">취업</a></strong>
+						<ul class="family_site_sub">
+							<li>
+								<a href="http://www.hackersjob.com/A_online/?_C_=28600" target="_blank">취업 인터넷강의 <img src="../img/common/family/gnb_new.png" alt="" /></a>
+							</li>
+							<li>
+								<a href="http://www.hackersjob.com/A_offline/?_C_=28601" target="_blank">취업 학원강의 <img src="../img/common/family/gnb_new.png" alt="" /></a>
+							</li>
+						</ul>
+					</li>
+					<li id="community">
+						<strong><a href="#;">커뮤니티</a></strong>
+						<ul class="family_site_sub">
+							<li>
+								<a href="http://www.hackers.co.kr/?_C_=18581" target="_blank">토익/스피킹 <span>커뮤니티</span></a>
+							</li>
+							<li>
+								<a href="http://www.hackers.co.kr/?c=s_teps&_C_=18582" target="_blank">텝스 <span>커뮤니티</span></a>
+							</li>
+							<li>
+								<a href="http://www.gohackers.com/?_C_=18583" target="_blank">토플/유학 <span>커뮤니티</span></a>
+							</li>
+						</ul>
+					</li>
+					<li id="pass">
+						<strong><a href="#;">공무원</a></strong>
+						<ul class="family_site_sub">
+							<li>
+								<a href="http://gosi.pass.com/?_C_=26526" target="_blank">공무원 인터넷강의</a>
+							</li>
+							<li>
+								<a href="http://gosi.pass.com/event/presentation/event_begin.html?_C_=26527" target="_blank">공무원 학원강의</a>
+							</li>
+							<li>
+								<a href="http://police.pass.com/?_C_=18592" target="_blank">경찰 공무원</a>
+							</li>
+						</ul>
+					</li>
+					<li id="finance">
+						<strong><a href="#;">자격증</a></strong>
+						<ul class="family_site_sub">
+							<li>
+								<a href="http://fn.pass.com/site/?st=family_benefit&_C_=25256" target="_blank">금융자격증</a>
+							</li>
+							<li>
+								<a href="http://fn.pass.com/site/event/mission_zero/event.php?_C_=26027" target="_blank">전산세무회계 <img src="../img/common/family/gnb_new.png" alt="" /></a>
+							</li>
+							<li>
+								<a href="http://fn.pass.com/site/event/2015/0429_2/event.php?_C_=20459" target="_blank">AFPK/CFP</a>
+							</li>
+							<li>
+								<a href="http://land.pass.com/?_C_=18596" target="_blank">공인중개사 </a>
+							</li>
+							<li>
+								<a href="http://house.pass.com/?_C_=18598" target="_blank">주택관리사</a>
+							</li>
+							<li>
+								<a href="http://www.hackersjob.com/event/2015/0623_1/event.html?connect=pc_mode&_C_=34168" target="_blank">한국사능력검정 <img src="../img/common/family/gnb_new.png" alt="" /></a>
+							</li>
+						</ul>
+					</li>
+					<li id="hackersut">
+						<strong><a href="#;">편입/평생교육</a></strong>
+						<ul class="family_site_sub">
+							<li>
+								<a href="http://jrjump.co.kr/?_C_=18599" target="_blank">편입학원</a>
+							</li>
+							<li>
+								<a href="http://jrjumpi.co.kr/?_C_=18600" target="_blank">편입인강</a>
+							</li>
+							<li>
+								<a href="http://www.edu2080.co.kr/content.php?co_id=event&pg_id=evt_brand&sp=1&_C_=27579" target="_blank">학점은행제</a>
+							</li>
+						</ul>
+					</li>
+					<li id="group">
+						<strong><a href="#;" >그룹소개/채용</a></strong>
+						<ul class="family_site_sub">
+							<li>
+								<a href="http://hackers.com/?_C_=18605" target="_blank">해커스닷컴</a>
+							</li>
+							<li>
+								<a href="http://recruit.hackers.com/main.php?_C_=18606" target="_blank">해커스채용</a>
+							</li>
+						</ul>
+					</li>
+					<li id="wish" class="noSub">
+						<strong><a href="/bbs/write.php?id=wanna" target="_blank"><span>해커스에 바란다</span></a></strong>
+					</li>
+				</ul>
+				<div class="facebook_btn">
+					<!-- 해커스 SNS 추가 -->
+					<p class="sns_tit">해커스 SNS</p>
+					<div class="sns_btn">
+						<a href="https://www.facebook.com/HackersEnglish" target="_blank" class="btn1">페이스북</a>
+						<a href="https://twitter.com/hackerseng" target="_blank" class="btn2">트위터</a>
+						<a href="https://www.youtube.com/user/HackersEnglish" target="_blank" class="btn3">유투브</a>
+					</div>
+					<!-- //해커스 SNS 추가 -->
+				</div>
+			</div>
+		</div>
+		<!-- //family site -->
+
+		<div class="top_bnr"><a href="#"><img src="../img/event/top_bnr.png" alt="20대가 선정한 TOP BRAND 1위 해커스! 여러분이 직접 증명해주셨습니다."></a></div>
+
+		<!-- header -->
+		<div id="header">
+			<div class="inner">
+				<h1><a href="#"><img src="../img/common/logo.gif" alt="해커스인강"></a></h1>
+				<ul class="family_link">
+					<li><a href="#" class="family_comm btn_family1"><span class="sr">해커스인강</span></a></li>
+					<li><a href="#" class="family_comm btn_family2"><span class="sr">해커스어학원</span></a></li>
+					<li><a href="#" class="family_comm btn_family3"><span class="sr">기초영어</span></a></li>
+				</ul>
+				<ul class="ignb">
+					<li class="point"><a href="#">로그인</a>|</li>
+					<li><a href="#">회원가입</a>|</li>
+					<li><a href="#">고객센터</a></li>
+				</ul>
+			</div>			
+			<!-- gnb -->
+			<div class="gnb">
+				<ul>
+					<li>
+						<a href="#" class="gnb_comm btn_gnb1"><span class="sr">전체카테고리</span></a>
+						<ul class="catmenu" style="display:block">
+							<li><a href="#;" class="bt1"><span>추천베스트</span></a></li>
+							<li style="margin-top:7px"><a href="#;" class="bt2"><span>토익</span></a></li>
+							<li style="margin-top:4px"><a href="#;" class="bt3"><span>토플</span></a></li>
+							<li><a href="#;" class="bt4"><span>텝스</span></a></li>
+							<li><a href="#;" class="bt5"><span>토스 / 오픽</span></a></li>
+							<li style="margin-top:6px"><a href="#;" class="bt6"><span>IELTS</span></a></li>
+							<li><a href="#;" class="bt7"><span>회화 / 문법</span></a></li>
+							<li><a href="#;" class="bt8"><span>취업 / 자격증</span></a></li>
+							<li><a href="#;" class="bt9"><span>제2외국어</span></a></li>
+							<li><a href="#;" class="bt10"><span>중국어</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="gnb_comm btn_gnb2"><span class="sr">빠른수강신청</span></a>
+						<!-- 빠른수강신청 -->
+						<div class="sub_spdcls">
+							<div class="menu">	
+								<ul>
+									<li><a id="btn_spdcls" href="#;" class="on">강의</a></li>
+									<li><a id="btn_bookmp3" href="#;">교재 / MP3</a></li>
+								</ul>
+								<div class="bt">
+									<a href="" class="btn_m btn_type2 p0"><span>초기화</span></a><a href="" class="btn_m btn_type2 p0"><span>고객센터</span></a>
+								</div>
+							</div>
+							<!-- 빠른수강신청1 -->
+							<div id="spdcls">
+								<div class="booklst">
+									<ul class="tit">
+										<li class="w1">과목</li>
+										<li class="w2">레벨</li>
+										<li class="w2">선생님</li>
+										<li class="last">강의</li>
+									</ul>
+									<!-- //left -->
+									<div class="w1 col list">
+										<ul>
+											<li><a href="">토플</a></li>
+											<li><a href="">토익</a></li>
+											<li><a href="">텝스</a></li>
+											<li><a href="" class="on">토스/오픽</a></li>
+											<li><a href="">IELTS</a></li>
+											<li><a href="">회화/문법</a></li>
+											<li><a href="">취업/자격증</a></li>
+										</ul>
+									</div>
+									<!-- //과목 -->
+									<div class="w2 col list">
+										<ul>
+											<li><a href="">전체</a></li>
+											<li><a href="" class="on">기초필수</a></li>
+											<li><a href="">입문(550+)</a></li>
+											<li><a href="">기본(650+)</a></li>
+											<li><a href="">중급(750+)</a></li>
+											<li><a href="">정규(850+)</a></li>
+										</ul>
+									</div>
+									<!-- //레벨 -->
+									<div class="w2 col list">
+										<ul>
+											<li><a href="">전체</a></li>
+											<li><a href="" class="on">Mario</a></li>
+											<li><a href="">모지연</a></li>
+											<li><a href="">전신홍</a></li>
+											<li><a href="">심동혁</a></li>
+											<li><a href="">김송희</a></li>
+											<li><a href="">Mario</a></li>
+											<li><a href="">모지연</a></li>
+											<li><a href="">전신홍</a></li>
+											<li><a href="">심동혁</a></li>
+											<li><a href="">김송희</a></li>
+											<li><a href="">전신홍</a></li>
+										</ul>
+									</div>
+									<!-- //레벨 -->
+									<div class="col last list3">
+										<table>
+											<tr class="first">
+											<td class="txt">
+												<a href="" class="sbj">Hackers TOEFL Reading Basic 전반부 (iBT)</a>
+												<p>수강기간: 50일(20강) | 수강료: 59,000원</p>
+											</td>
+											<td class="bt"><a href="">샘플강의</a><br><a href="" class="ty">상세보기</a></td>
+											</tr>
+											<tr>
+											<td class="txt">
+												<a href="" class="sbj">Hackers TOEFL Reading Basic 전반부 (iBT)</a>
+												<p>수강기간: 50일(20강) | 수강료: 59,000원</p>
+											</td>
+											<td class="bt"><a href="">샘플강의</a><br><a href="" class="ty">상세보기</a></td>
+											</tr>
+											<tr>
+											<td class="txt">
+												<a href="" class="sbj">Hackers TOEFL Reading Basic 전반부 (iBT)</a>
+												<p>수강기간: 50일(20강) | 수강료: 59,000원</p>
+											</td>
+											<td class="bt"><a href="">샘플강의</a><br><a href="" class="ty">상세보기</a></td>
+											</tr>
+											<tr>
+											<td class="txt">
+												<a href="" class="sbj">Hackers TOEFL Reading Basic 전반부 (iBT)</a>
+												<p>수강기간: 50일(20강) | 수강료: 59,000원</p>
+											</td>
+											<td class="bt"><a href="">샘플강의</a><br><a href="" class="ty">상세보기</a></td>
+											</tr>
+											<tr>
+											<td class="txt">
+												<a href="" class="sbj">Hackers TOEFL Reading Basic 전반부 (iBT)</a>
+												<p>수강기간: 50일(20강) | 수강료: 59,000원</p>
+											</td>
+											<td class="bt"><a href="">샘플강의</a><br><a href="" class="ty">상세보기</a></td>
+											</tr>
+											<tr>
+											<td class="txt">
+												<a href="" class="sbj">Hackers TOEFL Reading Basic 전반부 (iBT)</a>
+												<p>수강기간: 50일(20강) | 수강료: 59,000원</p>
+											</td>
+											<td class="bt"><a href="">샘플강의</a><br><a href="" class="ty">상세보기</a></td>
+											</tr>
+											<tr>
+											<td class="txt">
+												<a href="" class="sbj">Hackers TOEFL Reading Basic 전반부 (iBT)</a>
+												<p>수강기간: 50일(20강) | 수강료: 59,000원</p>
+											</td>
+											<td class="bt"><a href="">샘플강의</a><br><a href="" class="ty">상세보기</a></td>
+											</tr>
+										</table>
+									</div>
+									<!-- //책 -->
+								</div>
+							</div>
+							<!-- //빠른수강신청1 -->
+							<!-- 빠른수강신청2 -->
+							<div id="bookmp3" style="display: none">
+								<div class="booklst">
+									<ul class="tit">
+										<li class="w1">과목</li>
+										<li class="w2">레벨</li>
+										<li class="w2">선생님</li>
+										<li class="last">강의</li>
+									</ul>
+									<!-- //left -->
+									<!-- 빠른수강신청2 -->
+									<div class="w1 col list">
+										<ul>
+											<li><a href="">토플</a></li>
+											<li><a href="">토익</a></li>
+											<li><a href="">텝스</a></li>
+											<li><a href="" class="on">토스/오픽</a></li>
+											<li><a href="">IELTS</a></li>
+											<li><a href="">회화/문법</a></li>
+											<li><a href="">취업/자격증</a></li>
+										</ul>
+									</div>
+									<!-- //과목 -->
+									<div class="w2 col list">
+										<ul>
+											<li><a href="">전체</a></li>
+											<li><a href="" class="on">기초필수</a></li>
+											<li><a href="">입문(550+)</a></li>
+											<li><a href="">기본(650+)</a></li>
+											<li><a href="">중급(750+)</a></li>
+											<li><a href="">정규(850+)</a></li>
+										</ul>
+									</div>
+									<!-- //레벨 -->
+									<div class="col last list2">
+										<table>
+											<tr class="first">
+											<td class="img"><img src="../img/main/sub_spdcls_img.jpg" width="97" height="128" alt=""></td>
+											<td class="txt">
+												<a href="" class="sbj">해커스 토익 스타트 리스닝</a><br>
+												<span class="fc_g">- [유료] 문제풀이 MP3</span><br>- [무료] 단어암기 MP3 & 단어장<br>- [무료] 받아쓰기 & 쉐도잉 프로그램<br>- [무료] 온라인 토익 모의고사
+											</td>
+											<td class="bt"><a href="" class="ty">교재상세</a><br><a href="">mp3 구매</a><br><a href="">무료자료</a></td>
+											</tr>
+											<tr>
+											<td class="img"><img src="../img/main/sub_spdcls_img.jpg" width="97" height="128" alt=""></td>
+											<td class="txt">
+												<a href="" class="sbj">해커스 토익 스타트 리스닝</a><br>
+												<span class="fc_g">- [유료] 문제풀이 MP3</span><br>- [무료] 단어암기 MP3 & 단어장<br>- [무료] 받아쓰기 & 쉐도잉 프로그램<br>- [무료] 온라인 토익 모의고사
+											</td>
+											<td class="bt"><br><a href="">mp3 구매</a><br><a href="">무료자료</a></td>
+											</tr>
+											<tr>
+											<td class="img"><img src="../img/main/sub_spdcls_img.jpg" width="97" height="128" alt=""></td>
+											<td class="txt">
+												<a href="" class="sbj">해커스 토익 스타트 리스닝</a><br>
+												<span class="fc_g">- [유료] 문제풀이 MP3</span><br>- [무료] 단어암기 MP3 & 단어장<br>- [무료] 받아쓰기 & 쉐도잉 프로그램<br>- [무료] 온라인 토익 모의고사
+											</td>
+											<td class="bt"><a href="">교재상세</a></td>
+											</tr>
+										</table>
+									</div>
+									<!-- //책 -->
+								</div>
+							</div>
+							<!-- //빠른수강신청2 -->
+						</div>
+						<!-- //빠른수강신청 -->
+					</li>
+					<li>
+						<a href="#" class="gnb_comm btn_gnb3"><span class="sr">수강신청</span></a>
+						<!-- 수강신청 -->
+						<div class="sub_clsask">
+							<div class="sub_menu sub_col">
+								<ul>
+									<li><a href="">토익</a></li>
+									<li><a href="">토플</a></li>
+									<li><a href="">텝스</a></li>
+									<li><a href="">토스/오픽</a></li>
+									<li><a href="">IELTS</a></li>
+									<li><a href="">회화/문법</a></li>
+									<li><a href="">자격증</a></li>
+									<li><a href="">제2외국어</a></li>
+									<li><a href="">중국어</a></li>
+									<li><a href="">취업</a></li>
+									<li><a href="">편입</a></li>
+								</ul>
+							</div>
+							<!-- //menu -->
+							<div class="list sub_col">
+								<ul>
+									<li><span class="icon">전체</span><a href="">토익 동영상강의</a></li>
+									<li><span class="icon">공통</span><a href="">해커스 토익 보카</a></li>
+									<li><span class="icon">공통</span><a href="">해커스 토익 보카</a></li>
+									<li><span class="icon">실전</span><a href="">해커스 토익 보카</a></li>
+									<li><span class="icon">정류</span><a href="">550+ 해커스 토익 스타트550+ 해커스 토익 스타트</a></li>
+									<li><span class="icon">전체</span><a href="">토익 동영상강의</a></li>
+									<li><span class="icon">공통</span><a href="">해커스 토익 보카</a></li>
+									<li><span class="icon">공통</span><a href="">해커스 토익 보카</a></li>
+									<li><span class="icon">실전</span><a href="">해커스 토익 보카</a></li>
+								</ul>
+							</div>
+							<!-- //list -->
+							<div class="bn">
+								<a href="#;"><img src="../img/main/sub_bn_rt.gif" width="150" height="358" alt=""></a>
+							</div>
+							<!-- //bn -->
+						</div>
+						<!-- //수강신청 -->
+					</li>
+					<li>
+						<a href="#" class="gnb_comm btn_gnb4"><span class="sr">스타강사</span></a>
+						<!-- 스타강사 -->
+						<div class="sub_starth">
+							<div class="sub_menu sub_col">
+								<ul>
+									<li><a href="">토익</a></li>
+									<li><a href="">토플</a></li>
+									<li><a href="">텝스</a></li>
+									<li><a href="">토스오픽</a></li>
+									<li><a href="">IELTS</a></li>
+									<li><a href="">회화/문법</a></li>
+								</ul>
+							</div>
+							<!-- //menu -->
+							<div class="list sub_col">
+								<div class="box">
+									<span class="icon">보카</span>
+									<ul>
+										<li><a href="">전산홍</a></li>
+									</ul>
+								</div>
+								<!-- // -->
+								<div class="box">
+									<span class="icon">RC</span>
+									<ul>
+										<li><a href="">Kayley설</a></li>
+										<li><a href="">전민정</a></li>
+										<li><a href="">이은빈</a></li>
+										<li><a href="">전미정</a></li>
+										<li><a href="">전산홍</a></li>
+										<li><a href="">Kayley설</a></li>
+										<li><a href="">이은빈</a></li>
+										<li><a href="">전미정</a></li>
+										<li><a href="">이은빈</a></li>
+										<li><a href="">전미정</a></li>
+										<li><a href="">전산홍</a></li>
+										<li><a href="">Kayley설</a></li>
+										<li><a href="">이은빈</a></li>
+										<li><a href="">전미정</a></li>
+									</ul>
+								</div>
+								<!-- // -->
+								<div class="box">
+									<span class="icon">LC</span>
+									<ul>
+										<li><a href="">Kayley설</a></li>
+										<li><a href="">전민정</a></li>
+										<li><a href="">이은빈</a></li>
+										<li><a href="">전미정</a></li>
+										<li><a href="">전산홍</a></li>
+										<li><a href="">Kayley설</a></li>
+										<li><a href="">이은빈</a></li>
+										<li><a href="">전미정</a></li>
+										<li><a href="">이은빈</a></li>
+										<li><a href="">전미정</a></li>
+										<li><a href="">전산홍</a></li>
+										<li><a href="">Kayley설</a></li>
+										<li><a href="">이은빈</a></li>
+										<li><a href="">전미정</a></li>
+									</ul>
+								</div>
+								<!-- // -->
+							</div>
+							<!-- //list -->
+						</div>
+						<!-- //스타강사 -->
+					</li>
+					<li>
+						<a href="#" class="gnb_comm btn_gnb5"><span class="sr">MP3/자료</span></a>
+						<!-- MP3/자료 -->
+						<div class="sub_mp3">
+							<div class="sub_menu sub_col">
+								<ul>
+									<li><a href="">토익</a></li>
+									<li><a href="">토플</a></li>
+									<li><a href="">텝스</a></li>
+									<li><a href="">토스/오픽</a></li>
+									<li><a href="">회화/문법</a></li>
+								</ul>
+							</div>
+							<!-- //menu -->
+							<div class="list sub_col">
+								<ul>
+									<li><a href="">문제풀이 MP3</a></li>
+									<li><a href="">무료 MP3</a></li>
+									<li><a href="">아이디어 & 표현 자료집</a></li>
+									<li><a href="">실전 모의고사 프로그램</a></li>
+									<li><a href="">말하기 연습 프로그램</a></li>
+									<li><a href="">문제풀이 MP3</a></li>
+									<li><a href="">무료 MP3</a></li>
+									<li><a href="">아이디어 & 표현 자료집</a></li>
+								</ul>
+								<div class="bn">
+									<a href=""><img src="../img/main/sub_bn_temp.gif" width="284" height="180" alt=""></a>
+								</div>
+							</div>
+							<!-- //list -->
+						</div>
+						<!-- //MP3/자료 -->
+					</li>
+					<li>
+						<a href="#" class="gnb_comm btn_gnb6"><span class="sr">무료강의</span><span class="ico_comm bul_won">11</span></a>
+						<!-- 무료강의 -->
+						<div class="sub_free">
+							<div class="sub_menu sub_col">
+								<ul>
+									<li><a href="">토익</a></li>
+									<li><a href="">토플</a></li>
+									<li><a href="">텝스</a></li>
+									<li><a href="">토스/오픽</a></li>
+									<li><a href="">IELTS</a></li>
+									<li><a href="">회화/문법</a></li>
+								</ul>
+							</div>
+							<!-- //menu -->
+							<div class="list sub_col">
+								<ul>
+									<li><a href="">텝스 무료강의 전</a></li>
+								</ul>
+								<div class="bn">
+									<a href=""><img src="../img/main/sub_bn_temp2.gif" width="194" height="180" alt=""></a>
+								</div>
+							</div>
+							<!-- //list -->
+						</div>
+						<!-- //무료강의 -->
+					</li>
+					<li><a href="#" class="gnb_comm btn_gnb7"><span class="sr">교재정보</span><span class="ico_comm bul_won">3</span></a></li>
+					<li><a href="#" class="gnb_comm btn_gnb8"><span class="sr">커뮤니티</span></a></li>
+					<li><a href="#" class="gnb_comm btn_gnb9"><span class="sr">마이클래스</span></a></li>
+				</ul>
+			</div>
+			<!-- //gnb -->
+		</div>
+		<!-- //header -->
+
+		<!-- container -->
+		<div id="container">
+			<div class="main_content">
+				
+				<!-- quick menu -->
+				<div class="main_quick">
+					<h4><img src="../img/main/quickmenu_tit.gif" alt="quick menu"></h4>
+					<ul class="menu">
+						<li><a href="#;"><img src="../img/main/quickmenu_btn1.gif" alt="고객센터"></a></li>
+						<li><a href="#;"><img src="../img/main/quickmenu_btn2.gif" alt="신규회원혜택"></a></li>
+						<li><a href="#;"><img src="../img/main/quickmenu_btn3.gif" alt="무료 학습자료"></a></li>
+						<li><a href="#;"><img src="../img/main/quickmenu_btn4.gif" alt="제휴 할인업체"></a></li>
+						<li><a href="#;"><img src="../img/main/quickmenu_btn5.gif" alt="쿠폰/수강권 등록"></a></li>
+						<li><a href="#;"><img src="../img/main/quickmenu_btn6.gif" alt="토익 배치고사"></a></li>
+					</ul>
+					<ul class="topdown">
+						<li><a href="#;"><img src="../img/main/quickmenu_top.gif" alt="TOP"></a></li>
+						<li><a href="#;"><img src="../img/main/quickmenu_down.gif" alt="DOWN"></a></li>
+					</ul>
+				</div>
+				<!-- //quick menu -->
+				
+				<!-- 상단섹션 -->
+				<div class="main_top">
+					<div class="inner2">						
+						<div class="mainbn">
+							<div id="mainbnslide">
+								<ul class="slides">
+									<li><a href="#;"><img src="../img/main/top_mainbn_img01.jpg" width="620" height="400" alt=""></a></li>
+									<li><a href="#;"><img src="../img/main/top_mainbn_img01.jpg" width="620" height="400" alt=""></a></li>
+									<li><a href="#;"><img src="../img/main/top_mainbn_img01.jpg" width="620" height="400" alt=""></a></li>
+									<li><a href="#;"><img src="../img/main/top_mainbn_img01.jpg" width="620" height="400" alt=""></a></li>
+								</ul>
+							</div>
+							<!-- <div class="clsask">
+								<span class="bg"></span>
+								<p><img src="../img/main/top_clsask_txt.png" alt="지금 수강신청 시, 토스+오픽 프리패스까지 0원!"></p>
+								<a href="#;" class="btn_class"><img src="../img/main/top_clsask_btn.png" alt="수강신청하기"></a>
+							</div> -->
+						</div>
+						<script>
+							$(document).each(function(){
+								$("#mainbnslide").flexslider({
+									animation: "slide",
+									directionNav: false,
+									slideshow: true,
+									animationLoop: true
+								});
+							});
+						</script>
+						<!-- bn -->
+						<div class="sidebn">
+							<div id="sidebnslide">
+								<ul class="slides">
+									<li><a href="#;"><img src="../img/main/top_sidebn_img01.jpg" width="268" height="400" alt=""></a></li>
+									<li><a href="#;"><img src="../img/main/top_sidebn_img01.jpg" width="268" height="400" alt=""></a></li>
+									<li><a href="#;"><img src="../img/main/top_sidebn_img01.jpg" width="268" height="400" alt=""></a></li>
+									<li><a href="#;"><img src="../img/main/top_sidebn_img01.jpg" width="268" height="400" alt=""></a></li>
+								</ul>
+							</div>
+							<!-- <div class="books">
+								<span class="bg"></span>
+								<span class="f_l"><img src="../img/main/top_books_txt2.png" alt="매일 밤 9시"></span>
+								<span class="f_r"><img src="../img/main/top_books_txt.png" alt="선착순 500명"></span>
+							</div> -->
+						</div>
+						<script>
+							$(document).each(function(){
+								$("#sidebnslide").flexslider({
+									animation: "slide",
+									directionNav: false,
+									slideshow: false,
+									animationLoop: false
+								});
+							});
+						</script>
+						<!-- //bn -->
+						<ul class="quick">
+							<li><a href="#;"><img src="../img/main/top_quick_img1.gif" alt="중간등록 시 수강료할인"></a></li>
+							<li><a href="#;"><img src="../img/main/top_quick_img2.gif" alt="실력 무료테스트 배치고사"></a></li>
+							<li><a href="#;"><img src="../img/main/top_quick_img3.gif" alt="약점진단 테스트"></a></li>
+							<li><a href="#;"><img src="../img/main/top_quick_img4.gif" alt="고득점 필수코스 빡센 스터디"></a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- //상단섹션 -->
+				
+				<!-- 강의안내 -->
+				<div class="main_clsdsk">
+					<h2>1위 해커스 인강<strong>IELTS</strong></h2>					
+					<div class="box">
+						<div id="eplg" class="eplg">
+							<span class="ico_comm2 bul"></span>
+							<ul class="slides">
+								<li><span class="sbj"><a href="#;">[850점+목표] 정리가 체계적으로 잘 되는 게 좋았어요!</a><span class="user">수강생 권정*님</span></span></li>
+								<li><span class="sbj"><a href="#;">[550점+목표] 정리가 체계적으로 잘 되는 게 좋다이다이!</a><span class="user">수강생 홍길*님</span></span></li>
+							</ul>	
+						</div>						
+						<script>
+							$(document).each(function(){
+								$("#eplg").flexslider({
+									animation: "slide",
+									controlNav: false,
+									direction: "vertical",
+									slideshow: true
+								});
+							});
+						</script>
+						<ul class="menu imgover">
+							<li><a href="#;"><img src="../img/main/clsdsk_btn1.gif" alt="수강신청"><img src="../img/main/clsdsk_btn1_on.gif" alt="수강신청" class="over"><span class="ico_comm2"></span></a></li>
+							<li><a href="#;"><img src="../img/main/clsdsk_btn2.gif" alt="스타강사"><img src="../img/main/clsdsk_btn2_on.gif" alt="스타강사" class="over"><span class="ico_comm2"></span></a></li>
+							<li><a href="#;"><img src="../img/main/clsdsk_btn3.gif" alt="수강후기"><img src="../img/main/clsdsk_btn3_on.gif" alt="수강후기" class="over"><span class="ico_comm2"></span></a></li>
+							<li><a href="#;"><img src="../img/main/clsdsk_btn4.gif" alt="추천강의"><img src="../img/main/clsdsk_btn4_on.gif" alt="추천강의" class="over"><span class="ico_comm2"></span></a></li>
+							<li><a href="#;"><img src="../img/main/clsdsk_btn5.gif" alt="추천교재"><img src="../img/main/clsdsk_btn5_on.gif" alt="추천교재" class="over"><span class="ico_comm2"></span></a></li>
+							<li class="last"><a href="#;"><img src="../img/main/clsdsk_btn6.gif" alt="이벤트"><img src="../img/main/clsdsk_btn6_on.gif" alt="이벤트" class="over"><span class="ico_comm2"></span></a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- //강의안내 -->
+				
+				<!-- 스타강사 라인업 -->
+				<div class="main_starth section">
+					<div class="inner2">
+						<span class="arr"></span>
+						<div class="total">							
+							<h2><img src="../img/main/starth_tit.gif" width="507" height="20" alt="N0.1 스타강사 라인업(1등이 아닌 강의로는 절대 원하는 점수를 달성할 수 없습니다.)"></h2>
+							<div id="starthslide" class="starth_slide">
+								<ul class="slides">
+									<li><img src="../img/main/starth_img01.jpg" width="1048" height="250" alt=""></li>
+									<li><img src="../img/main/starth_img01.jpg" width="1048" height="250" alt=""></li>
+								</ul>
+							</div>
+							<div class="starth_nav">
+								<a href="#;" class="slides_prev">Prev</a>
+								<a href="#;" class="slides_next">Next</a>
+							</div>
+						</div>
+						<div class="detail">
+							<div class="box ml0">
+								<div id="starth21slide" class="starth2_slide">
+									<ul class="slides">
+										<li><a href="#;"><img src="../img/main/starth_img02.jpg" width="242" height="283" alt=""></a></li>
+										<li><a href="#;"><img src="../img/main/starth_img02.jpg" width="242" height="283" alt=""></a></li>
+									</ul>
+								</div>
+								<div id="starth21_nav" class="starth2_nav">
+									<a href="#;" class="slides_prev">Prev</a>
+									<a href="#;" class="slides_next">Next</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="starth22slide" class="starth2_slide">
+									<ul class="slides">
+										<li><a href="#;"><img src="../img/main/starth_img03.jpg" width="242" height="283" alt=""></a></li>
+										<li><a href="#;"><img src="../img/main/starth_img03.jpg" width="242" height="283" alt=""></a></li>
+									</ul>
+								</div>
+								<div id="starth22_nav" class="starth2_nav">
+									<a href="#;" class="slides_prev">Prev</a>
+									<a href="#;" class="slides_next">Next</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="starth23slide" class="starth2_slide">
+									<ul class="slides">
+										<li><a href="#;"><img src="../img/main/starth_img04.jpg" width="242" height="283" alt=""></a></li>
+										<li><a href="#;"><img src="../img/main/starth_img04.jpg" width="242" height="283" alt=""></a></li>
+									</ul>
+								</div>
+								<div id="starth23_nav" class="starth2_nav">
+									<a href="#;" class="slides_prev">Prev</a>
+									<a href="#;" class="slides_next">Next</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="starth24slide" class="starth2_slide">
+									<ul class="slides">
+										<li><a href="#;"><img src="../img/main/starth_img05.jpg" width="242" height="283" alt=""></a></li>
+										<li><a href="#;"><img src="../img/main/starth_img05.jpg" width="242" height="283" alt=""></a></li>
+									</ul>
+								</div>
+								<div id="starth25_nav" class="starth2_nav">
+									<a href="#;" class="slides_prev">Prev</a>
+									<a href="#;" class="slides_next">Next</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<script>
+					$(document).each(function(){
+						$("#starthslide").flexslider({
+							animation: "slide",
+							controlNav: false,
+							slideshow: false,
+							animationLoop: false,
+							customDirectionNav: $(".starth_nav a")
+						});
+						$("#starth21slide").flexslider({
+							animation: "slide",
+							controlNav: false,
+							slideshow: false,
+							animationLoop: false,
+							customDirectionNav: $("#starth21_nav a")
+						});
+						$("#starth22slide").flexslider({
+							animation: "slide",
+							controlNav: false,
+							slideshow: false,
+							animationLoop: false,
+							customDirectionNav: $("#starth22_nav a")
+						});
+						$("#starth23slide").flexslider({
+							animation: "slide",
+							controlNav: false,
+							slideshow: false,
+							animationLoop: false,
+							customDirectionNav: $("#starth23_nav a")
+						});
+						$("#starth24slide").flexslider({
+							animation: "slide",
+							controlNav: false,
+							slideshow: false,
+							animationLoop: false,
+							customDirectionNav: $("#starth25_nav a")
+						});
+					});
+				</script>
+				<!-- //스타강사 라인업 -->
+
+				<!-- 수강생 BEST 추천강의 -->
+				<div class="main_stubest section">
+					<div class="inner2">
+						<h2><img src="../img/main/stubest_tit.gif" alt="수강생 BEST 추천강의(토익 점수잡는 BEST 추천강의!)"></h2>
+						<div id="stubestslide" class="stubest_slide">
+							<ul class="slides">
+								<li>
+									<ul class="list">
+										<li>
+											<dl>
+												<dt>
+													<a href="#;">
+														<img src="../img/main/stubest_thum.jpg" width="315" height="166" alt="">
+														<span class="shw"></span>
+														<span class="preview_bg"></span>
+														<span class="ico_comm2 ico_play"></span>
+														<span class="preview_txt">토익 리딩 기본부터 실전까지 한 번에 대비!</span>
+													</a>
+												</dt>
+												<dd>
+													<a href="#;" class="sbj"><b class="tit">입문</b>해커스 토익 스타트 Listening 해커스 토익 스타트 Listening</a>
+													<p>선생님 : 한나 ｜ 수강기간 : 40일(21강) ｜ 강의수 : 24강</p>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl>
+												<dt>
+													<a href="#;">
+														<img src="../img/main/stubest_thum.jpg" width="315" height="166" alt="">
+														<span class="shw"></span>
+														<span class="preview_bg"></span>
+														<span class="ico_comm2 ico_play"></span>
+														<span class="preview_txt">토익 리딩 기본부터 실전까지 한 번에 대비!</span>
+													</a>
+												</dt>
+												<dd>
+													<a href="#;" class="sbj"><b class="tit">입문</b>해커스 토익 스타트 Listening 해커스 토익 스타트 Listening</a>
+													<p>선생님 : 한나 ｜ 수강기간 : 40일(21강) ｜ 강의수 : 24강</p>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl>
+												<dt>
+													<a href="#;">
+														<img src="../img/main/stubest_thum.jpg" width="315" height="166" alt="">
+														<span class="shw"></span>
+														<span class="preview_bg"></span>
+														<span class="ico_comm2 ico_play"></span>
+														<span class="preview_txt">토익 리딩 기본부터 실전까지 한 번에 대비!</span>
+													</a>
+												</dt>
+												<dd>
+													<a href="#;" class="sbj"><b class="tit">입문</b>해커스 토익 스타트 Listening 해커스 토익 스타트 Listening</a>
+													<p>선생님 : 한나 ｜ 수강기간 : 40일(21강) ｜ 강의수 : 24강</p>
+												</dd>
+											</dl>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="list">
+										<li>
+											<dl>
+												<dt>
+													<a href="#;">
+														<img src="../img/main/stubest_thum.jpg" width="315" height="166" alt="">
+														<span class="shw"></span>
+														<span class="preview_bg"></span>
+														<span class="ico_comm2 ico_play"></span>
+														<span class="preview_txt">토익 리딩 기본부터 실전까지 한 번에 대비!</span>
+													</a>
+												</dt>
+												<dd>
+													<a href="#;" class="sbj"><b class="tit">입문</b>해커스 토익 스타트 Listening 해커스 토익 스타트 Listening</a>
+													<p>선생님 : 한나 ｜ 수강기간 : 40일(21강) ｜ 강의수 : 24강</p>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl>
+												<dt>
+													<a href="#;">
+														<img src="../img/main/stubest_thum.jpg" width="315" height="166" alt="">
+														<span class="shw"></span>
+														<span class="preview_bg"></span>
+														<span class="ico_comm2 ico_play"></span>
+														<span class="preview_txt">토익 리딩 기본부터 실전까지 한 번에 대비!</span>
+													</a>
+												</dt>
+												<dd>
+													<a href="#;" class="sbj"><b class="tit">입문</b>해커스 토익 스타트 Listening 해커스 토익 스타트 Listening</a>
+													<p>선생님 : 한나 ｜ 수강기간 : 40일(21강) ｜ 강의수 : 24강</p>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl>
+												<dt>
+													<a href="#;">
+														<img src="../img/main/stubest_thum.jpg" width="315" height="166" alt="">
+														<span class="shw"></span>
+														<span class="preview_bg"></span>
+														<span class="ico_comm2 ico_play"></span>
+														<span class="preview_txt">토익 리딩 기본부터 실전까지 한 번에 대비!</span>
+													</a>
+												</dt>
+												<dd>
+													<a href="#;" class="sbj"><b class="tit">입문</b>해커스 토익 스타트 Listening 해커스 토익 스타트 Listening</a>
+													<p>선생님 : 한나 ｜ 수강기간 : 40일(21강) ｜ 강의수 : 24강</p>
+												</dd>
+											</dl>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="list">
+										<li>
+											<dl>
+												<dt>
+													<a href="#;">
+														<img src="../img/main/stubest_thum.jpg" width="315" height="166" alt="">
+														<span class="shw"></span>
+														<span class="preview_bg"></span>
+														<span class="ico_comm2 ico_play"></span>
+														<span class="preview_txt">토익 리딩 기본부터 실전까지 한 번에 대비!</span>
+													</a>
+												</dt>
+												<dd>
+													<a href="#;" class="sbj"><b class="tit">입문</b>해커스 토익 스타트 Listening 해커스 토익 스타트 Listening</a>
+													<p>선생님 : 한나 ｜ 수강기간 : 40일(21강) ｜ 강의수 : 24강</p>
+												</dd>
+											</dl>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>					
+					</div>
+				</div>
+				<script>
+					$(document).each(function(){
+						$("#stubestslide").flexslider({
+							animation: "slide",
+							directionNav: false,
+							slideshow: false,
+							animationLoop: false
+						});
+					});
+				</script>
+				<!-- //수강생 BEST 추천강의 -->
+				
+				<!-- 수강후기&신규강의 -->
+				<div class="main_outskin_set">
+					<div class="inner2">
+						<div class="realepil">
+							<h2><img src="../img/main/realepil_tit.gif" alt="수강생들의 실시간 수강후기(리얼 성공 스토리를 공개합니다.)"></h2>
+							<a href="#;" class="btn_comm btn_more"><span class="blind">수강생들의 실시간 수강후기 더보기</span></a>
+							<div class="box">
+								<div class="col first">
+									<p><span class="tip">TOEIC</span>토익 리스닝[최신개정판] <span class="fc_00">권정미</span>님</p>
+									<img src="../img/main/realepil_tmp.jpg" alt="">
+								</div>
+								<div class="col">
+									<p><span class="tip">회화/문법</span>토익 리스닝[최신개정판] <span class="fc_00">권정미</span>님</p>
+									<img src="../img/main/newcls_tmp.jpg" alt="">
+								</div>
+							</div>
+						</div>
+						<!-- //수강생들의 실시간 수강후기 -->
+						<div class="newcls">
+							<h2><img src="../img/main/newcls_tit.gif"  alt="해커스 1월 신규강의"></h2>
+							<a href="#;" class="btn_comm btn_more"><span class="blind">해커스 1월 신규강의 더보기</span></a>
+							<ul>
+								<li><a href="" class="sbj">[850점+목표] 해커스 토익 리딩 문법[850점+목표] 해커스 토익 리딩 문법</a><span class="ico_comm2 ico_new"></span><span class="id">sdjkadsa</span></li>
+								<li><a href="" class="sbj">[850점+목표] 해커스 토익 리딩 문법[850점+목표] 해커스 토익 리딩 문법</a><span class="ico_comm2 ico_new"></span><span class="id">sdjkadsa</span></li>
+								<li><a href="" class="sbj">[850점+목표] 해커스 토익 리딩 문법[850점+목표] 해커스 토익 리딩 문법</a><span class="ico_comm2 ico_new"></span><span class="id">sdjkadsa</span></li>
+								<li><a href="" class="sbj">[850점+목표] 해커스 토익 리딩 문법[850점+목표] 해커스 토익 리딩 문법</a><span class="ico_comm2 ico_new"></span><span class="id">sdjkadsa</span></li>
+								<li><a href="" class="sbj">[850점+목표] 해커스 토익 리딩 문법[850점+목표] 해커스 토익 리딩 문법</a><span class="ico_comm2 ico_new"></span><span class="id">sdjkadsa</span></li>
+								<li><a href="" class="sbj">[850점+목표] 해커스 토익 리딩 문법[850점+목표] 해커스 토익 리딩 문법</a><span class="ico_comm2 ico_new"></span><span class="id">sdjkadsa</span></li>
+							</ul>
+						</div>
+						<!-- //해커스 1월 신규강의 -->
+					</div>
+				</div>
+				<!-- //수강후기&신규강의 -->
+				
+				<!-- 배너 -->
+				<div class="main_ad">
+					<div id="adslide" class="slide">
+						<ul class="slides">
+							<li><img src="../img/main/adslide_img01.jpg" width="1050" height="202" alt=""><span class="bg" style="background:#002450"></span></li>
+							<li><img src="../img/main/adslide_img01.jpg" width="1050" height="202" alt=""><span class="bg" style="background:#002450"></span></li>
+							<li><img src="../img/main/adslide_img01.jpg" width="1050" height="202" alt=""><span class="bg" style="background:#002450"></span></li>
+						</ul>
+					</div>
+					<div class="ad_nav">
+						<a href="#" class="slides_prev">Prev</a>
+						<div class="ad_ctrl"></div>
+						<a href="#" class="slides_next">Next</a>
+					</div>
+				</div>
+				<script>
+					$(document).each(function(){
+						$("#adslide").flexslider({
+							animation: "slide",
+							direction: "vertical",
+							slideshow: false,
+							animationLoop: false,
+							controlsContainer: $(".ad_ctrl"),
+							customDirectionNav: $(".ad_nav a")
+						});
+					});
+				</script>
+				<!-- //배너 -->
+				
+				<!-- BEST추천교재 -->
+				<div class="main_bstbook">
+					<div class="inner2">
+						<h2><img src="../img/main/bestbook_tit.gif" alt="BEST 추천교재(부동의 토익 베스트셀러 1위 해커스 교재!)"></h2>
+						<a href="#;" class="ico_comm2 btn_more"><span class="blind">BEST 추천교재</span></a>
+						<div class="col col1">
+							<h3>해커스<br>토익 보카</h3>
+							<span class="img">
+								<img src="../img/main/bestbook_img01.png" width="129" height="176" alt="">
+								<img src="../img/main/ico_best1.png" alt="BEST1위" class="ico_best">
+							</span>
+							<p class="txt">토익 최신 기출 어휘 30일 정복!</p>
+							<a href="#;"><img src="../img/common/btn_view.gif" alt="자세히보기"></a>
+						</div>
+						<div class="col col2">
+							<h3>해커스 토익 리딩<br>최신개정판</h3>
+							<span class="img">
+								<img src="../img/main/bestbook_img02.png" width="129" height="176" alt="">
+								<img src="../img/main/ico_best1.png" alt="BEST1위" class="ico_best">
+							</span>
+							<p class="txt">점점 어려워지는 난이도 완벽반영</p>
+							<a href="#;"><img src="../img/common/btn_view.gif" alt="자세히보기"></a>
+						</div>
+						<div class="col col3">
+							<h3>해커스 토익 실전<br>1000제 리딩2</h3>
+							<span class="img">
+								<img src="../img/main/bestbook_img03.png" width="129" height="176" alt="">
+								<img src="../img/main/ico_best1.png" alt="BEST1위" class="ico_best">
+							</span>
+							<p class="txt">토익 RC 기본부터 실전까지!</p>
+							<a href="#;"><img src="../img/common/btn_view.gif" alt="자세히보기"></a>
+						</div>
+						<div class="col col4">
+							<h3>해커스 토익 실전<br>1000제 리스닝2</h3>
+							<span class="img">
+								<img src="../img/main/bestbook_img04.png" width="129" height="176" alt="">
+								<img src="../img/main/ico_best1.png" alt="BEST1위" class="ico_best">
+							</span>
+							<p class="txt">2015 최신경향 완벽 반영</p>
+							<a href="#;"><img src="../img/common/btn_view.gif" alt="자세히보기"></a>
+						</div>
+					</div>
+				</div>
+				<!-- //BEST추천교재 -->
+				
+				<!-- cs center -->
+				<div class="main_cs">
+					<div class="inner">
+						<div id="csadslide" class="adslide">
+							<ul class="slides">
+								<li><a href=""><img src="../img/main/cs_adbn_temp.gif" width="446" height="298" alt=""></a></li>
+								<li><a href=""><img src="../img/main/cs_adbn_temp.gif" width="446" height="298" alt=""></a></li>
+							</ul>
+						</div>
+						<script>
+							$(document).each(function(){
+								$("#csadslide").flexslider({
+									animation: "slide",
+									directionNav: false,
+									slideshow: false,
+									animationLoop: false
+								});
+							});
+						</script>
+						<!-- //bn -->
+						<div class="benefit">
+							<h3><a href=""><img src="../img/main/benefit_tit.gif" alt="해커스 패밀리 무료회원혜택"></a></h3>
+							<ol>
+								<li><em class="n1"></em>토익 무료 배치고사</li>
+								<li><em class="n2"></em>토익 실전 1000제 RC3 교재 선착순 무료</li>
+								<li><em class="n3"></em>외국어인강 1위 해커스 스타강사 강의 무료</li>
+								<li><em class="n4"></em>진단고사 해설강의 무료</li>
+								<li><em class="n5"></em>해커스인강 1,000P 즉시 증정!</li>
+								<li><em class="n6"></em>베스트셀러 교재 단어암기 MP3 무료</li>
+							</ol>
+						</div>
+						<!-- //해커스 패밀리 무료회원혜택 -->
+						<div class="cscenter">
+							<div class="box">
+								<h3><img src="../img/main/cs_tit.gif" alt="고객센터(02-554-7272)"></h3>
+								<div class="coupon">
+									<h3><img src="../img/main/cs_tit2.gif" alt="쿠폰 & 수강권 등록"></h3>
+									<input type="text" name="" id=""><a href="#;"><img src="../img/main/cs_btn_up.gif" alt="등록"></a>
+								</div>
+							</div>
+							<ul>
+								<li class="ml0"><a href=""><img src="../img/main/cs_list01.gif" alt="자주 묻는 질문"></a></li>
+								<li><a href=""><img src="../img/main/cs_list02.gif" alt="실시간 1:1 빠른상담"></a></li>
+								<li class="ml0"><a href=""><img src="../img/main/cs_list03.gif" alt="원격지원 서비스"></a></li>
+								<li><a href=""><img src="../img/main/cs_list04.gif" alt="프로그램 설치"></a></li>
+							</ul>
+						</div>
+						<!-- 고객센터 -->
+					</div>
+				</div>
+				<!-- //cs center -->
+				
+				<!-- 순위안내 -->
+				<div class="main_rank">
+					<div class="inner2">
+						해커스인강은 토익 / 토익스피킹 / 오픽 / 텝스 / 토플/일반영어 / IELTS / 취업 분야 베스트셀러 교재의 동영상강의를 제공합니다.<br>열기 버튼을 클릭하면 해커스 교재 순위를 확인할 수 있습니다.
+						<a href="#;" class="btn_comm2 btn_ctl"></a>
+						<div class="more">
+							<div class="txt">
+							<strong>해커스 교재 순위 (2016년 2월 29일 기준)</strong>
+							<br><br>
+							[해커스 토익 보카(초판~3판)]교보문고 토익토플 베스트셀러 토익보카 기준 1위 (2006년~2016년 2월 23일)<br>
+							교보문고 2015 종합 베스트셀러 토익/토플분야 1위<br>
+							[해커스 토익 리딩(초판~4판)]교보문고 토익토플 베스트셀러 토익리딩 기준 1위 (2005년~2015년 6월 9일)<br>
+							[해커스 토익 Reading 2015 최신개정판 ]교보문고 토익토플 베스트셀러 토익리딩 기준 1위 (2015년 6월 10일~2016년 2월 23일)<br>
+							[해커스 토익 보카(초판~3판)]교보문고 토익토플 베스트셀러 토익보카 기준 1위 (2006년~2016년 2월 23일)<br>
+							교보문고 2015 종합 베스트셀러 토익/토플분야 1위<br>
+							[해커스 토익 리딩(초판~4판)]교보문고 토익토플 베스트셀러 토익리딩 기준 1위 (2005년~2015년 6월 9일)<br>
+							[해커스 토익 Reading 2015 최신개정판 ]교보문고 토익토플 베스트셀러 토익리딩 기준 1위 (2015년 6월 10일~2016년 2월 23일)
+							</div>
+						</div>		
+					</div>
+				</div>
+				<!-- //순위안내 -->
+
+			</div>
+		</div>
+		<!-- //container -->
+
+		<!-- footer -->
+		<div id="footer">
+			<div class="ft_txt"><img src="../img/common/foot_txt.png" alt="감사합니다. 여러분이 만들어주신 1위 해커스! 해커스를 만나는 사람이라면 누구나 빠르고 효과적으로 성공할 수 있도록 하겠다는 해커스의 신념 그 신념으로 보낸 10만 시간이 1등 해커스를 만들어 냈습니다."></div>
+			
+			<!-- certi -->
+			<div class="certifi_area">
+				<ul>
+					<li><span class="certifi_comm certifi_img13"><span class="sr">대학생이 선정한 최단기 토익 고득점 학원1위</span></span><a href="#" class="certifi_comm certifi_link"><span class="sr">수상내역확인</span></a></li>
+					<li><span class="certifi_comm certifi_img14"><span class="sr">대학생이 선정한 토익 인강 1위</span></span><a href="#" class="certifi_comm certifi_link"><span class="sr">수상내역확인</span></a></li>
+
+					<li><span class="certifi_comm certifi_img1"><span class="sr">20대가 선정한 최고의 토익학원 1위</span></span><a href="#" class="certifi_comm certifi_link"><span class="sr">수상내역확인</span></a></li>
+					<li><span class="certifi_comm certifi_img2"><span class="sr">20대TOP BRAND 토익,토익스피킹 학원 1위</span></span></li>
+					<li><span class="certifi_comm certifi_img3"><span class="sr">고객중심 브랜드 1위</span></span><a href="#" class="certifi_comm certifi_link"><span class="sr">수상내역확인</span></a></li>
+					<li><span class="certifi_comm certifi_img4"><span class="sr">온라인외국어학원 부문 1위</span></span></li>
+					<li><span class="certifi_comm certifi_img5"><span class="sr">어학교재 베스트 셀러</span></span></li>
+					<li><span class="certifi_comm certifi_img6"><span class="sr">어학교육 1위</span></span><a href="#" class="certifi_comm certifi_link"><span class="sr">수상내역확인</span></a></li>
+					<li><span class="certifi_comm certifi_img7"><span class="sr">토익 인터넷강의 1위</span></span><a href="#" class="certifi_comm certifi_link"><span class="sr">수상내역확인</span></a></li>
+					<li><span class="certifi_comm certifi_img8"><span class="sr">2012-2015 올해의 브랜드 선호도 1위</span></span><a href="#" class="certifi_comm certifi_link"><span class="sr">수상내역확인</span></a></li>
+					<li><span class="certifi_comm certifi_img9"><span class="sr">올해의 앱 선정 1위</span></span></li>
+					<li><span class="certifi_comm certifi_img10"><span class="sr">최단기 토익졸업 1위</span></span><a href="#" class="certifi_comm certifi_link"><span class="sr">수상내역확인</span></a></li>
+					<li><span class="certifi_comm certifi_img11"><span class="sr">강의만족도 등 1위</span></span><a href="#" class="certifi_comm certifi_link"><span class="sr">수상내역확인</span></a></li>
+					<li><span class="certifi_comm certifi_img12"><span class="sr">영어교육분야 1위</span></span></li>
+				</ul>
+			</div>
+			<!-- //certi -->
+
+			<!-- footer info -->
+			<div class="ft_area">
+				<div class="inner">
+					<div class="f_l">
+						<div class="ft_logo"><img src="../img/common/logo.gif" alt="해커스인강"></div>
+						<div class="ft_call">
+							고객센터 : 02-554-7272ㅣ평일 09:00~23:00, 주말(공휴일) 09:00~21:00ㅣ메일 : help@champstudy.com ㅣ 트위터 : @hackerseng
+						</div>
+						<div class="ft_link">
+							<ul>
+								<li class="first"><a href="#">Home</a>|</li>
+								<li><a href="#">해커스소개</a>|</li>
+								<li><a href="#">해커스인강 소개</a>|</li>
+								<li><a href="#">이용약관</a>|</li>
+								<li class="privacy"><a href="#">개인정보취급방침</a>|</li>
+								<li><a href="#">즐겨찾기</a>|</li>
+								<li><a href="#">CONTACT US</a>|</li>
+								<li><a href="#">사이트맵</a>|</li>
+								<li><a href="#">고객센터</a></li>
+							</ul>
+						</div>
+						<div class="ft_info">
+							㈜챔프스터디 TEL : 02)554-7272ㅣFAX : 02)554-0551ㅣE-MAIL : help@champstudy.comㅣ사업자등록번호 [120-87-09984]<br>
+							서울특별시 서초구 강남대로61길 23 (서초동 1316-15) 현대성우빌딩 203호ㅣ 원격평생교육시설신고(제 원-140호)ㅣ호스팅 제공자 : ㈜KT<br>
+							대표이사 : 전재윤ㅣ개인정보관리책임자 : 김병철ㅣ통신판매업신고(제 2008-서울서초-0396호) 정보조회ㅣ부가통신사업신고(신고번호 : 013760)
+						</div>
+						<address>Copyright &copy; 2003 champstudy. All Rights Reserved.</address>
+					</div>
+
+					<div class="f_r">
+						<div class="lg_logo">
+							<img src="../img/common/logo_lg.gif" alt="LG U+">
+							<a href="#">서비스 가입확인 &gt;</a>
+						</div>
+						<div class="lg_txt">
+							고객님은 안전거래를 위해 교재(유료)가 포함된 상품을 무통장 입금으로 결제하시는 경우 챔프스터디가 가입한 LG U+의 구매안전 서비스를 이용하실 수 있습니다.<br><br>
+							* LG U+의 결제대금예치업 등록번호 : 02-006-00001
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //footer info -->
+		</div>
+		<!-- //footer -->
+	</div>
+</body>
+</html>

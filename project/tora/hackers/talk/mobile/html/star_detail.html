@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initialscale=1.0, maximum-scale=1.0, minimum-scale=1.0, userscalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>해커스 교육그룹</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" href="">
+	<link rel="apple-touch-icon-precomposed" href="">
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/sub.css">
+
+	<!-- js -->
+	<script src="../js/jquery-1.11.2.min.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/hackers_ui.js"></script>
+	
+	<!-- Sub Nav Fixed -->
+	<script>
+		$(function(){
+		var snOffset = $('.scroll_nav').offset();
+
+		$(window).scroll(function(){
+			if ( $(document).scrollTop() > snOffset.top ){
+				$('.scroll_nav').addClass('fixed');
+				$('.scroll_cont').css('padding-top','50px');
+			}
+			else {
+				$('.scroll_nav').removeClass('fixed');
+				$('.scroll_cont').removeAttr('style');
+			}
+		});
+	});
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<div class="top_bnr"><a href="#"><img src="../img/common/top_bnr.png" alt="20대가 선정한 TOP BRAND 1위 해커스!"></a></div>
+
+		<!-- header -->
+		<div id="header">
+			<div class="h1_box">
+				<h1><a href="#"><img src="../img/common/logo.png" alt="해커스 인강" width="76" height="29"></a></h1>
+				<button type="button" class="btn_triangle_down"><span class="triangle_down"></span></button>
+				
+				<div class="family_site">
+					<ul>
+						<li><a href="#"><img src="../img/common/family_site01.png" alt="Hackers Academia" width="83" height="26"></a></li>
+						<li><a href="#"><img src="../img/common/family_site02.png" alt="Hackers" width="91" height="26"></a></li>
+						<li><a href="#"><img src="../img/common/family_site03.png" alt="해커스 톡" width="64" height="26"></a></li>
+						<li><a href="#"><img src="../img/common/family_site04.png" alt="해커스 중국어" width="101" height="26"></a></li>
+					</ul>
+				</div>
+
+				<button type="button" class="btn_comm btn_more"></button>
+				<button type="button" class="btn_comm btn_event"><span>7</span></button>
+			</div>
+		</div>
+		<!-- //header -->
+
+		<!-- nav -->
+		<div id="nav">
+			<ul>
+				<li><a href="#">강의전체보기</a></li>
+				<li><a href="#">무료강의</a></li>
+				<li><a href="#">MP3 다운</a></li>
+				<li><a href="#">마이클래스</a></li>
+			</ul>
+		</div>
+		<!-- //nav -->
+
+		<!-- container -->
+		<div id="container">
+			<div id="content">
+				<!-- h2 -->
+				<h2 class="tit">스타강사</h2>
+				<!-- //h2 -->
+
+				<!-- section_type2 -->
+				<section class="section_type2">
+					<div class="btn_area">
+						<div class="tbl_row">
+							<div class="tbl_cell">
+								<select style="width:100%">
+									<option>기초영어</option>
+								</select>
+							</div>
+							<div class="tbl_cell">
+								<select style="width:100%">
+									<option>전체</option>
+								</select>
+							</div>
+							<div class="tbl_cell">
+								<select style="width:100%">
+									<option>전체</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //section_type2 -->
+
+				<!-- section -->
+				<section class="section">
+					<img src="../img/star/teacher_bnr.png" alt="RC 김동영 선생님" class="img_b">
+				</section>
+				<!-- //section -->
+
+				<!-- section -->
+				<section class="section">
+					<div class="tab_type2">
+						<ul>
+							<li class="on" style="width:50%;"><a href="#;">OT영상</a></li>
+							<li style="width:50%;"><a href="#;">대표강의</a></li>
+						</ul>
+					</div>
+					<div class="movie"><img src="../img/star/movie.png" alt="" width="320" height="150"></div>
+				</section>
+				<!-- //section -->
+
+				<!-- section -->
+				<section class="section">
+					<!-- nav_type2 -->
+					<div class="nav_type2 scroll_nav">
+						<ul>
+							<li class="active"><a href="#">선생님 소개</a></li>
+							<li><a href="#">고득점 비법</a></li>
+							<li><a href="#">수강후기</a></li>
+							<li><a href="#">추천강의</a></li>
+						</ul>
+					</div>
+					<!-- //nav_type2 -->
+				</section>
+
+				<!-- scroll_cont -->
+				<div class="scroll_cont">
+					<!-- section -->
+					<section class="section">
+						<div class="star_bnr">
+							<div class="swiper-container1">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><a href="#"><img src="../img/star/slide_bnr1.png" alt="매달 토익문제 예측"></a></div>
+									<div class="swiper-slide"><a href="#"><img src="../img/star/slide_bnr1.png" alt="매달 토익문제 예측"></a></div>
+									<div class="swiper-slide"><a href="#"><img src="../img/star/slide_bnr1.png" alt="매달 토익문제 예측"></a></div>
+									<div class="swiper-slide"><a href="#"><img src="../img/star/slide_bnr1.png" alt="매달 토익문제 예측"></a></div>
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
+							<script>
+							var swiper = new Swiper('.swiper-container1', {
+								pagination: '.swiper-pagination',
+								paginationClickable: true,
+								centeredSlides: true,
+								autoplay: 2500,
+								autoplayDisableOnInteraction: false
+							});
+							</script>
+						</div>
+					</section>
+					<!-- //section -->
+
+					<!-- section -->
+					<section class="section">
+						<div class="star_bnr">
+							<div class="swiper-container2">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><a href="#"><img src="../img/star/slide_bnr2.png" alt="기출포인트를 완벽하게 정리하라!"></a></div>
+									<div class="swiper-slide"><a href="#"><img src="../img/star/slide_bnr2.png" alt="기출포인트를 완벽하게 정리하라!"></a></div>
+									<div class="swiper-slide"><a href="#"><img src="../img/star/slide_bnr2.png" alt="기출포인트를 완벽하게 정리하라!"></a></div>
+									<div class="swiper-slide"><a href="#"><img src="../img/star/slide_bnr2.png" alt="기출포인트를 완벽하게 정리하라!"></a></div>
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
+							<script>
+							var swiper = new Swiper('.swiper-container2', {
+								pagination: '.swiper-pagination',
+								paginationClickable: true,
+								centeredSlides: true,
+								autoplay: 2500,
+								autoplayDisableOnInteraction: false
+							});
+							</script>
+						</div>
+					</section>
+					<!-- //section -->
+
+					<!-- section -->
+					<section class="section">
+						<div class="star_bnr">
+							<div class="swiper-container3">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><a href="#"><img src="../img/star/slide_bnr3.png" alt="김동영 선생님 강의 효과!"></a></div>
+									<div class="swiper-slide"><a href="#"><img src="../img/star/slide_bnr3.png" alt="김동영 선생님 강의 효과!"></a></div>
+									<div class="swiper-slide"><a href="#"><img src="../img/star/slide_bnr3.png" alt="김동영 선생님 강의 효과!"></a></div>
+									<div class="swiper-slide"><a href="#"><img src="../img/star/slide_bnr3.png" alt="김동영 선생님 강의 효과!"></a></div>
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
+							<script>
+							var swiper = new Swiper('.swiper-container3', {
+								pagination: '.swiper-pagination',
+								paginationClickable: true,
+								centeredSlides: true,
+								autoplay: 2500,
+								autoplayDisableOnInteraction: false
+							});
+							</script>
+						</div>
+					</section>
+					<!-- //section -->
+
+					<!-- section_type6 -->
+					<section class="section_type6">
+						<!-- tit_type3 -->
+						<div class="tit_type3">압도적인 토익 RC 1위<strong>김동영 선생님 추천강의</strong></div>
+						<!-- //tit_type3 -->
+
+						<!-- tit_type4 -->
+						<div class="tit_type4">기초 레벨<span class="point">550점+</span></div>
+						<!-- //tit_type4 -->
+
+						<!-- recomm_list2 -->
+						<div class="recomm_list2">
+							<ul>
+								<li>
+									<strong>누구나 쉽게 배우는 왕초보 영어 STEP 1</strong>
+									<p class="add">선생님을 만나면 토익 85점 돌파가 쉽다</p>
+									<p class="name">Mario / 50일(20강 / <span class="fc_92">88,000원</span> → <strong>32,000원</strong></p>
+									<a href="#" class="btn_ll btn_type2" style="width:86px;">수강신청 ></a>
+								</li>
+								<li>
+									<strong>누구나 쉽게 배우는 왕초보 영어 STEP 1</strong>
+									<p class="add">선생님을 만나면 토익 85점 돌파가 쉽다</p>
+									<p class="name">Mario / 50일(20강 / <span class="fc_92">88,000원</span> → <strong>32,000원</strong></p>
+									<a href="#" class="btn_ll btn_type2" style="width:86px;">수강신청 ></a>
+								</li>
+							</ul>
+							<a href="#" class="btn_sm btn_type11" style="width:100%;">더보기<span class="ico_comm ico_down_arrow2"></span></a>
+						</div>
+						<!-- //recomm_list2 -->
+					</section>
+					<!-- //section_type6 -->
+				</div>
+				<!-- //scroll_cont -->
+
+				<!-- section_type2 -->
+				<section class="section_type2">
+					<!-- btn_area -->
+					<div class="btn_area">
+						<div class="tbl_row">
+							<div class="tbl_cell" style="width:50%;">
+								<a href="#" class="btn_ll btn_type2" style="width:100%;">김동영 선생님<br><strong>인강 더 보기</strong></a>
+							</div>
+							<div class="tbl_cell" style="width:50%;">
+								<a href="#" class="btn_ll btn_type10" style="width:100%;">김동영 선생님<br><strong>현장강의 보기</strong></a>
+							</div>
+						</div>
+					</div>
+					<!-- //btn_area -->
+				</section>
+				<!-- //section_type2 -->
+			</div>
+		</div>
+		<!-- //container -->
+
+		<!-- footer -->
+		<div id="footer">
+			<div class="call">상담 가능 시간 : 평일 09시-23시 / 주말(공휴일) 09시-22시</div>
+			<div class="sns">
+				<ul>
+					<li><a href="#" class="ft_comm">고객센터 전화걸기</a></li>
+					<li><a href="#" class="ft_comm">해커스영어 페이스북</a></li>
+				</ul>
+			</div>
+			<div class="ft_thx"><img src="../img/common/ft_thx.png" alt="외국어인강 1위 해커스!"></div>
+			<div class="info">
+				<ul>
+					<li><a href="#">회원가입</a></li>
+					<li><a href="#">PC버전</a></li>
+					<li><a href="#">이용약관</a></li>
+					<li><a href="#">개인정보취급방침</a></li>
+					<li><a href="#">고객센터</a></li>
+				</ul>
+				<div class="copy">
+					<address>&copy; Hackers Education Group</address>
+					(주) 챔프스터디 ㅣ 사업자등록번호 120-87-09984<br>
+					원격평생교육시설신고(제 원 - 140호)<br>
+					통신판매업신고(제2008-서울서초-0396호)  <strong>정보조회</strong> ㅣ 부가통신사업신고(013760) <br>
+					서울특별시 서초구 강남대로61길 23(서초동 1316-15) 현대성우빌딩 203호<br>
+					대표번호(02)554-7272 ㅣ FAX (02)554-0551 ㅣ 대표이사 : 전재윤 <br>
+					E-mail help@champstudy.com ㅣ 관리책임자 : 김병철
+				</div>
+			</div>
+		</div>
+		<!-- //footer -->
+	</div>
+</body>
+</html>

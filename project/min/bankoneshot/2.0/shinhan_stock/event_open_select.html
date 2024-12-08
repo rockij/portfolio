@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link rel="preload" href="resources/css/font/NotoSansKR-Regular-Hestia.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link href="resources/css/font.css" media="screen" rel="stylesheet">
+<link href="resources/css/common.css" media="screen" rel="stylesheet">
+<link href="resources/css/site.css" media="screen" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="resources/js/jquery-1.12.4.min.js"></script>
+<script src="resources/js/design.js"></script>
+<title>신한금융투자 해외주식</title>
+</head>
+<body class="openEvt">
+
+<div id="wrap" class="openEvt">
+
+	<header id="header" class="fix_top">
+		<button type="button" class="btn_prev"><i class="bg_com ico_arr_prev">이전으로</i></button>
+		<h1><i class="lg"></i>신한금융투자 해외주식</h1>
+	</header>
+	<!-- //header -->
+
+	<div id="ct">
+		<div class="openEvt_select">
+			<section class="title">
+				<h2 class="blind">원하는 종목을 선택하세요!</h2>
+				<p class="blind">1인 1회 쿠폰 사용 가능</p>
+			</section>
+			<ul class="checklist">
+				<li><span class="checkbox"><input type="radio" name="coupon" id="coupon1"><label for="coupon1"><b>애플애플</b></label></span></li>
+				<li><span class="checkbox"><input type="radio" name="coupon" id="coupon2"><label for="coupon2"><b>구글</b></label></span></li>
+				<li><span class="checkbox"><input type="radio" name="coupon" id="coupon3"><label for="coupon3"><b>페이스북</b></label></span></li>
+				<li><span class="checkbox"><input type="radio" name="coupon" id="coupon4"><label for="coupon4"><b>마이크로소프트</b></label></span></li>
+				<li><span class="checkbox"><input type="radio" name="coupon" id="coupon5"><label for="coupon5"><b>스타벅스</b></label></span></li>
+				<li><span class="checkbox"><input type="radio" name="coupon" id="coupon6"><label for="coupon6"><b>코카콜라</b></label></span></li>
+			</ul>
+			<section class="cautionbx">
+				<h3 class="">확인하세요<i>!</i></h3>
+				<ul class="">
+					<li>사용가능시간 : 오전 8시 ~ 오후 9시</li>
+					<li>쿠폰 유효기간 :  2019년 10월 07일 ~ 10월 31일</li>
+					<li>해외거래소 개장 시점에 한번에 주문됩니다</li>
+					<li>무료쿠폰 거래는 거래일의 평균가격으로 체결합니다.</li>
+					<li>거래수수료는  0.5%  또는 5 USD 중 높은 금액 입니다.</li>
+					<li>해외주식 주문시  거래수수료가 제외된 금액으로 체결됩니다.</li>
+					<li>환전수수료는 자동환전 시 환율에 포함됩니다</li>
+					<!-- <li>가격변동에 대비한 10%의 금액은 체결 후 계좌에 돌려 드립니다.</li> -->
+					<li>해외주식은 양도소득세 신고 대상입니다</li>
+					<!-- <li>실시간 시세 및 주문은 해외주식 주문 메뉴를 이용하시기 바랍니다.</li> -->
+				</ul>
+				<h3>[유의사항]</h3>
+				<ul>
+					<li>- 금융투자상품은 예금자보호법에 따라 예금보험공사가 보호하지 않으며, 원금손실이 발생할 수 있습니다.</li>
+					<li>- 당사는 금융투자상품 등에 관하여 충분히 설명할 의무가 있으며, 투자자는 투자하기 전 설명을 충분히 들으시기 바랍니다.</li>
+					<li>- 외화자산의 경우 환율변동에 따라 손실이 발생할 수 있습니다.</li>
+				</ul>
+			</section>
+			<button type="button" onclick="layer_close()" class="fix_btm btn_xr btn_skip">확인</button>
+		</div>
+	</div>
+	<!-- //content -->
+
+	<!-- 쿠폰사용안내 -->
+	<div id="deposit-lack" class="ly_pop ly_alert" style="display: ">
+			<div class="cont">
+				<div class="elm">
+					<p class="tape fc_red">쿠폰 사용이 불가능한 시간입니다.</p>
+					<p class="txt3">쿠폰 사용 시간 : 오전 8시~오후 9시</p>
+					<div class="links">
+						<button type="button" onclick="layer_close()" class="btn_xr2">취소</button><!----><button type="button" onclick="layer_close()" class="btn_xr2 btn_type">확인</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //쿠폰사용안내 -->
+
+	<script>
+		$(function(){
+			$(".openEvt_select .checkbox").on("change", function() {
+				$(".openEvt_select .checkbox").addClass("dis");
+				if($(this).find("input").prop("checked")){
+					$(".btn_skip").addClass("on");
+					$(this).removeClass("dis");
+					// $(".btn_skip").on("click", function() {
+					// 	location.href = ".html";
+					// });
+				}
+			});
+		});
+	</script>
+
+</div>
+
+</body>
+</html>

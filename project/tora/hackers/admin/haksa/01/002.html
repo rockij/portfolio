@@ -1,0 +1,540 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> new document </title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="../../common/css/site.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../common/js/design.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+
+	<div id="quick">
+		<ul>
+			<li><a href=""><span class="icn up"></span><em class="blind">위로</em></a></li>
+			<li><a href=""><span class="icn down"></span><em class="blind">아래로</em></a></li>
+		</ul>
+	</div>
+	<!-- //quick -->
+	
+	<div id="header">
+		<div class="panel clearfix">
+			<h1><img src="../../images/logo.png" alt="HACKERS ACADEMIA" /></h1>
+			<ul class="region_tab">
+				<li><a href="">강남</a></li>
+				<li><a href="" class="selected">종로</a></li>
+			</ul>
+			<ul class="gnb">
+				<li>
+					<a href="">수강정보</a>
+					<div class="dep2">
+						<ul>
+							<li>
+								<a href="javascript:alert('준비중입니다.')">수강생등록<span class="arr"></span></a>
+								<div class="dep3">
+									<ul>
+										<li><a href="javascript:alert('준비중입니다.')">수강생목록</a></li>
+										<li><a href="javascript:alert('준비중입니다.')">수강정보</a></li>
+										<li><a href="javascript:alert('준비중입니다.')">수강등록</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="javascript:alert('준비중입니다.')">대기자관리</a></li>
+							<li><a href="javascript:alert('준비중입니다.')">배치고사</a></li>
+							<li><a href="javascript:alert('준비중입니다.')">배치검색</a></li>
+							<li><a href="javascript:alert('준비중입니다.')">예비검색</a></li>
+							<li>
+								<a href="javascript:alert('준비중입니다.')">강의평가<span class="arr"></span></a>
+								<div class="dep3">
+									<ul>
+										<li><a href="javascript:alert('준비중입니다.')">평점관리</a></li>
+										<li><a href="javascript:alert('준비중입니다.')">코멘트관리</a></li>
+										<li><a href="javascript:alert('준비중입니다.')">평가설정관리</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="javascript:alert('준비중입니다.')">SAT예약상담관리</a></li>
+							<li>
+								<a href="javascript:alert('준비중입니다.')">환불관리<span class="arr"></span></a>
+								<div class="dep3">
+									<ul>
+										<li><a href="javascript:alert('준비중입니다.')">환불신청현황</a></li>
+										<li><a href="javascript:alert('준비중입니다.')">미수금관리</a></li>
+										<li><a href="javascript:alert('준비중입니다.')">미지급금관리</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="javascript:alert('준비중입니다.')">할인목록</a></li>
+							<li><a href="javascript:alert('준비중입니다.')">B2B관리</a></li>
+							<li>
+								<a href="javascript:alert('준비중입니다.')">시설관리<span class="arr"></span></a>
+								<div class="dep3">
+									<ul>
+										<li><a href="javascript:alert('준비중입니다.')">사물함관리</a></li>
+										<li><a href="javascript:alert('준비중입니다.')">공강의실조회</a></li>
+										<li><a href="javascript:alert('준비중입니다.')">시설사용료관리</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="">강의정보</a>
+					<div class="dep2">
+						<ul>
+							<li><a href="../lecture/lecture_list.php">강의개설관리</a></li>
+							<li><a href="../lecture/subject_list.php">과목개설관리</a></li>
+							<li><a href="../lecture/copy_list.php">강의복사</a></li>
+							<li><a href="../lecture/inquiry_list_simple.php">강의조회</a></li>
+							<li><a href="../lecture/info_list.php">강의정보확인</a></li>
+							<li>
+								<a href="./current_list_search.php">수강등록현황<span class="arr"></span></a>
+								<div class="dep3">
+									<ul>
+										<li><a href="./current_list_search.php">등록율검색</a></li>
+										<li><a href="./current_list_stat.php">등록율집계</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="javascript:alert('준비중입니다.')">온라인등록현황</a></li>
+							<li><a href="../lecture/calendar_write.php">학사캘린더</a></li>
+							<li><a href="../lecture/app_period_list.php">학사일정관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="ty1">
+					<a href="">정산정보</a>
+					<div class="dep2">
+						<ul>
+							<li>
+								<a href="../sales/day_sales_list.php">매출조회<span class="arr"></span></a>
+								<div class="dep3">
+									<ul>
+										<li><a href="../sales/day_sales_list.php">일일결산서</a></li>
+										<li><a href="../sales/sales_summary_view.php">매출요약</a></li>
+										<li><a href="../sales/sales_list_by_day.php">일자별매출</a></li>
+										<li><a href="../sales/sales_list_by_time.php">시간대별매출</a></li>
+										<li><a href="../sales/sales_list_by_lecture.php">강의분류별매출</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="../sales/pay_list_by_card.php">승인조회<span class="arr"></span></a>
+								<div class="dep3">
+									<ul>
+										<li><a href="../sales/pay_list_by_card.php">카드사별 승인현황</a></li>
+										<li><a href="../sales/pay_list.php">당일승인현황</a></li>
+										<li><a href="../sales/cash_bill_list.php">현금영수증 내역조회</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="../calc/daily_end_list.php">정산마감<span class="arr"></span></a>
+								<div class="dep3">
+									<ul>
+										<li><a href="../calc/day_calc_list.php">일마감</a></li>
+										<li><a href="../calc/day_calc_list_for_manage.php">정산마감관리</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="javascript:alert('준비중입니다.')">강사료정산<span class="arr"></span></a>
+								<div class="dep3">
+									<ul>
+									<li><a href="javascript:alert('준비중입니다.')">강의료정산결과</a></li>
+									<li><a href="javascript:alert('준비중입니다.')">강의정산시트</a></li>
+									<li><a href="javascript:alert('준비중입니다.')">SAT시간표</a></li>
+									<li><a href="javascript:alert('준비중입니다.')">기본수강료</a></li>
+									<li><a href="javascript:alert('준비중입니다.')">선수금내역</a></li>
+									<li><a href="javascript:alert('준비중입니다.')">팀티칭관리</a></li>
+									<li><a href="javascript:alert('준비중입니다.')">공제항목</a></li>
+									<li><a href="javascript:alert('준비중입니다.')">선급금관리</a></li>
+									<li><a href="javascript:alert('준비중입니다.')">결제수수료</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="ty1 selected">
+					<a href="">경영정보</a>
+					<div class="dep2">
+						<ul>
+							<li>
+							<a href="../sat/sat_eval_write.php">SAT강의평가<span class="arr"></span></a>
+							<div class="dep3">
+								<ul>
+									<li><a href="../sat/sat_eval_write.php">평점입력</a></li>
+									<li><a href="../sat/sat_comment_write.php">코멘트입력</a></li>
+									<li><a href="../sat/sat_eval_view.php">평점조회</a></li>
+									<li><a href="../sat/sat_comment_view.php">코멘트조회</a></li>
+								</ul>
+							</div>
+							</li>
+							<li>
+							<a href="../stat/std_real_stat_list.php">학사통계<span class="arr"></span></a>
+							<div class="dep3">
+								<ul>
+									<li><a href="../stat/std_real_stat_list.php">수강생통계</a></li>
+									<li><a href="../stat/marketing_default_stat_list.php">마케팅통계</a></li>
+									<li><a href="../stat/rival_research_list.php">타학원동향</a></li>
+								</ul>
+							</div>
+							</li>
+							<li>
+							<a href="../analysis/analysis_list_by_day_time.php">매출분석<span class="arr"></span></a>
+							<div class="dep3">
+								<ul>
+									<li><a href="../analysis/analysis_list_by_day_time.php">시간대별매출조회</a></li>
+									<li><a href="javascript:alert('준비중입니다.')">월별면과세매출</a></li>
+									<li><a href="javascript:alert('준비중입니다.')">대비기간별</a></li>
+									<li><a href="javascript:alert('준비중입니다.')">분류별매출</a></li>
+									<li><a href="javascript:alert('준비중입니다.')">강의/월별 매출추이</a></li>
+									<li><a href="javascript:alert('준비중입니다.')">고객성향</a></li>
+								</ul>
+							</div>
+							</li>
+							<li><a href="javascript:alert('준비중입니다.')">이슈캘린더</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="">시스템 관리</a></li>
+			</ul>
+			<ul class="mem_set">
+				<li class="user"><b>조하람</b>님</li>
+				<li class="link"><a href="">로그아웃</a></li>
+			</ul>
+			<!-- 20151102_추가 -->
+			<div class="quick_nav">
+				<ul>
+					<li><a href="" class="selected">토플종합</a></li>
+					<li><a href="">토플단과</a></li>
+					<li><a href="">GRE</a></li>
+					<li><a href="">LSAT</a></li>
+					<li><a href="">토익종합</a></li>
+					<li><a href="">토익단과</a></li>
+					<li><a href="">TEPS</a></li>
+					<li><a href="">IELTS</a></li>
+					<li><a href="">SAT</a></li>
+					<li><a href="">토스&OPIc</a></li>
+					<li><a href="">일반/취업</a></li>
+					<li><a href="">중국어</a></li>
+					<li><a href="">중국어</a></li>
+					<li><a href="">중국어</a></li>
+				</ul>
+			</div>
+			<!-- //20151102_추가 -->
+		</div>
+		<!-- //gnb -->
+	</div>
+	<!-- //header -->
+	
+	<div id="content" class="">
+		
+		<div class="path"><a href="">Home</a>&nbsp;&gt;&nbsp;<a href="">수강정보</a>&nbsp;&gt;&nbsp;<a href="">시설관리</a>&nbsp;&gt;&nbsp;사물함관리</div>
+		<h2>사물함관리</h2>
+		<div class="tblst v3 mt10">
+			<table style="width:auto">
+				<colgroup>
+					<col width="95" />
+					<col width="106" />
+					<col width="87" />
+					<col width="155" />
+				</colgroup>
+				<tbody>
+				<tr>
+				<th scope="row">현재설정년월</th>
+				<td>2015년 05월</td>
+				<th scope="row">변경할 년월</th>
+				<td>
+					<select id="" title="" style="width:63px;">
+						<option value="" selected>2015년</option>
+						<option value=""></option>
+					</select>
+					<select id="" title="" style="width:63px;">
+						<option value="" selected>12월</option>
+						<option value=""></option>
+					</select>
+				</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- //table -->
+		<div class="tabst2 v1 mt30">
+			<ul>
+			<li class="bt1"><a href="">전체</a></li>
+			<li><a href="" class="selected">강남본관 1층</a></li>
+			<li><a href="">강남본관 2층 중앙</a></li>
+			<li><a href="">강남본관 2층 중앙</a></li>
+			<li><a href="">강남5별관 2층</a></li>
+			<li><a href="">강남6별관 2층</a></li>
+			<li><a href="">종로본관 6층</a></li>
+			<li><a href="">종로본관 7층</a></li>
+			</ul>
+		</div>
+		<!-- //tab -->
+		<div class="tblst4 mt5">
+			<table style="width:auto">
+				<tbody>
+				<tr>
+				<th scope="row" class="tit">신청현황</th>
+				<td class="tbl">
+					<table>
+						<thead>
+						<tr>
+						<th scope="col" class="brl0">총수량</th>
+						<th scope="col">신청</th>
+						<th scope="col">잔여</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+						<td class="brl0">66</td>
+						<td>57</td>
+						<td>9</td>
+						</tr>
+						</tbody>
+					</table>
+				</td>
+				<td class="tbl">
+					<table>
+						<thead>
+						<tr>
+						<th scope="col">총수량</th>
+						<th scope="col">신청</th>
+						<th scope="col">잔여</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+						<td>66</td>
+						<td>57</td>
+						<td>9</td>
+						</tr>
+						</tbody>
+					</table>
+				</td>
+				<td class="tbl">
+					<table>
+						<thead>
+						<tr>
+						<th scope="col" class="brl0">총수량</th>
+						<th scope="col">신청</th>
+						<th scope="col">잔여</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+						<td class="brl0">66</td>
+						<td>57</td>
+						<td>9</td>
+						</tr>
+						</tbody>
+					</table>
+				</td>
+				<td class="tbl">
+					<table>
+						<thead>
+						<tr>
+						<th scope="col">총수량</th>
+						<th scope="col">신청</th>
+						<th scope="col">잔여</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+						<td>66</td>
+						<td>57</td>
+						<td>9</td>
+						</tr>
+						</tbody>
+					</table>
+				</td>
+				<td class="tbl">
+					<table>
+						<thead>
+						<tr>
+						<th scope="col" class="brl0">총수량</th>
+						<th scope="col">신청</th>
+						<th scope="col">잔여</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+						<td class="brl0">66</td>
+						<td>57</td>
+						<td>9</td>
+						</tr>
+						</tbody>
+					</table>
+				</td>
+				<td class="tbl">
+					<table>
+						<thead>
+						<tr>
+						<th scope="col">총수량</th>
+						<th scope="col">신청</th>
+						<th scope="col">잔여</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+						<td>66</td>
+						<td>57</td>
+						<td>9</td>
+						</tr>
+						</tbody>
+					</table>
+				</td>
+				<td class="tbl">
+					<table>
+						<thead>
+						<tr>
+						<th scope="col">총수량</th>
+						<th scope="col">신청</th>
+						<th scope="col">잔여</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+						<td>66</td>
+						<td>57</td>
+						<td>9</td>
+						</tr>
+						</tbody>
+					</table>
+				</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- //table -->
+		<div class="tblst3 vamfix mt30">
+			<table>
+				<colgroup>
+					<col width="97" />
+					<col width="235" />
+					<col width="97" />
+					<col width="235" />
+					<col width="97" />
+					<col width="235" />
+					<col width="*" />
+				</colgroup>
+				<tr>
+				<th><span class="icn bu"></span>신청자 이름</th>
+				<td><input type="text" name="" id="" class="inp1" style="width:125px;" /></td>
+				<th><span class="icn bu"></span>연락처</th>
+				<td><input type="text" name="" id="" class="inp1" style="width:125px;" /></td>
+				<th><span class="icn bu"></span>생년월일</th>
+				<td><input type="text" name="" id="" class="inp1" style="width:125px;" /></td>
+				<td class="tr"><a href="" class="btns btns1 btns1-3">검색</a></td>
+				</tr>
+			</table>
+		</div>
+		<!-- //table -->
+		<div class="mt25"><a href=""><img src="../../images/btn_download.gif" alt="다운로드" /></a></div>
+		<div class="tblst2 v2 mt10">
+			<table>
+				<colgroup>
+					<col width="4%" />
+					<col width="9%" />
+					<col width="7%" />
+					<col width="10%" />
+					<col width="17%" />
+					<col width="16%" />
+					<col width="6%" />
+					<col width="8%" />
+					<col width="8%" />
+					<col width="8%" />
+					<col width="*" />
+				</colgroup>
+				<thead>
+					<tr>
+					<th scope="col">번호</th>
+					<th scope="col">사물함위치</th>
+					<th scope="col">신청자</th>
+					<th scope="col">연락처</th>
+					<th scope="col"><a href="">신청일</a>&nbsp;<span class="icn line-u"></span></th>
+					<th scope="col"><a href="">반납일</a>&nbsp;<span class="icn line-d"></span></th>
+					<th scope="col"><a href="">상태</a>&nbsp;<span class="icn line-u"></span></th>
+					<th scope="col">업무처리</th>
+					<th scope="col">등록직원</th>
+					<th scope="col">반납직원</th>
+					<th scope="col">보증금</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+					<td>1</td>
+					<td>강남본관1층</td>
+					<td><a href="" class="u txef2">김지영</a></td>
+					<td>010-4245-4317</td>
+					<td>2015-05-05 09:03:06</td>
+					<td></td>
+					<td>신청</td>
+					<td class="link"><a href="">신청</a>&nbsp;&nbsp;<a href="">반납</a></td>
+					<td>나진실</td>
+					<td></td>
+					<td></td>
+					</tr>
+					<tr>
+					<td>1</td>
+					<td>강남본관1층</td>
+					<td><a href="" class="u txef2">김지영</a></td>
+					<td>010-4245-4317</td>
+					<td>2015-05-05 09:03:06</td>
+					<td></td>
+					<td>신청</td>
+					<td class="link"><a href="">신청</a>&nbsp;&nbsp;<a href="">반납</a></td>
+					<td>나진실</td>
+					<td></td>
+					<td></td>
+					</tr>
+					<tr>
+					<td>1</td>
+					<td>강남본관1층</td>
+					<td><a href="" class="u txef2">김지영</a></td>
+					<td>010-4245-4317</td>
+					<td>2015-05-05 09:03:06</td>
+					<td></td>
+					<td>신청</td>
+					<td class="link"><a href="">신청</a>&nbsp;&nbsp;<a href="">반납</a></td>
+					<td>나진실</td>
+					<td></td>
+					<td></td>
+					</tr>
+					<tr>
+					<td>1</td>
+					<td>강남본관1층</td>
+					<td><a href="" class="u txef2">김지영</a></td>
+					<td>010-4245-4317</td>
+					<td>2015-05-05 09:03:06</td>
+					<td></td>
+					<td>신청</td>
+					<td class="link"><a href="">신청</a>&nbsp;&nbsp;<a href="">반납</a></td>
+					<td>나진실</td>
+					<td></td>
+					<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- //table -->
+
+	</div>
+
+	<div id="footer">Copyright ⓒ 2015 Hackers Academia. All Rights Reserved.</div>
+	<!-- //footer -->
+
+</div>
+
+</body>
+</html>

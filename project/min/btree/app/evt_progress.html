@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link rel="preload" href="resources/css/font/NotoSansKR-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link href="resources/css/common.css" media="screen" rel="stylesheet">
+<!-- <link href="resources/css/jquery-ui.css" media="screen" rel="stylesheet"> -->
+<link href="resources/css/site.css" media="screen" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="resources/js/jquery-1.11.1.min.js"></script>
+<script src="resources/js/jquery.mobile.min.js"></script>
+<script src="resources/js/jquery-ui.js"></script>
+<script src="resources/js/design.js"></script>
+<title>B-Tree</title>
+</head>
+<body>
+
+<div id="wrap">
+
+	<div class="fix_top">
+		<header id="header" class="noLine">
+			<button type="button" class="btn_prev"><i class="bg_com ico_arr_prev">이전으로</i></button>
+			<h1>이벤트</h1>
+			<button type="button" class="btn_gnb"><i class="bg_com">메뉴열기</i></button>
+		</header>
+		<!-- //header -->
+		<div class="listTab">
+			<ul>
+				<li><a href="#n" class="active">진행중인 이벤트</a></li>
+				<li><a href="#n">종료된 이벤트</a></li>
+			</ul>
+		</div>
+		<!-- //이벤트 탭 -->
+	</div>
+	<!-- //fix top -->
+
+	<aside id="gnb">
+		<h2 class="blind">Global navigation bar</h2>
+		<div class="bgb"><div class="bg"></div></div>
+		<div class="panel">
+			<div class="cont">
+				<div class="scroll">
+					<!-- content area -->
+					<div class="profile">
+						<button type="button" onclick="layer_open('logout')" class="btn_s btn_type6">로그아웃</button>
+						<button type="button" class="btn_cls"><i class="bg_com ico_x">메뉴닫기</i></button>
+						<dl>
+							<dt><img src="resources/images/sample/photo.jpg" alt=""></dt>
+							<dd>
+								<span class="id">밝은마루 님</span>
+								<span class="rati">일반회원</span>
+								<a href="#;" class="btn_go">B.bank 바로가기</a>
+							</dd>
+						</dl>
+					</div>
+					<ul class="lnb">
+						<li><a href="#;"><i class="bg_ico ico_p"></i>포인트현황<strong class="fc_blu status">13,000 <span>P</span></strong></a></li>
+						<li><a href="#;"><i class="bg_ico ico_light"></i>토큰 현황<strong class="status fc_pur">0.005 <span>ETH</span></strong></a></li>
+						<li><a href="#;"><i class="bg_ico ico_p2"></i>토큰 전환</a></li>
+						<li><a href="#;"><i class="bg_ico ico_wallet"></i>토큰 입금주소 등록</a></li>
+						<li><a href="#;"><i class="bg_ico ico_medal"></i>포인트 랭킹</a></li>
+					</ul>
+					<div class="ui_inner2">
+						<ul class="menucs">
+							<li><a href="#;"><span><i class="bg_ico ico_spk"></i></span>공지사항</a></li>
+							<li><a href="#;"><span><i class="bg_ico ico_bell"></i></span>알림</a></li>
+							<li><a href="#;"><span><i class="bg_ico ico_cau"></i></span>FAQ</a></li>
+							<li><a href="#;"><span><i class="bg_ico ico_note"></i></span>1:1 문의</a></li>
+						</ul>
+						<ul class="menuset">
+							<li class="push">
+								<span class="wrap">
+									푸시메시지
+									<span class="checkbox"><input type="checkbox" name="push" id="push"><label for="push"></label></span>
+								</span>
+							</li>
+							<li><a href="#;">잠금암호</a></li>
+							<li class="ver"><span class="wrap">App 버전<tt>1.0.0 최신버전입니다.</tt></span></li>
+							<li><a href="#;">이용방법</a></li>
+							<li><a href="#;">서비스 이용약관</a></li>
+							<li><a href="#;">개인정보 취급방침</a></li>
+						</ul>
+						<button type="button" onclick="" class="btn_s btn_type6 btn_withdraw">회원탈퇴</button>
+					</div>
+					<!-- //content area -->
+				</div>
+			</div>
+		</div>
+	</aside>
+	<!-- //gnb -->
+
+	<div id="ct" class="evtthis">
+		<h2 class="blind">이벤트 리스트</h2>
+		<ul class="evtList">
+			<li>
+				<a href="evt_detail191205.html">
+					<figure class="img"><img src="resources/images/evt_list191205.png" alt=""></figure>
+					<span class="desc">
+						<em class="evt_state progress">진행중</em>
+						<strong class="tit">[닝테크 EVENT]
+							지금 참여하면
+							포인트 2배 지급 ~!</strong>
+					</span>
+					<p class="period"><strong>이벤트기간</strong>2019.12.16 ~ 2019.12.19</p>
+				</a>
+			</li>
+			<li>
+				<a href="#n">
+					<figure class="img"><img src="resources/images/evt_list1.png" alt=""></figure>
+					<span class="desc">
+						<em class="evt_state progress">진행중</em>
+						<strong class="tit">B.TREE에서<br>친구 초대 지원금<br>30,000 POINT 쏜다<i>!</i></strong>
+					</span>
+					<p class="period"><strong>이벤트기간</strong>2019.11.25 ~ 2019.12.6</p>
+				</a>
+			</li>
+			<li>
+				<a href="#n">
+					<figure class="img"><img src="resources/images/evt_list2.png" alt=""></figure>
+					<span class="desc">
+						<em class="evt_state standBy">대기중</em>
+						<strong class="tit">출석체크 이벤트<br>최대 100,000 포인트<br>2배 쏜다<i>!</i></strong>
+					</span>
+					<p class="period"><strong>이벤트기간</strong>2019.12.1 ~ 2018.12.31</p>
+				</a>
+			</li>
+			
+		</ul>
+	</div>
+	<!-- //content -->
+	<nav class="fix_btm tab_bar">
+		<ul>
+			<li><a href="#;" class=""><i></i><br>홈</a></li>
+			<li><a href="#;" class=""><i></i><br>게임</a></li>
+			<li><a href="#;" class="active"><i></i><br>이벤트</a></li>
+			<li><a href="#;" class=""><i></i><br>사전예약</a></li>
+			<li><a href="#;" class=""><i></i><br>검색</a></li>
+		</ul>
+	</nav>
+	<!-- //메인메뉴 -->
+
+	
+
+	<!-- logout -->
+	<div id="logout" class="ly_pop ly_alert" style="display: ">
+		<div class="cont">
+			<div class="elm">
+				로그아웃 하시겠습니까?
+				<ul class="btn_area">
+					<li><button type="button" onclick="layer_close()" class="btn_xr btn_type">취소</button></li>
+					<li><button type="button" onclick="layer_close()" class="btn_xr btn_type2">확인</button></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //logout -->
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1300">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- <title>서울시민카드 Publishing List</title> -->
+<link rel="shortcut icon" href="./resources/images/layout/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="./resources/images/layout/apple-touch-icon.png">
+<style type="text/css">
+* {margin:0;padding:0;font-family:'Malgun Gothic','맑은 고딕',Verdana,Tahoma,"돋움",Dotum,"굴림",Gulim,Geneva,sans-serif,Apple Gothic,AppleGothic;}
+body {font-size:13px;}
+li {list-style:none;}
+a {color:#444;text-decoration:none;}
+a:hover {color:#444;}
+a:visited, a:focus, a:active {color:#444;}
+#wrap {position:relative;width:1200px;margin:0 auto;padding:110px 20px 50px 20px;}
+header {position: fixed;left:0;top:0;width:100%;height:110px;background:#fff;}
+header .cont_area {position:relative;width:1200px;margin:0 auto;padding:0 20px;}
+
+h1 {font-size:30px;margin:20px 0;line-height:34px;letter-spacing:-1px; vertical-align:top;}
+h1 img { vertical-align:top;}
+.info {position:absolute;right:25px;bottom:5px;}
+.guide {margin:10px 0 5px 0;text-align:right;}
+h2 {padding:8px 15px;font-size:13px;border:1px solid #444;border-bottom:none;background:#595959;color:#fff;}
+h3 {position:relative;margin:-1px 0;padding:6px 15px;border:1px solid;border-color:#999 #ccc;background:#ccc;font-size:13px;}
+caption {display:none;}
+div.cont {border-top:1px solid #444;}
+table {border-collapse:collapse;width:100%;border-spacing:0;}
+table thead th {padding:6px 3px;border:1px solid #ccc;background:#eee;font-size:13px;}
+table tbody td {padding:5px 3px;border:1px solid #ccc;background:#e4e4e4;text-align:center;color:#898989;font-size:11px; }
+table tbody td.left {padding:5px 10px;text-align:left;}
+table tbody td.url {padding:5px 10px;text-align:left;}
+table tbody tr.hidden td {background:#e4e4e4;color:#898989;text-decoration:line-through;}
+table tbody tr.modify td {background:#fce9dc;color:#444;}
+table tbody tr.add td {background:#e1f5fe;color:#444;}
+table tbody tr.end td {background:#fff;color:#666;}
+table tbody tr:hover td {background:#e2e6f4 !important;}
+.red {color:#c00;}
+.tab_nav {margin-bottom:5px;}
+.tab_nav li {float:left;margin-right:5px;}
+.tab_nav li a {display:block;padding:4px 10px 5px 10px;border:1px solid #444;border-radius:4px;background:#595959;color:#fff;font-size:14px;transition:all 0.4s;}
+.tab_nav li a:hover {background:#009dff;border-color:#006fb5;}
+.tab_nav:after {display:block;clear:both;height:0;content:"";overflow:hidden;}
+</style>
+<script type="text/javascript" src="./resources/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.tab_nav a').click(function() {
+		var activeTab = $(this).attr("href");
+		$('html, body').stop().animate({scrollTop:$(activeTab).offset().top - 110}, 800);
+		return false;
+	});
+});
+</script>
+</head>
+
+<body>
+<!-- wrap -->
+<div id="wrap">
+    <header>
+    	<div class="cont_area">
+			<h1>서울시민카드  Publishing List</h1>
+			<p class="info"><strong>19.06.27</strong> Last updata</p>
+			<p class="guide"></p>
+			<ul class="tab_nav">
+				<!-- <li><a href="#c3">서울시민카드</a></li> -->
+				<li><a href="http://183.111.144.101/seoulcard_new/" target="_blank">디자인확인</a></li>
+				<li><a href="https://drive.google.com/drive/u/0/folders/1wkYvrRvR8JUF218FIQRFxCeX9OSYxcQI" target="_blank">구글드라이브</a></li>
+			</ul>
+		</div>
+	</header>
+
+    <h2 id="c1">공통</h2>
+	<div class="cont">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col span="1" style="width:10%;">
+                <col span="1" style="width:10%;">
+                <col span="1" style="width:10%;">
+                <col span="1" style="width:10%;">
+                <col span="1" style="width:30%;">
+                <col span="1" style="width:10%;">
+                <col span="1" style="width:20%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">1 Depth</th>
+                    <th scope="col">2 Depth</th>
+                    <th scope="col">3 Depth</th>
+                    <th scope="col">Etc.</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>약관샘플(pop)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="./html/common/약관.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>시설위치(pop)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="./html/common/시설위치.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>통합검색(pop)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="./html/common/통합검색.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>주소찾기(pop)</td>
+                    <td>결과O</td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="./html/common/주소찾기_유.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>주소찾기(pop)</td>
+                    <td>결과X</td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="./html/common/주소찾기_무.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+            </tbody>
+        </table>
+	</div>
+    <!-- //공통-->
+
+	<h2 id="c1">메인</h2>
+	<div class="cont">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col span="1" style="width:10%;">
+                <col span="1" style="width:10%;">
+                <col span="1" style="width:10%;">
+                <col span="1" style="width:10%;">
+                <col span="1" style="width:30%;">
+                <col span="1" style="width:10%;">
+                <col span="1" style="width:20%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">1 Depth</th>
+                    <th scope="col">2 Depth</th>
+                    <th scope="col">3 Depth</th>
+                    <th scope="col">Etc.</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Main</td>
+                    <td>메인</td>
+                    <td>공공시설</td>
+                    <td></td>
+                    <td class="url"><a href="./html/main/main_new01.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>Main</td>
+                    <td>메인</td>
+                    <td>제휴혜택</td>
+                    <td></td>
+                    <td class="url"><a href="./html/main/main_new02.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>Main</td>
+                    <td>메인</td>
+                    <td>나의서울시민카드</td>
+                    <td></td>
+                    <td class="url"><a href="./html/main/main_new03.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>Main</td>
+                    <td>메인</td>
+                    <td>서울시민증확인</td>
+                    <td>정보입력</td>
+                    <td class="url"><a href="./html/main/myinfo.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>시설회원가입안내(pop)</td>
+                    <td>현장발급이필요한시설</td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="./html/main/시설회원가입안내1.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>시설회원가입안내(pop)</td>
+                    <td>현장발급이필요없는시설</td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="./html/main/시설회원가입안내2.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>시설회원가입안내(pop)</td>
+                    <td>회원가편가입</td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="./html/main/시설회원가입안내3.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>시설회원가입안내(pop)</td>
+                    <td>회원가편가입</td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="./html/main/시설회원가입_준회원가입.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>시설회원가입안내(pop)</td>
+                    <td>회원가편가입</td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="./html/main/시설회원가입_정회원가입요청.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>시설회원가입안내(pop)</td>
+                    <td>정회원가입안내</td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="./html/main/시설회원가입_정회원가입안내.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+            </tbody>
+        </table>
+	</div>
+    <!-- //메인-->
+
+    <h2 id="c1">블록체인</h2>
+	<div class="cont">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col span="1" style="width:10%;">
+                <col span="1" style="width:10%;">
+                <col span="1" style="width:10%;">
+                <col span="1" style="width:10%;">
+                <col span="1" style="width:30%;">
+                <col span="1" style="width:10%;">
+                <col span="1" style="width:20%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">1 Depth</th>
+                    <th scope="col">2 Depth</th>
+                    <th scope="col">3 Depth</th>
+                    <th scope="col">Etc.</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>인증관리</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="./html/blockchain/인증관리.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>인증관리</td>
+                    <td>발급받지않은경우(pop)</td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="./html/blockchain/발급받지않은경우.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>약관동의</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="./html/blockchain/agree.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>약관동의</td>
+                    <td>회원확인</td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="./html/blockchain/join.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>서울마일리지</td>
+                    <td>전자지갑</td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="./html/blockchain/전자지갑.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>서울마일리지</td>
+                    <td>main</td>
+                    <td>데이터있음</td>
+                    <td></td>
+                    <td class="url"><a href="./html/blockchain/main.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>서울마일리지</td>
+                    <td>main</td>
+                    <td>데이터없음</td>
+                    <td></td>
+                    <td class="url"><a href="./html/blockchain/main_dno.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>개별마일리지</td>
+                    <td>전환내역</td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="./html/blockchain/개별마일리지_전환내역.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>개별마일리지</td>
+                    <td>전환내역</td>
+                    <td>내역(X)</td>
+                    <td></td>
+                    <td class="url"><a href="./html/blockchain/개별마일리지_전환내역_무.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>서울마일리지</td>
+                    <td>이용내역</td>
+                    <td>제로페이</td>
+                    <td></td>
+                    <td class="url"><a href="./html/blockchain/이용내역_제로페이.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>서울마일리지</td>
+                    <td>이용내역</td>
+                    <td>제로페이</td>
+                    <td>내역(X)</td>
+                    <td class="url"><a href="./html/blockchain/이용내역_제로페이_무.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>서울마일리지</td>
+                    <td>이용내역</td>
+                    <td>계좌이체</td>
+                    <td>내역</td>
+                    <td class="url"><a href="./html/blockchain/이용내역_계좌이체_내역.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>서울마일리지</td>
+                    <td>이용내역</td>
+                    <td>계좌이체</td>
+                    <td>내역(X))</td>
+                    <td class="url"><a href="./html/blockchain/이용내역_계좌이체_내역_무.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>서울마일리지</td>
+                    <td>이용내역</td>
+                    <td>상품권</td>
+                    <td></td>
+                    <td class="url"><a href="./html/blockchain/이용내역_상품권.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <!-- <tr>
+                    <td>서울마일리지</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="./html/blockchain/.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr> -->
+            </tbody>
+        </table>
+	</div>
+    <!-- //블록체인-->
+
+    <h2 id="c1">스마트헬스케어</h2>
+	<div class="cont">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col span="1" style="width:10%;">
+                <col span="1" style="width:10%;">
+                <col span="1" style="width:10%;">
+                <col span="1" style="width:10%;">
+                <col span="1" style="width:30%;">
+                <col span="1" style="width:10%;">
+                <col span="1" style="width:20%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">1 Depth</th>
+                    <th scope="col">2 Depth</th>
+                    <th scope="col">3 Depth</th>
+                    <th scope="col">Etc.</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>내원이력</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="./html/smartcare/내원이력.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>내원상세</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="./html/smartcare/내원상세.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>검사결과상세</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="./html/smartcare/검사결과상세.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+                <tr>
+                    <td>처방약조회</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="url"><a href="./html/smartcare/처방약조회.html" target="_blank"></a></td>
+                    <td></td>
+                    <td><span class="red"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- //스마트헬스케어 -->
+
+</div>
+<!-- //wrap -->
+<script type="text/javascript">
+jQuery(function($){
+	$.each($("td.url > a"), function(i,v){
+		$(v).text($(v).attr("href"));
+	});
+});
+</script>
+</body>
+</html>

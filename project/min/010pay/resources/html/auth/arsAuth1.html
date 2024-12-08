@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>010페이</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" href="../../css/owl.carousel.min.css">
+<link rel="stylesheet" href="../../css/common.css?ezauthver=5.0">
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../../js/html5shiv.js"></script>
+<script type="text/javascript" src="../../js/respond.min.js"></script>
+<![endif]-->
+<script src="../../js/jquery-1.8.3.min.js"></script>
+<script src="../../js/jquery.placeholder.min.js"></script>
+<script src="../../js/owl.carousel.min.js"></script>
+<script src="../../js/design.js?ezauthver=5.0" defer="defer"></script>
+<script src="../../js/commonmsg.js?ezauthver=5.0"></script>
+<script src="../../js/commonutil.js?ezauthver=5.0"></script>
+</head>
+
+<body>
+<!-- form -->
+<form class="main_form" action="javascript: void(0);" autocomplete="off">
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<div id="header">
+			<div class="container">
+				<!-- <h1 class="brand-name"><a href="#"><span><img src="../../images/logo.svg" class="brand-logo" alt="010pay"></span></a></h1> -->
+				<div class="page-title">
+					<h2 class="title"><span class="text-brand">ARS</span> 인증</h2>
+				</div>
+				<button type="button" id="closeWindow" class="btn-close"><i class="icon-times">창닫기</i></button>
+			</div>
+		</div>
+		<!-- //header -->
+
+		<!-- content -->
+		<div id="content">
+			<!-- container -->
+			<div class="container">
+				<!-- headline -->
+				<div class="headline text-brand">
+					<p class="small">안전한 계좌 등록을 위해</p>
+					<p>ARS 인증 요청 후<br>
+						아래 <strong>인증번호 2자리 입력</strong></p>
+				</div>
+				<!-- //headline -->
+
+				<!-- ARS 인증 -->
+				<div class="section ars-auth">
+					<div class="well">
+						<p class="auth-number"><span>2</span> <span>3</span></p>
+						<p class="info-text">'자동이체' 알림 문자는 은행 시스템에<br>
+							정상 반영되었다는 안내 문자입니다.</p>
+					</div>
+				</div>
+				<!-- //ARS 인증 -->
+
+				<!-- bottom area -->
+				<div class="bottom-area">
+					<div class="container">
+						<button type="button" id="send" class="btn"><i class="icon icon-mobile"></i> <span class="text-brand">ARS 인증 요청</span></button>
+					</div>
+				</div>
+				<!-- //bottom area -->
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- //wrap -->
+</form>
+<!-- //form -->
+
+<!-- loading -->
+<div class="modal modal-loading">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="loading">
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+				</div>
+				<span class="text">로딩 중</span>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //loading -->
+
+<!-- common alert -->
+<div id="commonAlert" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<h3 id="alertTitle"></h3>
+				<p id="alertContents"></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" onclick="modalClose();" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //common alert -->
+
+<!-- common prompt -->
+<div id="commonPrompt" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<h3 id="promptTitle"></h3>
+				<p id="promptContents"></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" onclick="modalClose();" class="btn">취소</button>
+				<button type="button" id="promptOk" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //common prompt -->
+</body>
+</html>

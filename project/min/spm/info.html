@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<meta charset="utf-8">
+	<meta content="" name="description">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <title>간편결제매니저</title>
+    <link rel="stylesheet" type="text/css" media="all" href="resources/css/web/common.css"> 
+    <link rel="stylesheet" type="text/css" media="all" href="resources/css/web/screen_pc.css">   
+    <link rel="stylesheet" type="text/css" media="all and (max-width:600px)" href="resources/css/web/screen_mw.css">
+	<link rel="stylesheet" type="text/css" media="all and (max-width:800px) and (min-width:601px)" href="resources/css/web/screen_pad.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="resources/js/web/screen.js"></script>
+	<script src="resources/js/web/ScrollToPlugin.min.js"></script>
+	<script src="resources/js/web/TweenMax.min.js"></script>
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="resources/css/web/screen_pc_legacy.css">   
+	<![endif]-->
+</head>
+<body>
+<div id="wrap">
+
+	<!--header-->
+	<div id="header">
+		<!--gnb-->
+		<div id="sect_navi">
+			<h1><a href="main.html"><img src="resources/images/web/sep_logo.png" alt="간편결제매니저"></a></h1>
+			<ul class="gnb">
+				<li class="on" >
+					<a href="info.html" >서비스 안내</a>
+					<ul class="gnb_list snb_01"><!--[D]서브메뉴1-->
+						<li id="menu_sect_info"><a href="#">서비스 소개</a></li>
+						<li id="menu_sect_info_use"><a href="#">서비스 가입/이용방법</a></li>
+					</ul>
+				</li>
+				<li >
+					<a href="service.html">서비스 이용</a>
+					<ul class="gnb_list snb_02" style="display:none;"><!--[D]서브메뉴2-->
+						<li id="menu_sect_join"><a  href="#">서비스 가입</a></li>
+						<li id="menu_sect_pw"><a href="#">비밀번호 재설정</a></li>
+						<li id="menu_sect_end"><a href="#">서비스 해지</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="center_notice.html">고객센터</a>
+					<ul class="gnb_list snb_03" style="display:none;"><!--[D]서브메뉴3-->
+						<li><a href="center_notice.html">공지사항</a></li>
+						<li><a href="center_faq.html">FAQ</a></li>
+						<li><a href="center_contact.html">1:1문의</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!--//gnb-->
+		<!--notice-->
+		<div id="sect_top_noti">
+			<p class="notice"><a href="#">[이벤트] 간편결제매니저 입니다.간편결제매니저 입니다.</a></p>
+		</div>
+		<!--//notice-->
+	</div>
+	<!--//header-->
+	<!--컨텐츠영역-->
+	<div id="container">
+		<!--서비스소개-->
+		<div id="sect_info">
+			<h2 class="tit01"><img src="resources/images/web/content/title_info_top1.png" alt=""></h2>
+			
+			<div class="bg_img"><img src="resources/images/web/content/img_v03.png" alt="간편결제매니저 앱화면"></div>
+		</div>
+		<!--//서비스소개-->
+		<!--결제가쉬워진다-->	
+		<div class="area_100pc"> 
+			<div id="sec_info_down">
+				<h2 class="tit03"><img src="resources/images/web/content/title_info_down.png" alt="결제가 쉬워진다"></h2>
+				<ul>
+					<li>
+						<img src="resources/images/web/content/img_down01.png" alt="간편결제매니저 하나면 모두 ok">
+						<p>사용하시는 여러 개의 ID/PW를 <br />간편결제매니저에 한 번만 등록 하세요.<br />다양한 ID/PW를 모두 모아 간편하게!</p>
+					</li>
+					<li>
+						<img src="resources/images/web/content/img_down02.png" alt="간편결제매니저 하나면 모두 ok">
+						<p>키보드 해킹, 이미지 캡쳐, 메모리 해킹..<br />각종 위험으로부터 정보를 안전하게!<br />휴대폰 번호만으로 유출 걱정 없이 안전한 ID/PW</p>
+					</li>
+					<li>
+						<img src="resources/images/web/content/img_down03.png" alt="간편결제매니저 하나면 모두 ok">
+						<p>해킹, 피싱, 스미싱 등 <br />결제 정보 도용으로 인한<br />금융 피해 발생 시 최대 100만원  보상</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--//결제가쉬워진다-->	
+		<!--이용방법타이틀-->
+		<div id="sect_info_use">
+			<h2 class="tit01"><img src="resources/images/web/content/title_info_use.png" alt="간편결제매니저 이용방법"></h2>
+			<div class="bg_img"><img src="resources/images/web/content/img_v04.png" alt="간편결제매니저 앱화면"></div>
+		</div>
+		<!--//이용방법타이틀-->
+		<!--가입/이용방법알아보기-->
+		<div class="area_100pc"> 
+			<div class="sec_join_meth">
+				<h2 class="tit01"><img src="resources/images/web/content/title_info_meth.png"  alt="가입방법알아보기"></h2>
+				<div class="img_Group">
+					<img src="resources/images/web/content/img_info_1_1.png" alt="서비스가입 1.휴대폰번호입력 인증번호 받기 클릭 2.수신된 인증번호 입력">
+					<img src="resources/images/web/content/img_info_1_2.png" alt="앱설치 1.앱다운로드문자수신 링크 클릭 2.구글 플레이스토어 설치 클릭">
+					<img src="resources/images/web/content/img_info_1_3.png" alt="앱설정 1.비밀번호 입력 2.비밀번호 분실시 사용할 이메일 입력">
+					<img src="resources/images/web/content/img_info_1_4.png" alt="간편결제등록 1.사용하는 간편결제 선택 2.간편결제 결제정보 입력">
+				</div>
+			</div>
+			<div class="sec_join_meth">
+				<h2 class="tit01"><img src="resources/images/web/content/title_info_meth2.png"  alt="이용방법알아보기"></h2>
+				<div class="img_Group">
+					<div class="tip">
+						<img src="resources/images/web/content/img_info_1_1_2.gif" alt="간편결제매니저 다운" class="txt">
+						<!-- 익스플로러 -->
+						<ul>
+						<li><a href="#;"><img src="resources/images/web/content/is_download_on.gif" alt="익스플로러 버전 다운로드"></a></li>
+						<li><a href="#;"><img src="resources/images/web/content/cr_download_off.gif" alt="크롬 버전 다운로드"></a></li>
+						</ul>
+						<!-- //익스플로러 -->
+						<!-- 크롬 -->
+						<ul style="display:none">
+						<li><a href="#;"><img src="resources/images/web/content/is_download_off.gif" alt="익스플로러 버전 다운로드"></a></li>
+						<li><a href="#;"><img src="resources/images/web/content/cr_download_on.gif" alt="크롬 버전 다운로드"></a></li>
+						</ul>
+						<!-- //크롬 -->
+					</div>
+					<img src="resources/images/web/content/img_info_2_2.png" alt=" " width="114%" >
+				</div>
+			</div>
+		</div>
+		<!--//가입/이용방법알아보기-->
+	</div>
+	<!--//컨텐츠영역-->
+	
+	<!--푸터-->
+	<div id="footer">
+		<div class="footM">
+			<p class="link"><a href="#">회사소개</a><em>|</em><a href="#">이용약관</a><em>|</em><a href="#" class="bold">개인정보취급방침</a></p>
+			<p class="txt">(주)민앤지  대표 이경민<em>|</em>사업자등록번호 214-88-39117<em>|</em>통신판매업신고 제2010-서울동대문-0162호<br />
+서울시 서초구 반포동 748-1 청호타워 6층<em>|</em>고객센터 1599-4704<em>|</em>FAX 02-929-4424<br /><br />
+Copyright (C) Minwise Co.,Ltd. All right reserved.
+			</p>
+			<p class="tel_logo"><img src="resources/images/web/logo_tel.png" alt="skt,kt,lgt"></p>
+			<!--고객센터/패밀리사이트:모바일 노출X-->
+			<div class="footR">
+				<p class="center"><img src="resources/images/web/center.png" width="188" height="75" alt="고객센터1599-4704 평일오전9시부터 오후6시까지"></p>
+				<div class="familysite">
+					<p class="selTxt"><a id="familysite" class="">FAMILY SITE</a></p>
+					<div id="family" style="display:none;"><!--패밀리사이트 셀렉트박스-->
+						<ul>
+							<li><a href="http://www.minwise.co.kr" target="_blank">(주)민앤지</a></li>
+							<li><a href="http://www.ipns.kr" target="_blank">휴대폰번호도용방지서비스</a></li>
+							<li><a href="http://www.loginplus.co.kr" target="_blank">로그인플러스</a></li>
+					   </ul>
+				   </div>
+				</div>
+			</div>
+			<!--//고객센터/패밀리사이트-->
+		</div>
+	</div>
+	<!--푸터-->
+
+</div>
+
+</body>
+</html>

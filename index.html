@@ -1,247 +1,608 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8" />
-<meta http-equiv="Content-Language" content="ko-KR" />
-<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-<title>KIJ Portfolio</title>
-<style>
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  border: none;
-  outline: none;
-}
-html, body {
-  background-color: #101010;
-}
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: transparent;
-  }
-}
-@media (prefers-color-scheme: light) {
-  body {
-    background-color: #101010;
-  }
-}
-.wrapper {
-  width: 95%;
-  margin: 0 auto;
-}
-h1 {
-  padding: 20px 0 5px;
-  position: absolute;
-  right: 20px;
-  top: 0;
-}
-h1 img {
-  width: 60px;
-}
-#buttons {
-  width: 50%;
-}
-.button-value {
-  border: 2px solid darkkhaki;
-  padding: 7px 16px;
-  border-radius: 3em;
-  margin-top: 10px;
-  background-color: transparent;
-  color: darkkhaki;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-.active {
-  background-color: darkkhaki;
-  color: #000 !important;
-}
-#products {
-  padding: 20px 0;
-}
-.card {
-  margin-top: 10px;
-}
-.card a {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  color: #999;
-}
-.outlink::after {
-  content:'➜';
-  margin-left: 4px;
-}
-.hide {
-  display: none;
-}
-nav {
-  display: flex;
-  padding: 30px 0;
-}
-nav a {
-  color: darkkhaki;
-  padding-right: 30px;
-}
-#preview {
-  position: fixed;
-  top: 0; right: 0;
-  height: 100vh;
-  width: 49%;
-  border-width: 2px 0 0 2px;
-  border-style:  solid;
-  border-color: #333;
-}
-@media (max-width: 1024px) { 
-  #preview {
-    display: none;
-  }
-  #buttons {
-    width: auto;
-  }
-  .button-value {
-    padding: 10px 20px;
-  }
-  nav a {
-    margin-right: 0;
-    padding: 10px;
-  }
-}
-.sdword {
-  margin-bottom: 10px;
-}
-.sdword ul {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  list-style: none;
-  margin-top: 5px;
-}
-.sdword li {
-  background-color: rgb(119, 116, 67);
-  padding: 5px;
-  font-size: 12px;
-  color: #fff;
-}
-</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="resource/css/page.css">
+<title>Kim.I.J Portfolio</title>
 </head>
-
 <body>
 
-<div class="wrapper">
-  <h1>
-    <img
-      src="https://rockij.github.io/portfolio/resource/image/logo-ijung.png"
-      alt="logo"
-    />
-  </h1>
-  <nav>
-    <a href="https://rockij.github.io/portfolio">Portfolio</a>
-    <a href="https://rockij.github.io/blog">Blog</a>
-  </nav>
-  <div id="buttons">
-    <button class="button-value" onclick="filterProduct('all')">all</button>
-    <button class="button-value" onclick="filterProduct('mobile')">mobile</button>
-    <button class="button-value" onclick="filterProduct('pc')">pc</button>
-    <!-- <button class="button-value" onclick="filterProduct('etc')">etc</button> -->
-  </div>
-  <div id="products"></div>
-  <iframe id="preview" src="" frameborder="0"></iframe>
+<header><h1><img src="resource/image/logo-ijung.png" alt="logo"></h1>
+    <div class="menu-btn">
+        <ion-icon name="menu"></ion-icon>
+    </div>
+    <div class="menu">
+        <div class="close-menu">
+            <ion-icon name="close"></ion-icon>
+        </div>
+        <div class="nav">
+            <ul class="main-menu">
+                <li class="main-menu-item">
+                    <a href="/">Portfolio</a>
+                </li>
+                <li class="main-menu-item">
+                    <a href="blog/">Blog</a>
+                </li>
+            </ul>
+        </div>
+        <div class="media">
+            <ul>
+                <li><ion-icon name="call"></ion-icon>010 4257 5775</li>
+                <li><ion-icon name="at-outline"></ion-icon>rockij83@nate.com</li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- //header -->
+
+<section class="work-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="box-menu">
+                    <ul>
+                        <li data-filter="*">All</li>
+                        <li data-filter=".app">app</li>
+                        <li data-filter=".mw">mobile web</li>
+                        <li data-filter=".pc">pc</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row box-list">
+
+            <div class="col-lg-3 mix box-item app">
+                <img src="screen/pass2.png" alt="PASS">
+                <div class="content">
+                    <article>
+                        <h2><a href="project/min/pass/html/app/default/" target="_blank" title="전체보기">PASS앱<ion-icon name="copy-outline"></ion-icon></a></h2>
+                        <ul>
+                            <li>본인확인, 자산관리를 쉽고 빠르게 할 수 있도록 도와주는 앱</li>
+                            <li>앱스토어,구글플레이 'PASS' 검색</li>
+                            <li>인원 2 / 운영기간 4년</li>
+                            <li>aos_4.4.2 / ios_9.0 이상</li>
+                        </ul>
+                        <button type="button" class="pageview" onclick="popupOpen('PASS-APP','mwf');">주요작업 리스트</button>
+                    </article>
+                </div>
+            </div>
+            <!-- //PASS APP -->
+            
+            <div class="col-lg-3 mix box-item mw pc">
+                <img src="screen/tior.png" alt="티오르">
+                <div class="content">
+                    <article>
+                        <!-- project/min/tior/ -->
+                        <h2><a href="https://tior.co.kr/" target="_blank" title="url연결">티오르 모바일웹<ion-icon name="copy-outline"></ion-icon></a></h2>
+                        <ul>
+                            <li>실시간 시승 예약 서비스</li>
+                            <li>인원 2 / 기간 5주</li>
+                            <li>aos_6.0 / ios_10.0 이상</li>
+                            <li>chrome, safari, edge, ie11, ie10, whale</li>
+                        </ul>
+                        <button type="button" class="pageview" onclick="popupOpen('tior','mwf');">주요작업 리스트</button>
+                    </article>
+                </div>
+            </div>
+            <!-- //티오르 -->
+
+            <div class="col-lg-3 mix box-item app">
+                <img src="screen/whistle.png" alt="휘슬">
+                <div class="content">
+                    <article>
+                        <h2><a href="project/min/whistle/app/" target="_blank" title="전체보기">휘슬(주정차단속앱)<ion-icon name="copy-outline"></ion-icon></a></h2>
+                        <ul>
+                            <li>내차량 등록하고 주정차단속알림 및 위반내역 등 확인할 수 있는 서비스</li>
+                            <li>인원 2 / 기간 3주</li>
+                            <li>aos_6.0 / ios_10.0 이상</li>
+                        </ul>
+                        <button type="button" class="pageview" onclick="popupOpen('whistle','mwf');">주요작업 리스트</button>
+                    </article>
+                </div>
+            </div>
+            <!-- //휘슬 APP -->
+            
+            <div class="col-lg-3 mix box-item app">
+                <img src="screen/pass-license.png" alt="모바일운전면허">
+                <div class="content">
+                    <article>
+                        <h2><a href="project/min/pass/html/app/license/" target="_blank" title="전체보기">모바일운전면허 확인서비스 소개(only mobile)<ion-icon name="copy-outline"></ion-icon></a></h2>
+                        <ul>
+                            <li>운전면허증을 휴대폰에 저장해서 사용하도록 해주는 서비스 소개</li>
+                            <li>인원 1 / 기간 5주</li>
+                            <li>aos_6.0 / ios_10.0 이상</li>
+                            <li>
+                                작업 및 특이사항
+                                <ol>
+                                    <li>세로 터치 슬라이드</li>
+                                    <li>슬라이드와 스크롤 동시 적용</li>
+                                    <li>animation per section</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+            <!-- //모바일운전면허 확인서비스 소개(only mobile) -->
+
+            <div class="col-lg-3 mix box-item mw pc">
+                <img src="screen/pass-license2.png" alt="모바일운전면허">
+                <div class="content">
+                    <article>
+                        <h2><a href="project/min/pass/html/web/homp/license.html" target="_blank" title="전체보기">모바일운전면허 확인서비스 소개(반응형웹)<ion-icon name="copy-outline"></ion-icon></a></h2>
+                        <ul>
+                            <li>운전면허증을 휴대폰에 저장해서 사용하도록 해주는 서비스 소개</li>
+                            <li>인원 1 / 기간 3주</li>
+                            <li>aos_6.0 / ios_10.0 이상</li>
+                            <li>chrome, safari, edge, ie11, ie10, whale</li>
+                            <li>
+                                작업 및 특이사항
+                                <ol>
+                                    <li>fullpage.js</li>
+                                    <li>animation per section</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+            <!-- //모바일운전면허 확인서비스 소개 -->            
+
+            <div class="col-lg-3 mix box-item app">
+                <img src="screen/health2.png" alt="건강지키미 단독앱">
+                <div class="content">
+                    <article>
+                        <h2><a href="project/min/health/app/2.0/html/" target="_blank" title="전체보기">건강지키미 단독앱<ion-icon name="copy-outline"></ion-icon></a></h2>
+                        <ul>
+                            <li>나의 보험/건강 정보를 간편하게 조회할 수 있는 서비스</li>
+                            <li>앱스토어, 구글플레이 '건강지키미' 검색</li>
+                            <li>인원 1 / 기간 4주</li>
+                            <li>aos_6.0 / ios_10.0 이상</li>
+                        </ul>
+                        <button type="button" class="pageview" onclick="popupOpen('health-app','mwf');">주요작업 리스트</button>
+                    </article>
+                </div>
+            </div>
+            <!-- //건강지키미 APP -->
+
+            <div class="col-lg-3 mix box-item app">
+                <img src="screen/safecash.png" alt="세이프캐시 단독앱">
+                <div class="content">
+                    <article>
+                        <h2><a href="project/min/safecash/app/2.0/app/" target="_blank" title="전체보기">세이프캐시 단독앱<ion-icon name="copy-outline"></ion-icon></a></h2>
+                        <ul>
+                            <li>내 계좌 연동하고 관리할 수 있는 서비스</li>
+                            <li>앱스토어, 구글플레이 '세이프캐시' 검색</li>
+                            <li>인원 1 / 기간 3주</li>
+                            <li>aos_6.0 / ios_10.0 이상</li>
+                        </ul>
+                        <button type="button" class="pageview" onclick="popupOpen('sfcash-app','mwf');">주요작업 리스트</button>
+                    </article>
+                </div>
+            </div>
+            <!-- //세이프캐시 APP -->
+
+            <div class="col-lg-3 mix box-item mw pc">
+                <img src="screen/pass.png" alt="PASS 홈페이지">
+                <div class="content">
+                    <article>
+                        <h2><a href="https://www.sktpass.com/" target="_blank" title="url연결">PASS 홈페이지(반응형웹)<ion-icon name="copy-outline"></ion-icon></a></h2>
+                        <ul>
+                            <li>PASS앱 소개 및 공인인증서 복사</li>
+                            <li>인원 1 / 기간 2주</li>
+                            <li>aos_6.0 / ios_10.0 이상</li>
+                            <li>chrome, safari, edge, ie11, ie10, whale</li>
+                            <li>
+                                작업 및 특이사항
+                                <ol>
+                                    <li>fullpage.js</li>
+                                    <li>animation per section</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+            <!-- //PASS 홈페이지 -->
+
+            <div class="col-lg-3 mix box-item app">
+                <img src="screen/sfmyinfo.png" alt="내정보지키미">
+                <div class="content">
+                    <article>
+                        <h2><a href="project/min/safemyinfo/app/app/" target="_blank" title="전체보기">내정보지키미 단독앱<ion-icon name="copy-outline"></ion-icon></a></h2>
+                        <ul>
+                            <li>나의 개인정보를 모니터링을 할 수 있는 서비스</li>
+                            <li>앱스토어, 구글플레이 '내정보지키미' 검색</li>                            
+                            <li>인원 1 / 기간 3주</li>
+                            <li>aos_6.0 / ios_10.0 이상</li>
+                        </ul>
+                        <button type="button" class="pageview" onclick="popupOpen('sfmyinfo-app','mwf');">주요작업 리스트</button>
+                    </article>
+                </div>
+            </div>
+            <!-- //내정보지키미 APP -->
+
+            <div class="col-lg-3 mix box-item mw pc">
+                <img src="screen/sfmyinfo2.png" alt="내정보지키미 홈페이지">
+                <div class="content">
+                    <article>
+                        <h2><a href="https://safemyinfo.kr/" target="_blank" title="전체보기">내정보지키미 홈페이지<ion-icon name="copy-outline"></ion-icon></a></h2>
+                        <ul>
+                            <li>내정보지키미 APP 소개</li>
+                            <li>인원 1 / 기간 2주</li>
+                            <li>
+                                작업 및 특이사항
+                                <ol>
+                                    <li>모바일 버전은 폰에서만 확인 가능</li>
+                                    <li>fullpage.js</li>
+                                    <li>animation per section</li>
+                                    <li>aos_6.0 / ios_10.0 이상</li>
+                                    <li>chrome, safari, edge, ie11, ie10, whale</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+            <!-- //내정보지키미 홈페이지 -->
+
+            <div class="col-lg-3 mix box-item app">
+                <img src="screen/seoulcard.png" alt="서울시민카드">
+                <div class="content">
+                    <article>
+                        <h2><a href="project/open/seoulcard/" target="_blank" title="전체보기">서울시민카드 APP<ion-icon name="copy-outline"></ion-icon></a></h2>
+                        <ul>
+                            <li>공공시설 통합 모바일 카드 안내</li>
+                            <li>앱스토어, 구글플레이 '서울시민카드' 검색</li>
+                            <li>인원 2 / 기간 6주</li>
+                            <li>aos_6.0 / ios_10.0 이상</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+            <!-- //서울시민카드 -->
+
+            <div class="col-lg-3 mix box-item app">
+                <img src="screen/safecash2.png" alt="세이프캐시 SKT">
+                <div class="content">
+                    <article>
+                        <h2><a href="project/min/safecash/app/1.0/skt/" target="_blank" title="전체보기">세이프캐시 SKT<ion-icon name="copy-outline"></ion-icon></a></h2>
+                        <ul>
+                            <li>SKT PASS앱내 부가서비스로 내 계좌 연동하고 관리할 수 있는 서비스</li>
+                            <li>인원 1 / 기간 2주</li>
+                            <li>aos_6.0 / ios_10.0 이상</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+            <!-- //세이프캐시 SKT -->
+
+            <div class="col-lg-3 mix box-item pc">
+                <img src="screen/tencent.png" alt="텐센트 게이밍 버디 홈페이지">
+                <div class="content">
+                    <article>
+                        <h2><a href="project/min/tencent/" target="_blank" title="전체보기">텐센트 게이밍 버디 홈페이지<ion-icon name="copy-outline"></ion-icon></a></h2>
+                        <ul>
+                            <li>PC게임플레이어 소개</li>
+                            <li>인원 1 / 기간 2주</li>
+                            <li>
+                                작업 및 특이사항
+                                <ol>
+                                    <li>상단 css animation</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+            <!-- //텐센트 게이밍버디 -->
+
+            <div class="col-lg-3 mix box-item mw pc">
+                <img src="screen/b-bank.png" alt="비뱅크 홈페이지">
+                <div class="content">
+                    <article>
+                        <h2><a href="project/min/b-bank/" target="_blank" title="전체보기">비뱅크 홈페이지(반응형웹)<ion-icon name="copy-outline"></ion-icon></a></h2>
+                        <ul>
+                            <li>암호화폐 정보제공 서비스 소개</li>
+                            <li>인원 1 / 기간 2주</li>
+                            <li>
+                                작업 및 특이사항
+                                <ol>
+                                    <li>animation per section</li>
+                                    <li>aos_6.0 / ios_10.0 이상</li>
+                                    <li>chrome, safari, edge, ie11, ie10, whale</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+            <!-- //비뱅크 홈페이지 -->
+
+            <div class="col-lg-3 mix box-item mw">
+                <img src="screen/hwadong.png" alt="화동양행">
+                <div class="content">
+                    <article>
+                        <!-- project/tora/hwadong/ -->
+                        <h2><a href="https://m.hwadong.com/mobile/index.jsp" target="_blank" title="url연결">화동양행 모바일웹<ion-icon name="copy-outline"></ion-icon></a></h2>
+                        <ul>
+                            <li>화동양행 소개</li>
+                            <li>인원 2 / 기간 4주</li>
+                            <li>aos_6.0 / ios_10.0 이상</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+            <!-- //화동양행 -->
+
+            <div class="col-lg-3 mix box-item app">
+                <img src="screen/btree.png" alt="Btree">
+                <div class="content">
+                    <article>
+                        <h2><a href="project/min/btree/app/" target="_blank" title="전체보기">BTREE앱<ion-icon name="copy-outline"></ion-icon></a></h2>
+                        <ul>
+                            <li>게임머니를 포인트 전환해 사용할 수 있는 서비스</li>
+                            <li>vw, rem을 이용해 window width 크기에 맞춰 전체화면이 커지는 형태</li>
+                            <li>인원 1 / 기간 4주</li>
+                            <li>aos_6.0 / ios_10.0 이상</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+            <!-- //BTREE APP -->
+
+            <div class="col-lg-3 mix box-item mw pc">
+                <img src="screen/btree2.png" alt="BTREE 홈페이지">
+                <div class="content">
+                    <article>
+                        <h2><a href="project/min/btree/homepage/" target="_blank" title="전체보기">BTREE 홈페이지(반응협웹)<ion-icon name="copy-outline"></ion-icon></a></h2>
+                        <ul>
+                            <li>게임머니를 포인트 전환해 사용할 수 있는 서비스 소개</li>
+                            <li>인원 1 / 기간 2주</li>
+                            <li>aos_6.0 / ios_10.0 이상</li>
+                            <li>chrome, safari, edge, ie11, ie10, whale</li>
+                            <li>
+                                작업 및 특이사항
+                                <ol>
+                                    <li>slick.js</li>
+                                    <li>animation per section</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+            <!-- //BTREE 홈페이지 -->
+
+            <div class="col-lg-3 mix box-item mw pc">
+                <img src="screen/stock.png" alt="주식투자노트 홈페이지">
+                <div class="content">
+                    <article>
+                        <h2><a href="https://stockn.kr/" target="_blank" title="전체보기">주식투자노트 홈페이지(반응협웹)<ion-icon name="copy-outline"></ion-icon></a></h2>
+                        <ul>
+                            <li>주식핵심정보 문제 제공 서비스</li>
+                            <li>인원 1 / 기간 2주</li>
+                            <li>
+                                작업 및 특이사항
+                                <ol>
+                                    <li>fullpage.js</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+            <!-- //주식투자노트 홈페이지 -->
+
+            <div class="col-lg-3 mix box-item mw pc">
+                <img src="screen/minwise.png" alt="민앤지 홈페이지">
+                <div class="content">
+                    <article>
+                        <h2><a href="https://www.minwise.co.kr/" target="_blank" title="전체보기">민앤지 홈페이지(반응협웹)<ion-icon name="copy-outline"></ion-icon></a></h2>
+                        <ul>
+                            <li>민앤지 회사 소개</li>
+                            <li>인원 1 / 기간 3주</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+            <!-- //민앤지 홈페이지 -->
+
+            <div class="col-lg-3 mix box-item mw pc">
+                <img src="screen/bitsignal.png" alt="비트시그널 홈페이지">
+                <div class="content">
+                    <article>
+                        <h2><a href="project/min/bitsignal/main.html" target="_blank" title="전체보기">비트시그널 홈페이지(반응협웹)<ion-icon name="copy-outline"></ion-icon></a></h2>
+                        <ul>
+                            <li>비트코인 예상가를 예측해주는 서비스</li>
+                            <li>인원 1 / 기간 5주</li>
+                            <li>
+                                작업 및 특이사항
+                                <ol>
+                                    <li>fullpage.js</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+            <!-- //비트시그널 홈페이지 -->
+
+            <div class="col-lg-3 mix box-item mw pc">
+                <img src="screen/findall.png" alt="FindAll중고거래 홈페이지">
+                <div class="content">
+                    <article>
+                        <h2><a href="project/mwill/cgs/" target="_blank" title="전체보기">FindAll중고거래 홈페이지(반응협웹)<ion-icon name="copy-outline"></ion-icon></a></h2>
+                        <ul>
+                            <li>중고거래 서비스</li>
+                            <li>인원 1 / 기간 5주</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+            <!-- //FindAll중고거래 홈페이지 -->
+
+        </div>
+    </div>
+</section>
+<!-- //content -->
+
+<!-- PASS APP -->
+<div id="mw-PASS-APP" class="ly_pop ly_alert">
+    <div class="wrap">
+        <div class="context">
+            <button type="button" class="close" onclick="popupClose('PASS-APP','mwf');"><ion-icon name="close-outline"></ion-icon></button>
+            <ul>
+                <li><a href="project/min/pass/html/app/default/main_baner_info2.html" target="_blank">차트애니메이션 배너</a></li>
+                <li><a href="project/min/pass/html/app/default/faq.html" target="_blank">selected auto width</a></li>
+                <li><a href="project/min/pass/html/app/default/qr_certify_step1.html" target="_blank">약관체크 활성화</a></li>
+                <li><a href="project/min/pass/resources/app/event/yearend_settlement.html" target="_blank">box floor, bg powder, keyframe animation</a></li>
+                <li><a href="project/min/pass/resources/app/event/thanksgiving_joiner_tab2.html" target="_blank">left right shake box, coin move animation</a></li>
+                <li><a href="project/min/pass/html/app/money/event/visit_check_tab1.html" target="_blank">vw layout, roulette animation</a></li>
+                <li><a href="project/min/pass/html/app/money/send_price.html" target="_blank">계산기 touch action</a></li>
+                <!-- <li><a href="#;" target="_blank"></a></li> -->
+            </ul>
+        </div>
+    </div>
 </div>
+<!-- //PASS APP -->
 
-<script src="resource/js/items.js"></script>
+<!-- tior -->
+<div id="mw-tior" class="ly_pop ly_alert">
+    <div class="wrap">
+        <div class="context">
+            <button type="button" class="close" onclick="popupClose('tior','mwf');"><ion-icon name="close-outline"></ion-icon></button>
+            <ul>
+                <li><a href="project/min/tior/html/main/main.html" target="_blank">mainpage</a></li>
+                <li><a href="project/min/tior/html/pop/loading.html" target="_blank">자동차 loading animation</a></li>
+                <li><a href="project/min/tior/html/brand/map_main.html" target="_blank">원하는 영역만 터치스크롤</a></li>
+                <li><a href="project/min/tior/html/brand/going.html" target="_blank">스크롤시 상단 숨기기, 일정확인 선택 박스 animation, 차종선택 팝업</a></li>
+                <li><a href="project/min/tior/html/brand/review_write_component.html" target="_blank">평가별점 선택, 태그입력 추가, 이미지 첨부파일</a></li>
+                <li><a href="project/min/tior/html/brand/review_desc_component.html" target="_blank">아코디언 리스트, 이미지 슬라이드</a></li>
+                <li><a href="project/min/tior/html/brand/checkskip_easy.html" target="_blank">간편회원예약 선택 bottom animation 팝업</a></li>
+                <li><a href="project/min/tior/html/brand/checkskip_own.html" target="_blank">전체동의 약관 체크, 전체동의 우측 화살표 선택 약관 slidetoggle</a></li>
+                <li><a href="project/min/tior/html/brand/checkskip_email.html" target="_blank">input입력 삭제버튼 입력삭제, 비밀번호 text로 보기</a></li>
+                <li><a href="project/min/tior/html/brand/noticetalk_reserve.html" target="_blank">일정변경 선택 일정 슬라이드 선택</a></li>
+                <li><a href="project/min/tior/html/my/mypage.html" target="_blank">로그인 버튼 선택 한페이지 여러개의 팝업 사용</a></li>
+                <li><a href="project/min/tior/html/schedule/estimate.html" target="_blank">구매방법 선택 선납금 range커스텀</a></li>
+                <li><a href="project/min/tior/html/newcar/newcar_payment_card.html" target="_blank">슬라이드 아코디언 메뉴</a></li>
+                <li><a href="project/min/tior/html/board/event_list.html" target="_blank">load시 자동 스크롤</a></li>
+                <li><a href="project/min/tior/html/usedcar/usedcar_detail.html" target="_blank">이미지 슬라이드, 돋보기 선택 팝업 노출시 배경 스크롤 막기, 시승예약 버튼 하단 animation 팝업</a></li>
+                <li><a href="project/min/tior/html/newcar/audi_promotion.html" target="_blank">D-몇일</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- //tior -->
+
+<!-- 휘슬 APP -->
+<div id="mw-whistle" class="ly_pop ly_alert">
+    <div class="wrap">
+        <div class="context">
+            <button type="button" class="close" onclick="popupClose('whistle','mwf');"><ion-icon name="close-outline"></ion-icon></button>
+            <ul>
+                <li><a href="project/min/whistle/app/default/main.html" target="_blank">mainpage, slide, scrolltrigger animation</a></li>
+                <li><a href="project/min/whistle/app/popup_alert.html" target="_blank">팝업 animation middle</a></li>
+                <li><a href="project/min/whistle/app/popup_bottom2.html" target="_blank">팝업 animation bottom</a></li>
+                <li><a href="project/min/whistle/app/popup_toast.html" target="_blank">팝업 animation toast</a></li>
+                <li><a href="project/min/whistle/app/loading3.html" target="_blank">자동차 loading animation</a></li>
+                <li><a href="project/min/whistle/app/set/myinfo.html" target="_blank">이메일 변경 선택 자동이메일 입력 @까지 입력 후 팝업</a></li>
+                <li><a href="project/min/whistle/app/driving/main.html" target="_blank">scroll header change</a></li>
+                <li><a href="project/min/whistle/app/default/join_terms.html" target="_blank">약관체크 fold slide animation</a></li>
+                <li><a href="project/min/whistle/app/default/join_car_number_law.html" target="_blank">input입력 밑줄, 입력값 삭제 버튼, 확인버튼 선택 배경blur 로딩창</a></li>
+                <li><a href="project/min/whistle/app/default/join_area_choice.html" target="_blank">checked animation, 다음버튼 선택 전체동의 팝업 animation</a></li>
+                <li><a href="project/min/whistle/app/default/mycar_info.html" target="_blank">slide, 차대번호 우측아이콘 복사하기</a></li>
+                <li><a href="project/min/whistle/app/violation/violation_list.html" target="_blank">유의사항 아코디언, 상단 제목 selectbox auto width, 다시조회하기 선택 약관선택 팝업 animation</a></li>
+                <li><a href="project/min/whistle/app/driving/intro_before.html" target="_blank">배경 이미지 slowly animation</a></li>
+                <li><a href="project/min/whistle/app/driving/report_end.html" target="_blank">count animation</a></li>
+                <li><a href="project/min/whistle/app/driving/report_state_step2_detail.html" target="_blank">답변하기 선택 태그선택 팝업 animation</a></li>
+                <li><a href="project/min/whistle/app/set/push.html" target="_blank">push체크 animation</a></li>
+                <li><a href="project/min/whistle/app/set/faq.html" target="_blank">아코디언 메뉴, 헤더탭 선택표시 animation</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- //휘슬 APP -->
+
+<!-- 건강지키미 APP -->
+<div id="mw-health-app" class="ly_pop ly_alert">
+    <div class="wrap">
+        <div class="context">
+            <button type="button" class="close" onclick="popupClose('health-app','mwf');"><ion-icon name="close-outline"></ion-icon></button>
+            <ul>
+                <li><a href="project/min/health/app/2.0/html/main/main_before.html" target="_blank">mainpage, scrolltrigger animation, scroll시 top버튼 show/hide</a></li>
+                <li><a href="project/min/health/app/2.0/html/main/terms_list_sample.html" target="_blank">약관체크 fold slide animation </a></li>
+                <li><a href="project/min/health/app/2.0/html/main/bohum_summary.html" target="_blank">동그라미 chart</a></li>
+                <li><a href="project/min/health/app/2.0/html/main/magazine_list_skeleton.html" target="_blank">skeleton screen</a></li>
+                <li><a href="project/min/health/app/2.0/html/aireview/result_vs.html" target="_blank"></a>별점, 화살표 선택 sldieShow, ?선택 팝업</li>
+                <li><a href="project/min/health/app/2.0/html/analysis/survey_before.html" target="_blank">설문조사 시작 선택 팝업 slide</a></li>
+                <li><a href="project/min/health/app/2.0/html/analysis/survey_step1.html" target="_blank">설문조사 순서대로 진행 가능</a></li>
+                <li><a href="project/min/health/app/2.0/html/set/push.html" target="_blank">push체크 animation</a></li>
+                <li><a href="project/min/health/app/2.0/html/scraping.html" target="_blank">line loading bar animation</a></li>
+                <li><a href="project/min/health/app/2.0/html/loading.html" target="_blank">하트모양 loading animation</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- //건강지키미 APP -->
+
+<!-- 세이프캐시 APP -->
+<div id="mw-sfcash-app" class="ly_pop ly_alert">
+    <div class="wrap">
+        <div class="context">
+            <button type="button" class="close" onclick="popupClose('sfcash-app','mwf');"><ion-icon name="close-outline"></ion-icon></button>
+            <ul>
+                <li><a href="project/min/safecash/app/2.0/app/home/home.html" target="_blank">mainpage</a></li>
+                <li><a href="project/min/safecash/app/2.0/app/bank/assets_my.html" target="_blank">count animation</a></li>
+                <li><a href="project/min/safecash/app/2.0/app/bank/assets_list.html" target="_blank">기간설정 선택 달력선택 팝업</a></li>
+                <li><a href="project/min/safecash/app/2.0/app/benefit/benefit_pay_sale.html" target="_blank">외식쿠폰 thumbnailSlide, 리스트 선택 팝업 animation</a></li>
+                <li><a href="project/min/safecash/app/2.0/app/set/push.html" target="_blank">push체크 animation</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- //세이프캐시 APP -->
+
+<!-- 내정보지키미 APP -->
+<div id="mw-sfmyinfo-app" class="ly_pop ly_alert">
+    <div class="wrap">
+        <div class="context">
+            <button type="button" class="close" onclick="popupClose('sfmyinfo-app','mwf');"><ion-icon name="close-outline"></ion-icon></button>
+            <ul>
+                <li><a href="project/min/safemyinfo/app/app/main_before.html" target="_blank">mainpage, slide animation, header gnb menu</a></li>
+                <li><a href="project/min/safemyinfo/app/app/join_lgu.html" target="_blank">이메일 아이디 입력중 도메인 자동입력</a></li>
+                <li><a href="project/min/safemyinfo/app/app/pw_reset_pop.html" target="_blank">bottom popup animation</a></li>
+                <li><a href="project/min/safemyinfo/app/app/monitoring_pay_search.html" target="_blank">안전상태 동그라미 animation</a></li>
+                <li><a href="project/min/safemyinfo/app/app/monitoring_pay_infofrm.html" target="_blank">입력폼, 주소입력창, 주소입력 검색 리스트</a></li>
+                <li><a href="project/min/safemyinfo/app/app/monitoring_detail2.html" target="_blank">스크롤시 header change, title seleced auto width</a></li>
+                <li><a href="project/min/safemyinfo/app/app/calldenial_tab1_list.html" target="_blank">bottom popup auto animation</a></li>
+                <li><a href="project/min/safemyinfo/app/app/wifi_checking.html" target="_blank">wifi aniamtion</a></li>
+                <li><a href="project/min/safemyinfo/app/app/wifi_checking_result.html" target="_blank">무한 circle animation</a></li>
+                <li><a href="project/min/safemyinfo/app/app/alarm_set.html" target="_blank">push체크 animation</a></li>
+                <li><a href="project/min/safemyinfo/app/app/service.html" target="_blank">fullpage slide animation</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- //내정보지키미 APP -->
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+<script src="global/resources/js/global.js"></script>
+<script src="resource/js/design.js"></script>
 <script>
-let products = {
-  data: [
-    ...items,
-  ]
-};
-for (let i of products.data) {
-  // create card
-  let card = document.createElement('div');
-  let preview = document.querySelector('#preview');
-  // 카드에는 범주가 있어야 하며 처음에는 숨겨져 있어야 한다.
-  card.classList.add('card', i.category, i.category2, 'hide');
-  // container
-  let container = document.createElement('div');
-  container.classList.add('container');
-  // product name
-  let name = document.createElement('a');
-  name.setAttribute('href', i.url);
-  name.setAttribute('target', '_blank');
-  name.classList.add('project-name');
-  name.classList.add(i.linkType);
-  name.innerText = `${i.productName} [${i.workdate}]`.toLowerCase();
-  container.appendChild(name);
-  card.appendChild(container);
-  document.getElementById('products').appendChild(card);
-  name.addEventListener('mouseover', () => {
-    preview.setAttribute('src', i.url);
-  });
-  let elements = document.querySelectorAll('.project-name');
-  name.addEventListener('click', () => {
-    elements.forEach((element, index) => {
-      element.classList.remove('active');
-    });
-    setTimeout(() => {
-      name.classList.add('active');
-    }, 500);
-  });
-}
-
-function filterProduct(value) {
-  let buttons = document.querySelectorAll('.button-value');
-  buttons.forEach((button) => {
-    // 값이 내부 값인지 확인
-    // console.log(value);
-    // console.log(button.innerText);
-    if (value.toLowerCase() == button.innerText.toLowerCase()) {
-      button.classList.add('active');
-    } else {
-      button.classList.remove('active');
-    }
-  });
-
-  // select all cards
-  let elements = document.querySelectorAll('.card');
-  // loop through all cards
-  elements.forEach((element) => {
-    // 'all' 버튼 클릭 시 모든 카드 표시
-    if (value == 'all') {
-      element.classList.remove('hide');
-    } else {
-      if (element.classList.contains(value)) {
-        element.classList.remove('hide');
-      } else {
-        element.classList.add('hide');
-      }
-    }
-  });
-}
-
-// search button click
-// document.getElementById('search').addEventListener('click', () => {
-//   let searchInput = document.getElementById('search-input').value;
-//   let elements = document.querySelectorAll('.product-name');
-//   let cards = document.querySelectorAll('.card');
-
-//   // loop through all elements
-//   elements.forEach((element, index) => {
-//     // 텍스트에 검색 값이 포함되어 있는지 확인
-//     if (element.innerText.includes(searchInput.toLowerCase())) {
-//       // display matching card
-//       cards[index].classList.remove('hide');
-//     } else {
-//       // hide others
-//       cards[index].classList.add('hide');
-//     }
-//   });
-// });
-
-window.onload = () => {
-  filterProduct('all');
-}
+$(document).ready(function() {
+    var mixer = mixitup('.box-list');
+    gnbMenu();
+    $('.box-menu ul li:eq(0)').trigger('click');
+})
 </script>
 
 </body>

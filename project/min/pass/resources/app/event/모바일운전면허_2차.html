@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>SKT PASS</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/contents.css">
+    <link href="resources/app/css/event.css" media="screen" rel="stylesheet">
+</head>
+<body class="viewer_body">
+<header class="header">
+    <div class="header_inner">
+        <h1 class="header_tit">PASS</h1>
+        <a href="#" class="ico-close header_btn"><span class="blind">닫기</span></a>
+    </div>
+</header>
+<!-- //header -->
+
+<div id="driver2" class="promoWrap wrap hwv">
+    <section class="prBanner">
+        <span class="bn img"><img src="resources/app/image/driver2/dirver_banner.png" alt=""></span>
+        <ul class="btnWrap btn2">
+            <li><button type="button" class="prBtn">무료 이벤트 참여하기</button></li>
+            <li><button type="button" class="prBtn"><i class="icon kakao"></i>친구에게 알려주기</button></li>
+        </ul>
+    </section>
+    <section class="agreeSec">
+        <ul class="agree">
+            <li>
+                <span class="checkbox all push">
+                    <input type="checkbox" id="agree-all" value="">
+                    <label for="agree-all"></label>
+                    <span>전체 동의</span>
+                </span>
+            </li>
+            <li>
+                <div class="checkbox button">
+                    <input type="checkbox" id="agree-terms1" value="">
+                    <label for="agree-terms1"></label><button type="button" onclick="layer_open('doc')">[필수] 개인정보 수집, 이용 동의</button>
+                </div>
+                <div class="checkbox button">
+                    <input type="checkbox" id="agree-terms2" value="">
+                    <label for="agree-terms2"></label><button type="button" onclick="layer_open('doc2')">[필수] 개인정보 처리 위탁 동의</button>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section class="explainWrap">
+        <div class="evtWrap">
+            <strong>이벤트 응모 방법</strong>
+            <ul class="stepList">
+                <li><strong class="step">STEP 1.</strong><span>약관 동의 후 ‘이벤트 참여하기’ 클릭!</span></li>
+                <li><strong class="step">STEP 2.</strong><span>모바일운전면허 확인서비스 가입 후 내 운전면허증 등록하기</span></li>
+                <li><strong class="step">STEP 3.</strong><span>CU 및 GS25 편의점에서 PASS 모바일운전면허 확인서비스 사용하면 응모완료!</span></li>
+            </ul>
+        </div>
+        <div class="evtWrap">
+            <strong>모바일운전면허 확인서비스란?</strong>
+            <span>내 운전면허증을 PASS앱에 등록하여, 온/오프라인에서 사용할 수 있는 서비스로, ICT규제샌드박스 승인을 받아 운전면허증과 동일한 법적 효력이 있습니다.</span>
+        </div>
+        <div class="evtWrap">
+            <strong>이벤트 기간</strong>
+            <span>2020년 7월 1일 (수) ~ 2020년 7월 31일 (금)</span>
+        </div>
+        <div class="evtWrap">
+            <strong>이벤트 경품</strong>
+            <span>CU 모바일상품권 1만 원권 1,500명<br>GS25 모바일상품권 1만 원권 1,500명</span>
+        </div>
+        <div class="evtWrap">
+            <strong>추첨 방식</strong>
+            <span>이벤트에 참여하신 분 중 각 브랜드(CU, GS25)별 1,500명 씩 총 3,000명 추첨</span>
+        </div>
+        <div class="evtWrap">
+            <strong>당첨자 발표</strong>
+            <span>8월 중 당첨자 개별 고지</span>
+        </div>
+        <div class="evtWrap">
+            <strong>유의사항</strong>
+            <ul class="alertList">
+                <li>CU, GS25 각각의 브랜드에 대해 중복 참여/당첨 가능하며, 당첨 시 본 서비스를 이용한 편의점 브랜드의 모바일상품권이 발송됩니다. (예, CU편의점에서 모바일운전면허 확인서비스 이용 시, CU 모바일상품권으로 발송)</li>
+                <li>이벤트 참여 전에 이미 운전면허증을 등록하셨던 고객님도 참여가 가능합니다.</li>
+                <li>이벤트에 참여한 후 휴대폰 번호 변경, 명의 변경, 번호 해지를 한 경우 경품 당첨이 취소될 수 있습니다.</li>
+                <li>본 이벤트는 참여사들의 사정에 따라 별도의 안내 없이 중단 또는 변경될 수 있습니다.</li>
+                <li>본 이벤트의 경품은 5만 원 이하로 별도의 제세공과금이 부과되지 않습니다.</li>
+                <li>문의: pass@sk.com</li>
+            </ul>
+        </div>
+    </section>
+    <ul class="btmbtn btn2">
+        <li><button type="button" onclick="">1시간 동안 보지 않기</button></li>
+        <li><button type="button" onclick="">닫기</button></li>
+    </ul>
+</div>
+
+
+<!-- 이벤트 개인정보 수집 이용∙동의 -->
+<div id="doc" class="ly_pop ly_doc ly_full">
+    <div class="content">
+        <header class="header">
+            <div class="header_inner">
+                <h1 class="header_tit">개인정보 수집·이용 동의</h1>
+                <button type="button" class="ico-close header_btn" onclick="layer_close()"><span class="blind">닫기</span></button>
+            </div>
+        </header>
+        <div class="scroll">
+            <!-- viewer (terms) -->
+            <div class="viewer">
+                <pre class="viewer_txt">
+                    ‘모바일운전면허 확인서비스 출시 이벤트’ 참여를 위한 개인정보 수집∙이용 동의
+
+                    모바일운전면허 확인서비스 편의점 사용 이벤트” 와 관련하여, 본인의 개인정보를 SK텔레콤 주식회사가 수집 및 이용하는 것에 동의합니다.
+                    
+                    <table>
+                        <colgroup>
+                            <col style="width:30%">
+                            <col style="width:30%">
+                            <col style="width:40%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>수집/이용 목적</th>
+                                <th>수집 항목</th>
+                                <th>보유 기간</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>본인 확인</td>
+                                <td>PASS 회원 번호</td>
+                                <td rowspan="2" class="u">고객상담 목적으로 당첨자 발표일로부터 1개월 동안 보관 후 파기</td>
+                            </tr>
+                            <tr>
+                                <td>이벤트 당첨 요건 확인</td>
+                                <td>모바일운전면허 확인 검증 장소 및 일시</td>
+                            </tr>
+                            <tr>
+                                <td>프로모션 당첨, 경품 발송 안내</td>
+                                <td>이름, 휴대폰 번호</td>
+                                <td class="u">고객 상담 목적으로 당첨자 발표일로부터 90일간 동안 보관 후 파기</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    ※ 본 동의는 이벤트 응모를 위한 개인정보 수집/이용에 대한 동의로서, 동의하지 않으실 경우 이벤트에 응모하실 수 없습니다.
+                    ※ 법령에 따른 개인정보의 수집/이용, 계약의 이행/편의증진을 위한 개인정보 처리위탁 및 개인정보처리와 관련된 일반사항은 서비스의 개인정보처리방침에 따릅니다.
+                </pre>
+            </div>
+            <!-- //viewer (terms) -->
+        </div>
+    </div>
+</div>
+<!-- //이벤트 개인정보 수집 이용∙동의 -->
+
+<!-- 이벤트 개인정보 처리위탁 동의 -->
+<div id="doc2" class="ly_pop ly_doc ly_full">
+    <div class="content">
+        <header class="header">
+            <div class="header_inner">
+                <h1 class="header_tit">개인정보 처리위탁 동의</h1>
+                <button type="button" class="ico-close header_btn" onclick="layer_close()"><span class="blind">닫기</span></button>
+            </div>
+        </header>
+        <div class="scroll">
+            <!-- viewer (terms) -->
+            <div class="viewer">
+                <pre class="viewer_txt">
+                    ‘모바일운전면허 확인서비스 출시 이벤트’ 참여를 위한 개인정보 처리 위탁 동의
+
+                    “모바일운전면허 확인서비스 편의점 사용 이벤트” 와 관련하여, 본인의 개인정보처리 업무를 위탁합니다.
+                    
+                    <table>
+                        <colgroup>
+                            <col style="width:30%;">
+                            <col style="width:70%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>수탁사</th>
+                                <th>업무 내용</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>㈜민앤지</td>
+                                <td>프로모션 시스템 운영, 당첨자 확인, 고객 상담 및 경품 발송 업무</td>
+                            </tr>
+                            <tr>
+                                <td>11번가</td>
+                                <td>경품 배송 업무</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    ※ 본 동의는 이벤트 응모를 위한 개인정보 처리위탁에 대한 동의로서, 동의를 거부 할 권리가 있으나, 동의하지 않으실 경우 이벤트에 응모하실 수 없습니다.
+                </pre>
+            </div>
+            <!-- //viewer (terms) -->
+        </div>
+    </div>
+</div>
+<!-- //이벤트 개인정보 처리위탁 동의 -->
+
+<!-- 이벤트 개인정보 제3자 이용 동의 -->
+<div id="doc3" class="ly_pop ly_doc ly_full">
+    <div class="content">
+        <header class="header">
+            <div class="header_inner">
+                <h1 class="header_tit">개인정보 제3자 제공 동의</h1>
+                <button type="button" class="ico-close header_btn" onclick="layer_close()"><span class="blind">닫기</span></button>
+            </div>
+        </header>
+        <div class="scroll">
+            <!-- viewer (terms) -->
+            <div class="viewer">
+                <pre class="viewer_txt">
+                    ‘모바일운전면허 확인서비스 출시 이벤트’ 참여를 위한 개인정보 제3자 제공 동의
+
+                    ‘모바일운전면허 확인서비스 출시 이벤트’과 관련하여 아래 업체에 본인의 개인정보를 제공하는 것에 동의합니다.
+
+                    <table>
+                        <colgroup>
+                            <col style="width:20%;">
+                            <col style="width:30%;">
+                            <col style="width:20%;">
+                            <col style="width:30%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>업체</th>
+                                <th>제공 목적</th>
+                                <th>수집 항목</th>
+                                <th>보유 기간</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="u">십일번가 주식회사</td>
+                                <td class="u">프로모션 당첨자 경품 발송</td>
+                                <td>휴대폰 번호</td>
+                                <td class="u bold fc_blu">5년(국세기본법 제85조의3에 근거)</td>
+                            </tr>
+                        </tbody>
+                    </table>  
+                    ※ 이 내용은 프로모션 응모를 위한 개인정보 제3자 제공에 대한 동의입니다. 동의하지 않을 경우 프로모션에 응모하실 수 없습니다.
+                    ※ 법령에 따른 개인정보의 수집∙이용, 계약의 이행∙편의 증진을 위한 개인정보 처리 및 처리 위탁과 관련된 일반 사항은 서비스의 개인정보 처리 방침에 따릅니다.
+                </pre>
+            </div>
+            <!-- //viewer (terms) -->
+        </div>
+    </div>
+</div>
+<!-- //이벤트 개인정보 제3자 이용 동의 -->
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="../js/ui.js"></script>
+
+</body>
+</html>

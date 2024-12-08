@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta name="HandheldFriendly" content="true">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- <title>서울시민카드</title> -->
+<link rel="stylesheet" type="text/css" href="../../resources/css/style.css">
+<script type="text/javascript" src="../../resources/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="../../resources/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../../resources/js/front_ui.js"></script>
+</head>
+<body>
+<a href="#container" accesskey="1" class="skip_area">메뉴건너뛰고 본문 바로가기</a>
+
+<div id="wrap">
+
+    <header class="sb_header fix top">
+        <button type="button" onclick="" class="btn_prev"><i class="iarr">뒤로가기</i></button>
+        <h1>개별마일리지 전환내역</h1>
+    </header>
+    <!-- //header -->
+
+    <div id="ct" class="mileschg">
+        <h2 class="blind">선택 마일리지 확인</h2>
+        <div class="inner_bg">
+            <section class="inner profile_miles">
+                <select class="select">
+                    <option value="">전체마일리지</option>
+                    <option value="">에코마일리지</option>
+                    <option value="">승용차마일리지</option>
+                    <option value="">etax마일리지</option>
+                    <option value="">시민건강 포인트</option>
+                    <option value="">여론조사 마일리지</option>
+                </select>
+                <ul class="lst_table">
+                    <li>
+                        <ul>
+                            <li class="th">서울 마일리지</li>
+                            <li class="td won">1,300,410</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li class="th">전환가능 마일리지</li>
+                            <li class="td won blu">85,000</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li class="th">보유 마일리지</li>
+                            <li class="td won">85,000</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li class="th">30일 내 소멸예정</li>
+                            <li class="td won red">10,410</li>
+                        </ul>
+                    </li>
+                </ul>
+                <button type="button" onclick="layer_open('chgmiles')" class="btn_r_o btn_type2 btn_chg">마일리지 전환</button>
+            </section>
+            <!-- //마일리지전환 -->
+            <section class="caldate_frm">
+                <div class="inner datebx">
+                    조회기간 : 2019.06.01 ~ 2019.07.01
+                    <button type="button" onclick="" class="btn_m_o2 btn_type dateset">기간설정</button>
+                </div>
+                <fieldset class="inner frm_calset">
+                    <legend>기간설정</legend>
+                    <ul class="tab_type3 year">
+                        <li><button type="button" onclick="" class="btn_m3_o">오늘</button></li>
+                        <li><button type="button" onclick="" class="btn_m3_o active">1주일</button></li>
+                        <li><button type="button" onclick="" class="btn_m3_o">1개월</button></li>
+                        <li><button type="button" onclick="" class="btn_m3_o">3개월</button></li>
+                        <li><button type="button" onclick="" class="btn_m3_o">6개월</button></li>
+                    </ul>
+                    <ul class="search">
+                        <li><div class="ipbox ipcal"><input type="tel" name="" id="" value="2019.04.01" placeholder="달력선택" maxlength="10" data-role="date" disabled><button type="button" onclick="" class="ip_calendar"><i class="icon">달력선택</i></button></div></li>
+                        <li><div class="ipbox ipcal"><input type="tel" name="" id="" value="2019.04.01" placeholder="달력선택" maxlength="10" data-role="date" disabled><button type="button" onclick="" class="ip_calendar"><i class="icon">달력선택</i></button></div></li>
+                        <li class="btn_enter"><button type="button" onclick="">검색</button></li>
+                    </ul>
+                </fieldset>
+                <!-- //기간설정 -->
+                <ul class="inner list_normal3">
+                    <li>
+                        <ul>
+                            <li>
+                                <h3>에코마일리지</h3>
+                                <p class="date">2019.06.25 14:44 (유효기간 : ~ 2020.09.24)</p>
+                            </li>
+                            <li class="won">1,000<span class="pot">전환</span></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;" onclick="layer_open('giftcancel')">
+                            <ul>
+                                <li>
+                                    <h3>선물하기 취소</h3>
+                                    <p class="date">2019.06.25 14:44 (유효기간 : ~ 2020.09.24)</p>
+                                </li>
+                                <li class="won">1,000<span class="pot2">사용취소</span></li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" onclick="layer_open('giftok')">
+                            <ul>
+                                <li>
+                                    <h3>선물받기</h3>
+                                    <p class="date">2019.06.25 14:44 (유효기간 : ~ 2020.09.24)</p>
+                                </li>
+                                <li class="won">1,000<span class="pot">선물</span></li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <h3>에코마일리지</h3>
+                                <p class="date">2019.06.25 14:44 (유효기간 : ~ 2020.09.24)</p>
+                            </li>
+                            <li class="won">1,000<span class="pot">전환</span></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <h3>에코마일리지</h3>
+                                <p class="date">2019.06.25 14:44 (유효기간 : ~ 2020.09.24)</p>
+                            </li>
+                            <li class="won">1,000<span class="pot">전환</span></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <h3>에코마일리지</h3>
+                                <p class="date">2019.06.25 14:44 (유효기간 : ~ 2020.09.24)</p>
+                            </li>
+                            <li class="won">1,000<span class="pot">전환</span></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <h3>에코마일리지</h3>
+                                <p class="date">2019.06.25 14:44 (유효기간 : ~ 2020.09.24)</p>
+                            </li>
+                            <li class="won">1,000<span class="pot">전환</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <!-- //검색리스트 -->
+        </div>
+    </div>
+    <!-- //content -->
+
+    <button class="topGo"><i class="icon">맨위로가기</i></button>
+    <!-- //top -->
+
+    <!-- 전환 -->
+    <div id="mw-chgmiles" class="ly_pop full ly_chgmiles">
+        <div class="ly_content">
+            <header class="fix">
+                <h2>개별마일리지 전환</h2>
+                <button type="button" onclick="layer_close()" class="ly_close"><i class="iplus3">팝업닫기</i></button>
+            </header>
+            <div class="inner_bg ly_cover iscroll">
+                <section class="inner profile_miles">
+                    <h3 class="title_type">에코 마일리지</h3>
+                    <ul class="lst_table">
+                        <li>
+                            <ul>
+                                <li class="th">전환가능 마일리지</li>
+                                <li class="td won blu">85,000</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p class="txt">소멸예정 마일리지 <span class="red">10,410</span><br>(소멸예정 마일리지부터 전환됩니다.)</p>
+                    <p class="txt2"><span class="p"><span class="red">전환이후 취소는 불가능</span>하니 신중히 처리하시기 바랍니다.</span><br>전환일로부터 2년으로 마일리지 기간이 재설정됩니다</p>
+                </section>
+                <section class="caldate_frm">
+                    <div class="inner datebx">
+                        소멸예정 조회기간 : 2019.06.01 ~ 2019.06.30
+                        <button type="button" onclick="" class="btn_m_o2 btn_type dateset">기간설정</button>
+                    </div>
+                    <fieldset class="inner frm_calset">
+                        <legend>기간설정</legend>
+                        <ul class="tab_type3 year">
+                            <li><button type="button" onclick="" class="btn_m3_o">오늘</button></li>
+                            <li><button type="button" onclick="" class="btn_m3_o active">1주일</button></li>
+                            <li><button type="button" onclick="" class="btn_m3_o">1개월</button></li>
+                            <li><button type="button" onclick="" class="btn_m3_o">3개월</button></li>
+                            <li><button type="button" onclick="" class="btn_m3_o">6개월</button></li>
+                        </ul>
+                        <ul class="search">
+                            <li><div class="ipbox ipcal"><input type="tel" name="" id="" value="2019.04.01" placeholder="달력선택" maxlength="10" data-role="date" disabled><button type="button" onclick="" class="ip_calendar"><i class="icon">달력선택</i></button></div></li>
+                            <li><div class="ipbox ipcal"><input type="tel" name="" id="" value="2019.04.01" placeholder="달력선택" maxlength="10" data-role="date" disabled><button type="button" onclick="" class="ip_calendar"><i class="icon">달력선택</i></button></div></li>
+                            <li class="btn_enter"><button type="button" onclick="">검색</button></li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="inner">
+                        <legend>마일리지입력</legend>
+                        <ul class="frm_type">
+                            <li>
+                                <div class="ipbox ipdel">
+                                    <input type="tel" id="" placeholder="전환 마일리지">
+                                    <button type="button" onclick="" class="ip_del"><s><i class="iplus">삭제</i></s></button>
+                                </div>
+                                <p class="error">전환할 마일리지를 입력해주세요.</p>
+                            </li>
+                            <li>
+                                <ul class="tab_type3">
+                                    <li><button type="button" onclick="" class="btn_m3_o">+1,000</button></li>
+                                    <li><button type="button" onclick="" class="btn_m3_o">+5,000</button></li>
+                                    <li><button type="button" onclick="" class="btn_m3_o">+10,000</button></li>
+                                    <li><button type="button" onclick="" class="btn_m3_o">전체</button></li>
+                                </li>
+                            </li>
+                        </ul>
+                        <button type="button" onclick="layer_open('chgmiles')" class="btn_r_o btn_type2 skip">마일리지 전환</button>
+                    </fieldset>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- //전환 -->
+
+    <!-- 선물취소 -->
+    <div id="mw-giftcancel" class="ly_pop full ly_sendlst">
+        <div class="ly_content">
+            <header class="fix">
+                <h2>신청내역</h2>
+                <button type="button" onclick="layer_close()" class="ly_close"><i class="iplus3">팝업닫기</i></button>
+            </header>
+            <div class="ly_cover inner iscroll">
+                <section class="profile_miles">
+                    <hgroup>
+                        <h3 class="title_type">선물하기 취소</h3>
+                        <span class="date">2019.08.20</span>
+                    </hgroup>
+                    <ul class="lst_table">
+                        <li>
+                            <ul>
+                                <li class="th">신청마일리지</li>
+                                <li class="td">20,000</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="th">수령인</li>
+                                <li class="td">홍길동</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="th">수령인 휴대폰번호</li>
+                                <li class="td">010-1234-5678</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="th">주소</li>
+                                <li class="td">서울시 중구 서소문대로<br>128-4 2015호</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="th">상태</li>
+                                <li class="td red">준비중</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- //선물취소 -->
+
+    <!-- 선물받기 -->
+    <div id="mw-giftok" class="ly_pop full ly_sendlst">
+        <div class="ly_content">
+            <header class="fix">
+                <h2>신청내역</h2>
+                <button type="button" onclick="layer_close()" class="ly_close"><i class="iplus3">팝업닫기</i></button>
+            </header>
+            <div class="ly_cover inner iscroll">
+                <section class="profile_miles">
+                    <hgroup>
+                        <h3 class="title_type">선물받기</h3>
+                        <span class="date">2019.08.20</span>
+                    </hgroup>
+                    <ul class="lst_table">
+                        <li>
+                            <ul>
+                                <li class="th">신청마일리지</li>
+                                <li class="td">20,000</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="th">선물한 사람</li>
+                                <li class="td">홍길동</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="th">선물한 휴대폰번호</li>
+                                <li class="td">010-1234-5678</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="th">주소</li>
+                                <li class="td">서울시 중구 서소문대로<br>128-4 2015호</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="th">상태</li>
+                                <li class="td red">준비중</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- //선물받기 -->
+
+</div>
+
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="../../resources/js/jquery.ui.datepicker.js"></script>
+<script src="../../resources/js/jquery.mobile.datepicker.js"></script>
+<!-- js -->
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link href="../resources/css/font.local.css" media="screen" rel="stylesheet"> <!-- 폐쇄망 -->
+<link href="../resources/css/font.cdn.css" media="screen" rel="stylesheet"> <!-- 인터넷망 -->
+<link href="../resources/css/common.min.css" media="screen" rel="stylesheet">
+<link href="../resources/css/driving.min.css" media="screen" rel="stylesheet">
+<title>010휘슬</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header" class="fix top">
+        <button type="button" onclick="" class="btn_prev" title="뒤로가기"><i></i></button>
+        <h1 class="blind">받은신고</h1>
+    </header>
+     <!--//header -->
+
+    <div id="content" class="driving_report_state">
+        <div class="detail_thum">
+            <section class="top">
+                <dl>
+                    <dd>
+                        <h2 class="name">
+                            <em>비매너 주차</em>
+                            <strong>58가8282</strong>
+                        </h2>
+                    </dd>
+                    <dt>
+                        <button type="button"><img src="../resources/image/sample/thum_70x70.jpg" alt="">
+                        </button>
+                    </dt>
+                </dl>
+                <div class="list_bside raise">
+                    <ul>
+                        <li>
+                            <span class="th">촬영 일시</span>
+                            <span class="td">2020. 10. 23 수, 08:25:19</span>
+                        </li>
+                        <li>
+                            <span class="th">촬영 장소</span>
+                            <code class="td">서울 강남구 테헤란로 24길 6</code>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="info">
+                <h3>신고 정보</h3>
+                <div class="textview">
+                    <ul class="ttset">
+                        <li class="tt">비매너 주차</li>
+                        <li class="cat">하루 전</li>
+                    </ul>
+                    <p class="txarea">집 앞에 휴대전화 번호도 없이 주차를 해서 길막 장난 아니에요... 너무 짜증나요!! 불편해서 신고합니다ㅜㅜ</p>
+                    <div class="btn_area_simp"><button type="button" onclick="popupOpen('tagSelect','mwf',0);chkingDefault('tagSelect',1);" class="text">답변하기</button></div>
+                </div>
+                <!-- 답변 있을 경우 -->
+                <!-- <div class="textview">
+                    <ul class="ttset">
+                        <li class="tt">비매너 주차</li>
+                        <li class="cat">하루 전</li>
+                    </ul>
+                    <p class="txarea">집 앞에 휴대전화 번호도 없이 주차를 해서 길막 장난 아니에요... 너무 짜증나요!! 불편해서 신고합니다ㅜㅜ</p>
+                    <ul class="reply">
+                        <li feel-emoticon="너무">너무해요</li>
+                        <li feel-emoticon="감사">감사합니다!</li>
+                        <li feel-emoticon="미안">미안해요...</li>
+                        <li feel-emoticon="몰라">몰랐습니다...</li>
+                        <li feel-emoticon="알고">알려줘서 고마워요~</li>
+                    </ul>                    
+                </div>-->
+                <!-- //답변 있을 경우 -->
+            </section>
+        </div>
+    </div>
+    <!-- //content -->
+
+</div>
+
+<!-- popup -->
+<div id="mw-tagSelect" class="ly_pop popBtm ly_tag_select">
+    <div class="wrap">
+        <div class="content">
+            <button type="button" onclick="popupClose('tagSelect','mwf')" class="close" title="닫기"><i></i></button>
+            <section id="tagSelect">
+                <h2>등록 된 신고에<br>답변을 달아주세요!</h2>
+                <ul class="list">
+                    <li>
+                        <span class="box i_chk">
+                            <input type="radio" id="tag1" name="tag" value="">
+                            <label for="tag1" feel-emoticon="DTOO"">너무해요</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="box i_chk">
+                            <input type="radio" id="tag2" name="tag" value="">
+                            <label for="tag2" feel-emoticon="DTH1">감사합니다!</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="box i_chk">
+                            <input type="radio" id="tag3" name="tag" value="">
+                            <label for="tag3" feel-emoticon="DSOR">미안해요...</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="box i_chk">
+                            <input type="radio" id="tag4" name="tag" value="">
+                            <label for="tag4" feel-emoticon="DKNO">몰랐습니다...</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="box i_chk">
+                            <input type="radio" id="tag5" name="tag" value="">
+                            <label for="tag5" feel-emoticon="DTH2">알려줘서 고마워요~</label>
+                        </span>
+                    </li>
+                </ul>
+            </section>
+            <div id="tagSelect-btn" class="btn_area_wide">
+                <button type="button" class="skip" onclick="popupClose('tagSelect','mwf')" disabled>답변 등록</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //popup -->
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script> -->
+<script src="../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../resources/js/gsap.min.js"></script>
+<script src="../../../../../global/resources/js/global.js"></script>
+<script src="../resources/js/design.js" defer></script>
+<script>
+$(function() {
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title>SGI서울보증</title>
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/common-ui.css">
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/style-cust.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../../inc/css/style-mark.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/jquery.mobile-1.4.5.css">
+    <script type="text/javascript" src="../../../inc/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../../inc/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
+</head>
+
+<body>
+    <!-- 페이지 유형 제작시 wrapper에 고유 클레스 추가 -->
+    <div class="wrapper ps-sub-page scrpp1031">
+        <header class="header">
+            <button type="button" class="prev-page" title="이전페이지 이동"></button>
+            <h1 class="header-tit">자동서류제출</h1>
+            <button type="button" class="sidenav-btn" title="전체메뉴"></button>
+        </header>
+        <!-- 페이지 하단에 플로팅 버튼이 있을시 class = btm-fixed 추가 -->
+        <section class="container btm-fixed">
+            <!-- 사이드 여백설정 공통 class = inner -->
+            <!-- 페이지 하단에 플로팅 버튼이 있을시 class = acco-fixed 추가 -->
+            <div class="content">
+                <div class="title-wrap inner">
+                    <h2 class="ps-tit02">서류선택</h2>
+                    <!-- 현진행단계 표시 aria-label = "진행단계, 총 X단계 중 X단계" 진행단계 별로 수정 -->
+                    <div class="ps-step" role="img" aria-label="진행단계, 총 4단계 중 2단계">
+                        <em class="pres-step">2</em><span class="symb"> / </span><em>4</em>
+                    </div>
+                </div>
+                <div class="cont-wrap inner">
+                    <div class="ps-chk-accordion-wrap type-number">
+                        <!-- 부가가치세 과세표준 증명원 -->
+                        <div class="accordion-item number-chk-wrap">
+                            <div class="ps-chk">
+                                <input type="checkbox" id="chk-list-01" checked>
+                                <label for="chk-list-01">
+                                    <span class="wrap">
+                                        <span class="tit">부가가치세 과세표준 증명원</span>
+                                        <span class="txt"><em class="fc-03">(신청불가)</em> 홈택스</span>
+                                    </span>
+                                    <!-- <span class="con succ">완료</span> -->
+                                    <span class="con err">오류</span>
+                                </label>
+                                <!-- 오류 시 사용 문구 -->
+                                <span class="err-txt">6603.**** 발급 조회 중 일시 장애가 발생하였습니다. 잠시 후에 다시 시도해 주세요.</span>
+                            </div>
+                            <div class="accordion-docu">
+                                <div class="ps-from-item">
+                                    <p class="write-title">조회기간</p>
+                                    <div class="ps-calendar-wrap">
+                                        <div class="ps-date-fild">
+                                            <input type="text" title="조회년월 입력" data-y="2011" data-m="09" value="2011-09">
+                                            <button type="button" class="btn-yymm open-bottomlist" data-page="bottom-pop-list01">조회년월 설정</button>
+                                        </div>
+                                        <span class="txt"> ~ </span>
+                                        <div class="ps-date-fild">
+                                            <input type="text" title="조회년월 입력" data-y="2021" data-m="12" value="2021-12">
+                                            <button type="button" class="btn-yymm open-bottomlist" data-page="bottom-pop-list02">조회년월 설정</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--// 부가가치세 과세표준 증명원 -->
+                        <!-- 지방세완납증명서 -->
+                        <div class="accordion-item number-chk-wrap">
+                            <div class="ps-chk">
+                                <input type="checkbox" id="chk-list-02">
+                                <label for="chk-list-02">
+                                    <span class="wrap">
+                                        <span class="tit">지방세완납증명서</span>
+                                        <span class="txt"><em>(정상)</em> 민원24</span>
+                                    </span>
+                                    <span class="con succ">완료</span>
+                                    <!-- <span class="con err">오류</span> -->
+                                </label>
+                            </div>
+                            <div class="accordion-docu">
+                                <div class="ps-from-item">
+                                    <p class="write-title">자택주소 (선택)</p>
+                                    <div class="ps-input in-btn-wrap">
+                                        <input type="text" title="우편번호" placeholder="우편번호" readonly>
+                                        <button type="button" class="inline-btn gray">주소찾기</button>
+                                    </div>
+                                    <div class="ps-input">
+                                        <input type="text" title="도로명 주소" placeholder="도로명 주소" readonly>
+                                    </div>
+                                    <div class="ps-input">
+                                        <input type="text" title="상세 주소 입력" placeholder="상세 주소" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--// 지방세완납증명서 -->
+                        <!-- 재산세 과세증명원 -->
+                        <div class="accordion-item number-chk-wrap">
+                            <div class="ps-chk">
+                                <input type="checkbox" id="chk-list-03">
+                                <label for="chk-list-03">
+                                    <span class="wrap">
+                                        <span class="tit">재산세 과세증명원</span>
+                                        <span class="txt"><em>(정상)</em> 민원24</span>
+                                    </span>
+                                    <span class="con succ">완료</span>
+                                    <!-- <span class="con err">오류</span> -->
+                                </label>
+                            </div>
+                            <div class="accordion-docu">
+                                <div class="ps-from-item">
+                                    <p class="write-title">조회기간</p>
+                                    <div class="ps-select-wrap">
+                                        <div class="ps-select">
+                                            <select title="시작년도 선택">
+                                                <option>선택</option>
+                                                <option>옵션명1</option>
+                                                <option>옵션명2</option>
+                                                <option>옵션명3</option>
+                                            </select>
+                                        </div>
+                                        <span class="txt"> ~ </span>
+                                        <div class="ps-select">
+                                            <select title="종료년도 선택">
+                                                <option>선택</option>
+                                                <option>옵션명1</option>
+                                                <option>옵션명2</option>
+                                                <option>옵션명3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">자택주소 (선택)</p>
+                                    <div class="ps-input in-btn-wrap">
+                                        <input type="text" title="우편번호" placeholder="우편번호" readonly>
+                                        <button type="button" class="inline-btn gray">주소찾기</button>
+                                    </div>
+                                    <div class="ps-input">
+                                        <input type="text" title="도로명 주소" placeholder="도로명 주소" readonly>
+                                    </div>
+                                    <div class="ps-input">
+                                        <input type="text" title="상세 주소 입력" placeholder="상세 주소" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--// 재산세 과세증명원 -->
+                        <!-- 매입처별 세금계산서 -->
+                        <div class="accordion-item number-chk-wrap">
+                            <div class="ps-chk">
+                                <input type="checkbox" id="chk-list-04">
+                                <label for="chk-list-04">
+                                    <span class="wrap">
+                                        <span class="tit">매입처별 세금계산서</span>
+                                        <span class="txt"><em>(정상)</em> 홈택스</span>
+                                    </span>
+                                    <span class="con succ">완료</span>
+                                    <!-- <span class="con err">오류</span> -->
+                                </label>
+                            </div>
+                            <div class="accordion-docu">
+                                <div class="ps-from-item">
+                                    <p class="write-title">조회기간</p>
+                                    <div class="ps-select-wrap">
+                                        <div class="ps-select">
+                                            <select title="분기 선택">
+                                                <option>선택</option>
+                                                <option>옵션명1</option>
+                                                <option>옵션명2</option>
+                                                <option>옵션명3</option>
+                                            </select>
+                                        </div>
+                                        <div class="ps-select">
+                                            <select title="연월 선택">
+                                                <option>선택</option>
+                                                <option>옵션명1</option>
+                                                <option>옵션명2</option>
+                                                <option>옵션명3</option>
+                                            </select>
+                                        </div>
+                                        <div class="ps-select">
+                                            <select title="기수 선택">
+                                                <option>선택</option>
+                                                <option>옵션명1</option>
+                                                <option>옵션명2</option>
+                                                <option>옵션명3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--// 매입처별 세금계산서 -->
+                        <!-- 매출처별 세금계산서 -->
+                        <div class="accordion-item number-chk-wrap">
+                            <div class="ps-chk">
+                                <input type="checkbox" id="chk-list-05">
+                                <label for="chk-list-05">
+                                    <span class="wrap">
+                                        <span class="tit">매출처별 세금계산서</span>
+                                        <span class="txt"><em>(정상)</em> 홈택스</span>
+                                    </span>
+                                    <span class="con succ">완료</span>
+                                    <!-- <span class="con err">오류</span> -->
+                                </label>
+                            </div>
+                            <div class="accordion-docu">
+                                <div class="ps-from-item">
+                                    <p class="write-title">조회기간</p>
+                                    <div class="ps-select-wrap">
+                                        <div class="ps-select">
+                                            <select title="분기 선택">
+                                                <option>선택</option>
+                                                <option>옵션명1</option>
+                                                <option>옵션명2</option>
+                                                <option>옵션명3</option>
+                                            </select>
+                                        </div>
+                                        <div class="ps-select">
+                                            <select title="연월 선택">
+                                                <option>선택</option>
+                                                <option>옵션명1</option>
+                                                <option>옵션명2</option>
+                                                <option>옵션명3</option>
+                                            </select>
+                                        </div>
+                                        <div class="ps-select">
+                                            <select title="기수 선택">
+                                                <option>선택</option>
+                                                <option>옵션명1</option>
+                                                <option>옵션명2</option>
+                                                <option>옵션명3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// 매출처별 세금계산서 -->
+                        <!-- 매입처별 계산서 -->
+                        <div class="accordion-item number-chk-wrap">
+                            <div class="ps-chk">
+                                <input type="checkbox" id="chk-list-06">
+                                <label for="chk-list-06">
+                                    <span class="wrap">
+                                        <span class="tit">매입처별 계산서</span>
+                                        <span class="txt"><em>(정상)</em> 홈택스</span>
+                                    </span>
+                                    <span class="con succ">완료</span>
+                                    <!-- <span class="con err">오류</span> -->
+                                </label>
+                            </div>
+                            <div class="accordion-docu">
+                                <div class="ps-from-item">
+                                    <p class="write-title">조회기간</p>
+                                    <div class="ps-select-wrap">
+                                        <div class="ps-select">
+                                            <select title="분기 선택">
+                                                <option>선택</option>
+                                                <option>옵션명1</option>
+                                                <option>옵션명2</option>
+                                                <option>옵션명3</option>
+                                            </select>
+                                        </div>
+                                        <div class="ps-select">
+                                            <select title="연월 선택">
+                                                <option>선택</option>
+                                                <option>옵션명1</option>
+                                                <option>옵션명2</option>
+                                                <option>옵션명3</option>
+                                            </select>
+                                        </div>
+                                        <div class="ps-select">
+                                            <select title="기수 선택">
+                                                <option>선택</option>
+                                                <option>옵션명1</option>
+                                                <option>옵션명2</option>
+                                                <option>옵션명3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--// 매입처별 계산서 -->
+                        <!-- 매출처별 계산서 -->
+                        <div class="accordion-item number-chk-wrap">
+                            <div class="ps-chk">
+                                <input type="checkbox" id="chk-list-07">
+                                <label for="chk-list-07">
+                                    <span class="wrap">
+                                        <span class="tit">매출처별 계산서</span>
+                                        <span class="txt"><em>(정상)</em> 홈택스</span>
+                                    </span>
+                                    <span class="con succ">완료</span>
+                                    <!-- <span class="con err">오류</span> -->
+                                </label>
+                            </div>
+                            <div class="accordion-docu">
+                                <div class="ps-from-item">
+                                    <p class="write-title">조회기간</p>
+                                    <div class="ps-select-wrap">
+                                        <div class="ps-select">
+                                            <select title="분기 선택">
+                                                <option>선택</option>
+                                                <option>옵션명1</option>
+                                                <option>옵션명2</option>
+                                                <option>옵션명3</option>
+                                            </select>
+                                        </div>
+                                        <div class="ps-select">
+                                            <select title="연월 선택">
+                                                <option>선택</option>
+                                                <option>옵션명1</option>
+                                                <option>옵션명2</option>
+                                                <option>옵션명3</option>
+                                            </select>
+                                        </div>
+                                        <div class="ps-select">
+                                            <select title="기수 선택">
+                                                <option>선택</option>
+                                                <option>옵션명1</option>
+                                                <option>옵션명2</option>
+                                                <option>옵션명3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--// 매출처별 계산서 -->
+                    </div>
+                </div>
+                <!-- cont-wrap -->
+            </div>
+            <!-- content -->
+            <div class="fix-btn-wrap">
+                <button type="button" class="btn gray small">이전</button>
+                <button type="button" class="btn blue">다음</button>
+            </div>
+        </section>
+        <footer class="footer"></footer>
+        <!-- 레이어팝업 -->
+        <!-- SgiUI.popAniOff('.btm-calendar-wrap'); 바닥 팝업 종료-->
+        <article class="pop-botlist-js-wrap bottom-listpop btm-calendar-wrap" data-page="bottom-pop-list01">
+            <div class="botlist-wrap">
+                <h2 class="botlist-tit">월 선택</h2>
+                <div class="botlist-cont">
+                    <div class="year-wrap">
+                        <div class="swiper-container swiper-year">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">2011년</div>
+                                <div class="swiper-slide">2012년</div>
+                                <div class="swiper-slide">2013년</div>
+                                <div class="swiper-slide">2014년</div>
+                                <div class="swiper-slide">2015년</div>
+                                <div class="swiper-slide">2016년</div>
+                                <div class="swiper-slide">2017년</div>
+                                <div class="swiper-slide">2018년</div>
+                                <div class="swiper-slide">2019년</div>
+                                <div class="swiper-slide">2020년</div>
+                                <div class="swiper-slide">2021년</div>
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                    <div class="month-wrap">
+                        <div class="swiper-container swiper-month">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">01월</div>
+                                <div class="swiper-slide">02월</div>
+                                <div class="swiper-slide">03월</div>
+                                <div class="swiper-slide">04월</div>
+                                <div class="swiper-slide">05월</div>
+                                <div class="swiper-slide">06월</div>
+                                <div class="swiper-slide">07월</div>
+                                <div class="swiper-slide">08월</div>
+                                <div class="swiper-slide">09월</div>
+                                <div class="swiper-slide">10월</div>
+                                <div class="swiper-slide">11월</div>
+                                <div class="swiper-slide">12월</div>
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fix-btn-wrap">
+                    <button type="button" class="btn gray small">취소</button>
+                    <button type="button" class="btn blue btn-ym-check">확인</button>
+                </div>
+            </div>
+            <button class="close-bottomlist" title="닫기"></button>
+        </article>
+        <!-- //레이어팝업 -->
+        <!-- 레이어팝업 -->
+        <!-- SgiUI.popAniOff('.btm-calendar-wrap'); 바닥 팝업 종료-->
+        <article class="pop-botlist-js-wrap bottom-listpop btm-calendar-wrap" data-page="bottom-pop-list02">
+            <div class="botlist-wrap">
+                <h2 class="botlist-tit">월 선택</h2>
+                <div class="botlist-cont">
+                    <div class="year-wrap">
+                        <div class="swiper-container swiper-year">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">2011년</div>
+                                <div class="swiper-slide">2012년</div>
+                                <div class="swiper-slide">2013년</div>
+                                <div class="swiper-slide">2014년</div>
+                                <div class="swiper-slide">2015년</div>
+                                <div class="swiper-slide">2016년</div>
+                                <div class="swiper-slide">2017년</div>
+                                <div class="swiper-slide">2018년</div>
+                                <div class="swiper-slide">2019년</div>
+                                <div class="swiper-slide">2020년</div>
+                                <div class="swiper-slide">2021년</div>
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                    <div class="month-wrap">
+                        <div class="swiper-container swiper-month">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">01월</div>
+                                <div class="swiper-slide">02월</div>
+                                <div class="swiper-slide">03월</div>
+                                <div class="swiper-slide">04월</div>
+                                <div class="swiper-slide">05월</div>
+                                <div class="swiper-slide">06월</div>
+                                <div class="swiper-slide">07월</div>
+                                <div class="swiper-slide">08월</div>
+                                <div class="swiper-slide">09월</div>
+                                <div class="swiper-slide">10월</div>
+                                <div class="swiper-slide">11월</div>
+                                <div class="swiper-slide">12월</div>
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fix-btn-wrap">
+                    <button type="button" class="btn gray small">취소</button>
+                    <button type="button" class="btn blue btn-ym-check">확인</button>
+                </div>
+            </div>
+            <button class="close-bottomlist" title="닫기"></button>
+        </article>
+        <!-- //레이어팝업 -->
+    </div>
+</body>
+</html>

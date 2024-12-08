@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko" class="app">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="../../../../../../../global/resources/css/global.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/common.min.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/content.min.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/app.min.css" media="screen" rel="stylesheet">
+<title>건강지키미</title>
+</head>
+<body>
+
+<div id="wrap">
+
+	<div class="fix top tab">
+        <header id="header">
+            <button type="button" onclick="" class="btn_prev"><i>뒤로가기</i></button>
+            <h1>건강정보</h1>
+        </header>
+        <div id="headerTab" class="swiper-container tab_type">
+			<ul class="swiper-wrapper">
+				<li class="swiper-slide"><a href="#;">건강검진대상</a></li>
+				<li class="swiper-slide"><a href="#;">건강검진결과</a></li>
+				<li class="swiper-slide"><a href="#;">진료정보</a></li>
+				<li class="swiper-slide"><a href="#;">투약정보</a></li>
+			</ul>
+		</div>
+    </div>
+	<!-- //header -->
+	<div id="content">
+		<div class="medical_info inner_wrap">
+			<section>
+				<h2>인적사항</h2>
+				<div class="tbl_type">
+					<table class="type" summary="인적사항 표로써 지역구분,사업구분으로 나누어져 있다.">
+						<colgroup>
+							<col style="width:35%;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">직역구분</th>
+								<td>직장</td>
+							</tr>
+							<tr>
+								<th scope="row">사업구분</th>
+								<td>직장가입자</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<!-- //인적사항 -->
+			<section>
+				<h2>건강검진(일반)</h2>
+				<div class="tbl_type">
+					<table summary="건강검진(일반) 표로써 항목, 내용 순으로 분류되어 있다.">
+						<colgroup>
+							<col style="width:50%;">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">항목</th>
+								<th scope="col">내용</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="stit">검진년도</td>
+								<td>2017</td>
+							</tr>
+							<tr>
+								<td class="stit">1차검진</td>
+								<td>본인부담없음</td>
+							</tr>
+							<tr>
+								<td class="stit">구강검진</td>
+								<td>본인부담없음</td>
+							</tr>
+							<tr>
+								<td class="stit">2차검진</td>
+								<td>본인부담없음</td>
+							</tr>
+							<tr>
+								<td class="stit">B형간염검사<br><span class="stxt">(생애전환기 40세)</span></td>
+								<td>비대상</td>
+							</tr>
+							<tr>
+								<td class="stit">C형간염검사<br><span class="stxt">(생애전환기 일부지역)</span></td>
+								<td>비대상</td>
+							</tr>
+							<tr>
+								<td class="stit">국가암 검진대상<br>관할보건소</td>
+								<td>-</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //건강검진(일반) -->
+				<h2>암검진</h2>
+				<div class="tbl_type">
+					<table summary="암검진 표로써 항목,암검진,국가암의료비 지원대상 순으로 분류되어 있다.">
+						<colgroup>
+							<col style="width:30%;">
+							<col style="width:30%;">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">항목</th>
+								<th scope="col">암검진</th>
+								<th scope="col">국가암의료비 지원대상</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="stit">위암</td>
+								<td>대상아님</td>
+								<td>비대상</td>
+							</tr>
+							<tr>
+								<td class="stit">간암(상반기)</td>
+								<td>대상아님</td>
+								<td>비대상</td>
+							</tr>
+							<tr>
+								<td class="stit">간암(하반기)</td>
+								<td>대상아님</td>
+								<td>비대상</td>
+							</tr>
+							<tr>
+								<td class="stit">대장암</td>
+								<td>대상아님</td>
+								<td>비대상</td>
+							</tr>
+							<tr>
+								<td class="stit">유방암</td>
+								<td>대상아님</td>
+								<td>비대상</td>
+							</tr>
+							<tr>
+								<td class="stit">자궁경부암</td>
+								<td>대상아님</td>
+								<td>비대상</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //암검진 -->
+			</section>
+			<!-- //list -->
+		</div>
+	</div>
+	<!-- //content -->
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../../resources/js/gsap.min.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../../../../../../global/resources/js/global.js"></script>
+<script src="../../resources/js/design.js" defer></script>
+<script>
+$(function(){
+    swipeGroup();
+    headerTab.init();
+    headerTab.slideTo(0,0);
+    $('#headerTab li:eq(0) a').addClass('on');
+});
+</script>
+
+</body>
+</html>

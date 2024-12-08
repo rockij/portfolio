@@ -1,0 +1,934 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta name="HandheldFriendly" content="true">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>서울시민카드</title>
+<link rel="stylesheet" type="text/css" href="../../resources/css/style.css">
+<script type="text/javascript" src="../../resources/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="../../resources/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../../resources/js/front_ui.js"></script>
+<script type="text/javascript" src="../../resources/js/jquery.slides.min.js"></script>
+
+
+</head>
+<body>
+<a href="#container" accesskey="1" class="skip_area">메뉴건너뛰고 본문 바로가기</a>
+
+
+
+<header class="header">
+	<div class="top_menu">
+    	<ul>
+        	<li>
+            	<a href="#" class="btn_all_menu" onclick="left_menu_click(event);"><img src="../../resources/images/main/ico_menu.png" alt="메뉴버튼아이콘"></a>
+            </li>
+            <li>
+            	<a href="#" class="search_btn"><img src="../../resources/images/main/ico_search.png" alt="검색버튼아이콘"></a>
+            </li>
+        </ul>
+        <ul class="t_redbar"> <!--2017-10-17 추가-->
+        	<li>
+            	<a href="#" class="btn_all_menu" onclick="left_menu_click(event);"><img src="../../resources/images/main/ico_menu.png" alt="메뉴버튼아이콘"></a>
+            </li>
+            <li>
+            	<a href="#" class="search_btn"><img src="../../resources/images/main/ico_search.png" alt="검색버튼아이콘"></a>
+            </li>
+        </ul>
+    </div><!--//top_menu-->
+
+		<!-- 190624 주석처리 -->
+    <!-- <div class="card_img">
+			<a href="#pop02" class="btn_pop_open"><img src="../../resources/images/main/main_card.png" alt="서울시민카드"></a>
+		</div> -->
+		<!--//card_img-->
+
+		<!-- 190625 추가분 -->
+		<div id="visual_top">
+			<div class="slider05" >
+					<ul class="slides" id="slide_tax_card"><!--2018-12-12 추가-->
+
+						<li class="images" style="display:block">
+							 <div class="Mcard">
+							<div class="card_back">
+
+								<p>모범납세자인 경우 인증을 해주세요.<br>모범납세자를 위한 다양한 할인 혜택을<br>제공받을 수 있습니다.</p>
+
+								<!-- 190702 추가분 -->
+								<div class="card_chkWrap">
+									<input type="checkbox" name="" value="" id="card_chk">
+									<label for="card_chk">서울특별시 모범 납세자 확인에 동의</label>
+								</div>
+								<!-- //190702 추가분 -->
+
+								<a href="#pop_certi" class="btn_certi btn_pop_open">
+									모범납세자 인증하기
+									<i class="icon_typeTC"><img src="../../resources/images/main/icon_tax_certi.png" alt=""></i>
+								</a>
+							</div>
+							<img src="../../resources/images/main/img_tax_card_back.png" alt="카드 미인증">
+						</div>
+						</li>
+
+						<li class="images" style="display:block">
+ 						<div class="Mcard">
+							<a href="" id="pop_tax">
+								<div class="card_visual">
+									<div class="card_title">
+										<p><span class="icon_tax">
+											<img src="../../resources/images/main/icon_tax.png" alt="모범납세자 아이콘">
+										</span>서울시 모범납세자 선정</p>
+									</div>
+									<div class="visual_text">
+										<dl class="cn">
+											<dt>모범납세자명</dt>
+											<dd>김시민</dd>
+										</dl>
+										<dl class="cg">
+											<dt>성별</dt>
+											<dd>남성</dd>
+										</dl>
+										<dl class="cb">
+											<dt>생년월일</dt>
+											<dd>1990.03.15</dd>
+										</dl>
+										<dl class="cl">
+											<dt>유효기간</dt>
+											<dd>~120.02.27</dd>
+										</dl>
+									</div>
+								</div>
+								<img src="../../resources/images/main/img_tax_card_front.png" alt="카드 인증 후 ">
+							</a>
+						</div>
+						</li>
+
+						<!-- 190627 추가분 -->
+						<li class="images" style="display:block">
+							<div class="Mcard">
+								<!-- 190702 클래스 chat 추가 -->
+								<div class="card_back chat">
+									<p>찾동이 회원가입을 해주세요.<br>찾동이 회원이 되시면 거주하시는 지역에 대한<br>다양한 정보를 받을 수 있습니다.</p>
+									<a href="#" class="btn_chat">
+										시민찾동이 가입하기
+										<i class="icon_typeCJ"><img src="../../resources/images/sub/icon_chat_join.png" alt=""></i>
+									</a>
+
+								</div>
+								<img src="../../resources/images/sub/img_chat_card_back.png" alt="카드 미인증">
+							</div>
+						</li>
+						<li class="images" style="display:block">
+							<div class="Mcard">
+							<a href="#pop02" class="btn_pop_open">
+								<img src="../../resources/images/main/main_card02.png" alt="찾동이">
+								<div class="find_main">
+										<p class="mt">서울시 <span>강서구 염창동</span> 찾동이</p>
+										<p class="st"><span>홍길동</span> 입니다</p>
+								</div>
+							</a>
+							</div>
+						</li>
+						<!-- //190627 추가분 -->
+					</ul>
+
+					<!-- 190702 추가분 -->
+				  <div class="slidesjs_btn02 slide_num02"><div id="slidesjs-log02"><span class="slidesjs-slide-number02">1</span> / 4</div></div>
+					<!-- //190702 추가분 -->
+
+			</div>
+		</div>
+		<!-- //190625 추가분 -->
+</header>
+<!-- //header -->
+
+
+
+<!-- //section -->
+<section class="content">
+
+
+	<!--  190611 추가  -->
+	<div class="scd_visual">
+		<p>서울 <img src="../../resources/images/main/visual_logo.png" alt="시민찾동이 배너 로고"> 가 되어주실래요?</p>
+	</div>
+	<!--  //190611 추가  -->
+
+	<article>
+        <div class="section01"> <!--광고가 생기면서 광고를 따로 넣었었는데요 섹션 하나로 묶으려고 여백때문에 article 밑에 div로 기존에 있던 클래스를 사용하여 다시 묶어두었습니다.(배너광고를 섹션 안에 넣었습니다.)-->
+            <div class="title_tt">
+                <dl>
+                    <dt><span>홍길동</span> 님이 사용중인 카드입니다.</dt>
+                    <dd><a href="#">
+
+											<!--  190611 주석처리  -->
+											<!-- <img src="../../resources/images/main/ico_tt01.png" alt="사용중인카드"> -->
+											<!--  //190611 주석처리  -->
+
+											<!--  190611 추가  -->
+											<img src="../../resources/images/main/icon_darrw.png" alt="사용중인카드">
+											<!--  //190611 추가  -->
+
+										</a></dd>
+                </dl>
+            </div>
+						<!--  190611 클래스 fst_main 추가  -->
+            <div class="card_box fst_main">
+						<!--  //190611 클래스 fst_main 추가  -->
+                <ul>
+                    <li>
+                    <div>
+                        <dl>
+                            <dt>
+                            	<p class="title">DDP</p>
+                             </dt>
+														 <!--  190611 추가부분  -->
+														 <dd>
+														 	<span class="low_num">(총 <em>120</em>개)</span>
+														 </dd>
+														 <!--  //190611 추가부분  -->
+                            <dd>
+                                <a href="#"><img src="../../resources/images/main/ico_city01.png" alt="ddp"></a>
+                                <a href="#"><img src="../../resources/images/main/ico_barcode.png" alt="바코드 아이콘"></a>
+                            </dd>
+                        </dl>
+                        </div>
+                    </li>
+                    <li>
+                    <div>
+                        <dl>
+                            <dt>
+                            	<p class="title">삼청각</p>
+                            </dt>
+														<!--  190611 추가부분  -->
+														<dd>
+														 <span class="low_num"></span>
+														</dd>
+														<!--  //190611 추가부분  -->
+                            <dd>
+                                <a href="#"><img src="../../resources/images/main/ico_city02.png" alt="삼청각"></a>
+                                <a href="#"><img src="../../resources/images/main/ico_barcode.png" alt="바코드 아이콘"></a>
+                            </dd>
+                        </dl>
+                        </div>
+                    </li>
+                    <li>
+                    <div>
+                         <dl>
+                            <dt>
+															<!--  190611 주석처리  -->
+                            	<!-- <p class="title">녹색장난감도서관녹색장난감도서관녹색장난감도서관녹색장난감도서관녹색장난감도서관</p> -->
+															<!--  190611 주석처리  -->
+
+															<!--  190611 추가  -->
+															<p class="title">서울시립미술관</p>
+															<!--  //190611 추가  -->
+
+															<!--  190611 주석처리  -->
+                                <!-- <p>홍길동/체육시설사업소 수영장 홍길동/체육시설사업소 수영장홍길동/체육시설사업소 수영장</p>   -->
+																<!--텍스트 추가시 -->
+															<!--  //190611 주석처리  -->
+
+                            </dt>
+														<!--  190611 추가부분  -->
+														<dd>
+														 <span class="low_num">(총 <em>43</em>개)</span>
+														</dd>
+														<!--  //190611 추가부분  -->
+                            <dd>
+                                <a href="#"><img src="../../resources/images/main/ico_city03.png" alt="서울시립미술관"></a>
+                                <a href="#"><img src="../../resources/images/main/ico_barcode.png" alt="바코드 아이콘"></a>
+                            </dd>
+                        </dl>
+                        </div>
+                    </li>
+                    <li>
+                    <div>
+                        <dl>
+                            <dt>
+                            	<p class="title">세종문화회관</p>
+															<!--  190611 주석처리  -->
+                                <!-- <p>홍길동/세종문화회관 홍길동/세종문화회관</p>   -->
+																<!--텍스트 추가시 -->
+																<!--  190611 주석처리  -->
+                            </dt>
+														<!--  190611 추가부분  -->
+														<dd>
+														 <span class="low_num">(총 <em>9</em>개)</span>
+														</dd>
+														<!--  //190611 추가부분  -->
+                            <dd>
+                                <a href="#"><img src="../../resources/images/main/ico_city04.png" alt="세종문화회관"></a>
+                                <a href="#"><img src="../../resources/images/main/ico_barcode.png" alt="바코드 아이콘"></a>
+                            </dd>
+                        </dl>
+                        </div>
+                    </li>
+
+										<!--  190611 주석처리  -->
+                    <!-- <li>
+                    <div>
+                        <dl>
+                            <dt>
+                            	<p class="title">세종문화회관</p>
+                                <p>홍길동/세종문화회관</p> 텍스트 추가시(주석 텍스트)
+                            </dt>
+														<dd>
+														 <span class="low_num">(총 <em>120개</em>)</span>
+														</dd>
+                            <dd>
+                                <a href="#"><img src="../../resources/images/main/ico_logo.png" alt="세종문화회관"></a>
+                                <a href="#"><img src="../../resources/images/main/ico_barcode.png" alt="바코드 아이콘"></a>
+                            </dd>
+                        </dl>
+                        </div>
+                    </li> -->
+										<!--  //190611 주석처리  -->
+
+										<!--  190611 주석처리  -->
+                    <!-- <li class="not">
+                     홀수 일시 나오는 화면 클래스not(주석 텍스트)
+                     <div>
+                        <dl>
+                            <dt><img src="../../resources/images/main/ico_not.png" alt="아이콘"></dt>
+                            <dd>사용중인 카드와 서울시민카드 모두 공공시설에서 이용가능 합니다.</dd>
+                        </dl>
+                    </div>
+                  </li> -->
+									<!--  //190611 주석처리  -->
+
+                </ul>
+            </div>
+        </div><!--//section01-->
+
+
+
+        <div id="visual01">
+            <div class="slider04">
+                <ul class="slides" id="slides_pop"><!--2018-12-12 추가-->
+                    <li class="images" style="display:block">
+                    	<div class="banner">
+                            <a  style="background:#ffea01;" href="#"><img src="../../resources/images/sample/banner01.jpg" alt="배너이미지"></a>
+                        </div>
+                    </li>
+                    <li class="images" style="display:block">
+                    	<div class="banner">
+                            <a  style="background:#fff;" href="#"><img src="../../resources/images/sample/banner02.jpg" alt="배너이미지"></a>
+                        </div>
+                    </li>
+                    <li class="images" style="display:block">
+                    	<div class="banner">
+                            <a  style="background:#fff099;" href="#"><img src="../../resources/images/sample/banner03.jpg" alt="배너이미지"></a>
+                        </div>
+                    </li>
+                    <li class="images" style="display:block">
+                    	<div class="banner">
+                            <a  style="background:#ffea01;" href="#"><img src="../../resources/images/sample/banner01.jpg" alt="배너이미지"></a>
+                        </div>
+                    </li>
+                    <li class="images" style="display:block">
+                    	<div class="banner">
+                            <a  style="background:#fff;" href="#"><img src="../../resources/images/sample/banner02.jpg" alt="배너이미지"></a>
+                        </div>
+                    </li>
+                    <li class="images" style="display:block">
+                    	<div class="banner">
+                            <a  style="background:#fff099;" href="#"><img src="../../resources/images/sample/banner03.jpg" alt="배너이미지"></a>
+                        </div>
+                    </li>
+                    <li class="images" style="display:block">
+                    	<div class="banner">
+                            <a  style="background:#ffea01;" href="#"><img src="../../resources/images/sample/banner01.jpg" alt="배너이미지"></a>
+                        </div>
+                    </li>
+                    <li class="images" style="display:block">
+                    	<div class="banner">
+                            <a  style="background:#fff;" href="#"><img src="../../resources/images/sample/banner02.jpg" alt="배너이미지"></a>
+                        </div>
+                    </li>
+                    <li class="images" style="display:block">
+                    	<div class="banner">
+                            <a  style="background:#fff099;" href="#"><img src="../../resources/images/sample/banner03.jpg" alt="배너이미지"></a>
+                        </div>
+                    </li>
+                    <li class="images" style="display:block">
+                    	<div class="banner">
+                            <a  style="background:#ffea01;" href="#"><img src="../../resources/images/sample/banner01.jpg" alt="배너이미지"></a>
+                        </div>
+                    </li>
+                    <li class="images" style="display:block">
+                    	<div class="banner">
+                            <a  style="background:#fff;" href="#"><img src="../../resources/images/sample/banner02.jpg" alt="배너이미지"></a>
+                        </div>
+                    </li>
+                    <li class="images" style="display:block">
+                    	<div class="banner">
+                            <a  style="background:#fff099;" href="#"><img src="../../resources/images/sample/banner03.jpg" alt="배너이미지"></a>
+                        </div>
+                    </li>
+                    <li class="images" style="display:block">
+                    	<div class="banner">
+                            <a  style="background:#ffea01;" href="#"><img src="../../resources/images/sample/banner01.jpg" alt="배너이미지"></a>
+                        </div>
+                    </li>
+                    <li class="images" style="display:block">
+                    	<div class="banner">
+                            <a  style="background:#fff;" href="#"><img src="../../resources/images/sample/banner02.jpg" alt="배너이미지"></a>
+                        </div>
+                    </li>
+                    <li class="images" style="display:block">
+                    	<div class="banner">
+                            <a  style="background:#fff099;" href="#"><img src="../../resources/images/sample/banner03.jpg" alt="배너이미지"></a>
+                        </div>
+                    </li>
+              	</ul>
+                <div class="slidesjs_btn slide_num"><div id="slidesjs-log"><span class="slidesjs-slide-number">1</span> / 15</div></div> <!--2018-12-12 추가-->
+            </div>
+        </div>
+
+        <div class="margin_area">여백</div>
+
+    </article>
+
+
+
+    <article>
+        <div class="section02 blue"><!--클래스가 blue붙을시 백그라운드 색상변견 -->
+            <div class="title_tt">
+                <p>카드 등록 후 사용하세요</p>
+                <div class="show_btn"><span></span></div>
+            </div>
+						<!--  190611 클래스 fst_main 추가  -->
+            <div class="card_box fst_main">
+						<!--  //190611 클래스 fst_main 추가  -->
+                <ul>
+									<!--  순서 2번째에서 첫 번째로 이동  -->
+									<li>
+										<div>
+											<dl>
+												<dt>녹색장난감도서관</dt>
+												<!--  190611 추가부분  -->
+												<dd>
+												 <span class="low_num">(총 <em>120</em>개)</span>
+												</dd>
+												<!--  //190611 추가부분  -->
+												<dd>
+													<a href="#"><img src="../../resources/images/main/ico_city05.png" alt="삼청각"></a>
+												</dd>
+											</dl>
+											<p class="close"><a href="#"><img src="../../resources/images/main/ico_closebg.png" alt="닫기"></a></p>
+										</div>
+									</li>
+									<!--  //순서 2번째에서 첫 번째로 이동  -->
+                    <li>
+                    	<div>
+                        <dl>
+
+                            <dt>
+															<!--  190611 주석처리  -->
+															<!-- <p class="title">서울시립미술관서울시립미술관서울시립미술관서울시립미술관서울시립미술관</p> -->
+															<!--  //190611 주석처리  -->
+
+															<!--  190611 추가  -->
+															<p class="title">서울도서관</p>
+															<!--  //190611 추가  -->
+														</dt>
+														<!--  190611 추가부분  -->
+														<dd>
+														 <span class="low_num"></span>
+														</dd>
+														<!--  //190611 추가부분  -->
+                            <dd>
+                                <a href="#">
+																	<!--  190611 주석처리  -->
+																	<!-- <img src="../../resources/images/main/ico_city03.png" alt="ddp"> -->
+																	<!--  //190611 주석처리  -->
+
+																	<!--  190611 추가  -->
+																	<img src="../../resources/images/main/img_library.png" alt="ddp">
+																	<!--  //190611 추가  -->
+																</a>
+                            </dd>
+                        </dl>
+                        <p class="close"><a href="#"><img src="../../resources/images/main/ico_closebg.png" alt="닫기"></a></p>
+                        </div>
+                    </li>
+                    <li>
+                    	<div>
+                        <dl>
+                            <dt>서울상상나라</dt>
+														<!--  190611 추가부분  -->
+														<dd>
+														 <span class="low_num">(총 <em>23</em>개)</span>
+														</dd>
+														<!--  //190611 추가부분  -->
+                            <dd>
+                                <a href="#">
+
+																	<!--  190611 주석처리  -->
+																	<!-- <img src="../../resources/images/main/ico_city06.png" alt="서울시립미술관"> -->
+																	<!--  //190611 주석처리  -->
+
+																	<!--  190611 추가  -->
+																	<img src="../../resources/images/main/ico_city04.png" alt="서울시립미술관">
+																	<!--  //190611 추가  -->
+
+																</a>
+                            </dd>
+                        </dl>
+                        <p class="close"><a href="#"><img src="../../resources/images/main/ico_closebg.png" alt="닫기"></a></p>
+                        </div>
+                    </li>
+										<!--  190611 추가  -->
+										<li>
+                    	<div>
+                        <dl>
+                            <dt>삼청각</dt>
+														<!--  190611 추가부분  -->
+														<dd>
+														 <span class="low_num">(총 <em>9</em>개)</span>
+														</dd>
+														<!--  //190611 추가부분  -->
+                            <dd>
+                                <a href="#"><img src="../../resources/images/main/ico_city02.png" alt="서울시립미술관"></a>
+                            </dd>
+                        </dl>
+                        <p class="close"><a href="#"><img src="../../resources/images/main/ico_closebg.png" alt="닫기"></a></p>
+                        </div>
+                    </li>
+										<!--  //190611 추가  -->
+
+
+										<!--  190611 주석처리  -->
+										<!--홀수 일시 나오는 화면 클래스not -->
+                    <!-- <li class="not">
+                    	<div>
+                        <dl>
+                            <dt><img src="../../resources/images/main/ico_not.png" alt="아이콘"></dt>
+                            <dd>서울시의 공공시설을 서울시민 통합카드로 이용하세요</dd>
+                        </dl>
+                        </div>
+                    </li> -->
+										<!--  //190611 주석처리  -->
+
+                </ul>
+            </div>
+        </div><!--//section02-->
+
+    </article>
+
+
+    <article>
+    	<div class="section03"> <!--클래스가 blue붙을시 백그라운드 색상변견 -->
+            <div class="title_tt">
+                <p>서울시민카드가 추천합니다.</p>
+            </div>
+						<!--  190611 fst_main 클래스 추가  -->
+            <div class="tab_box fst_main">
+						<!--  //190611 fst_main 클래스 추가  -->
+                <ul>
+                    <li>
+                        <a href="#">
+                            <dl>
+                                <dt><img src="../../resources/images/main/tab_box_img01.png" alt="서울상상나라"></dt>
+                                <dd>
+                                    <p class="single">삼청각</p>
+																		<!--  190611 추가 부분  -->
+																		<span class="low_num">(총 <em>120</em>개)</span>
+																		<!--  //190611 추가 부분  -->
+                                    <p class="s_text">三廳各</p>
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <dl>
+                                <dt><img src="../../resources/images/main/tab_box_img02.png" alt="서울상상나라"></dt>
+                                <dd>
+                                    <p class="single">서울시립미술관</p>
+                                    <p class="s_text">우리의 삶을 바꾸는 마을을 가진 미술관</p>
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <dl>
+                                <dt><img src="../../resources/images/main/tab_box_img03.png" alt="서울상상나라"></dt>
+                                <dd>
+                                    <p class="single">서울도서관</p>
+                                    <p class="s_text">행복을 디자인하는 어린이</p>
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <dl>
+                                <dt><img src="../../resources/images/main/tab_box_img04.png" alt="서울상상나라"></dt>
+                                <dd>
+                                    <p class="single">서울상상나라</p>
+                                    <p class="s_text">행복을 디자인하는 어린이</p>
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <dl>
+                                <dt><img src="../../resources/images/sub/ico_noimg.png" alt="서울상상나라"></dt>
+                                <dd>
+                                    <p class="single">서울상상나라</p>
+                                    <p class="s_text">행복을 디자인하는 어린이</p>
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <dl>
+                                <dt><img src="../../resources/images/main/tab_box_logo.png" alt="서울상상나라"></dt>
+                                <dd>
+                                    <p class="single">서울상상나라서울상상나라서울상상나라서울상상나라</p>
+																		<!--  190611 추가 부분  -->
+																		<span class="low_num">(총 <em>120</em>개)</span>
+																		<!--  //190611 추가 부분  -->
+                                    <p class="s_text">행복을디자인하는어린이행복을디자인하는어린이행복을디자인하는어린이행복을디자인하는어린이행복을디자인하는어린이</p>
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="more_area02 grey">
+                <a href="#" class="more_btn">더보기<img src="../../resources/images/main/ico_more03.png" alt="더보기"></a>
+            </div>
+
+        </div><!--//section03-->
+
+
+    </article>
+
+
+
+</section>
+<!-- //section -->
+
+
+<footer class="footer add"> <!--add클래스 추가하였습니다. -->
+	<div class="foot_nav">
+    	<ul>
+        	<li class="on">
+            	<a href="#">서울시민카드</a>
+            </li>
+            <li>
+            	<a href="#">시설정보</a>
+            </li>
+            <li>
+            	<a href="#">공공서비스 예약</a>
+            </li>
+            <li>
+            	<a href="#">쿠폰</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+<!-- //footer -->
+
+
+</body>
+<!-- LNB -->
+<div id="lnb">
+	<!-- lnb_cont -->
+    <div class="lnb_cont">
+		<div class="lnb_top">
+        	<a href="#"><img src="../../resources/images/main/ico_lnb.png" alt="알림아이콘"><em>5</em></a>
+        	<h3>삼청각 자미공연 할인!단 하루!삼청각 자미공연 할인!단 하루!</h3>
+            <a href="#" class="setting"><img src="../../resources/images/main/ico_setting.png" alt="설정아이콘"></a>
+        </div><!--//lnb_top-->
+
+        <div class="lnb_icon">
+        	<ul>
+            	<li>
+                	<a href="#">
+                    	<dl>
+                        	<dt><img src="../../resources/images/main/ico_lnb01.png" alt="카드관리"></dt>
+                            <dd>카드등록</dd> <!--텍스트 수정 -->
+                        </dl>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<dl>
+                        	<dt><img src="../../resources/images/main/ico_lnb02.png" alt="내쿠폰"></dt>
+                            <dd>내쿠폰</dd>
+                        </dl>
+                    </a>
+                </li>
+            </ul>
+        </div><!--//lnb_icon-->
+
+        <div class="lnb_info">
+        	<ul>
+            	<li>
+                	<a href="#">결제내역</a> <!--텍스트 수정 텍스트사이 / 추가 -->
+                </li>
+                <li>
+                	<a href="#">공공서비스예약 확인</a> <!--텍스트 수정 텍스트사이 / 추가 -->
+                </li>
+                <li>
+                	<a href="#">내 정보</a>
+                </li>
+                <li>
+                	<a href="#">이벤트</a>
+                </li>
+            </ul>
+        </div><!--//lnb_info-->
+
+        <div class="lnb_box">
+        	<ul>
+            	<li>
+                	<a href="#">
+                    	<dl>
+                        	<dt><img src="../../resources/images/main/ico_lnbbox01.png" alt="공지사항아이콘"></dt>
+                            <dd>공지사항</dd>
+                        </dl>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<dl>
+                        	<dt><img src="../../resources/images/main/ico_lnbbox02.png" alt="이용안내아이콘"></dt>
+                            <dd>이용안내</dd>
+                        </dl>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<dl>
+                        	<dt><img src="../../resources/images/main/ico_lnbbox03.png" alt="FAQ아이콘"></dt>
+                            <dd>자주묻는 질문</dd>
+                        </dl>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="lnb_map">
+        	<a href="#">
+                <dl>
+                    <dt><img src="../../resources/images/main/ico_map.png" alt="가까운시설찾기 아이콘"></dt>
+                    <dd>가까운 시설찾기<br>가까운 시설을 찾아 이용해보세요.</dd>
+                </dl>
+            </a>
+        </div><!--//lnb_map-->
+
+        <div class="lnb_barea">
+        	<ul>
+            	<li>
+                	<a href="#" class="use_btn">개인정보처리방침</a>
+                </li>
+                <li>
+                	<a href="#" class="use_btn">이용약관</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="pop_btn"><a href="#" class="btn_close"><img src="../../resources/images/main/btn_close.png" alt="메뉴닫기"></a></div>
+    </div>
+	<!-- //lnb_cont -->
+</div>
+<!-- //LNB -->
+
+
+
+<!--팝업-->
+<section class="popup no_center" id="pop02">
+<h1 class="blind">서울시민카드 팝업</h1>
+ <article class="pop_area barcode_pop">
+ 	<div class="pop_close"><a href="#"><img src="../../resources/images/main/pop_close.png" alt="닫기"></a></div>
+    <!-- pop_cont -->
+    <div class="pop_cont left">
+		<div class="pop_logo"><img src="../../resources/images/main/pop_logo.png" alt="서울시민카드"></div>
+        <div class="barcode_box">
+        	<dl>
+            	<dt><img src="../../resources/images/main/ico_pop_barcode.png" alt="바코드이미지"></dt>
+                <dd><span>SCC</span><span>170</span><span>000</span><span>237</span></dd> <!--2017-11-21 span 태그추가 -->
+            </dl>
+            <!-- loading -->
+            <div class="main_loading">
+				<em><img src="../../resources/images/main/main_gif.gif" alt="아이콘"></em>  <!--코드 수정 em태그-->
+            </div>
+            <!-- //loading" -->
+        </div>
+    </div><!-- //pop_cont -->
+</article>
+</section><!--//popup-->
+
+
+<!--e-tax 회원 아닌 경우 팝업 -->
+<section class="popup" id="pop_certi">
+<h1 class="blind">서울시민카드 팝업</h1>
+ <article class="pop_area card_pop">
+    <!-- pop_cont -->
+    <div class="pop_cont">
+		<p><strong>'e-tax'</strong> 회원이 아닙니다.<br>
+        회원가입 후 다시 이용해 주시기 바랍니다.
+        </p>
+        <div class="pop_barea one">
+        	<ul>
+            	<li>
+                	<a href="#" class="pop_btn02 btn_pop_cl">확인</a>
+                </li>
+            </ul>
+        </div>
+    </div><!-- //pop_cont -->
+</article>
+</section><!--//popup-->
+
+
+
+<!--<div class="main_search" id="search">
+	<form action="#" method="post">
+        <fieldset>
+            <legend>검색</legend>
+			<dl>
+            	<dt><a href="#" class="main_back"><img src="../../resources/images/main/back_btn.png" alt="뒤로"></a></dt>
+                <dd>
+                	<input type="text" placeholder="종로구">
+                    <a><img src="../../resources/images/main/main_search.png" alt="검색"></a>
+                </dd>
+            </dl>
+        </fieldset>
+    </form>
+</div><!--//main_search-->
+
+<div class="main_search" id="search">
+	<form action="#" method="post">
+        <fieldset>
+            <legend>검색</legend>
+			<dl>
+            	<dt><a href="#" class="main_back"><img src="../../resources/images/main/back_btn.png" alt="뒤로"></a></dt>
+                <dd>
+                	<input type="text" placeholder="종로구">  <!--인풋에 텍스트 입력시 돋보기아이콘 엑스 아이콘으로 바낌 -->
+                    <a><img src="../../resources/images/main/ico_search.png" alt="검색"></a>
+                </dd>
+                <dd class="del"><span><img src="../../resources/images/sub/sub_search02.png" alt="삭제아이콘"></span></dd> <!--삭제아이콘 태그추가 -->
+            </dl>
+        </fieldset>
+    </form>
+</div><!--//main_search-->
+
+
+<script src="../../resources/js/jquery.slides.js"></script><!--2018-12-12 추가-->
+
+
+<script><!--2018-12-12 추가-->
+$(function() {
+     var cnt = $('#slides_pop').children().length;
+     if(cnt>1){
+	  $('#slides_pop').slidesjs({
+		width: 480,
+		height: 70,
+		start: 1, // 시작 이미지 번호
+		play: {
+			active: true,  //플레이 스탑버튼 사용유무(버튼변경불가)
+			effect: "slide", //효과 slide, fade
+			interval: 5000,  //밀리세컨드 단위 5000 이면 5초
+			auto: true, //시작시 자동 재생 사용유무
+			swap: true, //플레이스 스탑버튼 둘다보임 false, 하나로 보임 true
+			pauseOnHover: false, //마우스 올렸을때 슬라이드 멈춤할껀지 말껀지
+			restartDelay: 2500 //마우스 올렸다가 벗어 났을때 재 작동 시간 밀리세컨드 단위
+		},
+		pagination: {
+			  active: false, //페이징
+			  effect: "slide" //숫자 눌렀을때 효과 슬라이드(slide) 페이드효과(fade)
+			},
+		callback: {
+		  loaded: function(number) {
+			$('#slidesjs-log .slidesjs-slide-number').text(number);
+		  },
+		  start: function(number) {
+		  },
+		  complete: function(number) {
+			$('#slidesjs-log .slidesjs-slide-number').text(number);
+		  }
+		}
+	  });
+	 }
+});
+
+// 190702 추가분
+$(function() {
+     var cntM = $('#slide_tax_card').children().length;
+     if(cntM>1){
+
+	  $('#slide_tax_card').slidesjs({
+
+			width: 332,
+			height: 202,
+			start: 1, // 시작 이미지 번호
+			play: {
+				active: false,  //플레이 스탑버튼 사용유무(버튼변경불가)
+				effect: "slide", //효과 slide, fade
+				interval: 5000,  //밀리세컨드 단위 5000 이면 5초
+				auto: false, //시작시 자동 재생 사용유무
+				swap: false, //플레이스 스탑버튼 둘다보임 false, 하나로 보임 true
+				pauseOnHover: false, //마우스 올렸을때 슬라이드 멈춤할껀지 말껀지
+				restartDelay: 2500, //마우스 올렸다가 벗어 났을때 재 작동 시간 밀리세컨드 단위
+			},
+			pagination: {
+				  active: false, //페이징
+				  effect: "slide" //숫자 눌렀을때 효과 슬라이드(slide) 페이드효과(fade)
+				},
+			callback: {
+			  loaded: function(number) {
+				$('#slidesjs-log02 .slidesjs-slide-number02').text(number);
+			  },
+			  start: function(number) {
+			  },
+			  complete: function(number) {
+				$('#slidesjs-log02 .slidesjs-slide-number02').text(number);
+			  }
+			},
+			looping: false,
+
+	  });
+
+	 }
+});
+// 190702 추가분 끝
+
+
+// 190702 주석처리
+// 190624 추가부분
+// $(document).ready(function(){
+//
+//   $(window).load(function() {
+//       $('.slider05').flexslider({
+//           initDelay: 0,
+//           slideshow: false,
+//           slideshowSpeed: 3000,
+//           animation: "slide",
+//           pauseOnHover: true,
+//           start: function(slider){},
+// 					animationLoop: false,
+// 					itemMargin:20,
+// 					pagination:true,
+//       });
+//   });
+//
+// })
+// 190702 주석처리 끝.
+
+</script><!--2018-12-12 추가-->
+
+</html>

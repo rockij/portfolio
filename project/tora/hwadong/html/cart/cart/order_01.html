@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="preload" href="../../resources/font/NotoSansKR-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link href="../../resources/css/font.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/base.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/site.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/yjh.css" media="screen" rel="stylesheet">
+<script src="../../resources/js/jquery-3.3.1.min.js"></script>
+<script src="../../resources/js/jquery-3.3.1.js"></script> 
+<script src="../../resources/js/design.js"></script>
+<script src="../../resources/js/jquery-1.12.4.js"></script>
+<title>주문/결제 | 화동양행</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header" class="fix top">
+        <button type="button" onclick="" class="btn_prev"><i>뒤로가기</i></button>
+        <button type="button" onclick="" class="btn_home"><i>처음으로가기</i></button>
+        <h1>주문/결제</h1>
+        <button type="button" onclick="" class="btn_srch"><i>검색으로가기</i></button>
+        <button type="button" onclick="" class="btn_gnb"><i>메인메뉴열기</i></button>
+    </header>
+    <!-- //header -->
+
+    <div id="ct" class="order-container">
+
+		<div class="order-box">
+			<h4 class="title_type3">주문자 정보</h4>
+			<div class="table_type">
+				<table>
+					<colgroup>
+						<col style="width:104px;">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">성명</th>
+							<td>홍*동</td>
+						</tr>
+						<tr>
+							<th scope="row">휴대폰번호</th>
+							<td>010-****-5678</td>
+						</tr>
+						<tr>
+							<th scope="row">이메일</th>
+							<td>Ab*****@naver.com</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<ul class="lst-info">
+				<li>
+					<a href="#none" class="btn-arrow btn-right" onclick="layer_open('deliver-admin')">
+						<dl>
+							<dt><span>배송지</span>우리집(대표주소)</dt>
+							<dd>
+								<span>서울시 강남구 압구정로 ****1동 901호  (압구정동, 현대빌)</span>
+								<span>휴대폰 번호 : 010-****-5678</span>
+								<span>추가 연락처 : 070-****-1234</span>
+							</dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<a href="#none" class="btn-arrow btn-right" onclick="layer_open('deliver-massage')">
+						<dl>
+							<dt>배송 메시지</dt>
+							<dd>
+								<span>경비실에 맡겨 주세요.</span>
+							</dd>
+						</dl>
+					</a>
+				</li>
+			</ul>
+
+			<dl class="info-box">
+				<dt class="btn-info btn-arrow btn-down">※ 배송안내</dt>
+				<dd>
+					<ul class="lst-bullet02">
+						<li>기본 배송비는 2,500원 이며, 우체국 택배로 발송 됩니다.</li>
+						<li>해외배송은 불가합니다.</li>
+						<li>무료배송은 수량과 상관없이 실제 결제 금액 기준 5만원 이상만 해당 됩니다.</li>
+						<li>배송지 불분명 및 수신불가 연락처 기입으로 반송되는 왕복  택배 비용은 구매자 부담으로 정확한 주소 및 통화 가능한 연락처를 기입하세요.</li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+
+		<div class="order-prd">
+			<h4 class="title_type3">주문 상품 정보 (총 <span class="fc-blue">2</span>건)</h4>
+			<ul class="lst-order">
+				<li>
+					<a href="#none" class="cart-con">
+						<div class="pro-img"><span><img src="../../resources/image/cart/prd01.jpg" alt=""/></span></div>
+						<div class="prd-info">
+							<span class="ico-txt">예약상품주문</span>
+							<span class="clamp-2 pro-title">‘한국의 문화유산’ 기념 은화(2차) 남한산성 상품명이 출력되는 영역입니다.‘한국의 문화유산’ 기념 은화(2차) 남한산성 상품명이 출력되는 영역입니다.</span>
+						</div>
+						<div class="prd-sum">
+							<p class="oder-amt">수량 : 9999개</p>
+							<p class="oder-sum">주문금액 <strong>9,999,999</strong>원</p>
+							<p class="oder-sale">판매가  9,999,999 원 - <span class="fc-red">정회원할인 9,999,999 원</span></p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#none" class="cart-con">
+						<div class="pro-img"><span><img src="../../resources/image/cart/prd01.jpg" alt=""/></span></div>
+						<div class="prd-info">
+							<span class="clamp-2 pro-title">‘한국의 문화유산’ 기념 은화(2차) 남한산성 상품명이 출력되는 영역입니다.‘한국의 문화유산’ 기념 은화(2차) 남한산성 상품명이 출력되는 영역입니다.</span>
+						</div>
+						<div class="prd-sum">
+							<p class="oder-amt">수량 : 9999개</p>
+							<p class="oder-sum">주문금액 <strong>9,999,999</strong>원</p>
+							<p class="oder-sale">판매가  9,999,999 원</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="total-info">
+			<div class="sumBox">
+				<dl>
+					<dt>총 상품 금액</dt>
+					<dd>
+						<span>총 주문금액 9,999,999 원</span>
+						<span>배송비 9,999,999 원</span>
+					</dd>
+				</dl>
+			</div>
+
+			<dl class="info-box">
+				<dt class="btn-info btn-arrow btn-down">※ 정회원 할인 혜택 안내</dt>
+				<dd>
+					<ul class="lst-bullet02">
+						<li>비회원, 준회원은 정회원 할인 혜택을 받으실 수 없습니다.</li>
+						<li>온라인 옥션 상품의 경우 정회원 할인 혜택을 받으실 수 없습니다.</li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+
+		<div class="discount-box">
+			<h4 class="title_type3">할인수단 선택</h4>
+			<div class="input-sum">
+				<h4 class="title_type4">적립금</h4>
+				<div class="ipbox sub">
+					<input type="number" id="sum" placeholder="숫자만 입력 가능합니다.">
+				</div>
+				<span>원</span>
+			</div>
+			<p>
+				<button class="btn_m btn_type2">전액사용</button>
+				적립금 잔액 ( <span class="fc-red">9,999,999</span> 원 )
+			</p>
+		</div>
+
+		<div class="order-way">
+			<h4 class="title_type3 mb15">결제 수단 선택</h4>
+			<span class="checkbox check3">
+				<input type="checkbox" id="check1" checked="checked">
+				<label for="check1">현재 결제수단 다음에도 사용</label>
+			</span>
+			<ul class="list_ip_check type2 t3 mb20">
+				<li>
+					<div class="checkbox">
+						<input type="radio" name="payment" id="payment1" onclick="$('#deposit').hide(); $('#creditcard').show()" checked="">
+						<label for="payment1">신용카드</label>
+					</div>
+				</li>
+				<li>
+					<div class="checkbox">
+						<input type="radio" name="payment" id="payment2">
+						<label for="payment2">실시간 계좌이체</label>
+					</div>
+				</li>
+				<li>
+					<div class="checkbox">
+						<input type="radio" name="payment" id="payment3" onclick="$('#creditcard').hide(); $('#deposit').show()">
+						<label for="payment3">무통장 입금</label>
+					</div>
+				</li>
+			</ul>
+
+			<div class="payment " id="creditcard" style="display:block;">
+				<div class="discount-box">
+					<div class="input-sum">
+						<h4 class="title_type4">적립금</h4>
+						<div class="ipbox sub">
+							<input type="number" id="sum" placeholder="숫자만 입력 가능합니다.">
+						</div>
+						<span>원</span>
+					</div>
+					<p>
+						<button class="btn_m btn_type2">전액사용</button>
+						적립금 잔액 ( <span class="fc-red">9,999,999</span> 원 )
+					</p>
+				</div>
+				<div class="discount-box">
+					<h4 class="title_type3">결제정보</h4>
+					<div class="sumBox">
+						<dl>
+							<dt>총 상품 금액</dt>
+							<dd>
+								<span>총 주문금액 9,999,999 원</span>
+								<span>배송비 9,999,999 원</span>
+							</dd>
+						</dl>
+						<p class="total"><strong>9,999,999</strong> 원</p>
+					</div>
+					<div class="sumBox">
+						<dl>
+							<dt>총 할인 금액</dt>
+							<dd>
+								<span>적립금 사용 9,999,999 원</span>
+							</dd>
+						</dl>
+						<p class="total"><strong>9,999,999</strong> 원</p>
+					</div>
+					<div class="sumBox final">
+						<dl>
+							<dt>최종 결제 금액</dt>
+							<dd>
+								<span>무통장 입금 9,999,999 원</span>
+								<span>예치금 사용 9,999,999 원</span>
+							</dd>
+						</dl>
+						<p class="total"><strong>9,999,999</strong> 원</p>
+					</div>
+				</div>
+				
+				<div class="agree-box">
+					<h4 class="title_type3">약관 동의</h4>
+					<div class="lst-agree">
+						<span class="checkbox check3">
+							<input type="checkbox" id="check2">
+							<label for="check2">구매조건 확인 및 결진행 동의(전체동의)</label>
+						</span>
+						<button class="btn-info btn-arrow btn-down">보기</button>
+						<div>
+							<span class="checkbox check3">
+								<input type="checkbox" id="check3">
+								<label for="check3">아래 내용에 동의합니다.</label>
+							</span>
+							<p class="lst-bullet02">물품을 수령한 후 7일 이내에 반품할 수 있습니다. 다만, 구매자의 귀책사유로 물품이 훼손된 경우, 사용이나 일부 소비로 인하여 물품의 가치가 현저히 감소한 경우, 재판매가 곤란할 정도로 물품의 가치가 현저히 감소한 경우, 복제 가능한 물품의 포장을 훼손한 경우와 기타 법령에 의하여 반품이 제한되어 있는 경우에는 반품할 수 없습니다.</p>
+							<span class="checkbox check3">
+								<input type="checkbox" id="check4">
+								<label for="check4">아래 내용에 동의합니다.</label>
+							</span>
+							<p class="lst-bullet02">주문할 상품설명에 명시된 내용과 사용조건을 확인하였으며, 취소. 환불규정에 동의합니다.</p>
+							<span class="checkbox check3">
+								<input type="checkbox" id="check5">
+								<label for="check5">아래 내용에 동의합니다.</label>
+							</span>
+							<p class="lst-bullet02">일부 상품의 경우 취소가 불가함을 동의 합니다.</p>
+						</div>
+					</div>
+					<div class="btn-box ty2">
+						<ul class="btn_btm_half">
+							<li><button class="btn_r btn_type3">취소</button></li>
+							<li><button class="btn_r btn_type">결제하기</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="payment" id="account" style="display:none;"></div> 
+
+			<div class="payment" id="deposit" style="display:none;">
+				<div class="discount-box">
+					<div class="input-sum">
+						<h4 class="title_type4">예치금</h4>
+						<div class="ipbox sub">
+							<input type="number" id="sum" placeholder="숫자만 입력 가능합니다.">
+						</div>
+						<span>원</span>
+					</div>
+					<p>
+						<button class="btn_m btn_type2">전액사용</button>
+						적립금 잔액 ( <span class="fc-red">9,999,999</span> 원 )
+					</p>
+					<h4 class="title_type4">예금주</h4>
+					<p class="m0">㈜풍산화동양행</p>
+					<h4 class="title_type4">무통장 입금 계좌 정보</h4>
+					<div class="table_type v2">
+						<table>
+							<colgroup>
+								<col style="width:33.3%;">
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">은행정보</th>
+									<th scope="col" class="tl">계좌번호</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>국민은행</td>
+									<td class="tl">
+										<span class="checkbox circle">
+											<input type="radio" name="radio1" id="radio1-1" checked="checked">
+											<label for="radio1-1">484201-01-121839</label>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>우리은행</td>
+									<td class="tl">
+										<span class="checkbox circle">
+											<input type="radio" name="radio1" id="radio1-2">
+											<label for="radio1-2">414-316066-13-001</label>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>농협</td>
+									<td class="tl">
+										<span class="checkbox circle">
+											<input type="radio" name="radio1" id="radio1-3">
+											<label for="radio1-3">087-01-16716</label>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>우체국</td>
+									<td class="tl">
+										<span class="checkbox circle">
+											<input type="radio" name="radio1" id="radio1-4">
+											<label for="radio1-4">013227-01-00456</label>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>KEB 하나은행</td>
+									<td class="tl">
+										<span class="checkbox circle">
+											<input type="radio" name="radio1" id="radio1-5">
+											<label for="radio1-5">101-890045-15104</label>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>기업은행</td>
+									<td class="tl">
+										<span class="checkbox circle">
+											<input type="radio" name="radio1" id="radio1-6">
+											<label for="radio1-6">327-024342-01-015</label>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>신한은행</td>
+									<td class="tl">
+										<span class="checkbox circle">
+											<input type="radio" name="radio1" id="radio1-7">
+											<label for="radio1-7">140-007-759016</label>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<h4 class="title_type4">입금자 정보</h4>
+					<div class="table_type">
+						<table>
+							<colgroup>
+								<col style="width:104px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">입금자명</th>
+									<td>
+										<div class="ipbox sub certify">
+											<input type="tel" id="" placeholder="제목을 입력하세요." value="강다니엘">
+											<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">입금예정일</th>
+									<td>
+										<div class="box-date">
+											<label for="datepicker01">달력보기</label>
+											<input type="date" id="datepicker01" value="2019-06-05">
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<ul class="lst-bullet fc-blue mt10 fs12">
+						<li>입금 예정일 7일 후 미 입금 시 자동 취소 됩니다.</li>
+					</ul>
+
+					<ul class="lst-info mt20">
+						<li>
+							<a href="#none" class="btn-arrow btn-right" onclick="layer_open('cash-tax')">
+								<dl>
+									<dt>현금영수증/세금계산서 요청</dt>
+									<dd>현금영수증 / 010-1234-5678(소득공제)</dd>
+								</dl>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="discount-box">
+					<h4 class="title_type3">결제정보</h4>
+					<div class="sumBox">
+						<dl>
+							<dt>총 상품 금액</dt>
+							<dd>
+								<span>총 주문금액 9,999,999 원</span>
+								<span>배송비 9,999,999 원</span>
+							</dd>
+						</dl>
+						<p class="total"><strong>9,999,999</strong> 원</p>
+					</div>
+					<div class="sumBox">
+						<dl>
+							<dt>총 할인 금액</dt>
+							<dd>
+								<span>적립금 사용 9,999,999 원</span>
+							</dd>
+						</dl>
+						<p class="total"><strong>9,999,999</strong> 원</p>
+					</div>
+					<div class="sumBox final">
+						<dl>
+							<dt>최종 결제 금액</dt>
+							<dd>
+								<span>무통장 입금 9,999,999 원</span>
+								<span>예치금 사용 9,999,999 원</span>
+							</dd>
+						</dl>
+						<p class="total"><strong>9,999,999</strong> 원</p>
+					</div>
+				</div>
+				<div class="agree-box">
+					<h4 class="title_type3">약관 동의</h4>
+					<div class="lst-agree">
+						<span class="checkbox check3">
+							<input type="checkbox" id="check22">
+							<label for="check22">구매조건 확인 및 결진행 동의(전체동의)</label>
+						</span>
+						<button class="btn-info btn-arrow btn-down">보기</button>
+						<div>
+							<span class="checkbox check3">
+								<input type="checkbox" id="check33">
+								<label for="check33">아래 내용에 동의합니다.</label>
+							</span>
+							<p class="lst-bullet02">물품을 수령한 후 7일 이내에 반품할 수 있습니다. 다만, 구매자의 귀책사유로 물품이 훼손된 경우, 사용이나 일부 소비로 인하여 물품의 가치가 현저히 감소한 경우, 재판매가 곤란할 정도로 물품의 가치가 현저히 감소한 경우, 복제 가능한 물품의 포장을 훼손한 경우와 기타 법령에 의하여 반품이 제한되어 있는 경우에는 반품할 수 없습니다.</p>
+							<span class="checkbox check3">
+								<input type="checkbox" id="check44">
+								<label for="check44">아래 내용에 동의합니다.</label>
+							</span>
+							<p class="lst-bullet02">주문할 상품설명에 명시된 내용과 사용조건을 확인하였으며, 취소. 환불규정에 동의합니다.</p>
+							<span class="checkbox check3">
+								<input type="checkbox" id="check55">
+								<label for="check55">아래 내용에 동의합니다.</label>
+							</span>
+							<p class="lst-bullet02">일부 상품의 경우 취소가 불가함을 동의 합니다.</p>
+						</div>
+					</div>
+				</div>
+				<div class="btn-box ty2">
+					<ul class="btn_btm_half">
+						<li><button class="btn_r btn_type3">취소</button></li>
+						<li><button class="btn_r btn_type">결제하기</button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //content -->
+	
+	<footer id="footer">
+		<ul class="menu">
+			<li><a href="#;">회사소개</a></li>
+			<li><a href="#;">개인정보처리방침</a></li>
+			<li><a href="#;">이용약관</a></li>
+		</ul>        
+		<div class="inner">
+			<button class="topGo"><i>맨위로</i></button>
+			<strong class="lg">㈜풍산화동양행</strong>
+			<p class="cp">Copyright©Hwadong Co.,Ltd. All rights reserved.</p>
+			<button type="button" class="csControl"><i>고객센터열고닫기</i></button>
+			<div class="csarea">
+				<strong class="tit">고객센터</strong>
+				고객센터 : 02-3491-4586~7(월~금 9시~18시 토/일 공휴일 휴무)<br>
+				FAX : 02-597-8741<br>
+				E-Mail : service@hwadong.com
+				<address>
+					대표자 : 이제철 │ 개인정보관리책임자 : 이제철<br>
+					주소 : 서울시 서초구 효령로 351(서초동) 2F<br>
+					사업자등록번호 : 214-87-46644<br>
+					통신판매업신고 : 서울서초 제2004-03722호
+				</address>
+				<strong class="tit">소비자피해보상 보상보험<img src="../../resources/image/footer/logo_cm.gif" alt=""></strong>
+				고객님은 안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서<br>가입한 구매안전 서비스로 소비자 피해 보상보험 서비스를<br>이용하실 수 있습니다.
+			</div>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+	<!-- 배송 메시지 레이어 팝업 -->
+	 <div id="deliver-massage" class="ly_pop full" style="display:none;">
+	 	<div class="wrap-layer">
+			<header>
+				<h2>배송 메시지</h2>
+				<button type="button" onclick="layer_close();" class="popcls"><i>팝업닫기</i></button>
+			</header>
+			<div class="cont-layer ly-deliver">
+				<h4 class="title_type3">배송 요청사항</h4>
+				<ul class="lst-deliver">
+					<li>
+						<span class="checkbox circle">
+							<input type="radio" name="deliver" id="deliver-1" checked="checked">
+							<label for="deliver-1">배송 메시지를 선택해주세요.</label>
+						</span>
+					</li>
+					<li>
+						<span class="checkbox circle">
+							<input type="radio" name="deliver" id="deliver-2">
+							<label for="deliver-2">배송 전 연락 부탁드립니다.</label>
+						</span>
+					</li>
+					<li>
+						<span class="checkbox circle">
+							<input type="radio" name="deliver" id="deliver-3">
+							<label for="deliver-3">경비실에 맡겨주세요.</label>
+						</span>
+					</li>
+					<li>
+						<span class="checkbox circle">
+							<input type="radio" name="deliver" id="deliver-4">
+							<label for="deliver-4">집 앞에 놔주세요.</label>
+						</span>
+					</li>
+					<li>
+						<span class="checkbox circle">
+							<input type="radio" name="deliver" id="deliver-5">
+							<label for="deliver-5">택배함에 놔주세요.</label>
+						</span>
+					</li>
+					<li>
+						<span class="checkbox circle">
+							<input type="radio" name="deliver" id="deliver-6">
+							<label for="deliver-6">부재 시 휴대폰으로 연락주세요.</label>
+						</span>
+					</li>
+					<li>
+						<span class="checkbox circle">
+							<input type="radio" name="deliver" id="deliver-7">
+							<label for="deliver-7">부재 시 경비실에 맡겨주세요.</label>
+						</span>
+					</li>
+					<li>
+						<span class="checkbox circle">
+							<input type="radio" name="deliver" id="deliver-8">
+							<label for="deliver-8">부재 시 집 앞에 놔주세요.</label>
+						</span>
+					</li>
+					<li>
+						<span class="checkbox circle">
+							<input type="radio" name="deliver" id="deliver-9">
+							<label for="deliver-9">직접 입력</label>
+						</span>
+					</li>
+					<li>
+						<div class="ipbox sub certify dis">
+							<input type="text" id="" placeholder="제목을 입력하세요." disabled="">
+						</div>
+					</li>
+					<li>
+						<div class="ipbox sub certify false">
+							<input type="text" id="" placeholder="100자 이내로 입력하세요.">
+							<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+						</div>
+						<p class="fc-red">! 배송 메시지를 입력하세요</p>
+					</li>
+				</ul>
+				<div class="btn-box ty2">
+					<button class="btn_r btn_type">저장</button>
+				</div>
+			</div>
+		</div>
+	 </div>
+
+	<!-- 배송지 관리 레이어 팝업 -->
+	 <div id="deliver-admin" class="ly_pop full" style="display:none;">
+	 	<div class="wrap-layer">
+			<header>
+				<h2>배송지 관리</h2>
+				<button type="button" onclick="layer_close();" class="popcls"><i>팝업닫기</i></button>
+			</header>
+			<div class="cont-layer ly-deliver">
+				<h4 class="title_type3 tit-bt">배송지 목록<button class="btn_m btn_type btn_add" onclick="layer_open('deliver-signUp')">배송지 추가</button></h4>
+				<ul class="lst-place">
+					<li class="on">
+						<a href="#none">
+							<dl>
+								<dt>우리집 (대표주소)</dt>
+								<dd>
+									<span>우)12345</span>
+									<span>서울시 강남구 압구정로 ****1동 901호 (압구정동, 신현대아파트)</span>
+									<span>서울시 강남구 신사동 ****** 201호 (압구정동, 신현대아파트)</span>
+									<span>010-****-5678 / 070-****-1234</span>
+								</dd>
+								<dd class="recipient"><span>받으시는 분</span>강*니엘</dd>
+							</dl>
+						</a>
+						<button class="btn_s btn_type2 modify" onclick="layer_open('deliver-modify')">수정</button>
+						<button class="btn_s btn_type choice">선택</button>
+					</li>
+					<li>
+						<a href="#none">
+							<dl>
+								<dt>사무실 (우편배송지)</dt>
+								<dd>
+									<span>우)12345</span>
+									<span>서울시 강남구 압구정로 ****1동 901호 (압구정동, 신현대아파트)</span>
+									<span>서울시 강남구 신사동 ****** 201호 (압구정동, 신현대아파트)</span>
+									<span>010-****-5678 / 070-****-1234</span>
+								</dd>
+								<dd class="recipient"><span>받으시는 분</span>강*니엘</dd>
+							</dl>
+						</a>
+						<button class="btn_s btn_type2 modify" onclick="layer_open('deliver-modify')">수정</button>
+						<button class="btn_s btn_type choice">선택</button>
+					</li>
+					<li>
+						<button class="btn_s btn_type3 delete">삭제</button>
+						<a href="#none">
+							<dl>
+								<dt class="general">요미네집 (일반)</dt>
+								<dd>
+									<span>우)12345</span>
+									<span>서울시 강남구 압구정로 ****1동 901호 (압구정동, 신현대아파트)</span>
+									<span>서울시 강남구 신사동 ****** 201호 (압구정동, 신현대아파트)</span>
+									<span>010-****-5678 / 070-****-1234</span>
+								</dd>
+								<dd class="recipient"><span>받으시는 분</span>강*니엘</dd>
+							</dl>
+						</a>
+						<button class="btn_s btn_type2 modify" onclick="layer_open('deliver-modify')">수정</button>
+						<button class="btn_s btn_type choice">선택</button>
+					</li>
+				</ul>
+					
+				<div class="btn-box ty2">
+					<ul class="btn_btm_half">
+						<li><button class="btn_r btn_type3" onclick="layer_close();">취소</button></li>
+						<li><button class="btn_r btn_type">적용</button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	 </div>
+
+	 <!-- 배송지 등록 레이어 팝업 -->
+	 <div id="deliver-signUp" class="ly_pop full" style="display:none;">
+	 	<div class="wrap-layer">
+			<header>
+				<h2>배송지 등록</h2>
+				<button type="button" onclick="layer_close();" class="popcls"><i>팝업닫기</i></button>
+			</header>
+			<div class="cont-layer ly-deliver">
+
+				<ul class="list_ip_check type2 t3 mb20">
+					<li>
+						<div class="checkbox" onclick="$('#dv-place2, #dv-place3').hide(); $('#dv-place1').show()">
+							<input type="radio" name="deliver" id="deliver1" checked="">
+							<label for="deliver1">일반</label>
+						</div>
+					</li>
+					<li>
+						<div class="checkbox" onclick="$('#dv-place1, #dv-place3').hide(); $('#dv-place2').show()">
+							<input type="radio" name="deliver" id="deliver2">
+							<label for="deliver2">대표주소</label>
+						</div>
+					</li>
+					<li>
+						<div class="checkbox" onclick="$('#dv-place1, #dv-place2').hide(); $('#dv-place3').show()">
+							<input type="radio" name="deliver" id="deliver3">
+							<label for="deliver3">우편배송지</label>
+						</div>
+					</li>
+				</ul>
+
+				<div class="dv-place" id="dv-place1" style="display:block;">
+					<fieldset class="form_type">
+						<ul class="iplist">
+							<li>
+								<div class="ipbox del">
+									<input type="text" id="" placeholder="배송지 이름을 입력하세요.">
+									<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+								</div>
+							</li>
+							<li>
+								<div class="ipbox del">
+									<input type="text" id="" placeholder="받으시는 분을 입력하세요.">
+									<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+								</div>
+							</li>
+							<li>
+								<ul class="ipbox hp">
+									<li><input type="tel" id="" value="010" maxlength="3"></li>
+									<li><input type="tel" id="" maxlength="4"></li>
+									<li><input type="tel" id="" maxlength="4"></li>
+								</ul>
+							</li>
+							<li>
+								<ul class="ipbox hp">
+									<li><input type="tel" id="" value="" maxlength="3"></li>
+									<li><input type="tel" id="" maxlength="4"></li>
+									<li><input type="tel" id="" maxlength="4"></li>
+								</ul>
+							</li>
+							<li>
+								<div class="ipbox del srch">
+									<input type="text" id="" placeholder="예) 판교역로 235, 분당 주공, 삼평동 681">
+									<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+									<input type="submit" class="btn-submit" value="검색"> 
+								</div>
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset class="form_type">
+						<ul class="iplist">
+							<li>
+								<div class="ipbox del false">
+									<input type="text" id="" placeholder="배송지 이름을 입력하세요.">
+									<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+								</div>
+							</li>
+							<li>
+								<div class="ipbox del false">
+									<input type="text" id="" placeholder="받으시는 분을 입력하세요.">
+									<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+								</div>
+							</li>
+							<li>
+								<ul class="ipbox hp false">
+									<li><input type="tel" id="" value="010" maxlength="3"></li>
+									<li><input type="tel" id="" maxlength="4"></li>
+									<li><input type="tel" id="" maxlength="4"></li>
+								</ul>
+								<p class="fc-red">! 휴대폰 번호를 반드시 입력하세요.</p>
+							</li>
+							<li>
+								<ul class="ipbox hp">
+									<li><input type="tel" id="" value="" maxlength="3"></li>
+									<li><input type="tel" id="" maxlength="4"></li>
+									<li><input type="tel" id="" maxlength="4"></li>
+								</ul>
+							</li>
+							<li>
+								<div class="ipbox del srch">
+									<input type="text" id="" placeholder="예) 판교역로 235, 분당 주공, 삼평동 681">
+									<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+									<input type="submit" class="btn-submit" value="검색"> 
+								</div>
+							</li>
+						</ul>
+					</fieldset>
+					<div class="btn-box ty2">
+						<ul class="btn_btm_half">
+							<li><button class="btn_r btn_type3" onclick="layer_close();">취소</button></li>
+							<li><button class="btn_r btn_type">등록</button></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="dv-place" id="dv-place2" style="display:none;">
+					<fieldset class="form_type">
+						<ul class="iplist">
+							<li>
+								<div class="ipbox del">
+									<input type="text" id="" value="내집">
+									<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+								</div>
+							</li>
+							<li>
+								<div class="ipbox del">
+									<input type="text" id="" value="강다니엘">
+									<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+								</div>
+							</li>
+							<li>
+								<ul class="ipbox hp">
+									<li><input type="tel" id="" value="010" maxlength="3"></li>
+									<li><input type="tel" id="" value="1234" maxlength="4"></li>
+									<li><input type="tel" id="" value="5678"  maxlength="4"></li>
+								</ul>
+							</li>
+							<li>
+								<ul class="ipbox hp">
+									<li><input type="tel" id="" value="010" maxlength="3"></li>
+									<li><input type="tel" id="" value="1234" maxlength="4"></li>
+									<li><input type="tel" id="" value="5678"  maxlength="4"></li>
+								</ul>
+							</li>
+							<li>
+								<div class="ipbox del srch">
+									<input type="text" id="" placeholder="예) 판교역로 235, 분당 주공, 삼평동 681">
+									<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+									<input type="submit" class="btn-submit" value="검색"> 
+								</div>
+							</li>
+							<li>
+								<div class="ipbox del">
+									<input type="text" id="" value="판교역로 235, 분당 주공, 삼평동 681">
+									<button type="button" onclick="" class="ip_del" style="display:block;"><i>삭제</i></button>
+								</div>
+							</li>
+						</ul>
+					</fieldset>
+					<div class="btn-box ty2">
+						<ul class="btn_btm_half">
+							<li><button class="btn_r btn_type3" onclick="layer_close();">취소</button></li>
+							<li><button class="btn_r btn_type">저장</button></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="dv-place" id="dv-place3" style="display:none;">
+					<fieldset class="form_type">
+						<ul class="iplist">
+							<li>
+								<div class="ipbox del">
+									<input type="text" id="" value="내집">
+									<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+								</div>
+							</li>
+							<li>
+								<div class="ipbox del">
+									<input type="text" id="" value="강다니엘">
+									<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+								</div>
+							</li>
+							<li>
+								<ul class="ipbox hp">
+									<li><input type="tel" id="" value="010" maxlength="3"></li>
+									<li><input type="tel" id="" value="1234" maxlength="4"></li>
+									<li><input type="tel" id="" value="5678"  maxlength="4"></li>
+								</ul>
+							</li>
+							<li>
+								<ul class="ipbox hp">
+									<li><input type="tel" id="" value="010" maxlength="3"></li>
+									<li><input type="tel" id="" value="1234" maxlength="4"></li>
+									<li><input type="tel" id="" value="5678"  maxlength="4"></li>
+								</ul>
+							</li>
+							<li>
+								<div class="ipbox del srch">
+									<input type="text" id="" placeholder="예) 판교역로 235, 분당 주공, 삼평동 681">
+									<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+									<input type="submit" class="btn-submit" value="검색"> 
+								</div>
+							</li>
+							<li>
+								<div class="ipbox del">
+									<input type="text" id="" value="판교역로 235, 분당 주공, 삼평동 681">
+									<button type="button" onclick="" class="ip_del" style="display:block;"><i>삭제</i></button>
+								</div>
+							</li>
+						</ul>
+					</fieldset>
+					<div class="btn-box ty2">
+						<ul class="btn_btm_half">
+							<li><button class="btn_r btn_type3" onclick="layer_close();">취소</button></li>
+							<li><button class="btn_r btn_type">저장</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	 </div>
+
+	  <!-- 배송지 수정 레이어 팝업 -->
+	 <div id="deliver-modify" class="ly_pop full" style="display:none;">
+	 	<div class="wrap-layer">
+			<header>
+				<h2>배송지 수정</h2>
+				<button type="button" onclick="layer_close();" class="popcls"><i>팝업닫기</i></button>
+			</header>
+			<div class="cont-layer ly-deliver">
+
+				<ul class="list_ip_check type2 t3 mb20">
+					<li>
+						<div class="checkbox" onclick="$('#dv-place22, #dv-place33').hide(); $('#dv-place11').show()">
+							<input type="radio" name="modify" id="modify1" checked="">
+							<label for="modify1">일반</label>
+						</div>
+					</li>
+					<li>
+						<div class="checkbox" onclick="$('#dv-place11, #dv-place33').hide(); $('#dv-place22').show()">
+							<input type="radio" name="modify" id="modify2">
+							<label for="modify2">대표주소</label>
+						</div>
+					</li>
+					<li>
+						<div class="checkbox" onclick="$('#dv-place11, #dv-place22').hide(); $('#dv-place33').show()">
+							<input type="radio" name="modify" id="modify3">
+							<label for="modify3">우편배송지</label>
+						</div>
+					</li>
+				</ul>
+
+				<div class="dv-place" id="dv-place11" style="display:block;">
+					<fieldset class="form_type">
+						<ul class="iplist">
+							<li>
+								<div class="ipbox del">
+									<input type="text" id="" placeholder="배송지 이름을 입력하세요.">
+									<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+								</div>
+							</li>
+							<li>
+								<div class="ipbox del">
+									<input type="text" id="" placeholder="받으시는 분을 입력하세요.">
+									<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+								</div>
+							</li>
+							<li>
+								<ul class="ipbox hp">
+									<li><input type="tel" id="" value="010" maxlength="3"></li>
+									<li><input type="tel" id="" maxlength="4"></li>
+									<li><input type="tel" id="" maxlength="4"></li>
+								</ul>
+							</li>
+							<li>
+								<ul class="ipbox hp">
+									<li><input type="tel" id="" value="" maxlength="3"></li>
+									<li><input type="tel" id="" maxlength="4"></li>
+									<li><input type="tel" id="" maxlength="4"></li>
+								</ul>
+							</li>
+							<li>
+								<div class="ipbox del srch">
+									<input type="text" id="" placeholder="예) 판교역로 235, 분당 주공, 삼평동 681">
+									<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+									<input type="submit" class="btn-submit" value="검색"> 
+								</div>
+							</li>
+						</ul>
+					</fieldset>
+						<fieldset class="form_type">
+						<ul class="iplist">
+							<li>
+								<div class="ipbox del false">
+									<input type="text" id="" placeholder="배송지 이름을 입력하세요.">
+									<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+								</div>
+							</li>
+							<li>
+								<div class="ipbox del false">
+									<input type="text" id="" placeholder="받으시는 분을 입력하세요.">
+									<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+								</div>
+							</li>
+							<li>
+								<ul class="ipbox hp false">
+									<li><input type="tel" id="" value="010" maxlength="3"></li>
+									<li><input type="tel" id="" maxlength="4"></li>
+									<li><input type="tel" id="" maxlength="4"></li>
+								</ul>
+								<p class="fc-red">! 휴대폰 번호를 반드시 입력하세요.</p>
+							</li>
+							<li>
+								<ul class="ipbox hp">
+									<li><input type="tel" id="" value="" maxlength="3"></li>
+									<li><input type="tel" id="" maxlength="4"></li>
+									<li><input type="tel" id="" maxlength="4"></li>
+								</ul>
+							</li>
+							<li>
+								<div class="ipbox del srch">
+									<input type="text" id="" placeholder="예) 판교역로 235, 분당 주공, 삼평동 681">
+									<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+									<input type="submit" class="btn-submit" value="검색"> 
+								</div>
+							</li>
+						</ul>
+					</fieldset>
+					<div class="btn-box ty2">
+						<ul class="btn_btm_half">
+							<li><button class="btn_r btn_type3" onclick="layer_close();">취소</button></li>
+							<li><button class="btn_r btn_type">등록</button></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="dv-place" id="dv-place22" style="display:none;">
+					
+				</div>
+
+				<div class="dv-place" id="dv-place33" style="display:none;">
+					<fieldset class="form_type">
+						<ul class="iplist">
+							<li>
+								<div class="ipbox del">
+									<input type="text" id="" value="내집">
+									<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+								</div>
+							</li>
+							<li>
+								<div class="ipbox del">
+									<input type="text" id="" value="강다니엘">
+									<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+								</div>
+							</li>
+							<li>
+								<ul class="ipbox hp">
+									<li><input type="tel" id="" value="010" maxlength="3"></li>
+									<li><input type="tel" id="" value="1234" maxlength="4"></li>
+									<li><input type="tel" id="" value="5678"  maxlength="4"></li>
+								</ul>
+							</li>
+							<li>
+								<ul class="ipbox hp">
+									<li><input type="tel" id="" value="010" maxlength="3"></li>
+									<li><input type="tel" id="" value="1234" maxlength="4"></li>
+									<li><input type="tel" id="" value="5678"  maxlength="4"></li>
+								</ul>
+							</li>
+							<li>
+								<div class="ipbox del srch">
+									<input type="text" id="" placeholder="예) 판교역로 235, 분당 주공, 삼평동 681">
+									<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+									<input type="submit" class="btn-submit" value="검색"> 
+								</div>
+							</li>
+							<li>
+								<div class="ipbox del">
+									<input type="text" id="" value="판교역로 235, 분당 주공, 삼평동 681">
+									<button type="button" onclick="" class="ip_del" style="display:block;"><i>삭제</i></button>
+								</div>
+							</li>
+						</ul>
+					</fieldset>
+					<div class="btn-box ty2">
+						<ul class="btn_btm_half">
+							<li><button class="btn_r btn_type3" onclick="layer_close();">취소</button></li>
+							<li><button class="btn_r btn_type">저장</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	 </div>
+
+	 <!-- 현금 영수증/세금계산서 요청 팝업 -->
+	 <div id="cash-tax" class="ly_pop full" style="display:none;">
+	 	<div class="wrap-layer">
+			<header>
+				<h2>현금 영수증/세금계산서 요청</h2>
+				<button type="button" onclick="layer_close();" class="popcls"><i>팝업닫기</i></button>
+			</header>
+			<div class="cont-layer ly-cashTax">
+				<h4 class="title_type3 mb15">현금 영수증/세금계산서 선택</h4>
+				<fieldset class="form_type">
+					<ul class="list_ip_check type2 t3 mb20">
+						<li>
+							<div class="checkbox" onclick="$('#cashReceipt, #taxBill').hide(); $('#SelectNone').show()">
+								<input type="radio" name="cashtax" id="cashtax1" checked="">
+								<label for="cashtax1">선택안함</label>
+							</div>
+						</li>
+						<li>
+							<div class="checkbox" onclick="$('#SelectNone, #taxBill').hide(); $('#cashReceipt').show()">
+								<input type="radio" name="cashtax" id="cashtax2">
+								<label for="cashtax2">현금 영수증</label>
+							</div>
+						</li>
+						<li>
+							<div class="checkbox" onclick="$('#SelectNone, #cashReceipt').hide(); $('#taxBill').show()">
+								<input type="radio" name="cashtax" id="cashtax3">
+								<label for="cashtax3">세금계산서</label>
+							</div>
+						</li>
+					</ul>
+
+					<div class="cashtax" id="SelectNone" style="display:block;"></div>
+
+					<div class="cashtax" id="cashReceipt" style="display:none;">
+						<h4 class="title_type3 mb0">발행용도 선택</h4>
+						<ul class="list_ip_check type2 t2 mt15 mb20">
+							<li>
+								<div class="checkbox" onclick="$('#licensee').hide(); $('#individual').show()">
+									<input type="radio" name="use" id="use1" checked="">
+									<label for="use1">소득공제용(일반개인용)</label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox" onclick="$('#individual').hide(); $('#licensee').show()">
+									<input type="radio" name="use" id="use2">
+									<label for="use2">지출증빙용(사업자용)</label>
+								</div>
+							</li>
+						</ul>
+
+						<div id="individual" style="display:block;">
+							<h4 class="title_type3 mb15">휴대폰 번호</h4>
+							<ul class="ipbox hp">
+								<li><input type="tel" id="" value="010" maxlength="3"></li>
+								<li><input type="tel" id="" maxlength="4"></li>
+								<li><input type="tel" id="" maxlength="4"></li>
+							</ul>
+						</div>
+
+						<div id="licensee" style="display:none;">
+							<h4 class="title_type3 mb15">사업자번호</h4>
+							<ul class="ipbox num">
+								<li><input type="tel" id="" placeholder="사업자번호" maxlength="3"></li>
+								<li><input type="tel" id="" maxlength="2"></li>
+								<li><input type="tel" id="" maxlength="5"></li>
+							</ul>
+						</div>
+
+					</div>
+
+					<div class="cashtax" id="taxBill" style="display:none;">
+						<ul class="iplist">
+							<li>
+								<h4 class="title_type3 mb15">상호(법인명)</h4>
+								<div class="ipbox del">
+									<input type="text" id="" placeholder="상호(법인명) 입력하세요.">
+									<button type="button" onclick="" class="ip_del"><i>삭제</i></button>
+								</div>
+							</li>
+							</li>
+							<li>
+								<h4 class="title_type3 mb15">사업자번호</h4>
+								<div id="userNum">
+									<ul class="ipbox num">
+										<li><input type="tel" id="" placeholder="사업자번호" maxlength="3"></li>
+										<li><input type="tel" id="" maxlength="2"></li>
+										<li><input type="tel" id="" maxlength="5"></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<h4 class="title_type3 mb15">이메일 주소</h4>
+								<div class="ipbox email">
+									<input type="text" id="" value="" placeholder="이메일">
+									<span class="addr">
+										<input type="text" id="">
+										<div class="select">
+											<select name="" id="">
+												<option value="">직접입력</option>
+												<option value="naver.com">naver.com</option>
+												<option value="nate.com">nate.com</option>
+											</select>
+										</div>
+									</span>
+								</div>
+							</li>
+						</ul>
+				
+						<div class="btn_btm_type">
+							<h4 class="title_type3 mb15">사업자 등록증</h4>
+							<button class="btn_r btn_type">사업자등록증 파일 등록</button>
+							<p class="cmtbox_type2">10MB 이내로 JPG, PNG, GIF 파일만 가능합니다.</p>
+						</div>
+					</div>
+				</fieldset>
+				
+				<div class="btn-box ty2">
+					<button class="btn_r btn_type">등록</button>
+				</div>
+			</div>
+		</div>
+	 </div>
+
+</div>
+</body>
+</html>

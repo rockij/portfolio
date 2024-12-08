@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko" class="app">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="../../../../../../../global/resources/css/global.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/common.min.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/content.min.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/app.min.css" media="screen" rel="stylesheet">
+<title>건강지키미</title>
+</head>
+<body>
+
+<div id="wrap">
+
+	<header id="header" class="fix top">
+		<button type="button" onclick="" class="btn_prev"><i>뒤로가기</i></button>
+        <h1>건강분석</h1>
+    </header>
+    <!-- //header -->
+
+	<div id="content">
+        <div class="analysis_step">
+            <section class="title">
+                <h2 data-cat="운동"><figure><i></i></figure>운동</h2>
+                평소 1주일간,<br>숨이 약간 차게 만드는 중간정도의 활동을,<br>하루 30분 이상 시행한 날은 며칠이신가요?
+                <p class="s">*이전 고강도 신체활동 제외<br>(빠르게 걷기, 보통 속도로 자전거 타기, 엎드려서 걸레질 등)</p>
+                <ul class="iplst">
+                    <li>
+                        <span class="ipbx">
+                            <input type="tel" value="" placeholder="0" maxlength="1" class="val limits7" data-mss="운동일수는 0~7 사이로 입력해주세요"><b class="unit right">일</b>
+                        </span>
+                        <p class="cau">*0~7 사이 숫자를 입력해주세요.</p>
+                    </li>
+                </ul>
+            </section>
+            <div class="fix btm btn_area_one skip"><button type="button" onclick="$(location).attr('href','survey_step10.html')" disabled>다음 (8/9)</button></div>
+        </div>
+	</div>
+    <!-- //content -->
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../../resources/js/gsap.min.js"></script>
+<script src="../../../../../../../global/resources/js/global.js"></script>
+<script src="../../resources/js/design.js" defer></script>
+<script>
+$(window).on("load", function(){
+    analysisSurvey();
+    fixOver();
+});
+</script>
+
+</body>
+</html>

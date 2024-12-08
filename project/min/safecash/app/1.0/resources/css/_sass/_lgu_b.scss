@@ -1,0 +1,71 @@
+html.lgu{
+    
+    // common
+    .btn_area_wide{
+        button, a{            
+            border-color:#222;
+            background-color:#222;
+        }
+    }
+    .btn_area_half{
+        > li{
+            &:last-child a,
+            &:last-child button{
+                border-color:#222;
+                background-color:#222
+            }
+        }
+    }
+
+    // content
+    .profile_pricelist{
+        .causet{
+            li{
+                .opened{
+                    border-color:#222;
+                    background-color:#222;
+                }
+            }
+        }
+    }
+    .profile_paynotice{
+        &[data-title="결제한번3"]{
+            .skip{
+                background-color:#222;
+                border-color:#222;
+            }
+        }
+        &[data-title="자동이체"]{
+            .skip{
+                background-color:#222;
+                border-color:#222;
+            }
+        }
+    }
+    .profile_paynotice2{
+        .skip{
+            border-color:#222;
+            background-color:#222;
+        }
+    }
+    .profile_eventview{
+        &[data-sbj="혜택두울"]{
+            .btn_area_wide{
+                a, button{
+                    color:#222
+                }
+            }
+        }
+    }
+    .ly_agrchk{
+        .checkbox{
+            &.all{
+                input:checked + label{
+                    border:1px solid #222;
+                    color:#222;
+                }
+            }
+        }
+    }
+
+}

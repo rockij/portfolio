@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link href="resources/css/font.local.css" media="screen" rel="stylesheet"> <!-- 폐쇄망 -->
+<link href="resources/css/font.cdn.css" media="screen" rel="stylesheet"> <!-- 인터넷망 -->
+<link href="resources/css/common.min.css" media="screen" rel="stylesheet">
+<link href="resources/css/content.min.css" media="screen" rel="stylesheet">
+<title>010휘슬</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header" class="fix top">
+        <button type="button" onclick="" class="btn_prev"><i>뒤로가기</i></button>
+        <h1>제목</h1>
+        <button type="button" onclick="" class="btn_close"><i>닫기</i></button>
+    </header>
+    <!-- //header --> 
+
+    <div id="content">
+        팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트
+        <br><br>
+        <button type="button" onclick="popupOpen('alert','mwf')">팝업보기</button>
+        <br><br>
+        팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>팝업테스트테스트<br>
+    </div>
+    <!-- //content -->
+
+</div>
+
+<!-- popup -->
+<div id="mw-alert" class="ly_pop popBtm ly_alert">
+    <div class="wrap">        
+        <div class="content">
+            <p>회원 탈퇴를 하시겠습니까?</p>
+        </div>
+        <ul class="btn_area_half">
+            <li><button type="button" class="cancel" onclick="popupClose('alert','mwf')">취소</button></li>
+            <li><button type="button" class="skip" onclick="popupClose('alert','mwf')">취소</button></li>
+        </ul>
+    </div>
+</div>
+<!-- //popup -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="resources/js/jquery-1.12.4.min.js"></script>
+<script src="../../../../global/resources/js/global.js"></script>
+<script src="resources/js/design.js" defer></script>
+<script>
+$(function() {
+    popupOpen('alert','mwf',0)
+});
+</script>
+
+</body>
+</html>

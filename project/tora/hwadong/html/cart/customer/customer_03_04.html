@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="preload" href="../../resources/font/NotoSansKR-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link href="../../resources/css/font.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/base.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/site.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/yjh.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/swiper.min.css" media="screen" rel="stylesheet">
+<script src="../../resources/js/jquery-3.3.1.min.js"></script>
+<script src="../../resources/js/design.js"></script>
+<script src="../../resources/js/jquery-3.3.1.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<title>화동쇼핑 | 화동양행</title>
+</head>
+<body>
+
+<div id="wrap">
+
+    <header id="header" class="fix top">
+        <button type="button" onclick="" class="btn_prev"><i>뒤로가기</i></button>
+        <button type="button" onclick="" class="btn_home"><i>처음으로가기</i></button>
+        <h1>화동쇼핑</h1>
+        <button type="button" onclick="" class="btn_srch"><i>검색으로가기</i></button>
+        <button type="button" onclick="" class="btn_gnb"><i>메인메뉴열기</i></button>
+    </header>
+    <!-- //header -->
+
+    <div id="ct" class="customer-container">
+		 <div id="swipetab" class="swiper-container tab_type2 h-fixed">
+			<ul class="swiper-wrapper">
+				<li class="swiper-slide"><a href="customer_03.html">검색</a></li>
+				<li class="swiper-slide"><a href="customer_03_01.html">장바구니</a></li>
+				<li class="swiper-slide"><a href="customer_03_02.html">주문/결제</a></li>
+				<li class="swiper-slide"><a href="customer_03_03.html">주문조회</a></li>
+				<li class="swiper-slide active"><a href="#none">기타사항</a></li>
+			</ul>
+		</div>
+
+		<div class="content">
+			<p class="img-box"><img src="../../resources/image/common/img-sp-etc01.jpg" alt=""></p>
+			<p class="img-box"><img src="../../resources/image/common/img-sp-etc01.jpg" alt=""></p>
+			<ul class="list_type2">
+				<li>HWADONG.COM 에서는 준회원, 정회원에 한하여 구입하신 금액의 일정액을 적립금으로 지급하여 드립니다. 적립금은 다음 주문시 주문금액에서 차감하여 현금처럼 사용이 가능하나, 현금으로 고객에게 입금해드리거나 지급해 드릴 수는 없습니다. 또한 교환, 반품 등 HWADONG.COM 의 기타 이용사항에 관해서는 FAQ를 참조해 주시기 바랍니다.</li>
+			</ul>
+		</div>
+		
+
+	</div>
+	<!-- //content -->
+	
+	<footer id="footer">
+		<ul class="menu">
+			<li><a href="#;">회사소개</a></li>
+			<li><a href="#;">개인정보처리방침</a></li>
+			<li><a href="#;">이용약관</a></li>
+		</ul>        
+		<div class="inner">
+			<button class="topGo"><i>맨위로</i></button>
+			<strong class="lg">㈜풍산화동양행</strong>
+			<p class="cp">Copyright©Hwadong Co.,Ltd. All rights reserved.</p>
+			<button type="button" class="csControl"><i>고객센터열고닫기</i></button>
+			<div class="csarea">
+				<strong class="tit">고객센터</strong>
+				고객센터 : 02-3491-4586~7(월~금 9시~18시 토/일 공휴일 휴무)<br>
+				FAX : 02-597-8741<br>
+				E-Mail : service@hwadong.com
+				<address>
+					대표자 : 이제철 │ 개인정보관리책임자 : 이제철<br>
+					주소 : 서울시 서초구 효령로 351(서초동) 2F<br>
+					사업자등록번호 : 214-87-46644<br>
+					통신판매업신고 : 서울서초 제2004-03722호
+				</address>
+				<strong class="tit">소비자피해보상 보상보험<img src="../../resources/image/footer/logo_cm.gif" alt=""></strong>
+				고객님은 안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서<br>가입한 구매안전 서비스로 소비자 피해 보상보험 서비스를<br>이용하실 수 있습니다.
+			</div>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<script>
+	$(window).on("load", function(){
+		var swiper = new Swiper('#swipetab', {
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			scrollbarHide: true,
+			slidesPerView: 'auto',
+			freeMode: false,
+			grabCursor: true,
+			initialSlide: '4',
+			on: { init: function () { $('#swipetab li:eq(1) button').addClass('selected') }, }
+		});
+	});
+</script>
+</body>
+</html>

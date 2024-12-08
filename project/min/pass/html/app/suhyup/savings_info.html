@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>SKT PASS</title>
+	<link rel="stylesheet" type="text/css" href="../../../resources/app/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../../resources/app/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../../resources/app/css/contents.css">
+</head>
+<body>
+	<!-- header -->
+	<header class="header">
+		<div class="header_inner">
+			<a href="#" class="ico-back header_btn"><span class="blind">이전 페이지</span></a>
+			<h1 class="header_tit">고객정보</h1>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- wrap -->
+	<div class="wrap wrap-fixed">
+
+    <!-- account_step  -->
+    <div class="account_step">
+      <ol class="account_stepList">
+        <li class="account_stepList_item account_stepList_item stepList_item"><span class="step-on_txt">약관동의</span><span class="wrap-bg"><span class="bg-circle"></span></span></li>
+        <li class="account_stepList_item account_stepList_item stepList_item"><span class="step-on_txt">고객정보</span><span class="wrap-bg"><span class="bg-circle"></span></span></li>
+        <li class="account_stepList_item account_stepList_item stepList_item step-on"><span class="step-on_txt">적금설정</span><span class="wrap-bg"><span class="bg-circle"></span></span></li>
+        <li class="account_stepList_item account_stepList_item stepList_item"><span class="step-on_txt">비밀번호</span></li>
+      </ol>
+    </div>
+    <!-- //account_step  -->
+
+    <!-- inner -->
+    <div class="inner inner-low">
+      <form class="form_account form-fixed form-fixed-btn form-fixed-low">
+        <div class="ipBox">
+          <p class="ipBox_label">출금 계좌</p>
+          <label for="account1">
+            <select id="account1" class="ipBox_ip ipBox_ip-select">
+              <option selected value="010-***** (PASS통장)">1010-***** (PASS통장)</option>
+              <option value="1020-***** (PASS통장)">1020-***** (PASS통장)</option>
+              <option value="1030-***** (PASS통장)">1030-***** (PASS통장)</option>
+              <option value="1040-***** (PASS통장)">1040-***** (PASS통장)</option>
+              <option value="1050-***** (PASS통장)">1050-***** (PASS통장)</option>
+            </select>
+          </label>
+        </div>
+        <!-- //출금계좌 -->
+        <div class="ipBox">
+          <label for="password" class="ipBox_label">출금 계좌 비밀번호</label>
+          <input type="tel" id="password" class="ipBox_ip secu" maxlength="4" placeholder="비밀번호">
+        </div>
+        <!-- //비밀번호 -->
+        <div class="ipBox">
+          <label for="term" class="ipBox_label">기간</label>
+          <input type="text" id="term" class="ipBox_ip" maxlength="10" placeholder="6개월">
+        </div>
+        <!-- //기간 -->
+        <div class="ipBox">
+          <p class="ipBox_label">입금방식</p>
+          <div class="wrap-select-btn wrap-select-border">
+            <div class="select-btn select-btn-half">
+              <input type="radio" id="payment-auto" name="payment" value="payment-auto" class="ip-blind select-btn_ip tab-select-btn" checked>
+              <label for="payment-auto" class="select_btnList">자동이체</label>
+            </div>
+            <div class="select-btn select-btn-half">
+              <input type="radio" id="payment-free" name="payment" value="payment-free" class="ip-blind select-btn tab-select-btn">
+              <label for="payment-free" class="select_btnList">자유입금</label>
+            </div>
+          </div>
+          <p class="viewer_txt2 fc_blu">*자동이체시 +연0.2%p 추가제공!</p>
+        </div>
+        <!-- //입력방식 -->
+        <div class="ipBox ipBox_won">
+          <label for="term" class="ipBox_label">첫 납입액</label>
+          <input type="text" id="term" class="ipBox_ip" maxlength="6" placeholder="1만원 이상 30만원 이하">
+          <p class="viewer_txt2 t_r">*1만원이상 30만원이하</p>
+        </div>
+        <!-- //첫 납입액 -->
+        <div class="ipBox ipBox_won ipBox-lastItem">
+          <label for="transfer_direct" class="ipBox_label">기간</label>
+          <div class="ip-transfer_wrap">
+            <label for="transfer_date">
+              <select id="transfer_date" class="ipBox_ip ipBox_ip-select">
+                <option selected value="">선택</option>
+                <option value="1">1일</option>
+                <option value="5">5일</option>
+                <option value="10">10일</option>
+                <option value="15">15일</option>
+                <option value="20">20일</option>
+                <option value="25">25일</option>
+                <option value="30">말일</option>
+              </select>
+            </label>
+            <input type="text" id="transfer_direct" class="ipBox_ip" maxlength="6" value="1000000">
+            <p class="viewer_txt2 t_r fc_red">*1만원이상 30만원이하</p>
+          </div>
+        </div>        
+        <!-- //자동이체 설정 -->
+        <div class="ipBox viewer">
+          <p class="viewer_txt viewer-certify_txt">* 자동이체는 출금계좌에서 월마다 자동 출금됩니다.<br>* 만기 자동이체 안내 : SKT적금은 만기 시 자동해지 되어 출금계좌에 입금됩니다. </p>
+        </div>
+        <div class="btn-area-fixed">
+          <button type="button" class="btn btn-wide btn-low" disabled>다음</button>
+        </div>
+      </form>
+    </div>
+    <!-- //inner -->
+
+	</div>
+	<!-- //wrap-->
+
+	<!-- script -->
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="../../../resources/app/js/ui.js"></script>
+  <!-- //script -->
+
+</body>
+</html>

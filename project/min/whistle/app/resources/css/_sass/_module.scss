@@ -1,0 +1,382 @@
+// $baseFontSize : 18.6;
+$baseFontSize : 10;
+@function px($pixels, $context: $baseFontSize) {
+    @return ($pixels) / $context + rem;
+}
+
+$urlImg : "../image/";
+$bg:#F8F8F8;
+$fcr:#FF3701;
+$fcr2:#E90000;
+$fcb:#1480FF;
+$head_height:56;
+
+// common
+@mixin blind {
+    position: absolute;
+	width: 1px;
+	height: 1px;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+@mixin clear {
+    &:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin wfn{
+    font-family:'Noto Sans KR', Sans-serif;
+}
+
+@mixin wfr{
+    font-family: 'Nunito Sans','Noto Sans KR', sans-serif;
+}
+
+@mixin pos($p: null,$l: null,$r: null,$t: null,$b: null) {
+    position: $p;
+    left: $l;
+    right: $r;
+    top: $t;
+    bottom: $b;
+}
+
+$inr: 20;
+@mixin inr($cus:false, $v:null){
+    @if $cus{
+        padding-right:px($v);
+        padding-left:px($v);
+        @if ($cus == 'wrap'){
+            padding-right:0;
+            padding-left:0;
+            background-color:$bg;
+            >section, .section{
+                background-color:#fff;
+                padding-right:px($v);
+                padding-left:px($v);
+                margin-top:px(10);
+                &:first-of-type{
+                    margin-top:0
+                }
+            }
+        }
+    }@else{
+        padding-right:px($inr);
+        padding-left:px($inr);
+    }
+}
+
+@mixin bdr($v:null, $o:false){
+    overflow: hidden;
+    @if $o {
+        border-radius:50%;
+    }@else{
+        border-radius:px($v);
+    }
+}
+
+// form
+@mixin checkbox {
+    display:inline-block;
+    position:relative;
+    input{
+        @include blind;
+    }
+    input + label{
+        display:inline-block;
+        position:relative;
+        cursor:pointer;
+        &:before{
+            content:'';
+            display:inline-block;
+            position:absolute;
+            background-repeat:no-repeat;
+            background-size:100% 100%;
+        }
+    }
+}
+
+@mixin checkToggle {
+    position:relative;
+    display:inline-block;
+    width:5rem;
+    height:3rem;
+    background-color:#d3d3d3;
+    @include bdr(17.5*2);
+    &, &:before{
+        transition: .25s;
+    }
+    &:before{
+        content:'';
+        display:inline-block;
+        @include pos(absolute, $t:.2rem, $l:.2rem);
+        width:2.6rem;
+        height:2.6rem;
+        background-color:#fff;
+        border-radius:50%;
+    }
+    &:checked{
+        background-color:#222;
+        &:before{
+            transform: translateX(2rem);
+        }
+    }
+}
+
+@mixin iscroll($type:null, $w:null, $h:null){
+	-webkit-overflow-scrolling: touch;
+    @if $type == "y" {
+        overflow-x:hidden;
+        overflow-y:auto;
+        width:$w;
+        height:$h;
+    }@else if $type == "x" {
+        overflow-y:hidden;
+        overflow-x:auto;
+        width:$w;
+        height:$h;
+    }@else if $type == "xy" {
+        overflow:auto;
+        width:$w;
+        height:$h;
+    }
+}
+
+// text
+@mixin title($ty:null){
+    @if ($ty == 'top'){
+        font-weight:700;
+        padding-bottom:px(18);
+        font-size:px(22);
+        color:#222;
+    }@else if ($ty == 'top2'){
+        font-size:px(18);
+        color:#222;
+    }@else if ($ty == 'top3'){
+        font-weight:700;
+        font-size:px(30);
+        color:#222;
+    }@else if ($ty == 'sub'){
+        font-size:px(16);
+        color:#222;
+        font-weight:700;
+    }@else if ($ty == 'sub2'){
+        font-size:px(14);
+        color:#555; 
+        font-weight:500;
+    }
+}
+
+@mixin elip($ty){
+    line-height:1.2;
+    padding-right:2px;
+    @if $ty == "l1" {
+        display:inline-block;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        word-wrap:normal;
+        overflow:hidden;
+        max-width:100%;
+    }@else if $ty == "l2" {
+        overflow:hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* 라인수 */
+        -webkit-box-orient: vertical;
+        word-wrap:break-word;
+    }
+}
+
+@mixin btnStyle($ty,$brc:#ddd,$bg:#fff){
+    display:inline-block;
+    @if $ty == "s" {
+        @include bdr(6);
+        border:1px solid $brc;
+        background-color:#fff;
+        padding:px(4) px(8) px(6);
+        font-size:px(12);
+        color:#555
+    }
+}
+
+// icon
+@mixin iconArr($w:null, $h:null, $c:null, $ro:false, $thick:.15rem){
+    font-size:0;
+    display:inline-block;
+    width:px($w);height:px($h);
+    vertical-align:middle;
+    border-width:$thick $thick 0 0;
+    border-style:solid;
+    border-color:$c;
+    @if $ro {
+        transform: rotate($ro + deg);
+    }
+}
+
+@mixin iconArrRadius($w:null, $h:null, $m:null, $c:null, $ro:false, $thick:.15rem){
+    font-size:0;
+    &,&:before,&:after{
+        display:inline-block;
+        vertical-align:middle;
+    }
+    width:px($w);
+    height:px($w);
+    position:relative;
+    &:before,&:after{
+        content:'';
+        background-color:$c;
+        height:$thick;
+        width:100%;
+        position:absolute;
+        left:0;        
+    }
+    &:before{
+        border-top-right-radius:px(10);
+        border-bottom-right-radius:px(10);
+        transform: rotate(-45deg);
+        top:px($m);
+    }
+    &:after{
+        border-top-right-radius:px(10);
+        border-bottom-right-radius:px(10);
+        transform: rotate(45deg);
+        bottom:px($m)
+    }
+    @if $ro {
+        transform: rotate($ro + deg);
+    }
+}
+
+@mixin iconPlus($w:null, $h:null, $c:null, $ro:null){
+    font-size:0;line-height:0;color:transparent;
+    display:inline-block;
+    vertical-align:middle;
+    position:relative;
+    height:1px;width:$w;
+    background-color:$c;
+    transform: rotate($ro + deg);
+    &:before{
+        content:'';
+        display:inline-block;
+        width:1px;height:$h;
+        background-color:$c;
+        @include pos(absolute, $t:50%, $l:50%);
+        transform: translate(-50%,-50%);
+    }
+}
+
+@mixin iconSemo($w:null, $h:null, $c:null, $ro:null){
+    font-size:0;line-height:0;color:transparent;
+    display:inline-block;vertical-align:middle;
+    width:0;height:0;
+    border-left: $w solid transparent;
+    border-right: $w solid transparent;
+    border-top: $h solid $c;
+    transform: rotate($ro + deg);
+}
+
+$sqrt:.54;
+@mixin iconX($size:null, $thick:.15, $c:#000) {
+	position: relative;
+	display: inline-block;
+	width: $size + rem;
+	height: $size + rem;
+	&:before, &:after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: ($size*$sqrt - $thick) + rem;
+		height: $thick + rem;
+		background-color:$c;
+	}
+	&:before {
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+	&:after {
+		transform: translate(-50%, -50%) rotate(135deg);
+	}
+}
+
+@mixin iconNew{
+    display:inline-block;
+    width:4px;height:4px;
+    background-color:$fcr;
+    position:absolute;
+    @include bdr($o:true);
+}
+
+@mixin bgf($ps:false, $v:null){
+    display:inline-block;
+    vertical-align:middle;
+    background-repeat:no-repeat;
+    color:transparent;
+    white-space:nowrap;
+    text-indent:-1000rem;
+    font-size:1px;
+    @if $ps {
+        background-size:$v auto;
+    }@else{
+        background-size:100% 100%;
+    }
+}
+
+@mixin bar($h:null, $c:null, $emp:false, $w:1px){
+    position:relative;
+    z-index:1;
+    &:before{
+        content:'';
+        display:block;
+        height:px($h);
+        background-color:$c;
+        position:absolute;
+        z-index:-1;
+    }
+    @if $emp{
+        &:before{
+            width:$w;
+        }
+    }@else{
+        &:before{
+            width:$w;
+        }
+    }
+}
+
+@mixin svgfill($c:null, $img:null){
+    background-color: $c;
+    mask: url($urlImg + $img) no-repeat 0 0;
+}
+
+// media
+@mixin mq($screen-width){
+    @if $screen-width == "small" {
+        @media all and (max-width:320px) {
+            @content;
+        }
+    }@else if $screen-width == "fold" {
+        @media all and (min-width:640px) {
+            @content;
+        }
+    }
+}
+
+// 슬라이드를 감싸는 영역의 border-radius가 제대로 안될때
+@mixin slideBorderCover{
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
+}
+
+// iphone X safe area
+@mixin safeArea{
+    padding-right:env(safe-area-inset-right);
+    padding-left:env(safe-area-inset-left);
+    padding-top:env(safe-area-inset-top);
+    padding-bottom:env(safe-area-inset-bottom);
+}

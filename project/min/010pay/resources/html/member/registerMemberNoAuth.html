@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>010페이</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" href="../../css/owl.carousel.min.css">
+<link rel="stylesheet" href="../../css/common.css?ezauthver=5.0">
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../../js/html5shiv.js"></script>
+<script type="text/javascript" src="../../js/respond.min.js"></script>
+<![endif]-->
+<script src="../../js/jquery-1.8.3.min.js"></script>
+<script src="../../js/jquery.placeholder.min.js"></script>
+<script src="../../js/owl.carousel.min.js"></script>
+<script src="../../js/design.js?ezauthver=5.0" defer="defer"></script>
+<script src="../../js/commonmsg.js?ezauthver=5.0"></script>
+<script src="../../js/commonutil.js?ezauthver=5.0"></script>
+</head>
+
+<body>
+<!-- form -->
+<form class="main_form" action="javascript: void(0);" autocomplete="off">
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<div id="header">
+			<div class="container">
+				<h1 class="brand-name"><a href="#"><span><img src="../../images/logo.svg" class="brand-logo" alt="010pay"></span></a></h1>
+				<!-- <h2 class="page-title">회원 가입</h2> -->
+				<button type="button" id="closeWindow" class="btn-close"><i class="icon-times">창닫기</i></button>
+			</div>
+		</div>
+		<!-- //header -->
+
+		<!-- content -->
+		<div id="content">
+			<!-- container -->
+			<div class="container">
+				<!-- headline -->
+				<div class="headline">
+					<p>바이오일레븐에서<br>
+						<strong class="text-primary"><span class="price">2,000,000</span>원</strong>을 결제합니다.</p>
+					<p class="small">드시모네 유산균 외 2건</p>
+				</div>
+				<!-- //headline -->
+
+				<!-- bottom area -->
+				<div class="bottom-area">
+					<div class="container">
+						<!-- 정보 입력 -->
+						<div class="section">
+							<ul class="form-type">
+								<li>
+									<label class="label">은행계좌</label>
+									<span class="input select-input">
+										<button type="button" class="select bank-select">은행 선택</button>
+										<input type="tel" name="accNo" id="accNo" maxlength="16" placeholder="- 없이 계좌번호 입력">
+									</span>
+								</li>
+								<li class="address">
+									<label class="label">주소</label>
+									<input type="hidden" name="addrType" id="addrType">
+									<input type="hidden" name="zipCd" id="zipCd">
+									<span class="input">
+										<input type="text" name="addr1" id="addr1" placeholder="도로명/지번/우편번호" readonly>
+										<button type="button" class="btn btn-secondary btn-sm" onclick="popPostcode();">주소 검색</button>
+									</span>
+									<input type="text" name="addr2" id="addr2" placeholder="상세주소 입력">
+								</li>
+							</ul>
+						</div>
+						<!-- //정보 입력 -->
+
+						<button type="button" id="send" class="btn mgt40" disabled>확인</button>
+					</div>
+				</div>
+				<!-- //bottom area -->
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- //wrap -->
+</form>
+<!-- //form -->
+
+<!-- 은행 목록 -->
+<div class="modal modal-banklist">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<!-- 은행 목록 -->
+				<ul class="bank-list">
+					<li>
+						<button type="button" name="011">
+							<span class="logo"><img src="../../images/bank/logo_011.png" alt="NH농협"></span>
+							<span class="name">NH농협</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="004">
+							<span class="logo"><img src="../../images/bank/logo_004.png" alt="국민"></span>
+							<span class="name">국민</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="088">
+							<span class="logo"><img src="../../images/bank/logo_088.png" alt="신한"></span>
+							<span class="name">신한</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="020">
+							<span class="logo"><img src="../../images/bank/logo_020.png" alt="우리"></span>
+							<span class="name">우리</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="005">
+							<span class="logo"><img src="../../images/bank/logo_005.png" alt="KEB하나"></span>
+							<span class="name">KEB하나</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="090">
+							<span class="logo"><img src="../../images/bank/logo_090.png" alt="카카오뱅크"></span>
+							<span class="name">카카오뱅크</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="090">
+							<span class="logo"><img src="../../images/bank/logo_089.png" alt="케이뱅크"></span>
+							<span class="name">케이뱅크</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="031">
+							<span class="logo"><img src="../../images/bank/logo_031.png" alt="대구"></span>
+							<span class="name">대구</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="045">
+							<span class="logo"><img src="../../images/bank/logo_045.png" alt="새마을"></span>
+							<span class="name">새마을</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="032">
+							<span class="logo"><img src="../../images/bank/logo_032.png" alt="부산"></span>
+							<span class="name">부산</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="003">
+							<span class="logo"><img src="../../images/bank/logo_003.png" alt="기업"></span>
+							<span class="name">기업</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="023">
+							<span class="logo"><img src="../../images/bank/logo_023.png" alt="SC제일"></span>
+							<span class="name">SC제일</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="034">
+							<span class="logo"><img src="../../images/bank/logo_034.png" alt="광주"></span>
+							<span class="name">광주</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="071">
+							<span class="logo"><img src="../../images/bank/logo_071.png" alt="우체국"></span>
+							<span class="name">우체국</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="039">
+							<span class="logo"><img src="../../images/bank/logo_039.png" alt="경남"></span>
+							<span class="name">경남</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="048">
+							<span class="logo"><img src="../../images/bank/logo_048.png" alt="신협"></span>
+							<span class="name">신협</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="037">
+							<span class="logo"><img src="../../images/bank/logo_037.png" alt="전북"></span>
+							<span class="name">전북</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="007">
+							<span class="logo"><img src="../../images/bank/logo_007.png" alt="수협"></span>
+							<span class="name">수협</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="002">
+							<span class="logo"><img src="../../images/bank/logo_002.png" alt="산업"></span>
+							<span class="name">산업</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="035">
+							<span class="logo"><img src="../../images/bank/logo_035.png" alt="제주"></span>
+							<span class="name">제주</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="027">
+							<span class="logo"><img src="../../images/bank/logo_027.png" alt="한국시티"></span>
+							<span class="name">한국시티</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="209">
+							<span class="logo"><img src="../../images/bank/logo_209.png" alt="유안타"></span>
+							<span class="name">유안타</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="287">
+							<span class="logo"><img src="../../images/bank/logo_287.png" alt="메리츠"></span>
+							<span class="name">메리츠</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="247">
+							<span class="logo"><img src="../../images/bank/logo_247.png" alt="NH투자"></span>
+							<span class="name">NH투자</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="280">
+							<span class="logo"><img src="../../images/bank/logo_280.png" alt="유진투자"></span>
+							<span class="name">유진투자</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" name="103">
+							<span class="logo"><img src="../../images/bank/logo_103.png" alt="SBI저축"></span>
+							<span class="name">SBI저축</span>
+						</button>
+					</li>
+				</ul>
+				<!-- //은행 목록 -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //은행 목록 -->
+
+<!-- loading -->
+<div class="modal modal-loading">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="loading">
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+				</div>
+				<span class="text">로딩 중</span>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //loading -->
+
+<!-- common alert -->
+<div id="commonAlert" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<h3 id="alertTitle"></h3>
+				<p id="alertContents"></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" onclick="modalClose();" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //common alert -->
+
+<!-- common prompt -->
+<div id="commonPrompt" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<h3 id="promptTitle"></h3>
+				<p id="promptContents"></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" onclick="modalClose();" class="btn">취소</button>
+				<button type="button" id="promptOk" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //common prompt -->
+</body>
+</html>

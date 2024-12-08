@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>SKT PASS</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/contents.css">
+    <link href="resources/app/css/event.css" media="screen" rel="stylesheet">
+</head>
+<body class="viewer_body">
+<!-- <header class="header">
+    <div class="header_inner">
+        <h1 class="header_tit">PASS</h1>
+        <a href="#" class="ico-close header_btn"><span class="blind">닫기</span></a>
+    </div>
+</header> -->
+<!-- //header -->
+
+<div id="moneyroul-layer" class="ly_pop ly_btm ly_evt">
+    <div class="content">
+        <a href="#n" class="img"><img src="resources/app/image/머니룰렛/money_roulette_layer.png" alt="룰렛돌리고 PASS머니 받아게세요!"></a>
+        <!-- 더블 -->
+        <!-- <a href="#n" class="img"><img src="resources/app/image/머니룰렛/money_roulette_layer_double.png" alt=""></a> -->
+        <!-- //더블 -->
+        <!-- 마감 -->
+        <!-- <a href="#n" class="img"><img src="resources/app/image/머니룰렛/money_roulette_layer_end.png" alt=""></a> -->
+        <!-- //마감 -->
+        <span class="img coin coin01"></span>
+        <span class="img coin coin02"></span>
+        <span class="img coin coin03"></span>
+        <ul class="btmbtn flexable">
+            <li><button type="button" onclick="layer_close()">1시간 동안 보지 않기</button></li>
+            <li><button type="button" onclick="layer_close()">닫기</button></li>
+        </ul>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="../js/ui.js"></script>
+<script>
+    $(function() {
+        layer_open('moneyroul-layer');
+        setTimeout(function() {
+            $('#moneyroul-layer .btmbtn').addClass('show');
+        }, 1000);
+    })
+</script>
+</body>
+</html>

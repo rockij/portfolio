@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>010페이</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" href="../../css/owl.carousel.min.css">
+<link rel="stylesheet" href="../../css/common.css?ezauthver=5.0">
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../../js/html5shiv.js"></script>
+<script type="text/javascript" src="../../js/respond.min.js"></script>
+<![endif]-->
+<script src="../../js/jquery-1.8.3.min.js"></script>
+<script src="../../js/jquery.placeholder.min.js"></script>
+<script src="../../js/owl.carousel.min.js"></script>
+<script src="../../js/design.js?ezauthver=5.0" defer="defer"></script>
+<script src="../../js/commonmsg.js?ezauthver=5.0"></script>
+<script src="../../js/commonutil.js?ezauthver=5.0"></script>
+</head>
+
+<body>
+<!-- form -->
+<form class="main_form" action="javascript: void(0);" autocomplete="off">
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<div id="header">
+			<div class="container">
+				<button type="button" id="btnBack" class="btn-back"><i class="icon-angle-left">뒤로가기</i></button>
+				<h1 class="brand-name"><a href="#"><span><img src="../../images/logo.svg" class="brand-logo" alt="010pay"></span></a></h1>
+				<!-- <h2 class="page-title">휴대폰 인증</h2> -->
+				<button type="button" id="closeWindow" class="btn-close"><i class="icon-times">창닫기</i></button>
+			</div>
+		</div>
+		<!-- //header -->
+
+		<!-- content -->
+		<div id="content">
+			<!-- container -->
+			<div class="container">
+				<!-- headline -->
+				<div class="headline">
+					<p>변경된 본인명의 휴대폰으로<br>
+						인증해 주세요.</p>
+				</div>
+				<!-- //headline -->
+
+				<!-- 정보 입력 -->
+				<div class="section">
+					<ul class="form-type">
+						<li>
+							<label for="custNmBasic" class="label">이름</label>
+							<div class="position-relative">
+								<input type="text" name="custNmBasic" id="custNmBasic" maxlength="10" placeholder="공일공">
+								<span class="form-control-clear hidden"><i class="icon-times-circle sr-only">삭제</i></span>
+							</div>
+						</li>
+						<li>
+							<label for="custNmBasic" class="label">주민등록번호</label>
+							<div class="input input-myid">
+								<input type="tel" name="rrnBasic" id="rrnBasic" maxlength="6" placeholder="901231" class="input-text-lg">
+								<span class="num">
+									<input type="tel" name="sexBasic" id="sexBasic" maxlength="1" placeholder="1" class="input-text-lg">
+									<i></i><i></i><i></i><i></i><i></i><i></i>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="input select-input telecom">
+								<button type="button" id="frugal" class="select select-modal brand">통신사 선택</button>
+								<input type="text" name="cphoneNo" id="cphoneNo" maxlength="13" placeholder="010 1234 5678" class="input-text-lg">
+							</div>
+						</li>
+						<li class="captcha">
+							<ul>
+								<li>
+									<img src="../../images/captchaImg.png" id="captchaImg" alt="보안문자 이미지" class="temp">
+									<div id="captchaAudio" style="display:none;"></div>
+									<div class="btn-area">
+										<button type="button" id="soundCaptcha" class="btn btn-speaker" onclick="audio()">소리로 듣기</button>
+										<button type="button" id="refreshCaptcha" class="btn btn-refresh" onclick="refreshCaptchaImage()">새로고침</button>
+									</div>
+								</li>
+								<li><input type="tel" name="captchaInput" id="catpchaInput" placeholder="보안숫자 입력" maxlength="6" class="captcha-input"></li>
+							</ul>
+						</li>
+					</ul>
+					<p class="info mgt20">휴대폰 인증은 1일 5회까지 가능합니다.</p>
+				</div>
+				<!-- //정보 입력 -->
+
+				<!-- 약관동의 -->
+				<div class="section mgt30">
+					<div class="join-agree">
+						<div class="agree-all">
+							<span class="checkbox">
+								<input type="checkbox" name="agreeAll" id="agreeAll_01">
+								<label for="agreeAll_01">서비스 이용약관</label>
+							</span>
+							<button type="button" class="btn btn-xs btn-nobg hidden"><span>펼치기</span></button>
+							<button type="button" class="btn btn-xs btn-nobg"><span>접기</span></button>
+						</div>
+						<ul class="agree-list">
+							<li>
+								<span class="checkbox child">
+									<input type="checkbox" name="agree_01" id="agree_01_01">
+									<label for="agree_01_01"><span>(필수)</span> 010PAY 이용약관</label>
+								</span>
+								<button type="button" onclick="modalOpen('modal-terms')" class="btn btn-xs btn-nobg">보기</button>
+							</li>
+							<li>
+								<span class="checkbox child">
+									<input type="checkbox" name="agree_01" id="agree_01_02">
+									<label for="agree_01_02"><span>(필수)</span> 전자금융거래 이용약관</label>
+								</span>
+								<button type="button" onclick="modalOpen('modal-terms')" class="btn btn-xs btn-nobg">보기</button>
+							</li>
+							<li>
+								<span class="checkbox child">
+									<input type="checkbox" name="agree_01" id="agree_01_03">
+									<label for="agree_01_03"><span>(필수)</span> 개인정보 수집·이용</label>
+								</span>
+								<button type="button" onclick="modalOpen('modal-terms')" class="btn btn-xs btn-nobg">보기</button>
+							</li>
+							<li>
+								<span class="checkbox child">
+									<input type="checkbox" name="agree_01" id="agree_01_04">
+									<label for="agree_01_04"><span>(필수)</span> 개인정보 제3자 제공 및 위탁</label>
+								</span>
+								<button type="button" onclick="modalOpen('modal-terms')" class="btn btn-xs btn-nobg">보기</button>
+							</li>
+							<li>
+								<span class="checkbox child">
+									<input type="checkbox" name="agree_01" id="agree_01_05">
+									<label for="agree_01_05"><span>(선택)</span> 마케팅 정보 수신(문자)</label>
+								</span>
+								<button type="button" onclick="modalOpen('modal-terms')" class="btn btn-xs btn-nobg">보기</button>
+							</li>
+						</ul>
+					</div>
+					<div class="join-agree">
+						<div class="agree-all">
+							<span class="checkbox">
+								<input type="checkbox" name="agreeAll" id="agreeAll_02">
+								<label for="agreeAll_02">본인확인 이용약관</label>
+							</span>
+							<button type="button" class="btn btn-xs btn-nobg hidden"><span>펼치기</span></button>
+							<button type="button" class="btn btn-xs btn-nobg"><span>접기</span></button>
+						</div>
+						<ul class="agree-list">
+							<li>
+								<span class="checkbox child">
+									<input type="checkbox" name="agree_02" id="agree_02_01">
+									<label for="agree_02_01"><span>(필수)</span> 휴대폰 본인확인 이용약관</label>
+								</span>
+								<button type="button" onclick="modalOpen('modal-terms')" class="btn btn-xs btn-nobg">보기</button>
+							</li>
+							<li>
+								<span class="checkbox child">
+									<input type="checkbox" name="agree_02" id="agree_02_02">
+									<label for="agree_02_02"><span>(필수)</span> 개인정보 수집·이용</label>
+								</span>
+								<button type="button" onclick="modalOpen('modal-terms')" class="btn btn-xs btn-nobg">보기</button>
+							</li>
+							<li>
+								<span class="checkbox child">
+									<input type="checkbox" name="agree_02" id="agree_02_03">
+									<label for="agree_02_03"><span>(필수)</span> 개인정보 제공 위탁</label>
+								</span>
+								<button type="button" onclick="modalOpen('modal-terms')" class="btn btn-xs btn-nobg">보기</button>
+							</li>
+							<li>
+								<span class="checkbox child">
+									<input type="checkbox" name="agree_02" id="agree_02_04">
+									<label for="agree_02_04"><span>(필수)</span> 고유식별정보 처리</label>
+								</span>
+								<button type="button" onclick="modalOpen('modal-terms')" class="btn btn-xs btn-nobg">보기</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- //약관동의 -->
+
+				<!-- bottom area -->
+				<div class="bottom-area">
+					<div class="container">
+						<button type="button" id="send" class="btn" disabled>인증 요청</button>
+					</div>
+				</div>
+				<!-- //bottom area -->
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- //wrap -->
+</form>
+<!-- //form -->
+
+<!-- 약관 상세 -->
+<div id="modal-terms" class="modal modal-terms">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="container">
+					<div class="nav owl-carousel">
+						<div class="item">
+							<div class="cell">
+								<h2>서비스 이용약관</h2>
+							</div>
+						</div>
+						<div class="item">
+							<div class="cell">
+								<h2>전자금융거래 이용약관</h2>
+								<select class="select-sm">
+									<option value="">2018.11.01</option>
+								</select>
+							</div>
+						</div>
+						<div class="item">
+							<div class="cell">
+								<h2>개인정보 수집 및 이용</h2>
+							</div>
+						</div>
+						<div class="item">
+							<div class="cell">
+								<h2>개인정보 제3자 동의</h2>
+							</div>
+						</div>
+						<div class="item">
+							<div class="cell">
+								<h2>휴대폰 본인확인 약관</h2>
+							</div>
+						</div>
+					</div>
+					<div class="terms scroll">
+						<h3>고유식별정보의 처리에 관한 사항 동의</h3>
+						<p>&nbsp;</p>
+						<p>에스케이티㈜ (이하 "본인확인기관")가 다날(이하 "회사")을 통해 제공하는 휴대폰 본인확인 서비스 관련하여 이용자로부터 수집한 고유식별정보를 이용하거나 타인에게 제공할 때에는 '정보통신망 이용촉진 및 정보보호 등에 관한 법률'(이하 "정보통신망법")에 따라 이용자의 동의를 얻어야 합니다.</p>
+						<p>&nbsp;</p>
+						<h4>제 1 조[고유식별정보의 처리 동의]</h4>
+						<p>"본인확인기관"은 정보통신망법 제23조의2 제2항에 따라 인터넷상에서 주민등록번호를 입력하지 않고도 본인임을 확인할 수 있는 휴대폰 본인확인서비스를 제공하기 위해 고유식별정보를 처리합니다.</p>
+						<p>&nbsp;</p>
+						<h4>제 2 조[고유식별정보의 제공 동의]</h4>
+						<p>"본인확인기관 지정 등에 관한 기준(방송통신위원회 고시)"에 따라 "회사"와 계약한 정보통신서비스 제공자의 연계서비스 및 중복가입확인을 위해 아래와 같이 본인의 고유식별정보를 '다른 본인확인기관'에 제공하는 것에 동의합니다.</p>
+						<p>&nbsp;</p>
+						<h4>[고유식별정보 제공 동의]</h4>
+						<table class="table">
+							<thead>
+								<tr>
+									<th>제공자(본인확인기관)</th>
+									<th>제공 받는자(본인확인기관)</th>
+									<th>제공하는 항목</th>
+									<th>제공 목적</th>
+									<th>보유 및 이용기간</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>에스케이티㈜</td>
+									<td>NICE신용평가정보(주)</td>
+									<td>주민등록번호(내국인), 외국인등록번호(국내거주외국인)</td>
+									<td>CI(연계정보), DI(중복가입확인정보)의 생성 및 전달</td>
+									<td>CI(연계정보), DI(중복가입확인정보) 생성 후 즉시 폐기</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>&nbsp;</p>
+						<p>&nbsp;</p>
+						<h3>고유식별정보의 처리에 관한 사항 동의</h3>
+						<p>&nbsp;</p>
+						<p>(주)케이티 (이하 "본인확인기관")가 다날(이하 "회사")을 통해 제공하는 휴대폰 본인확인 서비스 관련하여 이용자로부터 수집한 고유식별정보를 이용하거나 타인에게 제공할 때에는 '정보통신망 이용촉진 및 정보보호 등에 관한 법률'(이하 "정보통신망법")에 따라 이용자의 동의를 얻어야 합니다.</p>
+						<p>&nbsp;</p>
+						<h4>제 1 조[고유식별정보의 처리 동의]</h4>
+						<p>"본인확인기관"은 정보통신망법 제23조의2 제2항에 따라 인터넷상에서 주민등록번호를 입력하지 않고도 본인임을 확인할 수 있는 휴대폰 본인확인서비스를 제공하기 위해 고유식별정보를 처리합니다.</p>
+						<p>&nbsp;</p>
+						<h4>제 2 조[고유식별정보의 제공 동의]</h4>
+						<p>"본인확인기관 지정 등에 관한 기준(방송통신위원회 고시)"에 따라 "회사"와 계약한 정보통신서비스 제공자의 연계서비스 및 중복가입확인을 위해 아래와 같이 본인의 고유식별정보를 '다른 본인확인기관'에 제공하는 것에 동의합니다.</p>
+						<p>&nbsp;</p>
+						<h4>[고유식별정보 제공 동의]</h4>
+						<table class="table">
+							<thead>
+								<tr>
+									<th>제공자(본인확인기관)</th>
+									<th>제공 받는자(본인확인기관)</th>
+									<th>제공하는 항목</th>
+									<th>제공 목적</th>
+									<th>보유 및 이용기간</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>(주)케이티</td>
+									<td>코리아크레딧뷰로㈜, 서울신용평가정보㈜</td>
+									<td>주민등록번호(내국인), 외국인등록번호(국내거주외국인)</td>
+									<td>CI(연계정보), DI(중복가입확인정보)의 생성 및 전달</td>
+									<td>CI(연계정보), DI(중복가입확인정보) 생성 후 즉시 폐기</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>&nbsp;</p>
+						<p>&nbsp;</p>
+						<h3>고유식별정보의 처리에 관한 사항 동의</h3>
+						<p>&nbsp;</p>
+						<p>㈜엘지유플러스 (이하 "본인확인기관")가 다날(이하 "회사")을 통해 제공하는 휴대폰 본인확인 서비스 관련하여 이용자로부터 수집한 고유식별정보를 이용하거나 타인에게 제공할 때에는 '정보통신망 이용촉진 및 정보보호 등에 관한 법률'(이하 "정보통신망법")에 따라 이용자의 동의를 얻어야 합니다.</p>
+						<p>&nbsp;</p>
+						<h4>제 1 조[고유식별정보의 처리 동의]</h4>
+						<p>"본인확인기관"은 정보통신망법 제23조의2 제2항에 따라 인터넷상에서 주민등록번호를 입력하지 않고도 본인임을 확인할 수 있는 휴대폰 본인확인서비스를 제공하기 위해 고유식별정보를 처리합니다.</p>
+						<p>&nbsp;</p>
+						<h4>제 2 조[고유식별정보의 제공 동의]</h4>
+						<p>"본인확인기관 지정 등에 관한 기준(방송통신위원회 고시)"에 따라 "회사"와 계약한 정보통신서비스 제공자의 연계서비스 및 중복가입확인을 위해 아래와 같이 본인의 고유식별정보를 '다른 본인확인기관'에 제공하는 것에 동의합니다.</p>
+						<p>&nbsp;</p>
+						<h4>[고유식별정보 제공 동의]</h4>
+						<table class="table">
+							<thead>
+								<tr>
+									<th>제공자(본인확인기관)</th>
+									<th>제공 받는자(본인확인기관)</th>
+									<th>제공하는 항목</th>
+									<th>제공 목적</th>
+									<th>보유 및 이용기간</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>㈜엘지유플러스</td>
+									<td>서울신용평가정보(주),코리아크레딧뷰로(주)</td>
+									<td>주민등록번호(내국인), 외국인등록번호(국내거주외국인)</td>
+									<td>CI(연계정보), DI(중복가입확인정보)의 생성 및 전달</td>
+									<td>CI(연계정보), DI(중복가입확인정보) 생성 후 즉시 폐기</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="modal-bottom-area fixed">
+						<div class="container"><button type="button" onclick="modalClose();" class="btn">확인</button></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //약관 상세 -->
+
+<!-- 통신사 선택 목록 -->
+<div id="modal-frugal" class="modal modal-slide">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<ul class="btn-list">
+					<li><button type="button" class="btn"><em>SKT</em>
+						<span class="check-primary"><span class="sr-only">선택</span> <i class="icon-check primary"></i></span></button></li>
+					<li><button type="button" class="btn"><em>KT</em>
+						<span class="check-primary"><span class="sr-only">선택</span> <i class="icon-check primary"></i></span></button></li>
+					<li><button type="button" class="btn"><em>LG U+</em>
+						<span class="check-primary"><span class="sr-only">선택</span> <i class="icon-check primary"></i></span></button></li>
+					<li><button type="button" class="btn"><em>SKT 알뜰폰</em>
+						<span class="check-primary"><span class="sr-only">선택</span> <i class="icon-check primary"></i></span></button></li>
+					<li><button type="button" class="btn"><em>KT 알뜰폰</em>
+						<span class="check-primary"><span class="sr-only">선택</span> <i class="icon-check primary"></i></span></button></li>
+					<li><button type="button" class="btn"><em>LG U+ 알뜰폰</em>
+						<span class="check-primary"><span class="sr-only">선택</span> <i class="icon-check primary"></i></span></button></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //알뜰폰 통신사 선택 목록 -->
+
+<!-- loading -->
+<div class="modal modal-loading">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="loading">
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+				</div>
+				<span class="text">로딩 중</span>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //loading -->
+
+<!-- common alert -->
+<div id="commonAlert" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<h3 id="alertTitle"></h3>
+				<p id="alertContents"></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" onclick="modalClose();" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //common alert -->
+
+<!-- common prompt -->
+<div id="commonPrompt" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<h3 id="promptTitle"></h3>
+				<p id="promptContents"></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" onclick="modalClose();" class="btn">취소</button>
+				<button type="button" id="promptOk" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //common prompt -->
+</body>
+</html>

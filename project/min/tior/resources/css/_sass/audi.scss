@@ -1,0 +1,762 @@
+@charset "utf-8";
+@import './mixin';
+
+@keyframes twinkle {
+    50% {opacity:0}
+}
+@-webkit-keyframes twinkle {
+    50% {opacity:0}
+}
+
+.apply_promo {
+    @include pos($p:relative);
+    i {
+        font-style: italic;
+    }
+    > .img {
+        @include pos($p:relative);
+    }
+    .dday {
+        display: block;
+        width: 100%;
+        @include pos($p:absolute,$l:0,$t:19vw);
+        text-align: center;
+        font-weight: 500;
+        font-size: ptr(26);
+        letter-spacing: 3px;
+        color: #fff;
+        animation: twinkle 0.5s infinite;
+        @include mq("pc") {
+            font-size: 26px;
+            @include pos($t:140px);
+        }
+        code {
+            display: block;
+            color: inherit;
+            @include wfn;
+            letter-spacing: 0;
+            font-weight: 700;
+            font-size: ptr(40);
+            @include mq("pc") {
+                font-size: 40px;
+            }
+        }
+    }
+    .img {
+        display: block;
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+    .noti_desc {
+        background-color: #000;
+        background-image: url(data:image/png;base64,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);
+        > section {
+            @include pos($p:relative);
+            margin-top: ptr(20);
+            background-color: #fff;
+            @include mq("pc") {
+                margin-top: 20px;
+            }
+            * {
+                color: #000;
+            }
+            &.noti_benefit,
+            &.noti_step {
+                padding: ptr(70) ptr(60) ptr(90);
+                @include mq("pc") {
+                    padding: 70px 60px 90px;
+                }
+            }
+            &:first-child {
+                margin-top: 0;
+            }
+            h3 {
+                font-weight: 900;
+                font-size: ptr(40);
+                @include mq("pc") {
+                    font-size: 40px;
+                }
+            }
+            .more {
+                width: ptr(144);
+                padding: 0 ptr(36);
+                margin-top: ptr(35);
+                line-height: ptr(54);
+                color: rgba(0, 0, 0, 0.86);
+                background-color: #efefef;
+                border: 1px solid #d3d3d3;
+                border-radius: ptr(36);
+                font-size: ptr(24);
+                @include mq("pc") {
+                    width: 144px;
+                    padding: 0 36px;
+                    line-height: 54px;
+                    border-radius: 36px;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    .car_list {
+        padding: ptr(54) ptr(18) ptr(65);
+        @include mq("pc") {
+            padding: 54px 18px 65px;
+        }
+        > strong,
+        > pre,
+        > h4 {
+            padding:0 0.5rem;
+            color:#222;
+            @include mq("pc") {
+                padding: 0 10px;
+            }
+        }
+        > strong {
+            font-weight: 700;
+            font-size: 1.3rem;
+            @include mq("pc") {
+                font-size: 26px;
+            }
+        }
+        > pre {
+            display: block;
+            margin:0.7rem 0 1.4rem;
+            font-size: 1.1rem;
+            @include mq("pc") {
+                margin:14px 0 28px;
+                font-size: 22px;
+            }
+        }
+        > h4 {
+            margin: ptr(38) 0;
+            font-weight: 500;
+            font-size: ptr(30);
+            @include mq("pc") {
+                margin: 38px 0;
+                font-size: 30px;
+            }
+            strong {
+                font-weight: 700;
+                font-size: ptr(40);
+                color: #2121f3;
+                @include mq("pc") {
+                    font-size: 40px;
+                }
+            }
+        }
+        .product {
+            border: 1px solid #222;
+            & + .product {
+                margin-top: ptr(20);
+                @include mq("pc") {
+                    margin-top: 20px;
+                }
+            }
+            &.toggled {
+                @include boxShadow($x:15,$y:15,$blur:14,$color:rgba(0,0,0,0.38));
+                > button {
+                    i {
+                         transform: rotate(0)
+                    }
+                }
+            }
+            > button {
+                display: flex;
+                width: 100%;
+                padding: ptr(25) ptr(35);
+                align-items: center;
+                justify-content: space-between;
+                @include mq("pc") {
+                    padding: 25px 35px;
+                }
+                code {
+                    @include wfn;
+                    letter-spacing: 0;
+                    font-weight: 800;
+                    color: inherit;
+                }
+                > code {
+                    text-align: left;
+                    font-size: ptr(34);
+                    @include mq("pc") {
+                        font-size: 34px;
+                    }
+                     b {
+                        font-size: ptr(50);
+                        color: inherit;
+                        @include mq("pc") {
+                            font-size: 50px;
+                        }
+                    }
+                }
+                > span {
+                    flex: 1;
+                    margin-right: ptr(24);
+                    margin-top: 2px;
+                    text-align: right;
+                    color: rgba(0, 0, 0, 0.8);
+                    font-size: ptr(25);
+                    @include mq("pc") {
+                        margin-right: 24px;
+                        font-size: 25px;
+                    }
+                    b {
+                        margin-left: ptr(17);
+                        font-weight: 700;
+                        font-size: ptr(27);
+                        color: #f50909;
+                        @include mq("pc") {
+                            margin-left: 17px;
+                            font-size: 27px;
+                        }
+                    }
+                    code {
+                        vertical-align: middle;
+                        font-weight: 800;
+                        font-size: ptr(48);
+                        @include mq("pc") {
+                            font-size: 48px;
+                        }
+                    }
+                }
+                .img {
+                    width: ptr(47);
+                    height: ptr(47);
+                    transform: rotate(180deg);
+                    @include mq("pc") {
+                        width: 47px;
+                        height: 47px;
+                    }
+                }
+            }
+            > div {
+                display: none;
+                @include pos($p:relative);
+                padding: ptr(30);
+                border-top: 1px solid #222;
+                @include mq("pc") {
+                    padding: 30px;
+                }
+                p {
+                    margin: ptr(16) 0;
+                    font-size: ptr(20);
+                    color: #949494;
+                    @include mq("pc") {
+                        margin: 16px 0;
+                        font-size: 20px;
+                    }
+                }
+                > div {
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-between;
+                    .reserve {
+                        padding: 0 ptr(60);
+                        color: #fff;
+                        background-color: #000;
+                        font-weight: 700;
+                        font-size: ptr(36);
+                        border-radius: ptr(5);
+                        line-height: ptr(113);
+                        @include mq("pc") {
+                            padding: 0 60px;
+                            font-size: 36px;
+                            border-radius: 5px;
+                            line-height: 113px;
+                        }
+                    }
+                    .img {
+                        width: 55.4%;
+                    }
+                }
+            }
+            .price {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: ptr(16);
+                @include mq("pc") {
+                    margin-bottom: 16px;
+                }
+                dt,
+                code {
+                    @include wfn;
+                    letter-spacing: 0;
+                    color: inherit;
+                    font-weight: 800;
+                    font-size: ptr(24);
+                    @include mq("pc") {
+                        font-size: 24px;
+                    }
+                }
+                ul {
+                    font-size: 0;
+                    li {
+                        display: inline-block;
+                        vertical-align: middle;
+                        @include pos($p:relative);
+                        font-size: ptr(24);
+                        color: rgba(0,0,0,0.73);
+                        @include mq("pc") {
+                            font-size: 24px;
+                        }
+                        & + li {
+                            font-weight: 700;
+                            margin-left: ptr(16);
+                            color: #2121f3;
+                            @include mq("pc") {
+                                margin-left: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .noti_buy {
+        text-align: center;
+        code {
+            @include wfn;
+            letter-spacing: 0;
+        }
+        .product {
+            text-align: left;
+            border-top: ptr(3) solid #000;
+            background-color: #fff;
+            &:last-child {
+                border-bottom: ptr(3) solid #000;
+                @include mq("pc") {
+                    border-bottom-width: 3px;
+                }
+            }
+            @include mq("pc") {
+                margin-top: 10px;
+                border-top-width: 3px;
+            }
+            &.toggled {
+                > button {
+                    > i {
+                        transform: rotate(0);
+                    }
+                }
+            }
+            > button {
+                display: flex;
+                width: 100%;
+                padding: ptr(35) ptr(30);
+                align-items: center;
+                justify-content: space-between;
+                text-align: left;
+                @include mq("pc") {
+                    padding: 35px 30px;
+                }
+                > strong {
+                    display: block;
+                    flex: 1;
+                    font-weight: 900;
+                    font-size: ptr(36);
+                    @include mq("pc") {
+                        font-size: 36px;
+                    }
+                    code {
+                        color: #f50909;
+                    }
+                }
+                i {
+                    width: ptr(47);
+                    height: ptr(47);
+                    transform: rotate(180deg);
+                    @include mq("pc") {
+                         width: 47px;
+                         height: 47px;
+                    }
+                }
+            }
+            > div {
+                display: none;
+                padding: ptr(46) ptr(60) ptr(116);
+                border-top: 1px solid #e3e3e3;
+                @include mq("pc") {
+                    padding: 46px 60px 116px;
+                }
+                > section {
+                    & + section {
+                        margin-top: ptr(55);
+                        @include mq("pc") {
+                            margin-top: 55px;
+                        }
+                    }
+                }
+                
+                b {
+                    display: block;
+                    margin-bottom: ptr(15);
+                    font-weight: 700;
+                    font-size: ptr(26);
+                    color: #7c7c7c;
+                    @include mq("pc") {
+                        margin-bottom: 15px;
+                        font-size: 26px;
+                    }
+                }
+            }
+            dl {
+                display: flex;
+                padding: ptr(10) 0;
+                justify-content: space-between;
+                @include mq("pc") {
+                    padding: 10px 0;
+                }
+                dt,
+                dd {
+                    font-weight: 700;
+                    font-size: ptr(28);
+                    color: #222;
+                    @include mq("pc") {
+                        font-size: 28px;
+                    }
+                }
+                code {
+                    font-weight: 700;
+                }
+                dt {
+                    font-weight: 800;
+                    @include wfn;
+                    letter-spacing: 0;
+                }
+                dd {
+                    text-align: right;
+                }
+            }
+            pre {
+                line-height: 1.7;
+                font-weight: 500;
+                font-size: ptr(26);
+                @include mq("pc") {
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+    .noti_benefit {
+        b {
+            color: #f50909;
+        }
+        p {
+            margin-top: ptr(10);
+            font-weight: 500;
+            font-size: ptr(22);
+            opacity: 0.5;
+            @include mq("pc") {
+                margin-top: 10px;
+                font-size: 22px;
+            }
+        }
+        div {
+            margin-top: ptr(36);
+            @include mq("pc") {
+                margin-top: 36px;
+            }
+            strong {
+                font-weight: 700;
+                font-size: ptr(26);
+                @include mq("pc") {
+                    font-size: 26px;
+                }
+            }
+            ul {
+                margin-top: ptr(7);
+                @include mq("pc") {
+                    margin-top: 7px;
+                }
+            }
+            li {
+                font-weight: 500;
+                font-size: ptr(24);
+                line-height: 1.5;
+                &:before {
+                    content: '-';
+                    margin-right: ptr(10);
+                    @include mq("pc") {
+                        margin-right: 10px;
+                    }
+                }
+                @include mq("pc") {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    .noti_step {
+        padding-bottom: ptr(120);
+        @include mq("pc") {
+            padding-top: 65px;
+            padding-bottom: 120px;
+        }
+        p {
+            margin: ptr(10) 0 ptr(50);
+            font-size: ptr(26);
+            @include mq("pc") {
+                margin: 10px 0 50px;
+                font-size: 26px;
+            }
+        }
+        li {
+            @include pos($p:relative);
+            margin-top: ptr(26);
+            padding: ptr(5) 0 0 ptr(120);
+            background-repeat: no-repeat;
+            background-position: left top;
+            background-size: ptr(82) ptr(82);
+            @include mq("pc") {
+                margin-top: 26px;
+                padding: 5px 0 0 120px;
+                background-size: 82px 82px;
+            }
+            &:nth-of-type(1) {
+                background-image: url('https://cdn.ad-zip.com/tior/dev/promotion/sellaudi/audi_step01.png');
+            }
+            &:nth-of-type(2) {
+                background-image: url('https://cdn.ad-zip.com/tior/dev/promotion/sellaudi/audi_step02.png');
+            }
+            &:nth-of-type(3) {
+                background-image: url('https://cdn.ad-zip.com/tior/dev/promotion/sellaudi/audi_step03.png');
+            }
+            &:nth-of-type(4) {
+                background-image: url('https://cdn.ad-zip.com/tior/dev/promotion/sellaudi/audi_step04.png');
+            }
+            > * {
+                display: block;
+            }
+            .step {
+                @include wfn;
+                letter-spacing: 0;
+                font-weight: 800;
+                font-size: ptr(22);
+                color: #f50909;
+                @include mq("pc") {
+                    font-size: 22px;
+                }
+            }
+            strong {
+                padding: ptr(14) 0;
+                font-weight: 500;
+                font-size: ptr(30);
+                @include mq("pc") {
+                    padding: 14px 0;
+                    font-size: 30px;
+                }
+            }
+            .arr {
+                margin-left: ptr(10);
+                @include arr($ty:'arrow', $w:ptr(18), $h:ptr(18), $c:#cbcbcb, $ro:135);
+                @include mq("pc") {
+                    margin-left: 10px;
+                    @include arr($ty:'arrow', $w:18px, $h:18px, $c:#cbcbcb, $ro:135);
+                }
+            }
+        }
+    }
+    .check_desc {
+        @include inr('c');
+        padding-top: ptr(63);
+        padding-bottom: ptr(133);
+        background-color: #000;
+        background-image: url(data:image/png;base64,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);
+        @include mq("pc") {
+            padding: 63px 42px 133px;
+        }
+        * {
+            color: #fff;
+        }
+        strong {
+            font-weight: 700;
+            font-size: ptr(28);
+            @include mq("pc") {
+                font-size: 28px;
+            }
+        }
+        pre {
+            margin-top: ptr(33);
+            line-height: 1.2;
+            opacity: 0.43;
+            font-size: ptr(24);
+            @include mq("pc") {
+                margin-top: 33px;
+                font-size: 24px;
+            }
+        }
+        .notice {
+            margin-top: ptr(55);
+            @include mq("pc") {
+                margin-top: 55px;
+            }
+            > b {
+                font-weight: 500;
+                font-size: ptr(24);
+                @include mq("pc") {
+                    font-size: 24px;
+                }
+            }
+            > p {
+                margin: ptr(18) 0;
+                opacity: 0.7;
+                font-size: ptr(23);
+                @include mq("pc") {
+                    margin: 18px 0;
+                    font-size: 23px;
+                }
+            }
+            .table {
+                > strong {
+                    display: block;
+                    margin: ptr(25) 0;
+                    @include wfn;
+                    font-weight: 600;
+                    font-size: ptr(26);
+                    letter-spacing: 0;
+                    @include mq("pc") {
+                        margin: 25px 0;
+                        font-size: 26px;
+                    }
+                }
+                code {
+                    @include wfn;
+                    letter-spacing: 0;
+                }
+                table {
+                    width: 100%;
+                    border-top: 2px solid rgba(255,255,255,0.65);
+                }
+                tbody {
+                    border-top: 1px solid rgba(255, 255, 255, 0.3);
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+                }
+                tr {
+                    th,
+                    td {
+                        padding: ptr(13);
+                        @include mq("pc") {
+                            padding:  13px;
+                        }
+                    }
+                    th {
+                        font-size: ptr(22);
+                        opacity: 0.7;
+                        @include mq("pc") {
+                            font-size: 22px;
+                        }
+                        &:first-child {
+                            text-align: left;
+                        }
+                    }
+                    td {
+                        font-size: ptr(24);
+                        opacity: 0.85;
+                        text-align: right;
+                        @include mq("pc") {
+                            font-size: 24px;
+                        }
+                        code {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .more_info {
+        padding: ptr(55) ptr(58) ptr(40);
+        text-align: center;
+        background-color: #2726d6;
+        background-image: url(data:image/png;base64,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);
+        @include mq("pc") {
+            padding: 55px 58px 40px;
+        }
+        & + section {
+            margin-top: 0;
+        }
+        > * {
+            color: #fff;
+        }
+        > strong {
+            font-weight: 700;
+            font-size: ptr(38);
+            @include mq("pc") {
+                font-size: 38px;
+            }
+        }
+        > p {
+            font-size: ptr(24);
+            @include mq("pc") {
+                font-size: 24px;
+            }
+        }
+        .ip_email {
+            padding: ptr(15) ptr(20);
+            margin: ptr(28) 0;
+            background-color: #fff;
+            font-size: 0;
+            span,
+            button {
+                display: inline-block;
+            }
+            span {
+                width: calc(100% - 7.3rem);
+                @include pos($p:relative);
+                @include mq("pc") {
+                    width: calc(100% - 146px);
+                }
+                input,
+                label {
+                    font-weight: 500;
+                    font-size: ptr(28);
+                    color: #000;
+                    @include mq("pc") {
+                        font-size: 28px;
+                    }
+                }
+                input {
+                    width: 100%;
+                    padding: ptr(19) ptr(24);
+                    @include wfn;
+                    letter-spacing: 0;
+                    @include mq("pc") {
+                        padding: 19px 24px;
+                    }
+                    &:focus,
+                    &:valid {
+                        & + label {
+                            display: none;
+                        }
+                    }
+                }
+                label {
+                    @include pos($p:absolute,$l:ptr(24),$t:50%);
+                    opacity: 0.4;
+                    transform: translateY(-50%);
+                    cursor: text;
+                    @include mq("pc") {
+                        @include pos($l:24px);
+                    }
+                }
+            }
+            button {
+                width: ptr(146);
+                line-height: ptr(76);
+                text-align: center;
+                color: #fff;
+                font-weight: 500;
+                font-size: ptr(26);
+                background-color: #2726d6;
+                @include mq("pc") {
+                    width: 146px;
+                    line-height: 76px;
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+}

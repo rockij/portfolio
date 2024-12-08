@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko" class="golf lgu bgGray">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="../../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/golf.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/site_lgu.css" media="screen" rel="stylesheet">
+<script src="../../resources/js/jquery-1.11.1.min.js"></script>
+<script src="../../resources/js/golf.js"></script>
+<title>LGU+골프보험</title>
+</head>
+<body>
+    <div id="wrap">
+        <header id="head" class="fix sub">
+            <button type="button" onclick="" class="btn_prev"><i class="ico_com">뒤로가기</i></button>
+            <h1>이용내역</h1>
+            <button type="button" onclick="popOn('join')" class="btn_use"><i class="ico_com">간편가입관리</i></button>
+        <!-- <div class="data_on_off">데이터시작점</div> -->
+	    </header>
+        <!-- //header -->
+        <div id="ct">
+            <div class="useWrap">
+                <section class="useTit">
+                    <div class="titWrap">
+                        <h3 class="tit">홍길동님의<br><button type="button" onclick="popOn('select_month')"><span><i class="tMonth num">3</i>월 이용내역</span></button><br>입니다.</h3>
+                        <div class="question">
+                            <strong><i class="ico_quest"></i>궁금해요.</strong>
+                            <ul class="list">
+                                <li><button type="button">보험 간편가입 가이드</button></li>
+                                <li><button type="button">보험 청구 가이드</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="useDate">
+                    <div class="dateWrap">
+                        <h3 class="tDate num">2020. 03</h3>
+                        <div class="dateNone">
+                            <strong>이용내역이 없습니다.</strong>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- //content -->
+    </div>
+
+
+    <!-- 이용내역 월 선택 -->
+    <div id="select_month" class="ly_pop underPop">
+        <div class="bg"></div>
+        <div class="cont">
+            <article class="elm">
+                <section class="popHead">
+                    <strong>이용내역</strong>
+                    <button type="button" onclick="popOff('select_month')" class="pop_cls"><i class="ico_com">닫기</i></button>
+                </section>
+                <section class="desc checkMonth">
+                    <div class="scroll">
+                        <ul class="monthList">
+                            <li><button type="button" onclick="selectM(this)" class="num checked">2020. 03</button></li>
+                            <li><button type="button" onclick="selectM(this)" class="num">2020. 02</button></li>
+                            <li><button type="button" onclick="selectM(this)" class="num">2020. 01</button></li>
+                            <li><button type="button" onclick="selectM(this)" class="num">2019. 12</button></li>
+                            <li><button type="button" onclick="selectM(this)" class="num">2019. 11</button></li>
+                            <li><button type="button" onclick="selectM(this)" class="num">2019. 10</button></li>
+                            <li><button type="button" onclick="selectM(this)" class="num">2019. 09</button></li>
+                            <li><button type="button" onclick="selectM(this)" class="num">2019. 08</button></li>
+                        </ul>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </div>
+    <!-- //이용내역 월 선택 -->
+
+    <!-- 간편가입관리 등록전 -->
+    <div id="join" class="ly_pop underPop">
+        <div class="bg"></div>
+        <div class="cont">
+            <article class="elm">
+                <section class="popHead">
+                    <strong>간편가입 관리</strong>
+                    <button type="button" onclick="popOff('join');popOn('my_info')" class="pop_cls"><i class="ico_com">닫기</i></button>
+                </section>
+                <section class="desc joinWrap">
+                    <ul class="joinBtn">
+                        <li><button type="button">고객 정보 등록 +</button></li>
+                        <li><button type="button">결제 계좌 등록 +</button></li>
+                    </ul>
+                    <small>* 골프보험에서는 고객님의 계좌정보 일체를 보관하지 않으며, 전자결제대행사 ooo을 통해 안전하게 관리됩니다.</small>
+                </section>
+            </article>
+        </div>
+    </div>
+    <!-- //간편가입관리 등록전 -->
+
+    <!-- 간편가입관리 내장보 -->
+    <div id="my_info" class="ly_pop underPop">
+        <div class="bg"></div>
+        <div class="cont">
+            <article class="elm">
+                <section class="popHead">
+                    <strong>간편가입 관리</strong>
+                    <button type="button" onclick="popOff('my_info')" class="pop_cls"><i class="ico_com">닫기</i></button>
+                </section>
+                <section class="desc joinWrap">
+                    <ul class="myInfo">
+                        <li>
+                            <div class="my"><span>피보험자/계약자</span><strong>홍길동</strong></div>
+                            <div class="my"><span>주민등록번호</span><strong>등록완료</strong></div>
+                        </li>
+                        <li>
+                            <div class="bank">
+                                <strong>KB국민은행</strong>
+                                <span class="num">011**-**-*******123</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <button type="button" class="reset">초기화</button>
+                </section>
+            </article>
+        </div>
+    </div>
+    <!-- //간편가입관리 내장보 -->
+</body>
+</html>

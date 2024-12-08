@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>010페이</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" href="../../css/owl.carousel.min.css">
+<link rel="stylesheet" href="../../css/common.css?ezauthver=5.0">
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../../js/html5shiv.js"></script>
+<script type="text/javascript" src="../../js/respond.min.js"></script>
+<![endif]-->
+<script src="../../js/jquery-1.8.3.min.js"></script>
+<script src="../../js/jquery.placeholder.min.js"></script>
+<script src="../../js/owl.carousel.min.js"></script>
+<script src="../../js/design.js?ezauthver=5.0" defer="defer"></script>
+<script src="../../js/commonmsg.js?ezauthver=5.0"></script>
+<script src="../../js/commonutil.js?ezauthver=5.0"></script>
+</head>
+
+<body>
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<div class="container">
+			<h1 class="brand-name"><span>010페이</span></h1>
+			<div class="page-title">
+				<h2 class="title">결제완료</h2>
+			</div>
+			<button type="button" id="closeWindow" class="btn-close"><i class="icon-times">창닫기</i></button>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- content -->
+	<div id="content" class="pay-success">
+		<!-- container -->
+		<div class="container">
+			<div class="text-right mgb5"><a href="../nav/serviceMenu.html" class="btn btn-xs btn-nobg"><span>내통장관리</span> <i class="icon icon-setting"></i></a></div>
+
+			<!-- headline -->
+			<div class="headline type2">결제가 정상적으로 처리되었습니다.</div>
+			<!-- //headline -->
+
+			<!-- 결제완료 정보 -->
+			<div class="section">
+				<ul class="info-table">
+					<li class="account">
+						<div class="dt"><img src="../../images/bank/fullname_004.png" alt="국민은행"></div>
+						<div class="dd">123********001</div>
+					</li>
+					<li class="total">
+						<div class="dt">결제금액</div>
+						<div class="dd">789,000원
+							<button type="button" class="btn btn-icon toggle-detail"><i class="icon icon-angle-down"></i> 펼치기</button>
+							<button type="button" class="btn btn-icon toggle-detail hidden"><i class="icon icon-angle-up"></i> 접기</button>
+						</div>
+					</li>
+					<li class="detail">
+						<div class="dt">나의머니</div>
+						<div class="dd">
+							<div class="detail-dl">
+								<div class="detail-dt">충전</div>
+								<div class="detail-dd">789,000원</div>
+							</div>
+							<div class="detail-dl">
+								<div class="detail-dt">사용</div>
+								<div class="detail-dd">789,000원</div>
+							</div>
+							<div class="detail-dl">
+								<div class="detail-dt">잔액</div>
+								<div class="detail-dd">0원</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- //결제완료 정보 -->
+
+			<!-- 안내 -->
+			<div class="section">
+				<ul class="info-list">
+					<li>결제 취소는 가맹점에서 취소 요청을 해야합니다.</li>
+					<li>현금영수증은 입력한 정보로 자동 발행되며, <a href="../cash/manageCashReceipt.html" class="underline">현금영수증 관리</a>에서 변경 가능합니다.</li>
+				</ul>
+				<p class="text-center mgt40"><a href="../account/manageAccount.html" class="btn btn-md btn-info btn-round"><i class="icon icon-account-plus"></i> <span>등록계좌를 추가하시겠어요?</span></a></p>
+			</div>
+			<!-- //안내 -->
+
+			<!-- bottom area -->
+			<div class="bottom-area">
+				<div class="container">
+					<button type="button" id="send" class="btn on">확인</button>
+				</div>
+			</div>
+			<!-- //bottom area -->
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //content -->
+</div>
+<!-- //wrap -->
+
+<!-- loading -->
+<div class="modal modal-loading">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="loading">
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+				</div>
+				<span class="text">로딩 중</span>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //loading -->
+
+<!-- common alert -->
+<div id="commonAlert" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<h3 id="alertTitle"></h3>
+				<p id="alertContents"></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" onclick="modalClose();" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //common alert -->
+
+<!-- common prompt -->
+<div id="commonPrompt" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<h3 id="promptTitle"></h3>
+				<p id="promptContents"></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" onclick="modalClose();" class="btn">취소</button>
+				<button type="button" id="promptOk" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //common prompt -->
+</body>
+</html>

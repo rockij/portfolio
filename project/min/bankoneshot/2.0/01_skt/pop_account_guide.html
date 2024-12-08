@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link href="../resources/css/style.css" media="screen" rel="stylesheet">
+    <link href="../resources/css/site_skt.css" media="screen" rel="stylesheet">
+    <script src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script src="../resources/js/renew_design.js"></script>
+    <title>PASS 예치금 옮기기</title>
+</head>
+<body>
+    <div id="wrap" class="chgPos">
+        <header id="header" class="">
+            <div class="headWrap">
+                <h1 class="">예치금 옮기기</h1>
+                <button class="btnBefore icon"><i></i></button>
+            </div>
+        </header>
+        <div id="container" class="fill">
+            <section class="ctWrap">
+                <div class="ctDesc">
+                    <div class="accountInfo">
+                        <div class="connect"><span>연결계좌</span></div>
+                        <div class="infoWrap withBtn">
+                            <span class="accountNum">국민은행 1234567890</span>
+                            <button type="submit" class="chgBtn">변경</button>
+                        </div>
+                    </div>
+                    <section class="submitSec sec1">
+                        <h3>등록된 연결계좌에서<br><span class="colorH">CMA 계좌로 예치금을 옮기기 </span>합니다.<br><small>(채우기 일 한도 : 200만원)</small></h3>
+                    </section>
+                    <section class="submitSec sec2">
+                        <ul class="submitList">
+                            <!-- <li>
+                                <div class="ipBox">
+                                    <input type="text" id="account" class="ipBox_ip" required="required" pattern="\d*" maxlength="8" placeholder="채울 금액을 입력하세요." onkeyup="btnAct()"><span class="won">원</span>
+                                </div>
+                            </li> -->
+                            <li>
+                                <div class="ipBox inputed">
+                                    <div class="ipBox_ip"><span>4,500,000</span></div><span class="won">원</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <span class="fillInfo">
+                            <span class="warn colorR">옮기기 한도 초과!  200만원 이하로 입력하세요.</span>
+                            옮기기 수수료 : 무료<br>(월 3회 무료 중 3회 남음)
+                        </span>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <footer id="footer">
+            <div class="footWrap">
+                <p class="explain">해외주식에서는 고객님의 CMA계좌에서 출금하여<br>모바일머니 (포인트)를 충전하고 다시 고객님의 연결계좌로<br>환급하는 방식으로 옮기기 기능을 제공 합니다.</p>
+                <ul class="submitList">
+                    <li><button class="submitBtn sbType3" type="submit">옮기기</button></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <div id="guide" class="lyPop">
+        <span class="bg">
+            <section class="popSec">
+                <h4>알려드립니다.</h4>
+                <p>투자금 옮기기에서 등록하신 출금 계좌에 대하여 안내 드립니다.</p>
+                <p>출금 계좌 입력 이후, 은행으로부터 자동이체 서비스가 등록되었다는 문자가 발송될 수 있습니다.</p>
+                <p>이는 매달 일정 금액이 출금되는 ‘자동이체’가 아닌, 고객님이 직접 채우기/ 옮기기 요청 시 PASS 비밀번호 인증 완료 후에만 일회성으로 이체를 진행하는 서비스가 등록되었다는 내용임을 안내 드립니다.</p>
+                <ul class="popList">
+                    <li><button class="submitBtn sbType2 popBtn" type="submit" onclick="popupOff('guide')">확인</button>
+                    </li>
+                </ul>
+            </section>
+        </span>
+    </div>
+    <script>
+        $(document).ready(function () {
+            popupOn('guide');
+        });
+    </script>
+</body>
+</html>

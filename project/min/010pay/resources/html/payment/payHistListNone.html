@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>010페이</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" href="../../css/owl.carousel.min.css">
+<link rel="stylesheet" href="../../css/common.css?ezauthver=5.0">
+<link rel="stylesheet" href="../../css/style.css?ezauthver=5.0">
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../../js/html5shiv.js"></script>
+<script type="text/javascript" src="../../js/respond.min.js"></script>
+<![endif]-->
+<script src="../../js/jquery-1.8.3.min.js"></script>
+<script src="../../js/jquery.placeholder.min.js"></script>
+<script src="../../js/owl.carousel.min.js"></script>
+<script src="../../js/design.js?ezauthver=5.0" defer="defer"></script>
+<script src="../../js/ui.js?ezauthver=5.0" defer="defer"></script>
+<script src="../../js/commonmsg.js?ezauthver=5.0"></script>
+<script src="../../js/commonutil.js?ezauthver=5.0"></script>
+</head>
+
+<body>
+<!-- form -->
+<form class="main_form" action="javascript: void(0);" autocomplete="off">
+	<!-- wrap -->
+	<div id="wrap" class="bg-gray">
+		<div class="fix-layer top">
+			<!-- header -->
+			<div id="header">
+				<div class="container">
+					<h1 class="brand-name"><a href="#"><span><img src="../../images/logo.svg" class="brand-logo" alt="010pay"></span></a></h1>
+					<!-- <h2 class="page-title">페이지 제목</h2> -->
+					<button type="button" id="closeWindow" class="btn-close"><i class="icon-times">창닫기</i></button>
+				</div>
+			</div>
+			<!-- //header -->
+			<!-- nav tab -->
+			<div class="nav-tab">
+				<div class="container">
+					<ul>
+						<li><a href="#">HOME</a></li>
+						<li><a href="#" class="now">이용내역</a></li>
+						<li><a href="#">계좌관리</a></li>
+						<li><a href="#">내정보</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //nav tab -->
+			<!-- nav select -->
+			<div class="nav-slct">
+				<div class="container">
+					<ul>
+						<li><button type="button" id="select1" class="select select-modal info-chg">2020년 5월</button></li>
+						<li><button type="button" id="select2" class="select select-modal info-chg">전체내역</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //nav select -->
+		</div>
+		
+		<!-- content -->
+		<div id="content" class="menu-dep3 bg-gray">
+			<!-- HOME -->
+			<div class="container used-wrap">
+				<div class="used-sec">
+					<!-- 이용내역 없음 -->
+					<div class="item-none">
+						이용내역이 없습니다.
+					</div>
+					<!-- //이용내역 없음 -->
+				</div>
+			</div>
+			
+			<!-- //HOME -->
+
+		</div>
+		<!-- //content -->
+	</div>
+<!-- //wrap -->
+</form>
+<!-- //form -->
+
+<!-- loading -->
+<div class="modal modal-loading">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="loading">
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+				</div>
+				<span class="text">로딩 중</span>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //loading -->
+
+<!-- common alert -->
+<div id="commonAlert" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<h3 id="alertTitle"></h3>
+				<p id="alertContents"></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" onclick="modalClose();" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //common alert -->
+
+<!-- common prompt -->
+<div id="commonPrompt" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<h3 id="promptTitle"></h3>
+				<p id="promptContents"></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" onclick="modalClose();" class="btn">취소</button>
+				<button type="button" id="promptOk" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //common prompt -->
+
+<!-- 날짜 list -->
+<div id="modal-select1" class="modal modal-slide modal-info">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button class="btn btn-close">취소</button>
+				<div class="slct-date scroll">
+					<ul class="btn-list">
+						<li><button type="button" class="btn on"><em>2020년 5월</em><span class="check-primary"><i class="icon-check primary"></i></span></button></li>
+						<li><button type="button" class="btn"><em>2020년 4월</em><span class="check-primary"><i class="icon-check primary"></i></span></button></li>
+						<li><button type="button" class="btn"><em>2020년 3월</em><span class="check-primary"><i class="icon-check primary"></i></span></button></li>
+						<li><button type="button" class="btn"><em>2020년 2월</em><span class="check-primary"><i class="icon-check primary"></i></span></button></li>
+						<li><button type="button" class="btn"><em>2020년 1월</em><span class="check-primary"><i class="icon-check primary"></i></span></button></li>
+						<li><button type="button" class="btn"><em>2019년 12월</em><span class="check-primary"><i class="icon-check primary"></i></span></button></li>
+						<li><button type="button" class="btn"><em>2019년 11월</em><span class="check-primary"><i class="icon-check primary"></i></span></button></li>
+						<li><button type="button" class="btn"><em>2019년 10월</em><span class="check-primary"><i class="icon-check primary"></i></span></button></li>
+						<li><button type="button" class="btn"><em>2019년 9월</em><span class="check-primary"><i class="icon-check primary"></i></span></button></li>
+						<li><button type="button" class="btn"><em>2019년 8월</em><span class="check-primary"><i class="icon-check primary"></i></span></button></li>
+						<li><button type="button" class="btn"><em>2019년 7월</em><span class="check-primary"><i class="icon-check primary"></i></span></button></li>
+						<li><button type="button" class="btn"><em>2019년 6월</em><span class="check-primary"><i class="icon-check primary"></i></span></button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //날짜 list -->
+
+<!-- 내역 list -->
+<div id="modal-select2" class="modal modal-slide modal-info">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button class="btn btn-close">취소</button>
+				<ul class="btn-list">
+					<li><button type="button" class="btn on"><em>전체내역</em><span class="check-primary"><i class="icon-check primary"></i></span></button></li>
+					<li><button type="button" class="btn"><em>결제내역</em><span class="check-primary"><i class="icon-check primary"></i></span></button></li>
+					<li><button type="button" class="btn"><em>충전내역</em><span class="check-primary"><i class="icon-check primary"></i></span></button></li>
+					<li><button type="button" class="btn"><em>적립내역</em><span class="check-primary"><i class="icon-check primary"></i></span></button></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //내역 list -->
+
+
+<script>
+$(document).ready(function(){
+	$('#modifyEmail').click(function(){
+		$.alertMessage("", "이메일이 변경되었습니다.", $('#commonAlert'));
+	});
+	$('#modifyAddress').click(function(){
+		$.alertMessage("", "주소가 변경되었습니다.", $('#commonAlert'));
+	});
+});
+</script>
+</body>
+</html>

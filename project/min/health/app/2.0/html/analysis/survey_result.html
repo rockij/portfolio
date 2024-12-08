@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko" class="app">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="../../../../../../../global/resources/css/global.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/common.min.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/content.min.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/app.min.css" media="screen" rel="stylesheet">
+<title>건강지키미</title>
+</head>
+<body>
+
+<div id="wrap" class="analysis_detail">
+
+	<header id="header" class="fix top">
+		<button type="button" onclick="" class="btn_prev"><i>뒤로가기</i></button>
+        <h1>건강분석</h1>        
+    </header>
+    <!-- //header -->
+
+	<div id="content">
+        <div class="analysis_result inner_wrap data_wrap">
+            <section id="section1" data-section="나이">
+                <h2><figure><i></i></figure>나의 건강 나이는?</h2>
+                <strong class="mtxt"><code data-count="31.55" class="count_age">0</code>살</strong>
+                <p class="data">검진 시 나이 <b class="fc">data</b>살 (<b class="fc">NN▲</b>)</p>
+            </section>
+            <section id="section2" data-section="생존률">
+                <h2><figure><i></i></figure>나의 10년내 기대생존률은?</h2>
+                <strong class="mtxt"><code data-count="99.55" class="count_live">0</code>%</strong>
+                <p class="data">고객님 또래 <b class="fc">data</b>년생 남자의<br>평균 기대생존률 <b class="fc">data</b>% (<b class="fdw">5▼</b>)</p>
+            </section>
+            <section id="section3" data-section="위험도">
+                <h2><figure><i></i></figure>나의 질환별 건강점수는?</h2>
+                <p class="cau">인공지능이 분석한 고객님의 질환별 건강점수입니다.<br>(항목 선택 시 상세페이지로 이동)</p>
+                <ul class="glst">
+                    <li>
+                        <ul class="rating_belt">
+                            <li>
+                                <button type="button" onclick="">
+                                    <span class="txt">당뇨 <strong><code class="val"></code>점</strong></span>
+                                    <span class="real" data-cat="정상" data-gage="50.555"></span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" onclick="">
+                                    <span class="txt">실장질환 <strong><code class="val"></code>점</strong></span>
+                                    <span class="real" data-cat="고위험" data-gage="75"></span>
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="rating_belt">
+                            <li>
+                                <button type="button" onclick="">
+                                    <span class="txt">폐암 <strong><code class="val"></code>점</strong></span>
+                                    <span class="real" data-cat="주의" data-gage="25"></span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" onclick="">
+                                    <span class="txt">뇌졸증 <strong><code class="val"></code>점</strong></span>
+                                    <span class="real" data-cat="위험" data-gage="50"></span>
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="rating_belt">
+                            <li>
+                                <button type="button" onclick="">
+                                    <span class="txt">치매 <strong><code class="val"></code>점</strong></span>
+                                    <span class="real" data-cat="위험" data-gage="40"></span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" onclick="">
+                                    <span class="txt">간암 <strong><code class="val"></code>점</strong></span>
+                                    <span class="real" data-cat="위험" data-gage="60"></span>
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="rating_belt">
+                            <li>
+                                <button type="button" onclick="">
+                                    <span class="txt">위암 <strong><code class="val"></code>점</strong></span>
+                                    <span class="real" data-cat="정상" data-gage="5"></span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" onclick="">
+                                    <span class="txt">대장암 <strong><code class="val"></code>점</strong></span>
+                                    <span class="real" data-cat="고위험" data-gage="0.1"></span>
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="rating_belt">
+                            <li>
+                                <button type="button" onclick="">
+                                    <span class="txt">전립선암 <strong><code class="val"></code>점</strong></span>
+                                    <span class="real" data-cat="위험" data-gage="100"></span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" onclick="">
+                                    <span class="txt">위암 <strong><code class="val"></code>점</strong></span>
+                                    <span class="real" data-cat="위험" data-gage="10"></span>
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="data">
+                    건강점수가 가장 낮은 질환은<br>
+                    <!-- <p><b class="fc"><u>질환명</u>(NN점)</b> 이며 <b data-state="정상"><u>정상</u>군</b>에 속합니다.</p>
+                    <p><b class="fc"><u>질환명</u>(NN점)</b> 이며 <b data-state="주의"><u>주의</u>군</b>에 속합니다.</p>
+                    <p><b class="fc"><u>질환명</u>(NN점)</b> 이며 <b data-state="위험"><u>위험</u>군</b>에 속합니다.</p> -->
+                    <p><b class="fc"><u>질환명</u>(NN점)</b> 이며 <b data-state="고위험"><u>낮음</u></b>에 속합니다.</p>
+                    <s>(건강점수 분류 : <span data-state="고위험">낮음</span>, <span data-state="위험">보통</span>, <span data-state="주의">약간높음</span>, <span data-state="정상">높음</span>)</s>
+                </div>
+                <p class="data3">만약 과거력이 있으시거나, 현재 치료중이실 경우 해당 질환의<br>건강점수 결과는 표시되지 않습니다.</p>
+            </section>
+            <div class="refer_bx">
+                <h3>건강지키미 건강분석 서비스는? </h3>
+                국내 건강검진 코호트 빅데이터 및 세브란스병원과의 제휴를 통하여 <br>산출 된 알고리즘으로 고객님의 건강정보를 분석합니다.
+                <p class="txt">건강지키미 건강분석 서비스는 <i class="bgf slg"></i>와 제휴하여 제공됩니다.</p>
+            </div>
+            <section data-section="서비스안내">
+                <h2><figure></figure>건강정보분석 서비스 재이용 안내
+                </h2>
+                <p class="cau">건강정보 분석 서비스는<br>고객님의 건강검진정보가<br>새로 업데이트 된 경우에만 재이용이 가능해요.</p>
+                <div class="btn_area_simp"><button type="button" class="skip">건강정보 다시 분석하기</button></div>
+            </section>
+            <div class="refer_bx">* 건강지키미 건강 분석의 결과는 참고용이며, <br>진단용으로 해석할 수 없습니다.<br><u>실제 질환 관련 사항은 반드시 의사선생님과 상담해주세요.</u></div>
+        </div>
+	</div>
+    <!-- //content -->
+
+    <footer class="global_footer mo">
+        <article>
+            <div class="infobx">
+                <button type="button" onclick="popupOpen('cpinfo','mw'); cpinfoTab('skt')" class="btn_info">(주) 민앤지 사업자 정보</button>
+                <div class="cau">
+                    <p class="po">본 서비스는 가입 즉시 서비스가 개시되는 상품으로 청약철회가 불가능합니다.</p>
+                    (전자상거래 등에서 소비자보호에 관한 법률 제7조 2항 5호에 따라 디지털 콘텐츠의 제공이 개시 된 경우 청약철회를 제공하지 않습니다.)<br>
+                    서비스 이용/가입/해지문의 : ㈜민앤지 고객센터 1599-4760
+                </div>
+            </div>
+        </article>
+    </footer>
+    <!-- //footer -->
+
+    <nav id="gnb" class="fix btm">
+        <ul>
+            <li><a href="#;" data-name="홈"></a></li>
+            <li><a href="#;" data-name="헬스케어"></a></li>
+            <li><a href="#;" data-name="AI영양제리뷰"></a></li>
+            <li><a href="#;" data-name="건강분석" class="on"></a></li>
+        </ul>
+    </nav>
+    <!-- //gnb -->
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../../resources/js/gsap.min.js"></script>
+<script src="../../../../../../../global/resources/js/global.js"></script>
+<script src="../../resources/js/design.js" defer></script>
+<script>
+$(function(){
+    $('.analysis_result #section1').addClass('on');
+    analysisResult();
+    scrollDataOn();
+});
+</script>
+
+</body>
+</html>

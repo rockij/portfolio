@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link rel="preload" href="../resources/css/font/NotoSansKR-Regular-Hestia.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link href="../resources/css/font.css" media="screen" rel="stylesheet">
+<link href="../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../resources/css/site_kt.css" media="screen" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../resources/js/jquery-1.11.1.min.js"></script>
+<script src="../resources/js/jquery.mobile.min.js"></script>
+<script src="../resources/js/design.js"></script>
+<title>세이프캐시</title>
+</head>
+<body class="kt">
+
+<div id="wrap">
+
+	<div class="head_type4 head_fix">
+		<header id="header">
+			<button type="button" onclick="" class="btn_prev"><i class="ico_com">뒤로가기</i></button>
+			<h1>세이프캐시</h1>
+		</header>
+		<!-- //header -->
+		<div class="total_price">
+			<h2>나의 자동이체를 등록하세요.</h2>
+		</div>
+	</div>
+	<!-- //top(fix) -->
+	<div id="ct" class="dtrecom_list">
+		<div class="ui_cover">
+			<h2 class="blind">자동이체 내역</h2>
+			<section class="list_type type">
+				<div class="title_area">
+					<h3>나의 자동이체<button type="button" onclick="alert('나의 자동이체로 등록시, 전체 자동이체 현황 확인 및 직접 설정한 알림일에 이체예정 알림을 받을 수 있습니다.')" class="btn_que"><i class="ico_com ico_que"></i></button></h3>
+				</div>
+				<p class="nodata4">등록된 내역이 없습니다.<br>추천 자동이체 내역을 조회해보세요.</p>
+			</section>
+			<!-- //나의 자동이체 -->
+			<section class="list_type type2">
+				<div class="title_area">
+					<h3>추천 자동이체<button type="button" onclick="alert('출금 패턴을 분석하여 자동이체로 의심되는 출금 내역을 자동으로 분류합니다. 나의 자동이체로 등록시 이체 예정 알림을 받을 수 습니다.');" class="btn_que"><i class="ico_com ico_que"></i></button></h3>
+				</div>
+				<ul>
+					<li>
+						<button type="button" onclick="" class="btn_before"><strong>국민은행</strong><span class="srch"><i class="ico_com ico_srch">검색</i></span></button>
+						<div class="banklst">
+							<h4>
+								<figure class="ui_align_mid"><span class="ele"><img src="../resources/images/bank/fullname_02.png" alt="KB국민은행"></span></figure>
+								<button type="button" onclick=""><i class="ico_com ico_refresh2">새로고침</i></button>
+							</h4>
+							<p class="nodata2">자동이체로 의심되는 출금 내역이 없습니다.</p>
+							<p class="btn_directup"><button type="button" onclick="" class="fc_red">자동이체 직접 조회 및 등록</button></p>
+						</div>
+					</li>
+					<li>
+						<button type="button" onclick="" class="btn_before"><strong>하나(구)외환은행</strong><span class="srch"><i class="ico_com ico_srch">검색</i></span></button>
+						<div class="banklst">
+							<h4>
+								<figure class="ui_align_mid"><span class="ele"><img src="../resources/images/bank/fullname_04.png" alt="KEB하나은행"></span></figure>
+								<button type="button" onclick=""><i class="ico_com ico_refresh2">새로고침</i></button>
+							</h4>
+							<ul class="row">
+								<li>
+									<ul class="ui_table">
+										<li class="mcell">
+											<strong class="elip1 sbj">신한카드</strong>
+											<span class="name">신한 주거래 우대통장(저축)</span>
+											<span class="num2">110182202080</span>
+											<strong class="day2">매달 10일</strong>
+										</li>
+										<li class="tcell userw3">964,000</li>
+									</ul>
+									<button type="button" onclick="" class="btn_up fc_red">등록<i class="ico_com ico_plus2"></i></button>
+								</li>
+								<li>
+									<ul class="ui_table">
+										<li class="mcell">
+											<strong class="elip1 sbj">신한카드</strong>
+											<span class="name">신한 주거래 우대통장(저축)</span>
+											<span class="num2">110182202080</span>
+											<strong class="day2">매달 10일</strong>
+										</li>
+										<li class="tcell userw3">964,000</li>
+									</ul>
+									<button type="button" onclick="" class="btn_up fc_red">등록<i class="ico_com ico_plus2"></i></button>
+								</li>
+							</ul>
+							<p class="btn_directup"><button type="button" onclick="" class="fc_red">자동이체 직접 조회 및 등록</button></p>
+						</div>
+					</li>
+					<li><button type="button" onclick="" class="btn_before"><strong>우리은행</strong><span class="srch"><i class="ico_com ico_srch">검색</i></span></button></li>
+					<li><button type="button" onclick="" class="btn_before"><strong>농협</strong><span class="srch"><i class="ico_com ico_srch">검색</i></span></button></li>
+				</ul>
+			</section>
+			<script>
+				$(function(){
+					$(".list_type.type2>ul>li>button").on('click', function(){
+						$(this).hide().parent().find(".banklst").show();
+					});
+				});
+			</script>
+			<!-- //추천 자동이체 -->
+		</div>
+	</div>
+	<!-- //content -->	
+	<footer id="footer">
+		<ul class="nav">
+			<li><button type="button" onclick="">서비스 이용약관</button></li>
+			<li><button type="button" onclick="">개인정보 취급방침</button></li>
+			<li><a href="authority_set.html" class="pot" data-ajax="false">권한설정</a></li>
+		</ul>
+		<address>
+			<p class="cs">서비스 가입/해지/이용문의<br>1599-4794 (평일 9시-18시)</p>
+			(주)민앤지 <br>사업자등록번호 : 214-88-39117<p>- 계좌개설 관련문의 : 1599 - 4905<br>- 해외주식 관련문의 : 3772 - 2525</p>사업자등록번호 214-88-39117
+		</address>
+	</footer>
+	<!-- //footer -->
+	<div class="footFix">
+		<aside id="gnb">
+			<h2 class="blind">네비게이션</h2>
+			<ul>
+				<li class="m1"><a href="#;"><h3>내 자산</h3></a></li>
+				<li class="m2 active"><a href="#;"><h3>자동이체<s class="ico_com"></s></h3></a></li>
+				<li class="m3"><a href="#;"><h3>사기계좌조회</h3></a></li>
+			</ul>
+		</aside>
+	</div>
+	<!-- //bottom fix -->
+
+</div>
+
+</body>
+</html>

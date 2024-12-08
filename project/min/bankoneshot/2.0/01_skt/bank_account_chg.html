@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link href="../resources/css/style.css" media="screen" rel="stylesheet">
+    <link href="../resources/css/site_skt.css" media="screen" rel="stylesheet">
+    <!-- <script src="../resources/js/jquery-3.3.0.min.js"></script> -->
+    <script src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script src="../resources/js/renew_design.js"></script>
+    <title>PASS 연결계좌 변경</title>
+</head>
+<body>
+    <div id="wrap" class="chgPos">
+        <header id="header" class="">
+            <div class="headWrap">
+                <h1 class="">연결계좌 변경</h1>
+                <button class="btnClose icon"><i></i></button>
+            </div>
+        </header>
+        <div id="container" class="submit">
+            <section class="ctWrap">
+                <div class="accountInfo">
+                    <div class="connect"><span>현재 연결계좌</span></div>
+                    <div class="infoWrap">
+                        <ul>
+                            <li><span class="accountNum">KB Star통장-저축예금</span></li>
+                            <li><span class="accountNum">1234567890</span></li>
+                        </ul>
+                    </div>
+                    <span class="subTit">고객님의 CMA계좌와 은행 계좌간 투자 예치금의<br>채우기/옮기기 용도로 등록된 계좌 입니다.</span>
+                </div>
+                <div class="ctDesc">
+                    <section class="submitSec sec1">
+                        <h3 class="subTit"><span class="colorH">등록할 계좌를 선택해 주세요</span><br>(가입자 본인 명의의 입/출금 가능 계좌만 사용 가능)</h3>
+                    </section>
+                    <section class="submitSec sec2">
+                        <ul class="submitList">
+                            <li>
+                                <div class="ipBox">
+                                    <p class="ipBox_label">은행선택</p>
+                                    <button type="button" class="ipBox_ip" onclick="bankOn('lyBank')"><span class="bankWrap">은행선택</span></button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="ipBox">
+                                    <label for="account" class="ipBox_label">계좌입력</label>
+                                    <input type="text" id="account" class="ipBox_ip chkFoot" required="required" placeholder="계좌번호 입력">
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="submitSec sec3">
+                        <span class="subTit">모든 은행에서 연결 계좌를 이용 할 수 있도록<br>노력하고 있습니다. 조금만 기다려 주세요<i>!</i></span>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <footer id="footer">
+            <div class="footWrap">
+                <ul class="submitList">
+                    <li><button class="submitBtn sbType2" type="submit">다음</button></li>
+                </ul>
+            </div>
+        </footer>
+        <div id="lyBank" class="lyPop">
+            <section class="lySec">
+                <div class="lyDesc">
+                    <div class="lyTop">
+                        <h3>은행을 선택해주세요.</h3>
+                        <button class="icon btnClose" onclick="bankOff('lyBank')"><i></i></button>
+                    </div>
+                    <ul class="bankList col3">
+                        <li><button class="bankBtn" type="button" name="신한은행" onclick="bankSelect(name)"><span>신한은행</span></button></li>
+                        <li><button class="bankBtn" type="button" name="기업은행" onclick="bankSelect(name)"><span>기업은행</span></button></li>
+                        <li><button class="bankBtn" type="button" name="우체국" onclick="bankSelect(name)"><span>우체국</span></button></li>
+                        <li><button class="bankBtn" type="button" name="전북은행" onclick="bankSelect(name)"><span>전북은행</span></button></li>
+                        <li><button class="bankBtn" type="button" name="새마을금고" onclick="bankSelect(name)"><span>새마을금고</span></button></li>
+                        <li><button class="bankBtn" type="button" name="수협" onclick="bankSelect(name)"><span>수협</span></button></li>
+                        <li><button class="bankBtn" type="button" name="신협" onclick="bankSelect(name)"><span>신협</span></button></li>
+                        <li><button class="bankBtn" type="button" name="부산은행" onclick="bankSelect(name)"><span>부산은행</span></button></li>
+                        <li><button class="bankBtn" type="button" name="제주은행" onclick="bankSelect(name)"><span>제주은행</span></button></li>
+                        <li><button class="bankBtn" type="button" name="카카오뱅크" onclick="bankSelect(name)"><span>카카오뱅크</span></button></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

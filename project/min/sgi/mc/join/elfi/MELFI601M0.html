@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title>SGI서울보증</title>
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/common-ui.css">
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/style-cust.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../../inc/css/style-mark.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/jquery.mobile-1.4.5.css">
+    <script type="text/javascript" src="../../../inc/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../../inc/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
+</head>
+
+<body>
+    <!-- 페이지 유형 제작시 wrapper에 고유 클레스 추가 -->
+    <div class="wrapper ps-sub-page elfip6010">
+        <header class="header">
+            <button type="button" class="prev-page" title="이전페이지 이동"></button>
+            <h1 class="header-tit">보험서식 전자서명</h1>
+            <button type="button" class="sidenav-btn" title="전체메뉴"></button>
+        </header>
+        <!-- 페이지 하단에 플로팅 버튼이 있을시 class = btm-fixed 추가 -->
+        <section class="container btm-fixed">
+            <!-- 사이드 여백설정 공통 class = inner -->
+            <!-- 페이지 하단에 플로팅 버튼이 있을시 class = acco-fixed 추가 -->
+            <div class="content">
+                <div class="title-wrap inner">
+                    <h2 class="ps-tit02">보증보험계약[갱신/감액]확인서</h2>
+                </div>
+                <div class="top-rdo-wrap inner">
+                    <div class="ps-from-item">
+                        <div class="ps-rdo-wrap basic">
+                            <div class="ps-rdo">
+                                <input type="radio" id="from-rdo01" name="from-rdo" checked=""><label for="from-rdo01">갱신청약</label>
+                            </div>
+                            <div class="ps-rdo">
+                                <input type="radio" id="from-rdo02" name="from-rdo"><label for="from-rdo02">감액계약청약</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont-wrap">
+                    <ul class="ps-accordion-wrap type-list">
+                        <li class="accordion-item">
+                            <p class="deta-tit inner">1. (기존)증권 보험계약 내용</p>
+                            <div class="deta-docu inner">
+                                <ul class="list-wrap">
+                                    <li class="list-item">
+                                        <strong class="list-tit">증권번호</strong>
+                                        <span class="list-txt">100-000-000000000000</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">보험계약자</strong>
+                                        <span class="list-txt">홍길동</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">피보험자</strong>
+                                        <span class="list-txt">서울보증보험주식회*</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">법인(주민)등록번호</strong>
+                                        <span class="list-txt">110111-0099774</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">보험상품</strong>
+                                        <span class="list-txt">200,000,000원</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">주계약명</strong>
+                                        <span class="list-txt">신원보증보험(상품명)</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">보험가입금액</strong>
+                                        <span class="list-txt">1,000,000원</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">보험기간</strong>
+                                        <span class="list-txt">2019-07-01~2020-06-30</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">보험료가입금액</strong>
+                                        <span class="list-txt">500,000원</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <p class="deta-tit inner">2. (갱신·감액)증권 보증보험계약 내용</p>
+                            <div class="deta-docu inner">
+                                <div class="ps-from-item">
+                                    <p class="write-title">보험가입금액</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="보험가입금액 입력" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">보험가입금액</p>
+                                    <div class="ps-rdo-wrap date">
+                                        <div class="ps-rdo">
+                                            <input type="radio" id="date1" name="rdo01" checked="">
+                                            <label for="date1">6개월</label>
+                                        </div>
+                                        <div class="ps-rdo">
+                                            <input type="radio" id="date2" name="rdo01">
+                                            <label for="date2">1년</label>
+                                        </div>
+                                        <div class="ps-rdo">
+                                            <input type="radio" id="date3" name="rdo01">
+                                            <label for="date3">2년</label>
+                                        </div>
+                                        <div class="ps-rdo">
+                                            <input type="radio" id="date4" name="rdo01">
+                                            <label for="date4">3년</label>
+                                        </div>
+                                        <div class="ps-rdo">
+                                            <input type="radio" id="date5" name="rdo01">
+                                            <label for="date5">5년</label>
+                                        </div>
+                                    </div>
+                                    <div class="ps-date-wrap">
+                                        <div class="ps-datepicker" id="uiDatePicker1">
+                                            <div class="ps-date-fild">
+                                                <input class="inp-base" type="text" title="날짜선택" id="lnd0060Cal1">
+                                                <!-- 최소/최대 선택값 필요시 data-min="2013-10-05" data-max="2020-12-01" -->
+                                                <button type="button" class="btn-base ps-drop ps-datepicker-btn" data-inp="lnd0060Cal1" id="uiDatePck1" aria-expanded="false"><span>시작일 설정</span></button>
+                                            </div>
+                                        </div>
+                                        <span class="txt"> ~ </span>
+                                        <div class="ps-datepicker" id="uiDatePicker2">
+                                            <div class="ps-date-fild">
+                                                <input class="inp-base" type="text" title="날짜선택" id="lnd0060Cal2">
+                                                <!-- 최소/최대 선택값 필요시 data-min="2013-10-05" data-max="2020-12-01" -->
+                                                <button type="button" class="btn-base ps-drop ps-datepicker-btn" data-inp="lnd0060Cal2" id="uiDatePck2" aria-expanded="false"><span>종료일 설정</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">변경사유</p>
+                                    <div class="ps-textarea">
+                                        <textarea title="사유 입력" placeholder="보험가입금액을 감액하는 경우, 감액하는 사유를 기재"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <p class="deta-tit inner">3. 보험계약자와의 거래(매출정보)</p>
+                            <div class="deta-docu inner">
+                                <div class="ps-from-item">
+                                    <p class="write-title">기준일</p>
+                                    <div class="ps-date-wrap">
+                                        <div class="ps-datepicker" id="uiDatePicker3">
+                                            <div class="ps-date-fild">
+                                                <input class="inp-base" type="text" title="날짜선택" id="lnd0060Cal3" placeholder="기준일">
+                                                <!-- 최소/최대 선택값 필요시 data-min="2013-10-05" data-max="2020-12-01" -->
+                                                <button type="button" class="btn-base ps-drop ps-datepicker-btn" data-inp="lnd0060Cal3" id="uiDatePck3" aria-expanded="false"><span>기준일 설정</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="deta-tit-inner">(가) 외상매출채권액(채무잔액)</p>
+                            <div class="deta-docu inner">
+                               <div class="ps-from-item">
+                                    <p class="write-title">외상매출금액 <span class="fc-01">(a)</span></p>
+                                    <div class="ps-input">
+                                        <input type="text" title="외상매출금액 입력" placeholder="" value="100,000,000원">
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">연체중인금액</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="연체중인금액 입력" placeholder="" value="100,000,000원">
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">받을어음(당좌수표) <span class="fc-01">(b)</span></p>
+                                    <div class="ps-input">
+                                        <input type="text" title="받을어음 입력" placeholder="" value="100,000,000원">
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">연체중인금액</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="연체중인금액 입력" placeholder="" value="100,000,000원">
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">채무잔액 합계 <span class="fc-01">(a)+(b)</span></p>
+                                    <div class="ps-input">
+                                        <input type="text" title="채무잔액 입력" placeholder="" value="100,000,000원" readonly>
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">연체중인금액</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="연체중인금액 입력" placeholder="" value="100,000,000원" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="deta-tit-inner">(나) 매출액(매출총액)</p>
+                            <div class="deta-docu inner">
+                               <div class="ps-from-item">
+                                    <p class="write-title">직전년도(1년분)</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="직전년도(1년분) 입력" placeholder="" value="100,000,000원">
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">금년도</p>
+                                    <div class="ps-date-wrap">
+                                        <div class="ps-datepicker-non">
+                                            <div class="ps-date-fild">
+                                                <input class="inp-base" type="text" title="금년도 시작월" placeholder="" value="1월">
+                                            </div>
+                                        </div>
+                                        <span class="txt"> ~ </span>
+                                        <div class="ps-datepicker-non">
+                                            <div class="ps-date-fild">
+                                                <input class="inp-base fc-01" type="text" title="금년도 종료월" placeholder="" value="11월">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ps-input">
+                                        <input type="text" title="금액 입력" placeholder="" value="100,000,000원">
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">비고</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="비고 입력" placeholder="직접 입력">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="deta-tit-inner">(다) 취득 담보물(현재 유효한 담보)</p>
+                            <div class="deta-docu inner">
+                                <div class="ps-from-item">
+                                    <p class="write-title">담보물종류</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="담보물종류 입력" placeholder="" value="100,000,000원">
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">담보금액(설정최고액)</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="담보금액 입력" placeholder="" value="100,000,000원">
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">담보기간</p>
+                                    <div class="ps-date-wrap">
+                                        <div class="ps-datepicker" id="uiDatePicker4">
+                                            <div class="ps-date-fild">
+                                                <input class="inp-base" type="text" title="날짜선택" id="lnd0060Cal4" value="2019-07-01">
+                                                <!-- 최소/최대 선택값 필요시 data-min="2013-10-05" data-max="2020-12-01" -->
+                                                <button type="button" class="btn-base ps-drop ps-datepicker-btn" data-inp="lnd0060Cal4" id="uiDatePck4" aria-expanded="false"><span>시작일 설정</span></button>
+                                            </div>
+                                        </div>
+                                        <span class="txt"> ~ </span>
+                                        <div class="ps-datepicker" id="uiDatePicker5">
+                                            <div class="ps-date-fild">
+                                                <input class="inp-base" type="text" title="날짜선택" id="lnd0060Cal5" value="2020-06-30">
+                                                <!-- 최소/최대 선택값 필요시 data-min="2013-10-05" data-max="2020-12-01" -->
+                                                <button type="button" class="btn-base ps-drop ps-datepicker-btn" data-inp="lnd0060Cal5" id="uiDatePck5" aria-expanded="false"><span>종료일 설정</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="ps-bu-list gray circle top">
+                                    <li>외상매출금 : 총 외상매출채권 중 받을어움(당좌수표 포함) 금액을 차감한 금액</li>
+                                    <li>받을어음 : 외상매출에 대한 결제수단으로 영수한 어음 당좌수표 금액</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="ps-accordion-wrap type-message-01 fixed-none">
+                            <div>
+                                <p class="tit">확인사항</p>
+                                <div class="accordion-docu">
+                                    <ul class="ps-bu-list gray circle">
+                                        <li>피보험자 본인은 보증계약서 내용과 거래(배출정보가 상기와 같음을 확인하고, 동 기재사항이 사실과 다르거나 허위일 경우, 향후 보험사고 발생시 불이익을 받을 수 있음에 동의합니다.</li>
+                                        <li>피보험자 본인은 ‘(갱신)증권 보증보험 계약상 보험가입금액을 한도로 보상됨’ 을 확인하고 이에 동의합니다. </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <p class="deta-tit inner">4. 확인자(피보험자)</p>
+                            <div class="deta-docu inner">
+                                <ul class="list-wrap">
+                                    <li class="list-item">
+                                        <strong class="list-tit">상호</strong>
+                                        <span class="list-txt"> 서울특별시강북</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">보험계약자</strong>
+                                        <span class="list-txt">홍길동</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">주소</strong>
+                                        <span class="list-txt">(12345)서울시 서초구 방배로 127<br>청호빌딩 6층</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="deta-tit-inner">담당자정보</p>
+                            <div class="deta-docu inner">
+                               <div class="ps-from-item">
+                                    <p class="write-title">성명</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="성명 입력" placeholder="" value="홍길동">
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">직위</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="직위 입력" placeholder="" value="과장">
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">담당부서</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="담당부서 입력" placeholder="" value="과장">
+                                    </div>
+                                </div>
+                                <div class="ps-from-item">
+                                    <p class="write-title">연락처</p>
+                                    <div class="ps-input">
+                                        <input type="text" title="연락처 입력" placeholder="" value="010-1234-1234">
+                                    </div>
+                                </div>
+                                <p class="ps-bu-txt gray circle">갱신증권 보증보험계약이 체결된 경우 (기존)증권 보증보험 계약의 효력이 소멸되므로 ‘채무잔액’및 갱신증권의 ‘보험가입금액(담보금액)’을 반드시 확인하시기 바랍니다.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="chk-txt-wrap">
+                        <p class="txt">2019년 10월 01일<br/>서울보증보험 주식회사 귀중</p>
+                    </div>
+                </div>
+                <!-- cont-wrap -->
+            </div>
+            <!-- content -->
+            <div class="fix-btn-wrap">
+                <button type="button" class="btn blue">다음</button>
+            </div>
+        </section>
+        <footer class="footer"></footer>
+    </div>
+</body>
+</html>

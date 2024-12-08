@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link href="../resources/css/font.local.css" media="screen" rel="stylesheet"> <!-- 폐쇄망 -->
+<link href="../resources/css/font.cdn.css" media="screen" rel="stylesheet"> <!-- 인터넷망 -->
+<link href="../resources/css/common.min.css" media="screen" rel="stylesheet">
+<link href="../resources/css/content.min.css" media="screen" rel="stylesheet">
+<link href="../resources/css/driving.min.css" media="screen" rel="stylesheet">
+<title>010휘슬</title>
+</head>
+<body>
+
+<div id="wrap" class="driving_wrap">
+    <header id="header" class="fix top">
+        <h1 class="clone"></h1>
+        <button type="button" onclick="" class="btn_allim new"><i>알림</i></button>
+    </header>
+    <!-- //header -->
+    <div id="content" class="driving_main">
+        <section class="section">
+            <h1 class="page_tit">
+                <strong class="clone">굿 드라이빙 캠페인</strong>
+                <button type="button" class="btn_r_link"  onclick="popupOpen('alert','mwf')">도움말 보기</button>
+            </h1>
+            <div class="inner_wrap">
+                <p class="page_sub_tit">지켜주세요!</p>
+                <ul class="chk_txt_list">
+                    <li>안전운행 하기</li>
+                    <li>교통법규 준수하기</li>
+                    <li>상대 운전자 배려하기</li>
+                    <li>캠페인 널리 알리기</li>
+                </ul>
+            </div>
+            <div class="inner_wrap">
+                <p class="page_sub_tit">마일리지 적립하기 <a href="#" class="link_arr txt">자세히 보기</a></p>
+                <ul class="mileage_list">
+                    <li class="list01">
+                        <span class="tit"><em class="sub">데일리 미션 마일리지</em>적립 가능</span>
+                        <button type="button" class="bu_txt full" onclick="toast_open('toast01')">+100</button>
+                    </li>
+                    <li class="list01">
+                        <span class="tit"><em class="sub">데일리 미션 마일리지</em>연속적립 미션 성공</span>
+                        <button type="button" class="bu_txt full" onclick="toast_open('toast01')">+500</button>
+                    </li>
+                    <li class="list02">
+                        <span class="tit"><em class="sub">비매너 신고 마일리지</em>500M를 적립해 보세요</span>
+                        <button type="button" class="bu_txt full type02">신고하기</button>
+                    </li>
+                    <li class="list01">
+                        <span class="tit"><em class="sub">데일리 미션 마일리지</em>미션 진행중</span>
+                        <button type="button" class="bu_txt full line" onclick="toast_open('toast02')">14:02</button>
+                    </li>
+                    <li class="list02">
+                        <span class="tit"><em class="sub">비매너 신고 마일리지</em>심사 중</span>
+                        <button type="button" class="bu_txt full type02">확인하기</button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="section">
+            <div class="page_tit_wrap">
+                <h1 class="page_tit">비매너 운전 신고하기<button type="button" class="btn_r_link btn_tip">정보 보기</button></h1>
+                <div class="tip_wrap">
+                    <p class="txt">비매너 신고는 경찰청에 별도로 신고되지 않으며, 상대방이 휘슬 회원일 경우에만 알림이 전달됩니다.</p>
+                </div>
+            </div>
+            <p class="txt">상대 운전자에게 익명으로 불편을 전달하고<br>휘슬에 기록해 보세요</p>
+            <p class="page_sub_tit">신고 현황 <a href="#" class="link_arr txt">모두 보기</a></p>
+            <div class="round_wrap">
+                <div class="col_wrap">
+                    <a href="#" class="link">
+                        <span class="tit">내 신고</span>
+                        <span class="sub_txt"><code>0</code>건</span>
+                    </a>
+                    <a href="#" class="link">
+                        <span class="tit">받은 신고</span>
+                        <span class="sub_txt"><code>2</code>건</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- //content -->
+    <div class="btn_area_wide"><button type="button" class="skip" onclick="">신고하기</button></div>
+    <!-- //btn -->
+    <nav id="gnb" class="fix btm">
+        <ul>
+            <li><a href="#;" data-name="홈"></a></li>
+            <li><a href="#;" data-name="굿 드라이빙" class="on"></a></li>
+            <li><a href="#;" data-name="이벤트"></a></li>
+            <li><a href="#;" data-name="설정"></a></li>
+        </ul>
+    </nav>
+    <!-- //gnb -->
+</div>
+
+<!-- 굿 드라이빙 캠페인 안내 popup -->
+<div id="mw-alert" class="ly_pop full">
+    <div class="wrap bgt">        
+        <div class="content driving_info y_scroll">
+            <header class="header">
+                <button type="button" onclick="popupClose('alert','mwf')" class="btn_close" title="닫기"><i></i></button>
+            </header>
+            <section class="section">
+                <h1 class="page_tit">GOOD DRIVING<br>CAMPAIGN</h1>
+                <div class="tit_info_txt">
+                    <p class="txt">굿 드라이빙 캠페인은 캠페인 기간 동안 <span>매너 있는 운전자</span>가 되기를 약속하고, 다른 회원 또는 운전자에게 불편 신고를 받지 않으면 휘슬 마일리지를 적립 받는 <span>모두의 안전 캠페인</span>입니다.</p>
+                    <p class="txt">모두를 위한 굿 드라이빙 캠페인,<br>휘슬이 함께합니다.</p>
+                </div>
+                <div class="tit_info_box">
+                    <dl>
+                        <dt class="tit">내 캠페인 시작일</dt>
+                        <dd class="sub_txt under_line">2021년 1월 21일 목요일</dd>
+                        <dt class="tit">캠페인 기간</dt>
+                        <dd class="sub_txt">2021년 1월 1일 ~ 2021년 3월 31일<span class="info_txt">캠페인 기간은 변동될 수 있습니다.</span></dd>
+                        <dt class="tit">캠페인 목적</dt>
+                        <dd>
+                            <ul class="chk_txt_list">
+                                <li>안전운행 하기</li>
+                                <li>교통법규 준수하기</li>
+                                <li>상대 운전자 배려하기</li>
+                                <li>굿 드라이빙 캠페인 널리 알리기</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </section>
+            <div class="btn_area_wide"><button type="button" class="skip" onclick="">널리 알리기</button></div>
+            <!-- //btn -->
+        </div>
+        <!-- //content -->
+    </div>
+</div>
+<!-- //굿 드라이빙 캠페인 안내 popup -->
+<!-- popup --> 
+<!-- toast -->
+<div id="mw-toast01" class="ly_pop ly_toast popBtm ndim">
+    <div class="wrap">
+        <div class="content">
+            <p>마일리지 적립 성공!</p>
+        </div>
+    </div>
+</div>
+<!-- //toast -->
+<!-- toast -->
+<div id="mw-toast02" class="ly_pop ly_toast popBtm ndim">
+    <div class="wrap">
+        <div class="content">
+            <p>미션 완료 후 적립할 수 있습니다.</p>
+        </div>
+    </div>
+</div>
+<!-- //toast -->
+<!-- //popup -->
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script> -->
+<script src="../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../resources/js/gsap.min.js"></script>
+<script src="../../../../../global/resources/js/global.js"></script>
+<script src="../resources/js/design.js" defer></script>
+<script>
+$(function() {
+    headHiding('all'); //header
+});
+</script>
+
+</body>
+</html>

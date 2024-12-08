@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=1050">
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/sub.css">
+	<link rel="shortcut icon" href="http://www.champstudy.com/favicon.ico">
+	<script src="../../js/jquery-1.11.2.min.js"></script>
+	<script src="../../js/hackers_ui.js"></script>
+	<title>해커스 교육그룹</title>
+</head>
+<body>
+	<div id="wrap">
+		
+		<div class="family_site_box">
+			<div class="family_site_open_btn">
+				<!-- 로그인전 -->
+				<a href="#none"><img src="../../img/common/family/family_site_open.png" alt="" /></a>
+
+				<!-- 로그인후 -->
+				<!-- <a href="/html/myclass/index.html?iframe_su=1"><img src="../../img/common/family/family_myclass.png" alt="" /></a> -->
+				<!-- //로그인후 -->
+			</div>
+
+			<div class="close_area">
+				<a href="#;"  class="family_site_close_btn">
+					<img src="../../img/common/family/bg_family_site.png" alt="접기" />
+				</a>
+				
+
+				<!-- 로그인전 -->
+				<strong class="family_site_tit">Hackers Family site</strong>
+				<div class="login_line2">
+					<a href="/contents/event/?evtName=join_event"><img src="http://image.hackers.ac/images/common/bul150514.gif" alt="회원가입 배너" /></a><br />
+					<a href="https://<?=$_SERVER['HTTP_HOST']?>/login_page.html?s_url=<?=$s_url?>" class="login_txt">로그인</a> l
+					<a href="https://<?=$_SERVER['HTTP_HOST']?>/html/kita/member_agree.html">회원가입</a>
+				</div>
+				<!--로그인전 -->
+
+				<!-- 로그인후 
+				<div class="login_after_line">
+					<span class="login_name">해커스님</span>목표달성을 기원합니다!
+					<div class="select_box js-show-area on" id="ajaxMyClass">
+						<a href="http://<?=$_SERVER['HTTP_HOST']?>/html/myclass/index.html" class="select_btn js-show-btn">수강중인 강의</a>
+						<ul class="select_list js-show-box" id="left_myclass">
+							<li><a href="#">내강의실</a></li>
+							<li><a href="#">내강의실</a></li>
+							<li><a href="#">내강의실</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="myclass_desc">
+					<a href="http://<?=$_SERVER['HTTP_HOST']?>/html/myclass/index.html?iframe_su=1">마이클래스</a>
+				</div>
+				<div class="login_line">
+					<a href="<?=$__config['isHttp']?>://<?=$__config['site_name']?>.champstudy.com/html/kita/member_modiframe.html" class="login_txt">정보수정</a> l
+					<a href="/bbs/logout.php?gohome=home">로그아웃</a>
+				</div>
+				<!-- //로그인후  -->
+
+				<ul class="family_list">
+					<li class="on active" id="language">
+						<strong><a href="#none;" >어학</a></strong>
+						<ul class="family_site_sub">
+							<li>
+								<a href="http://www.hackers.ac/?_C_=18577" target="_blank">해커스어학원 </a>
+							</li>
+							<li class="active">
+								<a href="http://<?=$_SERVER['HTTP_HOST']?>">해커스인강</a>
+							</li>
+							<li>
+								<a href="http://www.HackersTalk.co.kr/?_C_=30833" target="_blank">기초영어 <img src="../../img/common/family/gnb_new.png" alt="" /></a>
+							</li>
+							<li>
+								<a href="http://www.hackerschina.co.kr/?_C_=18579" target="_blank">중국어</a>
+							</li>
+							<li>
+								<a href="http://www.hackersuhak.com/?_C_=18580" target="_blank">유학원</a>
+							</li>
+						</ul>
+					</li>
+					<li id="job">
+						<strong><a href="#;">취업</a></strong>
+						<ul class="family_site_sub">
+							<li>
+								<a href="http://www.hackersjob.com/A_online/?_C_=28600" target="_blank">취업 인터넷강의 <img src="../../img/common/family/gnb_new.png" alt="" /></a>
+							</li>
+							<li>
+								<a href="http://www.hackersjob.com/A_offline/?_C_=28601" target="_blank">취업 학원강의 <img src="../../img/common/family/gnb_new.png" alt="" /></a>
+							</li>
+						</ul>
+					</li>
+					<li id="community">
+						<strong><a href="#;">커뮤니티</a></strong>
+						<ul class="family_site_sub">
+							<li>
+								<a href="http://www.hackers.co.kr/?_C_=18581" target="_blank">토익/스피킹 <span>커뮤니티</span></a>
+							</li>
+							<li>
+								<a href="http://www.hackers.co.kr/?c=s_teps&_C_=18582" target="_blank">텝스 <span>커뮤니티</span></a>
+							</li>
+							<li>
+								<a href="http://www.gohackers.com/?_C_=18583" target="_blank">토플/유학 <span>커뮤니티</span></a>
+							</li>
+						</ul>
+					</li>
+					<li id="pass">
+						<strong><a href="#;">공무원</a></strong>
+						<ul class="family_site_sub">
+							<li>
+								<a href="http://gosi.pass.com/?_C_=26526" target="_blank">공무원 인터넷강의</a>
+							</li>
+							<li>
+								<a href="http://gosi.pass.com/event/presentation/event_begin.html?_C_=26527" target="_blank">공무원 학원강의</a>
+							</li>
+							<li>
+								<a href="http://police.pass.com/?_C_=18592" target="_blank">경찰 공무원</a>
+							</li>
+						</ul>
+					</li>
+					<li id="finance">
+						<strong><a href="#;">자격증</a></strong>
+						<ul class="family_site_sub">
+							<li>
+								<a href="http://fn.pass.com/site/?st=family_benefit&_C_=25256" target="_blank">금융자격증</a>
+							</li>
+							<li>
+								<a href="http://fn.pass.com/site/event/mission_zero/event.php?_C_=26027" target="_blank">전산세무회계 <img src="../../img/common/family/gnb_new.png" alt="" /></a>
+							</li>
+							<li>
+								<a href="http://fn.pass.com/site/event/2015/0429_2/event.php?_C_=20459" target="_blank">AFPK/CFP</a>
+							</li>
+							<li>
+								<a href="http://land.pass.com/?_C_=18596" target="_blank">공인중개사 </a>
+							</li>
+							<li>
+								<a href="http://house.pass.com/?_C_=18598" target="_blank">주택관리사</a>
+							</li>
+							<li>
+								<a href="http://www.hackersjob.com/event/2015/0623_1/event.html?connect=pc_mode&_C_=34168" target="_blank">한국사능력검정 <img src="../../img/common/family/gnb_new.png" alt="" /></a>
+							</li>
+						</ul>
+					</li>
+					<li id="hackersut">
+						<strong><a href="#;">편입/평생교육</a></strong>
+						<ul class="family_site_sub">
+							<li>
+								<a href="http://jrjump.co.kr/?_C_=18599" target="_blank">편입학원</a>
+							</li>
+							<li>
+								<a href="http://jrjumpi.co.kr/?_C_=18600" target="_blank">편입인강</a>
+							</li>
+							<li>
+								<a href="http://www.edu2080.co.kr/content.php?co_id=event&pg_id=evt_brand&sp=1&_C_=27579" target="_blank">학점은행제</a>
+							</li>
+						</ul>
+					</li>
+					<li id="group">
+						<strong><a href="#;" >그룹소개/채용</a></strong>
+						<ul class="family_site_sub">
+							<li>
+								<a href="http://hackers.com/?_C_=18605" target="_blank">해커스닷컴</a>
+							</li>
+							<li>
+								<a href="http://recruit.hackers.com/main.php?_C_=18606" target="_blank">해커스채용</a>
+							</li>
+						</ul>
+					</li>
+					<li id="wish" class="noSub">
+						<strong><a href="/bbs/write.php?id=wanna" target="_blank"><span>해커스에 바란다</span></a></strong>
+					</li>
+				</ul>
+				<div class="facebook_btn">
+					<!-- 해커스 SNS 추가 -->
+					<p class="sns_tit">해커스 SNS</p>
+					<div class="sns_btn">
+						<a href="https://www.facebook.com/HackersEnglish" target="_blank" class="btn1">페이스북</a>
+						<a href="https://twitter.com/hackerseng" target="_blank" class="btn2">트위터</a>
+						<a href="https://www.youtube.com/user/HackersEnglish" target="_blank" class="btn3">유투브</a>
+					</div>
+					<!-- //해커스 SNS 추가 -->
+				</div>
+			</div>
+		</div>
+		<!-- // family site -->
+
+		<div id="header">
+			<div class="inner">
+				<div class="mem_set"><a href="#;" class="fc44">로그인</a><span class="bar">｜</span><a href="#;">회원가입</a><span class="bar">｜</span><a href="#;">고객센터</a></div>
+				<h1><img src="../../img/common/logo.png" width="123" height="50" alt="해커스톡 왕초보영어 탈출"></h1>
+				<ul class="gnb">
+					<li class="menu1">
+						<a href="#;"><img src="../../img/common/gnb_btn1.gif" alt="해커스톡 소개"></a>
+						<div class="sub">
+							<div class="inner">
+								<ul>
+									<li><a href="#;">처음오셨나요?</a></li>
+									<li><a href="#;">해커스톡 기초영어 소개</a></li>
+									<li><a href="#;">입영어학습법</a></li>
+									<li><a href="#;">해커스톡 교재</a></li>
+									<li><a href="#;">언론보도</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="menu2">
+						<a href="#;"><img src="../../img/common/gnb_btn2.gif" alt="강좌소개"></a>
+						<div class="sub">
+							<div class="inner">
+								<ul>
+									<li><a href="#;">학습 커리큘럼</a></li>
+									<li><a href="#;">해커스톡 선생님</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="menu3"><a href="#;"><img src="../../img/common/gnb_btn3.gif" alt="수강후기"></a></li>
+					<li class="menu4">
+						<a href="#;"><img src="../../img/common/gnb_btn4.gif" alt="수강신청"></a>
+						<div class="sub">
+							<div class="inner">
+								<ul>
+									<li><a href="#;">전강좌 무제한 수강권</a></li>
+									<li><a href="#;">왕초보영어 할인</a></li>
+									<li><a href="#;">기초영어0원</a></li>
+									<li><a href="#;">100% 쿠폰환급반</a></li>
+									<li><a href="#;">인강수강</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="menu5">
+						<a href="#;"><img src="../../img/common/gnb_btn5.gif" alt="무료강의 / MP3"></a>
+						<div class="sub">
+							<div class="inner">
+								<ul>
+									<li><a href="#;">무료강의</a></li>
+									<li><a href="#;">교재자료/MP3</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="menu6">
+						<a href="#;"><img src="../../img/common/gnb_btn6.gif" alt="이벤트"><b class="ico_comm bx_count">3</b></a>					
+						<div class="sub">
+							<div class="inner">
+								<ul>
+									<li><a href="#;">공지사항</a></li>
+									<li><a href="#;">진행중인 이벤트</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="menu7 on">
+						<a href="#;"><img src="../../img/common/gnb_btn7.gif" alt="커뮤니티"><b class="ico_comm bx_count">7</b></a>					
+						<div class="sub">
+							<div class="inner">
+								<ul>
+									<li><a href="#;">더글라스 다이어리</a></li>
+									<li><a href="#;">오늘의 각오</a></li>
+									<li><a href="#;">영어왕초보상담방</a></li>
+									<li><a href="#;">그래머게이트웨이 Q&A</a></li>
+									<li><a href="#;">교재 Q&A</a></li>
+									<li><a href="#;">오타 정정 게시판</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="menu8"><a href="#;"><img src="../../img/common/gnb_btn8.gif" alt="마이클래스"></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- //header -->
+
+		<!-- container -->
+		<div id="container">
+			<div id="content">
+				<!-- line_map -->
+				<div class="line_map">
+					<span>HOME</span>
+					&gt;
+					<span>마이클래스</span>
+					&gt;
+					<span>결제관리</span>
+					&gt;
+					<em>강의결제/배송내역</em>
+				</div>
+				<!-- //line_map -->
+
+				<!-- tit_area -->
+				<div class="tit_area">
+					<div class="f_l">
+						<h2 class="tit_h2"><img src="../../img/myclass/tit.png" alt="마이클래스"></h2>
+						<p class="tit_area_txt">
+							<strong>정선아</strong>님, 나른한 오후에도 열공하는 당신을 응원합니다.
+						</p>
+						<span class="tit_area_info">
+							<span class="ico_comm bul_point"></span>포인트 : <span class="fc44">5,950 Point</span>
+						</span>
+						<span class="tit_area_info">
+							<span class="ico_comm bul_coupon"></span>쿠폰 : <span class="fc44">1매</span>
+						</span>
+					</div>
+					<div class="f_r">
+						<input type="text" style="width:144px;">
+						<a href="#" class="btn_m btn_type3"><span>상품검색</span></a>
+					</div>
+				</div>
+				<!-- //tit_area -->
+
+				<!-- sub_nav -->
+				<div class="sub_nav_box tab4">
+					<div class="sub_nav">
+						<ul class="depth1">
+							<li class="on">
+								<strong class="tit_depth1"><a href="#">강의관리</a></strong>
+								<div class="depth2">
+									<ul>
+										<li><a href="#">일반강의</a></li>
+										<li><a href="#">환급반</a></li>
+										<li><a href="#">프리패스</a></li>
+										<li><a href="#">패키지</a></li>
+										<li><a href="#">모의고사</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<strong class="tit_depth1"><a href="#">수강관리</a></strong>
+								<div class="depth2">
+									<ul>
+										<li><a href="#">일시정지 신청</a></li>
+										<li><a href="#">수강연장 신청</a></li>
+										<li><a href="#">수강확인증 출력</a></li>
+										<li><a href="#">1:1 상담</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<strong class="tit_depth1"><a href="#">학습관리</a></strong>
+								<div class="depth2">
+									<ul>
+										<li><a href="#">메모장</a></li>
+										<li><a href="#">단어장</a></li>
+										<li><a href="#">선생님께 질문</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<strong class="tit_depth1"><a href="#">결제관리</a></strong>
+								<div class="depth2">
+									<ul>
+										<li><a href="#">장바구니</a></li>
+										<li><a href="#">내 포인트 확인하기</a></li>
+										<li><a href="#">내 쿠폰 확인하기</a></li>
+										<li class="on"><a href="#">강의결제 / 배송내역</a></li>
+										<li><a href="#">무통장입금 신청내역</a></li>
+										<li><a href="#">환불 문의하기</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- //sub_nav -->
+
+				<h3 class="tit_h3">
+					<strong><img src="../../img/myclass/s_tit9.png" alt="강의결제/배송내역"></strong>
+					<span>강의결제/배송 및 환불 내역이 표시되며, 주문내역 버튼을 클릭하시면 주문 상세 내역을 확인하실 수 있습니다.</span>
+				</h3>
+				
+				<!-- section -->
+				<div class="section">
+					<h4 class="tit_h4">결제 상품정보</h4>
+
+					<!-- tbl_type1 -->
+					<div class="tbl_type1">
+						<table>
+							<caption>주문 내역 확인</caption>
+							<colgroup>
+								<col width="15%"><col width="*">
+								<col width="10%"><col width="10%"><col width="10%"><col width="10%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" colspan="2">상품정보</th>
+									<th scope="col">선생님</th>
+									<th scope="col">상품금액</th>
+									<th scope="col">할인금액</th>
+									<th scope="col">결제금액</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><img src="../../img/order/basket_img.gif" alt=""></td>
+									<td class="subj">
+										<strong>Hackers TOEFL Reading Intermediate 3rd Edition (50일/21강)</strong>
+										<div class="fs11 fc92 lh20 pt10">
+											(강의) Hackers TOEFL Reading Intermediate 3rd Edition 종합 (90,000원)<br>
+											(교재) Hackers TOEFL Reading Intermediate 3rd Edition  (10,000원)<br>
+											선택1) MP3(1,000원)<br>
+											선택2) PC/PMP(300원)
+										</div>
+									</td>
+									<td>윤수진</td>
+									<td>113,000원</td>
+									<td>100,000원</td>
+									<td>13,000원</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //tbl_type1 -->
+
+					<!-- calc_list -->
+					<div class="calc_list mb0">
+						<ul>
+							<li>
+								<strong>총 상품금액</strong>
+								<p>113,000<span>원</span></p>
+							</li>
+							<li class="minus_box">
+								<span class="ico_comm ico_minus"></span>
+								<strong>할인금액</strong>
+								<p>0<span>원</span></p>
+							</li>
+							<li class="equals_box">
+								<div class="box">
+									<span class="ico_comm ico_equals"></span>
+									<strong>총 결제금액</strong>
+									<p>113,000<span>원</span></p>
+								</div>
+							</li>
+							<li class="point_box">
+								<strong>예상 적립 포인트</strong>
+								<p>5,650<span>p</span></p>
+							</li>
+						</ul>
+					</div>
+					<!-- //calc_list -->
+				</div>
+				<!-- //section -->
+
+				<!-- section -->
+				<div class="section">
+					<h4 class="tit_h4">결제정보</h4>
+
+					<!-- tbl_type9 -->
+					<div class="tbl_type9">
+						<table>
+							<caption>결제정보 확인</caption>
+							<colgroup>
+								<col width="15%"><col width="35%">
+								<col width="15%"><col width="*">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>결제방법</th>
+									<td>신용카드 ( BC카드 / 일시불) <a href="#" class="btn_tbl_type1">영수증 출력</a></td>
+									<th>판매가격</th>
+									<td>113,000원</td>
+								</tr>
+								<tr>
+									<th>주문번호</th>
+									<td>144216854a1</td>
+									<th>쿠폰/포인트 사용금액</th>
+									<td>0원</td>
+								</tr>
+								<tr>
+									<th>주문일</th>
+									<td>2015/09/22</td>
+									<th>총 결제금액</th>
+									<td>9,000원</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //tbl_type9 -->
+				</div>
+				<!-- //section -->
+
+				<!-- section -->
+				<div class="section">
+					<h4 class="tit_h4">배송상세정보</h4>
+
+					<!-- tbl_type9 -->
+					<div class="tbl_type9">
+						<table>
+							<caption>배송상세정보 확인</caption>
+							<colgroup>
+								<col width="15%"><col width="*">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>성명</th>
+									<td>김수지</td>
+								</tr>
+								<tr>
+									<th>전화번호</th>
+									<td>02-577-7272</td>
+								</tr>
+								<tr>
+									<th>휴대폰번호</th>
+									<td>010-1234-1234</td>
+								</tr>
+								<tr>
+									<th>주소</th>
+									<td>[123-456] 서울특별시 서초구 서초동 1316-15 현대성우빌딩</td>
+								</tr>
+								<tr>
+									<th>주문상태</th>
+									<td>배송 진행중 <a href="#" class="btn_tbl_type1">배송조회</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //tbl_type9 -->
+					<div class="btn_area">
+						<a href="#" class="btn_r btn_type2"><span class="fs12">인쇄</span></a>
+						<a href="#" class="btn_r btn_type1"><span class="fs12">목록</span></a>
+					</div>
+				</div>
+				<!-- //section -->
+			</div>
+		</div>
+		<!-- //container -->
+
+		<!-- footer -->
+		<div id="footer">
+			<div class="ft_txt"><img src="../../img/common/foot_txt.gif" alt="감사합니다. 여러분이 만들어주신 1위 해커스! 해커스를 만나는 사람이라면 누구나 빠르고 효과적으로 성공할 수 있도록 하겠다는 해커스의 신념 그 신념으로 보낸 10만 시간이 1등 해커스를 만들어 냈습니다."></div>
+			
+			<!-- certi -->
+			<div class="certifi_area">
+				<ul>
+					<li><span class="certifi_comm certifi_img1"><span class="sr">20대가 선정한 최고의 토익학원 1위</span></span><a href="#" class="certifi_comm certifi_link"><span class="sr">수상내역확인</span></a></li>
+					<li><span class="certifi_comm certifi_img2"><span class="sr">20대TOP BRAND 토익,토익스피킹 학원 1위</span></span></li>
+					<li><span class="certifi_comm certifi_img3"><span class="sr">고객중심 브랜드 1위</span></span><a href="#" class="certifi_comm certifi_link"><span class="sr">수상내역확인</span></a></li>
+					<li><span class="certifi_comm certifi_img4"><span class="sr">온라인외국어학원 부문 1위</span></span></li>
+					<li><span class="certifi_comm certifi_img5"><span class="sr">어학교재 베스트 셀러</span></span></li>
+					<li><span class="certifi_comm certifi_img6"><span class="sr">어학교육 1위</span></span><a href="#" class="certifi_comm certifi_link"><span class="sr">수상내역확인</span></a></li>
+					<li><span class="certifi_comm certifi_img7"><span class="sr">토익 인터넷강의 1위</span></span><a href="#" class="certifi_comm certifi_link"><span class="sr">수상내역확인</span></a></li>
+					<li><span class="certifi_comm certifi_img8"><span class="sr">2012-2015 올해의 브랜드 선호도 1위</span></span><a href="#" class="certifi_comm certifi_link"><span class="sr">수상내역확인</span></a></li>
+					<li><span class="certifi_comm certifi_img9"><span class="sr">올해의 앱 선정 1위</span></span></li>
+					<li><span class="certifi_comm certifi_img10"><span class="sr">최단기 토익졸업 1위</span></span><a href="#" class="certifi_comm certifi_link"><span class="sr">수상내역확인</span></a></li>
+					<li><span class="certifi_comm certifi_img11"><span class="sr">강의만족도 등 1위</span></span><a href="#" class="certifi_comm certifi_link"><span class="sr">수상내역확인</span></a></li>
+					<li><span class="certifi_comm certifi_img12"><span class="sr">영어교육분야 1위</span></span></li>
+				</ul>
+			</div>
+			<!-- //certi -->
+
+			<!-- footer info -->
+			<div class="ft_area">
+				<div class="inner">
+					<div class="f_l">
+						<div class="ft_logo"><img src="../../img/common/logo.gif" alt="해커스인강"></div>
+						<div class="ft_call">
+							고객센터 : 02-554-7272ㅣ평일 09:00~23:00, 주말(공휴일) 09:00~21:00ㅣ메일 : help@champstudy.com ㅣ 트위터 : @hackerseng
+						</div>
+						<div class="ft_link">
+							<ul>
+								<li class="first"><a href="#">Home</a>|</li>
+								<li><a href="#">해커스소개</a>|</li>
+								<li><a href="#">해커스인강 소개</a>|</li>
+								<li><a href="#">이용약관</a>|</li>
+								<li class="privacy"><a href="#">개인정보취급방침</a>|</li>
+								<li><a href="#">즐겨찾기</a>|</li>
+								<li><a href="#">CONTACT US</a>|</li>
+								<li><a href="#">사이트맵</a>|</li>
+								<li><a href="#">고객센터</a></li>
+							</ul>
+						</div>
+						<div class="ft_info">
+							㈜챔프스터디 TEL : 02)554-7272ㅣFAX : 02)554-0551ㅣE-MAIL : help@champstudy.comㅣ사업자등록번호 [120-87-09984]<br>
+							서울특별시 서초구 강남대로61길 23 (서초동 1316-15) 현대성우빌딩 203호ㅣ 원격평생교육시설신고(제 원-140호)ㅣ호스팅 제공자 : ㈜KT<br>
+							대표이사 : 전재윤ㅣ개인정보관리책임자 : 김병철ㅣ통신판매업신고(제 2008-서울서초-0396호) 정보조회ㅣ부가통신사업신고(신고번호 : 013760)
+						</div>
+						<address>Copyright &copy; 2003 champstudy. All Rights Reserved.</address>
+					</div>
+
+					<div class="f_r">
+						<div class="lg_logo">
+							<img src="../../img/common/logo_lg.gif" alt="LG U+">
+							<a href="#">서비스 가입확인 &gt;</a>
+						</div>
+						<div class="lg_txt">
+							고객님은 안전거래를 위해 교재(유료)가 포함된 상품을 무통장 입금으로 결제하시는 경우 챔프스터디가 가입한 LG U+의 구매안전 서비스를 이용하실 수 있습니다.<br><br>
+							* LG U+의 결제대금예치업 등록번호 : 02-006-00001
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //footer info -->
+		</div>
+		<!-- //footer -->
+	</div>
+</body>
+</html>

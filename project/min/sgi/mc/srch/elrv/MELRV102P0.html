@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title>SGI서울보증</title>
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/common-ui.css">
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/style-cust.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../../inc/css/style-mark.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/jquery.mobile-1.4.5.css">
+    <script type="text/javascript" src="../../../inc/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../../inc/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
+</head>
+
+<body>
+    <!-- 페이지 유형 제작시 pop-wrapper에 고유 클레스 추가 (클레스명은 페이지명과 id참고)-->
+    
+    <article class="pop-wrapper pop-js-wrap elrvp1020" data-page="pop-page-01" style="display:block;">
+        <header class="pop-head">
+            <h1 class="pop-tit">조회조건</h1>
+        </header>
+        <section class="pop-container btm-fixed">
+            <!-- 사이드 여백설정 공통 class = inner -->
+            <!-- 페이지 하단에 고정 버튼이 있을시 class = btm-fixed 추가 -->
+            <div class="pop-content ">
+                <!-- 페이지 하단에 고정 아코디언 있을시 class = acco-fixed 추가 -->
+                <div class="cont-wrap">
+                    <div class="rollup-fix-wrap">
+                        <div class="rollup-fix-data">
+                            <ul class="tab-01">
+                                <li><button type="button" class="on" title="선택됨">기간별</button></li>
+                                <li><button type="button">증권별</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-conts-01">
+                        <div class="tab-cont on">
+                            <div class="ps-from-item">
+                                <p class="write-title">청구일자</p>
+                                <div class="ps-rdo-wrap date">
+                                    <div class="ps-rdo">
+                                        <input type="radio" id="date1" name="rdo01" checked>
+                                        <label for="date1">1주일</label>
+                                    </div>
+                                    <div class="ps-rdo">
+                                        <input type="radio" id="date2" name="rdo01">
+                                        <label for="date2">1개월</label>
+                                    </div>
+                                    <div class="ps-rdo">
+                                        <input type="radio" id="date3" name="rdo01">
+                                        <label for="date3">3개월</label>
+                                    </div>
+                                    <div class="ps-rdo">
+                                        <input type="radio" id="date4" name="rdo01">
+                                        <label for="date4">6개월</label>
+                                    </div>
+                                    <div class="ps-rdo">
+                                        <input type="radio" id="date5" name="rdo01">
+                                        <label for="date5">1년</label>
+                                    </div>
+                                </div>
+                                <div class="ps-date-wrap">
+                                    <div class="ps-datepicker" id="uiDatePicker1">
+                                        <div class="ps-date-fild">
+                                            <input class="inp-base" type="text" title="날짜선택" id="lnd0060Cal1">
+                                            <!-- 최소/최대 선택값 필요시 data-min="2013-10-05" data-max="2020-12-01" -->
+                                            <button type="button" class="btn-base ps-drop ps-datepicker-btn" data-inp="lnd0060Cal1" id="uiDatePck1" data-expanded="false"><span>시작일 설정</span></button>
+                                        </div>
+                                    </div>
+                                    <span class="txt"> ~ </span>
+                                    <div class="ps-datepicker" id="uiDatePicker2">
+                                        <div class="ps-date-fild">
+                                            <input class="inp-base" type="text" title="날짜선택" id="lnd0060Cal2">
+                                            <!-- 최소/최대 선택값 필요시 data-min="2013-10-05" data-max="2020-12-01" -->
+                                            <button type="button" class="btn-base ps-drop ps-datepicker-btn" data-inp="lnd0060Cal2" id="uiDatePck2" data-expanded="false"><span>종료일 설정</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="ps-txt01">
+                                    <span class="n">※</span> <span class="t">채무변제가 종결된 건은 조회되지 않습니다.</span>
+                                </p>
+
+                            </div>
+
+                            <div class="ps-from-item">
+                                <p class="write-title">채권번호</p>
+                                <div class="security-wrap">
+                                    <!-- 입력후에 button에 on class 추가 button 태그 html 텍스트 겟수만큼 ● 추가 title -> aria-label로 변경 -->
+                                    <button type="button" class="security-btn" title="보안키패드 열림">숫자 9자리 입력</button>
+                                    <!-- <button type="button" class="security-btn on" data-page="pop-page-01" aria-label="보안키패드 열림">●●●●●●●●●</button> -->
+                                </div>
+                            </div>
+
+                            <div class="ps-from-item">
+                                <p class="write-title">보험상품</p>
+                                <div class="ps-select">
+                                    <select title="옵션">
+                                        <option>전체</option>
+                                        <option>옵션명1</option>
+                                        <option>옵션명2</option>
+                                        <option>옵션명3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-cont"></div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- pop-content -->
+            <div class="fix-btn-wrap">
+                <button type="button" class="btn blue">조회</button>
+            </div>
+        </section>
+        <button type="button" class="close-pop" title="팝업창 닫기"></button>
+        <!-- pop-container -->
+    </article>
+</body>
+</html>

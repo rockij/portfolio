@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="description" content="쉽고, 빠르고, 안전한 간편 본인확인서비스 SKT PASS">
+<meta name="keywords" content="SKTPASS, 본인확인, tpass, T인증, 본인인증, 휴대폰인증, PASS인증,인증앱, QR인증, 간편인증">
+<link href="../../../resources/web/homp/css/reset.css" media="screen" rel="stylesheet">
+<link href="../../../resources/web/homp/css/style.css" media="screen" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<![endif]-->
+<title>SKT PASS</title>
+</head>
+<body class="type">
+
+<!--[if lte ie 8]>
+<div class="ie8_down_ver">이 브라우저는 지원하지 않습니다.<br>브라우저 업데이트 하시기 바랍니다.<br><a href="https://support.microsoft.com/ko-kr/help/17621/internet-explorer-downloads" target="_blank">업데이트 바로가기</a></div>
+<![endif]-->
+
+<div class="window">
+
+    <div class="content">
+        <h1>T신용지키미 서비스 해지</h1>
+        <div class="withdraw">
+
+			<fieldset id="step1" class="form_type" style="display:block">
+				<legend>기본정보 입력</legend>
+				<ul>
+					<li>
+						<span class="stit">이동통신사</span>
+						<span class="box text">SKT</span>
+					</li>
+					<li class="ip">
+						<span class="stit">이름</span>
+						<span class="box"><input type="text" name="" id=""></span>
+					</li>
+					<li class="num">
+						<span class="stit">휴대폰번호</span>
+						<span class="box">
+							<span class="select">
+								<select id="">
+								<option value="010">010</option>
+								<option value="011">011</option>
+								<option value="016">016</option>
+								<option value="017">017</option>
+								<option value="018">018</option>
+								<option value="019">019</option>
+								</select>
+							</span>
+							<input type="text" name="" id="" maxlength="8">
+						</span>
+					</li>
+					<li class="captcha">
+                        <span class="stit">보안문자</span>
+                        <span class="pinArea">
+                            <span class="pin_img"><img src="http://passhome-qa.minwise.co.kr/pass/home/captcha/v2?rand=0.21522162782355525"></span>
+                            <span class="pin_btn"><button type="button" id="newSafeNum"><img src="../../../resources/web/homp/image/btn_refresh.png" alt="새로고침"></button></span>
+                        </span>
+                        <span class="userNum">
+                            <label class="label_txt" for="captchaAnswer">보안문자(숫자)입력</label>
+                            <input name="answer_captcha" id="answer_captcha" type="text" maxlength="5" required="" placeholder="">
+                        </span>
+					</li>
+				</ul>
+				<div class="btn_area">
+                    <button type="button" onclick="$('#step1').hide();$('#step2').show();" class="btn_skip">확인</button>
+                    <p class="notice">T신용지키미는 월 11,000원(부가세포함)의 유료 서비스로<br>사용일 수 만큼 일할 계산되어 과금됩니다.</p>
+                </div>
+			</fieldset>
+            <!-- //기본정보 -->
+            
+			<fieldset id="step2" class="form_type">
+				<legend>인증번호 입력</legend>
+				<ul>
+					<li class="num2">
+						<span class="stit">인증번호</span>
+						<span class="box"><input type="text" name="" id="" maxlength="6"><span class="timer">인증유효시간<em>03:00</em></span></span><button type="button" onclick="" class="btn_re">재전송</button>
+					</li>
+				</ul>
+				<div class="btn_area">
+                    <button type="button" onclick="" class="btn_skip">확인</button>
+                </div>
+			</fieldset>			
+            <!-- //인증번호 -->
+
+        </div>        
+    </div>
+    <!-- //content -->
+
+    <div id="footer">
+        <address>서울특별시 중구 을지로 65<span class="bar">대표이사/사장 박정호</span><i class="br"></i><span class="bar">사업자등록번호 104-81-37225</span><span class="bar">판매허가번 중구 02923호</span></address>
+        PASS 고객센터 <a href="mailto:skt.tauth@gmail.com">skt.tauth@gmail.com</a><br>
+        COPYRIGHT© SK TELECOM Co.,LTD. ALL RIGHTS RESERVED.
+        <span class="logo"><i></i></span>
+    </div>
+
+</div>
+
+<!-- loading -->
+<div class="ly_loading" style="display: ;">
+	<div class="bg"></div>
+	<div class="cont">
+		<div class="ele">
+			<div class="spinner">
+				<div class="rect1"></div><!----><div class="rect2"></div><!----><div class="rect3"></div><!----><div class="rect4"></div><!----><div class="rect5"></div>
+			</div>
+			<div class="spinner_img"><img src="../../../resources/web/homp/image/loading.gif" alt="로딩바"></div>
+		</div>
+	</div>
+</div>
+<!-- //loading -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+    $(function(){
+        $(".form_type .num input").keyup(function(){
+            if($(this).val() != ""){
+                $(this).parent().next(".btn_num").addClass("on");
+            }else{
+                $(".btn_num").removeClass("on");
+            }
+        });
+        $(".form_type .box input").focus(function() {
+            var tFocus = $(this).parents('li');
+            $('.form_type li').removeClass('focused');
+            $(tFocus).addClass('focused');
+        });
+        $(".form_type .box input").blur(function() {
+            $('.form_type li').removeClass('focused');
+        });
+    });
+</script>
+
+</body>
+</html>

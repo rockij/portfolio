@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko" class="app">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="../../../../../../global/resources/css/global.css">
+<link href="../resources/css/common.min.css" media="screen" rel="stylesheet">
+<link href="../resources/css/content.min.css" media="screen" rel="stylesheet">
+<link href="../resources/css/app.min.css" media="screen" rel="stylesheet">
+<title>세이프캐시</title>
+</head>
+<body>
+
+<div id="wrap">    
+</div>
+
+<!-- alert -->
+<div id="mw-alert" class="ly_pop popBtm ly_alert2">
+    <div class="wrap">
+        <div class="content">
+            <h3>제목</h3>
+            <p class="txt">텍스트</p>
+        </div>
+        <ul class="btn_area_half">
+            <li><button type="button" onclick="popupClose('alert','mw');">취소</button></li>
+            <li><button type="button" onclick="" class="skip">확인</button></li>
+        </ul>
+    </div>
+</div>
+<!-- //alert -->
+
+<!-- alert -->
+<div id="mw-alert1" class="ly_pop popBtm ly_alert2">
+    <div class="wrap">
+        <div class="content">
+            <h3>계좌 연동하기</h3>
+            <p class="txt">아직 조회된 정보가 없어요!<br>계좌를 연동하고 숨은 자산을 찾아보세요.</p>
+        </div>
+        <ul class="btn_area_half">
+            <li><button type="button" onclick="popupClose('alert1','mw');">나중에 할게요</button></li>
+            <li><button type="button" onclick="" class="skip">조회하기</button></li>
+        </ul>
+    </div>
+</div>
+<!-- //alert -->
+
+<!-- alert -->
+<div id="mw-alert2" class="ly_pop popBtm ly_alert2">
+    <div class="wrap">
+        <div class="content">
+            <h3>인증번호를 발송하시겠습니까?</h3>
+            <p class="txt">비밀번호 변경시 휴대폰번호 인증이 필요합니다.</p>
+        </div>
+        <ul class="btn_area_half">
+            <li><button type="button" onclick="popupClose('alert2','mw');">취소</button></li>
+            <li><button type="button" onclick="" class="skip">인증요청</button></li>
+        </ul>
+    </div>
+</div>
+<!-- //alert -->
+
+<!-- alert -->
+<!-- [2020-11-05] dim 영역 클릭 불가능 기능 : 클래스 ndim 추가 -->
+<div id="mw-alert3" class="ly_pop popBtm ly_alert2 ndim">
+    <div class="wrap">
+        <div class="content">
+            <h3>연동 해제하시겠습니까?</h3>
+            <p class="txt">연동 해제시 해당하는 모든 정보가 삭제되며<br>복구할 수 없습니다.</p>
+        </div>
+        <ul class="btn_area_half">
+            <li><button type="button" onclick="popupClose('alert3','mw');">취소</button></li>
+            <li><button type="button" onclick="" class="skip">연동해제</button></li>
+        </ul>
+    </div>
+</div>
+<!-- //alert -->
+
+<!-- alert -->
+<div id="mw-alert4" class="ly_pop popBtm ly_alert2">
+    <div class="wrap">
+        <div class="content">
+            <h3>선택 동의를 철회하시겠습니까?</h3>
+            <p class="txt">철회시 모든 정보가 삭제되며,<br>복구할 수 없습니다.</p>
+        </div>
+        <ul class="btn_area_half">
+            <li><button type="button" onclick="popupClose('alert4','mw');">취소</button></li>
+            <li><button type="button" onclick="" class="skip">철회하기</button></li>
+        </ul>
+    </div>
+</div>
+<!-- //alert -->
+
+<!-- alert -->
+<div id="mw-alert5" class="ly_pop popBtm ly_alert2">
+    <div class="wrap">
+        <div class="content">
+            <!-- [2020-10-08] 텍스트만 있을 경우 type02 클래스 추가-->
+            <p class="txt type02">비밀번호 변경이 완료되었습니다.</p>
+        </div>
+        <div class="btn_area_wide">
+            <button type="button" onclick="popupClose('alert5','mw');">확인</button>
+        </div>
+    </div>
+</div>
+<!-- //alert -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../../../../../../global/resources/js/global.js"></script>
+<script src="../resources/js/design.js"></script>
+<script>
+$(function(){
+    popupOpen('alert3','mw', 300);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>SKT PASS</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/contents.css">
+    <link href="resources/app/css/event.css" media="screen" rel="stylesheet">
+</head>
+<body class="viewer_body">
+
+<div id="carPromo" class="promoWrap">
+    <section class="promoBn">
+        <span class="bn img"><img src="resources/app/image/car_promo_main.png" alt=""></span>
+        <ul class="btnWrap btn2">
+            <li><button type="button" class="prBtn">PASS자동차 이벤트 공유하기</button></li>
+            <li><button type="button" class="prBtn">무료 이벤트 참여하기</button></li>
+        </ul>
+    </section>
+    <section class="agreeSec">
+        <ul class="agree">
+            <li>
+                <span class="checkbox all push">
+                    <input type="checkbox" id="agree-all" value="">
+                    <label for="agree-all"></label>
+                    <span>전체 동의</span>
+                </span>
+            </li>
+            <li>
+                <div class="checkbox button">
+                    <input type="checkbox" id="agree-terms1" value="">
+                    <label for="agree-terms1"></label><button type="button" onclick="layer_open('doc')">[필수] 이벤트 개인정보 수집·이용 동의</button>
+                </div>
+                <div class="checkbox button">
+                    <input type="checkbox" id="agree-terms2" value="">
+                    <label for="agree-terms2"></label><button type="button" onclick="layer_open('doc2')">[필수] 이벤트 개인정보 처리 위탁 동의</button>
+                </div>
+                <div class="checkbox button">
+                    <input type="checkbox" id="agree-terms3" value="">
+                    <label for="agree-terms3"></label><button type="button" onclick="layer_open('doc3')">[필수] 이벤트 개인정보 제 3자 제공 동의</button>
+                </div>
+                <div class="checkbox button">
+                    <input type="checkbox" id="agree-terms4" value="">
+                    <label for="agree-terms4"></label><button type="button" onclick="layer_open('doc4')">[필수] PASS자동차 서비스 이용약관</button>
+                </div>
+                <div class="checkbox button">
+                    <input type="checkbox" id="agree-terms5" value="">
+                    <label for="agree-terms5"></label><button type="button" onclick="layer_open('doc5')">[필수] PASS자동차 개인정보 수집 및 이용동의</button>
+                </div>
+                <div class="checkbox button">
+                    <input type="checkbox" id="agree-terms6" value="">
+                    <label for="agree-terms6"></label><button type="button" onclick="layer_open('doc6')">[필수] PASS자동차 개인정보 제3자 제공동의</button>
+                </div>
+                <div class="checkbox button">
+                    <input type="checkbox" id="agree-terms7" value="">
+                    <label for="agree-terms7"></label><button type="button" onclick="layer_open('doc7')">[선택] PASS자동차 서비스 알림 수신동의</button>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section class="prExplain">
+        <div class="servIntro evtDesc">
+            <h3>PASS자동차란?</h3>
+            <span>본인 차량의 시세와 매매 정보를 무료로 제공해주는 서비스입니다.</span>
+        </div>
+        <div class="evtDesc">
+            <strong>이벤트 기간</strong>
+            <span>2020년 5월12일(화) ~2020년 5월19일(화)</span>
+        </div>
+        <div class="evtDesc">
+            <strong>이벤트 경품</strong>
+            <span>SK에너지 주유 상품권 1만원권 증정</span>
+        </div>
+        <div class="evtDesc">
+            <strong>이벤트 대상</strong>
+            <span>이벤트 기간 안에 이벤트 팝업 또는 앱 푸시를 통해 PASS자동차 서비스에 가입한 고객님 (매일 선착순 500명)<br>※매일 선착순 마감 이벤트로, 매일 오전 10시부터 이벤트 당일 선착순 500명 마감 전까지만 응모 가능합니다.</span>
+        </div>
+        <div class="evtDesc">
+            <strong>경품지급 일정</strong>
+            <span>2020년 05월 26일(화)에 문자메시지로 발송</span>
+        </div>
+        <div class="evtDesc">
+            <strong>유의사항</strong>
+            <ul>
+                <li>PASS앱을 이용하는 휴대폰 번호 1개당 1회만 참여하실 수 있습니다.</li>
+                <li>이벤트에 참여한 후 휴대폰 번호 변경, 명의 변경, 번호 해지를 한 경우 경품 당첨이 취소될 수 있습니다.</li>
+                <li>이 이벤트는 사정에 따라 별도의 안내 없이 중단 또는 변경 될 수 있습니다.</li>
+                <li>이벤트에 당첨된 고객님께는 별도의 안내 없이 2020년 05월 26일(화) 문자메시지로 주유 상품권이 발송됩니다.</li>
+                <li>문의 : skt.tauth@gmail.com</li>
+            </ul>
+        </div>
+    </section>
+    <ul class="btmbtn btn2">
+        <li><button type="button" onclick="">1시간 동안 보지 않기</button></li>
+        <li><button type="button" onclick="">닫기</button></li>
+    </ul>
+</div>
+
+
+<!-- 이벤트 개인정보 수집 이용∙동의 -->
+<div id="doc" class="ly_pop ly_doc ly_full">
+    <div class="content">
+        <header class="header">
+            <div class="header_inner">
+                <h1 class="header_tit">이벤트 개인정보 수집·이용 동의</h1>
+                <button type="button" class="ico-close header_btn" onclick="layer_close()"><span class="blind">닫기</span></button>
+            </div>
+        </header>
+        <div class="scroll">
+            <!-- viewer (terms) -->
+            <div class="viewer">
+                <pre class="viewer_txt">
+                    ‘PASS자동차 가입 이벤트’ 참여를 위한 개인정보 수집∙이용 동의
+
+                    ‘PASS자동차 가입 이벤트’ 와 관련하여 본인의 개인정보를 SK텔레콤 주식회사가 수집 및 이용하는 것에 동의합니다.
+                    
+                    <table>
+                        <colgroup>
+                            <col style="width:30%">
+                            <col style="width:30%">
+                            <col style="width:40%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>수집/이용 목적</th>
+                                <th>수집 항목</th>
+                                <th>보유 기간</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>본인 확인</td>
+                                <td>PASS 회원 번호</td>
+                                <td rowspan="2" class="u bold fc_blu">고객 상담 목적으로 당첨자 발표일로부터 1개월 동안 보관 후 파기</td>
+                            </tr>
+                            <tr>
+                                <td>이벤트 당첨, 경품 발송 안내</td>
+                                <td>휴대폰 번호</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    ※ 이 내용은 이벤트 응모를 위한 개인정보 수집∙이용에 대한 동의입니다. 동의하지 않을 경우 이벤트에 응모하실 수 없습니다.
+                    ※ 법령에 따른 개인정보의 수집∙이용, 계약의 이행∙편의 증진을 위한 개인정보 처리 및 처리 위탁과 관련된 일반 사항은 서비스의 개인정보 처리 방침에 따릅니다.
+                </pre>
+            </div>
+            <!-- //viewer (terms) -->
+        </div>
+    </div>
+</div>
+<!-- //이벤트 개인정보 수집 이용∙동의 -->
+
+<!-- 이벤트 개인정보 처리위탁 동의 -->
+<div id="doc2" class="ly_pop ly_doc ly_full">
+    <div class="content">
+        <header class="header">
+            <div class="header_inner">
+                <h1 class="header_tit">이벤트 개인정보 처리위탁 동의</h1>
+                <button type="button" class="ico-close header_btn" onclick="layer_close()"><span class="blind">닫기</span></button>
+            </div>
+        </header>
+        <div class="scroll">
+            <!-- viewer (terms) -->
+            <div class="viewer">
+                <pre class="viewer_txt">
+                    ‘PASS자동차 가입 이벤트’ 참여를 위한 개인정보 처리 위탁 동의
+
+                    ‘PASS자동차 가입 이벤트’ 와 관련하여 아래 업체에 본인의 개인정보 처리 업무를 위탁하는 것에 동의합니다.
+                    
+                    <table>
+                        <colgroup>
+                            <col style="width:30%;">
+                            <col style="width:70%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>수탁사</th>
+                                <th>업무내용</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>(주)민앤지</td>
+                                <td>이벤트 시스템 운영, 당첨자 확인, 고객 상담 및 경품 발송 업무</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    ※ 이 내용은 이벤트 응모를 위한 개인정보 처리 위탁에 대한 동의입니다. 동의하지 않을 경우 이벤트에 응모하실 수 없습니다.
+                    ※ 법령에 따른 개인정보의 수집∙이용, 계약의 이행∙편의 증진을 위한 개인정보 처리 및 처리 위탁과 관련된 일반 사항은 서비스의 개인정보 처리 방침에 따릅니다.
+                </pre>
+            </div>
+            <!-- //viewer (terms) -->
+        </div>
+    </div>
+</div>
+<!-- //이벤트 개인정보 처리위탁 동의 -->
+
+<!-- 이벤트 개인정보 제3자 이용 동의 -->
+<div id="doc3" class="ly_pop ly_doc ly_full">
+    <div class="content">
+        <header class="header">
+            <div class="header_inner">
+                <h1 class="header_tit">이벤트 개인정보 제3자 제공 동의</h1>
+                <button type="button" class="ico-close header_btn" onclick="layer_close()"><span class="blind">닫기</span></button>
+            </div>
+        </header>
+        <div class="scroll">
+            <!-- viewer (terms) -->
+            <div class="viewer">
+                <pre class="viewer_txt">
+                    ‘PASS자동차 가입 이벤트’ 참여를 위한 개인정보 제3자 제공 동의
+
+                    ‘PASS자동차 가입 이벤트’ 와 관련하여 아래 업체에 본인의 개인정보를 제공하는 것에 동의합니다.   
+
+                    <table>
+                        <colgroup>
+                            <col style="width:20%;">
+                            <col style="width:30%;">
+                            <col style="width:20%;">
+                            <col style="width:30%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>업체</th>
+                                <th>제공 목적</th>
+                                <th>수집 항목</th>
+                                <th>보유 기간</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="u bold fc_blu">㈜케이티엠하우스</td>
+                                <td class="u bold fc_blu">이벤트 당첨자 경품 발송</td>
+                                <td>휴대폰 번호</td>
+                                <td class="u bold fc_blu">5년(국세기본법 제85조의3에 근거)</td>
+                            </tr>
+                        </tbody>
+                    </table>  
+                    ※ 이 내용은 이벤트 응모를 위한 개인정보 제3자 제공에 대한 동의입니다. 동의하지 않을 경우 이벤트에 응모하실 수 없습니다.
+                    ※ 법령에 따른 개인정보의 수집∙이용, 계약의 이행∙편의 증진을 위한 개인정보 처리 및 처리 위탁과 관련된 일반 사항은 서비스의 개인정보 처리 방침에 따릅니다.
+                </pre>
+            </div>
+            <!-- //viewer (terms) -->
+        </div>
+    </div>
+</div>
+<!-- //이벤트 개인정보 제3자 이용 동의 -->
+
+<!-- PASS자동차 서비스 이용약관 -->
+<div id="doc4" class="ly_pop ly_doc ly_full">
+    <div class="content">
+        <header class="header">
+            <div class="header_inner">
+                <h1 class="header_tit">PASS자동차 서비스 이용약관</h1>
+                <button type="button" class="ico-close header_btn" onclick="layer_close()"><span class="blind">닫기</span></button>
+            </div>
+        </header>
+        <div class="scroll">
+            <!-- viewer (terms) -->
+            <div class="viewer">
+                <pre class="viewer_txt">
+                    <span class="u">제1장 총칙</span>
+
+                    <h2>제 1 조 목적</h2>이 약관은 PASS 자동차를 제공하는 ㈜아톤 및 ㈜비즈인포그룹(이하 “회사”라 함)과 PASS 자동차(이하 “서비스”라 함)를 이용하는 개인(이하 “회원”라 함)과의 이용조건, 절차 및 기타 필요한 사항을 규정하는 것을 목적으로 합니다.
+
+                    <h2>제 2 조 용어의 정리</h2>이 약관에서 사용하는 용어의 정의는 아래와 같습니다.
+                    ①"서비스"란 “회사”가 제공하는 내차 시세조회, 내차팔기, 내차사기 등 이용고객이 웹사이트를 통해 이용할 수 있는 제반 서비스를 의미하며, “PASS” 부가서비스 형태로 제공되나 “PASS”와는 구별되는 독립된 서비스를 말합니다.
+                    ②“회원”이란 “서비스” 회원 가입 절차를 통해 “서비스”를 이용하는 사람을 말합니다.
+                    ③“이용자”라 함은 “서비스”를 이용하는 모든 회원 및 비회원을 말합니다.
+                    ④”PASS”란 SK텔레콤㈜가 제공하는 본인확인 및 금융광고플랫폼 등의 어플리케이션으로서, 말하며, “서비스”가 구현되는 어플리케이션을 의미합니다.
+
+                    <h2>제 3 조 약관의 명시, 효력 및 개정</h2>①회사는 관련 법령을 위배하지 않는 범위에서 이 약관을 개정할 수 있습니다.
+                    ②회사가 약관을 개정할 경우에는 적용일자 및 개정사유를 명시하여 PASS 자동차 초기화면에 그 적용일자 7일 이전부터 적용일자 전일까지 공지합니다. 다만, 회원에게 불리하게 약관을 변경하는 경우에는 최소한 그 적용일자 30일 이전부터 공지하고, 제8조의 방법으로 회원에게 개별 통지합니다. 단, 회원의 연락처 미기재, 변경 후 미수정 등으로 인하여 개별 통지가 어려운 경우에 한하여 본 항의 공지를 함으로써 개별통지를 한 것으로 간주합니다.
+                    ③회사가 전항에 따라 회원에게 공지한 날로부터 개정약관 시행일 거부의사를 표시하지 아니할 경우, 약관의 변경에 동의한 것으로 간주한다는 내용을 공지 또는 통지하였음에도 회원이 명시적으로 약관 변경에 대한 거부의사를 표시하지 아니하면, 회원이 변경 약관에 동의한 것으로 봅니다.
+
+                    <span class="u">제 2 장 서비스 회원의 가입 및 관리</span>
+                    <h2>제 4 조 서비스 회원가입절차</h2>①서비스 이용자가 회원 가입 신청서의 필수 약관들을 읽고 “동의” 버튼을 누르거나 “확인” 등에 체크하는 방법을 취한 경우 이 약관에 동의한 것으로 간주합니다.
+
+                    <h2>제 5 조 서비스 회원 등록의 성립과 유보 및 거절</h2>①회원 등록은 제4조에 정한 절차에 의한 서비스 이용자의 회원가입 신청과 회사의 회원등록 승낙에 의하여 성립합니다.
+                    ②회사는 아래 각 호에 해당하는 경우에는 회원 등록의 승낙을 유보할 수 있습니다.
+                    1.제공서비스 설비 용량에 현실적인 여유가 없는 경우
+                    2.서비스를 제공하기에는 기술적으로 문제가 있다고 판단되는 경우
+                    3.기타 회사가 재정적, 기술적으로 필요하다고 인정하는 경우
+                    4.영리를 추구할 목적으로 서비스를 이용하고자 하는 경우
+                    5.기타 회사가 정한 가입신청 요건이 만족되지 않았거나 회사의 사정상 필요하다고 인정되는 경우
+                    ③회사는 아래 각 호에 해당하는 경우에는 회원등록을 거절할 수 있습니다.
+                    1. 회사가 관련법령 등을 기준으로 하여 회원에게 명백하게 사회질서 및 미풍양속에 반할 우려가 있음을 인정하는 경우
+                    2. 부정한 방법으로 서비스를 이용하여 회사에 피해를 줄 수 있다고 판단되는 경우
+
+                    <h2>제 6 조 개인정보의 수집 및 이용</h2>회사는 서비스를 제공하기 위하여 관련 법령의 규정에 따라 회원으로부터 필요한 개인정보를 수집‧이용하며, 개인정보의 수집 및 이용 대해서는 관계 법령 및 회사의 “개인정보처리방침”이 적용됩니다.
+
+                    <span class="u fsup">제 3 장 서비스의 이용</span>
+                    <h2>제 7 조 서비스 이용</h2>①서비스 이용은 회사의 서비스 사용 승낙 직후부터 가능합니다.
+                    ②서비스 이용시간은 회사의 업무상 또는 기술상 불가능한 경우를 제외하고는 연중무휴 1일 24시간(00:00-24:00)으로 함을 원칙으로 합니다. 다만, 서비스설비의 정기점검 등의 사유로 회사가 서비스를 특정 범위로 분할하여 별도로 날짜와 시간을 정할 수 있습니다.
+
+                    <h2>제 8 조 서비스 내용 변경 통지</h2>①회사가 서비스의 변경, 종료, 신규서비스의 개시 등의 사유가 발생할 경우 회사는 회원 등록된 휴대폰번호를 통하여 서비스 내용의 변경 사항 또는 종료를 통지할 수 있습니다.
+                    ②전항의 경우 웹사이트 기타 회사의 공지사항 페이지를 통하여 회원들에게 통지할 수 있습니다. 단, 회원 본인의 거래와 관련하여 중대한 영향을 미치는 사항은 상당한 기간 동안 게시판을 통해 이를 공지하고 전자메일(전자메일이 없는 경우 서비스 내 알림 등 별도의 전자적 수단) 등으로 개별통지 합니다.
+
+                    <h2>제 9 조 서비스의 제공</h2>①PASS자동차는 다음과 같은 서비스를 제공합니다.
+                    1.자동차 시세 정보 제공
+                    2.자동차 판매를 위한 중요한 정보와 역경매 서비스 제공
+                    3.자동차 구매를 위한 매물 정보 제공
+                    4.기타 회사가 정한 서비스 제공
+                    ②회원이 전항의 서비스를 이용하기 위해서는, 차량정보, 주행거리, 사고이력 기타 회사가 필요하다고 인정하는 최소한의 차량에 관한 완전한 정보를 정확하게 제공하여야 합니다. 회원이 제공한 정보의 부정확함 또는 허위 정보의 제공으로 인하여 발생하는 문제에 대하여, 회사는 책임을 지지 않습니다.
+                    ③본인명의 차량을 소유하지 않은 회원의 경우 PASS자동차의 일부 서비스가 제한됩니다.
+
+                    <h2>제 10 조 게시물의 관리</h2>①회원의 게시물이 정보통신망 이용촉진 및 정보보호 등에 관한 법률(이하 ‘정보통신망법’)및 저작권법 등 관련 법령에 위반되는 내용을 포함하는 경우, 권리자는 회사에 관련 법령이 정한 절차에 따라 해당 게시물의 게시중단 및 삭제 등을 요청할 수 있으며, 회사는 관련 법령에 따라 조치를 취합니다.
+                    ②회사는 권리자의 요청이 없는 경우라도 권리침해가 인정될 만한 사유가 있거나 기타 회사의 정책 및 관련 법령에 위반되는 경우에는 관련 법령에 따라 해당 게시물에 대해 임시조치 등을 취할 수 있습니다.
+                    ③위와 관련된 세부 절차는 정보통신망법 및 저작권법이 규정한 범위 내에서 회사가 정한 권리침해 신고 절차에 따릅니다.
+
+                    <h2>제 11 조 권리의 귀속 및 저작물의 이용</h2>①회원이 서비스 내에 게시한 게시물 등(이하 "게시물 등"이라 합니다)의 저작권은 해당 게시물의 저작자에게 귀속됩니다.
+                    ②게시물 등은 회사가 운영하는 인터넷 사이트 및 모바일 어플리케이션을 통해 노출될 수 있으며, 검색결과 내지 관련 프로모션 등에도 노출될 수 있습니다. 해당 노출을 위해 필요한 범위 내에서는 일부 수정, 복제, 편집되어 게시될 수 있습니다. 이 경우, 회사는 저작권법 규정을 준수하며, 회원은 언제든지 고객센터 또는 각 서비스 내 관리기능을 통해 해당 게시물 등에 대해 삭제, 검색결과 제외, 비공개 등의 조치를 취할 수 있습니다.
+
+                    <h2>제 12 조 서비스 이용의 제한 및 중지</h2>①회사는 아래 각 호에 해당하는 사유가 발생한 경우에는 회원의 서비스 이용을 제한하거나 중지시킬 수 있습니다.
+                    1.회원이 회사 서비스의 운영을 고의과실로 방해하는 경우
+                    2.회원이 제14조의 의무를 위반한 경우
+                    3.서비스용 설비 점검, 보수 또는 공사로 인하여 부득이한 경우
+                    4.전기통신사업법에 규정된 기간통신사업자가 전기통신 서비스를 중지했을 경우
+                    5.국가비상사태, 서비스 설비의 장애 또는 서비스 이용의 폭주 등으로 서비스 이용에 지장이 있는 때
+                    6.기타 중대한 사유로 인하여 회사가 서비스 제공을 지속하는 것이 부적당하다고 인정하는 경우
+                    ②회사는 전항의 규정에 의하여 서비스의 이용을 제한하거나 중지한 때에는 그 사유 및 제한기간 등을 회원에게 알려야 합니다.
+
+                    <h2>제 13 조 회사의 의무</h2>①회사는 회사의 서비스 제공 및 보안과 관련된 설비를 지속적이고 안정적인 서비스 제공에 적합하도록 유지, 점검 또는 복구 등의 조치를 성실히 이행하여야 합니다.
+                    ②회사는 회원이 수신 동의를 하지 않은 영리 목적의 광고성 전자우편, 문자메시지 등을 발송하지 아니합니다.
+                    ③회사는 서비스의 제공과 관련하여 알게 된 회원의 개인정보를 본인의 승낙 없이 제3자에게 누설, 배포하지 않고, 이를 보호하기 위하여 노력합니다. 회원의 개인정보보호에 관한 기타의 사항은 정보통신망법 및 회사가 별도로 정한 “개인수집 및 이용”에 따릅니다.
+                    ④회사가 제3자와의 서비스 제공 계약 등을 체결하여 회원에게 서비스를 제공하는 경우 회사는 각 개별서비스에서 서비스의 제공을 위하여 제3자에게 제공되는 회원의 구체적인 회원정보를 명시하고 회원의 개별적이고 명시적인 동의를 받은 후 동의의 범위 내에서 해당 서비스의 제공 기간 동안에 한하여 회원의 개인정보를 제3자와 공유하는 등 관련 법령을 준수합니다.
+
+                    <h2>제 14 조 회원의 의무</h2>①회원은 PASS자동차 서비스를 이용하는 회원간의 거래에 대해 신뢰 있는 거래 당사자로서의 책임을 지고 고객 불만을 사전 예방 및 적극 처리해야 합니다.
+                    ②회원은 아래 각 호에 해당하는 행위를 하여서는 아니 됩니다.
+                    1.회사가 제공하는 서비스에 허위 내용을 등록하거나 게시하는 행위
+                    2.회사의 서비스에 게시된 정보를 변경하거나 서비스를 이용하여 얻은 정보를 회사의 사전 승낙 없이 영리 또는 비영리의 목적으로 복제, 출판, 방송 등에 사용하거나 제3자에게 제공하는 행위
+                    3.회사가 제공하는 서비스를 이용하여 제3자에게 본인을 홍보할 기회를 제공 하거나 제3자의 홍보를 대행하는 등의 방법으로 금전을 수수하거나 서비스를 이용할 권리를 양도하고 이를 대가로 금전을 수수하는 행위
+                    4.회사 기타 제3자에 대한 허위의 사실을 게재하거나 지적재산권을 침해하는 등 회사나 제3자의 권리를 침해하는 행위
+                    5.정보통신망법 등 관련 법령에 의하여 그 전송 또는 게시가 금지되는 정보(컴퓨터 프로그램 등)를 전송하거나 게시하는 행위
+                    6.청소년보호법에서 규정하는 청소년유해매체물을 게시하는 행위
+                    7.공공질서 또는 미풍양속에 위배되는 내용의 정보, 문장, 도형, 음성 등을 유포하는 행위
+                    8.회사의 직원이나 서비스의 관리자를 가장하거나 사칭하여 또는 타인의 명의를 사용하여 글을 게시하거나 메일을 발송하는 행위
+                    9.컴퓨터 소프트웨어, 하드웨어, 전기통신 장비의 정상적인 가동을 방해, 파괴할 목적으로 고안된 소프트웨어 바이러스, 기타 다른 컴퓨터 코드, 파일, 프로그램을 포함하고 있는 자료를 게시하는 행위
+                    10.다른 회원의 개인정보를 그 동의 없이 수집, 저장, 공개하는 행위
+                    11.불특정 다수의 회원을 대상으로 하여 광고 또는 선전을 게시하는 행위
+                    12.현행 법령, 회사가 제공하는 서비스에 정한 약관 기타 서비스 이용에 관한 규정을 위반하는 행위
+                    ③회사는 회원이 제1항 및 제2항의 행위를 하는 경우 해당 게시물 등을 삭제 또는 임시 삭제할 수 있고 서비스의 이용을 제한하거나 일방적으로 본 계약을 해지할 수 있습니다
+
+                    <h2>제 15 조 이용계약의 해지</h2>①회원이 서비스 이용계약을 해지하고자 하는 때에는 언제든지 회원정보관리에서 회사가 정한 절차에 따라 회원의 개인정보를 삭제하고 탈퇴할 수 있습니다.
+                    ②회원이 제14조의 규정을 위반한 경우 회사는 일방적으로 본 계약을 해지할 수 있고, 이로 인하여 서비스 운영에 손해가 발생한 경우 이에 대한 민, 형사상 책임도 물을 수 있습니다.
+
+                    <h2>제 16 조 개인정보의 보호</h2>회원의 개인정보는 서비스의 원활한 제공을 위하여 회원이 동의한 목적과 범위 내에서만 이용됩니다. 관련 법령에 의하거나 회원이 별도로 동의하지 아니하는 한 회사가 회원의 개인정보를 제3자에게 제공하는 일은 결코 없으며 회사가 회원의 개인정보를 안전하게 처리하기 위하여 기울이는 노력이나 기타 자세한 사항은 “개인정보처리방침”을 따릅니다. 단, 회사의 “개인정보처리방침”은 서비스에 한정되며, 서비스 외 PASS에는 적용하지 않습니다.
+
+                    <span class="fsup u">제 4 장 기타</span>
+                    <h2>제 17 조 손해 배상 등</h2>①회사는 관련 법령상 허용되는 한도 내에서 서비스와 관련하여 본 약관에 명시되지 않은 어떠한 구체적인 사항에 대한 약정이나 보증을 하지 않습니다. 또한, 회사는 컨텐츠 제공자가 제공하거나 이용자가 작성하는 등의 방법으로 서비스에 게재된 정보, 자료, 사실의 신뢰도, 정확성 등에 대해서는 보증을 하지 않으며, 회사의 과실 없이 발생된 이용자의 손해에 대하여는 책임을 부담하지 아니합니다.
+                    ②회사는 회사의 과실로 인하여 이용자가 손해를 입게 될 경우 본 약관 및 관련 법령에 따라 이용자의 손해를 배상하겠습니다.
+                    ③회사가 제공하는 서비스를 이용하여 기대하는 수익을 상실한 것에 대하여 책임을 지지 않으며 그 밖에 서비스를 통하여 얻은 자료로 인한 손해 등에 대하여도 책임을 지지 않습니다.
+                    ④회사는 회사의 과실이 없는 한 이용자 상호간 또는 이용자와 제3자 상호간에 회사가 제공한 서비스를 매개로 발생한 분쟁에 대해서는 개입할 의무가 없으며 이로 인한 손해를 배상할 책임도 없습니다.
+
+                    <h2>제 18 조 면책</h2>①회사는 회사의 과실 없이 다음 각 호의 경우로 서비스를 제공할 수 없는 경우 이로 인하여 이용자에게 발생한 손해에 대해서는 책임을 부담하지 않습니다.
+                    1.천재지변 또는 이에 준하는 불가항력의 상태에서 발생한 손해
+                    2.이용자의 귀책사유로 발생한 손해
+                    3.서비스에 접속 또는 이용과정에서 발생하는 개인적인 손해
+                    4.제3자가 불법적으로 회사의 서버에 접속하거나 서버를 이용함으로써 발생하는 손해
+                    5.제3자가 회사 서버에 대한 전송 또는 회사 서버로부터의 전송을 방해함으로써 발생하는 손해
+                    6.제3자가 악성 프로그램을 전송 또는 유포함으로써 발생하는 손해
+                    7.전송된 데이터의 생략, 누락, 파괴 등으로 발생한 손해, 명예훼손 등 제3자가 서비스를 이용하는 과정에서 발생된 손해
+                    8.서비스 제공을 위하여 회사와 서비스 제휴계약을 체결한 제3자의 고의적인 서비스 방해가 있는 경우
+                    9.기타 회사의 고의 또는 과실이 없는 사유로 인해 발생한 손해
+                    ②회사는 컨텐츠 제공자가 제공하거나 회원이 작성하는 등의 방법으로 서비스에 게재된 정보, 자료, 사실의 신뢰도, 정확성 등에 대해서는 보증을 하지 않으며, 회사의 과실 없이 발생된 회원의 손해에 대하여는 책임을 부담하지 아니합니다
+
+                    <h2>제 19 조 분쟁의 해결</h2>본 약관은 대한민국법령에 의하여 규정되고 이행되며, 서비스 이용과 관련하여 회사와 회원간에 발생한 분쟁에 대해서는 민사소송법상의 주소지를 관할하는 법원을 합의 관할로 합니다.
+
+                    <h2>제 20 조 규정의 준용</h2>본 약관에 명시되지 않은 사항에 대해서는 관련법령에 의하고, 법에 명시되지 않은 부분에 대하여는 관습에 의합니다.
+
+                    [부칙]
+                    제1조 본 약관은 2020년 [4]월 [21]일부터 적용됩니다.
+                </pre>
+            </div>
+            <!-- //viewer (terms) -->
+        </div>
+    </div>
+</div>
+<!-- //PASS자동차 서비스 이용약관 -->
+
+<!-- PASS자동차 개인정보 수집 및 이용동의 -->
+<div id="doc5" class="ly_pop ly_doc ly_full">
+    <div class="content">
+        <header class="header longTit">
+            <div class="header_inner">
+                <h1 class="header_tit">PASS자동차 개인정보 수집 및 이용동의</h1>
+                <button type="button" class="ico-close header_btn" onclick="layer_close()"><span
+                        class="blind">닫기</span></button>
+            </div>
+        </header>
+        <div class="scroll">
+            <!-- viewer (terms) -->
+            <div class="viewer">
+                <pre class="viewer_txt">
+                    PASS자동차 서비스(이하 “서비스”라 한다)와 관련하여, 본인은 동의내용을 숙지하였으며, 이에 따라 본인의 개인정보를 귀사((㈜아톤, ㈜비즈인포그룹)가 수집 및 이용하는 것에 대해 동의합니다.
+                    
+                    <table>
+                        <colgroup>
+                        <col style="width:35%;">
+                        <col style="width:25%;">
+                        <col>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>수집∙이용목적</th>
+                            <th>수집항목</th>
+                            <th>보유 및 이용기간</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>-PASS자동차 가입자 식별
+                            -가입의사 및 연령 확인
+                            -불량 회원 부정이용 방지
+                            -공지사항 전달</td>
+                            <td>휴대폰번호/회원명/생년월일/성별</td>
+                            <td rowspan="2">개인정보는 본 서비스를 제공하는 기간 동안에 보유 및 이용되고, 이용자가 서비스 해지(회원탈퇴) 시 해당인의 개인정보가 열람 또는 이용될 수 없도록 파기 처리합니다.
+                            단 아래의 경우는 예외로 합니다.
+                            (1)법령에서 따로 정하는 경우에는 해당 기간까지 보유
+                            (2)서비스 이용 후의 민원 처리를 위하여 내부 지침에 따라 서비스 이용 후 1년간 휴대폰번호, 회원명, 생년월일, 성별을 보관합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>-PASS자동차 서비스 제공
+                            -문의사항 또는 불만처리</td>
+                            <td>휴대폰번호/회원명/생년월일/성별/차량번호/차량모델/등급(제조사, 연식, 등급, 주행거리, 색상 등)/ 차량옵션/판매지역/차량사진/차량 상세 정보 등</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <span class="bold">※ 본 동의는 서비스의 본질적 기능 제공을 위한 개인정보 수집/이용에 대한 동의로서, 동의를 하는 경우에만 서비스 이용이 가능합니다.</span>
+                    
+                    <span class="bold">※ 법령에 따른 개인정보의 수집/이용, 계약의 이행/편익제공을 위한 개인정보 취급위탁 및 개인정보 취급과 관련된 일반 사항은 서비스의 개인정보처리방침에 따릅니다.</span>
+                </pre>
+            </div>
+            <!-- //viewer (terms) -->
+        </div>
+    </div>
+</div>
+<!-- //PASS자동차 개인정보 수집 및 이용동의 -->
+
+<!-- PASS자동차 개인정보 제3자 제공동의 -->
+<div id="doc6" class="ly_pop ly_doc ly_full">
+    <div class="content">
+        <header class="header longTit">
+            <div class="header_inner">
+                <h1 class="header_tit">PASS자동차 개인정보 제3자 제공동의</h1>
+                <button type="button" class="ico-close header_btn" onclick="layer_close()"><span
+                        class="blind">닫기</span></button>
+            </div>
+        </header>
+        <div class="scroll">
+            <!-- viewer (terms) -->
+            <div class="viewer">
+                <pre class="viewer_txt">
+                    PASS자동차 서비스(이하 “서비스”라 한다)와 관련하여, 본인은 동의내용을 숙지하였으며, 이에 따라 귀사((㈜아톤, ㈜비즈인포그룹)가 수집한 본인의 개인정보를 아래와 같이 제3자에게 제공하는 것에 대해 동의합니다.
+                    <table>
+                        <colgroup>
+                        <col style="width:20%;">
+                        <col style="width:20%;">
+                        <col style="width:20%;">
+                        <col>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>제공받는 자</th>
+                            <th>제공받는 자의
+                            개인정보 이용목적</th>
+                            <th>개인정보 제공항목</th>
+                            <th>제공받는 자의
+                            보유 및 이용기간</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>SK텔레콤주식회사</td>
+                            <td>서비스 가입/해지관련 고객 상담</td>
+                            <td>전화번호, 서비스관리번호, 이름, 생년월일, 성별</td>
+                            <td rowspan="3">- 개인정보는 본 서비스를 제공하는 기간 동안에 보유 및 이용되고, 이용자의 서비스 해지(회원탈퇴) 시 해당인의 개인정보가 열람 또는 이용될 수 없도록 파기 처리합니다.
+                            단, 아래의 경우는 예외로 합니다.
+                            (1)법령에서 따로 정하는 경우에는 해당 기간까지 보유
+                            (2)서비스 이용 후의 민원 처리를 위하여 내부 지침에 따라 서비스 이용 후 1년간 휴대폰번호, 회원명, 생년월일, 성별을 보관합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>보험개발원</td>
+                            <td>내차팔기 서비스 진행 중 차량의 사고이력 조회</td>
+                            <td>차량번호</td>
+                        </tr>
+                        <tr>
+                            <td>FlyHigh</td>
+                            <td>자동차 원부조회</td>
+                            <td>차량번호, 이름</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <span class="bold">고객은 개인정보의 제3자 제공에 대한 동의를 거부할 권리가 있으며, 동의를 거부할 경우 받는 별도의 불이익은 없습니다. 단, 서비스 이용이 불가능하거나, 서비스 이용 목적에 따른 서비스 제공에 제한이 따르게 됩니다.</span>
+                </pre>
+            </div>
+            <!-- //viewer (terms) -->
+        </div>
+    </div>
+</div>
+<!-- //PASS자동차 개인정보 제3자 제공동의 -->
+
+<!-- PASS자동차 서비스 알림 수신동의 -->
+<div id="doc7" class="ly_pop ly_doc ly_full">
+    <div class="content">
+        <header class="header">
+            <div class="header_inner">
+                <h1 class="header_tit">PASS자동차 서비스 알림 수신동의</h1>
+                <button type="button" class="ico-close header_btn" onclick="layer_close()"><span
+                        class="blind">닫기</span></button>
+            </div>
+        </header>
+        <div class="scroll">
+            <!-- viewer (terms) -->
+            <div class="viewer">
+                <pre class="viewer_txt">
+                    PASS자동차 서비스(이하 “서비스”라 한다)와 관련하여, 본인은 동의내용을 숙지하였으며, 이에 따라 본인의 개인정보를 아래의 목적으로 귀사(SK텔레콤주식회사)가 수집 및 이용하고, 본인에게 전자적 전송매체를 통해, 마케팅 등의 목적으로 개인에게 최적화된 광고 또는 정보를 다음과 같이 전송하는 것에 동의합니다.
+
+
+                    <table>
+                        <colgroup>
+                        <col style="width:33.3%;">
+                        <col style="width:33.3%;">
+                        <col>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>수집∙이용목적</th>
+                            <th>수집항목</th>
+                            <th>보유 및 이용기간</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1) 본인의 차량 시세정보 알림
+                            2) 신규 이벤트 및 “PASS자동차”관련 개인 맞춤형 광고∙정보 전송</td>
+                            <td>전화번호, 생년월일, 성별, 동의 일시</td>
+                            <td>-별도 동의 철회 시 까지
+                            -단, 관련 법령의 규정에 따라 보존할 필요가 있을 경우, 해당 기간까지 보존함</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    1. 서비스에서는 고객이 수집 및 이용에 동의한 개인정보를 활용하여, 전자적 전송매체(SMS/MMS/e-mail/App Push. 등 다양한 전송매체)를 통해, ㈜아톤 및 제3자의 상품 또는 서비스에 대한 개인 맞춤형 광고∙정보를 전송할 수 있습니다.
+                    2. 고객이 본 수신동의를 철회하고자 할 경우 고객센터(02-3445-3060)를 통하여 수신동의 철회요청을 할 수 있습니다.
+                </pre>
+            </div>
+            <!-- //viewer (terms) -->
+        </div>
+    </div>
+</div>
+<!-- //PASS자동차 서비스 알림 수신동의 -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="../js/ui.js"></script>
+
+</body>
+</html>

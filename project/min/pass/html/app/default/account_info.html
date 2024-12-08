@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>SKT PASS</title>
+  <link rel="stylesheet" type="text/css" href="../../../resources/app/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="../../../resources/app/css/common.css">
+  <link rel="stylesheet" type="text/css" href="../../../resources/app/css/contents.css">
+</head>
+<body>
+  <!-- header --
+  <header class="header">
+    <div class="header_inner">
+      <a href="#" class="ico-back header_btn"><span class="blind">이전 페이지</span></a>
+      <h1 class="header_tit">계좌정보</h1>
+    </div>
+  </header>
+  !-- //header -->
+
+  <!-- wrap -->
+  <div class="wrap wrap-fixed">
+
+   <!-- account_step  -->
+    <div class="account_step">
+      <ol class="account_stepList">
+        <li class="account_stepList_item stepList_item step-complete"><span class="step-on_txt">약관동의</span><span class="wrap-bg"><span class="bg-circle bg-complete"></span></span></li>
+        <li class="account_stepList_item stepList_item step-complete"><span class="step-on_txt">고객정보</span><span class="wrap-bg"><span class="bg-circle bg-complete"></span></span></li>
+        <li class="account_stepList_item stepList_item step-on"><span class="step-on_txt">계좌정보</span><span class="wrap-bg"><span class="bg-circle"></span></span></li>
+        <li class="account_stepList_item stepList_item"><span class="step-on_txt">기타동의</span><span class="wrap-bg"><span class="bg-circle"></span></span></li>
+        <li class="account_stepList_item stepList_item"><span class="step-on_txt">비밀번호</span><span class="wrap-bg"><span class="bg-circle"></span></span></li>
+        <li class="account_stepList_item stepList_item"><span class="step-on_txt">신분확인</span></li>
+      </ol>
+    </div>
+    <!-- //account_step  -->
+
+    <!-- inner -->
+    <div class="inner inner-low">
+
+      <!-- form -->
+      <!-- form 태그 내 각 label의 for와 input의 id는 동일하게 맞추어야 합니다. -->
+      <form class="form_account form-fixed form-fixed-btn form-fixed-low">
+        <div class="ipBox">
+          <p class="ipBox_label">재산현황</p>
+          <div class="wrap-select-btn wrap-select-border">
+            <div class="select-btn select-btn-half">
+              <input type="radio" id="asset1" name="asset" value="none" class="ip-blind select-btn_ip">
+              <label for="asset1" class="select_btnList">십억미만</label>
+            </div>
+            <div class="select-btn select-btn-half">
+              <input type="radio" id="asset2" name="asset" value="home" class="ip-blind select-btn_ip">
+              <label for="asset2" class="select_btnList select_btnList_table">백억미만</label>
+            </div>
+          </div>
+          <div class="wrap-select-btn wrap-select-border">
+            <div class="select-btn select-btn-half">
+              <input type="radio" id="asset3" name="asset" value="company" class="ip-blind select-btn_ip">
+              <label for="asset3" class="select_btnList select_btnList_table">천억미만</label>
+            </div>
+            <div class="select-btn select-btn-half">
+              <input type="radio" id="asset4" name="asset" value="company" class="ip-blind select-btn_ip">
+              <label for="asset4" class="select_btnList select_btnList_table">천억이상</label>
+            </div>
+          </div>
+        </div>
+        <div class="ipBox">
+          <p class="ipBox_label">계좌개설 목적</p>
+          <label for="account1">
+            <select id="account1" class="ipBox_ip ipBox_ip-select">
+              <option selected value="근로 및 연금소득">근로 및 연금소득</option>
+              <option value="퇴직소득">퇴직소득</option>
+              <option value="사업소득">사업소득</option>
+              <option value="부동산 임대소득">부동산 임대소득</option>
+              <option value="부동산 등 양도소득">부동산 등 양도소득</option>
+              <option value="금융소득 (이자 및 배당)">금융소득 (이자 및 배당)</option>
+              <option value="상속/증여">상속/증여</option>
+              <option value="일시 재산양도로 인한 소득">일시 재산양도로 인한 소득</option>
+            </select>
+          </label>
+        </div>
+        <div class="ipBox">
+          <p class="ipBox_label">거래목적</p>
+          <label for="account2">
+            <select id="account2" class="ipBox_ip ipBox_ip-select">
+              <option selected value="급여 및 생활비">급여 및 생활비</option>
+              <option value="목적 1">목적 1</option>
+              <option value="목적 2">목적 2</option>
+              <option value="목적 3">목적 3</option>
+            </select>
+          </label>
+        </div>
+        <div class="ipBox">
+          <p class="ipBox_label">거래자금 원천</p>
+          <label for="account3">
+            <select id="account3" class="ipBox_ip ipBox_ip-select">
+              <option selected value="근로 및 연금소득">근로 및 연금소득</option>
+              <option value="일반급여통장">일반급여통장</option>
+              <option value="목적 1">목적 1</option>
+              <option value="목적 2">목적 2</option>
+              <option value="목적 3">목적 3</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="btn-area-fixed">
+          <button type="button" class="btn btn-wide btn-low" disabled>다음</button>
+        </div>
+        </form>
+        <!-- //form -->
+
+    </div>
+    <!-- //inner -->
+  </div>
+  <!-- //wrap-->
+
+ <!-- script -->
+ <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+ <script src="../../../resources/app/js/idangerous.swiper.js"></script>
+ <script src="../../../resources/app/js/ui.js"></script>
+ <!-- //script -->
+
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title>SGI서울보증</title>
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/common-ui.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../../inc/css/style-cust.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/style-mark.css">
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/jquery.mobile-1.4.5.css">
+    <script type="text/javascript" src="../../../inc/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../../inc/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
+</head>
+
+<body>
+    <!-- 페이지 유형 제작시 wrapper에 고유 클레스 추가 -->
+    <div class="wrapper ps-sub-page comap2010">
+        <header class="header">
+            <button type="button" class="prev-page" title="이전페이지 이동"></button>
+            <h1 class="header-tit">영업실적현황조회</h1>
+            <button type="button" class="sidenav-btn" title="전체메뉴"></button>
+        </header>
+        <!-- 페이지 하단에 플로팅 버튼이 있을시 class = btm-fixed 추가 -->
+        <section class="container btm-fixed">
+            <!-- 사이드 여백설정 공통 class = inner -->
+            <!-- 페이지 하단에 플로팅 버튼이 있을시 class = acco-fixed 추가 -->
+            <div class="content">
+                <div class="cont-wrap">
+                    <div class="rollup-fix-wrap">
+                        <div class="rollup-fix-data">
+                            <ul class="tab-01">
+                                <li><button type="button" class="on" title="선택됨">피보험자별</button></li>
+                                <li><button type="button">보증기호별</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-conts-01">
+                        <div class="tab-cont on">
+                            <div class="ps-from-item">
+                                <p class="write-title">구분</p>
+                                <div class="ps-select">
+                                    <select title="구분 옵션">
+                                        <option>FY (4월 기준)</option>
+                                    </select>
+                                </div>
+                                <p class="ps-bu-txt circle gray">기준일: 전월 말일</p>
+                            </div>
+                            <div class="ps-from-item">
+                                <p class="write-title">상품명</p>
+                                <div class="ps-input">
+                                    <input type="text" title="상품명 입력" placeholder="상품코드">
+                                </div>
+                                <div class="ps-select">
+                                    <select title="상품명 옵션">
+                                        <option>선택</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="ps-from-item">
+                                <p class="write-title">피보험자정보</p>
+                                <div class="ps-rdo-wrap basic">
+                                    <div class="ps-rdo">
+                                        <input type="radio" id="rdo01_01" name="rdo01" checked="">
+                                        <label for="rdo01_01">피보험자</label>
+                                    </div>
+                                    <div class="ps-rdo">
+                                        <input type="radio" id="rdo01_02" name="rdo01">
+                                        <label for="rdo01_02">대표법인</label>
+                                    </div>
+                                </div>
+                                <div class="ps-input in-btn-wrap">
+                                    <input type="text" title="피보험자정보 입력" readonly>
+                                    <button type="button" class="inline-btn gray">기업검색</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-cont">
+                            <div class="ps-from-item">
+                                <p class="write-title">구분</p>
+                                <div class="ps-select">
+                                    <select title="구분 옵션">
+                                        <option>FY (4월 기준)</option>
+                                        <option>UY</option>
+                                    </select>
+                                </div>
+                                <div class="ps-select-item date">
+                                    <div class="ps-select">
+                                        <select title="구분 시작일 년도 옵션">
+                                            <option>2010</option>
+                                        </select>
+                                    </div>
+                                    <span class="txt"> ~ </span>
+                                    <div class="ps-select">
+                                        <select title="구분 시작일 년도 옵션">
+                                            <option>2019</option>
+                                        </select>
+                                    </div>
+                                    <!-- FY 기준일때 사용 -->
+                                    <div class="inqu-btn-wrap date-deta-btn">
+                                        <button type="button" class="inqu-btn" title="상세조회"></button>
+                                    </div>
+                                </div>
+                                <div class="date-deta-wrap">
+                                    <div class="ps-calendar-wrap">
+                                        <div class="ps-date-fild">
+                                            <input type="text" title="조회년월 입력" data-y="2011" data-m="09" value="2011-09">
+                                            <button type="button" class="btn-yymm open-bottomlist" data-page="bottom-pop-list01">조회년월 설정</button>
+                                        </div>
+                                        <span class="txt"> ~ </span>
+                                        <div class="ps-date-fild">
+                                            <input type="text" title="조회년월 입력" data-y="2021" data-m="12" value="2021-12">
+                                            <button type="button" class="btn-yymm open-bottomlist" data-page="bottom-pop-list02">조회년월 설정</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="ps-bu-list circle gray">
+                                    <li>당월실적은 해당년도 누계에 포함됩니다.</li>
+                                    <li>1997년부터 조회 가능합니다. (최대 5년)</li>
+                                </ul>
+                            </div>
+                            <div class="ps-from-item">
+                                <p class="write-title">상품명</p>
+                                <div class="ps-input">
+                                    <input type="text" title="상품명 입력" placeholder="상품코드">
+                                </div>
+                                <div class="ps-select">
+                                    <select title="상품명 옵션">
+                                        <option>선택</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="ps-from-item">
+                                <p class="write-title">보증기호명</p>
+                                <div class="ps-select">
+                                    <select title="보증기호명 옵션" disabled>
+                                        <option>선택</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- cont-wrap -->
+            </div>
+            <!-- content -->
+            <div class="fix-btn-wrap">
+                <button type="button" class="btn blue">조회</button>
+            </div>
+        </section>
+        <footer class="footer"></footer>
+        <!-- 레이어팝업 -->
+        <!-- SgiUI.popAniOff('.btm-calendar-wrap'); 바닥 팝업 종료-->
+        <article class="pop-botlist-js-wrap bottom-listpop btm-calendar-wrap" data-page="bottom-pop-list01">
+            <div class="botlist-wrap">
+                <h2 class="botlist-tit">월 선택</h2>
+                <div class="botlist-cont">
+                    <div class="year-wrap">
+                        <div class="swiper-container swiper-year">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">2011년</div>
+                                <div class="swiper-slide">2012년</div>
+                                <div class="swiper-slide">2013년</div>
+                                <div class="swiper-slide">2014년</div>
+                                <div class="swiper-slide">2015년</div>
+                                <div class="swiper-slide">2016년</div>
+                                <div class="swiper-slide">2017년</div>
+                                <div class="swiper-slide">2018년</div>
+                                <div class="swiper-slide">2019년</div>
+                                <div class="swiper-slide">2020년</div>
+                                <div class="swiper-slide">2021년</div>
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                    <div class="month-wrap">
+                        <div class="swiper-container swiper-month">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">01월</div>
+                                <div class="swiper-slide">02월</div>
+                                <div class="swiper-slide">03월</div>
+                                <div class="swiper-slide">04월</div>
+                                <div class="swiper-slide">05월</div>
+                                <div class="swiper-slide">06월</div>
+                                <div class="swiper-slide">07월</div>
+                                <div class="swiper-slide">08월</div>
+                                <div class="swiper-slide">09월</div>
+                                <div class="swiper-slide">10월</div>
+                                <div class="swiper-slide">11월</div>
+                                <div class="swiper-slide">12월</div>
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fix-btn-wrap">
+                    <button type="button" class="btn gray small">취소</button>
+                    <button type="button" class="btn blue btn-ym-check">확인</button>
+                </div>
+            </div>
+            <button class="close-bottomlist" title="닫기"></button>
+        </article>
+        <!-- //레이어팝업 -->
+        <!-- 레이어팝업 -->
+        <!-- SgiUI.popAniOff('.btm-calendar-wrap'); 바닥 팝업 종료-->
+        <article class="pop-botlist-js-wrap bottom-listpop btm-calendar-wrap" data-page="bottom-pop-list02">
+            <div class="botlist-wrap">
+                <h2 class="botlist-tit">월 선택</h2>
+                <div class="botlist-cont">
+                    <div class="year-wrap">
+                        <div class="swiper-container swiper-year">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">2011년</div>
+                                <div class="swiper-slide">2012년</div>
+                                <div class="swiper-slide">2013년</div>
+                                <div class="swiper-slide">2014년</div>
+                                <div class="swiper-slide">2015년</div>
+                                <div class="swiper-slide">2016년</div>
+                                <div class="swiper-slide">2017년</div>
+                                <div class="swiper-slide">2018년</div>
+                                <div class="swiper-slide">2019년</div>
+                                <div class="swiper-slide">2020년</div>
+                                <div class="swiper-slide">2021년</div>
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                    <div class="month-wrap">
+                        <div class="swiper-container swiper-month">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">01월</div>
+                                <div class="swiper-slide">02월</div>
+                                <div class="swiper-slide">03월</div>
+                                <div class="swiper-slide">04월</div>
+                                <div class="swiper-slide">05월</div>
+                                <div class="swiper-slide">06월</div>
+                                <div class="swiper-slide">07월</div>
+                                <div class="swiper-slide">08월</div>
+                                <div class="swiper-slide">09월</div>
+                                <div class="swiper-slide">10월</div>
+                                <div class="swiper-slide">11월</div>
+                                <div class="swiper-slide">12월</div>
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fix-btn-wrap">
+                    <button type="button" class="btn gray small">취소</button>
+                    <button type="button" class="btn blue btn-ym-check">확인</button>
+                </div>
+            </div>
+            <button class="close-bottomlist" title="닫기"></button>
+        </article>
+        <!-- //레이어팝업 -->
+    </div>
+</body>
+</html>

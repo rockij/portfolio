@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>SKT PASS</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/contents.css">
+    <link href="resources/app/css/event.css" media="screen" rel="stylesheet">
+</head>
+<body class="viewer_body">
+<!-- header -->
+<header class="header">
+    <div class="header_inner">
+        <a href="#" class="ico-back header_btn"><span class="blind">이전 페이지</span></a>
+        <h1 class="header_tit">친구추천 이벤트</h1>
+    </div>
+</header>
+<!-- //header -->
+<div id="friend-4th" class="promoWrap promo4th wrap hwv">
+    <section class="prBanner bn1">
+        <span class="bnImg img"><img src="resources/app/image/4th/friend_4th_banner01.png" alt=""></span>
+        <div class="bnWrap">
+            <div class="desc">
+                <p>PASS 최고혜택 보장제도를 알려준 친구의<br>추천인 코드를 입력해주세요.<br><span class="underline">PASS 머니 1,000원</span>을 드립니다.</p>
+                <small>* 추천인 코드는 1인당 1회만 입력하실 수 있습니다.</small>
+                <div class="col_btn">
+                    <span class="ip_form">
+                        <input type="text" id="confirm" required>
+                        <label for="confirm">추천인 코드를 입력해주세요.</label>
+                    </span>
+                    <button type="button" class="ip_btn" onclick="layer_open('entry')">확인</button>
+                </div>
+                <p>PASS 최고혜택 보장제도를 다른 친구들에게도 알려주세요.<br>내 추천인 코드를 친구들에게 공유하면 추천인 코드가<br>등록될 때마다 PASS머니 1,000원씩 추가로 드립니다!</p>
+            </div>
+            <div class="copy_code">
+                <div class="col_btn">
+                    <span class="ip_form">
+                        <input type="text" id="rec_code" value="OOOOOOOOOO" readonly>
+                        <label for="rec_code">나의 추천인 코드</label>
+                    </span>
+                    <button type="button" class="ip_btn copy">복사</button>
+                </div>
+            </div>
+            <ul class="btnWrap btn2">
+                <li><button type="button" class="prBtn" onclick="$('.copy_code').addClass('sended');$(this).hide()">나의 추천인 코드 발급받기</button></li>
+                <li><button type="button" class="prBtn"><i class="icon kakao"></i>카카오톡으로 친구 추천</button></li>
+            </ul>
+        </div>
+    </section>
+    <section class="prBanner bn2">
+        <span class="bn img"><img src="resources/app/image/4th/friend_4th_banner02.png" alt=""></span>
+        <div class="bnWrap">
+            <ul class="btnWrap top">
+                <li><button type="button" class="prBtn">최고혜택 보장제도란<i></i></button></li>
+            </ul>
+            <div class="desc">
+                <p>PASS 최고혜택 보장제도를 친구들에게 알려주세요.<br>추천인 코드가 가장 많이 등록된 추천인 10분께는<br><span class="underline">PASS 머니 총 250만 원</span>을 드립니다!</p>
+                <div class="moneybox">
+                    <div>
+                        <dl>
+                            <dt><i>1</i>위 : <i>PASS</i> 머니</dt>
+                            <dd><i>1,000,000</i>원</dd>
+                        </dl>
+                        <dl>
+                            <dt><i>2</i>위 : <i>PASS</i> 머니</dt>
+                            <dd><i>500,000</i>원</dd>
+                        </dl>
+                        <dl>
+                            <dt><i>3</i>위 : <i>PASS</i> 머니</dt>
+                            <dd><i>300,000</i>원</dd>
+                        </dl>
+                        <dl>
+                            <dt><i>4</i>위~10위 : <i>PASS</i> 머니</dt>
+                            <dd><i>100,000</i>원</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <ul class="btnWrap btm">
+                <li><button type="button" class="prBtn" onclick="layer_open('rank')">현재 순위 확인하기</button></li>
+            </ul>
+            <div class="imgWrap">
+                <i class="img coin left"></i>
+                <i class="img person"></i>
+                <i class="img coin right"></i>
+            </div>
+        </div>
+    </section>
+    <section class="explainWrap">
+        <div class="evtWrap">
+            <strong>이벤트 기간</strong>
+            <span>2020년 9월 1일(화) ~ 2020년 9월 30일(수)</span>
+        </div>
+        <div class="evtWrap">
+            <strong>혜택 지급 방법</strong>
+            <ul class="stepList">
+                <li><strong class="step">EVENT 1.</strong><span>추천인 코드 입력 후 3일 안에 PASS 머니로 입금</span></li>
+                <li><strong class="step">EVENT 2.</strong><span>2020년 10월 12일(월)에 PASS 머니로 일괄 입금</span></li>
+            </ul>
+        </div>
+        <div class="evtWrap">
+            <strong>유의사항</strong>
+            <ul class="alertList">
+                <li>이 이벤트는 SKT PASS 회원에 한해 1인당 1회만 참여하실 수 있습니다.</li>
+                <li>이 이벤트 페이지에 있는 추천인 코드 입력창에 다른 사람의 추천인 코드를 입력하면 3일 안에 본인 및 해당 추천인에게 PASS 머니가 1,000원씩 입금됩니다.</li>
+                <li>EVENT 1의 혜택은 선착순 4만 명(추천인 코드 2만 건)까지 지급되며, 선착순 수량 마감 시 이벤트가 일찍 종료될 수 있습니다.</li>
+                <li>EVENT 2의 혜택은 이벤트 기간 안에 입력된 추천인 코드 순위를 바탕으로 2020년 10월 12일(월)에 일괄 지급될 예정이나, SK텔레콤의 사정에 따라 일정이 변경될 수 있습니다.</li>
+                <li>추천인 코드가 많이 입력된 순서대로 10명을 선정하며, 입력 건수가 같으면 먼저 해당 건수를 달성한 순서대로 순위를 결정합니다. 단, 1명의 명의자가 여러 휴대폰 회선으로 중복 참여하면 추천인 입력 건수가 가장 많은 1회선만 인정됩니다.</li>
+                <li>이벤트 결과는 최종 순위 발표 후 이 이벤트에 참여하신 PASS 계정에 등록된 휴대폰 번호로 안내해드릴 예정입니다. 안내 후 2주 안에 응답하지 않으시면 혜택 지급 대상에서 제외될 수 있습니다.</li>
+                <li>혜택 지급 시점에 SKT PASS 탈퇴 및 번호이동 등으로 인해 SK텔레콤의 PASS 앱을 이용할 수 없는 경우 혜택을 받으실 수 없습니다.</li>
+                <li>부적절한 방법으로 이벤트에 참여하시면 사전 안내 없이 참여가 취소될 수 있습니다.</li>
+                <li>이 이벤트는 SK텔레콤의 사정에 따라 변경, 중단될 수 있습니다.</li>
+                <li>이벤트 및 혜택 지급과 관련된 사항은 SKT PASS 고객센터 (pass@sk.com)로 문의해주시기 바랍니다.</li>
+                <li>혜택 지급에 필요한 제세공과금은 SK텔레콤이 부담하며, 과세 신고를 위해 5만 원 이상의 혜택에 당첨되신 고객님께는 신분증 사본 제출을 요청할 수 있습니다.</li>
+                <li>기타 소득이 연 300만 원을 초과하는 분들께서는 직접 관할 세무서에 2021년 5월 31일(월)까지 종합소득과세표준 신고 및 납부를 하셔야 합니다. 구체적인 내용과 절차에 대해서는 필요 시 세무 관련 자문을 받으시기 바랍니다.</li>
+            </ul>
+        </div>
+    </section>
+    <!-- <ul class="btmbtn btn2">
+        <li><button type="button" onclick="">1시간 동안 보지 않기</button></li>
+        <li><button type="button" onclick="">닫기</button></li>
+    </ul> -->
+</div>
+
+<!-- 가입동의팝업 -->
+<div id="entry" class="ly_pop ly_entry">
+    <div class="content">
+        <p>친구추천 이벤트 참여를 위해<br>약관 동의가 필요합니다.</p>
+        <form>
+            <div class="wrap_check-agree wrap-check-all">
+                <input type="checkbox" id="check-all" class="ip-blind check-all">
+                <label for="check-all" class="check-all_label check-all_label-em">전체동의</label>
+                <div class="wrap-select_checkbox">
+                    <input type="checkbox" id="check-box1" class="ip-blind ip-check">
+                    <label for="check-box1" class="check-agree_label">[필수] 이벤트 개인정보 수집∙이용 동의</label>
+                    <a href="#" class="check_label_link" onclick="layer_open('doc1')">보기</a>
+                </div>
+                <div class="wrap-select_checkbox">
+                    <input type="checkbox" id="check-box2" class="ip-blind ip-check">
+                    <label for="check-box2" class="check-agree_label">[필수] 이벤트 개인정보 처리 위탁 동의</label>
+                    <a href="#" class="check_label_link" onclick="layer_open('doc2')">보기</a>
+                </div>
+                <div class="wrap-select_checkbox">
+                    <input type="checkbox" id="check-box3" class="ip-blind ip-check">
+                    <label for="check-box3" class="check-agree_label">[필수] PASS 머니 서비스 이용 약관</label>
+                    <a href="#" class="check_label_link" onclick="layer_open('doc3')">보기</a>
+                </div>
+                <div class="wrap-select_checkbox">
+                    <input type="checkbox" id="check-box4" class="ip-blind ip-check">
+                    <label for="check-box4" class="check-agree_label">[필수] PASS 머니 개인정보 수집 및 이용동의</label>
+                    <a href="#" class="check_label_link" onclick="layer_open('doc4')">보기</a>
+                </div>
+                <div class="wrap-select_checkbox">
+                    <input type="checkbox" id="check-box5" class="ip-blind ip-check">
+                    <label for="check-box5" class="check-agree_label">[선택] PASS 머니 서비스 알림 수신 동의</label>
+                    <a href="#" class="check_label_link" onclick="layer_open('doc5')">보기</a>
+                </div>
+            </div>
+        </form>
+        <ul class="btn_area">
+            <li><button type="button" onclick="layer_close()" class="btn btn-focused btn-wide">동의하기</button></li>
+            <li><button type="button" onclick="layer_close()" class="btn btn-wide">닫기</button></li>
+        </ul>
+    </div>
+</div>
+<!-- //가입동의팝업 -->
+
+<!-- 친구추천 현재순위 -->
+<div id="rank" class="ly_pop ly_rank">
+    <div class="content">
+        <button type="button" class="ico-close header_btn" onclick="layer_close()"><span class="blind">닫기</span></button>
+        <div class="evtWrap">
+            <h2><span class="blind">현재순위</span><img src="resources/app/image/4th/ly_rank_title.png" alt=""><i class="time">(8월20일 15:00기준)</i></h2>
+            <div class="rankWrap col2">
+                <ul class="rankList">
+                    <li>
+                        <dl>
+                            <dt>1위</dt>
+                            <dd><i>120</i>건</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>2위</dt>
+                            <dd><i>81</i>건</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>3위</dt>
+                            <dd><i>75</i>건</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>4위</dt>
+                            <dd><i>54</i>건</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>5위</dt>
+                            <dd><i>34</i>건</dd>
+                        </dl>
+                    </li>
+                </ul>
+                <ul class="rankList">
+                    <li>
+                        <dl>
+                            <dt>6위</dt>
+                            <dd><i>32</i>건</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>7위</dt>
+                            <dd><i>26</i>건</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>8위</dt>
+                            <dd><i>11</i>건</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>9위</dt>
+                            <dd><i>10</i>건</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>10위</dt>
+                            <dd><i>1</i>건</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <ul class="alertList">
+                <li>이름과 휴대폰번호 뒤 4자리를 확인하세요.</li>
+                <li>건수가 같을 경우 먼저 달성한 순서대로 순위가 결정됩니다.</li>
+                <li>동일 명의자의 경우 가장 많이 추천된 회선만 순위에 집계됩니다.</li>
+            </ul>
+            <div class="myRecommend">
+                <strong>내 등록 건수</strong>
+                <span class="count"><strong>75</strong>건</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- //친구추천 현재순위 -->
+
+<!-- 이벤트 알럿1 -->
+<div id="alert1" class="ly_pop ly_alert">
+    <div class="content">
+        <h2>이미 이벤트에 참여하셨습니다.</h2>
+        <ul class="btn_area btn_one">
+            <li><button type="button" class="btn btn-wide btn-focused" onclick="layer_close()">확인</button></li>
+        </ul>
+    </div>
+</div>
+<!-- //이벤트 알럿1 -->
+
+<!-- 이벤트 알럿2 -->
+<div id="alert2" class="ly_pop ly_alert">
+    <div class="content">
+        <h2>본인을 추천할 수 없습니다.</h2>
+        <ul class="btn_area btn_one">
+            <li><button type="button" class="btn btn-wide btn-focused" onclick="layer_close()">확인</button></li>
+        </ul>
+    </div>
+</div>
+<!-- //이벤트 알럿2 -->
+
+<!-- 이벤트 알럿3 -->
+<div id="alert3" class="ly_pop ly_alert">
+    <div class="content">
+        <h2>존재하지 않는<br>추천인 코드입니다.</h2>
+        <ul class="btn_area btn_one">
+            <li><button type="button" class="btn btn-wide btn-focused" onclick="layer_close()">확인</button></li>
+        </ul>
+    </div>
+</div>
+<!-- //이벤트 알럿3 -->
+
+<!-- 이벤트 알럿4 -->
+<div id="alert4" class="ly_pop ly_alert">
+    <div class="content">
+        <h2>추천인 코드를 입력해 주세요.</h2>
+        <ul class="btn_area btn_one">
+            <li><button type="button" class="btn btn-wide btn-focused" onclick="layer_close()">확인</button></li>
+        </ul>
+    </div>
+</div>
+<!-- //이벤트 알럿4 -->
+
+<!-- 이벤트 알럿5 -->
+<div id="alert5" class="ly_pop ly_alert">
+    <div class="content">
+        <h2>이벤트가 마감되었습니다.</h2>
+        <ul class="btn_area btn_one">
+            <li><button type="button" class="btn btn-wide btn-focused" onclick="layer_close()">확인</button></li>
+        </ul>
+    </div>
+</div>
+<!-- //이벤트 알럿5 -->
+
+<!-- 이벤트 알럿6 -->
+<div id="alert6" class="ly_pop ly_alert">
+    <div class="content">
+        <h2>이벤트가 조기 마감 되었습니다.<br>성원에 감사드립니다.</h2>
+        <ul class="btn_area btn_one">
+            <li><button type="button" class="btn btn-wide btn-focused" onclick="layer_close()">확인</button></li>
+        </ul>
+    </div>
+</div>
+<!-- //이벤트 알럿6 -->
+
+<!-- 1000원지급완료 -->
+<div id="money-alert" class="ly_pop ly_alert">
+    <div class="content">
+        <h2>1,000원 지급 완료!<br>PASS 머니에서 확인하세요.</h2>
+        <ul class="btn_area btn_one">
+            <li><button type="button" class="btn btn-wide btn-focused" onclick="layer_close()">PASS 머니로 이동</button></li>
+        </ul>
+    </div>
+</div>
+<!-- //1000원지급완료 -->
+
+<!-- [필수] 이벤트 개인정보 수집, 이용 동의 -->
+<div id="doc1" class="ly_pop ly_doc ly_full">
+    <div class="content">
+        <header class="header">
+            <div class="header_inner">
+                <h1 class="header_tit">이벤트 개인정보 수집∙이용 동의</h1>
+                <button type="button" class="ico-close header_btn" onclick="layer_close()"><span class="blind">닫기</span></button>
+            </div>
+        </header>
+        <div class="scroll">
+            <!-- viewer (terms) -->
+            <div class="viewer">
+                <pre class="viewer_txt">
+                    ‘친구추천 이벤트’ 참여를 위한 개인정보 수집∙이용 동의
+
+                    ‘친구추천 이벤트’과 관련하여 본인의 개인정보를 SK텔레콤 주식회사가 수집 및 이용하는 것에 동의합니다.
+                    
+                    <table>
+                        <colgroup>
+                            <col style="width:30%">
+                            <col style="width:30%">
+                            <col style="width:40%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>수집/이용 목적</th>
+                                <th>수집 항목</th>
+                                <th>보유 기간</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>본인 확인</td>
+                                <td>PASS 회원 번호, 휴대폰 번호</td>
+                                <td class="u bold">고객 상담 목적으로 당첨자 발표일로부터 1개월 동안 보관 후 파기</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    ※ 이 내용은 프로모션 응모를 위한 개인정보 수집∙이용에 대한 동의입니다. 동의하지 않을 경우 프로모션에 응모하실 수 없습니다.
+                    ※ 법령에 따른 개인정보의 수집∙이용, 계약의 이행∙편의 증진을 위한 개인정보 처리 및 처리 위탁과 관련된 일반 사항은 서비스의 개인정보 처리 방침에 따릅니다.
+                </pre>
+            </div>
+            <!-- //viewer (terms) -->
+        </div>
+    </div>
+</div>
+<!-- //[필수] 이벤트 개인정보 수집, 이용 동의 -->
+
+<!-- [필수] 이벤트 개인정보 처리 위탁 동의 -->
+<div id="doc2" class="ly_pop ly_doc ly_full">
+    <div class="content">
+        <header class="header">
+            <div class="header_inner">
+                <h1 class="header_tit">이벤트 개인정보 처리 위탁 동의</h1>
+                <button type="button" class="ico-close header_btn" onclick="layer_close()"><span class="blind">닫기</span></button>
+            </div>
+        </header>
+        <div class="scroll">
+            <!-- viewer (terms) -->
+            <div class="viewer">
+                <pre class="viewer_txt">
+                    ‘친구추천 이벤트’ 참여를 위한 개인정보 처리 위탁 동의
+
+                    ‘친구추천 이벤트’ 과 관련하여 아래 업체에 본인의 개인정보 처리 업무를 위탁하는 것에 동의합니다.
+                    
+                    <table>
+                        <colgroup>
+                            <col style="width:20%">
+                            <col style="width:80%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>수탁사</th>
+                                <th>업무 내용</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>㈜민앤지</td>
+                                <td>프로모션 시스템 운영, 당첨자 확인, 고객 상담 및 경품 발송 업무</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    ※ 이 내용은 프로모션 응모를 위한 개인정보 처리 위탁에 대한 동의입니다. 동의하지 않을 경우 프로모션에 응모하실 수 없습니다.
+                    ※ 법령에 따른 개인정보의 수집∙이용, 계약의 이행∙편의 증진을 위한 개인정보 처리 및 처리 위탁과 관련된 일반 사항은 서비스의 개인정보 처리 방침에 따릅니다.
+                </pre>
+            </div>
+            <!-- //viewer (terms) -->
+        </div>
+    </div>
+</div>
+<!-- //[필수] 이벤트 개인정보 처리 위탁 동의 -->
+
+<!-- [필수] PASS 머니 서비스 이용 약관 -->
+<div id="doc3" class="ly_pop ly_doc ly_full">
+    <div class="content">
+        <header class="header">
+            <div class="header_inner">
+                <h1 class="header_tit">PASS 머니 서비스 이용 약관</h1>
+                <button type="button" class="ico-close header_btn" onclick="layer_close()"><span class="blind">닫기</span></button>
+            </div>
+        </header>
+        <div class="scroll">
+            <!-- viewer (terms) -->
+            <div class="viewer">
+                <pre class="viewer_txt"><h2>1. 목적</h2>
+                본 약관은 “PASS 머니”를 제공하는 “SK텔레콤 주식회사(이하 ‘회사’라 합니다.)”와 위 서비스를 “이용하는 자(이하 ‘이용자’라 합니다.)”와의 이용 조건, 절차, 권리, 의무 및 책임사항에 관한 사항을 규정하는 것을 목적으로 합니다.
+
+                <h2>2. 용어의 정의</h2>
+                본 약관에서 사용되는 용어의 정의는 다음과 같습니다.
+                
+                1) “PASS 머니(이하 ‘서비스’라 합니다.)”는 PASS 서비스(이하 ‘PASS’라 합니다)를 사용하는 회원이 PASS 내 부가서비스 가입 및 회사에서 정한 PASS 내 활동을 통하여 PASS 내에서 적립하고, PASS에서 회사에서 정하는 방법으로 사용이 가능하도록 제공하는 포인트를 말합니다.
+                2) “이용자”란 본 약관에 동의하여 서비스를 이용하는 개인을 말합니다.
+                3) “휴대폰 정보”란 이용자의 이동통신사와 휴대폰 번호를 말합니다.
+                4) “앱”이란 서비스의 제공 및 이용을 위해 단말기에 설치되는 스마트폰 전용 애플리케이션을 말합니다.
+                5) 본 조 및 본 약관의 다른 조항에서 정의한 것을 제외하고는 관계 법령 및 서비스 안내에서 정한 바에 따릅니다.
+
+                <h2>3. 서비스 이용 계약의 체결</h2>
+                1) 이용계약은 이용자가 약관의 내용에 대해 동의한 후 서비스 가입 신청을 하고 회사가 이러한 신청에 대해 승낙함으로써 체결됩니다.
+                2) 회사는 서비스 제공 및 이용을 위해 이용자의 동의 하에 이용자의 휴대폰정보 및 CI값 등 필요한 개인정보를 수집 및 이용합니다.
+
+                <h2>4. 서비스 해지 및 재가입</h2>
+                이용자는 앱 내 서비스 해지 또는 PASS 탈퇴를 통해 서비스를 해지할 수 있으며, PASS 머니는 앱 내 해지 또는 회원탈퇴 요청 후부터 사용 불가합니다. 단, PASS 머니를 보유하고 있는 경우 회원탈퇴 시
+                PASS머니는 소멸될 수 있으며, 회사는 회원의 회원탈퇴 요청 시 PASS머니가 소멸됨을 통지하여야 합니다.
+                또한, 회원탈퇴 후 서비스를 다시 이용하기 위해서는 신규로 서비스에 가입하셔야 합니다.
+                
+                1) 앱을 이용한 해지 : 앱 설정 메뉴 내 부가서비스 설정에서 해지하실 수 있습니다.
+                2) PASS 해지 : PASS 앱 설정 내 PASS 서비스 해지에서 해지하실 수 있습니다.
+
+                <h2>5. PASS 머니 적립</h2>
+                1) PASS 머니는 이용자가 PASS 내 회사가 정한 상품/서비스를 이용 및 구매하거나, 프로모션 등의 마케팅 활동에 참여하여 획득할 수 있습니다.
+                2) PASS 머니 적립 기준, 방법, 적립률, 사후적립 가능한 결제 수단 및 기한 등(이하 “PASS 머니 적립정책”이라 함)은 내부 방침 등에 의하여 필요 시 변경될 수 있습니다. PASS 머니 적립정책의 변동사항은 제 17 조에 따라 공지합니다.
+
+                <h2>6. PASS 머니 사용</h2>
+                1) PASS 머니는 가입을 통하여 이용자 자격을 부여받은 순간부터 사용 가능하며, 보유한 가용 PASS 머니에서 잔여 유효기간이 짧은 PASS 머니를 우선적으로 사용하게 됩니다.
+                2) 회사는 사용 가능한 PASS 머니의 사용 단위를 정하여 앱에서 안내하고 있습니다.
+                3) PASS 머니 사용의 기준, 방법, 사용 가능한 최저 PASS 머니 및 사용단위 등(이하 “PASS 머니 사용정책”이라 함)은 내부 방침 등에 의하여 필요 시 변경될 수 있습니다. PASS 머니 사용정책의 변동사항은 제 17 조에 따라 공지합니다.
+                4) PASS 머니는 회사에서 정한 적립 시점에 적립됩니다.
+                5) 이용자는 PASS 머니를 타인에게 양도하거나 대여 또는 담보의 목적으로 이용할 수 없습니다.
+
+                <h2>7. PASS 머니 취소 및 소멸</h2>
+                1) PASS 머니의 유효기간은 적립월로부터 12 개월이며 먼저 적립된 PASS 머니부터 월 단위로 자동 소멸됩니다. 회사는 PASS 머니 소멸 1 개월 전 이용자에게 문자 전송(SMS) 또는 앱 Push를 통하여 안내합니다.
+                2) PASS 머니를 이용자가 지정한 계좌로 이체를 완료한 경우 취소 또는 복원이 불가능합니다.
+                3) 회사는 제10조 각 호의 경우로 PASS 머니 적립을 취소할 수 있습니다.
+
+                <h2>8. 약관의 효력과 변경</h2>
+                1) 본 약관은 서비스 화면에 게시하거나 기타의 방법으로 이용자에게 공지함으로써 효력이 발생합니다.
+                2) 온라인으로 서비스에 가입하는 경우, 이용자가 본 약관에 대하여 '동의함'을 선택하고 ‘확인’ 버튼을 클릭하면 고객은 본 약관의 내용을 이해하였고 그 적용에 동의한 것으로 간주합니다.
+                3) 회사는 관계 법령을 위배하지 않는 범위에서 본 약관을 개정할 수 있으며, 이 경우 회사는 새로운 약관의 적용일자 및 개정사유를 명시하고 개정약관 적용일 7일 전에 고지 또는 통지합니다. 단, 약관 변경 내용이 중대하거나 고객에게 불리한 경우에는 30일 전에 고지 또는 통지합니다.
+                4) 회사가 변경 약관을 고지 또는 통지하면서, 이용자가 약관 변경 적용 일까지 거부 의사를 표시하지 아니할 경우 약관의 변경에 동의한 것으로 간주한다는 내용을 고지 또는 통지하였음에도 이용자가 명시적으로 거부 의사를 표시하지 아니한 경우, 이용자가 변경 약관에 동의한 것으로 간주합니다.
+                5) 이용자가 변경된 약관에 동의하지 않는 경우 서비스 이용을 중단하고 이용 계약을 해지할 수 있습니다.
+
+                <h2>9. 약관 동의 철회</h2>
+                서비스 해지 시 약관 동의가 철회됩니다.
+
+
+                <h2>10. 서비스 이용의 제한</h2>
+                회사는 다음 각 호에 해당하는 이용자에 대하여 서비스 신청 및 이용을 제한할 수 있습니다.
+                1) 가입된 휴대폰 번호에 해당하는 단말기를 소유하고 있지 않았거나, 휴대폰 번호 등 이용자 정보가 잘못되어 문자 전송(SMS) 또는 앱 PUSH 전송이 불가능할 경우
+                2) 회사 및 회사로부터 서비스 운영을 위탁받은 자가 보유한 시스템 설비 및 장비 등의 여유가 없거나, 기술적, 법률적 장애가 있을 경우 그 사유가 해소될 때까지
+                3) 이용자의 단말기가 문자 수신(SMS), 앱 PUSH 수신에 문제가 있는 경우 또는 기타 사유로 문자 전송(SMS), 앱 PUSH 전송을 받을 수 없는 경우
+                4) 사용하는 단말기의 운영체제(OS), 기기정보 등을 루팅, 탈옥 등을 통해 임의로 변경한 경우
+                5) 이용자가 비정상적 또는 부정한 방법으로 PASS 머니를 적립하거나 사용한 경우
+                6) 기타 회사의 보안정책에 따라 서비스 제한이 필요하다고 판단되는 경우
+                7) 단말기 특성 또는 OS 버전의 문제로 인해 정상적인 서비스 제공이 불가능한 경우
+                8) 회사가 제공한 프로그램이 이용자의 디바이스 환경(예: 방화벽 등) 문제로 인하여 서비스 제공이 불가능할 경우
+                9) 이용자가 본 조 각 호의 방법으로 서비스를 비정상적 또는 부적절하게 이용한 경우
+
+
+                <h2>11. 의무</h2>
+                1) 회사는 본 약관에서 정한 바에 따라 지속적, 안정적으로 본 서비스를 제공할 의무가 있습니다. 단, 전쟁, 지진, 재난 등 천재지변이나 불가피한 시스템의 고장, 통신서비스 회사의 통신 두절 등 불가항력의 사유가 발생한 경우에는 본 서비스를 중단할 수 있습니다.
+                2) 이용자는 본인이 설정한 본 서비스의 비밀번호와 휴대폰 관리에 책임을 지며, 이용자의 부주의로 발생하는 모든 결과에 대한 책임은 이용자에게 있습니다.
+
+
+                <h2>12. 변경사항 통지</h2>
+                1) 이용자는 서비스를 이용할 단말기 번호를 정확하게 회사에 통지해야 합니다.
+                2) 이용자는 가입된 단말기를 분실한 경우, 회사 고객센터 또는 홈페이지를 통해 서비스를 해지하시거나 데이터 삭제를 요청하여야 합니다.
+                3) 이용자는 단말기, 유심 등이 변경되는 경우에 반드시 회사에 앱, 홈페이지, 고객센터 등을 통하여 변경 사실을 통지하여야 합니다.
+
+
+                <h2>13. 비밀번호 등의 관리</h2>
+                1) 이용자는 단말기, 앱, 앱 비밀번호 등 서비스 이용 또는 인증에 필요한 수단 또는 정보 등(이하 “비밀번호 등”이라 합니다)을 제삼자에게 대여하거나 사용 위임, 양도 또는 담보 목적으로 제공할 수 없습니다.
+                2) 이용자는 비밀번호 등을 제삼자에게 누설 또는 노출하거나 방지하여서는 안 되며, 비밀번호 등의 도용이나 위조 또는 변조를 방지하기 위하여 충분한 주의를 기울여야 합니다.
+                3) 이용자는 비밀번호 등을 이용자 스스로 책임하에 관리하여야 하며, 비밀번호 등의 훼손, 분실, 도난, 유출되는 등의 사고가 발생하는 경우, 이용자는 즉시 그 사실을 앱, 홈페이지, 고객센터 등을 통하여 회사에 통지하여야 합니다.
+                4) 이용자는 회사의 서명승인 없이 앱의 내용을 수정, 변경할 수 없습니다. 또한 리버스 엔지니어링, 디컴파일 또는 디어셈블 등 본래의 목적에 벗어난 변형, 소스코드 분석 등을 할 수 없습니다. 이를 위반할 경우 지적재산권 침해 행위로 간주되어 관련법의 처벌을 받을 수 있습니다.
+
+
+                <h2>14. 책임과 손해배상</h2>
+                회사와 이용자는 일방 당사자의 귀책사유로 인하여 상대방에게 발생한 손해에 대하여 배상하여야 합니다.
+
+                <h2>15. 면책</h2>
+                1) 회사는 다음 각 호의 사유로 인한 손해에 대하여 보상 또는 배상할 책임이 없습니다.
+                
+                ① 천재지변, 파업, 관련 법규의 변경, 관계기관의 명령 및 지침, 또는 외부로부터 발생한 사건 등 회사가 통제할 수 없는 사유에 인하여 본 서비스를 제공할 수 없는 경우
+                ② 이용자가 휴대폰 번호, 단말기, 앱 비밀번호 등 또는 결제 정보 등의 관리를 소홀히 한 경우
+                ③ 이용자가 본 서비스에 제공한 정보, 자료, 사실 등이 부정확하여 본 서비스를 원활히 제공할 수 없었던 경우
+                ④ 회사의 관리영역이 아닌 장애로 본 서비스의 이용이 불가능한 경우
+                ⑤ 기타 회사의 귀책사유가 없는 제휴사 및 통신서비스 등의 장애 또는 이용자의 귀책사유에 의한 통지 내역 미확인 등에 인한 경우
+                ⑥ 이용자의 고의 또는 중과실로 인하여 발생한 손해인 경우
+                ⑦ 이용자가 제13조에 따른 통지를 지연하거나 잘못된 내용을 통지하여 이용자에게 손해가 발생한 경우
+                
+                2) 회사는 본 서비스와 관련된 이용자 상호 간 또는 이용자와 제삼자 상호 간의 분쟁에 개입할 의무가 없으며, 회사의 귀책사유가 없는 한 이로 인한 손해를 보상 또는 배상할 책임이 없습니다.
+                3) 회사는 이용자가 제공한 이용자 본인의 정보에 대한 정확성, 진위, 유효성 확인의 책임이 없으며, 이용자가 제공한 정보의 오류로 인해 발생한 손해에 대하여 보상 또는 배상할 책임이 없습니다.
+                4) 회사가 단말기, 앱, 앱 비밀번호, 프로그램 등 접근매체의 발급주체가 아닌 경우, 접근매체의 위조나 변조에 의한 이용자 손해에 대하여 회사는 이를 보상 또는 배상할 책임이 없습니다.
+                5) 회사가 공식적으로 제공한 경로가 아닌, 비공식적 경로를 통해 앱 또는 프로그램을 다운로드/설치한 이용자에게 발생한 손해에 대하여, 회사는 이를 보상 또는 배상할 책임이 없습니다.
+                6) 이용자가 13조에서 명시한 비밀번호 등의 관리를 소홀히 하여 손해가 발생한 경우 회사는 이를 보상 또는 배상할 책임이 없습니다.
+                7) 회사가 제공한 프로그램이 이용자의 다바이스 환경(예: 방화벽 등)의 문제로 인하여 이용할 수 없을 경우 회사는 그 책임을 지지 않습니다.
+                8) 회사는 본 조에도 불구하고 회사의 고의 또는 과실에 의한 경우에는 이용자에게 발생한 손해에 대하여 보상 또는 배상할 책임이 있습니다.
+
+
+                <h2>16. 분쟁의 해결</h2>
+                1) 회사와 이용자 간 분쟁 발생 시, 회사와 이용자는 분쟁해결을 위해 성실히 협의합니다.
+                2) 본 약관과 관련한 제반 분쟁 및 소송의 관할은 민사소송법상 관할 조항에 따릅니다.
+
+
+                <h2>17. 정보의 제공 및 광고의 게재</h2>
+                1) 회사는 앱, 공지사항, 전자우편, 문자 등의 방법으로 본 약관에 따른 공지, 고지 또는 통지를 할 수 있습니다.
+                2) 회사는 서비스의 운영과 관련하여 영리 목적의 광고성 정보를 포함한 다양한 정보를 서비스 홈페이지, 앱, 공지사항, 전자우편, 문자 등의 방법으로 이용자에게 제공할 수 있습니다. 다만, 광고성 정보는 정보통신망법에 따른 이용자의 동의 등 적법한 절차에 따라 전송되며, 이용자는 광고성 정보에 대하여 수신을 거절할 수 있습니다.
+                
+                (시행일) 본 약관은 2020년 7월 9일부터 시행합니다.
+                </pre>
+            </div>
+            <!-- //viewer (terms) -->
+        </div>
+    </div>
+</div>
+<!-- //[필수] PASS 머니 서비스 이용 약관 -->
+
+<!-- [필수] PASS 머니 개인정보 수집 및 이용동의 -->
+<div id="doc4" class="ly_pop ly_doc ly_full">
+    <div class="content">
+        <header class="header">
+            <div class="header_inner">
+                <h1 class="header_tit">PASS 머니 개인정보 수집 및 이용동의</h1>
+                <button type="button" class="ico-close header_btn" onclick="layer_close()"><span class="blind">닫기</span></button>
+            </div>
+        </header>
+        <div class="scroll">
+            <!-- viewer (terms) -->
+            <div class="viewer">
+                <pre class="viewer_txt">“PASS 머니(이하, ‘서비스’라 합니다.)”의 서비스 제공 및 이용과 관련하여 SK텔레콤 주식회사(이하, ‘회사’라 합니다)는 “개인정보보호법”, “통신비밀보호법”, “전기통신사업법” 및 “정보통신망 이용촉진 및 정보보호 등에 관한 법률” 등 정보통신서비스제공자가 준수하여야 할 관련 법령상의 개인정보 보호 규정을 준수합니다.
+      
+                ※ 본인은 개인정보 수집 및 이용에 동의하지 않을 수 있으나, 동의 거부시 서비스 이용이 불가능 합니다.
+
+                <h2>제 1 조 (개인정보의 수집 및 이용)</h2>
+                1.1 수집항목
+                <table>
+                    <colgroup>
+                    <col style="width:15%">
+                    <col style="width:35%">
+                    <col style="width:50%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>수집∙이용 항목</th>
+                        <th>이용목적</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td rowspan="2">필수항목</td>
+                        <td>연계정보(CI), 휴대폰번호, 명의자이름, 단말모델명, 마켓구분, 사용자의 성인 여부, 스마트폰 OS 정보</td>
+                        <td class="fsup u bold">1) 서비스 제공을 위한 본인 확인, 휴대전화 점유인증
+                        2) 서비스 이용자가 제휴사 및 서비스 홈페이지(앱)에서 본 서비스를 이용할 수 있도록 하기 위함
+                        3) 본인인증 차단 및 승인</td>
+                    </tr>
+                    <tr>
+                        <td>서비스 가입/해지 일자, 가입경로, 서비스 실행 이력, 서비스 이용 정보(접속 매체, 전송 기록 등), 적립/차감정보</td>
+                        <td class="fsup u bold">서비스 이용 및 이용자 관리 (서비스 이용을 위한 본인 확인, 개인식별, 불량 이용자의 부정이용 방지와 비인가 사용의 방지, 가입의사 확인, 분쟁 조정을 위한 기록 보존, 불만처리 등 민원처리, 고지사항 전달, 서비스 유지방법 알림 등)</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h2>제 2 조 (개인정보 보유 및 이용기간)</h2>
+                <span class="u bold">2-1. 본 서비스 가입 일부터 해지 시까지</span>
+
+                <span class="u bold">2-2. 이용자가 서비스 해지를 요청하거나 개인정보 수집 및 이용에 대한 동의를 철회하는 경우 개인정보를 지체없이 파기합니다. 단, 상법, 국세기본법 등에서 소비자보호에 관한 법률 등 관계법령에 따라 보존할 필요가 있는 경 우 회사는 관계법령에서 정한 기간 동안 회원정보를 보관합니다. 이 경우 회사는 보관하는 정보를 그 보관의 목적으로만 이용하며 보존기간은 다음과 같습니다.</span>
+                
+                <table>
+                    <colgroup>
+                    <col style="width:33.3%">
+                    <col style="width:33.3%">
+                    <col style="width:33.3%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>근거법령</th>
+                        <th>보존정보</th>
+                        <th>보존기간</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>전자상거래등에서의 소비자보호에 관한 법률</td>
+                        <td>계약 또는 청약철회 등에 관한 기록</td>
+                        <td class="u bold">5년</td>
+                    </tr>
+                    <tr>
+                        <td>전자상거래 등에서의 소비자보호에 관한 법률, 상법, 국세기본법, 소득세법, 법인세법, 부가가치세법</td>
+                        <td>대금결제 및 재화 등의 공급에 관한 기록, 거래에 관한 장부 및 증빙서류</td>
+                        <td class="u bold">5년</td>
+                    </tr>
+                    <tr>
+                        <td>전자상거래 등에서의 소비자보호에 관한 법률</td>
+                        <td>소비자의 불만 또는 분쟁처리에 관한 기록</td>
+                        <td class="u bold">3년</td>
+                    </tr>
+                    <tr>
+                        <td>전자상거래 등에서의 소비자보호에 관한 법률</td>
+                        <td>표시/광고에 관한 기록</td>
+                        <td class="u bold">6개월</td>
+                    </tr>
+                    </tbody>
+                </table>
+                2-3. 개인정보 유효기간제의 적용
+                회사는 정보통신망법 관련 조항에 따라 고객이 1년(이하 “개인정보유효기간”이라고 합니다.)동안 서비스를 이용한 사실 또는 활동한 기록이 없는 경우, 개인정보의 안전한 보호 및 피해 발생을 방지하기 위해 '정보통신망법 제29조'에 근거하여 고객에게 사전통지하고 개인정보를 별도로 분리하여 저장 관리합니다. 회사는 유효기간이 도래하기 30일 전까지 이메일, 문자메시지, 휴대전화 등 고객이 입력한 연락수단을 통하여 사전통지합니다.
+
+                개인정보유효기간제에 의해 별도 분리된 경우라도 고객이 서비스 재이용을 원하실 경우에는, 본인확인 절차를 거쳐 서비스를 재이용하실 수 있습니다.
+
+                <h2>제 3 조 (개인정보 제공 철회)</h2>
+                3-1. 서비스 가입을 통한 개인정보의 수집, 이용, 제공과 관련해 귀하는 동의하신 내용을 언제든지 철회 하실 수 있습니다. 동의철회는 PASS 서비스의 설정 내 서비스 설정/해지관리 화면의 『PASS 머니』에서 "PASS 머니 서비스 해지"를 클릭하면 개인정보의 수집ㆍ이용ㆍ제공에 대한 동의를 바로 철회할 수 있으며, 개인정보보호책임자에게 서면, 전화, 이메일(E-mail) 등으로 연락하시면 회사는 즉시 동의 철회를 위해 필요한 조치를 취합니다. 동의를 철회하고 개인정보를 파기하는 등의 조치가 있으면 그 사실을 귀하께 지체없이 통지하도록 하겠습니다.
+
+
+                <h2>제 4 조 (수집한 개인정보의 파기 절차)</h2>
+                회사는 서비스 이용자가 가입 시 제공한 개인정보의 이용목적이 달성된 후 보관기간 및 이용기간에 따라 해당 정보를 파기하되, 그 파기 절차 및 방법 등은 다음과 같습니다.
+                
+                4-1 파기절차
+                이용자가 서비스 가입 등을 위해 회사에 제공한 개인정보는 서비스 해지 등 이용목적이 달성된 후, 내부 방침 및 기타 관련 법령의 규정에 따른 보유기간 경과 시 삭제되거나 파기합니다.
+                
+                4-2 파기기한
+                이용자의 개인정보 보유기간이 경과 시 삭제합니다. 다만, 타인의 개인정보를 도용하여 회원가입 등을 하였음을 알게 된 때 회사는 지체없이 해당 이용자에게 필요한 조치를 취할 수 있습니다. 또 이용자 중 자신의 개인정보도용을 인지한 이용자가 해당 이용자에 대해 서비스 이용정지 또는 탈퇴를 요구하는 경우에도 필요한 조치를 취할 수 있으며, 소정의 절차를 거쳐 유관기관 또는 관계기관에 그 내용이 제출될 수 있습니다.
+                
+                4-3 파기방법
+                종이에 출력된 개인정보는 분쇄기로 분쇄 또는 소각하거나 화학약품 처리를 하여 용해하여 파기하고, 전자적 파일 형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.
+
+                <h2>제 5 조 (개인정보 처리 위탁)</h2>
+                회사는 서비스 향상을 위해서 아래와 같이 개인정보를 위탁하고 있으며, 관계 법령에 따라 개인정보가 안전하게 관리될 수 있도록 필요한 사항을 규정하고 있습니다. 회사의 개인정보 위탁업체 및 위탁업무 내용은 아래와 같습니다.
+
+                <table>
+                    <colgroup>
+                    <col style="width:20%">
+                    <col style="width:40%">
+                    <col style="width:40%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>위탁업체명</th>
+                        <th>위탁업무의 내용</th>
+                        <th>위탁기간</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="u bold">주식회사 민앤지</td>
+                        <td>서비스 유지 보수, 운영, 가입자 관리 등 지원 업무</td>
+                        <td class="u bold">계약기간 종료 시까지</td>
+                    </tr>
+                    <tr>
+                        <td class="u bold">세틀뱅크 주식회사</td>
+                        <td>고객이 요청한 경우 PASS 머니를 본인 계좌로 전환 이체</td>
+                        <td class="u bold">수집, 이용 동의일로부터 이체 종료일(해지일) 후 5년까지</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h2>제 6 조 (개인정보관리 책임자 및 담당 연락처)</h2>
+                <table>
+                    <colgroup>
+                    <col style="width:20%">
+                    <col style="width:40%">
+                    <col style="width:40%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>개인정보보호 책임자</th>
+                        <th>개인정보보호 담당자</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>성명</td>
+                        <td>김도영 팀장</td>
+                        <td>국희영</td>
+                    </tr>
+                    <tr>
+                        <td>소속부서</td>
+                        <td colspan="2">블록체인/인증사업본부 PASS플랫폼사업팀</td>
+                    </tr>
+                    <tr>
+                        <td>이메일</td>
+                        <td colspan="2">heeyoungcook.lv@sk.com</td>
+                    </tr>
+                    <tr>
+                        <td>전화번호</td>
+                        <td colspan="2">114</td>
+                    </tr>
+                    </tbody>
+                </table>
+                (시행일) 본 약관은 2020년 7월 9일부터 시행합니다.
+                </pre>
+            </div>
+            <!-- //viewer (terms) -->
+        </div>
+    </div>
+</div>
+<!-- //[필수] PASS 머니 개인정보 수집 및 이용동의 -->
+
+<!-- [선택] PASS 머니 서비스 알림 수신 동의 -->
+<div id="doc5" class="ly_pop ly_doc ly_full">
+    <div class="content">
+        <header class="header">
+            <div class="header_inner">
+                <h1 class="header_tit">PASS 머니 서비스 알림 수신 동의</h1>
+                <button type="button" class="ico-close header_btn" onclick="layer_close()"><span class="blind">닫기</span></button>
+            </div>
+        </header>
+        <div class="scroll">
+            <!-- viewer (terms) -->
+            <div class="viewer">
+                <pre class="viewer_txt">PASS 머니 서비스와 관련하여, 본인은 동의 내용을 숙지하였으며, 이에 따라 본인의 개인정보를 아래의 목적으로 SK텔레콤 주식회사가 수집 및 이용하고, 본인에게 전자적 전송 매체를 통하여, 본인에게 마케팅 등의 목적으로 개인에게 최적화된 광고를 다음과 같이 전송하는 것에 동의합니다.
+
+                <h2>1. 개인정보 수집·이용</h2>
+                <table>
+                    <colgroup>
+                    <col style="width:10%">
+                    <col style="width:20%">
+                    <col style="width:40%">
+                    <col style="width:40%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>수집∙이용 항목</th>
+                        <th>이용목적</th>
+                        <th>보유 및 이용기간</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>선택항목</td>
+                        <td>이동전화 번호, 푸시ID, 동의 경로/일시</td>
+                        <td class="u bold fsup">1) 신규 서비스나 이벤트, 제3자의 상품 또는 “PASS머니 서비스” 관련 개인 맞춤형 광고 전송</td>
+                        <td class="u bold fsup">동의 철회시까지
+                        단, 관련 법령의 규정에 따라 보존할 필요가 있을 경우, 해당 기간까지 보존함</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h2>2. 수신거부 설정 방법</h2>
+                <span class="fsup u bold">- T PASS 내 PASS 머니 알림 설정 OFF</span>
+
+                ※ 본 동의는 “PASS 머니”의 선택적 기능 제공을 위한 개인정보 수집/이용에 대한 동의로서, 동의하지 않더라도 “PASS 머니” 서비스 이용이 가능합니다.
+                
+                ※ 법령에 따른 개인정보의 수집/이용, 계약의 이행/편의 증진을 위한 개인정보 처리위탁 및 개인정보 처리와 관련된 일반 사항은 “PASS 머니”의 개인정보 처리방침에 따릅니다.
+                
+                ※ “PASS 머니”에서는 고객이 수집 및 이용에 동의한 개인정보를 활용하여,
+                전자적 전송 매체(SMS/MMS/e-mail/App Push. 등 다양한 전송 매체)를 통하여,
+                ㈜민앤지 및 제3자의 상품 또는 서비스에 대한 개인 맞춤형 광고 정보를 전송할 수 있습니다.
+                
+                ※ 고객이 본 수신 동의를 철회하고자 할 경우 고객센터를 통하여 수신 동의 철회 요청을 할 수 있습니다
+                
+                (시행일) 본 약관은 2020년 7월 9일부터 시행합니다.
+                </pre>
+            </div>
+            <!-- //viewer (terms) -->
+        </div>
+    </div>
+</div>
+<!-- //[선택] PASS 머니 서비스 알림 수신 동의 -->
+
+<!-- loading -->
+<div id="loading" class="ly_pop ly_loading">
+    <span class="content">
+        <div class="loading-circle"></div>
+    </span>
+</div>
+<!-- //loading -->
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="../js/ui.js"></script>
+<script>
+    $(function() {
+        var vw = $(window).width();
+        if(vw < 401) {
+            $('#entry .wrap-select_checkbox:nth-of-type(4)').addClass('line2');
+        }
+        if (vw < 321) {
+            $('#entry .wrap-select_checkbox').addClass('line2');
+        }
+    })
+</script>
+</body>
+</html>

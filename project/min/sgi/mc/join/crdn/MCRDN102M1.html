@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title>SGI서울보증</title>
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/common-ui.css">
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/style-cust.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../../inc/css/style-mark.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/jquery.mobile-1.4.5.css">
+    <script type="text/javascript" src="../../../inc/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../../inc/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
+</head>
+
+<body>
+    <!-- 페이지 유형 제작시 wrapper에 고유 클레스 추가 -->
+    <div class="wrapper ps-sub-page crdnp1021">
+        <header class="header">
+            <button type="button" class="prev-page" title="이전페이지 이동"></button>
+            <h1 class="header-tit">전세금보장 상담신청</h1>
+            <button type="button" class="sidenav-btn" title="전체메뉴"></button>
+        </header>
+        <!-- 페이지 하단에 플로팅 버튼이 있을시 class = btm-fixed 추가 -->
+        <section class="container btm-fixed">
+            <!-- 사이드 여백설정 공통 class = inner -->
+            <!-- 페이지 하단에 플로팅 버튼이 있을시 class = acco-fixed 추가 -->
+            <div class="content acco-fixed">
+                <div class="cont-wrap">
+                    <div class="deta-tit02">진행상황확인</div>
+                    <div class="inner">
+                        <div class="step-info-wrap" role="img" aria-label="진행단계, 총 2단계(신청, 발급불가) 중 1단계 신청">
+                            <!-- 진행단계별로 aria-label 문구 변경해주세요.
+                                신청 : 진행단계, 총 3단계(신청, 발급불가) 중 1단계 신청
+                                발급불가 : 진행단계, 총 3단계(신청, 발급불가) 중 2단계 발급불가
+                             -->
+                            <ul>
+                                <li class="icon01">신청</li>
+                                <li class="icon04 on">발급불가</li>
+                            </ul>
+                        </div>
+                        <div class="ps-table-wrap type03">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">발급불가사유</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>인수조건 불충족</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="line-box-wrap">
+                            <div class="tit-wrap">
+                                <p class="tit-txt">구로디지털지점</p>
+                                <span class="icon">
+                                    <!-- 
+                                        담당지점에 해당하는 아이콘 노출
+                                        담당지점 아이콘 없을시 img 태그 삭제
+                                    -->
+                                    <!-- <img src="../../../inc/images/@temp/logo.png" alt=""/> -->
+                                </span>
+                            </div>
+                            <ul class="info-list-wrap">
+                                <li class="icon-call">02-846-0021 <button type="button" class="inline-btn gray tel" title="앱실행">전화걸기</button></li>
+                                <li class="icon-fax">02-2103-5395</li>
+                                <li class="icon-time fc-01">상담가능시간 평일 <span>09:00~17:30</span></li>
+                                <li class="icon-person">담당자정보는 고객님의 휴대폰전화번호로 안내됩니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- cont-wrap -->
+            </div>
+            <!-- content -->
+            <div class="ps-accordion-wrap type-message-01">
+                <div class="accordion-item">
+                    <button class="accordion-tit on" type="button" title="펼쳐짐">진행상황확인 안내</button>
+                    <div class="accordion-docu">
+                        <ul class="ps-bu-list gray circle">
+                            <li>발급불가 사유에 대한 자세한 상담은 담당직원과 통화바랍니다.</li>
+                            <li>가입신청 후 연락부재, 서류 미제출 등 심사진행이 불가한 경우 발급불가로 안내되거나, 신청내용이 삭제됩니다.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="fix-btn-wrap">
+                <button type="button" class="btn gray small">신청취소</button>
+                <button type="button" class="btn blue">확인</button>
+            </div>
+        </section>
+        <footer class="footer"></footer>
+    </div>
+</body>
+</html>

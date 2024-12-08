@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title>SGI서울보증</title>
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/common-ui.css">
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/style-cust.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../../inc/css/style-mark.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/jquery.mobile-1.4.5.css">
+    <script type="text/javascript" src="../../../inc/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../../inc/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
+</head>
+
+<body>
+    <!-- 페이지 유형 제작시 pop-wrapper에 고유 클레스 추가 (클레스명은 페이지명과 id참고)-->
+    <section class="pop-wrapper pop-js-wrap srchp2040" data-page="pop-page-01" style="display:block;">
+        <header class="pop-head">
+            <h1 class="pop-tit">조회조건</h1>
+        </header>
+        <section class="pop-container btm-fixed">
+            <!-- 사이드 여백설정 공통 class = inner -->
+            <!-- 페이지 하단에 고정 버튼이 있을시 class = btm-fixed 추가 -->
+            <div class="pop-content">
+                <div class="cont-wrap">
+                    <div class="rollup-fix-wrap">
+                        <div class="rollup-fix-data">
+                            <ul class="tab-01">
+                                <li><button type="button">기간별</button></li>
+                                <li><button type="button" class="on" title="선택됨">유효현황</button></li>
+                                <li><button type="button">만기대상</button></li>
+                                <li><button type="button">증권별</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-conts-01">
+                        <div class="tab-cont"></div>
+                        <div class="tab-cont on">
+                            <div class="ps-from-item">
+                                <p class="write-title">기준일자</p>
+                                <div class="ps-date-wrap">
+                                    <div class="ps-datepicker">
+                                        <div class="ps-date-fild">
+                                            <input class="inp-base" type="text" title="날짜선택">
+                                            <!-- 최소/최대 선택값 필요시 data-min="2013-10-05" data-max="2020-12-01" -->
+                                            <button type="button" class="btn-base ps-drop ps-datepicker-btn" data-expanded="false"><span>기준일자 설정</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="ps-txt01">※ 기준일 현재 유효한 보험증권이 조회</p>
+                            </div>
+                            <div class="ps-from-item">
+                                <p class="write-title">보험상품</p>
+                                <div class="ps-select">
+                                    <select title="옵션">
+                                        <option>전체</option>
+                                        <option>옵션명1</option>
+                                        <option>옵션명2</option>
+                                        <option>옵션명3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="ps-from-item">
+                                <p class="write-title">피보험자번호</p>
+                                <div class="ps-rdo-wrap basic">
+                                    <div class="ps-rdo">
+                                        <input type="radio" id="from02-rdo01" name="from-rdo02" checked="">
+                                        <label for="from02-rdo01">주민등록번호</label>
+                                    </div>
+                                    <div class="ps-rdo">
+                                        <input type="radio" id="from02-rdo02" name="from-rdo02">
+                                        <label for="from02-rdo02">사업자등록번호</label>
+                                    </div>
+                                </div>
+                                <!-- 주민등록번호 선택 시 사용 -->
+                                <div class="security-wrap">
+                                    <!-- 입력후에 button에 on class 추가 button 태그 html 텍스트 겟수만큼 ● 추가 title -> aria-label로 변경 -->
+                                    <button type="button" class="security-btn" title="보안키패드 열림">숫자 13자리 입력</button>
+                                </div>
+
+                                <!-- 사업자등록번호 선택 시 사용 -->
+                                <!-- <div class="ps-input">
+                                    <input type="text" title="사업자등록번호" placeholder="숫자 10자리 입력">
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="tab-cont"></div>
+                        <div class="tab-cont"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- pop-content -->
+            <div class="fix-btn-wrap">
+                <button type="button" class="btn blue">조회</button>
+            </div>
+        </section>
+        <button type="button" class="close-pop" title="팝업창 닫기"></button>
+        <!-- pop-container -->
+    </section>
+</body>
+</html>

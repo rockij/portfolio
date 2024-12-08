@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title>SGI서울보증</title>
+    <link rel="stylesheet" type="text/css" href="../../inc/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../inc/css/common-ui.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../inc/css/style-cust.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../inc/css/style-mark.css">
+    <link rel="stylesheet" type="text/css" href="../../inc/css/jquery.mobile-1.4.5.css">
+    <script type="text/javascript" src="../../inc/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="../../inc/js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../inc/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
+</head>
+
+<body>
+    <!-- 페이지 유형 제작시 pop-wrapper에 고유 클레스 추가 (클레스명은 페이지명과 id참고)-->
+    <section class="pop-wrapper pop-js-wrap cstmp2020" data-page="pop-page-01" style="display:block;">
+        <header class="pop-head">
+            <h1 class="pop-tit">고객정보변경</h1>
+        </header>
+        <section class="pop-container btm-fixed">
+            <!-- 사이드 여백설정 공통 class = inner -->
+            <!-- 페이지 하단에 고정 버튼이 있을시 class = btm-fixed 추가 -->
+            <div class="pop-content">
+                <!-- 페이지 하단에 고정 아코디언 있을시 class = acco-fixed 추가 -->
+                <div class="cont-wrap">
+                    <!-- 명함 이미지  -->
+                    <div class="card-img-wrap">
+                        <div class="card-img">
+                            <!-- 고객 명함 등록시 -->
+                            <!-- <button class="btn-photo" type="button" title="명함 촬영 앱 실행"> -->
+                                <!-- 명함 이미지 -->
+                                <!-- <img src="../../inc/images/@temp/card-img.png" alt=""> -->
+                            <!-- </button> -->
+                            <!-- //고객 명함 등록시 -->
+                            
+                            <!-- 고객 명함 미 등록시 -->
+                            <button class="btn-photo img-none" type="button" title="명함 촬영 앱 실행">
+                                <p class="txt02">명함촬영을 통해<br><span class="fw-02">명함정보</span>를 등록하세요.</p>
+                            </button>
+                            <!-- //고객 명함 미 등록시 -->
+                        </div>
+                    </div>
+                    <!-- //명함 이미지  -->
+                    <div class="ps-from-item">
+                        <p class="write-title">회사명</p>
+                        <div class="ps-input in-btn-wrap">
+                            <input type="text" title="회사명 입력" placeholder="" readonly>
+                            <button type="button" class="inline-btn gray">기업검색</button>
+                        </div>
+                    </div>
+                    <div class="ps-from-item">
+                        <p class="write-title">이름</p>
+                        <div class="ps-input">
+                            <input type="text" title="이름 입력" placeholder="이름 입력" value="김서울" readonly>
+                        </div>
+                    </div>
+                    <div class="ps-from-item division">
+                        <div class="item">
+                            <p class="write-title">소속(근무부서)</p>
+                            <div class="ps-input in-btn-wrap">
+                                <input type="text" title="소속(근무부서) 입력" placeholder="소속(근무부서) 입력" value="기획팀">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p class="write-title">직위</p>
+                            <div class="ps-input in-btn-wrap">
+                                <input type="text" title="직위 입력" placeholder="직위 입력" value="책임">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ps-from-item">
+                        <p class="write-title">휴대전화</p>
+                        <div class="ps-input">
+                            <input type="text" title="휴대전화 입력" placeholder="휴대전화 입력" value="010-0000-0000">
+                        </div>
+                    </div>
+                    <div class="ps-from-item">
+                        <p class="write-title">이메일</p>
+                        <div class="ps-input">
+                            <input type="text" title="이메일 입력" placeholder="이메일 입력" value="soul.kim@m4nc.com">
+                        </div>
+                    </div>
+                    <div class="ps-from-item">
+                        <p class="write-title">회사전화</p>
+                        <div class="ps-input">
+                            <input type="text" title="회사전화 입력" placeholder="회사전화 입력" value="010-0000-0000">
+                        </div>
+                    </div>
+                    <div class="ps-from-item">
+                        <p class="write-title">팩스</p>
+                        <div class="ps-input">
+                            <input type="text" title="팩스 입력" placeholder="팩스 입력" value="02-0000-0000">
+                        </div>
+                    </div>
+                    <div class="ps-from-item">
+                        <p class="write-title">회사주소</p>
+                        <div class="ps-input in-btn-wrap">
+                            <input type="text" title="우편번호" placeholder="우편번호" value="08520">
+                            <button type="button" class="inline-btn gray">주소찾기</button>
+                        </div>
+                        <div class="ps-input">
+                            <input type="text" title="도로명 주소" placeholder="도로명 주소" value="서울시 종로구 김상옥로 29">
+                        </div>
+                        <div class="ps-input">
+                            <input type="text" title="상세 주소 입력" placeholder="상세 주소" value="서울보증보험">
+                        </div>
+                    </div>
+                    <div class="ps-from-item">
+                        <p class="write-title">담당지점</p>
+                        <div class="ps-input-wrap">
+                            <div class="ps-input small">
+                                <input type="text" title="담당지점 코드 입력" placeholder="담당지점 코드 입력" value="122" readonly>
+                            </div>
+                            <div class="ps-input">
+                                <input type="text" title="담당지점명 입력" placeholder="담당지점명 입력" value="종로지점" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ps-from-item">
+                        <p class="write-title">담당대리점</p>
+                        <div class="ps-input-wrap">
+                            <div class="ps-input small">
+                                <input type="text" title="담당대리점 코드 입력" placeholder="담당대리점 코드 입력" value="Y2Q" readonly>
+                            </div>
+                            <div class="ps-input">
+                                <input type="text" title="담당대리점명 입력" placeholder="담당대리점명 입력" value="비제이에이치(주)" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- pop-content -->
+            <div class="fix-btn-wrap">
+                <button type="button" class="btn gray small">취소</button>
+                <button type="button" class="btn blue">확인</button>
+            </div>
+        </section>
+        <button type="button" class="close-pop" title="팝업창 닫기"></button>
+        <!-- pop-container -->
+        <!-- CCSTM202P1 -->
+        <article class="pop-modal pop-modal-js-wrap modal-type-02" data-page="pop-modal-01">
+            <header class="pop-head">
+                <h1 class="pop-tit">고객정보 선택</h1>
+            </header>
+            <div class="modal-body">
+                <div class="ps-radio-list-wrap">
+                    <div class="ps-radio">
+                        <input type="radio" id="rdo-prod-01" name="rdo-prod">
+                        <label for="rdo-prod-01">
+                            <span class="tit">SGI 서울보증 114-87-00000</span>
+                            <span class="info">김서울 010-0000-0000</span>
+                            <span class="date">2019-07-08 등록</span>
+                        </label>
+                    </div>
+                    <div class="ps-radio">
+                        <input type="radio" id="rdo-prod-02" name="rdo-prod">
+                        <label for="rdo-prod-02">
+                            <span class="tit">SGI 서울보증 114-87-00000</span>
+                            <span class="info">김서울 010-0000-0000</span>
+                            <span class="date">2019-07-08 등록</span>
+                        </label>
+                    </div>
+                    <div class="ps-radio">
+                        <input type="radio" id="rdo-prod-03" name="rdo-prod">
+                        <label for="rdo-prod-03">
+                            <span class="tit">SGI 서울보증 114-87-00000</span>
+                            <span class="info">김서울 010-0000-0000</span>
+                            <span class="date">2019-07-08 등록</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-wrap">
+                <button type="button" class="btn blue">고객정보조회</button>
+            </div>
+            <button type="button" class="close-pop close-js" title="팝업창 닫기"></button>
+        </article>
+        <!--// CCSTM202P1 -->
+    </section>
+</body>
+</html>

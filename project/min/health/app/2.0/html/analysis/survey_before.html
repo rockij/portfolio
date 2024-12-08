@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko" class="app">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="../../../../../../../global/resources/css/global.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/common.min.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/content.min.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/app.min.css" media="screen" rel="stylesheet">
+<title>건강지키미</title>
+</head>
+<body>
+
+<div id="wrap">
+
+	<header id="header" class="fix top">
+		<button type="button" onclick="" class="btn_prev"><i>뒤로가기</i></button>
+        <h1>건강분석</h1>
+    </header>
+    <!-- //header -->
+    
+	<div id="content">
+        <section class="analysis_nodata" data-type="설문조사">
+            <h2>딱! 1분이면 되요.</h2>
+            <p>건강정보 분석을 위해<br>간단한 설문조사를 진행해주세요.</p>
+            <figure></figure>
+            <div class="txt">
+                본 서비스는 의료서비스가 아니므로<br>질병의 유무를 판단 할 수 없으며,
+                <p>질병의 유무를 판단하기 위해서는 의사의 검진이 필요합니다.</p>
+            </div>
+            <div class="btn_area_simp">
+                <button type="button" class="skip" onclick="popupOpen('alert','mw',0);analysisUse.slideTo(0);">설문조사 진행하기</button>
+            </div>
+        </section>
+	</div>
+    <!-- //content -->
+
+    <footer class="global_footer mo">
+        <article>
+            <div class="infobx">
+                <button type="button" onclick="popupOpen('cpinfo','mw'); cpinfoTab('skt')" class="btn_info">(주) 민앤지 사업자 정보</button>
+                <div class="cau">
+                    <p class="po">본 서비스는 가입 즉시 서비스가 개시되는 상품으로 청약철회가 불가능합니다.</p>
+                    (전자상거래 등에서 소비자보호에 관한 법률 제7조 2항 5호에 따라 디지털 콘텐츠의 제공이 개시 된 경우 청약철회를 제공하지 않습니다.)<br>
+                    서비스 이용/가입/해지문의 : ㈜민앤지 고객센터 1599-4760
+                </div>
+            </div>
+        </article>
+    </footer>
+    <!-- //footer -->
+
+    <nav id="gnb" class="fix btm">
+        <ul>
+            <li><a href="#;" data-name="홈"></a></li>
+            <li><a href="#;" data-name="헬스케어"></a></li>
+            <li><a href="#;" data-name="AI영양제리뷰"></a></li>
+            <li><a href="#;" data-name="건강분석" class="on"></a></li>
+        </ul>
+    </nav>
+    <!-- //gnb -->
+    
+</div>
+
+<!-- 진행전 -->
+<div id="mw-alert" class="ly_pop popBtm ly_analysis_use">
+    <div class="wrap">
+        <div class="content">
+            <div id="analysisUse" class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-no-swiping">
+                        <h2 class="mtxt"><p>진행 전 꼭 읽어주세요.</p><strong>01.</strong></h2>
+                        <p>건강정보 분석은 최근 건강검진내역을<br>기반으로 1회 제공됩니다.<br>꼭!<br>정확한 분석을 위해,<br>신중하게 설문조사를 진행해주세요.</p>
+                        <div class="btn_area_one">
+                            <button type="button" onclick="analysisUse.slideNext();" class="skip">넵, 알겠습니다.</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-no-swiping">
+                        <h2 class="mtxt"><p>진행 전 꼭 읽어주세요.</p><strong>02.</strong></h2>
+                        <p>고객님이 건강검진을 받으셨던<br>과거 시점을 기준으로 설문조사를 진행해주세요.<br><br>(현재를 기준으로 진행 시,<br>부정확한 결과가 안내될 수 있어요.)</p>
+                        <div class="btn_area_one">
+                            <button type="button" onclick="popupClose('alert','mw');" class="skip">넵, 시작할게요.</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //진행전 -->
+
+<!-- 사용자정보 -->
+<div id="mw-cpinfo" class="ly_cpinfo_mw">
+    <div class="wrap">
+        <button type="button" onclick="popupClose('cpinfo','mw')" class="close right"><i>닫기</i></button>
+        <div class="content">
+            <h2>사업자 정보</h2>
+            <ul class="list">
+                <li>
+                    <strong>상호</strong>
+                    <span>㈜민앤지</span>
+                </li>
+                <li>
+                    <strong>대표이사</strong>
+                    <span>이현철</span>
+                </li>
+                <li>
+                    <strong>주소</strong>
+                    <span>서울시 강남구 테헤란로 34길 6<br>태광타워 12F, 13F</span>
+                </li>
+                <li>
+                    <strong>통신판매업신고번호</strong>
+                    <span>제2015-서울강남-00012호</span>
+                </li>
+                <li>
+                    <strong>사업자등록번호</strong>
+                    <span>214-88-39117</span>
+                </li>
+                <li>
+                    <strong>고객센터</strong>
+                    <span>1599-4760 (평일 09:00-18:00)</span>
+                </li>
+                <li>
+                    <strong>호스팅서비스사업자</strong>
+                    <span>㈜민앤지</span>
+                </li>
+                <li>
+                    <strong>이메일</strong>
+                    <span>minwise.help@minwise.co.kr</span>
+                </li>
+            </ul>
+            <div class="tabs t3">
+                <button type="button" onclick="cpinfoTab('skt')" data-com="skt">SKT</button>
+                <button type="button" onclick="cpinfoTab('kt')" data-com="kt">KT</button>
+                <button type="button" onclick="cpinfoTab('lgu')" data-com="lgu">LGU+</button>
+            </div>
+            <div class="telecom_terms">
+                <!-- skt -->
+                <ul id="terms-skt" class="list_terms">
+                    <li><button type="button" onclick="">사업자 정보 확인</button></li>
+                    <li><button type="button" onclick="">건강지키미 무료서비스이용약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 유료서비스이용약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 개인정보 수집 및 이용약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 개인정보 제3자 제공 동의약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 SKT 제3자 제공 약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 개인정보 취급위탁약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 서비스 알림 수신동의 약관</button></li>
+                    <li><a href="https://www.minwise.co.kr/sterm/mprivacy" target="_blank">개인정보처리방침</a></li>
+                </ul>
+                <!-- //skt -->
+                <!-- kt -->
+                <ul id="terms-kt" class="list_terms">
+                    <li><button type="button" onclick="">사업자 정보 확인</button></li>
+                    <li><button type="button" onclick="">건강지키미 무료서비스이용약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 유료서비스이용약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 개인정보 수집 및 이용약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 개인정보 제3자 제공 동의약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 알림 및 광고수신동의 약관</button></li>
+                    <li><a href="https://www.minwise.co.kr/sterm/mprivacy" target="_blank">개인정보처리방침</a></li>
+                </ul>
+                <!-- //kt -->
+                <!-- lgu+ -->
+                <ul id="terms-lgu" class="list_terms">
+                    <li><button type="button" onclick="">사업자 정보 확인</button></li>
+                    <li><button type="button" onclick="">건강지키미 무료서비스이용약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 유료서비스이용약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 개인정보 수집 및 이용약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 개인정보 제3자 제공 동의약관</button></li>
+                    <li><button type="button" onclick="">건강지키미 알림 및 광고수신동의 약관</button></li>
+                    <li><a href="https://www.minwise.co.kr/sterm/mprivacy" target="_blank">개인정보처리방침</a></li>
+                </ul>
+                <!-- //lgu+ -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //사용자정보 -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../../resources/js/gsap.min.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../../../../../../global/resources/js/global.js"></script>
+<script src="../../resources/js/design.js" defer></script>
+<script>
+$(function(){
+    swipeGroup();
+    analysisUse.init();
+});
+</script>
+
+</body>
+</html>

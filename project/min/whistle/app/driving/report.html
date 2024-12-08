@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link href="../resources/css/font.local.css" media="screen" rel="stylesheet"> <!-- 폐쇄망 -->
+<link href="../resources/css/font.cdn.css" media="screen" rel="stylesheet"> <!-- 인터넷망 -->
+<link href="../resources/css/common.min.css" media="screen" rel="stylesheet">
+<link href="../resources/css/content.min.css" media="screen" rel="stylesheet">
+<link href="../resources/css/driving.min.css" media="screen" rel="stylesheet">
+<title>010휘슬</title>
+</head>
+<body class="bgf">
+<div id="wrap" class="driving_report">
+    <header id="header" class="fix top">
+        <button type="button" onclick="" class="btn_prev" title="뒤로가기"><i></i></button>
+    </header>
+    <div id="content">
+        <section class="car_info_wrap">
+            <div class="img_wrap">
+                <img src="../resources/image/sample/thum_720x720.png" alt=""/>
+            </div>
+            <ul class="info_txt">
+                <li class="icon01">
+                    <span class="tit">일시:</span>
+                    <span class="sub">2020. 10. 23. 수, 08:05:19</span>
+                </li>
+                <li class="icon02">
+                    <span class="tit">위치:</span>
+                    <span class="sub">서울 강남구 테헤란로 24길 6</span>
+                </li>
+        </section>
+        <section class="form_wrap">
+            <section class="inner_wrap">
+                <ul class="form">
+                    <li class="item">
+                        <span class="th">자동차 등록번호</span>
+                        <div class="ip_box">
+                            <label for="txt" class="lbl">신고 대상의 자동차 번호를 입력해 주세요</label>
+                            <input type="text" id="txt" class="ip" name="txt"  value="" maxlength="9">
+                        </div>
+                    </li>
+                    <li class="item">
+                        <span class="th">내용</span>
+                        <div class="ip_box select_box">
+                            <label for="select" class="lbl">카테고리를 선택해 주세요</label>
+                            <select name="" id="select">
+                                <option value="">비매너 주차</option>
+                                <option value="">비매너 운전</option>
+                                <option value="">기타 불편 행위</option>
+                            </select>
+                        </div>
+                        <div class="ip_box textarea_box">
+                            <label for="textarea" class="lbl">내용을 입력해 주세요(50자)<br>비방 및 욕설 등 불쾌감을 주는 내용의 경우<br>신고 등록이 취소될 수 있습니다.</label>
+                            <textarea id="textarea" class="ip" name="textarea"  value="" maxlength="50"></textarea>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </section>
+    </div>
+    <!-- //content -->
+    <div class="btn_area_wide">
+        <!-- 비활성화시 disabled 추가-->
+        <button type="button" class="skip" onclick="">등록하기</button>
+    </div>
+    <!-- //btn -->
+</div>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script> -->
+<script src="../resources/js/jquery-1.12.4.min.js"></script>
+<script src="../resources/js/gsap.min.js"></script>
+<script src="../../../../../global/resources/js/global.js"></script>
+<script src="../resources/js/design.js" defer></script>
+<script>
+$(function() {
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="format-detection" content="telephone=no">
+<link href="resources/css/reset.css" media="screen" rel="stylesheet">
+<link href="../global/resources/css/global.css" media="screen" rel="stylesheet">
+<link href="resources/css/style.css" media="screen" rel="stylesheet">
+<script src="resources/js/jquery-1.11.1.min.js"></script>
+<script src="resources/js/webfont.js"></script>
+<script src="../global/resources/js/global.js" defer="defer"></script>
+<script src="resources/js/design.js" defer="defer"></script>
+<!--[if lt IE 9]>
+<script src="resources/js/html5shiv.js"></script>
+<![endif]-->
+<title>뱅크원샷</title>
+</head>
+<body>
+
+<!--[if lte ie 8]>
+<div class="ie8_down_ver">이 브라우저는 지원하지 않습니다.<br>브라우저 업데이트 하시기 바랍니다.<br><a href="https://support.microsoft.com/ko-kr/help/17621/internet-explorer-downloads" target="_blank">업데이트 바로가기</a></div>
+<![endif]-->
+
+<div class="win">
+
+	<section class="ct">
+		<h2 class="title_type">
+			<!-- [2020-11-11] 태그 변경 -->
+			<i class="ico_cau"></i>
+			<p class="tit_wrap">
+				<span class="tit">뱅크원샷 서비스 해지</span>
+				<span class="s">서비스 해지시 30일 내 재가입이 불가 합니다.</span>
+			</p>
+			<!-- //[2020-11-11] 태그 변경 -->
+        </h2>
+		<div class="withdraw_section">
+			<fieldset id="step1" class="form_type" style="display:block">
+				<legend>통신사 정보 입력</legend>
+				<p class="cau2">휴대폰 정보를 입력 후 수신된 인증번호를 입력하세요.</p>
+				<ul>
+					<li class="tab">
+						<span class="stit">이동통신사</span>
+						<ul>
+							<li><span>SKT</span></li>
+							<li class="active"><span>KT</span></li>
+							<li class="last"><span>LGU+</span></li>
+						</ul>
+					</li>
+					<li class="num">
+						<span class="stit">휴대폰번호</span>
+						<span class="box">
+							<span class="select">
+								<select id="">
+								<option value="010">010</option>
+								<option value="011">011</option>
+								<option value="016">016</option>
+								<option value="017">017</option>
+								<option value="018">018</option>
+								<option value="019">019</option>
+								</select>
+							</span>
+							<input type="text" name="" id="" maxlength="8" placeholder="핸드폰번호 입력">
+						</span><!----><button type="button" class="btn_m2 btn_num" onclick="$('#step1').hide();$('#step2').show();$('#ly_hp').show();">인증요청</button>
+						<!--
+							핸드폰 번호 입력시
+							<button type="button" class="btn_m btn_num on" onclick="">인증요청</button>
+						-->
+					</li>
+				</ul>
+				<p class="cau">* 뱅크원샷은 <span class="fc_red">월 1,100원(부가세포함)</span>의 유료 서비스로,<br>사용일 수 만큼 일할 계산되어 과금됩니다.</p>
+				<div class="btn_area"><button type="button" onclick="$('#step1').hide();$('.result').show();" class="btn_r btn_type ml0">확인</button></div>
+			</fieldset>
+			<!-- //정보입력 -->
+			<fieldset id="step2" class="form_type">
+				<legend>인증번호 입력</legend>
+				<p class="cau2">휴대폰 정보를 입력 후 수신된 인증번호를 입력하세요.</p>
+				<ul>
+					<li class="num2">
+						<span class="stit">인증번호</span>
+						<span class="box"><input type="text" name="" id="" maxlength="6" placeholder="인증번호 입력"><span class="timer">인증유효시간<span class="fc_red">03:00</span></span></span><button type="button" onclick="$('#step2').hide();$('#capcha').show();$('#capcha #answer_captcha').focus();" class="btn_re">재전송</button>
+					</li>
+				</ul>
+				<div class="btn_area"><button type="button" onclick="$('#step2').hide();$('.result').show();" class="btn_r btn_type ml0">확인</button></div>
+			</fieldset>
+			<script>
+				$(function(){
+					$(".form_type .tab li>span").click(function(e){
+						$(".form_type .tab li>span").parent().removeClass("active");
+						$(this).parent().addClass("active");
+						e.preventDefault();
+					});
+					$(".form_type .num input").keyup(function(){
+						if($(this).val() != ""){
+							$(this).parent().next(".btn_num").addClass("on");
+						}else{
+							$(".btn_num").removeClass("on");
+						}
+					});
+					$(".form_type .box input").focus(function() {
+						var tFocus = $(this).parents('li');
+						$('.form_type li').removeClass('focused');
+						$(tFocus).addClass('focused');
+					});
+					$(".form_type .box input").blur(function() {
+						$('.form_type li').removeClass('focused');
+					});
+				});
+			</script>
+			<!-- //기본정보 입력 -->
+			<fieldset id="captcha" class="form_type">
+				<legend>캡차 입력</legend>
+				<p class="cau2">하단 보안문자(숫자)를 입력하세요.</p>
+				<ul>
+					<li class="captcha">
+						<div class="pinArea">
+							<p class="pin_img"><img src="resources/images/temp_capcha.png" width="131" height="42" id="img_captcha"></p>
+							<p class="pin_btn"><button type="button" id="newSafeNum"><img src="resources/images/btn_refresh.gif" alt="새로고침"></button></p>
+						</div>
+						<div class="userNum">
+							<label class="label_txt" for="captchaAnswer">보안문자(숫자)입력</label>
+							<input name="answer_captcha" title="보안문자(숫자)입력" id="answer_captcha" type="text" maxlength="5" required placeholder="보안숫자 입력">
+						</div>
+					</li>
+				</ul>
+				<p class="cau">화면에 출력된 문자를 정확하게 입력해 주세요.</p>
+				<div class="btn_area"><button type="button" onclick="$('#capcha').hide();$('#step1').show();" class="btn_r btn_type2 ml0">취소</button><!----><button type="button" onclick="$('#capcha').hide();$('.result').show();" class="btn_r btn_type">확인</button></div>
+			</fieldset>
+			<!-- //캡차 -->
+			<div class="result">
+				<h3>뱅크원샷 서비스를 해지하시겠습니까?</h3>
+				<p>서비스 해지 즉시, 등록한 은행 및 계좌 정보가 삭제 되며 <br>이체 예정 알림을 받으실 수 없습니다.<br>서비스 해지를 원하시는 경우 <span class="fc_red">[해지]</span> 버튼을 눌러주세요.</p>
+				<div class="btn_area"><button onclick="$('#step1').show();$('.result').hide();" class="btn_r btn_type ml0">계속이용</button><!----><button type="button" onclick="$('#ly_alert').show();" class="btn_r btn_type2">해지</button></div>
+			</div>
+			<!-- //완료 -->
+		</div>
+	</section>
+	<footer>
+		<div>
+			<span class="ico_com logo2">민앤지</span>
+			<button type="button" onclick="fullpageStop();$('.ly_pop').hide();$('#ly_service').show();">서비스 이용약관</button><i></i><button type="button" onclick="fullpageStop();$('.ly_pop').hide();$('#ly_private').show();">개인정보취급방침</button><i></i><button type="button" onclick="popupOpen('cpinfo','pc')">(주) 민앤지 사업자 정보</button>
+			<address>
+				<span>(주)민앤지</span>  서울특별시 강남구 테헤란로 34길6, 태광타워 12, 13층&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br class="br"><span>사업자등록번호</span>  214-88-39117<br>Copyright ⓒ Minwise Co.,Ltd.  All rights reserved.
+			</address>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+
+<!-- 사용자정보 -->
+<div id="mw-cpinfo" class="ly_cpinfo_res">
+    <div class="wrap">
+        <button type="button" onclick="popupClose('cpinfo','pc')" class="close right"><i>닫기</i></button>
+        <div class="content">
+            <h2>사업자 정보</h2>
+            <ul class="list">
+                <li>
+                    <strong>상호</strong>
+                    <span>㈜민앤지</span>
+                </li>
+                <li>
+                    <strong>대표이사</strong>
+                    <span>이현철</span>
+                </li>
+                <li>
+                    <strong>주소</strong>
+                    <span>서울시 강남구 테헤란로 34길 6<br>태광타워 12F, 13F</span>
+                </li>
+                <li>
+                    <strong>통신판매업신고번호</strong>
+                    <span>제2015-서울강남-00012호</span>
+                </li>
+                <li>
+                    <strong>사업자등록번호</strong>
+                    <span>214-88-39117</span>
+                </li>
+                <li>
+                    <strong>고객센터</strong>
+                    <span>1599-1054 (평일 09:00-18:00)</span>
+                </li>
+                <li>
+                    <strong>호스팅서비스사업자</strong>
+                    <span>㈜민앤지</span>
+                </li>
+                <li>
+                    <strong>이메일</strong>
+                    <span>minwise.help@minwise.co.kr</span>
+                </li>
+            </ul>
+            <div class="tabs t3">
+                <button type="button" onclick="cpinfoTab('skt')" data-com="skt">SKT</button>
+                <button type="button" onclick="cpinfoTab('kt')" data-com="kt">KT</button>
+                <button type="button" onclick="cpinfoTab('lgu')" data-com="lgu">LGU+</button>
+            </div>
+            <div class="telecom_terms">
+                <!-- skt -->
+                <ul id="terms-skt" class="list_terms">
+                    <li><button type="button" onclick="">사업자 정보 확인</button></li>
+                    <li><button type="button" onclick="">세이프캐시 무료서비스이용약관</button></li>
+                    <li><button type="button" onclick="">세이프캐시 유료서비스이용약관</button></li>
+                    <li><button type="button" onclick="">세이프캐시 개인정보 수집 및 이용약관</button></li>
+                    <li><button type="button" onclick="">세이프캐시 개인정보 제3자 제공 약관</button></li>
+                    <li><button type="button" onclick="">세이프캐시 SKT 제3자 제공 약관</button></li>
+                    <li><button type="button" onclick="">세이프캐시 세틀뱅크 제3자 제공 약관</button></li>
+                    <li><button type="button" onclick="">세이프캐시 FDS 이용약관</button></li>
+                    <li><button type="button" onclick="">세이프캐시 마케팅 활용 동의</button></li>
+                    <li><a href="https://www.minwise.co.kr/sterm/mprivacy" target="_blank">개인정보처리방침</a></li>
+                </ul>
+                <!-- //skt -->
+                <!-- kt -->
+                <ul id="terms-kt" class="list_terms">
+                    <li><button type="button" onclick="">사업자 정보 확인</button></li>
+                    <li><button type="button" onclick="">세이프캐시 무료서비스이용약관</button></li>
+                    <li><button type="button" onclick="">세이프캐시 유료서비스이용약관</button></li>
+                    <li><button type="button" onclick="">세이프캐시 개인정보 수집 및 이용약관</button></li>
+                    <li><button type="button" onclick="">세이프캐시 개인정보 제3자 제공 약관</button></li>
+                    <li><button type="button" onclick="">세이프캐시 KT 제3자 제공 약관</button></li>
+                    <li><button type="button" onclick="">세이프캐시 세틀뱅크 제3자 제공 약관</button></li>
+                    <li><button type="button" onclick="">세이프캐시 FDS 이용약관</button></li>
+                    <li><button type="button" onclick="">세이프캐시 마케팅 활용 동의</button></li>
+                    <li><a href="https://www.minwise.co.kr/sterm/mprivacy" target="_blank">개인정보처리방침</a></li>
+                </ul>
+                <!-- //kt -->
+                <!-- lgu+ -->
+                <ul id="terms-lgu" class="list_terms">
+                    <li><button type="button" onclick="">사업자 정보 확인</button></li>
+                    <li><button type="button" onclick="">세이프캐시 무료서비스이용약관</button></li>
+                    <li><button type="button" onclick="">세이프캐시 유료서비스이용약관</button></li>
+                    <li><button type="button" onclick="">세이프캐시 개인정보 수집 및 이용약관</button></li>
+                    <li><button type="button" onclick="">세이프캐시 개인정보 제3자 제공 약관</button></li>
+                    <li><button type="button" onclick="">세이프캐시 LGU+ 제3자 제공 약관</button></li>
+                    <li><button type="button" onclick="">세이프캐시 세틀뱅크 제3자 제공 약관</button></li>
+                    <li><button type="button" onclick="">세이프캐시 FDS 이용약관</button></li>
+                    <li><button type="button" onclick="">세이프캐시 피싱해킹 금융사기 보상보험 약관</button></li>
+                    <li><button type="button" onclick="">세이프캐시 구매물품 보상보험 약관</button></li>
+                    <li><button type="button" onclick="">세이프캐시 마케팅 활용 동의</button></li>
+                    <li><a href="https://www.minwise.co.kr/sterm/mprivacy" target="_blank">개인정보처리방침</a></li>
+                </ul>
+                <!-- //lgu+ -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //사용자정보 -->
+
+<!-- 인증요청 확인 팝업 -->
+<section id="ly_hp" class="ly_pop ly_alert">
+	<span class="bg"></span>
+	<span class="content">
+		<p>
+			휴대폰 번호를 입력해 주세요.<br>
+			올바른 휴대폰 번호를 입력해 주세요.
+		</p>
+		<button type="button" onclick="$('.ly_pop').hide();" class="btn_r btn_type" style="width:100%">확인</button>
+	</span>
+	<span class="blank"></span>
+</section>
+<!-- //인증요청 확인 팝업 -->
+
+<!-- 해지완료 팝업 -->
+<section id="ly_alert" class="ly_pop ly_alert">
+	<span class="bg"></span>
+	<span class="content">
+		<p>뱅크원샷 서비스가 해지되었습니다.<br>이용해주셔서 감사합니다.</p>
+		<button type="button" onclick="$('.ly_pop').hide();" class="btn_r btn_type" style="width:100%">확인</button>
+	</span>
+	<span class="blank"></span>
+</section>
+<!-- //해지완료 팝업 -->
+
+<!-- 개인정보취급방침 -->
+<section id="ly_private" class="ly_pop ly_agree">
+	<span class="content">
+		<button type="button" class="btn_cls">창닫기</button>
+		<h2 class="title">개인정보수집 및 이용동의</h2>
+		<pre class="scroll">
+			“뱅크원샷(이하, ‘서비스’라 합니다.)”의 서비스 제공 및 이용과 관련하여 ㈜민앤지(이하, ‘회사’라 합니다)가 취득한 개인정보는 “통신비밀보호법”, “전기통신사업법” 및 “정보통신망 이용촉진 및 정보보호 등에 관한 법률” 등 정보통신서비스제공자가 준수하여야 할 관련 법령상의 개인정보 보호 규정을 준수합니다.
+
+			1. 개인정보수집 및 이용
+			1.1 수집항목
+			1) 서비스 가입 정보 : 가입계약번호, 부가서비스 가입/ 해지 일자, 고객ID, 휴대폰번호, 계약타입, 가입상태, 선불여부, 고객구분코드, 단말모델명, 사용자의 성인 여부, 변경된 전화번호
+
+			2) 서비스 이용 정보 : 서비스 가입/해지 일자, 가입경로, 서비스 실행 이력, 서비스 이용 정보(접속 매체, 전송 기록 등), 조회한 은행 정보[은행명, 계좌명/개수, 공인인증서/PW, 은행 ID/PW, 조회(로그인) 일시 : 은행 등록을 완료한 사용자에 한 함]
+
+			1.2 이용목적
+			1) 서비스 제공에 관한 계약 및 서비스 제공에 따른 요금정산(월 이용료 청구), 본인 확인,
+			점유인증
+			2) 서비스 가입자가 제휴사 및 본 서비스를 이용할 수 있도록 하기 위함
+			3) 가입자 관리
+			서비스 이용을 위한 본인 확인, 개인식별, 불량 가입자의 부정이용 방지와 비인가 사용의 방지, 가입의사 확인, 분쟁 조정을 위한 기록 보존, 불만처리 등 민원처리, 고지사항 전달, 서비스 유지방법 알림 등
+			4)  마케팅 및 광고에 활용
+			신규 서비스(제품) 개발 및 특화, 접속빈도 파악 또는 가입자의 서비스 이용에 대한 통계, 이벤트 등 광고성 정보를 앱 push 등을 통한 전달
+			1.3 제공하는 자 : ㈜SK텔레콤(서비스 가입정보에 한함)
+			2. 개인정보 보유 및 이용기간
+			2.1 본 서비스 가입일로부터 해지 후 정산완료 시까지
+			2.2 가입자가 서비스 해지를 요청하거나 개인정보 수집 및 이용에 대한 동의를 철회하는 경우 개인정보를 파기합니다. 단, 이용요금의 정산, 소송이나 분쟁, 개인정보안심보험 등 기타의 사유로 일정 기간 보유하여야 할 필요가 있는 경우 가입자의 개인정보를 보유 및 이용할 수 있습니다.
+			2.3 상법, 국세기본법 및 소비자보호에 관한 법률 등 관계 법령에 따라 보존할 필요가 있는 경우, 회사는 관계 법령에서 정한 기간 동안 가입자 정보를 보관합니다. 이 경우 회사는 보관하는 정보를 그 보관의 목적으로만 이용하며 보존기간은 다음과 같습니다.
+			1) 거래에 관한 장부 및 증빙서류: 5년(국세기본법, 법인세법, 부가가치세법 등)
+			2) 대금결제 및 재화 등의 공급에 관한 기록: 5년(전자상거래 등에서의 소비자보호에 관한 법률)
+			3) 표시/광고에 관한 기록: 6개월(전자상거래에서의 소비자보호에 관한 법률)
+			4) 계약 또는 청약철회 등에 관한 기록: 5년(전자상거래에서의 소비자보호에 관한 법률)
+			5) 소비자 불만 또는 분쟁처리에 관한 기록: 3년(전자상거래에서의 소비자보호에 관한 법률)
+			6) 위 각 호외의 법령에 정해진 개인정보 보유기간이 있을 경우 그에 따름
+
+			3. 개인정보 수집 및 이용 동의 철회
+			서비스 해지 시 개인정보 수집 및 이용동의는 철회됩니다.
+
+			4. 수집한 개인정보의 파기 절차
+			회사는 서비스 가입자가 가입 시 제공한 개인정보의 이용목적이 달성된 후 보관기간 및 이용기간에 따라 해당 정보를 파기하되, 그 파기 절차 및 방법 등은 다음과 같습니다.
+
+			1) 파기절차
+			가입자가 서비스 가입 등을 위해 회사에 제공한 개인정보는 서비스 해지 등 이용목적이 달성된 후, 내부 방침 및 기타 관련 법령의 규정에 따른 보유기간 경과 시 삭제되거나 파기합니다.
+
+			2) 파기기한
+			가입자의 개인정보 보유기간이 경과 시 삭제합니다. 단, 고객 응대 및 불법적 사용자에 대한 관련 수사기관 협조, 상법 등 관련 법령의 규정에 의하여 보유하여야 할 필요가 있는 경우에는 일정 기간 가입자의 데이터를 보유합니다. 또한, 고객에게 미리 고지하고 개별동의를 받은 경우에는 동의한 내용에 따른 기간 동안 보유합니다.
+
+			3) 파기방법
+			종이에 출력된 개인정보는 분쇄기로 분쇄 또는 소각하거나 화학약품 처리를 하여 용해하여 파기하고, 전자적 파일 형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.
+
+			5. 개인정보관리 책임자 및 담당 연락처
+			1) 성  명 : 박철광
+			2) 소  속 : 기술연구소
+			3) 직  위 : 실장
+			4) 전  화 : 1599-4794
+			5) 이메일 : privacy@minwise.co.kr
+
+			적용일 : 2018년 04월 03일
+		</pre>
+	</span>
+	<span class="blank"></span>
+</section>
+<!-- //개인정보취급방침 -->
+
+<!-- 이용약관 -->
+<section id="ly_service" class="ly_pop ly_agree" style="display: ">
+	<span class="content">
+		<button type="button" class="btn_cls">창닫기</button>
+		<h2 class="title">뱅크원샷 이용약관</h2>
+		<pre class="scroll">
+			1.	목적
+
+			본 약관은 “뱅크원샷”를 제공하는 “㈜민앤지(이하 ‘회사’라 합니다.)”와 위 서비스를 “이용하는 자(이하 ‘가입자’라 합니다.)”와의 이용 조건, 절차, 권리, 의무 및 책임사항에 관한 사항을 규정하는 것을 목적으로 합니다.
+
+			2.	용어의 정의
+
+			본 약관에서 사용되는 용어의 정의는 다음과 같습니다.
+
+			1)	 “뱅크원샷(이하 ‘서비스’라 합니다.)”은 서비스 가입자 본인이 등록한 은행/계좌 정보를 간편하게 조회 및 알림을 받을 수 있는 서비스를 말합니다. 본 서비스는 SKT, KT, LGU+와 제휴한 부가서비스로 ㈜민앤지 에서 운영합니다.
+			2)	“가입자”란 본 약관에 동의하여 서비스를 이용하는 개인을 말합니다.
+			3)	“제휴사”란 본 서비스를 가입 또는 이용할 수 있도록 서비스를 도입한 기업 또는 사이트를 말합니다.
+			4)	“휴대폰 정보”란 가입자의 이동통신사와 휴대폰 번호를 말합니다.
+			5)	“앱”이란 서비스의 제공 및 이용을 위해 단말기에 설치되는 스마트폰 전용 애플리케이션을 말합니다.
+			6)	“보안클라우드” 란 서비스의 제공 및 이용을 위해 회사에서 가입자에게 제공하는 개인 보안영역이며 가입자의 동의 하에 가입자의 은행정보등의 개인정보를 저장합니다..
+			7)	 본 조 및 본 약관의 다른 조항에서 정의한 것을 제외하고는 관계 법령 및 서비스 안내에서 정한 바에 따릅니다.
+
+			3.	서비스 이용 계약의 체결
+
+			1)	이용계약은 가입자가 약관의 내용에 대해 동의한 후 서비스 가입 신청을 하고 회사가 이러한 신청에 대해 승낙함으로써 체결됩니다.
+			2)	본 서비스는 SKT, KT, LGU+의 무료 부가서비스로 회사 SKT, KT, LGU+ 로부터 위탁 받아 처리합니다.
+
+			4.	서비스 해지 및 재가입
+
+			본 서비스는 해지 시 개인 정보 보호를 위하여 별도의 본인 확인이 필요합니다. 또한, 서비스를 다시 이용하기 위해서는 신규로 서비스에 가입하셔야 합니다.
+
+			1)	앱을 이용한 해지 : 앱 설정 메뉴 내 부가서비스 설정에서 해지하실 수 있습니다.
+			2)	전화를 이용한 해지: 고객센터(1599-4794)에서 해지하실 수 있습니다.
+
+			5.	약관의 효력과 변경
+
+			1)	본 약관은 서비스 화면에 게시하거나 기타의 방법으로 가입자에게 공시함으로써 효력이 발생합니다.
+			2)	온라인으로 서비스에 가입하는 경우, 가입자가 본 약관에 대하여 '동의함'을 선택하고 ‘확인’ 버튼을 클릭하면 고객은 본 약관의 내용을 이해하였고 그 적용에 동의한 것으로 간주합니다.
+			3)	회사는 관계 법령을 위배하지 않는 범위에서 본 약관을 개정할 수 있으며, 이 경우 회사는 새로운 약관의 적용 일자 및 개정사유를 명시하고 개정약관 적용일 7일 전에 고지 또는 통지합니다.
+			4)	회사가 6조의 규정에 따라 변경 약관을 고지 또는 통지하면서, 가입자가 약관 변경 적용 일까지 거부 의사를 표시하지 아니할 경우, 약관의 변경에 동의한 것으로 간주한다는 내용을 고지 또는 통지하였음에도 가입자가 명시적으로 거부 의사를 표시하지 아니한 경우, 가입자가 변경 약관에 동의한 것으로 간주합니다.
+			5)	가입자가 변경된 약관에 동의하지 않는 경우 서비스 이용을 중단하고 이용 계약을 해지할 수 있습니다.
+
+			6.	약관 동의 철회
+
+			서비스 해지 시 약관 동의가 철회됩니다.
+
+			7.	데이터 수집 및 사용
+			1)	회사는 프로그램 또는 앱의 품질 개선을 위하여 가입자의 컴퓨터 운영 체제 정보, 프로그램 또는 앱의 버전, 에러 정보와 같이 개인을 식별할 수 없는 비 개인 정보를 수집합니다.
+			2)	회사는 수집한 데이터를 활용 및 가공하여 콘텐츠를 생산 및 배포 할 수 있습니다.
+			3)	프로그램 또는 앱에 포함된 광고의 통계수집을 위해 광고노출수와 광고클릭수 등을 수집합니다.
+			4)	수집한 데이터는 통계자료로 활용되며, 회사는 수집목적에 따른 활용이 완료된 데이터를 곧바로 폐기합니다.
+
+			8.	서비스 이용의 제한
+
+			회사는 다음 각 호에 해당하는 가입자에 대하여 서비스 신청 및 이용을 제한할 수 있습니다.
+			1)	가입된 휴대폰 번호에 해당하는 단말기를 소유하고 있지 않았거나, 휴대폰 번호 등 가입자 정보가 잘못되어 문자 전송(SMS) 또는 앱 PUSH 전송이 불가능할 경우
+			2)	회사 및 이동통신사가 보유한 시스템 설비 및 장비 등의 여유가 없거나, 기술적, 법률적 장애가 있을 경우 그 사유가 해소될 때까지
+			3)	가입자의 단말기가 문자 수신(SMS), 앱 PUSH 수신에 문제가 있는 경우 또는 기타 사유로 문자 전송(SMS), 앱 PUSH 전송을 받을 수 없는 경우
+			4)	사용하는 단말기의 운영체제(OS), 기기정보 등을 루팅, 탈옥 등을 통해 임의로 변경한 경우
+			5)	기타 회사의 보안정책에 따라 서비스 제한이 필요하다고 판단되는 경우
+			6)	단말기 특성 또는 OS 버전의 문제로 인해 정상적인 서비스 제공이 불가능한 경우
+			7)	회사가 제공한 프로그램이 가입자의 디바이스 환경(예: 방화벽 등) 문제로 인하여 서비스 제공이 불가능할 경우
+			8)	은행/계좌 정보를 조회하는 사이트의 연결이 원할하지 않은 경우
+
+
+			9.	의무
+
+			1)	회사는 본 약관에서 정한 바에 따라 지속적, 안정적으로 본 서비스를 제공할 의무가 있습니다. 단, 전쟁, 지진, 재난 등 천재지변이나 불가피한 시스템의 고장, 통신서비스 회사의 통신 두절 등 불가항력의 사유가 발생한 경우에는 본 서비스를 중단할 수 있습니다.
+			2)	가입자는 본인이 설정한 본 서비스의 비밀번호와 휴대폰 관리에 책임을 지며, 가입자의 부주의로 발생하는 모든 결과에 대한 책임은 가입자에게 있습니다.
+
+
+			10.	변경사항 통지
+
+			1)	가입자는 서비스를 이용할 단말기 번호를 정확하게 회사에 통지해야 합니다.
+			2)	가입자는 가입된 단말기를 분실한 경우, 회사 고객센터 또는 홈페이지를 통해 서비스를 해지하시거나 데이터 삭제를 요청하셔야 합니다.
+			3)	가입자는 단말기, 유심 등이 변경되는 경우에 반드시 회사에 앱, 홈페이지, 고객센터 등을 통하여 변경 사실을 통지하여야 합니다.
+
+
+			11.	접근매체의 관리
+			1)	가입자는 단말기, 앱, 앱 비밀번호 등 접근매체를 제삼자에게 대여하거나 사용 위임, 양도 또는 담보 목적으로 제공할 수 없습니다.
+			2)	가입자는 단말기, 앱, 앱 비밀번호 등 접근매체를 제삼자에게 누설 또는 노출하거나 방지하여서는 안 되며, 접근매체의 도용이나 위조 또는 변조를 방지하기 위하여 충분한 주의를 기울여야 합니다.
+			3)	가입자는 단말기, 앱, 앱 비밀번호 등 접근매체를 회원 스스로 책임하에 관리하여야 하며, 접근매체의 훼손, 분실, 도난, 유출되는 등의 사고가 발생하는 경우, 회원은 즉시 그 사실을 앱, 홈페이지, 고객센터 등을 통하여 회사에 통지하여야 합니다.
+			4)	가입자는 회사의 서명승인 없이 앱의 내용을 수정, 변경할 수 없습니다. 또한 리버스 엔지니어링, 디컴파일 또는 디어셈블 등 본래의 목적에 벗어난 변형, 소스코드 분석 등을 할 수 없습니다. 이를 위반할 경우 지적재산권 침해 행위로 간주되어 관련법의 처벌을 받을 수 있습니다.
+
+
+			12.	책임과 손해배상
+
+			1)	회사와 가입자는 일방 당사자의 귀책사유에 인하여 상대방에게 발생한 손해에 대하여 배상하여야 합니다.
+			2)	회사는 본 서비스 가입자의 고의 또는 중과실로 발생한 손해에 대해서 어떠한 책임도 지지 않습니다.
+			3)	12조에서 명시한 변경사항 통지 내용의 오류, 통지의 지연 등에 인하여 가입자 또는 제삼자에게 손해가 발생하였을 경우 회사는 이를 보상 또는 배상할 책임이 없습니다.
+
+
+			13.	면책
+
+			1)	 회사는 다음 각 호의 사유로 인한 손해에 대하여 보상 또는 배상할 책임이 없습니다.
+
+			①	천재지변, 파업, 관련 법규의 변경, 관계기관의 명령 및 지침, 또는 외부로부터 발생한 사건 등 회사가 통제할 수 없는 사유에 인하여 본 서비스를 제공할 수 없는 경우
+			②	가입자가 휴대폰 번호, 단말기, 앱 비밀번호, 결제 정보 등의 관리를 소홀히 한 경우
+			③	가입자가 본 서비스에 제공한 정보, 자료, 사실 등이 부정확하여 본 서비스를 원활히 제공할 수 없었던 경우
+			④	회사의 관리영역이 아닌 장애로 본 서비스의 이용이 불가능한 경우
+			⑤	은행 사이트의 장애로 본 서비스의 이용이 불가능한 경우
+			⑥	기타 회사의 귀책사유가 없는 제휴사 및 통신서비스 등의 장애 또는 가입자의 귀책사유에 의한 통지 내역 미확인 등에 인한 경우
+
+			2)	회사는 본 서비스와 관련된 가입자 상호 간 또는 가입자와 제삼자 상호 간의 분쟁에 개입할 의무가 없으며, 회사의 귀책사유가 없는 한 이로 인한 손해를 보상 또는 배상할 책임이 없습니다.
+
+			3)	회사는 가입자가 제공한 가입자 본인의 정보에 대한 정확성, 진위, 유효성 확인의 책임이 없으며, 가입자가 제공한 정보의 오류로 인해 발생한 손해에 대하여 보상 또는 배상할 책임이 없습니다.
+
+			4)	회사가 단말기, 앱, 앱 비밀번호, 프로그램 등 접근매체의 발급주체가 아닌 경우, 접근매체의 위조나 변조에 의한 가입자 손해에 대하여 회사는 이를 보상 또는 배상할 책임이 없습니다.
+
+			5)	회사가 공식적으로 제공한 경로가 아닌, 비공식적 경로를 통해 앱 또는 프로그램을 다운로드/설치한 가입자에게 발생한 손해에 대하여, 회사는 이를 보상 또는 배상할 책임이 없습니다.
+
+			6)	가입자가 13조에서 명시한 접근매체의 관리를 소홀히 하여 손해가 발생한 경우 회사는 이를 보상 또는 배상할 책임이 없습니다.
+
+			7)	회사가 제공한 프로그램이 가입자의 다바이스 환경(예: 방화벽 등)의 문제로 인하여 이용할 수 없을 경우 회사는 그 책임을 지지 않습니다.
+
+
+			14.	분쟁의 해결
+
+			1)	회사와 가입자 간 분쟁 발생 시, 회사와 가입자는 분쟁해결을 위해 성실히 협의합니다.
+			2)	본 약관과 관련한 제반 분쟁 및 소송의 관할은 민사소송법상 관할 조항에 따릅니다.
+			3)	서비스에 관한 분쟁이 발생한 경우 양 당사자 간의 합의로 해결함을 원칙으로 합니다. 다만 당사자 간에 합의할 수 없거나 합의가 이루어지지 않는 경우, 분쟁의 해결은 회사의 소재지를 관할하는 법원으로 합니다.
+
+			15.	정보의 제공 및 광고의 게재
+
+			회사는 서비스의 운영과 관련하여 영리 목적의 광고성 정보를 포함한 다양한 정보를 서비스 홈페이지, 앱, 공지사항, 전자우편 등의 방법으로 가입자에게 제공할 수 있습니다. 다만, 회원은 영리 목적의 광고성 정보에 대하여는 전자우편 등을 통해 수신 거절할 수 있습니다.
+		</pre>
+	</span>
+	<span class="blank"></span>
+</section>
+<!-- //이용약관 -->
+
+<script>
+$(function(){
+    cpinfoTab('skt');
+});
+</script>
+
+</body>
+</html>

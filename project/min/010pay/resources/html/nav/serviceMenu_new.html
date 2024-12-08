@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>010페이</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" href="../../css/owl.carousel.min.css">
+<link rel="stylesheet" href="../../css/common.css?ezauthver=5.0">
+<link rel="stylesheet" href="../../css/style.css?ezauthver=5.0">
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../../js/html5shiv.js"></script>
+<script type="text/javascript" src="../../js/respond.min.js"></script>
+<![endif]-->
+<script src="../../js/jquery-1.8.3.min.js"></script>
+<script src="../../js/jquery.placeholder.min.js"></script>
+<script src="../../js/owl.carousel.min.js"></script>
+<script src="../../js/design.js?ezauthver=5.0" defer="defer"></script>
+<script src="../../js/ui.js?ezauthver=5.0" defer="defer"></script>
+<script src="../../js/commonmsg.js?ezauthver=5.0"></script>
+<script src="../../js/commonutil.js?ezauthver=5.0"></script>
+</head>
+
+<body>
+<!-- form -->
+<form class="main_form" action="javascript: void(0);" autocomplete="off">
+	<!-- wrap -->
+	<div id="wrap">
+		<div class="fix-layer top">
+			<!-- header -->
+			<div id="header">
+				<div class="container">
+					<h1 class="brand-name"><a href="#"><span><img src="../../images/logo.svg" class="brand-logo" alt="010pay"></span></a></h1>
+					<!-- <h2 class="page-title">페이지 제목</h2> -->
+					<button type="button" id="closeWindow" class="btn-close"><i class="icon-times">창닫기</i></button>
+				</div>
+			</div>
+			<!-- //header -->
+			<!-- nav tab -->
+			<div class="nav-tab">
+				<div class="container">
+					<ul>
+						<li><a href="#n" class="now">HOME</a></li>
+						<li><a href="#n">이용내역</a></li>
+						<li><a href="#n">계좌관리</a></li>
+						<li><a href="#n">내정보</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //nav tab -->
+		</div>
+		
+		<!-- content -->
+		<div id="content" class="">
+			<!-- HOME -->
+			<div class="home-wrap container">
+				<section class="home-sec current">
+					<div class="my">
+						<button type="button" id="payinfo" class="info-chg">
+							<span class="select"><strong>정재훈</strong>님의 머니</span>
+							<span class="price"><strong>1,890,689</strong>원</span>
+						</button>
+					</div>
+					<div class="charge">
+						<button type="button" class="btn btn-primary btn-md">충전하기</button>
+						<i class="per">+2.5%</i>
+					</div>
+				</section>
+				<section class="home-sec list">
+					<div class="list-now">
+						<dl>
+							<dt>당월 결제</dt>
+							<dd><a href="#n"><span><i>1</i>건</span><span><i>35,180</i>원</span><a></a></dd>
+						</dl>
+						<dl>
+							<dt>적립 예정 포인트</dt>
+							<dd><a href="#n"><span><i>280</i>원</span></a></dd>
+						</dl>
+						<dl>
+							<dt>충전 계좌</dt>
+							<dd>
+								<a href="#n"><span class="logo"><img src="../../images/bank/logo_020.png" alt="우리">우리<i>1202</i></span></a>
+							</dd>
+						</dl>
+					</div>
+					<div class="list-menu">
+						<ul>
+							<li>
+								<a href="#n">
+									<span>등록계좌<i>2</i></span>
+								</a>
+							</li>
+							<li>
+								<a href="#n">
+									<span>혜택&middot;이벤트</span>
+								</a>
+							</li>
+							<li>
+								<a href="#n">
+									<span>공지사항</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<div class="owl-carousel owl-theme home-bn-slide">
+					<a href="#n" class="item"><img src="../../images/banner/banner-sample-01.png" alt=""></a>
+					<a href="#n" class="item"><img src="../../images/banner/banner-sample-01.png" alt=""></a>
+					<a href="#n" class="item"><img src="../../images/banner/banner-sample-01.png" alt=""></a>
+				</div>
+			</div>
+			<!-- //HOME -->
+
+			
+		</div>
+		<!-- //content -->
+	</div>
+<!-- //wrap -->
+</form>
+<!-- //form -->
+
+<!-- loading -->
+<div class="modal modal-loading">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="loading">
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+				</div>
+				<span class="text">로딩 중</span>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //loading -->
+
+<!-- common alert -->
+<div id="commonAlert" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<h3 id="alertTitle"></h3>
+				<p id="alertContents"></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" onclick="modalClose();" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //common alert -->
+
+<!-- common prompt -->
+<div id="commonPrompt" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<h3 id="promptTitle"></h3>
+				<p id="promptContents"></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" onclick="modalClose();" class="btn">취소</button>
+				<button type="button" id="promptOk" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //common prompt -->
+
+<!-- 페이머니 -->
+<div id="modal-payinfo" class="modal modal-slide modal-info">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body my-info">
+				<div class="pay-info">
+					<div class="total">
+						<i class="logo-gray"></i>
+						<span class="price"><strong>1,890,689</strong>원</span>
+					</div>
+					<div class="each">
+						<dl>
+							<dt>포인트</dt>
+							<dd><a href="#n"><span><i>689</i> 원</span><i class="icon-angle-right-sm"></i></a></dd>
+						</dl>
+						<dl>
+							<dt>충전 머니<a href="#n" class="btn btn-secondary btn-sm">관리</a></dt>
+							<dd><a href="#n"><span><i>1,890,000</i> 원</span><i class="icon-angle-right-sm"></i></a></dd>
+						</dl>
+					</div>
+				</div>
+				<div class="bottom-area">
+					<div class="container">
+						<button type="button" class="btn btn-outline"><i class="btn-plus"></i><span>충전하기</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //페이머니 -->
+
+
+<script>
+$(document).ready(function(){
+	$('#modifyEmail').click(function(){
+		$.alertMessage("", "이메일이 변경되었습니다.", $('#commonAlert'));
+	});
+	$('#modifyAddress').click(function(){
+		$.alertMessage("", "주소가 변경되었습니다.", $('#commonAlert'));
+	});
+});
+</script>
+</body>
+</html>

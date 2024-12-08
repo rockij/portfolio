@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link rel="preload" href="resources/css/font/NotoSansKR-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link href="resources/css/common.css" media="screen" rel="stylesheet">
+<link href="resources/css/site.css" media="screen" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="resources/js/jquery-1.11.1.min.js"></script>
+<script src="resources/js/jquery.mobile.min.js"></script>
+<script src="resources/js/design.js"></script>
+<title>B-Tree</title>
+</head>
+<body>
+
+<div id="wrap">
+
+	<header id="header" class="fix_top">
+		<button type="button" class="btn_prev"><i class="bg_com ico_arr_prev">이전으로</i></button>
+		<h1>토큰 입금주소 등록</h1>
+		<button type="button" class="btn_gnb"><i class="bg_com">메뉴열기</i></button>
+	</header>
+	<!-- //header -->
+
+	<aside id="gnb">
+		<h2 class="blind">Global navigation bar</h2>
+		<div class="bgb"><div class="bg"></div></div>
+		<div class="panel">
+			<div class="cont">
+				<div class="scroll">
+					<!-- content area -->
+					<div class="profile">
+						<button type="button" onclick="layer_open('logout')" class="btn_s btn_type6">로그아웃</button>
+						<button type="button" class="btn_cls"><i class="bg_com ico_x">메뉴닫기</i></button>
+						<dl>
+							<dt><img src="resources/images/sample/photo.jpg" alt=""></dt>
+							<dd>
+								<span class="id">밝은마루 님</span>
+								<span class="rati">일반회원</span>
+								<a href="#;" class="btn_go">B.bank 바로가기</a>
+							</dd>
+						</dl>
+					</div>
+					<ul class="lnb">
+						<li><a href="#;"><i class="bg_ico ico_p"></i>포인트현황<strong class="fc_blu status">13,000 <span>P</span></strong></a></li>
+						<li><a href="#;"><i class="bg_ico ico_light"></i>토큰 현황<strong class="status fc_pur">0.005 <span>ETH</span></strong></a></li>
+						<li><a href="#;"><i class="bg_ico ico_p2"></i>토큰 전환</a></li>
+						<li><a href="#;"><i class="bg_ico ico_wallet"></i>토큰 입금주소 등록</a></li>
+						<li><a href="#;"><i class="bg_ico ico_medal"></i>포인트 랭킹</a></li>
+					</ul>
+					<div class="ui_inner2">
+						<ul class="menucs">
+							<li><a href="#;"><span><i class="bg_ico ico_spk"></i></span>공지사항</a></li>
+							<li><a href="#;"><span><i class="bg_ico ico_bell"></i></span>알림</a></li>
+							<li><a href="#;"><span><i class="bg_ico ico_cau"></i></span>FAQ</a></li>
+							<li><a href="#;"><span><i class="bg_ico ico_note"></i></span>1:1 문의</a></li>
+						</ul>
+						<ul class="menuset">
+							<li class="push">
+								<span class="wrap">
+									푸시메시지
+									<span class="checkbox"><input type="checkbox" name="push" id="push"><label for="push"></label></span>
+								</span>
+							</li>
+							<li><a href="#;">잠금암호</a></li>
+							<li class="ver"><span class="wrap">App 버전<tt>1.0.0 최신버전입니다.</tt></span></li>
+							<li><a href="#;">이용방법</a></li>
+							<li><a href="#;">서비스 이용약관</a></li>
+							<li><a href="#;">개인정보 취급방침</a></li>
+						</ul>
+						<button type="button" onclick="" class="btn_s btn_type6 btn_withdraw">회원탈퇴</button>
+					</div>
+					<!-- //content area -->
+				</div>
+			</div>
+		</div>
+	</aside>
+	<!-- //gnb -->
+
+	<div id="ct" class="tokendps">
+		<h2 class="blind">토근 입금주소 복사 및 QR코드 확인</h2>
+		<dl class="ui_inner definlst">
+			<dt><h3>토큰 입금주소</h3></dt>
+			<dd><button type="button" class="btn_m3 btn_type2 btn_copy">복사</button></dd>
+		</dl>
+		<p class="copycode fc_pur2">0xc174fccfd471ea54ea2a9abf547d3fdc1ccfea29</p>
+		<dl class="ui_inner qr_area">
+			<dt>QR CODE</dt>
+			<dd class="ui_valign_mid"><div><span><img src="resources/images/sample/qr.jpg" alt=""></span></div></dd>
+		</dl>
+		<section class="fix_btm btn_area_btm">
+			<div class="ui_inner">
+				<div class="cover">
+					<ul class="list_type6">
+						<li>지갑주소 생성을 위해 본인확인 절차가 필요합니다.</li>
+						<li>생성된 지갑주소는 B-Bank App 에서도 확인가능합니다.</li>
+						<li><b class="fc_pur">B-Tree</b>에서 지급된 포인트를 토큰으로 환전 시 해당 지갑주소로 입금처리됩니다. (단, 포인트에서 수수료 제외하고 입금)</li>
+						<li>본인이 보유한 토큰은 <b class="fc_pur">[메뉴 > 토큰지급현황]</b> 페이지에서 조회 가능합니다.</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</div>
+	<!-- //content -->
+
+	<!-- logout -->
+	<div id="logout" class="ly_pop ly_alert" style="display: ">
+		<div class="cont">
+			<div class="elm">
+				로그아웃 하시겠습니까?
+				<ul class="btn_area">
+					<li><button type="button" onclick="layer_close()" class="btn_xr btn_type">취소</button></li>
+					<li><button type="button" onclick="layer_close()" class="btn_xr btn_type2">확인</button></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //logout -->
+
+	<!-- loading -->
+	<div id="" class="ly_pop ly_loading" style="display: ">
+		<div class="cont">
+			<div class="elm">
+				<div class="loading"></div>
+			</div>
+		</div>
+	</div>
+	<!-- //loading -->
+
+</div>
+
+</body>
+</html>

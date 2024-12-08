@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>주식투자노트</title>
+<link rel="stylesheet" href="resource/css/fullPage.css">
+<link rel="stylesheet" href="resource/css/common.css">
+<link rel="stylesheet" href="resource/css/site.css">
+<script src="resource/js/jquery-1.8.3.min.js"></script>
+<script src="resource/js/fullPage.js" defer="defer"></script>
+<script src="resource/js/jquery.easing.1.3.js"></script>
+<script src="resource/js/jquery.event.drag-1.5.min.js"></script>
+<script src="resource/js/jquery.touchSlider.js"></script>
+<script src="resource/js/scrolloverflow.min.js"></script>
+<script src="resource/js/design.js"></script>
+<script src="resource/js/main.js" defer="defer"></script>
+<!--[if lt IE 9]>
+<script src="resource/js/html5shiv.js"></script>
+<script src="resource/js/respond.js"></script>
+<![endif]-->
+</head>
+<body>
+
+<script type="text/javascript">
+//종목 추천 받기
+$(document).ready(function () {
+	var daily_report = '<div class="daily_report">';
+	daily_report += '<div class="row">';
+	daily_report += '<h2>주식투자노트 이용하기</h2>';
+	daily_report += '<section class="form_wrap">';
+	daily_report += '<ul class="form">';
+	daily_report += '<li class="tab">';
+	daily_report += '<ul>';
+	daily_report += '<li><a href="#;">SKT</a></li>';
+	daily_report += '<li class="active"><a href="#;">KT</a></li>';
+	daily_report += '<li class="last"><a href="#;">LGU+</a></li>';
+	daily_report += '</ul>';
+	daily_report += '</li>';
+	daily_report += '<li class="num">';
+	daily_report += '<button type="button" class="btn_open">핵심 정보 받아보기</button>';
+	daily_report += '<div class="select">';
+	daily_report += '<select id="">';
+	daily_report += '<option value="010">010</option>';
+	daily_report += '<option value="011">011</option>';
+	daily_report += '<option value="016">016</option>';
+	daily_report += '<option value="017">017</option>';
+	daily_report += '<option value="018">018</option>';
+	daily_report += '<option value="019">019</option>';
+	daily_report += '</select>';
+	daily_report += '</div>';
+	daily_report += '<input type="text" name="" id="">';
+//	daily_report += '<button type="button" class="btn_num" onclick="">인증번호</button>';
+	daily_report += '</li>';
+	daily_report += '<li class="re">';
+	daily_report += '<input type="text" name="" id="">';
+	daily_report += '<span class="time">유효시간 03:00</span>';
+	daily_report += '<button type="button" onclick="">재전송</button>';
+	daily_report += '</li>';
+	//daily_report += '<li class="captcha"><div class="pinArea"><p class="pin_img"><img width="131" height="42" id="img_captcha" src="/captcha.png?t=01040195149&amp;v=423"></p><p class="pin_btn"><span id="newSafeNum"><em style="display: ;">새로고침</em></span></p></div><div class="userNum"><p><label class="label_txt" for="captchaAnswer"><strong>보안문자(숫자)입력</strong></label></p><input name="answer_captcha" title="보안문자(숫자)입력" id="answer_captcha" type="text" maxlength="5"></div></li>';
+	//daily_report += '<li class="captcha_m_btn"><ul class="btn_area2"><li style="width:35%"><button class="btn_r btn_type2 btn_send" id="safeNumCancel" type="button">취소</button></li><li style="width:65%"><button class="btn_r btn_type btn_send" id="submit_captcha" type="button">다음</button></li></ul></li>';
+	daily_report += '</ul>';
+	daily_report += '<ul class="agree">';
+	daily_report += '<li class="all"><span class="checkbox ty"><input type="checkbox" name="agree" id="all"><label for="all">전체동의</label></span></li>';
+	daily_report += '<li><span class="checkbox"><input type="checkbox" name="agree" id="term"><label for="term"></label><a href="#;">이용약관</a></span><span class="checkbox"><input type="checkbox" name="agree" id="private"><label for="private"></label><a href="#;">개인정보수집/이용</a></span></li>';
+	daily_report += '<li><span class="checkbox"><input type="checkbox" name="agree" id="ad"><label for="ad">취급위탁</label></span><span class="checkbox"><input type="checkbox" name="agree" id="kt"><label for="kt"></label><a href="terms_kt" target="_blank">광고수신동의</a></span></li>';
+	daily_report += '<li><span class="checkbox"><input type="checkbox" name="agree" id="kt"><label for="kt"></label><a href="terms_kt" target="_blank">KT개인정보제3자제공</a></span></li>';
+	daily_report += '</ul>';
+	daily_report += '<button class="btn_r btn_type btn_send btn_type_s">주식투자노트 유료가입하기</button>';
+	daily_report += '</section>';
+	daily_report += '<section class="finish_wrap">';
+	daily_report += '<h3>서비스 가입완료</h3>';
+	daily_report += '<p class="txt">주식투자노트는 <b>서비스가입 익일</b>부터<span class="br"></span><b>핵심정보가 문자로 발송</b>됩니다.</p>';
+	daily_report += '<p class="txt2">주식노트가 제공하는정보는 투자참고사항일뿐, <span class="br"><span>투자권유 또는 주식거래를 목적으로 하지 않습니다.</span class="br"></span><u>투자판단의 최종 책임은 이용자</u>에게 있습니다.</p>';
+	daily_report += '<button class="btn_r btn_type btn_send">확인</button>';
+	daily_report += '</section>';
+	daily_report += '<p class="caution">주식투자노트는 가입시 매월 11,000원(VAT포함)이<br>SKT, KT, LGU+ 통신요금에 포함됩니다.</p>';
+	daily_report += '</div>';
+	daily_report += '<div class="customer"><i class="ico_com"></i>고객센터 <strong>1599-7416</strong></div>';
+	daily_report += '</div>';
+	$.mainSlideSize = function(){
+		var slideHeight = $("#mainSlide img").height();
+		$('#mainSlide').css('height', slideHeight+'px');
+	}
+	$.form = function(){
+		var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+		var addEvent = window.attachEvent || window.addEventListener;
+		var MainSlide = $('#mainSlide ul li');
+		var cur = $('.current span');
+		if(width < 1024){
+			$('.daily_report, .customer').remove();
+			$('.daily_report_mw').append(daily_report);
+			$('.daily_report .caution').html('<p>매월 부가세 포함 11,000원</p>본 서비스는 SKT, KT, LGU+ 통신요금에 부가세 포함 매월 11,000원 부과됩니다.');
+			$("#mainSlide").touchSlider({
+				roll : false,
+				view : 1,
+				flexible : true,
+				btn_prev : $("#mainSlide").next().find(".bt_prev"),
+				btn_next : $("#mainSlide").next().find(".bt_next"),
+			});
+			addEvent("load", function(){
+				$.mainSlideSize();
+				if($('.sequence').hasClass('interpark')){
+					$('#mainSlide').hide();
+					$('.swiper.interpark').show();
+				}
+			}, false);
+			function move(){
+				MainSlide.each(function(){
+					if ($(this).css('left') == '0px') {
+						var i = $(this).index();
+						cur.removeClass('on');
+						cur.eq(i).addClass('on');
+					}
+				});
+			}
+			MainSlide.bind('mousemove touchmove', function(){
+				setTimeout(function(){
+					move();
+				}, 150);
+			});
+			addEvent("resize", function(){
+				cur.removeClass('on');
+				cur.eq(0).addClass('on');
+				MainSlide.bind('mousemove touchmove', function(){
+					setTimeout(function(){
+						move();
+					}, 150);
+				});
+			}, false);
+			move();
+		}else{
+			$('.daily_report, .customer').remove();
+			$('body').append(daily_report);
+			$('.daily_report .caution').html('<p>매월 부가세 포함 11,000원</p>본 서비스는 SKT, KT, LGU+ 통신요금에 부가세 포함 매월 11,000원 부과됩니다.');
+		}
+		$(".checkbox").click(function(){
+			if ($(".checkbox").children("input").length) {
+				$("label").each(function(){
+					$(this).removeClass("on");
+				});
+				$("input:checked").each(function(){
+					$(this).next("label").addClass("on");
+				});
+			}
+		});
+		$(".form_wrap .btn_send").click(function(){
+			$('.form_wrap').hide();
+			$('.finish_wrap').show();
+		});
+		drTab(); //탭실행
+	}
+	$.form();
+	$.open = function(){
+		var open = $('.daily_report .btn_open');
+		var obj = $('.daily_report');
+		open.on('click', function(){
+			$(this).hide();
+			obj.find('.form li').show();
+			obj.find('.btn_num').show();
+			obj.find('.agree').show();
+		});
+	}
+	$.open();
+	if(!navigator.userAgent.match(/Android|Mobile|iP(hone|od|ad)|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/)){
+		$(window).resize(function(){
+			$.form();
+			$.open();
+		});
+	}
+});
+</script>
+
+<a href="#ct" class="skip">본문 바로가기</a>
+
+<div class="scroll_seq"><div class="main-scroll-motion"><img src="resource/images/web/scroll.png" alt=""></div></div>
+
+<div id="fullpage">
+	<div id="section1" class="section">
+		<header id="header">
+			<div class="inner">
+				<h1><a href="main.html"><i class="ico_com ico_note"></i>주식투자노트</a></h1>
+				<button type="button" class="btn_menu"><i><span class="spin"><div class="spinner diagonal part-1"></div><div class="spinner horizontal"></div><div class="spinner diagonal part-2"></div></span></i></button>
+				<nav id="gnb">
+					<div class="cont">
+						<div class="list">
+							<div class="noscroll">
+								<ul>
+									<li>
+										<h2><a href="service_about.html">서비스안내<span class="line motion"></span></a></h2>
+										<ul>
+											<li><a href="service_about.html">서비스소개</a></li>
+											<li><a href="service_about2.html">서비스 이용방법</a></li>
+										</ul>
+									</li>
+									<li>
+										<h2><a href="service_join.html">서비스이용<span class="line motion"></span></a></h2>
+										<ul>
+											<li><a href="service_join.html">서비스가입</a></li>
+											<li><a href="service_cancel.html">서비스해지</a></li>
+											<li><a href="service_set.html">서비스 설정변경</a></li>
+										</ul>
+									</li>
+									<li>
+										<h2><a href="stock_info.html">주식정보<span class="line motion"></span></a></h2>
+										<ul>
+											<li><a href="stock_info.html">주식정보보기</a></li>
+										</ul>
+									</li>
+									<li>
+										<h2><a href="notice.html">고객센터<span class="line motion"></span></a></h2>
+										<ul>
+											<li><a href="notice.html">공지사항</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="bgb"><div class="bg"></div></div>
+				</nav>
+			</div>
+			<div class="bgw"></div>
+		</header>
+		<!-- //header -->
+		<div id="mainSlide" class="swiper">
+			<ul class="swiper-wrapper">
+				<li class="swiper-slide"><img src="resource/images/mw/main_swiper1.png" alt="한국경제TV 주식전문가가 엄선한 알짜 종목!"></li>
+				<li class="swiper-slide"><img src="resource/images/mw/main_swiper2.png" alt="국내유일 이동통신 3사 주식서비스!"></li>
+				<li class="swiper-slide"><img src="resource/images/event/interpark_swiper.png" alt="단 10초면 쿠폰 신청 완료! 3,000원 100% 증정"></li>
+			</ul>
+		</div>
+		<div class="swiper interpark"><img src="resource/images/event/interpark_swiper.png" alt="단 10초면 쿠폰 신청 완료! 3,000원 100% 증정"></div>
+		<!-- //mw -->
+		<div class="sequence">
+			<a href="javascript:" class="contBt left"><!-- autoplay --></a>
+			<div class="scene one" style="left:0">
+				<div class="ele bg"></div>
+				<div class="row">
+					<h1 class="ele title">한국경제TV<p>주식전문가가 엄선한 <b>알짜 종목<em>!</em></b></p></h1>
+					<p class="ele text">하루 3번 주식핵심정보만 문자로 제공하는<br>주식투자노트</p>
+					<a href="#;" class="ele btn">종목 추천 받기</a>
+					<div class="ie8"><img src="resource/images/web/main_scene1_title.png" alt="한국경제TV 주식전문가가 엄선한 알짜 종목"></div>
+				</div>
+			</div>
+			<div class="scene two" style="left:100%">
+				<div class="ele bg"></div>
+				<div class="row">
+					<h1 class="ele title">국내유일<p><b>이동통신사 3사 주식서비스<em>!</em></b></p></h1>
+					<p class="ele text"><span>신뢰를 바탕</span>으로 믿을 수 있는<br>주식정보를 제공합니다.</p>
+					<a href="#;" class="ele btn">종목 추천 받기</a>
+					<div class="ie8"><img src="resource/images/web/main_scene2_title.png" alt="국내유일 이동통신사 3사 주식서비스!"></div>
+				</div>
+			</div>
+			<!-- 인터파크 -->
+			<div class="scene three" style="left:0">
+				<div class="ele bg"></div>
+				<div class="row">
+					<span class="ele logo"><img src="resource/images/event/interpark_w_main_logo.png" alt="interpark"></span>
+					<p class="ele text2">라이프 서비스 접속 고객에게 드리는 특별혜택!</p>
+					<h1 class="ele title">단 <strong>10초면</strong> 쿠폰 신청 완료!</h1>
+					<p class="ele text">이 페이지에서  주식투자노트 신청하고,<br><strong>3,000원</strong> 중복할인쿠폰으로 쇼핑시 추가 할인 받으세요.</p>
+					<span class="ele coupon"><img src="resource/images/event/interpark_w_main_coupon.png" alt="3,000원 100% 증정"></span>
+					<ul class="ele caution_list">
+						<li class="stit">*이벤트 상세 안내</li>
+						<li>- 매주 월요일~일요일 캠페인 참여완료한 가입자 대상 차주 목요일 휴대폰문자(SMS) 일괄 지급 (단, 당일해지자 제외, 발송일이 휴일인 경우 다음 영업일에 발송)</li>
+						<li>- 인터파크 쇼핑 로그인 후 마이페이지 등록</li>
+						<li>- 2만원 이상 구매 시 사용 가능하며 일부 품목은 쿠폰사용 제외</li>
+						<li>- 등록일로부터 2주이내 사용 가능</li>
+						<li>- 본 이벤트는 당사 사정에 의해 별도의 고지 없이 변경 또는 중단될 수 있으며, 가입자당 1회만 지급 됩니다.</li>
+						<li>- 본 서비스는 별도 해지 요청이 없는 경우 매월 가입이 유지됩니다.</li>
+						<li>- (주)인터파크는 통신판매 중계자로 본 광고페이지에 제공되는 모든 서비스는 (주)민앤지의 책임하에 운영되고 있습니다</li>
+					</ul>
+					<div class="ie8"><img src="resource/images/event/interpark_main_ie8.png" alt="라이프 서비스 접속 고객에게 드리는 특별혜택!"></div>
+				</div>
+			</div>
+			<!-- //인터파크 -->
+			<a href="javascript:" class="contBt right"><!-- autoplay --></a>
+			<div class="paging"><a href="javascript:" class="contNum on ml0"></a><a href="javascript:" class="contNum"></a></div>
+		</div>
+		<!-- //web -->
+		<div class="daily_report_mw"></div>
+		<div class="local_service">
+			<ul>
+				<li class="bt1"><a href="service_join.html"><span>서비스 가입</span></a></li>
+				<li class="bt2"><a href="service_about2.html"><span>서비스 이용방법</span></a></li>
+				<li class="bt3"><a href="stock_info.html"><span>주식정보 보기</span></a></li>
+				<li class="bt4"><a href="service_cancel.html"><span>서비스 해지</span></a></li>
+			</ul>
+		</div>
+		<!-- //서비스바로가기 -->
+	</div>
+	<!-- //section1 -->
+	<div id="section2" class="section">
+		<div class="inner">
+			<section class="about_section">
+				<ul class="logo ele">
+					<li class="blind">SK telecom</li>
+					<li class="blind">KT</li>
+					<li class="blind">LG U+</li>
+				</ul>
+				<h2 class="ele">이동통신 3사가 선택한<span>유일한 주식서비스</span><strong>왜 주식투자노트를 선택했을까?</strong></h2>
+				<ul class="point">
+					<li class="p1 ele">
+						<dl>
+							<dd><h3>높은 신뢰도</h3>국내 No.1 증권방송<br>한국경제TV 전문가들이 제공</dd>
+							<dt><img src="resource/images/mw/main_about1.png" alt=""></dt>
+						</dl>
+					</li>
+					<li class="p2 ele">
+						<dl>
+							<dt><img src="resource/images/mw/main_about2.png" alt=""></dt>
+							<dd><div><h3>간편한 이용</h3>매일 3번 문자로 <br>알짜 종목만 모아모아!</div></dd>
+						</dl>
+					</li>
+					<li class="p3 ele">
+						<dl>
+							<dd><h3>합리적인 가격</h3>70만원 주식 정보가<br>월 1만1천원!(vat포함)</dd>
+							<dt><img src="resource/images/mw/main_about3.png" alt=""></dt>
+						</dl>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+	<!-- //section2 -->
+	<div id="section3" class="section">
+		<div class="inner">
+			<section class="stats">
+				<div>
+					<h2>주식투자노트<strong>이용자현황</strong></h2>
+					<div class="counter_row"><strong class="counter" data-count="18697">0</strong>명</div>
+				</div>
+			</section>
+			<ul class="epilogue">
+				<li class="title ele"><h2>주식투자노트로 주식 초보 탈출에<strong>성공한 이용자 후기</strong></h2></li>
+				<li class="e1 ele">
+					<dl>
+						<dt><img src="resource/images/mw/main_epil1.png" alt=""></dt>
+						<dd>
+							<h3>정 모씨<strong>20대 남성 사회초년생</strong></h3>
+							주식 처음이라 모르는 것 투성이였는데, <span class="br">추천 종목 뿐만 아니라 투자 포인트까지</span> <span class="br">짚어주니 주식 초보자도 이해하기</span> 쉬웠습니다.
+						</dd>
+					</dl>
+				</li>
+				<li class="e2 ele">
+					<dl>
+						<dd>
+							<h3>강 모씨<strong>30대 여성 직장인</strong></h3>
+							일하며 정신없이 시간 보내다보면 일일이 <span class="br">주가 살펴보기가 쉽지 않았어요,</span> <span class="br">하루에 3번 문자로 핵심만 적절히</span> 안내 해주니 정말 편리해요~
+						</dd>
+						<dt><img src="resource/images/mw/main_epil2.png" alt=""></dt>
+					</dl>
+				</li>
+				<li class="e3 ele">
+					<dl>
+						<dt><img src="resource/images/mw/main_epil3.png" alt=""></dt>
+						<dd>
+							<h3>최 모씨<strong>40대 여성 주부</strong></h3>
+							남편 월급으로는 생활비 감당이 안되더라구요 <span class="br">재테크로 주식 많이들 한다 해서 시작하려니</span><span class="br">살림에 육아에 바빠서 알아볼 시간 없었는데</span>주식투자노트 덕분에 도움 많이 받았습니다.
+						</dd>
+					</dl>
+				</li>
+				<li class="e4 ele">
+					<dl>
+						<dd>
+							<h3>박 모씨<strong>50대 남성 은퇴 준비</strong></h3>
+							안정적으로 수익 내기에는 주식투자노트 <span class="br">추천 종목이 좋다고 해서 받아봤습니다.</span> <span class="br">이런 알짜 정보를 합리적인 가격에</span> <span class="br">접할 수 있다니 고마운 마음에</span> 지인들에게 추천해주고 있습니다.
+						</dd>
+						<dt><img src="resource/images/mw/main_epil4.png" alt=""></dt>
+					</dl>
+				</li>
+			</ul>
+			<ul class="epilogue_caution_list">
+				<li class="stit">*이벤트 상세 안내</li>
+				<li>매주 월요일~일요일 캠페인 참여완료한 가입자 대상 차주 목요일 휴대폰문자(SMS) 일괄 지급 (단, 당일해지자 제외, 발송일이 휴일인 경우 다음 영업일에 발송)</li>
+				<li>인터파크 쇼핑 로그인 후 마이페이지 등록</li>
+				<li>2만원 이상 구매 시 사용 가능하며 일부 품목은 쿠폰사용 제외</li>
+				<li>등록일로부터 2주이내 사용 가능</li>
+				<li>본 이벤트는 당사 사정에 의해 별도의 고지 없이 변경 또는 중단될 수 있으며, 가입자당 1회만 지급 됩니다.</li>
+				<li>본 서비스는 별도 해지 요청이 없는 경우 매월 가입이 유지됩니다.</li>
+				<li>(주)인터파크는 통신판매 중계자로 본 광고페이지에 제공되는 모든 서비스는 (주)민앤지의 책임하에 운영되고 있습니다</li>
+			</ul>
+		</div>
+		<footer id="footer">
+			<div class="inner">
+				<a href="#;" class="btn_top"><i class="ico_com">맨위로</i></a>
+                <a href="#;" class="btn_info" onclick="window.open('../global/stn/popup_win.html', '_blank', 'toolbar=no,scrollbars=yes,resizable=no,top=0,left=0,width=400,height=600');">(주) 민앤지 사업자 정보</a>
+				<ul class="menu">
+					<li><a href="#;">회사소개</a></li>
+					<li><a href="#;">이용약관</a></li>
+					<li><a href="#;" class="fsc">개인정보취급방침</a></li>
+				</ul>
+				<address>
+					<span class="num">㈜ 민앤지 대표 : 이현철&nbsp;&nbsp;&nbsp;사업자등록번호 : 214-88-39117&nbsp;&nbsp;&nbsp;통신판매업신고 : 제2015 –서울강남 – 00012호</span><span class="add">서울시 강남구 언주로 726 두산빌딩 11층</span>&nbsp;&nbsp;&nbsp;<span class="tel">TEL : 1599-7416 FAX : 02)929-4424</span><span class="copy">Copuright© Minwise Co.,Ltf. All right reserved</span>
+				</address>
+				<span class="logos">SK telecom, alleh, LGU+, 한국결제TV</span>
+				<div class="cs">
+					고객센터 <strong>1599-7416</strong>
+					<p>평일 09:00~18:00(주말, 공휴일 휴무)</p>
+					<div class="familybox">
+						<button type="button" class="btn_ctl">FAMILY SITE<i class="ico_com"></i></button>
+						<ul>
+							<li><a href="http://www.minwise.co.kr/" target="_blank">(주)민앤지</a></li>
+							<li><a href="http://safelogin.kr/sauth/" target="_blank">로그인플러스</a></li>
+							<li><a href="http://ipns.kr/pns/" target="_blank">휴대폰번호도용방지 서비스</a></li>
+							<li><a href="https://sepay.org/" target="_blank">간편결제매니저/로그인플러스 USIM</a></li>
+							<li><a href="https://dsagun.kr/sh/join?regSiteCode=AB&ctgCode=3&subCode=1" target="_blank">등기사건알리미</a></li>
+							<li><a href="http://www.smemo.co.kr/" target="_blank">SMEMO</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- //footer -->
+	</div>
+	<!-- //section3 -->
+</div>
+
+<!-- loading -->
+<div class="ly_loading" style="display:">
+	<div class="bg"></div>
+	<div class="cont">
+		<div class="ele">
+			<div class="spinner">
+				<div class="rect1"></div><!----><div class="rect2"></div><!----><div class="rect3"></div><!----><div class="rect4"></div><!----><div class="rect5"></div>
+			</div>
+			<div class="spinner_img"><img src="resource/images/loading.gif" alt="로딩바"></div>
+		</div>
+	</div>
+</div>
+<!-- //loading -->
+
+<!-- 해지안내팝업_SK -->
+<div class="ly_caution" style="display:">
+	<div class="bg"><!-- shadow --></div>
+	<div class="cont">
+		<section id="" class="ele">
+			<button type="button" onclick="$('.ly_caution').hide();" class="popcls">close</button>
+			<h1><span>이동통신사 시스템 점검 안내</span></h1>
+			<p class="txt">SKT 시스템 점검으로 인하여<br><span> <u>서비스 해지가 일시 중단</u> 됩니다.</span><br>불편을 드려 죄송합니다.</p>
+			<p class="txt2">점검일시<br>2017년 05월 11일(목) 20:00 ~<br>05월 15일(월) 12:00</p>
+			<p class="txt3">서비스 재개 시점은 상황에 따라 지연될 수 있습니다.</p>
+		</section>
+	</div>
+</div>
+<!-- //해지안내팝업_SK -->
+
+<!-- 해지안내팝업_KT -->
+<div class="ly_caution" style="display:">
+	<div class="bg"><!-- shadow --></div>
+	<div class="cont">
+		<section id="" class="ele">
+			<button type="button" onclick="$('.ly_caution').hide();" class="popcls">close</button>
+			<h1 class="kt"><span>이동통신사 시스템 점검 안내</span></h1>
+			<p class="txt">SKT 시스템 점검으로 인하여<br><span> SKT 고객님들의<u>서비스 해지가 일시 중단</u> 됩니다.</span><br>불편을 드려 죄송합니다.</p>
+			<p class="txt2">점검일시<br>2017년 06월 03일(토) 20:00 ~<br>06월 07일(월) 09:00</p>
+			<p class="txt3">서비스 재개 시점은 상황에 따라 지연될 수 있습니다.</p>
+		</section>
+	</div>
+</div>
+<!-- //해지안내팝업_KT -->
+
+<!-- 해지요청팝업 -->
+<div class="ly_caution v1" style="display:">
+	<div class="bg"><!-- shadow --></div>
+	<div class="cont">
+		<section id="" class="ele">
+			<button type="button" onclick="$('.ly_caution').hide();" class="popcls">close</button>
+			<h1><span>이동통신사 시스템 점검 안내</span></h1>
+			<p class="txt">현재 <span>SKT</span> 시스템 점검으로 서비스를 해지하실 수 없습니다.<br><span>시스템 점검 후 해지하실 수 있으며,<br>휴대폰 인증을 완료 하시면 점검 후 알림 문자를 보내 드리겠습니다.</span><br>불편을 드려 죄송합니다.</p>
+			<p class="txt2">점검일시<br>2017년 05월 11일(목) 20:00 ~<br>05월 15일(월) 12:00</p>
+			<p class="txt3">서비스 재개 시점은 상황에 따라 지연될 수 있습니다.</p>
+		</section>
+	</div>
+</div>
+<!-- //해지요청팝업 -->
+
+<!-- ARS로 들어왔을때_SKT -->
+<div class="ly_ars v1" style="display:">
+	<section class="cont">
+		<a href="" class="popcls">close</a>
+		<h1><span>이동통신사 시스템 점검 안내</span></h1>
+		<p class="txt">현재 <span>SKT</span> 시스템 점검으로 서비스를 해지하실 수 없습니다.<br><span>시스템 점검 후 해지하실 수 있으며,<br>휴대폰 인증을 완료 하시면 점검 후 알림 문자를 보내 드리겠습니다.</span><br>불편을 드려 죄송합니다.</p>
+		<p class="txt2">점검일시<br>2017년 05월 11일(목) 20:00 ~<br>05월 15일(월) 12:00</p>
+		<p class="txt3">서비스 재개 시점은 상황에 따라 지연될 수 있습니다.</p>
+	</section>
+</div>
+<!-- //ARS로 들어왔을때_SKT -->
+
+<!-- ARS로 들어왔을때_KT -->
+<div class="ly_ars v1" style="display:">
+	<section class="cont">
+		<a href="" class="popcls">close</a>
+		<h1 class="kt"><span>이동통신사 시스템 점검 안내</span></h1>
+		<p class="txt">현재 <span>SKT</span> 시스템 점검으로 서비스를 해지하실 수 없습니다.<br><span>시스템 점검 후 해지하실 수 있으며,<br>휴대폰 인증을 완료 하시면 점검 후 알림 문자를 보내 드리겠습니다.</span><br>불편을 드려 죄송합니다.</p>
+		<p class="txt2">점검일시<br>2017년 05월 11일(목) 20:00 ~<br>05월 15일(월) 12:00</p>
+		<p class="txt3">서비스 재개 시점은 상황에 따라 지연될 수 있습니다.</p>
+	</section>
+</div>
+<!-- //ARS로 들어왔을때_KT -->
+
+</body>
+</html>

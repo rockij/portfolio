@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title>SGI서울보증</title>
+    <link rel="stylesheet" type="text/css" href="../../inc/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../inc/css/common-ui.css">
+    <link rel="stylesheet" type="text/css" href="../../inc/css/style-cust.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../inc/css/style-mark.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../inc/css/jquery.mobile-1.4.5.css">
+    <script type="text/javascript" src="../../inc/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="../../inc/js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../inc/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
+</head>
+
+<body>
+    <!-- 페이지 유형 제작시 wrapper에 고유 클레스 추가 -->
+    <div class="wrapper ps-sub-page elclp4010">
+        <header class="header">
+            <button type="button" class="prev-page" title="이전페이지 이동"></button>
+            <h1 class="header-tit">보험금청구</h1>
+            <button type="button" class="sidenav-btn" title="전체메뉴"></button>
+        </header>
+        <!-- 페이지 하단에 플로팅 버튼이 있을시 class = btm-fixed 추가 -->
+        <section class="container btm-fixed">
+            <!-- 사이드 여백설정 공통 class = inner -->
+            <!-- 페이지 하단에 플로팅 버튼이 있을시 class = acco-fixed 추가 -->
+            <!-- 페이지 하단 결제 영역 있을 시 class = btm-pay-fixed 추가 -->
+            <div class="content btm-pay-fixed">
+                <div class="cont-wrap">
+                    <div class="top-srch-wrap">
+                        <div class="ps-from-item">
+                            <p class="write-title">증권번호</p>
+                            <div class="srch-wrap srch-type-cont">
+                                <div class="inner-box">
+                                    <input type="text" title="숫자 18자리 입력" placeholder="숫자 18자리 입력">
+                                    <button type="button" class="srch-btn open-bottomlist" title="검색" data-page="bottom-pop-list"></button>
+                                </div>
+                            </div>
+                            <p class="ps-bu-txt">청구하실 증권번호(보험증권 좌측상단)를 입력</p>
+                        </div>
+                    </div>
+                    <div class="date-info-wrap">
+                        <div class="date-txt">보험금청구 대상</div>
+                    </div>
+
+                    <!-- 내역이 있을때 -->
+                    <ul class="ps-accordion-wrap type-prod">
+                        <li class="accordion-item">
+                            <div class="deta-tit inner">
+                                <span class="html-top">
+                                    <strong class="wrap ellipsis">
+                                        <em class="tit">이행하자</em>
+                                        <em class="state">계약자명</em>
+                                    </strong>
+                                    <span class="date">계약일자 2019-07-08</span>
+                                    <em class="price">165,000,165,000,165원</em>
+                                </span>
+                            </div>
+                            <div class="deta-docu inner">
+                                <ul class="list-wrap">
+                                    <li class="list-item">
+                                        <strong class="list-tit">증권번호</strong>
+                                        <span class="list-txt">100-000-201912036552</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">계약명</strong>
+                                        <span class="list-txt">계약보증금</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">보험계약자</strong>
+                                        <span class="list-txt">홍길동</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">보증내용</strong>
+                                        <span class="list-txt">주계약보증내용</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">보험기간</strong>
+                                        <span class="list-txt">2019-07-01 ~ 2020-06-30</span>
+                                    </li>
+                                </ul>
+                                <div class="in-btn-wrap">
+                                    <button type="button" class="inline-btn gray">상세조회</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- 내역이 없을때 -->
+                    <!-- <div class="date-none-wrap">
+                        <div class="ico-stat-wrap">
+                            <p class="tit ico02">해당 내역이 없습니다.</p>
+                            <p class="txt">청구하실 증권번호(보험증권 좌측상단)로<br>조회해 주세요.</p>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- cont-wrap -->
+            </div>
+            <!-- content -->
+            <div class="ps-btm-wrap">
+                <div class="ps-pay-wrap">
+                    <div class="pay-tit">
+                        <p class="tit">이행하자</p>
+                        <p class="txt">청구하실 보험금</p>
+                    </div>
+                    <span class="price"><em>165,000,000,000,000</em>원</span>
+                </div>
+            </div>
+            <div class="fix-btn-wrap">
+                <button type="button" class="btn blue">다음</button>
+            </div>
+        </section>
+        <footer class="footer"></footer>
+        <!-- 레이어팝업 -->
+        <!-- SgiUI.popAniOn('.bottom-listpop'); 바닥 팝업 실행 -->
+        <!-- SgiUI.popAniOff('.bottom-listpop'); 바닥 팝업 종료-->
+        <article class="pop-botlist-js-wrap bottom-listpop" data-page="bottom-pop-list">
+            <div class="botlist-wrap">
+                <div class="ico-stat-wrap">
+                    <p class="tit ico02">쇼핑몰보증보험인 경우<br>주문(구매)번호를 입력해 주세요.</p>
+                </div>
+                <div class="ps-from-item">
+                    <p class="write-title">주문(구매)번호</p>
+                    <div class="ps-input">
+                        <input type="text" title="직접 입력" placeholder="직접입력">
+                    </div>
+                </div>
+                <div class="fix-btn-wrap">
+                    <button type="button" class="btn blue">조회</button>
+                </div>
+            </div>
+            <button class="close-bottomlist" title="닫기"></button>
+        </article>
+        <!-- //레이어팝업 -->
+    </div>
+</body>
+</html>

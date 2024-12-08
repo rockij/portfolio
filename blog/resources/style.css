@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button, input, textarea, select{margin:0;padding:0;border:0;font:inherit}
+input{border:1px solid #ccc;}
+html,body{height:100%}
+
+.scroll_wrap, .scroll{width:100%;height:100%}
+.scroll{overflow-y:scroll;-webkit-overflow-scrolling:touch}
+
+/* winHeight */
+.winHeight{height:100%}
+.winHeight header, .winHeight footer{line-height:50px;text-align:center;color:#fff}
+.winHeight header{background-color:#fa3d3d}
+.winHeight footer{background-color:#307fe5}
+.winHeight section{overflow-y:auto;}
+
+/* 페이지 전환 효과 */
+.page_transform{margin:30px;width:200px;height:200px;position:relative;border:1px solid #aa272d;}
+.page_transform .page{width:100%;height:100%;position:absolute;display:none;}
+.page_transform #d1{background-color:yellow;}
+.page_transform #d2{background-color:red}
+.page_transform .current{display:block;}
+.page_transform .show{
+	animation: fadeIn;
+	animation-duration: 2s;
+}
+.page_transform .hide{
+	animation: fadeOut;
+	animation-duration: 2s;
+}
+.page_transform{}
+@keyframes fadeIn{
+	from{ opacity: 0; }
+	to{ opacity: 1; }
+}
+@keyframes fadeOut{
+	from{ opacity: 1; }
+	to{ opacity: 0; }
+}
+
+/* 전체팝업 세로 스크르롤*/
+.ly_full{position:fixed;top:0;left:0;width:100%;height:100%;z-index:999}

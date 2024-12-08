@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initialscale=1.0, maximum-scale=1.0, minimum-scale=1.0, userscalable=no">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<title>신한금융투자 계좌개설 워크시트</title>
+</head>
+<body>
+<!-- sheet -->
+<!-- note -->
+<h1>Shinhan Finance Invest Mobile Publishing</h1>
+<div id="note">
+	<ul>
+		<li>모든 문서는 html5, UTF-8을 기준.</li>
+		<li>기본 웹폰트는 Noto Sans 숫자는 Prompt 사용</li>
+		<li>단말기 확인은 ios: 9.0 이상, 안드로이드: 4.4 이상 확인</li>
+	</ul>
+</div>
+<div id="mwork">
+	<fieldset>
+	<legend>Start Date : 2018-08-09</legend>
+	<table class="mwork" summary="WebPublisher Procedure Sheet" border="1">
+		<colgroup>
+		<col width="14%">
+		<col width="*">
+		<col width="24%">
+		</colgroup>
+		<thead>
+		<tr>
+			<th>name</th>
+			<th>href</th>
+			<th>비고</th>
+		</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td>공통</td>
+				<td class="depth1"><a href="loading.html">로딩</a></td>
+				<td class="date">기본 로딩바</td>
+			</tr>
+			<tr>
+				<td>공통</td>
+				<td class="depth1"><a href="popup.html">팝업</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>공통</td>
+				<td class="depth1"><a href="popup_paysend_no.html">송금불가안내(팝업)</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>계좌개설안내</td>
+				<td class="depth1"><a href="account_open.html">계좌개설안내</a></td>
+				<td class="date">
+					- 내부개발<br>
+					- 약관 동의 포함<br>
+					- 하단 스텝 1번째
+				</td>
+			</tr>
+			<tr>
+				<td>기본정보입력</td>
+				<td class="depth1"><a href="step1.html">기본정보입력</a></td>
+				<td class="date">
+					- 주소찾기 포함
+				</td>
+			</tr>
+			<tr>
+				<td>거래목적확인</td>
+				<td class="depth1"><a href="step2.html">거래목적확인</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>비밀번호 설정 & 약관동의</td>
+				<td class="depth1"><a href="step3.html">비밀번호 설정 & 약관동의</a></td>
+				<td class="date">
+					- 약관 포함 (약관 누르면 팝업 뜸)
+				</td>
+			</tr>
+			<tr>
+				<td>1원 인증값 입력</td>
+				<td class="depth1"><a href="step4-1won.html">1원 인증값 입력</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>1원 역이체 인증</td>
+				<td class="depth1"><a href="step4-1won_reverse.html">계좌인증 & 자금이체 계좌 선택</a></td>
+				<td class="date">
+					- 내부개발
+				</td>
+			</tr>
+			<tr>
+				<td>1원 역이체 인증</td>
+				<td class="depth1"><a href="step4-1won_reverse2.html">은행 선택</a></td>
+				<td class="date">
+					- 내부개발
+				</td>
+			</tr>
+			<tr>
+				<td>1원 역이체 인증</td>
+				<td class="depth1"><a href="step4-1won_reverse3.html">계좌번호 입력</a></td>
+				<td class="date">
+					- 내부개발
+				</td>
+			</tr>
+			<tr>
+				<td>신분증 촬영</td>
+				<td class="depth1"><a href="step5-shoot.html">촬영</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>신분증 촬영</td>
+				<td class="depth1"><a href="step5-camera.html">확인중</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>신분증 촬영</td>
+				<td class="depth1"><a href="step5-conf.html">신분증 확인</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>신분증 촬영</td>
+				<td class="depth1"><a href="step5-push.html">신분증 진위여부 확인</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>계좌개설완료</td>
+				<td class="depth1"><a href="step-end.html">계좌개설완료</a></td>
+				<td class="date"></td>
+			</tr>
+			<tr>
+				<td>출금이체 동의</td>
+				<td class="depth1"><a href="agree_ars.html">출금이체 동의</a></td>
+				<td class="date">
+					- 내부개발
+				</td>
+			</tr>
+		</tbody>
+
+	</table>
+	</fieldset>
+
+</div>
+<!-- //sheet -->
+<!-- //html body -->
+</body>
+<!-- style -->
+<style type="text/css">
+	* {	margin:0;padding:0;}
+	body {padding:20px;	font-family:Tahoma, Sans-Serif; color:#333; font-size:11px; background-color:#fff;}
+	/* title */
+	h1 {color:#000; letter-spacing:-2px;}
+	.currentsite {display:block; position:absolute; right:40px; top:20px;}
+	a{display:block;color:#009; text-decoration:none;}
+	#mwork fieldset {border:none;}
+	#mwork legend {display:none;}
+	/* table */
+	#mwork table {width:100%; border-collapse:collapse; border:1px solid #666;}
+	#mwork caption {text-align:left; font-size:200%; color:#999;}
+	#mwork th{padding:6px 0; border:1px solid #666; color:#ccc; font-size:110%; background-color:#000;}
+	#mwork td{padding:10px 0;border:1px solid #666; background-color:#eee;text-align:center;font-weight:bold;font-size:14px}
+	#mwork td.stit{background-color:#bbb;}
+	/*#mwork td.chg{background-color:red;color:#fff;}*/
+	/*#mwork td.chg2{background-color:#0072ff;color:#fff;}*/
+	/* note */
+	#note {margin:10px 0 10px 0; padding:10px; border:2px dotted #000; background:#eee; letter-spacing:0;}
+	#note p {padding-left:10px;}
+	#note pre {margin-top:10px; margin-bottom:10px; font-family:Tahoma, Sans-Serif; color:#333; font-size:small;}
+	#note h2 {margin:0px 0 10px 0;}
+	#note .notice{color:red;}
+	#note .comment {display:block; margin:5px 0 10px 0; color:#666;}
+	#note .issue {color:#900;}
+	#note .add {color:#900; font-weight:bold;}
+	#note ul li {margin-left:20px;}
+	.date{text-align:left !important;padding-left:10px !important;font-size:12px !important;font-weight:normal !important}
+	.space{height:10px;padding:0 !important;background-color:#ccc !important}
+	ol{padding-left:20px}
+</style>
+<!-- //style -->
+</html>

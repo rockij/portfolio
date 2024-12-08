@@ -1,0 +1,931 @@
+@import './module';
+@import './animation';
+
+$fc:#7253F3;
+$fc2:#7253F3;
+$bg:#f4f4f4;
+$bgw:#fff;
+.fc_blu{ color:#186de0 !important }
+
+// common
+body{
+    background-color:$bg;
+    &.bgw {
+        background-color:$bgw;
+    }
+}
+.checkbox-notice input:checked{
+    +label{
+        background-color:$fc;
+        &:before{
+            background-image:url($urlImg + "app/checkbox_notice_on.png");
+        }
+    }
+}
+
+.title_type{
+    .count{
+        background-color: rgba(114,83,243,0.1);
+        color: $fc;
+    }
+}
+
+.list_type{
+    .btn_dtsrch{
+        margin-top:px(64);
+        background-color:#222
+    }
+}
+.list_brand{
+    dl{
+        >dd{
+            ul.nameset{
+                >li{
+                    &.data{
+                        .day{
+                            background-color:#fffcfd;
+                            border-color:$fc;
+                            color:$fc;
+                        }
+                        .skip{
+                            border-color:$fc;
+                            color:$fc;
+                            &:after{
+                                border-color:$fc;
+                            }
+                        }
+                    }
+                }
+            }
+            ul.bankset{
+                .false{
+                    color:#222
+                }
+            }
+        }
+    }
+}
+.list_brand2{
+    ul.list{
+        >li{
+            &.false{
+                color:$fc;
+            }
+        }
+    }
+}
+.list_dealsrch{
+    h3{
+        code{
+            color:$fc
+        }
+    }
+    .list{
+        .up{
+            color:#222
+        }
+        .dw{
+            color:#186de0
+        }
+    }
+}
+.list_coupon{
+    .checkbox{
+        &.circle{
+            input:checked + label:before{
+                background-image:url($urlImg + "lgu/checkbox_check2_on.png");
+            }
+        }
+    }
+    >li{
+        &.end{
+            dd:after{
+                background-color:#fffcfd;
+                border-color:$fc;
+                color:$fc;
+            }
+        }
+    }
+}
+
+.srch_type{
+    .btn_srch{
+        border-color:#222;
+        color: #222;
+    }
+}
+
+[class*="btn_type"]{
+    border-radius:px(6);
+    border-width:1px;
+    border-style:solid;
+}
+.btn_area_wide{
+    button, a{
+        background-color:$fc2;
+        border-color:$fc2;
+    }
+    .tooltip{
+        background-image:url($urlImg + "lgu/tooltip_sizefix.png");
+        color:$fc;
+    }
+}
+.btn_area_simp{
+    a, button{
+        background-color:#fff;
+        border-color:#D4D4D4;
+        color:#222;
+        i{
+            &, &:after{
+                background-color:#222
+            }
+        }
+    }
+}
+.btn_area_half{
+    >li{
+        a,button{
+            background-color:#ddd;
+            border-color:#ddd;
+            color:#888;
+            &.skip{
+                background-color:$fc2;
+                color:#fff;
+                font-weight:700;
+            }
+        }
+    }
+}
+.btn_com_del{
+    margin-top:px(-10)
+}
+.btn_area_one{
+    .skip{
+        background-color:$fc
+    }
+    .view{
+        color:$fc
+    }
+}
+.btn_area_half{
+    .skip{
+        background-color:$fc
+    }
+}
+
+.tooltip_ball{
+    color: $fc2;
+    .ico{
+        background-image:url($urlImg + "lgu/ico_i.png");
+    }
+}
+.list_bank{
+    >li{
+        border-color:#e7e7e7;
+        a{
+            color:#000;
+        }
+        &.name{
+            color:#7A7A7A;
+            code{
+                color:#c2c2c2;
+            }
+        }
+    }
+}
+.list_brand2{
+    ul.list{
+        >li{
+            .th{
+                .month{
+                    color:$fc
+                }
+            }
+        }
+    }
+}
+.list_thumb{
+    .war{
+        color:$fc
+    }
+    .n:after{
+        background-color:$fc
+    }
+}
+.nodata_error{
+    &[data-type="해지"]{
+        .btn_area_wide{
+            button, a{
+                background-color:$fc2;
+                border-color:$fc2;
+            }
+        }
+    }
+}
+
+// layout
+.fix{
+    &.btm{
+        .btn_skip{
+            background-color:#222;
+        }
+        .btn_cancel{
+            color:#222
+        }
+    }
+}
+#gnb{
+    background-color:#fff;
+    s{
+        left:auto;
+        margin-left:1px;
+    }
+    ul{
+        display:flex;
+        justify-content:space-between;
+    }
+    li{
+        position:relative;flex:1;
+        a{
+            display:block;
+            padding:px(4) 0 px(13);
+            font-size:px(12);
+            text-align:center;
+            color:#b0b0b0;
+            h3{
+                position:relative;
+                display:inline-block;
+                font-weight:300;
+            }
+        }
+        &.active{
+            a{
+                color:#111;
+                h3{
+                    font-weight:700;
+                }
+                &:before{
+                    content:'';
+                    display:block;
+                    width:100%;
+                    height:2px;
+                    background-color:#222;
+                    @include pos(absolute, $b:-1px, $l:0);
+                }
+            }
+        }
+    }
+}
+#header,
+.ly_pop.full header{
+    .btn_noti{
+        &.n i{
+            background-image:url($urlImg + "lgu/ico_bell_n.png");
+        }
+    }
+    .btn_prev{
+        left:px(12);
+        background-image:url($urlImg + "app/btn_top_back.png");
+    }
+    .btn_close{
+        left:px(15);
+        background-image:url($urlImg + "/app/ico_x.png");
+    }
+    + .total_price{
+        padding-top:px(7);
+    }
+}
+.header_tab{
+    background-color: $bg;
+    #header{
+        // padding-bottom:0;
+    }
+}
+.navbar{
+    ul{display:flex}
+    li{
+        position:relative;
+        flex:1;
+        a{
+            display:block;
+            padding:px(8) 0 px(12.8);
+            text-align:center;
+            color:#b0b0b0;
+            h3{
+                font-weight:300;
+                font-size:px(15);
+            }
+        }
+        &.active{
+            a{
+                color:#111;
+                h3{
+                    font-weight:700;
+                }
+            }
+            &:before{
+                content:'';
+                display:block;
+                width:100%;
+                height:px(2);
+                background-color:#222;
+                @include pos(absolute, $b:-1px, $l:0);
+            }
+        }
+    }
+}
+.gnb_menu{
+    display:none;
+    z-index:5;
+    @include pos(fixed, $t:0, $b:0, $l:0, $r:0);
+    &.switchOn{
+        display:block;
+    }
+    ul{
+        float:right;
+        padding:px(10.5008) 0;
+        background-color:#333;
+        border-radius:px(6);
+        li a{
+            display:block;
+            padding:px(6) px(39.5008) px(6) px(18);
+            font-size:px(14);
+            color:#fff;
+        }
+    }
+}
+#footer{
+    background-color:#f8f9fb;
+    padding-top:px(8);
+    .nav{
+        display:flex;
+        padding:px(3.2) 0 px(3.2) px(12.8);
+        li{
+            position:relative;
+            &:before{
+                content:'';
+                margin-top:px(.8);
+                display:inline-block;
+                width:1px;
+                height:px(9.6);
+                background-color:#aaa;
+                position:absolute;left:0;top:50%;
+                transform: translateY(-50%);
+            }
+        }
+        a, button{
+            padding:0 px(8);
+            height:px(32);
+            width:100%;
+            color:#222;
+            font-size:px(10.4);
+        }
+    }
+    address{
+        padding:px(17.6) 0 px(17.6) px(16);
+        border-top: 1px solid #e7e7e7;
+        font-size:px(10);
+        line-height:1.6;
+        &, a{
+            color:#999;
+        }
+        p.cs{
+            margin-bottom:px(6.4);
+            b{
+                color:#222;
+            }
+        }
+    }
+    .nav li:first-child:before{
+        display:none;
+    }
+    .footer_info{
+        &:first-child{
+            padding:px(8) 0 px(8) px(18);
+            border-bottom:1px solid #e7e7e7;
+        }
+        span, button{
+            display:inline-block;
+            position:relative;
+            padding:px(5) px(7) px(5) 0;
+            color:#666;
+            font-size:px(10);
+            line-height:1;
+            font-weight:bold;
+            + span, + button{
+                padding-left:px(7);
+                &:before{
+                    content:"";
+                    display:block;
+                    @include pos(absolute, $t:50%, $l:0);
+                    height:40%;
+                    border-left:1px solid #aaa;
+                    transform:translateY(-50%)
+                }
+            }
+            + .footer_info{
+                padding:px(18) 0 px(18) px(18);
+                p{
+                    color:#999;
+                    font-size:px(10);
+                    line-height:px(18);
+                    a{
+                        color:#999;
+                        text-decoration:none;
+                    }
+                }
+            }
+        }
+        .list{
+            margin-top:px(16);
+            line-height:1.8;
+            font-size:px(10);
+            color:#999;
+            li{
+                position:relative;
+                padding-left:px(6.4);
+                &:before{
+                    content:'-';
+                    @include pos(absolute, $l:0, $t:0);
+                }
+            }
+        }
+    }
+}
+
+// style
+.stock_status{
+    &.nocfirm{
+        a.data{
+            figure{
+                background-image:url($urlImg + "lgu/ico_shield.png")
+            }
+            strong{
+                color:$fc
+            }
+        }
+    }
+}
+.live_watch{
+    .shield{
+        .load:before{
+            @include loading("circle", px(13), px(13), px(2), $fc)
+        }
+    }
+    &[data-type="일시조회"]{
+        padding-top:px(3.5);
+    }
+    &[data-type="모니터링"]{
+        border-color:$fc;
+        background-color:$fc
+    }
+    &[data-type="모니터링2"]{
+        border-color:$fc;
+        background-color:$fc
+    }
+}
+.total_price{
+    background-color:$bg;
+    padding-bottom:px(7);
+}
+.total_price2{
+    margin:px(7) 0;
+}
+.total_price3{
+    padding-top:px(30)
+}
+.profile_dealcount, .profile_paynotice2{
+    .btn_area_wide{
+        padding:0;
+    }
+}
+.profile_dealcount{
+    h3{
+        color:#999;
+    }
+    .my{
+        color:#7A7A7A;
+    }
+    .won{
+        color:#000;
+        &:after{
+            background-color:#000;
+        }
+        &.num{
+            &, code{
+                color:$fc;
+            }
+            &:after{
+                background-color:$fc;
+            }
+        }
+    }
+    .btn_area_wide{
+        padding:0;
+        background-color:#fff;
+        button, a{
+            border-radius:px(6);
+            background-color:#000;
+            border-color:#000;
+        }
+    }
+}
+.profile_dealcount2{
+    .count{
+        color:$fc;
+        border-color:$fc;
+    }
+}
+.profile_paynotice{
+    &[data-title="자동이체"]{
+        .sample:after{
+            background-image:url($urlImg + "lgu/ani_sample_bank.png");
+        }
+    }
+    .skip2{
+        color:$fc
+    }
+}
+.profile_paynotice2{
+    .won{
+        color:$fc2;
+        &:after{
+            background-color:$fc2;
+        }
+        code{
+            background-image:url($urlImg + "lgu/code_paynotice2.png");
+        }
+    }
+    .btn_area_wide{
+        background-color:#fff;
+        button, a{
+            border-radius:px(6);
+            background-color:$fc2;
+            border-color:$fc2;
+        }
+    }
+}
+.profile_simpbank{
+    > hgroup{
+        background-color:$bg;
+    }
+}
+.profile_paynotice{
+    .skip{
+        box-shadow:none;
+    }
+    &[data-title="결제한번"]{
+        figure{
+            background-image:url($urlImg + "lgu/ani_regist.png")
+        }
+    }
+    &[data-title="결제한번2"]{
+        figure{
+            background-image:url($urlImg + "lgu/ani_regist.png")
+        }
+    }
+    &[data-title="결제한번3"]{
+        .skip{
+            background-color: $fc2;
+            border-color: $fc2;
+        }
+    }
+    &[data-title="자동이체"]{
+        .sample{
+            left:0;
+            right:0;
+            bottom:0;
+        }
+        .skip{
+            border-radius:0;
+            bottom:-1px;
+            right:0;
+            left:0;
+            background-color: $fc2;
+            border-color: $fc2;
+        }
+    }
+}
+.profile_paynotice3{
+    .won{
+        color:$fc
+    }
+    .skip{
+        border-color:#222;
+        background-color:#222;
+        color:#fff
+    }
+}
+.profile_eventview{
+    h2{
+        .tip{
+            background-image:url($urlImg + "lgu/txt_benefit.png");
+        }
+        .emp:before{
+            background-color:#fff878;
+        }
+    }
+    &[data-sbj="혜택하나"]{
+        &:before{
+            display:none
+        }
+        .btn_area_wide{
+            a, button{
+                border: 0;
+                border-top: 1px solid #e3e3e3;
+                background-color: #fff;
+                color: $fc;
+            }
+        }
+    }
+}
+.profile_coupon{
+    .giftset{
+        li{
+            &:last-child figure{
+                background-image:url($urlImg + "lgu/figure_coupon.png");
+            }
+        }
+    }
+}
+.profile_pricelist{
+    .btn_alram{
+        &.n i{
+            background-image:url($urlImg + "app/ico_bell_n.png");
+        }
+    }
+    .wonset{
+        dt{
+            .count{
+                background-color: rgba(114,83,243,0.1);
+                color: $fc;
+            }
+        }
+        .fc, .fc2{
+            color:$fc !important
+        }
+    }
+    .causet{
+        li{
+            .opened{
+                border-color: #1da797;
+                background-color: #1da797;
+            }
+        }
+    }
+}
+.profile_topview{
+    .swiper-pagination-bullet{
+        width:4px;
+        height:4px;
+        background-color:#d9d9d9;
+        &-active{
+            background-color:$fc;
+        }
+    }
+    .swiper-slide{
+        &[data-title="나도피해"]{
+            background-image:url($urlImg + "lgu/ani_fingerprint.png");
+            > article{
+                &:before, &:after{
+                    background-image:url($urlImg + "lgu/ani_finger_border.png");
+                }
+                .que{
+                    &:before{
+                        background-color:$fc;
+                    }
+                    color:$fc;
+                }
+            }
+        }
+        &[data-title="이체얼마"]{
+            .print>ul>li{
+                .col{
+                    color:$fc
+                }
+            }
+        }
+    }
+}
+
+.conect_section{
+    .frmfill{
+        .input{
+            .lbl, input{
+                color:$fc
+            }
+            &, &.focus{
+                border-color:$fc;
+            }
+        }
+    }
+    .dsc2{
+        b{
+            color:$fc
+        }
+        i{
+            background-image:url($urlImg + "lgu/ico_i.png");
+        }
+    }
+}
+
+.bank_number{
+    .input{
+        border-color:$fc;
+        input{
+            height:px(68);
+            text-align:center;
+            font-weight:500;
+            font-size:px(20);
+        }
+        input::-webkit-input-placeholder{
+            color:#313131;
+        }
+        .lbl{
+            text-align:center;
+            width:100%;
+            top:px(22);
+        }
+        input, .lbl{
+            color:$fc;
+        }
+    }
+}
+
+.app_version h2{
+    color:$fc
+}
+
+.globalStockSlide{
+    .swiper-pagination-bullet-active{
+        background-color:$fc
+    }
+}
+
+.inner{
+    padding-right:px(20);
+    padding-left:px(20);
+}
+.inner_wrap{
+    background-color:$bg;
+    >section, .inner{
+        padding-left:px(20);
+        padding-right:px(20);
+    }
+    >section{
+        position:relative;
+        margin-top:px(12);
+        background-color:#fff;
+        &:first-child{
+            margin-top:0;
+        }
+        .title_type, .title_bx{
+            margin-bottom:px(27);
+        }
+    }
+    .visual_banksrch{
+        margin-top:0
+    }
+    .profile_dealcount{
+        padding:0
+    }
+    .bank_notice{
+        padding: px(15) px(12);
+        margin-top: 0;
+        background-color: #f4f4f4;
+        &+section{
+            margin-top: 0;
+        }
+    }
+    .profile_bankselct{
+        padding:px(30) px(18) px(45);
+    }
+    .result_txt_wrap {
+        background-color:#f4f4f4;
+        text-align:center;
+        padding-top:px(154);
+        strong {
+            display:block;
+            font-size:px(14);
+            font-weight:500;
+        }
+        span {
+            margin-top:px(3);
+            display:block;
+            font-size:px(12);
+            color:#888888;
+        }
+        .btn {
+             margin-top:px(25);
+             display:inline-block;
+             height:px(34);
+             font-size:px(12);
+             font-weight:500;
+             padding:0 px(21);
+             border:1px solid #D4D4D4;
+             border-radius:px(17);
+             background-color:#ffffff;
+        }
+    }
+}
+#ct{
+    margin-top:px(7);
+    &.assetsMain, &.assetsMain2{
+        padding-top:px(30);
+        background-color:#fff
+    }
+    &.dtrecomFrm{
+        padding-bottom:px(52)
+    }
+    &.assetsList,
+    &.assetsMain,
+    &.assetsMain2,
+    &.dtrecomFrm,
+    &.depfill,
+    &.eyivstMain2{
+        margin-top:0
+    }
+}
+.assetsList {
+    padding-top: px(22);
+    padding-bottom: px(75/2);
+    background-color: #fff;
+    .list_type {
+        margin-top: px(20)
+    }
+}
+
+// popup
+.ly_pop{
+    &.full{
+        .close{
+            right:px(8);
+        }
+    }
+}
+.ly_citation{
+    .chklst{
+        .checkbox{
+            input:checked + label{
+                &:before{
+                    background-image:url($urlImg + "lgu/checkbox_check_on.png")
+                }
+            }
+        }
+        li.all{
+            .checkbox{
+                input:checked + label{
+                    background-color:transparent;
+                    border-color:#dd0a6d;
+                    &:before{
+                        background-image:url($urlImg + "lgu/checkbox_circle_on.png")
+                    }
+                }
+            }
+        }
+    }
+    .btn_skip{
+        button, a{
+            background-color:$fc2;
+            color:#fff;
+        }
+    }
+}
+.ly_srchcase2{
+    .cau{
+        .fc{
+            color:$fc
+        }
+    }
+    a.btn_skip{
+        background-color:#333;
+    }
+}
+.ly_agrchk{
+    .checkbox{
+        &.all{
+            input:checked{
+                +label{
+                    background-color: transparent;
+                    border: 1px solid #222;
+                    color: #222;
+                }
+            }
+        }
+    }
+}
+.ly_datalist{
+    .wrap{
+        background-color:$bg
+    }
+}
+.ly_checked{
+    .content{
+        .btn_skip{
+            button{
+                border-bottom:1px solid $fc;
+                color:$fc;
+            }
+        }
+    }
+}

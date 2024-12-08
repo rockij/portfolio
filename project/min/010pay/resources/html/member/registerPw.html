@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>010페이</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" href="../../css/owl.carousel.min.css">
+<link rel="stylesheet" href="../../css/common.css?ezauthver=5.0">
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../../js/html5shiv.js"></script>
+<script type="text/javascript" src="../../js/respond.min.js"></script>
+<![endif]-->
+<script src="../../js/jquery-1.8.3.min.js"></script>
+<script src="../../js/jquery.placeholder.min.js"></script>
+<script src="../../js/owl.carousel.min.js"></script>
+<script src="../../js/design.js?ezauthver=5.0" defer="defer"></script>
+<script src="../../js/commonmsg.js?ezauthver=5.0"></script>
+<script src="../../js/commonutil.js?ezauthver=5.0"></script>
+</head>
+
+<body>
+<!-- form -->
+<form class="main_form" action="javascript: void(0);" autocomplete="off">
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<div id="header">
+			<div class="container">
+				<!-- <button type="button" id="btnBack" class="btn-back"><i class="icon-angle-left">뒤로가기</i></button> -->
+				<h1 class="brand-name"><a href="#"><span><img src="../../images/logo.svg" class="brand-logo" alt="010pay"></span></a></h1>
+				<!-- <h2 class="page-title">비밀번호 설정</h2> -->
+				<button type="button" id="closeWindow" class="btn-close"><i class="icon-times">창닫기</i></button>
+			</div>
+		</div>
+		<!-- //header -->
+
+		<!-- content -->
+		<div id="content">
+			<!-- container -->
+			<div class="container">
+				<!-- headline -->
+				<div class="headline">
+					<p class="small">로그인 및 간편 결제에 사용할</p>
+					<p><strong>비밀번호 입력</strong></p>
+				</div>
+				<!-- //headline -->
+
+				<!-- 비밀번호 입력 -->
+				<div class="section">
+					<div class="input-mark">
+						<span class="mark"><i id="pwd_01" class="on"></i><i id="pwd_02"></i><i id="pwd_03"></i><i id="pwd_04"></i><i id="pwd_05"></i><i id="pwd_06"></i></span>
+					</div>
+					<span class="input input-help hidden" id="pwdSpan">
+						<input type="password" name="newPwd" id="newPwd" style="ime-mode:disabled;" npkencrypt="on" data-keypad-type="nusssm" data-keypad-theme="settle_keypad" data-keypad-next="__hide__" class="input-text" maxlength="6" size="24" autofocus placeholder="숫자 6자리">
+					</span>
+				</div>
+				<!-- //비밀번호 입력 -->
+
+				<!-- 안내 -->
+				<div class="section info-center">동일하거나 연속된 숫자 3자리,<br> 생년월일, 휴대폰번호 뒷자리 불가</div>
+				<!-- //안내 -->
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //content -->
+	</div>
+	<!-- //wrap -->
+</form>
+<!-- //form -->
+
+<!-- loading -->
+<div class="modal modal-loading">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="loading">
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+					<div class="loading-bar"></div>
+				</div>
+				<span class="text">로딩 중</span>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //loading -->
+
+<!-- common alert -->
+<div id="commonAlert" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<h3 id="alertTitle"></h3>
+				<p id="alertContents"></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" onclick="modalClose();" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //common alert -->
+
+<!-- common prompt -->
+<div id="commonPrompt" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<h3 id="promptTitle"></h3>
+				<p id="promptContents"></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" onclick="modalClose();" class="btn">취소</button>
+				<button type="button" id="promptOk" class="btn">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //common prompt -->
+</body>
+</html>

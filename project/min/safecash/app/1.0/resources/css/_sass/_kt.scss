@@ -1,0 +1,140 @@
+html.kt{
+
+    $fc_p:#2bb7b3;
+
+    body{
+        background-color:#ecf0f1;
+    }
+
+    // common
+    .checkbox{
+        &-notice{
+            input{
+                &:checked + label{
+                    background-color:$fc_p;
+                    &:before{
+                        background-image:url($urlImg + "kt/checkbox_notice_on.png")
+                    }
+                }
+            }
+        }
+    }
+    .btn_area_simp{
+        text-align:center;
+        a,button{
+            @include btn($style:"m", $p:px(14) px(60) px(16), $fc:$fc_p, $br:px(34), $bg:#f4fbfb);
+            i{
+                @include lineArr($custom:"plus", $w:px(23), $h:px(23), $c:$fc_p, $ro:0);
+                margin:px(-4) px(14) 0 0;
+            }
+        }
+        &.arr{
+            a,button{
+                i{
+                    display:none;
+                }
+                &:after{
+                    content:'';
+                    @include lineArr($w:px(13), $h:px(13), $c:$fc_p, $ro:45);
+                    margin:px(-6) 0 0 px(8);
+                }
+            }
+        }
+    }
+    .list_brand3{
+        ul.list{
+            dl{
+                dt.name2{
+                    font-size:px(26);
+                    .date2{
+                        font-size:px(24);
+                    }
+                }
+                dd.bankset{
+                    .txt{
+                        font-size:px(26);
+                    }
+                    .bank{
+                        font-size:px(24);
+                        span:before{
+                            height:px(20);
+                            margin-top:px(2);
+                        }
+                    }
+                    .false2{
+                        font-size:px(26);
+                        &:after{
+                            margin:0 0 0 px(6);
+                        }
+                        // +.skip2{
+                        //     padding-right:px(22);
+                        // }
+                    }
+                    .skip2{
+                        font-size:px(24);
+                    }
+                }
+            }
+        }
+    }
+
+    // content
+    .bankview_direct{
+        .title_bx{
+            margin-bottom:px(36) !important
+        }
+    }
+    .bankview_direct2{
+        .titleset2{
+            padding-top:px(70);
+            padding-bottom:px(50);
+            h2{
+                font-size:px(25);
+            }
+            .won{
+                margin-top:0;
+                color:#222
+            }
+        }
+        .caution_line{
+            font-size:px(24);
+            +section{
+                padding-top:px(30)
+            }
+        }
+        .btn_area_simp{
+            margin-top:px(70);
+        }
+    }
+    .bankview_detail2{
+        .list_brand3{
+            ul.list{
+                padding-top:px(20)
+            }
+        }
+        .btn_area_wide{
+            background-color:#fff;
+            padding-top:0
+        }
+    }
+
+    .thumbview_coupon{
+        padding:px(55) 0 px(70) !important;
+    }
+
+    .ly_help{
+        .content{
+            padding-bottom:px(50);
+        }
+        .btn_area_wide{
+            background-color:#fff;
+            margin-top:px(-2);
+        }
+    }
+    .ly_cpinfo{
+        .close{
+            left:px(40)
+        }
+    }
+
+}

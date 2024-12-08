@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta name="HandheldFriendly" content="true">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>서울시민카드</title>
+<link rel="stylesheet" type="text/css" href="../../resources/css/style.css">
+<script type="text/javascript" src="../../resources/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="../../resources/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../../resources/js/front_ui.js"></script>
+</head>
+<body>
+<a href="#container" accesskey="1" class="skip_area">메뉴건너뛰고 본문 바로가기</a>
+
+<div id="wrap">
+
+    <header class="sb_header fix top">
+        <button type="button" onclick="" class="btn_prev"><i class="iarr">뒤로가기</i></button>
+        <h1>개별마일리지 전환 회원확인</h1>
+    </header>
+    <!-- //header -->
+
+    <div id="ct" class="frmjoin">
+        <div class="joinskip_area">
+            <p class="inner cau">서울마일리지로 전환하기 위해서는 회원확인이 필요합니다.<br>“에코 마일리지” 회원인 경우 회원 인증을 해주세요.</p>
+            <fieldset class="inner">
+                <h2 class="title_type">에코 마일리지 회원확인</h2>
+                <ul class="frm_type">
+                    <li>
+                        <div class="ipbox ipdel">
+                            <input type="text" id="" placeholder="아이디">
+                            <button type="button" onclick="" class="ip_del"><s><i class="iplus">삭제</i></s></button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ipbox ipdel">
+                            <input type="password" id="" placeholder="비밀번호">
+                            <button type="button" onclick="" class="ip_del"><s><i class="iplus">삭제</i></s></button>
+                        </div>
+                    </li>
+                </ul>
+            </fieldset>
+            <ul class="btn_type_half fix btm">
+                <li><button type="button" onclick="" class="btn_r btn_type5">취소</button></li>
+                <li><button type="button" onclick="layer_open('userinfochk')" class="btn_r btn_type2">회원인증</button></li>
+            </ul>
+        </div>
+    </div>
+    <!-- //content -->
+
+    <button class="topGo"><i class="icon">맨위로가기</i></button>
+    <!-- //top -->
+
+    <!-- 정보확인 -->
+    <div id="mw-userinfochk" class="ly_pop ly_alert">
+        <div class="ly_content">
+            <div class="inner ly_cover">
+                “에코마일리지”의  회원정보가 정확하지 않습니다.<br>
+                아이디, 비밀번호를 다시 확인하고 인증해주세요.<br>
+                아이디, 비밀번호를 잊으신 경우 아래 주소에서 확인하시기 바랍니다.
+                <p class="linkgo">에코마일리지<a href="#;">아이디/비밀번호 찾기</a></p>
+                <ul class="btn_type_half">
+                    <li><button type="button" onclick="layer_close()" class="btn_r_o btn_type5">취소</button></li>
+                    <li><button type="button" onclick="layer_close()" class="btn_r_o btn_type2">확인</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- //정보확인 -->
+
+</div>
+
+</body>
+</html>

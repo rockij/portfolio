@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="resources/css/fullPage.css" media="screen" rel="stylesheet">
+<link href="resources/css/reset.css" media="screen" rel="stylesheet">
+<link href="resources/css/style.css" media="screen" rel="stylesheet">
+<script src="resources/js/jquery-1.11.1.min.js"></script>
+<script src="resources/js/webfont.js"></script>
+<script src="resources/js/fullPage.js"></script>
+<script src="../global/resources/js/global.js" defer="defer"></script>
+<script src="resources/js/design.js" defer="defer"></script>
+<!--[if lt IE 9]>
+<script src="resources/js/html5shiv.js"></script>
+<![endif]-->
+<title>건강지키미</title>
+</head>
+<body>
+
+<!--[if lte ie 8]>
+<div class="ie8_down_ver">이 브라우저는 지원하지 않습니다.<br>브라우저 업데이트 하시기 바랍니다.<br><a href="https://support.microsoft.com/ko-kr/help/17621/internet-explorer-downloads" target="_blank">업데이트 바로가기</a></div>
+<![endif]-->
+
+<header class="mb-off">
+    <h1><button type="button" onclick="$.fn.fullpage.moveTo(1);">건강지키미</button></h1>
+	<ul>
+        <li><button type="button" onclick="$.fn.fullpage.moveTo(1);" class="selected">서비스 소개</button></li>
+        <li><button type="button" onclick="$.fn.fullpage.moveTo(5);">서비스 이용<i></i>해지</button></li>
+		<li><a href="javascript:alert('URL추가예정');" target="_blank">서비스 가입</a></li>
+		<li><a href="magazine.html">건강매거진</a></li>
+		<li><a href="notice.html">공지사항</a></li>
+    </ul>
+    <button type="button" onclick="$.fn.fullpage.moveTo(6);" class="btn_copy">공동인증서 복사 바로가기<i class="icon ico_arr"></i></button>
+</header>
+<header class="mb-on">
+	<h1><button type="button" onclick="mvScroll(0)">건강지키미</button></h1>
+	<nav class="gnb">
+		<button type="button" class="gnb_btn">
+			<i></i>
+			<i></i>
+			<i></i>
+		</button>
+		<div class="gnb_menu">
+			<ul>
+				<li><button type="button" class="nav_btn" onclick="mvScroll(1);gnbEvt();">서비스 소개</button></li>
+				<li><button type="button" class="nav_btn" onclick="mvScroll(4);gnbEvt();">서비스 이용<i></i>해지</button></li>
+				<li><a href="javascript:alert('URL추가예정');" class="nav_btn">서비스 가입</a></li>
+				<li><a href="magazine.html" class="nav_btn">건강매거진</a></li>
+				<li><a href="notice.html" class="nav_btn">공지사항</a></li>
+			</ul>
+		</div>
+	</nav>
+</header>
+<!--// header -->
+<div id="fullpage">
+	<section class="section" id="section1">
+		<h2 class="blind">서비스 소개</h2>
+		<p class="txtMain"><strong>건강지키미</strong>로<br class="mb-on"> 간편하게<br class="mb-off"> 나의 보험과<br class="mb-on"> 건강을 관리하세요.</p>
+		<p class="txtSub">내가 가입한 <span>보험정보와 납입금액, 만기안내</span>를<br class="mb-on"> 간편하게 조회하고<br class="mb-off"> 내가 쓴 <span>병원비, 건강검진내역</span>도 <br class="mb-on">한번에 확인하세요!</p>
+		<ul>
+			<li><button type="button" onclick="$.fn.fullpage.moveTo(2);" class="btn_goBohum"><i></i><br>나의 보험정보를 한눈에</button></li>
+			<li><button type="button" onclick="$.fn.fullpage.moveTo(3);" class="btn_goHealth"><i ></i><br>나의 건강정보를 한눈에</button></li>
+		</ul>
+		<ul class="mb-on">
+			<li><button type="button" onclick="mvScroll(1)" class="btn_goBohum"><i></i><br>나의 보험정보<i class="mb-off">를 한눈에</i></button></li>
+			<li><button type="button" onclick="mvScroll(2)" class="btn_goHealth"><i></i><br>나의 건강정보<i class="mb-off">를 한눈에</i></button></li>
+		</ul>
+	</section>
+	<section class="section" id="section2">
+		<h2 class="blind">서비스 소개</h2>
+		<p class="txtMain">모바일에서 간편하게<br><strong>나의 보험 정보</strong>를<em>!</em></p>
+		<p class="txtSub">내가 가입한 보험의 <span>상세정보, 보험료 납부현황,</span><br><span>만기예정 보험알림, 가입보장금액</span>을<br>모바일에서 한눈에 확인하세요!</p>
+	</section>
+	<section class="section" id="section3">
+		<h2 class="blind">서비스 소개</h2>
+		<span class="txtMain">모바일에서 간편하게<br><strong>나의 건강 정보</strong>를<em>!</em></span><br>
+		<span class="txtSub">나의 <span>진료 내역 및 처방내역, 병원비 지출금액,</span><br><span>건강검진 대상 및 검진결과</span>를 모바일에서 간편하게!</span>
+		<span class="hp"><img src="resources/images/section3_hp.png" alt=""></span>
+	</section>
+
+	<section class="section" id="section5">
+		<h2 class="blind">서비스 소개</h2>
+		<div class="txtWrap">
+			<span class="txtMain">매주 업데이트 되는<br><strong>건강정보 콘텐츠</strong>와<br>AI가 분석해주는<br><strong>영양제 정보</strong>까지!</span><br>
+			<span class="txtSub">계절 및 트렌드에 맞춰 매주 업데이트되는 건강정보 콘텐츠와<br>AI가 분석해주는 영양제의 성분 분석 및 성분별 궁합시간표를 확인하세요.</span>
+			<p class="subTxt">서비스 가입(유료) 즉시 문자로 건강정보 콘텐츠가 발송되며,<br>이후 3개월 간격으로 건강정보 콘텐츠를 문자로 받아 보실 수 있습니다.<br>(홈페이지 및 APP에서도 최신 콘텐츠 확인 가능)</p>
+		</div>
+		<div class="txtWrap m">
+			<span class="txtMain">매주 업데이트 되는<br><strong>건강정보 콘텐츠</strong>와<br><strong>영양제 정보</strong>까지!</span><br>
+			<span class="txtSub">계절 및 트렌드에 맞춰 매주 업데이트되는<br><strong>건강정보 콘텐츠</strong>와 AI가 분석해주는 <strong>영양제의<br>성분 분석 및 성분별 궁합시간표</strong>를 확인하세요.</span>
+		</div>
+		<span class="hp"><img src="resources/images/section5_new_hp.png" alt=""></span>
+		<p class="subTxt m">서비스 가입(유료) 즉시 문자로 건강정보 콘텐츠가 발송되며,<br>이후 3개월 간격으로 건강정보 콘텐츠를 문자로 받아 보실 수<br>있습니다.(홈페이지 및 APP에서도 최신 콘텐츠 확인 가능)</p>
+	</section>
+	<section class="section" id="section4">
+		<h2 class="blind">서비스 이용/해지</h2>
+		<p class="txtMain"><span class="mb-off">서비스를 이용하시려면<br></span><strong>통신사 인증앱</strong>을<br class="mb-on"> 설치하세요<em>!</em></p>
+		<ul class="applist">
+			<li class="skt">
+				<h3 class="blind">SKT고객 PASS BY SKT</h3>
+				<a href="#;"><span class="icon ico_gle">Google Play</span></a><!----><a href="#;"><span class="icon ico_app">App Store</span></a>
+			</li>
+			<li class="kt">
+				<h3 class="blind">KT고객 PASS BY KT</h3>
+				<a href="#;"><span class="icon ico_gle">Google Play</span></a><!----><a href="#;"><span class="icon ico_app">App Store</span></a>
+			</li>
+			<li class="lgu">
+				<h3 class="blind">U+고객 PASS BY LG U+</h3>
+				<a href="#;"><span class="icon ico_gle">Google Play</span></a><!----><a href="#;"><span class="icon ico_app">App Store</span></a>
+			</li>
+		</ul>
+		<article class="csbx">
+			<div class="inner">
+				<h3>서비스문의·해지</h3>
+				<dl class="mb-off">
+					<dt>고객센터</dt>
+					<dd class="tcs">1599-4760</dd>
+					<dt>상담시간</dt>
+					<dd>평일 9시~18시 주말, 휴일 휴무</dd>
+				</dl>
+				<dl class="mb-on">
+					<dt>고객센터</dt>
+					<dd class="tcs">1599-4760</dd>
+				</dl>
+				<dl class="mb-on">
+					<dt>상담시간</dt>
+					<dd>평일 9시~18시 주말, 휴일 휴무</dd>
+				</dl>
+				<a href="withdraw.html" target="_blank" class="mb-off"><img src="resources/images/btn_withdraw.png" alt="홈페이지에서 서비스 해지하기"></a>
+				<div class="withdraw_btn mb-on">
+					<a href="withdraw.html">홈페이지에서 서비스 해지하기</a>
+					<small>* 건강지키미 <strong>공동인증서 복사는 PC홈페이지에서만 가능</strong>합니다.</small>
+				</div>
+			</div>
+		</article>
+	</section>
+	<section class="section" id="section6">
+        <h2 class="blind">공동인증서 복사</h2>
+        <p class="txtSub">건강지키미 서비스 이용을 위해서는 공동인증서가 필요해요<em>!</em></p>
+        <p class="txtMain">PC<i class="icon ico_arr"></i>모바일 <strong>공동인증서 복사</strong>하기</p>
+        <ul class="urlmenu imgover">
+            <li><a href="https://www.sktpass.com" target="_blank"><img src="resources/images/urlmenu_skt.png" alt="SKT고객 PASS"><img src="resources/images/urlmenu_skt_over.png" alt="SKT고객 PASS" class="over"></a></li>
+            <li><a href="doc_kt.html" target="_blank"><img src="resources/images/urlmenu_kt.png" alt="KT고객 PASS"><img src="resources/images/urlmenu_kt_over.png" alt="KT고객 PASS" class="over"></a></li>
+			<li><a href="doc_lgu.html" target="_blank"><img src="resources/images/urlmenu_lgu.png" alt="LGU+고객 PASS"><img src="resources/images/urlmenu_lgu_over.png" alt="LGU+고객 PASS" class="over"></a></li>
+			<li><a href="#n" target="_blank"><img src="resources/images/urlmenu_health.png" alt="APP 고객 PASS"><img src="resources/images/urlmenu_health_over.png" alt="APP 고객 PASS" class="over"></a></li>
+        </ul>
+        <p class="cau">* <span>SKT</span>고객은 <span>SKTPASS</span> 홈페이지에서 공동인증서 복사가 가능합니다.</p>
+		<button type="button" class="icon btn_top">맨위로</button>
+		<div class="updatePop">
+			<span class="content">
+				<button type="button" class="btn_cls" onclick="$('.updatePop').removeClass('upper')">창닫기</button>
+				<h4><strong>건강지키미 공동인증서 복사</strong>를 위해서는 <span class="emphasis">PASS 앱 최신 버전</span>이 필요합니다.</h4>
+				<p>PASS 앱을 최신버전으로 업데이트 후 이용해주세요.</p>
+			</span>
+		</div>
+		<footer>
+			<div class="inner">
+				<ul class="nav">
+					<li><button type="button" onclick="window.open('pop_agree1_2.html', '_blank', 'width=600px,height=645px,toolbars=no,scrollbars=no'); return false;">서비스 이용약관</button></li>
+					<li><button type="button" onclick="fullpageStop();$('.ly_pop').hide();$('#ly_private').show();" class="fc_red">개인정보처리방침</button></li>
+					<li><button type="button" onclick="window.open('../global/health/popup_win.html', '_blank', 'width=400px,height=645px,toolbars=no,scrollbars=no'); return false;">(주) 민앤지 사업자 정보</button></li>
+				</ul>
+				<address><strong>(주)민앤지</strong><strong>대표이사</strong>이현철<strong>사업자등록번호</strong>214-88-39117<br class="mb-on"><strong>통신판매업신고</strong>2015-서울강남-00012<br>서울특별시 강남구 테헤란로 34길6, 태광타워 12, 13층<br class="mb-on"><strong>E-mail</strong>minwise.help@minwise.co.kr<br class="mb-on"><strong>고객센터</strong>1599-4760<strong>FAX</strong>02-929-4424</address>
+				<p>Copyright ⓒ Minwise Co.,Ltd.  All rights reserved.</p>
+				<span class="logo">민앤지</span>
+			</div>
+		</footer>
+	</section>
+</div>
+<button type="button" class="btn_nextscene">다음화면</button>
+
+<!-- 서비스점검 팝업 -->
+<section id="ly_notice" class="ly_pop ly_checknotice" style="display: ;">
+	<span class="content">
+		<!-- <button type="button" class="btn_cls">창닫기</button> -->
+		<h2 class="title">
+			안녕하세요.<br/>
+			건강지키미입니다.
+		</h2>
+		<p class="tit_in">건강지키미 서비스 점검중입니다.</p>
+		<span class="tit_in2 fc_bold">
+			서비스 점검 기간 동안 KT건강지키미 이용요금은 부과되지 않으며,<br/>
+			(점검기간 <em style="font-family:'Roboto';">2018.12.1</em> ~ (서비스 재개시점 별도 공지 예정)
+		</span>
+		<pre class="scroll">
+			<span class="pre_txt">이용요금 무과금 기간은 점검 완료 일정에 따라 변경 될 수 있습니다.</span>
+
+			SKT 건강지키미는 보험정보 조회가 제한되며, 건강정보 조회만 가능합니다.
+
+			빠른 시일 내에 정상적으로 서비스를 이용하실 수 있도록 점검중에 있으며,
+			서비스 이용가능 시점에 안내드리겠습니다.
+
+			기타 문의사항이 있으신 경우 고객센터(1599-4760)로 연락 부탁드립니다.
+
+			이용에 불편을 드려 죄송합니다.
+		</pre>
+		<button type="button" class="btn_cl">확인</button>
+	</span>
+	<span class="blank"></span>
+</section>
+<!-- 서비스점검 팝업 -->
+
+<!-- 공지사항 -->
+<section id="ly_notice" class="ly_pop ly_agree ly_notice">
+	<span class="content">
+		<button type="button" class="btn_cls">창닫기</button>
+		<h2 class="title">약관변경사항</h2>
+		<pre class="scroll">
+			안녕하세요. ㈜민앤지입니다.
+			건강지키미 개인정보처리방침, 개인정보수집이용, 개인정보 제3자 제공, KT개인정보 제3자 제공 약관의 내용이 변경되었으며  SKT 개인정보 제3자 제공, 마케팅 활용 동의 약관이 추가되었습니다.
+			아래 변경되는 내용을 참고하시어 서비스 이용 부탁드립니다.
+
+			※ 변경사유
+			관련 법률 개정 준수를 위한 서비스 약관 등 전체 약관 내용 수정
+
+			※ 개정 내용<table>
+				<colgroup>
+					<col style="width:15%;">
+					<col style="width:35%;">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">항목</th>
+						<th scope="col">개정전</th>
+						<th scope="col">개정후</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>개인정보처리방침
+						- 약관명 변경</td>
+						<td>개인정보취급방침</td>
+						<td>개인정보처리방침</td>
+					</tr>
+					<tr>
+						<td>개인정보처리방침 제1조 1항
+							SKT, KT 개인정보제3자제공
+							: 수집항목 > 제공항목 변경</td>
+						<td>1.1 수집항목
+						1) 서비스 가입 정보 : 가입계약번호, 부가서비스 가입/ 해지 일자, 고객ID, 휴대폰번호, 계약타입, 가입상태, 선불여부, 고객구분코드, 단말모델명, 사용자의 성인 여부, 변경된 전화번호
+						2) 서비스 이용 정보 : 서비스 가입/해지 일자, 가입경로, 서비스 실행 이력, 서비스 이용 정보(접속 매체, 전송 기록 등), 건강/보험정보 조회날짜, 보험정보(고객동의시), 국민건강보험공단 건강검진대상여부(고객 동의시)</td>
+						<td><table>
+							<colgroup>
+								<col style="width:15%;">
+								<col style="width:15%;">
+								<col style="width:20%;">
+								<col style="width:30%;">
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">제공하는자</th>
+									<th scope="col">제공받는 자</th>
+									<th scope="col">제공 목적	</th>
+									<th scope="col">제공하는 개인정보</th>
+									<th scope="col">제공받는 자의<br>개인정보 보유기간</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong class="u fs_up">국내 이동통신사(SKT)</strong></td>
+									<td><strong class="u fs_up">㈜민앤지</strong></td>
+									<td><strong class="u fs_up">서비스 가입 및 해지, 서비스 제공, 월정액 정산, 고객문의 처리</strong></td>
+									<td>가입계약번호, 고객ID, 휴대폰번호, 계약타입, 가입상태, 선불여부, 고객구분코드, 명의자이름, 단말모델명, 마켓구분, 사용자의 성인 여부, 스마트폰 OS 정보, 변경된 전화번호, imsi</td>
+									<td><strong class="u fs_up">해지 후 정산완료 시까지</strong></td>
+								</tr>
+								<tr>
+									<td><strong class="u fs_up">국내 이동통신사(KT)</strong></td>
+									<td><strong class="u fs_up">㈜민앤지</strong></td>
+									<td><strong class="u fs_up">서비스 가입 및 해지, 서비스 제공, 월정액 정산, 고객문의 처리</strong></td>
+									<td>가입계약번호, 고객ID, 휴대폰번호, 계약타입, 가입상태, 선불여부, 고객구분코드, 명의자이름, 단말모델명, 마켓구분, N-STEP 부가서비스 상품코드, 부가서비스 가입일, 사용자 한국나이, 스마트폰 OS 정보, 생년월일</td>
+									<td><strong class="u fs_up">해지 후 정산완료 시까지</strong></td>
+								</tr>
+							</tbody>
+						</table></td>
+					</tr>
+					<tr>
+						<td>개인정보처리방침 제1조 2항,3항
+							개인정보수집이용(필수) 제1조 1항
+							: 수집항목, 이용목적 수정
+							: 표로 정리
+							: 필수, 선택 항목 분리</td>
+						<td>1.2 이용목적
+							1) 서비스 제공에 관한 계약 및 서비스 제공에 따른 요금정산(월 이용료 청구), 본인 확인,
+								점유인증
+							2) 서비스 가입자가 제휴사 및 본 서비스를 이용할 수 있도록 하기 위함
+							3) 가입자 관리
+								서비스 이용을 위한 본인 확인, 개인식별, 불량 가입자의 부정이용 방지와 비인가 사용의 방지, 가입의사 확인, 분쟁 조정을 위한 기록 보존, 불만처리 등 민원처리, 고지사항 전달, 서비스 유지방법 알림 등
+							4)  마케팅 및 광고에 활용
+								신규 서비스(제품) 개발 및 특화, 접속빈도 파악 또는 가입자의 서비스 이용에 대한 통계, 이벤트 등 광고성 정보를 앱 push 등을 통한 전달
+								1.3 제공하는 자 : ㈜SK텔레콤(서비스 가입정보에 한함)</td>
+						<td><table>
+							<colgroup>
+								<col style="width:15%;">
+								<col style="width:40%;">
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">수집∙이용 항목	</th>
+									<th scope="col">이용목적</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="2">필수항목</td>
+									<td>가입계약번호, 고객ID, 휴대폰번호, 계약타입, 가입상태, 선불여부, 고객구분코드, 명의자이름, 단말모델명, 마켓구분, N-STEP 부가서비스 상품코드, 부가서비스 가입일, 사용자 한국나이, 스마트폰 OS 정보, 생년월일</td>
+									<td><strong class="u">1) 서비스 제공에 관한 계약 및 서비스 제공에 따른 요금정산(월 이용료 청구), 본인 확인, 점유인증
+										2) 서비스 가입자가 제휴사 및 서비스 홈페이지에서 본 서비스를 이용할 수 있도록 하기 위함
+										3) 본인인증 차단 및 승인</strong></td>
+								</tr>
+								<tr>
+									<td>가입계약번호, 서비스 휴대폰번호, 가입상태, 휴대폰번호, 명의자 이름, 서비스 이용정보(건강/보험정보 조회날짜, 보험정보, 국민건강보험공단 건강검진대상여부(고객 동의 시))</td>
+									<td><strong class="u">가입자 관리 (서비스 이용을 위한 본인 확인, 개인식별, 불량 가입자의 부정이용 방지와 비인가 사용의 방지, 가입의사 확인, 분쟁 조정을 위한 기록 보존, 불만처리 등 민원처리, 고지사항 전달, 서비스 유지방법 알림 등)</strong></td>
+								</tr>
+								<tr>
+									<td>선택항목</td>
+									<td>휴대폰번호, 부가서비스 가입일, 가입경로, 단말모델명, 서비스 실행 이력, 서비스 이용 정보(접속 매체, 전송 기록 등)</td>
+									<td>마케팅 광고에 활용
+										1) "건강지키미" 개발 및 개선, "건강지키미" 관련 문의 등에 대한 개인 맞춤 상담 · 정보 제공
+										2) 신규 서비스나 이벤트, 제3자의 상품 또는 "건강지키미" 관련 개인 맞춤형 광고·정보 전송</td>
+								</tr>
+							</tbody>
+						</table></td>
+					</tr>
+					<tr>
+						<td>개인정보처리방침 제2조 2항
+						개인정보수집이용(필수) 제2조 2항
+						: 개인정보 관련 법령 표로 수정</td>
+						<td>2.2 가입자가 서비스 해지를 요청하거나 개인정보 수집 및 이용에 대한 동의를 철회하는 경우 개인정보를 파기합니다. 단, 이용요금의 정산, 소송이나 분쟁 등 기타의 사유로 일정 기간 보유하여야 할 필요가 있는 경우 가입자의 개인정보를 보유 및 이용할 수 있습니다.
+							2.3 상법, 국세기본법 및 소비자보호에 관한 법률 등 관계 법령에 따라 보존할 필요가 있는 경우, 회사는 관계 법령에서 정한 기간 동안 가입자 정보를 보관합니다. 이 경우 회사는 보관하는 정보를 그 보관의 목적으로만 이용하며 보존기간은 다음과 같습니다.
+							1) 거래에 관한 장부 및 증빙서류: 5년(국세기본법, 법인세법, 부가가치세법 등)
+							2) 대금결제 및 재화 등의 공급에 관한 기록: 5년(전자상거래 등에서의 소비자보호에 관한 법률)
+							3) 표시/광고에 관한 기록: 6개월(전자상거래에서의 소비자보호에 관한 법률)
+							4) 계약 또는 청약철회 등에 관한 기록: 5년(전자상거래에서의 소비자보호에 관한 법률)
+							5) 소비자 불만 또는 분쟁처리에 관한 기록: 3년(전자상거래에서의 소비자보호에 관한 법률)
+							6) 위 각 호외의 법령에 정해진 개인정보 보유기간이 있을 경우 그에 따름</td>
+						<td>2-2. 가입자가 서비스 해지를 요청하거나 개인정보 수집 및 이용에 대한 동의를 철회하는 경우 개인정보를 지체없이 파기합니다.
+						단, 상법, 국세기본법 등에서 소비자보호에 관한 법률 등 관계법령에 따라 보존할 필요가 있는 경 우 회사는 관계법령에서 정한 기간 동안 회원정보를 보관합니다.
+						이 경우 회사는 보관하는 정보를 그 보관의 목적으로만 이용하며 보존기간은 다음과 같습니다.
+
+						*회사는 서비스 제공을 위하여 필요한 최소한의 정보만을 수집하고 있으며, 이에 대한 동의가 없을 경우에도 T PASS, KT PASS 서비스 이용이 가능합니다. 다만, 건강지키미 서비스의 가입 또는 이용이 불가능합니다.<table>
+							<colgroup>
+								<col style="width:45%;">
+								<col style="width:45%;">
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">근거법령</th>
+									<th scope="col">보존정보</th>
+									<th scope="col">보존기간</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>전자상거래등에서의 소비자보호에 관한 법률</td>
+									<td>계약 또는 청약철회 등에 관한 기록</td>
+									<td><strong class="u">5년</strong></td>
+								</tr>
+								<tr>
+									<td>전자상거래 등에서의 소비자보호에 관한 법률, 상법, 국세기본법, 소득세법, 법인세법, 부가가치세법</td>
+									<td>대금결제 및 재화 등의 공급에 관한 기록, 거래에 관한 장부 및 증빙서류</td>
+									<td><strong class="u">5년</strong></td>
+								</tr>
+								<tr>
+									<td>전자상거래 등에서의 소비자보호에 관한 법률</td>
+									<td>소비자의 불만 또는 분쟁처리에 관한 기록</td>
+									<td><strong class="u">3년</strong></td>
+								</tr>
+								<tr>
+									<td>전자상거래 등에서의 소비자보호에 관한 법률</td>
+									<td>표시/광고에 관한 기록	</td>
+									<td><strong class="u">6개월</strong></td>
+								</tr>
+							</tbody>
+						</table></td>
+					</tr>
+					<tr>
+						<td>개인정보처리방침 제2조 3항
+						개인정보수집이용(필수) 제2조 3항
+						: 개인정보 유효기간제 내용 추가</td>
+						<td>-</td>
+						<td>2-3. 개인정보 유효기간제의 적용
+						회사는 정보통신망법 관련 조항에 따라 고객이 1년(이하 “개인정보유효기간”이라고 합니다.)동안 서비스를 이용한 사실 또는 활동한 기록이 없는 경우, 개인정보의 안전한 보호 및 피해 발생을 방지하기 위해 '정보통신망법 제29조'에 근거하여 고객에게 사전통지하고 개인정보를 별도로 분리하여 저장 관리합니다. 회사는 유효기간이 도래하기 30일 전까지 이메일, 문자메시지, 휴대전화 등 고객이 입력한 연락수단을 통하여 사전통지합니다.
+
+						개인정보유효기간제에 의해 별도 분리된 경우라도 고객이 서비스 재이용을 원하실 경우에는, 본인확인 절차를 거쳐 서비스를 재이용하실 수 있습니다.</td>
+					</tr>
+					<tr>
+						<td>개인정보처리방침 제4조 2항
+						개인정보수집이용(필수) 제4조 2항
+						: 제3조 > 제4조로 변경
+						: 개인정보 파기기한 내용 수정</td>
+						<td>2) 파기기한
+						가입자의 개인정보 보유기간이 경과 시 삭제합니다. 단, 고객 응대 및 불법적 사용자에 대한 관련 수사기관 협조, 상법 등 관련 법령의 규정에 의하여 보유하여야 할 필요가 있는 경우에는 일정 기간 가입자의 데이터를 보유합니다. 또한, 고객에게 미리 고지하고 개별동의를 받은 경우에는 동의한 내용에 따른 기간 동안 보유합니다.</td>
+						<td>3-2 파기기한
+						가입자의 개인정보 보유기간이 경과 시 삭제합니다. 다만, 타인의 개인정보를 도용하여 회원가입 등을 하였음을 알게 된 때 회사는 지체없이 해당 가입자에게 필요한 조치를 취할 수 있습니다. 또 가입자 중 자신의 개인정보도용을 인지한 가입자가 해당 가입자에 대해 서비스 이용정지 또는 탈퇴를 요구하는 경우에도 필요한 조치를 취할 수 있으며, 소정의 절차를 거쳐 수사기관에 그 내용이 제출될 수 있습니다.</td>
+					</tr>
+					<tr>
+						<td>개인정보처리방침 제4조
+						개인정보수집이용(필수) 제4조
+						개인정보제3자제공 제1조
+						: 제5조 > 제4조로 변경
+						: 표로 수정
+						: 마케팅활용동의 추가</td>
+						<td>회사는 본 서비스를 가입자에게 제공하기 위해 다음과 같이 개인정보를 제삼자에게 제공합니다.
+						5.1 제공받는 자 : 국내 이동통신사(SKT, KT)
+						5.2 제공받는 자의 이용목적
+						1) 국내 이동통신사(SKT, KT) : 서비스 가입/해지, 서비스 제공, 월정액 정산, 프로모션 안내 및 참여
+						5.3 제공하는 개인정보 항목
+						1) 국내 이동통신사(SKT, KT): 휴대폰정보, 서비스 가입정보(가입/해지 정보)
+						5.4 제공받는 자의 개인정보 보유기간: 서비스 해지 후 5년
+						* 단 법령에 정해진 개인정보 보유기간이 있을 경우 그에 따름</td>
+						<td><table>
+							<colgroup>
+								<col style="width:15%;">
+								<col style="width:15%;">
+								<col style="width:25%;">
+								<col style="width:25%;">
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">제공하는자</th>
+									<th scope="col">제공받는 자</th>
+									<th scope="col">제공항목</th>
+									<th scope="col">제공목적</th>
+									<th scope="col">보유 및 이용기간	</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>민앤지</td>
+									<td><strong class="u">국내 이동통신사(SKT)</strong></td>
+									<td>휴대폰 정보, 서비스 정보(서비스가입/해지 정보)</td>
+									<td><strong class="u">서비스 가입/해지, 서비스 제공, 월정액 정산, 프로모션 안내 및 참여</strong></td>
+									<td><strong class="u">본 서비스 가입 및 해지 후 정산완료 시까지</strong></td>
+								</tr>
+							</tbody>
+						</table></td>
+					</tr>
+					<tr>
+						<td>개인정보처리방침 제5조
+						개인정보수집이용(필수) 제5조
+						: 제6조 > 제5조로 변경
+						: 표로 수정
+						: SMS발송업체(다우기술) 추가</td>
+						<td>회사는 서비스 향상을 위해서 아래와 같이 개인정보를 위탁하고 있으며, 관계 법령에 따라 개인정보가 안전하게 관리될 수 있도록 필요한 사항을 규정하고 있습니다. 회사의 개인정보 위탁업체 및 위탁업무 내용은 아래와 같습니다.
+						6.1 수탁 업체 : ㈜드림베이
+						6.2 위탁 업무 내용 : 서비스 운영, 이용자 관리, 회원제 서비스 이용에 따른 본인확인, 고객상담, 불만 처리 등 고객 지원 업무
+						6.3 개인정보 보유 및 이용 기간 : 서비스 해지 또는 위탁 계약 종료 시 까지</td>
+						<td><table>
+							<colgroup>
+								<col style="width:20%;">
+								<col style="width:40%;">
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">수탁업체명</th>
+									<th scope="col">위탁업무의 내용</th>
+									<th scope="col">위탁기간</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong class="u">㈜드림베이</strong></td>
+									<td><strong class="u">서비스 운영, 이용자 관리, 회원제 서비스 이용에 따른 본인확인, 고객상담, 불만 처리 등 고객 지원 업무</strong></td>
+									<td><strong class="u">서비스 해지 또는 위탁 계약 종료 시까지</strong></td>
+								</tr>
+								<tr>
+									<td><strong class="u">다우기술</strong></td>
+									<td><strong class="u">SMS/MMS 발송 대행</strong></td>
+									<td><strong class="u">위탁 계약 종료 시 까지</strong></td>
+								</tr>
+							</tbody>
+						</table></td>
+					</tr>
+					<tr>
+						<td>개인정보처리방침 제7조
+						개인정보수집이용(필수) 제3조
+						: 제3조 > 제7조로 수정</td>
+						<td>8. 제공 동의 철회: 서비스 해지 시 약관 동의가 철회됩니다.</td>
+						<td>제공 동의 철회: 서비스 가입을 통한 개인정보의 수집, 이용, 제공과 관련해 귀하는 동의하신 내용을 언제든지 철회 하실 수 있습니다.
+						동의철회는 홈페이지 첫 화면의 『서비스해지』에서 "서비스해지"를 클릭하면 개인정보의 수집ㆍ이용ㆍ제공에 대한 동의를 바로 철회할 수 있으며,
+						개인정보보호책임자에게 서면, 전화, 이메일(E-mail) 등으로 연락하시면 회사는 즉시 동의 철회를 위해 필요한 조치를 취합니다.
+						동의를 철회하고 개인정보를 파기하는 등의 조치가 있으면 그 사실을 귀하께 지체없이 통지하도록 하겠습니다.</td>
+					</tr>
+					<tr>
+						<td>개인정보처리방침 제8조
+						개인정보수집이용(필수) 제5조
+						: 제9조 > 제8조로 수정
+						: 표로 수정
+						: 개인정보보호/담당관리자 내용 추가</td>
+						<td>개인정보관리 책임자 및 담당 연락처
+						1) 성  명 : 박철광
+						2) 소  속 : 기술연구소
+						3) 직  위 : 실장
+						4) 전  화 : 1599-4760
+						5) 이메일 : privacy@minwise.co.kr</td>
+						<td><table>
+							<colgroup>
+								<col style="width:15%;">
+								<col style="width:30%;">
+								<col style="width:30%;">
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">개인정보보호 책임자	</th>
+									<th scope="col">개인정보보호 관리자	</th>
+									<th scope="col">개인정보보호 담당자</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>성명</td>
+									<td>박철광</td>
+									<td>이승현</td>
+									<td>정은석</td>
+								</tr>
+								<tr>
+									<td>직위</td>
+									<td>CPO / CISO</td>
+									<td>과장</td>
+									<td>과장</td>
+								</tr>
+								<tr>
+									<td>소속부서</td>
+									<td>기술연구소</td>
+									<td>기술연구소</td>
+									<td>기술연구소</td>
+								</tr>
+								<tr>
+									<td>이메일</td>
+									<td colspan="3">privacy@minwise.co.kr</td>
+								</tr>
+								<tr>
+									<td>전화번호</td>
+									<td colspan="3">1599-7052<br>평일 : 09:00~18:00 (주말, 공휴일 휴무)</td>
+								</tr>
+							</tbody>
+						</table></td>
+					</tr>
+					<tr>
+						<td>개인정보처리방침 적용일 수정
+						개인정보수집이용(필수) 적용일 수정</td>
+						<td>적용일 : 2017년 12월 20일</td>
+						<td>이 개인정보 처리방침은 2018.10.29 부터 적용됩니다.
+						이전 개인정보 처리방침은 아래에서 확인하실 수 있습니다.
+						(시행일) 본 약관은 2018년 10월 29일부터 시행합니다.</td>
+					</tr>
+				</tbody>
+			</table>
+		</pre>
+	</span>
+	<span class="blank"></span>
+</section>
+<!-- //공지사항 -->
+
+<!-- 개인정보처리방침 -->
+<section id="ly_private" class="ly_pop ly_agree">
+	<span class="content">
+		<button type="button" class="btn_cls">창닫기</button>
+		<h2 class="title">개인정보처리방침</h2>
+		<pre class="scroll">
+			“건강지키미(이하, ‘서비스’라 합니다.)”의 서비스 제공 및 이용과 관련하여 ㈜민앤지(이하, ‘회사’라 합니다)가 취득한 개인정보는 “통신비밀보호법”, “전기통신사업법” 및 “정보통신망 이용촉진 및 정보보호 등에 관한 법률” 등 정보통신서비스제공자가 준수하여야 할 관련 법령상의 개인정보 보호 규정을 준수합니다.
+
+			<h2>1. 개인정보수집 및 이용목적</h2>
+			<h3>1.1 이통사 개인정보 제공 항목</h3><table>
+				<colgroup>
+					<col style="width:15%;">
+					<col style="width:15%;">
+					<col style="width:20%;">
+					<col style="width:30%;">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">제공하는자</th>
+						<th scope="col">제공받는 자</th>
+						<th scope="col">제공 목적	</th>
+						<th scope="col">제공하는 개인정보</th>
+						<th scope="col">제공받는 자의<br>개인정보 보유기간</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong class="u fs_up">국내 이동통신사(SKT)</strong></td>
+						<td><strong class="u fs_up">㈜민앤지</strong></td>
+						<td><strong class="u fs_up">서비스 가입 및 해지, 서비스 제공, 월정액 정산, 고객문의 처리</strong></td>
+						<td>가입계약번호, 고객ID, 휴대폰번호, 계약타입, 가입상태, 선불여부, 고객구분코드, 명의자이름, 단말모델명, 마켓구분, 사용자의 성인 여부, 스마트폰 OS 정보, 변경된 전화번호, imsi</td>
+						<td><strong class="u fs_up">해지 후 정산완료 시까지</strong></td>
+					</tr>
+					<tr>
+						<td><strong class="u fs_up">국내 이동통신사(KT)</strong></td>
+						<td><strong class="u fs_up">㈜민앤지</strong></td>
+						<td><strong class="u fs_up">서비스 가입 및 해지, 서비스 제공, 월정액 정산, 고객문의 처리</strong></td>
+						<td>가입계약번호, 고객ID, 휴대폰번호, 계약타입, 가입상태, 선불여부, 고객구분코드, 명의자이름, 단말모델명, 마켓구분, N-STEP 부가서비스 상품코드, 부가서비스 가입일, 사용자 한국나이, 스마트폰 OS 정보, 생년월일</td>
+						<td><strong class="u fs_up">해지 후 정산완료 시까지</strong></td>
+					</tr>
+				</tbody>
+			</table><h3>1.2 수집항목</h3><table>
+				<colgroup>
+					<col style="width:15%;">
+					<col style="width:40%;">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">구분</th>
+						<th scope="col">수집∙이용 항목	</th>
+						<th scope="col">이용목적</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="2">필수항목</td>
+						<td>가입계약번호, 고객ID, 휴대폰번호, 계약타입, 가입상태, 선불여부, 고객구분코드, 명의자이름, 단말모델명, 마켓구분, N-STEP 부가서비스 상품코드, 부가서비스 가입일, 사용자 한국나이, 스마트폰 OS 정보, 생년월일</td>
+						<td><strong class="u">1) 서비스 제공에 관한 계약 및 서비스 제공에 따른 요금정산(월 이용료 청구), 본인 확인, 점유인증
+							2) 서비스 가입자가 제휴사 및 서비스 홈페이지에서 본 서비스를 이용할 수 있도록 하기 위함
+							3) 본인인증 차단 및 승인</strong></td>
+					</tr>
+					<tr>
+						<td>가입계약번호, 서비스 휴대폰번호, 가입상태, 휴대폰번호, 명의자 이름, 서비스 이용정보(건강/보험정보 조회날짜, 보험정보, 국민건강보험공단 건강검진대상여부(고객 동의 시))</td>
+						<td><strong class="u">가입자 관리 (서비스 이용을 위한 본인 확인, 개인식별, 불량 가입자의 부정이용 방지와 비인가 사용의 방지, 가입의사 확인, 분쟁 조정을 위한 기록 보존, 불만처리 등 민원처리, 고지사항 전달, 서비스 유지방법 알림 등)</strong></td>
+					</tr>
+					<tr>
+						<td>선택항목</td>
+						<td>휴대폰번호, 부가서비스 가입일, 가입경로, 단말모델명, 서비스 실행 이력, 서비스 이용 정보(접속 매체, 전송 기록 등)</td>
+						<td>마케팅 광고에 활용
+							1) "건강지키미" 개발 및 개선, "건강지키미" 관련 문의 등에 대한 개인 맞춤 상담 · 정보 제공
+							2) 신규 서비스나 이벤트, 제3자의 상품 또는 "건강지키미" 관련 개인 맞춤형 광고·정보 전송</td>
+					</tr>
+				</tbody>
+			</table>
+			<h2>2. 개인정보 보유 및 이용기간</h2>
+			<h3 class="fs_up u">2-1. 본 서비스 가입 일부터 해지 후 정산완료 시까지</h3>
+			<h3 class="fs_up u">2-2. 가입자가 서비스 해지를 요청하거나 개인정보 수집 및 이용에 대한 동의를 철회하는 경우 개인정보를 지체없이 파기합니다. 단, 상법, 국세기본법 등에서 소비자보호에 관한 법률 등 관계법령에 따라 보존할 필요가 있는 경 우 회사는 관계법령에서 정한 기간 동안 회원정보를 보관합니다. 이 경우 회사는 보관하는 정보를 그 보관의 목적으로만 이용하며 보존기간은 다음과 같습니다.</h3><table>
+				<colgroup>
+					<col style="width:45%;">
+					<col style="width:45%;">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">근거법령</th>
+						<th scope="col">보존정보</th>
+						<th scope="col">보존기간</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>전자상거래등에서의 소비자보호에 관한 법률</td>
+						<td>계약 또는 청약철회 등에 관한 기록</td>
+						<td><strong class="u">5년</strong></td>
+					</tr>
+					<tr>
+						<td>전자상거래 등에서의 소비자보호에 관한 법률, 상법, 국세기본법, 소득세법, 법인세법, 부가가치세법</td>
+						<td>대금결제 및 재화 등의 공급에 관한 기록, 거래에 관한 장부 및 증빙서류</td>
+						<td><strong class="u">5년</strong></td>
+					</tr>
+					<tr>
+						<td>전자상거래 등에서의 소비자보호에 관한 법률</td>
+						<td>소비자의 불만 또는 분쟁처리에 관한 기록</td>
+						<td><strong class="u">3년</strong></td>
+					</tr>
+					<tr>
+						<td>전자상거래 등에서의 소비자보호에 관한 법률</td>
+						<td>표시/광고에 관한 기록	</td>
+						<td><strong class="u">6개월</strong></td>
+					</tr>
+				</tbody>
+			</table>*회사는 서비스 제공을 위하여 필요한 최소한의 정보만을 수집하고 있으며, 이에 대한 동의가 없을 경우에도 T PASS, KT PASS 이용이 가능합니다. 다만, 건강지키미 서비스의 가입 또는 이용이 불가능합니다.
+
+			<h3>2-3. 개인정보 유효기간제의 적용</h3>
+			회사는 정보통신망법 관련 조항에 따라 고객이 1년(이하 “개인정보유효기간”이라고 합니다.)동안 서비스를 이용한 사실 또는 활동한 기록이 없는 경우, 개인정보의 안전한 보호 및 피해 발생을 방지하기 위해 '정보통신망법 제29조'에 근거하여 고객에게 사전통지하고 개인정보를 별도로 분리하여 저장 관리합니다. 회사는 유효기간이 도래하기 30일 전까지 이메일, 문자메시지, 휴대전화 등 고객이 입력한 연락수단을 통하여 사전통지합니다.
+
+			개인정보유효기간제에 의해 별도 분리된 경우라도 고객이 서비스 재이용을 원하실 경우에는, 본인확인 절차를 거쳐 서비스를 재이용하실 수 있습니다.
+
+			<h3>2-4. 개인정보 수집 및 이용 동의 철회</h3>
+			서비스 해지 시 개인정보 수집 및 이용동의는 철회됩니다.
+
+			<h2>3. 수집한 개인정보의 파기 절차</h2>
+			회사는 서비스 가입자가 가입 시 제공한 개인정보의 이용목적이 달성된 후 보관기간 및 이용기간에 따라 해당 정보를 파기하되, 그 파기 절차 및 방법 등은 다음과 같습니다.
+
+			<h3>3-1. 파기절차</h3>
+			가입자가 서비스 가입 등을 위해 회사에 제공한 개인정보는 서비스 해지 등 이용목적이 달성된 후, 내부 방침 및 기타 관련 법령의 규정에 따른 보유기간 경과 시 삭제되거나 파기합니다.
+
+			<h3>3-2 파기기한</h3>
+			가입자의 개인정보 보유기간이 경과 시 삭제합니다. 다만, 타인의 개인정보를 도용하여 회원가입 등을 하였음을 알게 된 때 회사는 지체없이 해당 가입자에게 필요한 조치를 취할 수 있습니다. 또 가입자 중 자신의 개인정보도용을 인지한 가입자가 해당 가입자에 대해 서비스 이용정지 또는 탈퇴를 요구하는 경우에도 필요한 조치를 취할 수 있으며, 소정의 절차를 거쳐 수사기관에 그 내용이 제출될 수 있습니다.
+
+			<h3>3-3 파기방법</h3>
+			종이에 출력된 개인정보는 분쇄기로 분쇄 또는 소각하거나 화학약품 처리를 하여 용해하여 파기하고, 전자적 파일 형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.
+
+			<h2>4. 개인정보 3자 제공 동의</h2>
+			회사는 본 서비스를 가입자에게 제공하기 위해 다음과 같이 개인정보를 제삼자에게 제공합니다.<table>
+				<colgroup>
+					<col style="width:15%;">
+					<col style="width:15%;">
+					<col style="width:25%;">
+					<col style="width:25%;">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">제공하는자</th>
+						<th scope="col">제공받는 자</th>
+						<th scope="col">제공항목</th>
+						<th scope="col">제공목적</th>
+						<th scope="col">보유 및 이용기간	</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>민앤지</td>
+						<td><strong class="u">국내 이동통신사(SKT)</strong></td>
+						<td>휴대폰 정보, 서비스 정보(서비스가입/해지 정보)</td>
+						<td><strong class="u">서비스 가입/해지, 서비스 제공, 월정액 정산, 프로모션 안내 및 참여</strong></td>
+						<td><strong class="u">본 서비스 가입 및 해지 후 정산완료 시까지</strong></td>
+					</tr>
+				</tbody>
+			</table><strong class="fs_up u">※ 단 법령에서 따로 정하는 경우에는 해당 기간까지 보유합니다.
+			※ 고객은 개인정보 제공에 동의하지 않으실 수 있으시며, 동의하지 않으신 경우 본 서비스 이용이 불가능 합니다.</strong>
+
+			<h2>5.개인정보의 취급 위탁</h2>
+			회사는 서비스 향상을 위해서 아래와 같이 개인정보를 위탁하고 있으며, 관계 법령에 따라 개인정보가 안전하게 관리될 수 있도록 필요한 사항을 규정하고 있습니다. 회사의 개인정보 위탁업체 및 위탁업무 내용은 아래와 같습니다.
+			<table>
+				<colgroup>
+					<col style="width:20%;">
+					<col style="width:40%;">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">수탁업체명</th>
+						<th scope="col">위탁업무의 내용</th>
+						<th scope="col">위탁기간</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong class="u">㈜드림베이</strong></td>
+						<td><strong class="u">서비스 운영, 이용자 관리, 회원제 서비스 이용에 따른 본인확인, 고객상담, 불만 처리 등 고객 지원 업무</strong></td>
+						<td><strong class="u">서비스 해지 또는 위탁 계약 종료 시까지</strong></td>
+					</tr>
+					<tr>
+						<td><strong class="u">다우기술</strong></td>
+						<td><strong class="u">SMS/MMS 발송 대행</strong></td>
+						<td><strong class="u">위탁 계약 종료 시 까지</strong></td>
+					</tr>
+				</tbody>
+			</table>
+			<h2>6. 가입자의 권리</h2>
+			가입자는 언제든지 서비스 홈페이지 또는 고객센터를 통하여 회원님의 개인정보를 열람, 정정 처리하실 수 있으며, 당사의 개인정보관리책임자에게 전자우편 또는 서면으로 요청하신 경우 열람, 정정, 삭제처리를 진행 할 수 있습니다. 가입자의 개인정보가 제3자에게 제공되거나 취급 위탁된 경우 이용자는 회사 또는 ‘제3자’/’수탁자’에게 파기를 요청할 수 있습니다. 단, 기타 법률에 따라 정정 또는 삭제가 금지되거나 제한되어 있는 경우에는 해당 처리가 제한될 수 있습니다.
+			또한 개인정보 오류에 대한 정정 요청한 경우에는 다른 법률에 따라 개인정보의 제공을 요청 받는 경우가 아닌 한 정정을 완료하기 전까지 당해 개인정보를 이용 또는 제공하지 않습니다, 만약 잘못된 개인정보를 이미 제공한 경우에는 정정 처리 결과를 제 3자에게 통지하여 정정이 이루어지도록 하겠습니다.
+
+			가입자는 언제든지 회사의 개인정보에 대하여 처리의 정지를 요구 할 수 있습니다.
+			다만 아래의 경우에 해당하는 경우 처리정지 요구를 거절할 수 있습니다.
+			- 법률에 특별한 규정이 있거나 법령상 의무를 준수하기 위하여 불가피한 경우
+			- 다른 사람의 생명•신체를 해할 우려가 있거나 다른 사람의 재산과 그 밖의 이익을 부당하게 침해할 우려가 있는 경우
+			- 개인정보를 처리하지 아니하면 정보주체와 약정한 서비스를 제공하지 못하는 등 계약의 이행이 곤란한 경우로서
+			정보주체가 그 계약의 해지 의사를 명확하게 밝히지 아니한 경우
+
+			<strong class="fs_up">7. 제공 동의 철회:</strong> 서비스 가입을 통한 개인정보의 수집, 이용, 제공과 관련해 귀하는 동의하신 내용을 언제든지 철회 하실 수 있습니다. 동의철회는 홈페이지 첫 화면의 『서비스해지』에서 "서비스해지"를 클릭하면 개인정보의 수집ㆍ이용ㆍ제공에 대한 동의를 바로 철회할 수 있으며, 개인정보보호책임자에게 서면, 전화, 이메일(E-mail) 등으로 연락하시면 회사는 즉시 동의 철회를 위해 필요한 조치를 취합니다. 동의를 철회하고 개인정보를 파기하는 등의 조치가 있으면 그 사실을 귀하께 지체없이 통지하도록 하겠습니다.
+
+			<h2>8. 개인정보관리 책임자 및 담당 연락처</h2><table>
+				<colgroup>
+					<col style="width:15%;">
+					<col style="width:30%;">
+					<col style="width:30%;">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">구분</th>
+						<th scope="col">개인정보보호 책임자	</th>
+						<th scope="col">개인정보보호 관리자	</th>
+						<th scope="col">개인정보보호 담당자</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>성명</td>
+						<td>박철광</td>
+						<td>이승현</td>
+						<td>정은석</td>
+					</tr>
+					<tr>
+						<td>직위</td>
+						<td>CPO / CISO</td>
+						<td>과장</td>
+						<td>과장</td>
+					</tr>
+					<tr>
+						<td>소속부서</td>
+						<td>기술연구소</td>
+						<td>기술연구소</td>
+						<td>기술연구소</td>
+					</tr>
+					<tr>
+						<td>이메일</td>
+						<td colspan="3">privacy@minwise.co.kr</td>
+					</tr>
+					<tr>
+						<td>전화번호</td>
+						<td colspan="3">1599-7052<br>평일 : 09:00~18:00 (주말, 공휴일 휴무)</td>
+					</tr>
+				</tbody>
+			</table>
+			<h2>9. 개인정보 처리방침 변경</h2>
+			이 개인정보 처리방침은 2018.10.29 부터 적용됩니다. 이전 개인정보 처리방침은 아래에서 확인하실 수 있습니다.
+			2018.05.09 ~ 2018.10.28 적용 (클릭시 이전 개인정보처리방침 팝업창)
+
+			(시행일) 본 약관은 2018년 10월 29일부터 시행합니다.
+		</pre>
+	</span>
+	<span class="blank"></span>
+</section>
+<!-- //개인정보처리방침 -->
+
+<!-- 이용약관 -->
+<section id="ly_service" class="ly_pop ly_agree">
+	<span class="content">
+		<button type="button" class="btn_cls">창닫기</button>
+		<h2 class="title">건강지키미 이용약관</h2>
+		<pre class="scroll">
+			1.	목적
+
+			본 약관은 “건강지키미”를 제공하는 “㈜민앤지(이하 ‘회사’라 합니다.)”와 위 서비스를 “이용하는 자(이하 ‘가입자’라 합니다.)”와의 이용 조건, 절차, 권리, 의무 및 책임사항에 관한 사항을 규정하는 것을 목적으로 합니다.
+
+			2.	용어의 정의
+
+			본 약관에서 사용되는 용어의 정의는 다음과 같습니다.
+
+			1)	 “건강지키미(이하 ‘서비스’라 합니다.)”는 서비스 가입자 본인의 건강/의료정보 및 보험정보를 간편하게 조회 및 알림을 받을 수 있는 서비스를 말합니다.
+			2)	“가입자”란 본 약관에 동의하여 서비스를 이용하고 요금을 지불하는 개인을 말합니다.
+			3)	“제휴사”란 본 서비스를 가입 또는 이용할 수 있도록 서비스를 도입한 기업 또는 사이트를 말합니다.
+			4)	“월정액”이란 서비스의 이용요금을 서비스 해지 시까지 매월 자동으로 청구, 결제하는 방식을 말합니다.
+			5)	“휴대폰 정보”란 가입자의 이동통신사와 휴대폰 번호를 말합니다.
+			6)	“앱”이란 서비스의 제공 및 이용을 위해 단말기에 설치되는 스마트폰 전용 애플리케이션을 말합니다.
+			7)	“보안클라우드” 란 서비스의 제공 및 이용을 위해 회사에서 가입자에게 제공하는 개인 보안영역이며 가입자의 동의 하에 가입자의 보험정보등의 개인정보를 저장합니다..
+			8)	 본 조 및 본 약관의 다른 조항에서 정의한 것을 제외하고는 관계 법령 및 서비스 안내에서 정한 바에 따릅니다.
+
+			3.	서비스 이용 계약의 체결
+
+			1)	이용계약은 가입자가 약관의 내용에 대해 동의한 후 서비스 가입 신청을 하고 회사가 이러한 신청에 대해 승낙함으로써 체결됩니다.
+
+			4.	이용료 및 청구기준 등
+
+			1)	이용요금: 월정액 3,300원(부가세포함)
+			2)	결제방식: 매월 1항의 요금이 청구되며, 이동통신사 요금고지서에 표시되어 휴대폰 요금에 합산됩니다.
+			3)	환불 및 결제: 회사는 관계 법령이 정한 바에 따라 환불 및 결제합니다. (문의: 1599-0000)
+
+			5.	서비스 해지 및 재가입
+
+			본 서비스는 해지 시 개인 정보 보호를 위하여 별도의 본인 확인이 필요합니다. 또한, 서비스를 다시 이용하기 위해서는 신규로 서비스에 가입하셔야 합니다.
+
+			1)	인터넷사이트를 이용한 해지: www.myhm.co.kr 의 서비스 해지 메뉴를 통해 해지하실 수 있습니다.
+			2)	전화를 이용한 해지: 고객센터(1599-4760) 또는 이동통신사 고객센터 (휴대폰 +114, SKT 1599-0011)에서 해지하실 수 있습니다.
+
+			6.	약관의 효력과 변경
+
+			1)	본 약관은 서비스 화면에 게시하거나 기타의 방법으로 가입자에게 공시함으로써 효력이 발생합니다.
+			2)	온라인으로 서비스에 가입하는 경우, 가입자가 본 약관에 대하여 '동의함'을 선택하고 ‘확인’ 버튼을 클릭하면 고객은 본 약관의 내용을 이해하였고 그 적용에 동의한 것으로 간주합니다.
+			3)	회사는 관계 법령을 위배하지 않는 범위에서 본 약관을 개정할 수 있으며, 이 경우 회사는 새로운 약관의 적용 일자 및 개정사유를 명시하고 개정약관 적용일 7일 전에 고지 또는 통지합니다.
+			4)	회사가 6조의 규정에 따라 변경 약관을 고지 또는 통지하면서, 가입자가 약관 변경 적용 일까지 거부 의사를 표시하지 아니할 경우, 약관의 변경에 동의한 것으로 간주한다는 내용을 고지 또는 통지하였음에도 가입자가 명시적으로 거부 의사를 표시하지 아니한 경우, 가입자가 변경 약관에 동의한 것으로 간주합니다.
+			5)	가입자가 변경된 약관에 동의하지 않는 경우 서비스 이용을 중단하고 이용 계약을 해지할 수 있습니다.
+
+			7.	약관 동의 철회
+
+			서비스 해지 시 약관 동의가 철회됩니다.
+
+			8.	데이터 수집 및 사용
+			1)	회사는 프로그램 또는 앱의 품질 개선을 위하여 가입자의 컴퓨터 운영 체제 정보, 프로그램 또는 앱의 버전, 에러 정보와 같이 개인을 식별할 수 없는 비 개인 정보를 수집합니다.
+			2)	회사는 수집한 데이터를 활용 및 가공하여 콘텐츠를 생산 및 배포 할 수 있습니다.
+			3)	프로그램 또는 앱에 포함된 광고의 통계수집을 위해 광고노출수와 광고클릭수 등을 수집합니다.
+			4)	수집한 데이터는 통계자료로 활용되며, 회사는 수집목적에 따른 활용이 완료된 데이터를 곧바로 폐기합니다.
+
+			9.	서비스 이용의 제한
+
+			회사는 다음 각 호에 해당하는 가입자에 대하여 서비스 신청 및 이용을 제한할 수 있습니다.
+			1)	가입된 휴대폰 번호에 해당하는 단말기를 소유하고 있지 않았거나, 휴대폰 번호 등 가입자 정보가 잘못되어 문자 전송(SMS) 또는 앱 PUSH 전송이 불가능할 경우
+			2)	회사 및 이동통신사가 보유한 시스템 설비 및 장비 등의 여유가 없거나, 기술적, 법률적 장애가 있을 경우 그 사유가 해소될 때까지
+			3)	가입자의 단말기가 문자 수신(SMS), 앱 PUSH 수신에 문제가 있는 경우 또는 기타 사유로 문자 전송(SMS), 앱 PUSH 전송을 받을 수 없는 경우
+			4)	사용하는 단말기의 운영체제(OS), 기기정보 등을 루팅, 탈옥 등을 통해 임의로 변경한 경우
+			5)	기타 회사의 보안정책에 따라 서비스 제한이 필요하다고 판단되는 경우
+			6)	단말기 특성 또는 OS 버전의 문제로 인해 정상적인 서비스 제공이 불가능한 경우
+			7)	회사가 제공한 프로그램이 가입자의 디바이스 환경(예: 방화벽 등) 문제로 인하여 서비스 제공이 불가능할 경우
+			8)	보험/건강 정보를 조회하는 사이트의 연결이 원할하지 않은 경우
+
+
+			10.	의무
+
+			1)	회사는 본 약관에서 정한 바에 따라 지속적, 안정적으로 본 서비스를 제공할 의무가 있습니다. 단, 전쟁, 지진, 재난 등 천재지변이나 불가피한 시스템의 고장, 통신서비스 회사의 통신 두절 등 불가항력의 사유가 발생한 경우에는 본 서비스를 중단할 수 있습니다.
+			2)	가입자는 본인이 설정한 본 서비스의 비밀번호와 휴대폰 관리에 책임을 지며, 가입자의 부주의로 발생하는 모든 결과에 대한 책임은 가입자에게 있습니다.
+
+
+			11.	변경사항 통지
+
+			1)	가입자는 서비스를 이용할 단말기 번호를 정확하게 회사에 통지해야 합니다.
+			2)	가입자는 가입된 단말기를 분실한 경우, 회사 고객센터 또는 홈페이지를 통해 서비스를 해지하시거나 데이터 삭제를 요청하셔야 합니다.
+			3)	가입자는 단말기, 유심 등이 변경되는 경우에 반드시 회사에 앱, 홈페이지, 고객센터 등을 통하여 변경 사실을 통지하여야 합니다.
+
+
+			12.	접근매체의 관리
+			1)	가입자는 단말기, 앱, 앱 비밀번호 등 접근매체를 제삼자에게 대여하거나 사용 위임, 양도 또는 담보 목적으로 제공할 수 없습니다.
+			2)	가입자는 단말기, 앱, 앱 비밀번호 등 접근매체를 제삼자에게 누설 또는 노출하거나 방지하여서는 안 되며, 접근매체의 도용이나 위조 또는 변조를 방지하기 위하여 충분한 주의를 기울여야 합니다.
+			3)	가입자는 단말기, 앱, 앱 비밀번호 등 접근매체를 회원 스스로 책임하에 관리하여야 하며, 접근매체의 훼손, 분실, 도난, 유출되는 등의 사고가 발생하는 경우, 회원은 즉시 그 사실을 앱, 홈페이지, 고객센터 등을 통하여 회사에 통지하여야 합니다.
+			4)	가입자는 회사의 서명승인 없이 앱의 내용을 수정, 변경할 수 없습니다. 또한 리버스 엔지니어링, 디컴파일 또는 디어셈블 등 본래의 목적에 벗어난 변형, 소스코드 분석 등을 할 수 없습니다. 이를 위반할 경우 지적재산권 침해 행위로 간주되어 관련법의 처벌을 받을 수 있습니다.
+
+
+			13.	책임과 손해배상
+
+			1)	회사와 가입자는 일방 당사자의 귀책사유에 인하여 상대방에게 발생한 손해에 대하여 배상하여야 합니다.
+			2)	회사는 본 서비스 가입자의 고의 또는 중과실로 발생한 손해에 대해서 어떠한 책임도 지지 않습니다.
+			3)	12조에서 명시한 변경사항 통지 내용의 오류, 통지의 지연 등에 인하여 가입자 또는 제삼자에게 손해가 발생하였을 경우 회사는 이를 보상 또는 배상할 책임이 없습니다.
+
+
+			14.	면책
+
+			1)	 회사는 다음 각 호의 사유로 인한 손해에 대하여 보상 또는 배상할 책임이 없습니다.
+
+			①	천재지변, 파업, 관련 법규의 변경, 관계기관의 명령 및 지침, 또는 외부로부터 발생한 사건 등 회사가 통제할 수 없는 사유에 인하여 본 서비스를 제공할 수 없는 경우
+			②	가입자가 휴대폰 번호, 단말기, 앱 비밀번호, 결제 정보 등의 관리를 소홀히 한 경우
+			③	가입자가 본 서비스에 제공한 정보, 자료, 사실 등이 부정확하여 본 서비스를 원활히 제공할 수 없었던 경우
+			④	회사의 관리영역이 아닌 장애로 본 서비스의 이용이 불가능한 경우
+			⑤	보험/건강 정보 사이트의 장애로 본 서비스의 이용이 불가능한 경우
+			⑥	기타 회사의 귀책사유가 없는 제휴사 및 통신서비스 등의 장애 또는 가입자의 귀책사유에 의한 통지 내역 미확인 등에 인한 경우
+
+			2)	회사는 본 서비스와 관련된 가입자 상호 간 또는 가입자와 제삼자 상호 간의 분쟁에 개입할 의무가 없으며, 회사의 귀책사유가 없는 한 이로 인한 손해를 보상 또는 배상할 책임이 없습니다.
+
+			3)	회사는 가입자가 제공한 가입자 본인의 정보에 대한 정확성, 진위, 유효성 확인의 책임이 없으며, 가입자가 제공한 정보의 오류로 인해 발생한 손해에 대하여 보상 또는 배상할 책임이 없습니다.
+
+			4)	회사가 단말기, 앱, 앱 비밀번호, 프로그램 등 접근매체의 발급주체가 아닌 경우, 접근매체의 위조나 변조에 의한 가입자 손해에 대하여 회사는 이를 보상 또는 배상할 책임이 없습니다.
+
+			5)	회사가 공식적으로 제공한 경로가 아닌, 비공식적 경로를 통해 앱 또는 프로그램을 다운로드/설치한 가입자에게 발생한 손해에 대하여, 회사는 이를 보상 또는 배상할 책임이 없습니다.
+
+			6)	가입자가 13조에서 명시한 접근매체의 관리를 소홀히 하여 손해가 발생한 경우 회사는 이를 보상 또는 배상할 책임이 없습니다.
+
+			7)	회사가 제공한 프로그램이 가입자의 다바이스 환경(예: 방화벽 등)의 문제로 인하여 이용할 수 없을 경우 회사는 그 책임을 지지 않습니다.
+
+
+			15.	분쟁의 해결
+
+			1)	회사와 가입자 간 분쟁 발생 시, 회사와 가입자는 분쟁해결을 위해 성실히 협의합니다.
+			2)	본 약관과 관련한 제반 분쟁 및 소송의 관할은 민사소송법상 관할 조항에 따릅니다.
+			3)	서비스에 관한 분쟁이 발생한 경우 양 당사자 간의 합의로 해결함을 원칙으로 합니다. 다만 당사자 간에 합의할 수 없거나 합의가 이루어지지 않는 경우, 분쟁의 해결은 회사의 소재지를 관할하는 법원으로 합니다.
+
+			16.	정보의 제공 및 광고의 게재
+
+			회사는 서비스의 운영과 관련하여 영리 목적의 광고성 정보를 포함한 다양한 정보를 서비스 홈페이지, 앱, 공지사항, 전자우편 등의 방법으로 가입자에게 제공할 수 있습니다. 다만, 회원은 영리 목적의 광고성 정보에 대하여는 전자우편 등을 통해 수신 거절할 수 있습니다.
+		</pre>
+	</span>
+	<span class="blank"></span>
+</section>
+<!-- //이용약관 -->
+
+<!-- 공동인증서 복사 -->
+<section class="ly_docopy">
+	<div class="wrap">
+		<div class="content">
+			<h2 class="blind">공동인증서 복사 설치안내</h2>
+			<button type="button" class="btn_cls" onclick="$('.ly_docopy').hide();">창닫기</button>
+			<p class="txtMain"><span>공동인증서 복사하기</span><br>프로그램을 설치하세요!</p>
+			<ol>
+				<li>
+					<p><i class="num">1</i>다음 팝업에서 “취소”를 클릭하세요.</p>
+					<img src="resources/images/docopy_img.gif" alt="">
+				</li>
+				<li>
+					<p><i class="num">2</i>“실행”을 클릭하여 프로그램을 설치하세요.</p>
+					<img src="resources/images/docopy_img2.gif" alt="">
+				</li>
+			</ol>
+		</div>
+	</div>
+</section>
+<!-- //공동인증서 복사 -->
+
+<!-- loading -->
+<div class="ly_loading" style="display: ;">
+	<div class="bg"></div>
+	<div class="cont">
+		<div class="ele">
+			<div class="spinner">
+				<div class="rect1"></div><!----><div class="rect2"></div><!----><div class="rect3"></div><!----><div class="rect4"></div><!----><div class="rect5"></div>
+			</div>
+			<div class="spinner_img"><img src="resources/images/loading.gif" alt="로딩바"></div>
+		</div>
+	</div>
+</div>
+<!-- //loading -->
+
+</body>
+</html>

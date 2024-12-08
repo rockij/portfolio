@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="resources/css/swiper.min.css">
+    <link rel="stylesheet" href="resources/css/slick.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <script src="resources/js/jquery-3.3.0.min.js"></script>
+    <script src="resources/js/swiper.min.js"></script>
+    <script src="resources/js/slick.min.js"></script>
+    <script src="resources/js/design.js"></script>
+    <title>BTREE</title>
+</head>
+<body>
+    <!--[if lte ie 9]>
+    <div class="ie_down_ver">이 브라우저는 지원하지 않습니다.<br>브라우저 업데이트 하시기 바랍니다.<br><a href="https://support.microsoft.com/ko-kr/help/17621/internet-explorer-downloads" target="_blank">업데이트 바로가기</a></div>
+    <![endif]-->
+    <div id="wrap">
+        <header id="header">
+            <div class="headWrap">
+                <h1 class="logo"><a href="#n" onclick="gnbHov('aboutWrap',70)"><i class=" hide">btree</i></a></h1>
+                <nav class="gnb">
+                    <ul class="col4">
+                        <li><a href="#n" class="now" onclick="gnbHov('aboutWrap',70)">ABOUT</a></li>
+                        <li>
+                            <a href="#n" onclick="gnbHov('servWrap',-100)" class="wb">SERVICE</a>
+                            <a href="#n" onclick="gnbHov('servWrap',-20)" class="mw">SERVICE</a>
+                        </li>
+                        <li><a href="#n" onclick="gnbHov('faqWrap',70)">FAQ</a></li>
+                        <li><a href="#n" onclick="gnbHov('partnerWrap',70)">PARTNER</a></li>
+                    </ul>
+                </nav>
+                <div class="subMenu">
+                    <div class="relate"><a href="https://www.btrade.co.kr/main.do" target="_blank">BTRADE</a></div>
+                    <!-- <div class="langTab">
+                        <div class="tabList">
+                            <ul class="col2">
+                                <li><button type="button" class="" onclick="langHov('en')">EN</button></li>
+                                <li><button type="button" class="now" onclick="langHov('kr')">KR</button></li>
+                            </ul>
+                        </div>
+                        <span class="img">
+                            <button type="button" class="en" onclick="tabHov()"><i class="hide">en</i></button>
+                            <button type="button" class="show kr" onclick="tabHov()"><i class="hide">kr</i></button>
+                        </span>
+                    </div> -->
+                </div>
+            </div>
+        </header>
+        <div id="container" class="">
+            <div class="aboutWrap">
+                <section class="aboutSec">
+                    <span class="img bg"></span>
+                    <div class="desc">
+                        <div class="interval">
+                            <div class="wordWrap">
+                                <h3 class="tit">하던 게임 그대로 돈버는<br><strong>비트리</strong></h3>
+                                <p>이제 게이머가 플레이 한 만큼,<br>B .TREE 에서 열심히 활동 한 만큼 보상 받으세요 <i>!</i></p>
+                                <a href="#;" class="partner">앱다운로드</a>
+                            </div>               
+                            <span class="img phone">
+                                <div class="screen">
+                                    <span class="img screen1"></span>
+                                    <span class="img screen2"></span>
+                                    <span class="img screen3"></span>
+                                    <span class="img screen4"></span>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <script>
+                setTimeout(function(){
+                    $(".aboutSec .screen .img").addClass("movback");
+                }, 3000);
+            </script>
+            <!-- //about -->
+            <div class="servWrap">
+                <section class="servSec mbOff">
+                    <div class="servSlide">
+                        <div class="titList">
+                            <h3 class="tit tit0">게임하는 시간 만큼<br><strong>포인트 적립</strong></h3>
+                            <h3 class="tit tit1"><strong>미뮤 앱플레이어로 이용하면</strong><br>더 높은 포인트 지급</h3>
+                            <h3 class="tit tit2"><strong>다양한 미션으로</strong><br>단계별 포인트 적립</h3>
+                            <h3 class="tit tit3">획득한 포인트를<br><strong>쉽고 간편하게 전환신청</strong></h3>
+                        </div>
+                        <div class="interval">
+                            <div class="imgWrap">
+                                <div class="slideWrap">
+                                    <ul class="slick-wrapper">
+                                        <li class="slick-slide">
+                                            <div class="servDesc">
+                                                <h3 class="tit tit0 hide">게임하는 시간 만큼<br><strong>포인트 적립</strong></h3>
+                                                <span class="img bg"><img src="resources/images/serv_bg0_x.png" alt=""></span>
+                                            </div>
+                                        </li>
+                                        <li class="slick-slide">
+                                            <div class="servDesc">
+                                                <h3 class="tit tit1 hide"><strong>미뮤 앱플레이어로 이용하면</strong><br>더 높은 포인트 지급</h3>
+                                                <span class="img bg"><img src="resources/images/serv_bg1_x.png" alt=""></span>
+                                            </div>
+                                        </li>
+                                        <li class="slick-slide">
+                                            <div class="servDesc">
+                                                <h3 class="tit tit2 hide"><strong>다양한 미션으로</strong><br>단계별 포인트 적립</h3>
+                                                <span class="img bg"><img src="resources/images/serv_bg2_x.png" alt=""></span>
+                                            </div>
+                                        </li>
+                                        <li class="slick-slide">
+                                            <div class="servDesc">
+                                                <h3 class="tit tit3 hide">획득한 포인트를<br><strong>쉽고 간편하게 전환신청</strong></h3>
+                                                <span class="img bg"><img src="resources/images/serv_bg3_x.png" alt=""></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="frame">
+                                    <span class="img cont cont0 now"></span>
+                                    <span class="img cont cont1"></span>
+                                    <span class="img cont cont2"></span>
+                                    <span class="img cont cont3"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- //pc section -->
+                <section class="mbServ mbOn">
+                    <div class="mbSlide text">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <h3 class="tit tit0">게임하는 시간 만큼<br><strong>포인트 적립</strong></h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h3 class="tit tit1"><strong>미뮤 앱플레이어로 이용하면</strong><br>더 높은 포인트 지급</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h3 class="tit tit2"><strong>다양한 미션으로</strong><br>단계별 포인트 적립</h3>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h3 class="tit tit3">획득한 포인트를<br><strong>쉽고 간편하게 전환신청</strong></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mbSlide img">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="descWrap">                                        
+                                        <span class="img bg"><img src="resources/images/m_serv_bg0.png" alt=""></span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="descWrap">                                        
+                                        <span class="img bg"><img src="resources/images/m_serv_bg1.png" alt=""></span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="descWrap">                                        
+                                        <span class="img bg"><img src="resources/images/m_serv_bg2.png" alt=""></span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="descWrap">                                        
+                                        <span class="img bg"><img src="resources/images/m_serv_bg3.png" alt=""></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="mFrame">
+                            <span class="img cont cont0 now"></span>
+                            <span class="img cont cont1"></span>
+                            <span class="img cont cont2"></span>
+                            <span class="img cont cont3"></span>
+                        </div>
+                    </div>
+                </section>
+                <!-- //mobile section -->
+            </div>
+            <!-- //sevice -->
+            <div class="faqWrap">
+                <section class="faqSec">
+                    <div class="interval">
+                        <h3 class="tit">비트리 <span>FAQ</span></h3>
+                        <div class="">
+                            <div class="faqTab">
+                                <section class="faqMenu swiper-container">
+                                    <ul class="col6 swiper-wrapper">
+                                        <li class="swiper-slide"><a href="#n" class="now" onclick="faqHov('tab1')">서비스이용</a></li>
+                                        <li class="swiper-slide"><a href="#n" onclick="faqHov('tab2')">회원정보</a></li>
+                                        <li class="swiper-slide"><a href="#n" onclick="faqHov('tab3')">포인트</a></li>
+                                        <li class="swiper-slide"><a href="#n" onclick="faqHov('tab4')">토큰</a></li>
+                                        <li class="swiper-slide"><a href="#n" onclick="faqHov('tab5')">인증 및 보안</a></li>
+                                        <li class="swiper-slide"><a href="#n" onclick="faqHov('tab6')">기타</a></li>
+                                    </ul>
+                                </section>
+                                <section class="faqList">
+                                    <section class="tabDesc tab1 tabOn">
+                                        <ul>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>비트리는 어떤 서비스
+                                                            인가요?</button>
+                                                    </div>
+                                                    <div class="a">
+                                                        <pre>게임을 플레이하면 포인트가 적립되고, 주어진 미션을 달성하면 추가로 포인트를 제공 해주는 리워드 어플레케이션 입니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>어떻게 하면 많은 포인트를 획득할 수
+                                                            있나요?</button></div>
+                                                    <div class="a">
+                                                        <pre>앱플레이어(미뮤)를 활용하여 기본 포인트를 추가로 받는 방법과 게임별 주어진 미션을 달성하면 추가 포인트를 받을 수 있습니다.
+                                                        게임 항목에서 [획득가능 포인트 확인]을 눌러보시면 획득할 수 있는 포인트가 기입되어 있습니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>다른 리워드 어플리케이션도 많은데 차별점이
+                                                            무엇인가요?</button></div>
+                                                    <div class="a">
+                                                        <pre>보상의 규모가 가장 차이가 납니다. 이벤트 진행시 보다 많은 포인트를 획득할 수 있고, 앱플레이어를 활용하여 보다 쉽게 포인트를 획득할 수 있습니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>회원 가입 시 비트레이드 가입 및 연동하는
+                                                            이유가
+                                                            무엇인가요?</button></div>
+                                                    <div class="a">
+                                                        <pre>비트리로 받은 포인트를 토큰으로 전환해 주는 거래소이기 때문에 비트레이드는 꼭 연결하셔야 가입이 가능합니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>비트리는 몇 버전의 안드로이드를
+                                                            지원하나요?</button></div>
+                                                    <div class="a">
+                                                        <pre>비트리는 안드로이드 5.0~9.0 버전까지 지원합니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>회원 탈퇴는 어떻게
+                                                            하나요?</button>
+                                                    </div>
+                                                    <div class="a">
+                                                        <pre>우측 상단의 메뉴 버튼 -> 회원 탈퇴 버튼을 통하여 회원 탈퇴 신청을 할 수 있습니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>회원 가입 시 이전에 탈퇴 전에 사용했던
+                                                            닉네임은
+                                                            사용할 수 없나요?</button>
+                                                    </div>
+                                                    <div class="a">
+                                                        <pre>네 이전에 탈퇴한 이력이 있는 닉네임은 재사용이 불가합니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>비트리는 iOS 지원을 하지
+                                                            않나요?</button></div>
+                                                    <div class="a">
+                                                        <pre>네 비트리는 iOS 서비스를 하지 않습니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>미성년자도 서비스 이용이
+                                                            가능한가요?</button></div>
+                                                    <div class="a">
+                                                        <pre>미성년자도 서비스 이용이 가능합니다.
+                                                        다만, B-trade 가입이 불가능하며 일부 서비스 제한이 있습니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                    <!-- //서비스 이용 -->
+                                    <section class="tabDesc tab2">
+                                        <ul>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>회원 탈퇴 신청 시 탈퇴 완료 승인까지
+                                                            시간이
+                                                            얼마나 걸리나요?</button>
+                                                    </div>
+                                                    <div class="a">
+                                                        <pre>1~2일내로 승인됩니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>회원 탈퇴 시 보유하고 있는 포인트는
+                                                            어떻게 되는
+                                                            건가요?</button></div>
+                                                    <div class="a">
+                                                        <pre>회원 탈퇴 후에는 보유하고 있는 포인트는 모두 소멸됩니다. 해당 내용은 탈퇴 시 안내해드리고 있습니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>회원 탈퇴 시 보유하고 있는 토큰은 어떻게
+                                                            되는
+                                                            건가요?</button>
+                                                    </div>
+                                                    <div class="a">
+                                                        <pre>보유하고 있는 토큰은 포인트 전환 시 연동하셨던 비트레이드 계정 지갑에 보관되어 있기 때문에 비트레이드에서 출금이 가능합니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>새로운 환경 로그인 알림은 왜
+                                                            노출되나요?</button></div>
+                                                    <div class="a">
+                                                        <pre>회원님의 아이디를 안전하게 보호하기 위해 비트리 로그인은 한 개의 디바이스에서만 가능하도록 되어있습니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                    <!-- //회원정보 -->
+                                    <section class="tabDesc tab3">
+                                        <ul>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>게임 진행 후 비트리 포인트 내역 확인 시
+                                                            포인트가 지급되어 있지 않습니다.</button></div>
+                                                    <div class="a">
+                                                        <pre>1. 게임 진행 도중 멀티태스킹을 활용한 기타 작업 시 비트리와 게임 간 연결이 종료될 수 있습니다. 가급 적 게임 중에는 멀티태스킹을 자제 부탁드립니다. (전화, 이메일 확인, 문자 확인 등)
+                                                        
+                                                        2. 일일 한도 포인트가 모두 채워져 포인트가 지급되지 않을 수 있습니다. 일일 한도 포인트를 확인해 보세요
+                                                        
+                                                        3. 비트리가 설치되기 전 이미 해당 게임이 설치되어 있다면 포인트 지급이 불가합니다. 꼭 비트리를 통하여 재설치 하시기 바랍니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>비트리에서 게임 다운로드 후 바로 게임을
+                                                            진행했지만 포인트가 지급되어 있지 않습니다.</button></div>
+                                                    <div class="a">
+                                                        <pre>다운로드 직 후 구글 플레이에서 게임 실행을 하시게 되면 포인트 지급이 불가합니다. 설치 후 꼭 비트리를 통하여 게임을 실행해 주세요.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>게임 도중 인터넷이 끊기면 게임 진행했던
+                                                            포인트는
+                                                            받을 수 없는 건가요?</button></div>
+                                                    <div class="a">
+                                                        <pre>인터넷이 끊긴 시점까지의 포인트는 지급됩니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>게임 도중 스마트폰 전원이 꺼지면 진행했던
+                                                            포인트는 받을 수 없는 건가요?</button></div>
+                                                    <div class="a">
+                                                        <pre>전원이 꺼진 시점까지의 포인트는 지급됩니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                    <!-- //포인트 -->
+                                    <section class="tabDesc tab4">
+                                        <ul>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>토큰 전환 신청 후 승인까지 시간이 얼마나
+                                                            걸리나요?</button></div>
+                                                    <div class="a">
+                                                        <pre>1~3일(휴일제외) 이내에 처리해 드리고 있습니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>미성년자는 토큰을 원화로 환전할 수
+                                                            없나요?</button></div>
+                                                    <div class="a">
+                                                        <pre>미성년자이실 경우, 비트리 포인트 지급은 가능 하나, 비트레이드 거래소에서 거래를 하려면, 성인 인증이 필요합니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>토큰 전환 시 비율은 무엇을 기준으로
+                                                            정해지는
+                                                            건가요?</button></div>
+                                                    <div class="a">
+                                                        <pre>유동적인 가격에 포인트를 반영하여 아르고 시세 기준으로 제공 되고 있습니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>토큰 전환 시 수수료율이 변동될 수
+                                                            있나요?</button></div>
+                                                    <div class="a">
+                                                        <pre>네 수수료율은 변동할 수 있습니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>토큰 전환 신청 후 승인 전에 취소할 수
+                                                            없나요?</button></div>
+                                                    <div class="a">
+                                                        <pre>네 이미 신청한 포인트는 다시 되돌릴 수 없습니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                    <!-- //토큰 -->
+                                    <section class="tabDesc tab5">
+                                        <ul>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>비트리에서 계정을 정지시키기도
+                                                            하나요?</button></div>
+                                                    <div class="a">
+                                                        <pre>비트리에서는 해킹, 사기 어뷰징 등의 부정행위가 의심되는 경우 고객님의 계정을 정지할 수 있습니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>아이디를 잊어버렸어요.</button>
+                                                    </div>
+                                                    <div class="a">
+                                                        <pre>비트리는 구글 계정을 통하여 로그인하게 됩니다. 따라서 구글 계정을 찾기를 통해 찾으실 수 있습니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>로그인 비밀번호를
+                                                            잊어버렸어요.</button>
+                                                    </div>
+                                                    <div class="a">
+                                                        <pre>비트리는 구글 계정을 통하여 로그인하게 됩니다. 따라서 구글 계정을 찾기를 통해 찾으실 수 있습니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>비밀번호를 변경하고 싶습니다. 어떻게
+                                                            하나요?</button></div>
+                                                    <div class="a">
+                                                        <pre>비트리는 구글 계정을 통하여 로그인하게 됩니다. 따라서 구글 계정 정보에서 비밀번호를 변경하셔야 합니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>비트리 잠금 암호를
+                                                            잊어버렸어요.</button>
+                                                    </div>
+                                                    <div class="a">
+                                                        <pre>비트리 잠금 암호를 5회 이상 틀릴 시 이메일 문의를 통하여 문의하시면 해당 계정의 잠금 암호를 전달해 드립니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                    <!-- //인증 및 보안 -->
+                                    <section class="tabDesc tab6">
+                                        <ul>
+                                            <li>
+                                                <div class="qaDesc">
+                                                    <div class="q"><button type="button"
+                                                            onclick="faqToggle()"><span>Q.</span>포인트를 많이 쌓았는데 랭킹 순위에
+                                                            노출되지
+                                                            않습니다.</button></div>
+                                                    <div class="a">
+                                                        <pre>랭킹 순위 업데이트는 매주 월요일 오전 9시에 진행됩니다.</pre>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                    <!-- //기타 -->
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- //faq -->
+            <div class="partnerWrap">
+                <section class="partnerSec">
+                    <div class="interval">
+                        <h3 class="tit">비트리 제휴문의</h3>
+                        <p>비트리와 함께 성장을 도모하고, <i class="mbr"></i>함께할 파트너를 모집하고 있습니다.<br>메일을 보내주시면 최대한 <i class="mbr"></i>빠르게 답변 드리도록 하겠습니다.</p>
+                        <p class="cau">※ 제휴 문의 이메일 발송 시 <strong>회사명 / 연락처 / 내용 필수 입력</strong></p>
+                        <ul class="info">
+                            <li><figure class="cont1"></figure>제휴 문의</li>
+                            <li><figure class="cont2"></figure>내용 협의</li>
+                            <li><figure class="cont3"></figure>입점 및 제휴 진행</li>
+                        </ul>
+                        <div class="skip"><a href="#;">게임 제휴문의</a></div>
+                    </div>
+                </section>
+            </div>
+            <!-- // partner 제휴문의 -->
+        </div>
+        <footer id="footer">
+            <div class="footWrap">
+                <!-- <ul class="list col2">
+                    <li>Privacy Policy</li>
+                    <li class="line"></li>
+                    <li>Third-party Privacy Policies</li>
+                </ul> -->
+                <div class="email">
+                    <strong>E-MAIL</strong><a href="mailto:btreehelp@gmail.com">btreehelp@gmail.com</a>
+                </div>
+                <small class="copyright">B.TREE © 2019 B.TREE All Rights Reserved.</small>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

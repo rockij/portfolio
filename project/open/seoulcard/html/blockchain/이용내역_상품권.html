@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta name="HandheldFriendly" content="true">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>서울시민카드</title>
+<link rel="stylesheet" type="text/css" href="../../resources/css/style.css">
+<script type="text/javascript" src="../../resources/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="../../resources/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../../resources/js/front_ui.js"></script>
+</head>
+<body>
+<a href="#container" accesskey="1" class="skip_area">메뉴건너뛰고 본문 바로가기</a>
+
+<div id="wrap">
+
+    <header class="sb_header fix top">
+        <button type="button" onclick="" class="btn_prev"><i class="iarr">뒤로가기</i></button>
+        <h1>서울마일리지 이용내역</h1>
+    </header>
+    <!-- //header -->
+
+    <div id="ct" class="usestory">
+        <div class="inner_bg">
+            <section class="inner profile_miles">
+                <h3 class="title_type">서울 마일리지</h3>
+                <ul class="lst_table">
+                    <li>
+                        <ul>
+                            <li class="th">보유 중인 마일리지</li>
+                            <li class="td won blu">1,300,410</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="txt">30일 내 소멸예정 <span class="red">10,410</span></p>
+            </section>
+            <section class="inner bankinfo_area">
+                <select class="select">
+                    <option value="">온라인상품권</option>
+                </select>
+                <p class="cau">서울마일리지는 상품권으로 신청할 수 있으며, 등기우편 발송됩니다.
+                </p>
+                <ul class="lst_caution">
+                    <li class="pot">온라인 상품권은 5,000점 이상부터, 종이상품권(등기발송)은<br>20,000점 이상부터 신청 가능합니다.
+                     </li>
+                    <li>신청내역은 하단 이용내역을 선택하시면 확인하실 수 있습니다.</li>
+                </ul>
+                <button type="button" onclick="layer_open('milesend')" class="btn_r_o btn_type2 btn_chg">마일리지 사용신청</button>
+            </section>
+            <!-- //마일리지전환 -->
+            <section class="caldate_frm">
+                <div class="inner datebx">
+                    조회기간 : 2019.06.01 ~ 2019.07.01
+                    <button type="button" onclick="" class="btn_m_o2 btn_type dateset">기간설정</button>
+                </div>
+                <fieldset class="inner frm_calset">
+                    <legend>기간설정</legend>
+                    <ul class="tab_type3 year">
+                        <li><button type="button" onclick="" class="btn_m3_o">오늘</button></li>
+                        <li><button type="button" onclick="" class="btn_m3_o active">1주일</button></li>
+                        <li><button type="button" onclick="" class="btn_m3_o">1개월</button></li>
+                        <li><button type="button" onclick="" class="btn_m3_o">3개월</button></li>
+                        <li><button type="button" onclick="" class="btn_m3_o">6개월</button></li>
+                    </ul>
+                    <ul class="search">
+                        <li><div class="ipbox ipcal"><input type="tel" name="" id="" value="2019.04.01" placeholder="달력선택" maxlength="10" data-role="date" disabled><button type="button" onclick="" class="ip_calendar"><i class="icon">달력선택</i></button></div></li>
+                        <li><div class="ipbox ipcal"><input type="tel" name="" id="" value="2019.04.01" placeholder="달력선택" maxlength="10" data-role="date" disabled><button type="button" onclick="" class="ip_calendar"><i class="icon">달력선택</i></button></div></li>
+                        <li class="btn_enter"><button type="button" onclick="">검색</button></li>
+                    </ul>
+                </fieldset>
+                <!-- //기간설정 -->
+                <ul class="inner list_normal3">
+                    <li>
+                        <a href="javascript:;" onclick="layer_open('gift')">
+                            <ul>
+                                <li>
+                                    <h3>선물하기</h3>
+                                    <p class="date">2019.06.25 14:44</p>
+                                </li>
+                                <li class="won">- 1,000<span>사용</span></li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" onclick="layer_open('gift')">
+                            <ul>
+                                <li>
+                                    <h3>문화상품권</h3>
+                                    <p class="date">2019.06.25 14:44</p>
+                                </li>
+                                <li class="won">- 1,000<span>사용</span></li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <h3>신한은행 제로페이</h3>
+                                <p class="date">2019.06.25 14:44</p>
+                            </li>
+                            <li class="won">- 1,000<span>사용</span></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <h3>서울마일리지</h3>
+                                <p class="date">2019.06.25 14:44</p>
+                            </li>
+                            <li class="won">- 1,000<span class="pot2">소멸</span></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#;">
+                            <ul>
+                                <li>
+                                    <h3>온누리상품권</h3>
+                                    <p class="date">2019.06.25 14:44</p>
+                                </li>
+                                <li class="won">- 1,000<span class="pot2">소멸</span></li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <h3>서울마일리지</h3>
+                                <p class="date">2019.06.25 14:44</p>
+                            </li>
+                            <li class="won">- 1,000<span class="pot2">소멸</span></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <h3>서울마일리지</h3>
+                                <p class="date">2019.06.25 14:44</p>
+                            </li>
+                            <li class="won">- 1,000<span>소멸</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <!-- //content -->
+
+    <button class="topGo"><i class="icon">맨위로가기</i></button>
+    <!-- //top -->
+
+    <!-- 서울마일리지사용신청 -->
+    <div id="mw-milesend" class="ly_pop full ly_milesend2">
+        <div class="ly_content">
+            <header class="fix">
+                <h2>서울마일리지 사용신청</h2>
+                <button type="button" onclick="layer_close()" class="ly_close"><i class="iplus3">팝업닫기</i></button>
+            </header>
+            <div class="ly_cover iscroll">
+                <div class="inner_bg">
+                    <section class="inner profile_miles">
+                        <h3 class="title_type">온라인상품권</h3>
+                        <figure class="ticket"><img src="../../resources/images/sample/img_ticket.png" alt=""></figure>
+                        <ul class="lst_table">
+                            <li>
+                                <ul>
+                                    <li class="th">사용가능 마일리지</li>
+                                    <li class="td won blu">1,300,410</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p class="txt">소멸예정 마일리지 <span class="red">10,410</span><br>(소멸예정 마일리지부터 전환됩니다.)</p>
+                    </section>
+                    <section>
+                        <fieldset class="inner">
+                            <legend>신청마일리지입력</legend>
+                            <ul class="frm_type">
+                                <li>
+                                    <div class="ipbox ipdel">
+                                        <input type="tel" id="" placeholder="신청 마일리지">
+                                        <button type="button" onclick="" class="ip_del"><s><i class="iplus">삭제</i></s></button>
+                                    </div>
+                                    <p class="error">신청할 마일리지를 입력해주세요.</p>
+                                </li>
+                                <li>
+                                    <ul class="tab_type3">
+                                        <li><button type="button" onclick="" class="btn_m3_o">+1,000</button></li>
+                                        <li><button type="button" onclick="" class="btn_m3_o">+5,000</button></li>
+                                        <li><button type="button" onclick="" class="btn_m3_o">+10,000</button></li>
+                                        <li><button type="button" onclick="" class="btn_m3_o">전체</button></li>
+                                    </li>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </section>
+                    <section class="inner profile_adres">
+                        <h3 class="title_type">수령인정보</h3>
+                        <fieldset>
+                            <legend>수령인정보 입력</legend>
+                            <ul class="frm_type">
+                                <li>
+                                    <h4 class="title_type3">받는사람</h4>
+                                    <div class="ipbox"><input type="text" id="" placeholder="이름"></div>
+                                </li>
+                                <li>
+                                    <h4 class="title_type3">휴대폰번호</h4>
+                                    <div class="hp">
+                                        <select id="" class="select2">
+                                            <option value="010">010</option>
+                                            <option value="011">011</option>
+                                        </select>
+                                        <div class="ipbox"><input type="text" id="" placeholder="-없이 휴대폰번호 입력"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h4 class="title_type3">주소</h4>
+                                    <ul class="addr">
+                                        <li class="srch">
+                                            <button type="button" onclick="layer_open('search')" class="btn_r_o btn_type3">주소찾기</button>
+                                            <div class="ipbox"><input type="text" id="" placeholder="우편번호" disabled></div>
+                                        </li>
+                                        <li><div class="ipbox"><input type="text" id="" placeholder="기본주소" disabled></div></li>
+                                        <li><div class="ipbox"><input type="text" id="" placeholder="상세주소 및 상세건물명" disabled></div></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="skipbx">
+                                <div class="checkbox check">
+                                    <input type="checkbox" name="agree" id="agree-all">
+                                    <label for="agree-all">개인정보 수집 및 이용동의</label>
+                                </div>
+                                <button type="button" onclick="layer_close(); layer_open('sendlst')" class="btn_r_o btn_type9">신청하기</button>
+                            </div>
+                        </fieldset>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //서울마일리지사용신청 -->
+
+    <!-- 선물하기 -->
+    <div id="mw-gift" class="ly_pop full ly_milesend2">
+        <div class="ly_content">
+            <header class="fix">
+                <h2>서울마일리지 사용신청</h2>
+                <button type="button" onclick="layer_close()" class="ly_close"><i class="iplus3">팝업닫기</i></button>
+            </header>
+            <div class="ly_cover iscroll">
+                <div class="inner_bg">
+                    <section class="inner profile_miles">
+                        <h3 class="title_type">선물하기</h3>
+                        <figure class="ticket"><img src="../../resources/images/sample/img_ticket.png" alt=""></figure>
+                        <ul class="lst_table">
+                            <li>
+                                <ul>
+                                    <li class="th">사용가능 마일리지</li>
+                                    <li class="td won blu">1,300,410</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p class="txt">소멸예정 마일리지 <span class="red">10,410</span><br>(소멸예정 마일리지부터 전환됩니다.)</p>
+                    </section>
+                    <section>
+                        <fieldset class="inner">
+                            <legend>신청마일리지입력</legend>
+                            <ul class="frm_type">
+                                <li>
+                                    <div class="ipbox ipdel">
+                                        <input type="tel" id="" placeholder="신청 마일리지">
+                                        <button type="button" onclick="" class="ip_del"><s><i class="iplus">삭제</i></s></button>
+                                    </div>
+                                    <p class="error">신청할 마일리지를 입력해주세요.</p>
+                                </li>
+                                <li>
+                                    <ul class="tab_type3">
+                                        <li><button type="button" onclick="" class="btn_m3_o">+1,000</button></li>
+                                        <li><button type="button" onclick="" class="btn_m3_o">+5,000</button></li>
+                                        <li><button type="button" onclick="" class="btn_m3_o">+10,000</button></li>
+                                        <li><button type="button" onclick="" class="btn_m3_o">전체</button></li>
+                                    </li>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </section>
+                    <section class="inner profile_adres">
+                        <h3 class="title_type">수령인정보</h3>
+                        <fieldset>
+                            <legend>수령인정보 입력</legend>
+                            <ul class="frm_type">
+                                <li>
+                                    <h4 class="title_type3">받는사람</h4>
+                                    <div class="ipbox"><input type="text" id="" placeholder="이름"></div>
+                                </li>
+                                <li>
+                                    <h4 class="title_type3">휴대폰번호</h4>
+                                    <div class="hp">
+                                        <select id="" class="select2">
+                                            <option value="010">010</option>
+                                            <option value="011">011</option>
+                                        </select>
+                                        <div class="ipbox"><input type="text" id="" placeholder="-없이 휴대폰번호 입력"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="skipbx">
+                                <div class="checkbox check">
+                                    <input type="checkbox" name="agree" id="agree-all2">
+                                    <label for="agree-all2">개인정보 수집 및 이용동의</label>
+                                </div>
+                                <button type="button" onclick="layer_close(); layer_open('sendlst')" class="btn_r_o btn_type9">신청하기</button>
+                            </div>
+                        </fieldset>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //선물하기 -->
+
+    <!-- 주소찾기 -->
+    <div id="mw-search" class="ly_pop full ly_search">
+        <div class="ly_content">
+            <header class="fix">
+                <h2>주소찾기</h2>
+                <button type="button" onclick="$('#mw-search').hide()" class="ly_close"><i class="iplus3">팝업닫기</i></button>
+                <fieldset>
+                    <legend>주소입력</legend>
+                    <div class="ipbox ipdel">
+                        <input type="text" name="" id="" placeholder=" 주소를 입력해 주세요">
+                        <button type="button" onclick="" class="ip_del"><s><i class="iplus">삭제</i></s></button>
+                    </div>
+                    <button type="button" class="btn_srch">검색</button>
+                </fieldset>
+            </header>
+            <div class="ly_cover iscroll">
+                <div class="inner_bg">
+                    <section>
+                        <ul class="list_normal2">
+                            <li class="addr">
+                                <a href="#;">
+                                    <strong class="code">(우) 04515</strong>
+                                    서울특별시 중구 덕수궁길 15(서울시청 서소문 별관)
+                                    <span class="etc">[지번] 서문동 37 서울시청 서소문별관</span>
+                                </a>
+                            </li>
+                            <li class="addr">
+                                <a href="#;">
+                                    <strong class="code">(우) 04515</strong>
+                                    서울특별시 중구 덕수궁길 15(서울시청 서소문 별관)
+                                    <span class="etc">[지번] 서문동 37 서울시청 서소문별관</span>
+                                </a>
+                            </li>
+                            <li class="addr">
+                                <a href="#;">
+                                    <strong class="code">(우) 04515</strong>
+                                    서울특별시 중구 덕수궁길 15(서울시청 서소문 별관)
+                                    <span class="etc">[지번] 서문동 37 서울시청 서소문별관</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //주소찾기 -->
+
+    <!-- 신청내역 -->
+    <div id="mw-sendlst" class="ly_pop full ly_sendlst">
+        <div class="ly_content">
+            <header class="fix">
+                <h2>신청내역</h2>
+                <button type="button" onclick="layer_close()" class="ly_close"><i class="iplus3">팝업닫기</i></button>
+            </header>
+            <div class="ly_cover inner iscroll">
+                <section class="profile_miles">
+                    <figure class="ticket">
+                        <img src="../../resources/images/sample/img_ticket.png" alt="">
+                        <span class="date">2019.08.20</span>
+                    </figure>
+                    <ul class="lst_table">
+                        <li>
+                            <ul>
+                                <li class="th">신청마일리지</li>
+                                <li class="td">20,000</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="th">수령인</li>
+                                <li class="td">홍길동</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="th">수령인 휴대폰번호</li>
+                                <li class="td">010-1234-5678</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="th">주소</li>
+                                <li class="td">서울시 중구 서소문대로<br>128-4 2015호</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="th">상태</li>
+                                <li class="td red">준비중</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- //신청내역 -->
+
+</div>
+
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="../../resources/js/jquery.ui.datepicker.js"></script>
+<script src="../../resources/js/jquery.mobile.datepicker.js"></script>
+<!-- js -->
+
+</body>
+</html>

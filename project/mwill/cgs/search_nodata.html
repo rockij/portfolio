@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+	<title>자동차, 중고거래/업소홍보</title>
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/cont.css">
+
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<script src="js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body onload="myFunction()">
+
+	<a href="#Wrap" class="skip">본문 바로가기</a>
+
+	<!-- Header -->
+	<header id="Head">
+		<div class="gnb">
+			<div class="inner">
+				<div class="left">
+					<ul>
+						<li class="gnb_lmenu1"><a href="#" class="bg_common"><span>벼룩시장</span></a></li>
+						<li class="gnb_lmenu2"><a href="#" class="bg_common"><span>FindAll 모바일</span></a></li>
+					</ul>
+				</div>
+				<div class="right">
+					<ul>
+						<li><a href="#"><strong>로그인</strong></a></li>
+						<li><a href="#">회원가입</a></li>
+						<li><a href="#"><span class="bg_common gnb_rmenu_star"></span>찜목록<span class="gnb_rmenu_zzim">0</span></a></li>
+						<li><a href="#">고객센터</a></li>
+						<li class="last"><a href="#">이벤트</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="lnb">
+			<div class="inner">
+				<div class="count">현재 등록수 <strong>204,288</strong>건</div>
+
+				<h1><a href="#"><img src="http://image.findall.co.kr/FACache/cgs/common/logo.png" alt="FindAll" class="logo"></a></h1>
+
+				<div class="sch_cont">
+					<div class="element">
+						<div class="sch_form">
+							<div class="sch_cell1">
+								<input type="text" name="sch_inp" id="autocomplete-dynamic" placeholder="검색어" class="sch_inp">
+							</div>
+							<!-- <div class="sch_cell2">
+								<select name="sch_sec" id="SchSec">
+									<option value="1">자동차</option>
+									<option value="2">중고거래</option>
+									<option value="3">업소홍보</option>
+								</select>
+							</div> -->
+							<div class="sch_cell3">
+								<button class="bt_type1 bt_org sch_bt"><span class="bg_common sch_bt_ico"><span>검색</span></span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="minfo_area">
+					<a href="#" class="bt_type1 bt_gre minfo_bt1">MY FindAll<span class="bg_common minfo_bt1_ico"></span></a>
+					<div class="minfo_layer">
+						<ul>
+							<li class="minfo_menu1"><a href="#"><div><span class="bg_common minfo_menu1_ico"></span></div>중고거래관리</a></li>
+							<li class="minfo_menu2"><a href="#"><div><span class="bg_common minfo_menu2_ico"></span></div>다량등록권 관리</a></li>
+							<li class="minfo_menu3"><a href="#"><div><span class="bg_common minfo_menu3_ico"></span></div>찜목록</a></li>
+							<li class="minfo_menu4"><a href="#"><div><span class="bg_common minfo_menu4_ico"></span></div>댓글 관리</a></li>
+							<li class="minfo_menu5"><a href="#"><div><span class="bg_common minfo_menu5_ico"></span></div>문자함</a></li>
+							<li class="minfo_menu6"><a href="#"><div><span class="bg_common minfo_menu6_ico"></span></div>비즈니스정보관리</a></li>
+						</ul>
+					</div>
+					<a href="#" class="bt_type1 bt_gre minfo_bt2">상품등록<span class="bg_common minfo_bt2_ico"></span></a>
+				</div>
+
+				<div class="m_sch_area">
+					<ul>
+						<li><button type="button" class="bg_common m_sch_bt1"><span>상품등록</span></button></li>
+						<li class="grey"><button type="button" class="bg_common m_sch_bt2"><span>검색</span></button></li>
+						<li><button type="button" class="bg_common m_sch_bt3"><span>My FindAll</span></button></li>
+					</ul>
+				</div>
+
+				<div id="Navi1" class="navi1">
+					<nav>
+						<div class="nav_top">
+							<div class="top">
+								<button type="button" class="go_home" onClick="location.href='main.html'"><span class="bg_common go_home_ico"></span></button>
+								<div class="info"><strong>홍길동</strong>님</div>
+								<button type="button" class="bt_type2 bt_org sch_bt">로그아웃</button>
+							</div>
+							<div class="bt">
+								<button type="button" class="bt_type1 bt_grey"><span class="bg_common m_sch_bt1"></span>상품등록</button>
+							</div>
+						</div>
+						<div id="Navi1Cont" class="nav_cont">
+							<ul>
+								<li>
+									<a href="#" class="step1">MY 페이지<span class="arrow"></span></a>
+									<ul class="inner open">
+										<li><a href="#"><span class="box"><span class="bg_common nav_ico1_1"></span></span>중고거래관리</a></li>
+										<li><a href="#"><span class="box"><span class="bg_common nav_ico1_2"></span></span>다량등록관리</a></li>
+										<li><a href="#"><span class="box"><span class="bg_common nav_ico1_3"></span></span>찜목록</a></li>
+										<li><a href="#"><span class="box"><span class="bg_common nav_ico1_4"></span></span>댓글 관리</a></li>
+										<li><a href="#"><span class="box"><span class="bg_common nav_ico1_5"></span></span>문자함</a></li>
+										<li><a href="#"><span class="box"><span class="bg_common nav_ico1_6"></span></span>비즈니스정보관리</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" class="step1">자동차<span class="arrow"></span></a>
+									<ul class="inner">
+										<li><a href="#"><span class="box"><span class="bg_common nav_ico2_2"></span></span>제조사별</a></li>
+										<li><a href="#"><span class="box"><span class="bg_common nav_ico2_3"></span></span>차종별</a></li>
+										<li><a href="#"><span class="box"><span class="bg_common nav_ico2_4"></span></span>수입차</a></li>
+										<li><a href="#"><span class="box"><span class="bg_common nav_ico2_5"></span></span>오토바이</a></li>
+										<li><a href="#"><span class="box"><span class="bg_common nav_ico2_6"></span></span>업소홍보/상담</a></li>
+										<li><a href="#"><span class="box"><span class="bg_common nav_ico2_7"></span></span>중고차가이드</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" class="step1">중고거래<span class="arrow"></span></a>
+									<ul class="inner">
+										<li><a href="#"><span class="box"><span class="bg_common nav_ico3_1"></span></span>의류잡화</a></li>
+										<li><a href="#"><span class="box"><span class="bg_common nav_ico3_2"></span></span>출산/유아동/식품</a></li>
+										<li><a href="#"><span class="box"><span class="bg_common nav_ico3_3"></span></span>디지털/가전</a></li>
+										<li><a href="#"><span class="box"><span class="bg_common nav_ico3_4"></span></span>가구/용품</a></li>
+										<li><a href="#"><span class="box"><span class="bg_common nav_ico3_5"></span></span>스포츠/취미</a></li>
+										<li><a href="#"><span class="box"><span class="bg_common nav_ico3_6"></span></span>도서/음반/티켓</a></li>
+										<li><a href="#"><span class="box"><span class="bg_common nav_ico3_7"></span></span>기타</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" class="step1">업소홍보<span class="arrow"></span></a>
+									<ul class="inner">
+										<li><a href="#"><span class="box"><span class="bg_common nav_ico4_1"></span></span>지역정보/업소홍보</a></li>
+										<li><a href="#"><span class="box"><span class="bg_common nav_ico4_2"></span></span>창업/컨설팅</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					<button class="close">
+						<span class="close_x">&times;</span>
+						<span class="close_bg"></span>
+					</button>
+					<div class="back">
+						<div class="bg"></div>
+						<div class="bg2"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- //Header -->
+
+	<!-- Section -->
+	<section id="Wrap">
+
+		<div class="org_bar">
+			<div class="inner">
+				<div class="cell3">
+					<select>
+						<option>수입차</option>
+					</select>
+				</div>
+				<div class="cell3">
+					<select>
+						<option>제조사명</option>
+					</select>
+				</div>
+				<div class="cell3">
+					<select>
+						<option>모델명</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div id="SubWrap">
+
+            <div class="search_tab">
+                <ul>
+                    <li><a href="#" class="on"><span>자동차(N)</span></a></li>
+                    <li><a href="#"><span>중고거래(N)</span></a></li>
+                    <li><a href="#"><span>업소홍보(N)</span></a></li>
+                </ul>
+            </div>
+
+			<div class="detail_box">
+				<a href="#" class="bt_type1 bt_grey sch_bt">
+					<span class="bg_list detail_bt"></span>
+					상세검색
+				</a>
+			</div>
+
+			<div class="sub_l"></div>
+
+			<!-- 상세검색 Nav -->
+			<div id="Navi2" class="navi2">
+				<nav>
+                    <div class="group">
+                        <div class="top">
+                            <span class="bg_list group_ico"></span>
+                            <h3>분류 검색</h3>
+                        </div>
+
+                        <div class="list">
+                            <ul>
+                                <li class="active"><a href="#"><span class="bg_list list_ico"></span>자동차(0)</a></li>
+                                <li><a href="#"><span class="bg_list list_ico"></span>중고거래(0)</a></li>
+                                <li><a href="#"><span class="bg_list list_ico"></span>업소홍보(0)</a></li>
+                            </ul>
+                        </div>
+					</div>
+
+					<div class="top">
+						<span class="bg_list detail_ico"></span>
+						<h3>상세검색</h3>
+					</div>
+
+					<ul class="step1">
+						<li>
+							<a href="#" onclick="return false;">연식<span class="bg_list"></span></a>
+							<div class="step2">
+								<ul>
+									<li><a href="#">현대(1,753)</a></li>
+									<li><a href="#">기아(563)</a></li>
+									<li><a href="#">쉐보레/대우(13)</a></li>
+									<li class="active"><a href="#">르노삼성(5,613)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#" onclick="return false;">배기량<span class="bg_list"></span></a>
+							<div class="step2">
+								<ul>
+									<li><a href="#">현대(1,753)</a></li>
+									<li><a href="#">기아(563)</a></li>
+									<li><a href="#">쉐보레/대우(13)</a></li>
+									<li class="active"><a href="#">르노삼성(5,613)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#" onclick="return false;">연료<span class="bg_list"></span></a>
+							<div class="step2">
+								<ul>
+									<li><a href="#">현대(1,753)</a></li>
+									<li><a href="#">기아(563)</a></li>
+									<li><a href="#">쉐보레/대우(13)</a></li>
+									<li class="active"><a href="#">르노삼성(5,613)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#" onclick="return false;">변속기<span class="bg_list"></span></a>
+							<div class="step2">
+								<ul>
+									<li><a href="#">현대(1,753)</a></li>
+									<li><a href="#">기아(563)</a></li>
+									<li><a href="#">쉐보레/대우(13)</a></li>
+									<li class="active"><a href="#">르노삼성(5,613)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#" onclick="return false;">주행거리<span class="bg_list"></span></a>
+							<div class="step2">
+								<ul>
+									<li><a href="#">현대(1,753)</a></li>
+									<li><a href="#">기아(563)</a></li>
+									<li><a href="#">쉐보레/대우(13)</a></li>
+									<li class="active"><a href="#">르노삼성(5,613)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#" onclick="return false;">판매유형<span class="bg_list"></span></a>
+							<div class="step2">
+								<ul>
+									<li><a href="#">현대(1,753)</a></li>
+									<li><a href="#">기아(563)</a></li>
+									<li><a href="#">쉐보레/대우(13)</a></li>
+									<li class="active"><a href="#">르노삼성(5,613)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="else">
+							<a href="#" onclick="return false;">판매가격</a>
+							<div class="tbl">
+								<div class="cell1">
+									<input type="tel" placeholder="최저"><em></em>
+								</div>
+								<div class="cell2">
+									~
+								</div>
+								<div class="cell1">
+									<input type="tel" placeholder="최고"><em></em>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="#" onclick="return false;">지역<span class="bg_list"></span></a>
+							<div class="step2">
+								<ul>
+									<li><a href="#">현대(1,753)</a></li>
+									<li><a href="#">기아(563)</a></li>
+									<li><a href="#">쉐보레/대우(13)</a></li>
+									<li class="active"><a href="#">르노삼성(5,613)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="else">
+							<div class="tbl">
+								<div class="cell3">
+									<button type="button" class="bt_type1 bt_whi navi_reset_bt" style="width:100%;">초기화</button>
+								</div>
+								<div class="cell4">
+									<button type="button" class="bt_type1 bt_gre navi_sc_bt" style="width:100%;">검색</button>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</nav>
+				<button class="close">
+					<span class="close_x">&times;</span>
+					<span class="close_bg"></span>
+				</button>
+				<div class="back">
+					<div class="bg"></div>
+					<div class="bg2"></div>
+				</div>
+			</div>
+			<!-- //상세검색 Layer -->
+
+			<div class="sub_r">
+
+				<div class="search_ls_wrap">
+					<div class="inner">
+						<div class="el">
+                            <div class="search_tit"><strong class="txt_blue">'현대 기아모닝'</strong>키워드 검색결과</div>
+							<div class="temp_list_tit">
+								<h2>자동차 <strong class="txt_blue">0</strong>건</h2>
+								<div class="right_bt">
+									<a href="#" class="bt_type2 bt_whi active">정확도<span class="arrow"></span></a>
+									<a href="#" class="bt_type2 bt_whi">최신순<span class="arrow"></span></a>
+								</div>
+                                <select class="sel">
+									<option>정확도</option>
+                                    <option>최신순</option>
+								</select>
+							</div>
+							<div class="list_b">
+								<div class="temp_list_cont">
+                                    <!-- 검색 결과가 없을 경우 -->
+									<div class="nodata">
+                                        <div class="ico_b">
+                                            <span class="bg_list nodata_ico"></span>
+                                        </div>
+                                        <div class="txt_b">
+                                            <strong class="txt_red">원하는 조건의 결과가 없습니다.</strong>
+                                            <strong>다른 조건으로 검색하세요.</strong>
+                                            <div class="txt">
+                                                <span class="bg_list nodata_ico2"></span>정확한 검색어인지 확인해주세요.<br>
+                                                <span class="bg_list nodata_ico2"></span>보다 일반적인 검색어나 띄어쓰기를 다르게 해서 다시 검색해보세요.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //검색 결과가 없을 경우 -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- //Section -->
+
+	<!-- Footer -->
+	<footer id="Foot">
+		<div class="small">
+			<ul>
+				<li><a href="#">벼룩시장</a></li>
+				<li><a href="#">이용약관</a></li>
+				<li class="long"><a href="#">개인정보취급방침</a></li>
+				<li class="long"><a href="#">청소년보호정책</a></li>
+			</ul>
+			<div class="addr">
+				서울시 강남구 테헤란로 7길 12, 8층(역삼동, 허바허바빌딩)ㅣ역삼동 648번지<br>
+				(주)미디어윌벼룩시장사업본부 대표이사 최인녕<br>
+				사업자등록번호 : 206-85-26551ㅣ통신판매업 신고번호 : 제 강남-00769ㅣ<br>
+				직업정보제공사업 : 서울동부 제 2008-9호ㅣ정보보호책임자 : 이경섭<br>
+			</div>
+			<address>
+				Copyright &copy; MediaWill Co., Ltd. All rights reserved.
+			</address>
+		</div>
+		<div class="large">
+			<div class="inner">
+				<div class="link1">
+					<ul>
+						<li class="first"><a href="#" target="_blank" class="bg_foot link_img01"><span>벼룩시장</span></a></li>
+						<li><a href="#" target="_blank" class="bg_foot link_img02"><span>벼룩시장 구인구직</span></a></li>
+						<li><a href="#" target="_blank" class="bg_foot link_img03"><span>벼룩시장 부동산</span></a></li>
+						<li><a href="#" target="_blank" class="bg_foot link_img04"><span>알바천국</span></a></li>
+						<li><a href="#" target="_blank" class="bg_foot link_img05"><span>모스버거</span></a></li>
+						<li><a href="#" target="_blank" class="bg_foot link_img06"><span>FOURFOURTWO</span></a></li>
+						<li><a href="#" target="_blank" class="bg_foot link_img07"><span>다방</span></a></li>
+					</ul>
+					<div class="link2">
+						<select id="FamilySite" onchange="javascript:FnFamilySetUrl(this.value);" title="패밀리사이트 목록">
+							<option>Family Site</option>
+							<option value="http://www.findall.co.kr">벼룩시장</option>
+							<option value="http://www.findall.co.kr/job/">벼룩시장 구인구직</option>
+							<option value="http://land.findall.co.kr/land_new/Mainland.asp">벼룩시장 부동산</option>
+							<option value="http://www.alba.co.kr">알바천국</option>
+							<option value="http://www.fourfourtwo.co.kr">FOURFOURTWO</option>
+							<option value="http://www.dabangapp.com">다방</option>
+						</select>
+						<label for="hidFamilyUrl">
+							<input type="hidden" id="hidFamilyUrl" value="#">
+							<a href="javascript:FnFamilyMove();" class="bg_foot link_move"><span>이동</span></a>
+						</label>
+					</div>
+				</div>
+
+				<div class="group">
+					<div class="left">
+						<span class="bg_foot foot_logo"><span>MEDIAWILL</span></span>
+					</div>
+					<div class="link">
+						<ul>
+							<li class="first"><a href="#">회사소개</a></li>
+							<li><a href="#">보도자료</a></li>
+							<li><a href="#">배너광고안내</a></li>
+							<li><a href="#">제휴문의</a></li>
+							<li><a href="#">이용약관</a></li>
+							<li class="point"><a href="#">개인정보취급방침</a></li>
+							<li><a href="#">청소년보호정책</a></li>
+							<li><a href="#">전자세금계산서</a></li>
+							<li class="last"><a href="#">사이트맵</a></li>
+						</ul>
+						<div class="sns">
+							<a href="#" class="bg_foot foot_sns01"><span>페이스북</span></a>
+							<a href="#" class="bg_foot foot_sns02"><span>트위터</span></a>
+							<a href="#" class="bg_foot foot_sns03"><span>블로그</span></a>
+							<span class="bg_foot foot_certi"><span>SSL 보안 서버 인증</span></span>
+						</div>
+					</div>
+					<div class="info">
+						서울시 강남구 테헤란로 7길 12, 8층(역삼동, 허바허바빌딩)ㅣ역삼동 648번지 <a href="#" class="bg_foot foot_map"><span>회사위치확인</span></a> (주)미디어윌벼룩시장사업본부 대표이사 최인녕<br>
+						사업자등록번호 : 206-85-26551ㅣ통신판매업 신고번호 : 제 강남-00769ㅣ직업정보제공사업 : 서울동부 제 2008-9호ㅣ정보보호책임자 : 이경섭
+						<address>
+							Copyright &copy; MediaWill Co., Ltd. All rights reserved.
+						</address>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- //Footer -->
+
+	<!-- JQuery -->
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/design.js"></script>
+
+	<!-- 자동완성기능 -->
+	<script type="text/javascript" src="js/jquery.predictive.js"></script>
+	<script type="text/javascript" src="js/jquery.autocomplete.js"></script>
+	<script type="text/javascript" src="js/search.list.js"></script>
+	<script type="text/javascript" src="js/search.demo.js"></script>
+
+	<!-- Select Box -->
+	<script type="text/javascript" src="js/jquery.selectbox.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#SchSec').selectbox();
+		});
+	</script>
+
+	<!-- Slide -->
+	<script type="text/javascript" src="js/jquery.event.drag-1.5.min.js"></script>
+	<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+	<script type="text/javascript">
+		function myFunction() {
+			var w = window.outerWidth;
+			var w = document.documentElement.clientWidth;
+
+			$("#PremiumList").touchSlider({
+				roll : false,
+				view : 1,
+				flexible : true,
+				btn_prev : $("#PremiumList").next().find(".bt_prev"),
+				btn_next : $("#PremiumList").next().find(".bt_next"),
+				counter : function (e) {
+					$("#PremiumList").next().find("#count").html("<span style='color:#ff4810'>" + e.current + "</span>" + " / " + e.total);
+				}
+			});
+
+			if (w < 769) {
+				$("#PremiumPhoto").touchSlider({
+					roll : false,
+					view : 2,
+					flexible : true,
+					btn_prev : $("#PremiumPhoto").next().find(".bt_prev"),
+					btn_next : $("#PremiumPhoto").next().find(".bt_next"),
+					counter : function (e) {
+						$("#PremiumPhoto").next().find("#count").html("<span style='color:#ff4810'>" + e.current + "</span>" + " / " + e.total);
+					}
+				});
+			} else if (w >= 769 && w <= 1024) {
+				$("#PremiumPhoto").touchSlider({
+					roll : false,
+					view : 4,
+					flexible : true,
+					btn_prev : $("#PremiumPhoto").next().find(".bt_prev"),
+					btn_next : $("#PremiumPhoto").next().find(".bt_next"),
+					counter : function (e) {
+						$("#PremiumPhoto").next().find("#count").html("<span style='color:#ff4810'>" + e.current + "</span>" + " / " + e.total);
+					}
+				});
+			} else {
+				$("#PremiumPhoto").touchSlider({
+					roll : false,
+					view : 4,
+					flexible : true,
+					btn_prev : $("#PremiumPhoto").next().find(".bt_prev"),
+					btn_next : $("#PremiumPhoto").next().find(".bt_next"),
+					counter : function (e) {
+						$("#PremiumPhoto").next().find("#count").html("<span style='color:#ff4810'>" + e.current + "</span>" + " / " + e.total);
+					}
+				});
+			}
+		}
+
+		window.onresize = resize;
+
+		function resize()
+		{
+			myFunction();
+		}
+	</script>
+
+	<!-- Family Site -->
+	<script type="text/javascript">
+		<!--
+		  function getCookie(strName) {
+			var strArg = new String(strName + "=");
+			var nArgLen, nCookieLen, nEnd;
+			var i = 0, j;
+			nArgLen = strArg.length;
+			nCookieLen = document.cookie.length;
+
+			if (nCookieLen > 0) {
+			  while (i < nCookieLen) {
+				j = i + nArgLen;
+				if (document.cookie.substring(i, j) == strArg) {
+				  nEnd = document.cookie.indexOf(";", j);
+				  if (nEnd == -1) nEnd = document.cookie.length;
+				  return unescape(document.cookie.substring(j, nEnd));
+				}
+				i = document.cookie.indexOf(" ", i) + 1;
+				if (i == 0) break;
+			  }
+			}
+			return ("");
+		  }
+		  function ErrorPopOpen() {
+			var id;
+			id = document.getElementById("errorpop").style.display = "";
+		  }
+		  function ErrorPopClose() {
+			var id;
+			id = document.getElementById("errorpop").style.display = "none";
+		  }
+		  function FnFamilySetUrl(val) {
+			document.getElementById("hidFamilyUrl").value = val;
+		  }
+		  function FnFamilyMove() {
+			var FamilyUrl = document.getElementById("hidFamilyUrl").value;
+			window.open(FamilyUrl, '', '');
+		  }
+		//-->
+	</script>
+</body>
+</html>

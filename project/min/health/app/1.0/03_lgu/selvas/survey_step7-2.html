@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko" class="selvas lgu">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="../../resources/css/common.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/selvas.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/site_lgu.css" media="screen" rel="stylesheet">
+<link href="../../resources/css/device.css" media="screen" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="../../resources/js/jquery-1.11.1.min.js"></script>
+<script src="../../resources/js/design.js"></script>
+<title>LGU+셀바스</title>
+</head>
+<body>
+
+<div id="wrap">
+
+	<header id="head" class="fix">
+        <button type="button" onclick="history.back()" class="btn_prev"><i class="ico_com">뒤로가기</i></button>
+		<h1><a href="/">건강지키미</a></h1>
+		<span class="btn_switch" onclick="switchHov();"><button type="button"><i class="dot"></i><i class="dot"></i><i class="dot"></i></button></span>
+        <div class="gnb_menu">
+			<ul>
+				<li><a href="#n">알림설정</a></li>
+				<li><a href="#n">이용약관 및 정책</a></li>
+				<li><a href="#n">부가서비스 설정/해지</a></li>
+				<li><a href="#n">문의하기</a></li>
+				<li><a href="#n">나가기</a></li>
+			</ul>
+		</div>
+	</header>
+    <!-- //header -->
+
+	<div id="ct">
+        <div class="profile_steps">
+            <section class="title">
+                <h2 data-cat="흡연"><figure><i class="bgf"></i></figure>흡연</h2>
+                현재 하루 평균 흡연량과 흡연기간은<br>어떻게 되시나요?
+                <ul id="smoke2" class="iplst all">
+                    <li>
+                        <span class="ipbx">
+                            <input type="tel" value="" placeholder="0" class="val" maxlength="4" data-byte="1000" data-mss="흡연량을 입력해주세요." data-mss2="흡연량은 1,000 이하로 입력해주세요." numberOnly><b class="unit right">개비</b>
+                        </span>
+                        <p class="cau">* 하루 평균 흡연량</p>
+                    </li>
+                    <li>
+                        <span class="ipbx">
+                            <input type="tel" value="" placeholder="0" class="val" maxlength="4" data-byte="200" data-mss="흡연기간을 입력해주세요." data-mss2="흡연기간은 200 이하로 입력해주세요." numberOnly><b class="unit right">년</b>
+                        </span>
+                        <p class="cau">* 흡연기간</p>
+                    </li>
+                </ul>
+            </section>
+            <div class="fixbtm btn_btm_skip"><button type="button" onclick="$(location).attr('href','survey_step8.html')" disabled>다음 (6/9)</button></div>
+        </div>
+	</div>
+    <!-- //content -->
+
+</div>
+
+<script> $(window).on("load", function(){ selvasSurvey() }); </script>
+
+</body>
+</html>

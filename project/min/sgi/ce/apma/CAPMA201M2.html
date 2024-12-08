@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title>SGI서울보증</title>
+    <link rel="stylesheet" type="text/css" href="../../inc/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../inc/css/common-ui.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../inc/css/style-cust.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../inc/css/style-mark.css">
+    <link rel="stylesheet" type="text/css" href="../../inc/css/jquery.mobile-1.4.5.css">
+    <script type="text/javascript" src="../../inc/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="../../inc/js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../inc/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
+</head>
+
+<body>
+    <!-- 페이지 유형 제작시 wrapper에 고유 클레스 추가 -->
+    <div class="wrapper ps-sub-page apmap2012">
+        <header class="header">
+            <button type="button" class="prev-page" title="이전페이지 이동"></button>
+            <h1 class="header-tit">보험료 계산결과</h1>
+            <button type="button" class="sidenav-btn" title="전체메뉴"></button>
+        </header>
+        <!-- 페이지 하단에 플로팅 버튼이 있을시 class = btm-fixed 추가 -->
+        <section class="container btm-fixed">
+            <!-- 사이드 여백설정 공통 class = inner -->
+            <!-- 페이지 하단에 플로팅 버튼이 있을시 class = acco-fixed 추가 -->
+            <div class="content">
+                <div class="cont-wrap">
+                    <p class="deta-tit inner">산출정보</p>
+                    <div class="deta-docu inner">
+                        <ul class="list-wrap">
+                            <li class="list-item">
+                                <strong class="list-tit">상품명</strong>
+                                <span class="list-txt">이행지급</span>
+                            </li>
+                            <li class="list-item">
+                                <strong class="list-tit">보증기호명</strong>
+                                <span class="list-txt">공사대금</span>
+                            </li>
+                            <li class="list-item">
+                                <strong class="list-tit">계약자</strong>
+                                <span class="list-txt">(주)삼성엔지니어링</span>
+                            </li>
+                            <li class="list-item">
+                                <strong class="list-tit">피보험자</strong>
+                                <span class="list-txt">(주)삼성엔지니어링</span>
+                            </li>
+                        </ul>
+                        <div class="ps-total-num">
+                            <div class="ps-total-con">
+                                <span class="total-txt">보증보험료총계</span>
+                                <!-- 외화일 경우 : 원 뒤에 <br><em class="fw-01">(금액)</em> 넣어서 사용 -->
+                                <span class="total-price"><em>12,345,000</em>원<br><em class="fw-01">(60 USD)</em></span>
+                            </div>
+                        </div>
+                        <ul class="list-wrap">
+                            <li class="list-item">
+                                <strong class="list-tit">기본요율</strong>
+                                <span class="list-txt">0.662%</span>
+                            </li>
+                            <li class="list-item">
+                                <strong class="list-tit">적용요율</strong>
+                                <span class="list-txt">0.662%</span>
+                            </li>
+                        </ul>
+                        <div class="ps-table-wrap type03">
+                            <table>
+                                <colgroup>
+                                    <col style="width:80%;">
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" colspan="2">적용할인율</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="txt-l">신용카드이용보험료납입특별약관</td>
+                                        <td class="txt-r">2.5%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="txt-l">장기다수거래할인율</td>
+                                        <td class="txt-r">3%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="txt-l">담보제공할인율</td>
+                                        <td class="txt-r">1%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="txt-l">인증기업할인율</td>
+                                        <td class="txt-r">0.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="txt-l">개별할인율</td>
+                                        <td class="txt-r">5%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="txt-l">저손해우량피보험자할인율</td>
+                                        <td class="txt-r">9%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="ps-table-bu">
+                                <p class="ps-bu-txt circle gray">요율등급 및 개별 할인/할증율을 기준으로 산출된 결과입니다.</p>
+                                <p class="ps-bu-txt circle gray">보험료계산 결과는 실제 보험료와 다를 수 있습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- cont-wrap -->
+            </div>
+            <!-- content -->
+            <div class="fix-btn-wrap">
+                <button type="button" class="btn gray small">이전</button>
+                <button type="button" class="btn blue">다시 계산</button>
+            </div>
+        </section>
+        <footer class="footer"></footer>
+    </div>
+</body>
+</html>

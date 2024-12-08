@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title>SGI서울보증</title>
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/common-ui.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../../inc/css/style-cust.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/style-mark.css">
+    <link rel="stylesheet" type="text/css" href="../../../inc/css/jquery.mobile-1.4.5.css">
+    <script type="text/javascript" src="../../../inc/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../../inc/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
+</head>
+
+<body>
+    <!-- 페이지 유형 제작시 wrapper에 고유 클레스 추가 -->
+    <div class="wrapper ps-sub-page comap1020">
+        <header class="header">
+            <button type="button" class="prev-page" title="이전페이지 이동"></button>
+            <h1 class="header-tit">청약명세</h1>
+            <button type="button" class="sidenav-btn" title="전체메뉴"></button>
+        </header>
+        <!-- 페이지 하단에 플로팅 버튼이 있을시 class = btm-fixed 추가 -->
+        <section class="container">
+            <!-- 사이드 여백설정 공통 class = inner -->
+            <!-- 페이지 하단에 플로팅 버튼이 있을시 class = acco-fixed 추가 -->
+            <div class="content">
+                <div class="cont-wrap">
+                    <div class="rollup-fix-wrap">
+                        <div class="rollup-fix-data">
+                            <div class="label-tit-wrap">
+                                <!-- 라벨 클래스 정의
+                                예비청약 : class = label-state02 org
+                                변경청약 : class = label-state02 blue
+                                청약 : class = label-state02 sky
+                                -->
+                                <span class="label-state02 blue">변경청약</span>
+                                <span class="state-tit">변경청약승인</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 진행단계 별 aria-label 텍스트 변경 및 해당 li값에 class = on 넣어주세요.
+                    1. 진행단계, 총 4단계(청약, 심사, 청약승인, 전자서명완료) 중 1단계 청약
+                    2. 진행단계, 총 4단계(청약, 심사, 청약승인, 전자서명완료) 중 2단계 심사
+                    3. 진행단계, 총 4단계(청약, 심사, 청약승인, 전자서명완료) 중 3단계 청약승인
+                    4. 진행단계, 총 4단계(청약, 심사, 청약승인, 전자서명완료) 중 4단계 전자서명완료
+                    -->
+                    <div class="step-info-wrap type02" role="img" aria-label="진행단계, 총 4단계(청약, 심사, 청약승인, 전자서명완료) 중 3단계 청약승인">
+                        <ul>
+                            <li class="icon01">청약</li>
+                            <li class="icon02">심사</li>
+                            <li class="icon03 on">청약승인</li>
+                            <li class="icon04">전자서명<br>완료</li>
+                        </ul>
+                    </div>
+                    <ul class="ps-accordion-wrap type-list">
+                        <li class="accordion-item">
+                            <div class="deta-tit inner">계약자정보 <button type="button" class="icon-btn01">회사별 고객정보</button></div>
+                            <div class="deta-docu inner">
+                                <ul class="list-wrap">
+                                    <li class="list-item">
+                                        <strong class="list-tit">증권번호</strong>
+                                        <span class="list-txt">100-00-201920434564</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">법인번호</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">사업자등록번호</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">주상호</strong>
+                                        <span class="list-txt">
+                                            <button type="button" class="btn-txt open-bottomlist" data-page="bottom-pop-list01" title="공동계약자 팝업 열기">공동계약자</button>
+                                        </span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">부가상호</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">금융거래회원</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">대표자</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <p class="deta-tit inner">피보험자정보</p>
+                            <div class="deta-docu inner">
+                                <ul class="list-wrap">
+                                    <li class="list-item">
+                                        <strong class="list-tit">법인번호</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">사업자번호</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">주상호</strong>
+                                        <span class="list-txt">
+                                            <button type="button" class="btn-txt open-bottomlist" data-page="bottom-pop-list02" title="공동피보험자 팝업 열기">공동피보험자</button>
+                                        </span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">부가상호</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">대표자</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <button class="accordion-tit inner" type="button" title="접힘">기본정보</button>
+                            <div class="accordion-docu inner">
+                                <ul class="list-wrap">
+                                    <li class="list-item">
+                                        <strong class="list-tit">상품명</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">보증기호명</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">영업부서</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">인수대리점</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">갱신여부</strong>
+                                        <span class="list-txt">아니오</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">보험료납부자</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">주거래여부</strong>
+                                        <span class="list-txt">예 / 을지로지점</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">증권출력부서</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">묶음번호</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">인수유형</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <button class="accordion-tit inner" type="button" title="접힘">보험계약내용</button>
+                            <div class="accordion-docu inner">
+                                <div class="ps-table-wrap type03">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">특별약관</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="txt-l">신용카드이용보험료납입특별약관</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="txt-l">건설기계대여대금담보특별약관</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="list-wrap">
+                                    <li class="list-item">
+                                        <strong class="list-tit">보험기간</strong>
+                                        <span class="list-txt">2019-06-29~2019-07-18</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">총일수</strong>
+                                        <span class="list-txt">20</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">전결권자</strong>
+                                        <span class="list-txt">차장</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">적용화폐</strong>
+                                        <span class="list-txt">WON</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">환율</strong>
+                                        <span class="list-txt">0</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">자서구분</strong>
+                                        <span class="list-txt">생략</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">원화보험금액</strong>
+                                        <span class="list-txt">55,000,000</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">원화보험료</strong>
+                                        <span class="list-txt">57,160</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">대리점수수료</strong>
+                                        <span class="list-txt">5,100</span>
+                                    </li>
+                                </ul>
+                                <div class="deta-docu">
+                                    <div class="txt-wrap">
+                                        <strong class="tit">보증내용</strong>
+                                        <p class="sub-txt">건설기계 임대차계약에 따른 건설기계 대여대금 지급보증</p>
+                                        <strong class="tit">특기사항</strong>
+                                        <p class="sub-txt"></p>
+                                        <strong class="tit">인수조건</strong>
+                                        <p class="sub-txt">약정서</p>
+                                        <strong class="tit">기타조건</strong>
+                                        <p class="sub-txt"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <button class="accordion-tit inner" type="button" title="접힘">주계약정보</button>
+                            <div class="accordion-docu inner">
+                                <ul class="list-wrap">
+                                    <li class="list-item">
+                                        <strong class="list-tit">주계약명</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">계약체결일</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">계약기간시작일</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">계약기간종료일</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">임대보증금액</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">월임대료</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">공공임대주택단지명</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">임차부분</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">소재지기본주소</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">소재지기타주소</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                    <li class="list-item">
+                                        <strong class="list-tit">임차전용면적평방미터</strong>
+                                        <span class="list-txt"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- cont-wrap -->
+            </div>
+            <!-- content -->
+        </section>
+        <footer class="footer"></footer>
+        <!-- 바텀시트 -->
+        <article class="pop-botlist-js-wrap bottom-listpop" data-page="bottom-pop-list01">
+            <div class="botlist-wrap">
+                <h2 class="botlist-tit">공동계약자</h2>
+                <div class="botlist-cont">
+                    <ul class="list-wrap">
+                        <li class="list-item inner">
+                            <strong class="list-tit">홍길동</strong>
+                            <span class="list-txt">000000-0******</span>
+                        </li>
+                        <li class="list-item inner">
+                            <strong class="list-tit">홍길동</strong>
+                            <span class="list-txt">000000-0******</span>
+                        </li>
+                        <li class="list-item inner">
+                            <strong class="list-tit">홍길동</strong>
+                            <span class="list-txt">000000-0******</span>
+                        </li>
+                        <li class="list-item inner">
+                            <strong class="list-tit">홍길동</strong>
+                            <span class="list-txt">000000-0******</span>
+                        </li>
+                        <li class="list-item inner">
+                            <strong class="list-tit">홍길동</strong>
+                            <span class="list-txt">000000-0******</span>
+                        </li>
+                        <li class="list-item inner">
+                            <strong class="list-tit">홍길동</strong>
+                            <span class="list-txt">000000-0******</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="close-bottomlist" title="닫기"></button>
+        </article>
+        <article class="pop-botlist-js-wrap bottom-listpop" data-page="bottom-pop-list02">
+            <div class="botlist-wrap">
+                <h2 class="botlist-tit">공동피보험자</h2>
+                <div class="botlist-cont">
+                    <ul class="list-wrap">
+                        <li class="list-item inner">
+                            <strong class="list-tit">홍길동</strong>
+                            <span class="list-txt">000000-0******</span>
+                        </li>
+                        <li class="list-item inner">
+                            <strong class="list-tit">홍길동</strong>
+                            <span class="list-txt">000000-0******</span>
+                        </li>
+                        <li class="list-item inner">
+                            <strong class="list-tit">홍길동</strong>
+                            <span class="list-txt">000000-0******</span>
+                        </li>
+                        <li class="list-item inner">
+                            <strong class="list-tit">홍길동</strong>
+                            <span class="list-txt">000000-0******</span>
+                        </li>
+                        <li class="list-item inner">
+                            <strong class="list-tit">홍길동</strong>
+                            <span class="list-txt">000000-0******</span>
+                        </li>
+                        <li class="list-item inner">
+                            <strong class="list-tit">홍길동</strong>
+                            <span class="list-txt">000000-0******</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="close-bottomlist" title="닫기"></button>
+        </article>
+        <!-- //바텀시트 -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+<title></title>
+<style>
+    body{
+        margin:0;
+        padding:0;
+        height:100vh;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        font-family: 'Open Sans';
+    }
+    .box{
+        width:250px;
+        height:150px;
+        background-color:yellowgreen;
+        margin:80px auto;
+        cursor:pointer;
+        animation: bounce 1s linear infinite;
+    }    
+    @keyframes bounce{
+        20%, 50%, 80%, to{
+            transform: translateY(0);
+        }
+        40%{
+            transform: translateY(-30px);
+        }
+        70%{
+            transform: translateY(-15px);
+        }
+        90%{
+            transform: translateY(-4px);
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text">Bounce Animation</h1>
+    <div class="box"></div>
+</div>
+
+</body>
+</html>
